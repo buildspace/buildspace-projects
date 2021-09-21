@@ -1,0 +1,245 @@
+🌅 Using window.ethereum()
+--------------------------
+
+So, in order for our website to talk to the blockchain, we need to somehow connect our wallet to it. Once we connect our wallet to our website, our website will have permissions to call smart contracts on our behalf. Remember, it's just like authenticating in to a website.
+
+Head over Replit and go to `App.js` under `src`, this is where we'll be doing all our work.
+
+If we're logged in to Metamask, it will automatically inject a special object named `ethereum` into our window. Lets check if we have that first.
+
+```jsx
+import React, { useEffect } from "react";
+import { ethers } from "ethers";
+import './App.css';
+
+const App = () => {
+  const checkIfWalletIsConnected = () => {
+    /*
+    * First make sure we have access to window.ethereum
+    */
+    const { ethereum } = window;
+
+    if (!ethereum) {
+      console.log("Make sure you have metamask!");
+      return;
+    } else {
+      console.log("We have the ethereum object", ethereum);
+    }
+  }
+
+  /*
+  * This runs our function when the page loads.
+  */
+  useEffect(() => {
+    checkIfWalletIsConnected();
+  }, [])
+  
+  return (
+    <div className="mainContainer">
+      <div className="dataContainer">
+        <div className="header">
+        👋 Hey there!
+        </div>
+
+        <div className="bio">
+          I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and wave at me!
+        </div>
+
+        <button className="waveButton" onClick={null}>
+          Wave at Me
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default App
+```
+
+🔒 See if we can access the users account
+-----------------------------------------
+
+So when you run this, you should see that line "We have the ethereum object" printed in the console of the website when you go to inspect it.
+
+**NICE.**
+
+Next, we need to actually check if we're authorized to actually access the user's wallet. Once we have access to this, we can call our smart contract!
+
+Basically, Metamask doesn't just give our wallet credentials to every website we go to. It only gives it to websites we authorize. Again, it's just like logging in! But, what we're doing here is **checking if we're "logged in".**
+
+Check out the code below.
+
+```javascript
+import React, { useEffect, useState } from "react";
+import { ethers } from "ethers";
+import './App.css';
+
+const App = () => {
+    /*
+    * Just a state variable we use to store our user's public wallet.
+    */
+    const [currentAccount, setCurrentAccount] = useState("");
+  
+    const checkIfWalletIsConnected = async () => {
+        try {
+            const { ethereum } = window;
+
+            if (!ethereum) {
+                console.log("Make sure you have metamask!");
+                return;
+            } else {
+                console.log("We have the ethereum object", ethereum);
+            }
+
+            /*
+            * Check if we're authorized to access the user's wallet
+            */
+            const accounts = await ethereum.request({ method: 'eth_accounts' });
+
+            if (accounts.length !== 0) {
+                const account = accounts[0];
+                console.log("Found an authorized account:", account);
+            } else {
+                console.log("No authorized account found")
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        checkIfWalletIsConnected();
+    }, [])
+    
+    return (
+        <div className="mainContainer">
+            <div className="dataContainer">
+                <div className="header">
+                    👋 Hey there!
+                </div>
+
+                <div className="bio">
+                    I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and wave at me!
+                </div>
+
+                <button className="waveButton" onClick={null}>
+                    Wave at Me
+                </button>
+            </div>
+        </div>
+    );
+}
+
+export default App
+```
+
+So, we use that special method `eth_accounts` to see if we're authorized to access any of the accounts in the user's wallet. One thing to keep in mind is that the user could have multiple accounts in their wallet. In this case, we just grab the first one.
+
+💰 Build a connect wallet button
+--------------------------------
+
+When you run the above code, the console.log that prints should be `No authorized account found`. Why? Well because we never explicitly told Metamask, "hey Metamask, please give this website access to my wallet". 
+
+We need to create a `connectWallet` button. In the world of Web3, connecting your wallet is literally a "Login" button for your user :). Check it out:
+
+```javascript
+import React, { useEffect, useState } from "react";
+import { ethers } from "ethers";
+import './App.css';
+
+const App = () => {
+  const [currentAccount, setCurrentAccount] = useState("");
+  
+  const checkIfWalletIsConnected = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        console.log("Make sure you have metamask!");
+        return;
+      } else {
+        console.log("We have the ethereum object", ethereum);
+      }
+
+      const accounts = await ethereum.request({ method: 'eth_accounts' });
+
+      if (accounts.length !== 0) {
+        const account = accounts[0];
+        console.log("Found an authorized account:", account);
+      } else {
+        console.log("No authorized account found")
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  /**
+  * Implement your connectWallet method here
+  */
+  const connectWallet = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        alert("Get MetaMask!");
+        return;
+      }
+
+      const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+
+      console.log("Connected", accounts[0]);
+      setCurrentAccount(accounts[0]); 
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    checkIfWalletIsConnected();
+  }, [])
+  
+  return (
+    <div className="mainContainer">
+      <div className="dataContainer">
+        <div className="header">
+        👋 Hey there!
+        </div>
+
+        <div className="bio">
+          I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and wave at me!
+        </div>
+
+        <button className="waveButton" onClick={null}>
+          Wave at Me
+        </button>
+        
+        {/*
+        * If there is no currentAccount render this button
+        */}
+        {!currentAccount && (
+          <button className="waveButton" onClick={connectWallet}>
+            Connect Wallet
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default App
+```
+
+Our code is getting a little long here, but you can see how short our `connectWallet` function is. In this case, I use the `eth_requestAccounts` function because I'm literally asking Metamask to give me access to the user's wallet.
+
+On line 67, I also added a button so we can call our `connectWallet` function. You'll notice I only show this button if we don't have `currAccount`. If we already have currAccount, then that means we already have access to an authorized account in the user's wallet.
+
+🌐 Connect!
+-----------
+
+Now, it's time for the magic.
+
+🚨 Required: Before you click "Next Lesson"
+-------------------------------------------
+
+We just did a lot in the last two lessons. Any questions? Be sure to ask in #course-chat!
