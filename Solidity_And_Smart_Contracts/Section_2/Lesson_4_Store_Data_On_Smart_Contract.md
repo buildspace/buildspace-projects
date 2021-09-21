@@ -56,7 +56,7 @@ Why?
 
 Well, we need to manually call the functions that we've created. 
 
-Basically, when we deploy our contract to the blockchain (which we do when we run `waveContractFactory.deploy();`) our functions become available to be called on the blockchain because we used that special **public** keyword on our function.
+Basically, when we deploy our contract to the blockchain (which we do when we run `waveContractFactory.deploy()`) our functions become available to be called on the blockchain because we used that special **public** keyword on our function.
 
 Think of this like a public API endpoint :).
 
@@ -93,12 +93,12 @@ const runMain = async () => {
 
 runMain();
 ```
-VSCode might auto-import `ethers`. We don't need to import `ethers`. So, make sure you have no imports. `hre` is injected from the command line script which gives us direct access to ethers through the `hre` object.
+**VSCode might auto-import `ethers`. We don't need to import `ethers`. So, make sure you have no imports. Remember, what we talked about last lesson about hre?**
 
 🤔 How's it work?
 -----------------
 
-```
+```javascript
 const [owner, randoPerson] = await hre.ethers.getSigners();
 ```
 
@@ -106,7 +106,7 @@ In order to deploy something to the blockchain, we need to have a wallet address
 
 I also added:
 
-```
+```javascript
 console.log("Contract deployed by:", owner.address);
 ```
 
@@ -114,7 +114,7 @@ I'm doing this just to see the address of the person deploying our contract. I'm
 
 The last thing I added was this:
 
-```
+```javascript
 let waveCount;
 waveCount = await waveContract.getTotalWaves();
 
@@ -122,14 +122,13 @@ let waveTxn = await waveContract.wave();
 await waveTxn.wait();
 
 waveCount = await waveContract.getTotalWaves();
-
 ```
 
 Basically, we need to manually call our functions! Just like we would any normal API. First I call the function to grab the # of total waves. Then, I do the wave. Finally, I grab the waveCount one more time to see if it changed.
 
 Run the script like you would normally:
 
-```
+```bash
 npx hardhat run scripts/run.js
 ```
 
@@ -209,7 +208,7 @@ waveCount = await waveContract.getTotalWaves();
 🚨 Required: Before you click "Next Lesson"
 -------------------------------------------
 
-*Note:if you don't do this, Farza will be very sad :(.*
+*Note: if you don't do this, Farza will be very sad :(.*
 
 Customize your code a little!! Maybe you want to store something else? I want you to mess around. Maybe you want to store the address of the sender in an array? Maybe you want to store a map of addresses and wave counts so you keep track of who's waving at you the most? Even if you just change up the variables names and function names to be something you think is interesting that's a big deal. Try to not straight up copy me! Think of your final website and the kind of functionality you want. Build the functionality **you want**.
 

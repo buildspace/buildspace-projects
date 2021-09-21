@@ -20,17 +20,13 @@ With this project, you're going to learn about crypto tech by actually writing c
 
 This is a 1-week project.
 
-There is one live kick-off stream that will be happening **Saturday, Sept 11 at 12PM Eastern.**
-
-After that, I'll be hosting around 12 virtual co-working sessions of which I recommend you attend at least 3 or 4 of them! You can find the schedule [here](https://app.buildspace.so/courses/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b). 
+After that, I'll be hosting around 12 virtual co-working sessions of which I recommend you attend at least 3 or 4 of them!
 
 Basically, co-working sessions at buildspace are specific times for you to work on your project for 1-hour. It's pretty cool. Everyone joins the #cowork-sesh voice channel at a scheduled time (all muted by default), works individually on their projects, and chills with their classmates in a virtual space.
 
 During the session, you'll also be able to ask questions in #cowork-sesh-chat and I'll be there answering them. Again, everyone's muted. We just talk in text-chat so people can focus! :)
 
 ![](https://i.imgur.com/dqbGZae.png)
-
-We recommend showing up **for at least 3 of them. *So, be sure to add at least 3 to your calendar!***
 
 Don't see a time that works for you? Ping me in #course-chat @farza.
 
@@ -41,11 +37,11 @@ You'll be building a website that I'll be calling the WavePortal --- it'll be a 
 
 You'll be writing + deploying the smart contract and you'll also be building the website that will let people actually connect their wallets and interact with your smart contract.
 
-We're going to make this a little spicy as well --- basically, when someone waves at you there a random chance they can win a small amount of Ethereum from your site :).
+We're going to make this a little spicy as well. Basically, when someone waves at you there is a random chance they can win a small amount of Ethereum from your site :).
 
-You'll be able to customize the website as much as you want. For example:\
-- Maybe instead of a 👋 you want people to send you a 💩.\
-- Perhaps instead of a plain old message, you want them to send you a Spotify link and create a place where anyone can send you awesome music and have it saved.\
+You'll be able to customize the website as much as you want. For example:
+- Maybe instead of a 👋 you want people to send you a 💩.
+- Perhaps instead of a plain old message, you want them to send you a Spotify link and create a place where anyone can send you awesome music and have it saved.
 - You can change the smart contract to recognize when one of your friends is waving at you (based on their Ethereum wallet address) and then take them to a page where they get Rick Roll'd.
 
 You can do whatever you want :).
@@ -63,8 +59,8 @@ For this course, all you need to know is:
 
 That's it :). The rest you'll figure out along the way.
 
-📺 Where are the streams happening?
------------------------------------
+📺 Where does the Live Kick-Off Happen?
+---------------------------------------
 
 They'll be happening at <https://www.twitch.tv/buildspace>. Be sure to make an account on Twitch ahead of time so you'll be able to chat during the stream!
 

@@ -72,13 +72,13 @@ What's happening here is Hardhat will create a local Ethereum network for us, bu
 await waveContract.deployed();
 ```
 
-We'll wait until our contract is officially deployed to our local blockchain! Our `**constructor**` runs when we actually deploy.
+We'll wait until our contract is officially deployed to our local blockchain! Our `constructor` runs when we actually deploy.
 
 ```javascript
 console.log("Contract deployed to:", waveContract.address);
 ```
 
-Finally, once it's deployed `**waveContract.address**`  will basically give us the address of the deployed contract. This address is how can actually find our contract on the blockchain. There are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will be more important a bit later once we deploy to a real Ethereum network.
+Finally, once it's deployed `waveContract.address`  will basically give us the address of the deployed contract. This address is how can actually find our contract on the blockchain. There are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will be more important a bit later once we deploy to a real Ethereum network.
 
 Lets run it!
 
@@ -86,9 +86,25 @@ Lets run it!
 npx hardhat run scripts/run.js
 ```
 
-You should see your `**console.log**` run from within the contract and then you should also see the contract address print out!!! Here's what I get:
+You should see your `console.log` run from within the contract and then you should also see the contract address print out!!! Here's what I get:
 
 ![](https://i.imgur.com/ug79rOM.png)
+
+
+🎩 Hardhat & HRE
+----------------
+
+In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of sorcery is this? 
+
+Directly from the Hardhat docs themselves you will notice this:
+
+> The Hardhat Runtime Environment, or HRE for short, is an object containing all the functionality that Hardhat exposes when running a task, test or script. In reality, Hardhat is the HRE.
+
+So what does this mean? Well, every time you run a terminal command that starts with `npx hardhat` you are getting this `hre` object built on the fly using the `hardhat.config.js` specified in your code! This means you will never have to actually do some sort of import into your files like:
+
+`const hardhat = require("hardhat")`
+
+**TL;DR - you will be seeing `hre` a lot in our code, but never imported anywhere! Checkout this cool [Hardhat documentation](https://hardhat.org/advanced/hardhat-runtime-environment.html) to learn more about it!**
 
 🚨 Required: Before you click "Next Lesson"
 -------------------------------------------

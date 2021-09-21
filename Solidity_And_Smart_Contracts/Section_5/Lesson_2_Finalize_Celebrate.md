@@ -28,7 +28,7 @@ Estimating gas is a hard problem and an easy workaround for this (so our users d
 
 On App.js, I changed the line that sends the wave to 
 
-```
+```solidity
 waveportalContract.wave(message, { gasLimit: 300000 })
 ```
 
@@ -41,7 +41,7 @@ So, if a transaction costs 250,000 gas then *after *that transaction is finali
 
 Remember how we used that magic line below in our smart contract? I told you to Google how events in Solidity work. Please do that now if you didn't already!
 
-```
+```solidity
 emit NewWave(msg.sender, block.timestamp, _message);
 ```
 
@@ -119,7 +119,7 @@ A note on github
 
 I use dotenv for this.
 
-```
+```bash
 npm install --save dotenv
 ```
 

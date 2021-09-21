@@ -17,7 +17,7 @@ We're going to do the same thing here. 
 
 Head to your terminal and create a **new** window. In this window, cd back to your `my-wave-portal project`. Then, in here go ahead and run
 
-```
+```bash
 npx hardhat node
 ```
 
@@ -62,7 +62,7 @@ runMain();
 
 Now the command we're going to run to deploy locally is:
 
-```
+```bash
 npx hardhat run scripts/deploy.js --network localhost
 ```
 

@@ -61,7 +61,7 @@ export default App
 
 So when you run this, you should see that line "We have the ethereum object" printed in the console of the website when you go to inspect it.
 
-NICE.
+**NICE.**
 
 Next, we need to actually check if we're authorized to actually access the user's wallet. Once we have access to this, we can call our smart contract!
 
@@ -174,6 +174,9 @@ const App = () => {
     }
   }
 
+  /**
+  * Implement your connectWallet method here
+  */
   const connectWallet = async () => {
     try {
       const { ethereum } = window;

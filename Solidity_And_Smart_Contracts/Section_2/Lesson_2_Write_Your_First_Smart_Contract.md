@@ -27,25 +27,25 @@ contract WavePortal {
 
 Note: You may want to download the VS Code Solidity extension for easy syntax highlighting [here](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity).
 
-```
+```solidity
 // SPDX-License-Identifier: UNLICENSED
 ```
 
 Just a fancy comment.  It's called a "SPDX license identifier", feel free to Google what it is :).
 
-```
+```solidity
 pragma solidity ^0.8.0;
 ```
 
 This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use version 0.8.0 of the Solidity compiler, nothing lower. Bonus: Can you find where set our Solidity compiler? Hint: It's in a `config` file :).
 
-```
+```solidity
 import "hardhat/console.sol";
 ```
 
 Some magic given to us by Hardhat to do some console logs in our contract. It's actually challenging to debug smart contracts but this is one of the goodies Hardhat gives us to make life easier.
 
-```
+```solidity
 contract WavePortal {
     constructor() {
         console.log("Yo yo, I am a contract and I am smart");

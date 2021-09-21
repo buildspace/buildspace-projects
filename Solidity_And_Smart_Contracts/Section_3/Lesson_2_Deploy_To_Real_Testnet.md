@@ -12,7 +12,9 @@ Sorry for having you make so many accounts, but, this ecosystem is complex and w
 💳 Transactions
 ---------------
 
-So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction. Doing something that updates a variable in our contract is also considered a transaction. So when we call `wave` and it does `totalWaves += 1`, that's a transaction! **Deploying a smart contract is also a transaction.**
+So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction. Doing something that updates a variable in our contract is also considered a transaction. 
+
+So when we call `wave` and it does `totalWaves += 1`, that's a transaction! **Deploying a smart contract is also a transaction.**
 
 Remember, the blockchain has no owner. It's just a bunch of computers around the world run by **miners** that have a copy of the blockchain.
 
@@ -44,22 +46,22 @@ This is awesome because we can test our application in a real-world scenario whe
 So, you'll be doing all this within the next few lessons :).
 
 🤑 Getting some fake $
-
 ------------------------
 
 There are a few testnets out there and the one we'll be using is called "rinkeby". In order get fake Ethereum, we have to ask the network for some. This fake Ethereum will only work on this specific testnet.
 
-You can grab some fake Ethereum for rinkeby through a faucet [here](https://www.rinkeby.io/#faucet).
+You can grab some fake Ethereum for rinkeby through a faucet [here](https://app.mycrypto.com/faucet).
 
 The easiest way to do this is to make a tweet with your **public** rinkeby wallet address (which you can find on metamask) and then input that direct tweet URL into the input box. Why do they make you do this? Take a guess and post your ideas in #course-chat :). 
 
 I made a quick video showing this here.
 
-**Update 2: Found a faucet working decently well. Head over [here](https://app.mycrypto.com/faucet). Connect your wallet. Then, head to the faucet [here](https://app.mycrypto.com/faucet). Request some $! If this doesn't work, then just ask people in #course-chat for some ETH on Rinkeby.**
+🙃 Having trouble getting Testnet ETH?
+-----------------------------------
 
-**Update 1: Looks like a lot of people are having trouble with the testnet faucet to get some fake ETH. Sometimes this happens when the network is under a lot of load. If the below strategy doesn't work, please send me your public wallet address in #course-chat and @ me and I'll send you 0.05 ETH in testnet fake money directly to your wallet which should be near instant :).**
+Sometimes it's almost impossible to get Testnet ETH. This happens when the network is under a lot of load. If the above link doesn't work, please send me your public wallet address in #course-chat and @ me and I'll send you 0.05 ETH in Testnet fake money directly to your wallet which should be near instant :).**
 
-**📈 Deploy to Rinkeby testnet.**
+📈 Deploy to Rinkeby testnet.
 ---------------------------------
 
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
@@ -86,7 +88,7 @@ Once you've got your config setup we're set to deploy with the deploy script we 
 
 Run this command from the root directory of `my-wave-portal`. Notice all we do is change it from `localhost` to `rinkeby`.
 
-```
+```bash
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
 
@@ -95,7 +97,7 @@ npx hardhat run scripts/deploy.js --network rinkeby
 
 Here's my output:
 
-```
+```bash
 Deploying contracts with the account: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
 Account balance: 3198297774605223721
 WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E

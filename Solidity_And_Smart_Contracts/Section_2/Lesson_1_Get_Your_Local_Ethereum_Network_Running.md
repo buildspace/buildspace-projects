@@ -28,7 +28,7 @@ First you'll need to get node/npm. If you don't have it head over [here](https:/
 
 Next, lets head to the terminal. Go ahead and cd to the directory you want to work in. Once you're there run these commands:
 
-```
+```bash
 mkdir my-wave-portal
 cd my-wave-portal
 npm init -y
@@ -42,7 +42,7 @@ Cool, now we should have hardhat. Lets get a sample project going.
 
 Run:
 
-```
+```bash
 npx hardhat
 ```
 
@@ -52,23 +52,27 @@ The sample project will ask you to install hardhat-waffle and hardhat-ethers. Th
 
 Go ahead and install these other dependencies just in case it didn't do it automatically.
 
-```
+```bash
 npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 ```
 
-Finally, run `npx hardhat accounts` and this should print out a bunch of strings that looks like this: `0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`. These are Ethereum addresses that Hardhat generates for us to simulate real users on the blockchain. This is going to help us a ton later in the project when we want to simulate users 👋-ing at us!
+Finally, run `npx hardhat accounts` and this should print out a bunch of strings that looks like this: 
+
+`0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`
+
+These are Ethereum addresses that Hardhat generates for us to simulate real users on the blockchain. This is going to help us a ton later in the project when we want to simulate users 👋-ing at us!
 
 🌟 Run it
 ---------
 
 To make sure everything is working, run:
 
-```
+```bash
  npx hardhat compile
 ```
 Then run:
 
-```
+```bash
 npx hardhat test
 ```
 

@@ -13,21 +13,21 @@ Check out my updated `wave` function on `WavePortal.sol`.
 
 ```solidity
 function wave(string memory _message) public {
-        totalWaves += 1;
-        console.log("%s has waved!", msg.sender);
+    totalWaves += 1;
+    console.log("%s has waved!", msg.sender);
 
-        waves.push(Wave(msg.sender, _message, block.timestamp));
+    waves.push(Wave(msg.sender, _message, block.timestamp));
 
-        emit NewWave(msg.sender, block.timestamp, _message);
+    emit NewWave(msg.sender, block.timestamp, _message);
 
-        uint256 prizeAmount = 0.0001 ether;
-        require(
-            prizeAmount <= address(this).balance,
-            "Trying to withdraw more money than they contract has."
-        );
-        (bool success, ) = (msg.sender).call{value: prizeAmount}("");
-        require(success, "Failed to withdraw money from contract.");
-    }
+    uint256 prizeAmount = 0.0001 ether;
+    require(
+        prizeAmount <= address(this).balance,
+        "Trying to withdraw more money than they contract has."
+    );
+    (bool success, ) = (msg.sender).call{value: prizeAmount}("");
+    require(success, "Failed to withdraw money from contract.");
+}
 ```
 
 This is pretty awesome.
@@ -44,7 +44,7 @@ How this works is when we first deploy the contract, we "fund" it :). So far, we
 
 What's cool about
 
-```
+```solidity
 require(prizeAmount <= address(this).balance, "Trying to withdraw more money than the contract has.");
 ```
 
@@ -123,7 +123,7 @@ But then, we also want to see if when we call `wave` if 0.0001 Ethereum is prope
 
 When we run 
 
-```
+```bash
 npx hardhat run scripts/run.js
 ```
 
@@ -131,7 +131,7 @@ You'll see we run into a bit of an error!
 
 It'll say something like
 
-```
+```bash
 Error: non-payable constructor cannot override value
 ```
 
@@ -139,7 +139,7 @@ What this is saying is, our contract isn't allowed to pay people right now! This
 
 ```solidity
 constructor() payable {
-    console.log("We have been constructed!");
+  console.log("We have been constructed!");
 }
 ```
 
@@ -147,7 +147,7 @@ That's it :).
 
 Now, when I do 
 
-```
+```bash
 npx hardhat run scripts/run.js
 ```
 
@@ -203,13 +203,15 @@ Easy!
 
 Lets deploy our contract using the same old line
 
-```
+```bash
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
 
 Now when you go to [Etherscan](https://rinkeby.etherscan.io/) and paste in your contract address you'll see that your contract now has a value of 0.1 Ethereum! Success!
 
-**Remember to update your frontend with the new contract address *and* the new ABI file. Otherwise, it will** **break**. Test out your wave function and make sure it still works!
+**Remember to update your frontend with the new contract address *and* the new ABI file. Otherwise, it will** **break**. 
+
+Test out your wave function and make sure it still works!
 
 🎁 Wrap Up
 ----------

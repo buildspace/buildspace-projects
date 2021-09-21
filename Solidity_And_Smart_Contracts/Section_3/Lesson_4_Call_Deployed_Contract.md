@@ -57,8 +57,6 @@ So, contract address you have -- right? Remember when you deployed your contract
 
 But, what's an ABI? Much earlier I mentioned how when you compile a contract, it creates a bunch of files for you under `artifacts`. An ABI is one of those files.
 
-# NEED TO ADD ABI FILE STUFF
-
 🏠 Setting Your Contract Address
 -----------------------------
  
@@ -87,6 +85,7 @@ const App = () => {
 
 🛠 Getting ABI File Content
 ---------------------------
+**Rather watch me go through this? [Click here](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)!**
 
 Look at you, already half way down here! Let's move back to our Smart Contract.
 
@@ -122,7 +121,7 @@ const wave = async () => {
         const signer = provider.getSigner();
 
         /*
-        * You are definiing contractABI right here. Let's chamnge this!
+        * You are defining contractABI right here. Let's change this!
         */
         const waveportalContract = new ethers.Contract(contractAddress, contractABI, signer);
 

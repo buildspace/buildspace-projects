@@ -154,7 +154,7 @@ So, now that we've updated our contract we need to do a few things:
 
 3\. We need to update the abi file on our frontend. 
 
-Why do we need to do all this? Well, it's because smart contracts are **immutable. **They can't change. They're permanent. That means changing a contract requires a full redeploy. This will also **reset** all the variables since it'd be treated as a brand new contract. **That means we'd lose all our wave data if we wanted to update the contract's code.**
+Why do we need to do all this? Well, it's because smart contracts are **immutable.** They can't change. They're permanent. That means changing a contract requires a full redeploy. This will also **reset** all the variables since it'd be treated as a brand new contract. **That means we'd lose all our wave data if we wanted to update the contract's code.**
 
 **Bonus**: In #course-chat, can anyone tell me some solutions here? Where else could we store our wave data where we could update our contract's code and keep our original data around? There are quite a few solutions here let me know what you find!
 
