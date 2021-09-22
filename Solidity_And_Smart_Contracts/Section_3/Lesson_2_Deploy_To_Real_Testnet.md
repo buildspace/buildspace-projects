@@ -26,7 +26,7 @@ Alchemy essentially helps us broadcast our contract creation transaction so that
 
 This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
 
-So, make an account with Alchemy [here](https://www.alchemy.com/). And then check out my video below to learn how to get your API key for a testnet.
+So, make an account with Alchemy [here](https://www.alchemy.com/). [Click here](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283) to see my video on how to get your API key for a testnet!
 
 🕸️ Testnets
 ------------
@@ -56,7 +56,7 @@ You can grab some fake Ethereum for rinkeby through a faucet [here](https://app
 
 The easiest way to do this is to make a tweet with your **public** rinkeby wallet address (which you can find on metamask) and then input that direct tweet URL into the input box. Why do they make you do this? Take a guess and post your ideas in #course-chat :). 
 
-I made a quick video showing this here.
+I made a quick video [showing this here](https://www.loom.com/share/049181acf51140e283f443a4f8e5758e).
 
 🙃 Having trouble getting Testnet ETH?
 -----------------------------------
