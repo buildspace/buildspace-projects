@@ -164,7 +164,7 @@ So what you'll need to do now is:
 
 2\. Change `contractAddress` in `App.js` to be the new contract address we got from the step above in the terminal just like we did before the first time we deployed.
 
-3\. Get the updated abi file from `artifacts` like we did before and copy-paste it into Replit just like we did before. If you forgot how to do this be sure to revisit the lesson [here](https://app.buildspace.so/courses/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b/lessons/LE52134606-af90-47ed-9441-980479599350) and watch the video I made on ABI files.
+3\. Get the updated abi file from `artifacts` like we did before and copy-paste it into Replit just like we did before. If you forgot how to do this be sure to revisit the lesson [here](https://app.buildspace.so/courses/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b/lessons/LE52134606-af90-47ed-9441-980479599350) and watch the video I made on ABI files by [clicking here](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48).
 
 **Again -- you need to do this every time you change your contracts code.**
 

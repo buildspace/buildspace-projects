@@ -16,7 +16,7 @@ Make an account on Replit before moving on.
 
 I've already created a basic react project that you can **fork** on Replit. **Just go [here](https://replit.com/@Farza/waveportal-baseline-student?v=1), and near the right you'll see the "Fork" button.** Be sure you're logged in, then click this. You'll magically clone my repo and full IDE in your browser to work with the code. Once it stops loading and shows you some code, click the "Run" button at the top. This can take a solid 2-3 minutes the first time. Basically, Replit is booting up your project and deploying it to an actual domain.
 
-I made a quick video going over how to edit code on Replit, deploy, get dark mode, etc. Check it out!
+I made a quick video going over how to edit code on Replit, deploy, get dark mode, etc. [Click here to check it out!](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
 
 🦊 Metamask
 -----------
