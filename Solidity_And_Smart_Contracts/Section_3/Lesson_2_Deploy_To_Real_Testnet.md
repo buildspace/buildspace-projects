@@ -48,7 +48,9 @@ So, you'll be doing all this within the next few lessons :).
 🤑 Getting some fake $
 ------------------------
 
-There are a few testnets out there and the one we'll be using is called "rinkeby". In order get fake Ethereum, we have to ask the network for some. This fake Ethereum will only work on this specific testnet.
+There are a few testnets out there and the one we'll be using is called "Rinkeby" which is run by the Ethereum foundation.
+
+In order get fake Ethereum, we have to ask the network for some. This fake Ethereum will only work on this specific testnet.
 
 You can grab some fake Ethereum for rinkeby through a faucet [here](https://app.mycrypto.com/faucet).
 
