@@ -5,7 +5,7 @@ Go ahead and close the terminal with your local blockchain network running which
 
 Now we're going to be doing the real deal, deploying to the actual blockchain.
 
-Go ahead and make an account with Alchemy [here](https://www.alchemy.com/).
+Go ahead and make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
 
 Sorry for having you make so many accounts, but, this ecosystem is complex and we want to take advantage of the awesome tools out there. What Alchemy does is it gives us a simple way to deploy to the real Ethereum blockchain.
 
@@ -26,7 +26,7 @@ Alchemy essentially helps us broadcast our contract creation transaction so that
 
 This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
 
-So, make an account with Alchemy [here](https://www.alchemy.com/). [Click here](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283) to see my video on how to get your API key for a testnet!
+So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57). [Click here](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283) to see my video on how to get your API key for a testnet!
 
 🕸️ Testnets
 ------------
