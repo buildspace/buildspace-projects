@@ -1,7 +1,5 @@
 <h1 align="center">🦄_buildspace Projects</h1>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 
 <h3 align="center">
   <strong>Help build the future of the Decentralized Web.</strong>
@@ -14,9 +12,6 @@
     <a href=".github/CONTRIBUTING.md#-how-to-contribute">
         <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
     </a>
-    <!-- <a href="#contributors-">
-        <img src="https://img.shields.io/badge/all_contributors-13-orange.svg?style=square" alt="PRs welcome!" />
-    </a> -->
 </p>
 
 ---
