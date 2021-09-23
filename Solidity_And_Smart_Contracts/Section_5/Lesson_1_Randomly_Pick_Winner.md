@@ -55,8 +55,7 @@ contract WavePortal {
         /*
          * Generate a Psuedo random number between 0 and 100
          */
-        uint256 randomNumber = (block.difficulty + block.timestamp + seed) %
-            100;
+        uint256 randomNumber = (block.difficulty + block.timestamp + seed) % 100;
         console.log("Random # generated: %s", randomNumber);
 
         /*
