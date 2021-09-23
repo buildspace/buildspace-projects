@@ -1,4 +1,7 @@
 <h1 align="center">🦄_buildspace Projects</h1>
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <h3 align="center">
   <strong>Help build the future of the Decentralized Web.</strong>
@@ -45,3 +48,23 @@ As always make sure to reach out to us on [Discord](https://discord.gg/CFuBU7RJ4
 We use Discord for tons of our communication! [Click here](https://discord.gg/CFuBU7RJ42) to join our server and reach out to the _buildspace team members if you have any questions or concerns.
 
 ---
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/Tanzebruh"><img src="https://avatars.githubusercontent.com/u/63520213?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanzebruh</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=Tanzebruh" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
