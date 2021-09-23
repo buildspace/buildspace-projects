@@ -237,7 +237,7 @@ On line 67, I also added a button so we can call our `connectWallet` function. Y
 🌐 Connect!
 -----------
 
-Now, it's time for the magic.
+Now, it's time for the magic. Check out [this](https://www.loom.com/share/1d30b147047141ce8fde590c7673128d?t=0) video.
 
 🚨 Required: Before you click "Next Lesson"
 -------------------------------------------
