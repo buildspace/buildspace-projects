@@ -15,6 +15,8 @@ This stuff is very new, there's a lot of hype around it, and it can be super dif
 
 With this project, you're going to learn about crypto tech by actually writing code and just hopping into the good stuff. No B.S. We'll also go over theory and more in-depth concepts, but, it will all be structured around your project.
 
+Get started with this [intro video I made about Solidity](https://www.loom.com/share/8746b43760c74c6791ba17af9940ea8e)!
+
 🏠 How is this all structured?
 ------------------------------
 
