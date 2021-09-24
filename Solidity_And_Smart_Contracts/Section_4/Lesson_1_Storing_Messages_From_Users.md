@@ -88,9 +88,7 @@ contract WavePortal {
 🧐 Test it
 ----------
 
-Whenever we change our contract, we want to change `run.js` to test the new functionality we added. That how we know it's working how we want! Here's what mines looks like now. I altered the script to test `wave` with a message on line 10 and line 13.
-
-I also call `getAllWaves` on line 16 and then print it out on line 17 to help me see if the waves were properly stored in the array!
+Whenever we change our contract, we want to change `run.js` to test the new functionality we added. That how we know it's working how we want! Here's what mines looks like now.
 
 Here's my updated `run.js`. 
 
