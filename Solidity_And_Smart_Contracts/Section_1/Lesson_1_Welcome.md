@@ -96,6 +96,13 @@ Another great time to ask is during co-working sessions which are guaranteed tim
 
 ![](https://i.imgur.com/QyUEAef.png)
 
+🤘 See an issue? Want to improve something? Fix it yourself ;).
+---------------------------------------
+
+**[All this content is completely open-source](https://github.com/zipeducation/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec` in the Discord :). 
+
+Let's get you some open-source rep!!!
+
 
 🚨 Optional -- wanna work in crypto?
 --------------------------------------------
