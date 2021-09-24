@@ -31,7 +31,7 @@ This project usually takes people like 5-10 hours total. Some people knock it ou
 
 The "kick-off" is the only live thing in this project and it'll be recorded. The rest of the project is made up of these async lessons.
 
-After that, I'll be hosting "co-working sessions" and will email you days I'm doing them.
+After that, I'll be hosting "co-working sessions" and will email you whenever we do them! Usually we focus them on the weekends.
 
 Basically, co-working sessions at buildspace are specific times for you to work on your project for 1-hour. It's pretty cool. Everyone joins the #cowork-sesh voice channel at a scheduled time (all muted by default), works individually on their projects, and chills with their classmates in a virtual space. We also play some chill lofi beats!
 
