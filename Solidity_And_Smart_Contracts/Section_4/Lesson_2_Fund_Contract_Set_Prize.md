@@ -32,9 +32,9 @@ function wave(string memory _message) public {
 
 This is pretty awesome.
 
-On line 7, I just initiate a prize amount. Solidity actually lets us use the keyword `ether` so we can easily represent monetary amounts. Convenient :)!
+With `prizeAmount` I just initiate a prize amount. Solidity actually lets us use the keyword `ether` so we can easily represent monetary amounts. Convenient :)!
 
-On line 8 we have some new keywords as well. This is `require`, and it basically checks to see that some condition is true. If it's not true, it will quit the function and cancel the transaction. It's like a fancy if statement!
+We have some new keywords as well. You'll see `require` which basically checks to see that some condition is true. If it's not true, it will quit the function and cancel the transaction. It's like a fancy if statement!
 
 In this case, it's checking if `prizeAmount <= address(this).balance`. Here, `address(this).balance` is the **balance of the contract itself.**
 
@@ -50,9 +50,9 @@ require(prizeAmount <= address(this).balance, "Trying to withdraw more money tha
 
 is that it lets us make sure that the *balance of the contract* is bigger than the *prize amount,* and if it is, we can move forward with giving the prize! If it isn't `require` will essentially kill the transaction and be like, "Yo, this contract can't even pay you out!". 
 
-Line 9 is the magic line where we send money :). The syntax is a little weird! Notice how we pass it `prizeAmount`!
+`(msg.sender).call{value: prizeAmount}("")` is the magic line where we send money :). The syntax is a little weird! Notice how we pass it `prizeAmount`!
 
-Line 10 is where we know the transaction was a success :). If it wasn't, it'd mark the transaction as an error and say `"Failed to withdraw money from contract."`.
+`require(success` is where we know the transaction was a success :). If it wasn't, it'd mark the transaction as an error and say `"Failed to withdraw money from contract."`.
 
 Pretty awesome, right :)?
 
