@@ -107,11 +107,11 @@ So what does this mean? Well, every time you run a terminal command that starts 
 
 **TL;DR - you will be seeing `hre` a lot in our code, but never imported anywhere! Checkout this cool [Hardhat documentation](https://hardhat.org/advanced/hardhat-runtime-environment.html) to learn more about it!**
 
-🚨 Required: Before you click "Next Lesson"
+🚨 Before you click "Next Lesson"
 -------------------------------------------
 
-*Note:if you don't do this, Farza will be very sad :(.*
+*Note: if you don't do this, Farza will be very sad :(.*
 
-Go to #course-chat and post a screenshot of your terminal with the output. Also, got any questions? Be sure to post your question along with your screenshot!
+Go to #progress and post a screenshot of your terminal with the output.
 
 Be sure to make that console.log whatever you want! You've now written your own contract and ran it by deploying to a local blockchain WOOOOOOOOOO LETS GOOO.
