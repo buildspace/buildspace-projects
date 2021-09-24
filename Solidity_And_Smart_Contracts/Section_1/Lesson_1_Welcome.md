@@ -110,3 +110,5 @@ Let's get you some open-source rep!!!
 We're partnered with a bunch of dope companies. We'll help you get hired in crypto. Even if you're just curious, fill out the form!! What's the worst that can happen -- you get connected to some dope crypto companies!?
 
 [Here's the link.](https://zipschool.typeform.com/to/ot0Py2Vh)
+
+If you want, DM `emboslice#0064` in the Discord with a link to your LinkedIn. She leads recruiting at buildspace and she can see if there any companies we can match you with immediately :). 
