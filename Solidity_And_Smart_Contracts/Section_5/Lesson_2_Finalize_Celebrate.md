@@ -104,7 +104,7 @@ This is super powerful. It lets us create web apps that update in real-time :). 
 I want you to hack around with this and build whatever you want :).
 
 
-A note on github
+🙉 A note on github
 ----------------
 
 **If uploading to Github, don't upload your hardhat config file with your private key to your repo. You will get robbed.**
