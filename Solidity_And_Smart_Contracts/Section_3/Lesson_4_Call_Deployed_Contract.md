@@ -200,7 +200,7 @@ Pretty simple, right :)?
 
 What's awesome here is while the transaction is being mined you can actually print out the transaction hash, copy/paste it to [Etherscan](https://rinkeby.etherscan.io/), and see it being processed in real-time :).
 
-When we run this, you'll see that total wave count is increased by 1. You'll also see that Metamask pops us and asks us to pay "gas" which we pay for using our fake $. I'll talk about this on the live stream a lot more. There is a great article on it [here](https://ethereum.org/en/developers/docs/gas/).
+When we run this, you'll see that total wave count is increased by 1. You'll also see that Metamask pops us and asks us to pay "gas" which we pay for using our fake $. There is a great article on it [here](https://ethereum.org/en/developers/docs/gas/). Try and figure out what gas is :).
 
 🎉 Success
 ----------
