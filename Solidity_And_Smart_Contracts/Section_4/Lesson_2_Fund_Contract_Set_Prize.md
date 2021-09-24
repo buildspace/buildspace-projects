@@ -121,7 +121,7 @@ The magic is on `hre.ethers.utils.parseEther('0.001'),`. This where I say, "go a
 
 I then do `hre.ethers.utils.formatEther(contractBalance)` to test out to see if my contract actually has a balance of 0.1. I use a function that `ethers` gives me here called `getBalance` and pass it my contract's address!
 
-But then, we also want to see if when we call `wave` if 0.0001 Ethereum is properly removed from the contract!! That's why I print the balance out again on lines 13 + 14 after I call `wave`.
+But then, we also want to see if when we call `wave` if 0.0001 Ethereum is properly removed from the contract!! That's why I print the balance out again after I call `wave`.
 
 When we run 
 
