@@ -98,7 +98,7 @@ The contents of the ABI file can be found in a fancy JSON file in your hardhat p
 `artifacts/contracts/WavePortal.sol/WavePortal.json`
 
 
-Nice! So what is the point of this thing? Essentially, this file tells your frontend what it can do with your smart contract. So, the question becomes how do we get this JSON file into our frontend? For this project we are going to do some good old "copy pasta"!
+So, the question becomes how do we get this JSON file into our frontend? For this project we are going to do some good old "copy pasta"!
 
 Copy the contents from your `WavePortal.sol` in your Solidity project and then head to your React App. You are going tro make a new file called `WavePortal.json` in the following path:
 
