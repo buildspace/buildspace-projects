@@ -218,7 +218,7 @@ The possibilities are truly endless.
 
 Customize your site a little to show the total number of waves. Maybe show a loading bar while the wave is being mined, whatever you want. Do something a little different!
 
-Once you feel like you're ready, share the link to your website with us in #course-chat so we can connect our wallets and wave at you :).
+Once you feel like you're ready, share the link to your website with us in #progress so we can connect our wallets and wave at you :).
 
 🎁 Wrap Up
 --------------------
