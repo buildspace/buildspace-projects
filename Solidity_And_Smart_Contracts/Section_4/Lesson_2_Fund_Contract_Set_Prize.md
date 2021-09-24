@@ -68,7 +68,9 @@ Lets head to `run.js` and make some changes to make sure everything works. Here'
 ```javascript
 const main = async () => {
   const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
-  const waveContract = await waveContractFactory.deploy();
+  const waveContract = await waveContractFactory.deploy({
+    value: hre.ethers.utils.parseEther('0.1'),
+  });
   await waveContract.deployed();
   console.log('Contract addy:', waveContract.address);
 
@@ -115,9 +117,9 @@ const runMain = async () => {
 runMain();
 ```
 
-The magic is on line 3. This where I say, "go and deploy my contract and fund it with 0.1 Ethereum". This will remove Ethereum from my wallet, and use it to fund the contract. **That's it**.
+The magic is on `hre.ethers.utils.parseEther('0.001'),`. This where I say, "go and deploy my contract and fund it with 0.001 Ethereum". This will remove Ethereum from my wallet, and use it to fund the contract. **That's it**.
 
-On lines 7 + 8 I test out to see if my contract actually has a balance of 0.1. I use a function that `ethers` gives me here called `getBalance` and pass it my contract's address!
+I then do `hre.ethers.utils.formatEther(contractBalance)` to test out to see if my contract actually has a balance of 0.1. I use a function that `ethers` gives me here called `getBalance` and pass it my contract's address!
 
 But then, we also want to see if when we call `wave` if 0.0001 Ethereum is properly removed from the contract!! That's why I print the balance out again on lines 13 + 14 after I call `wave`.
 
@@ -168,7 +170,7 @@ We need to make a small update to `deploy.js`.
 const main = async () => {
   const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
   const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther('0.1'),
+    value: hre.ethers.utils.parseEther('0.001'),
   });
 
   await waveContract.deployed();
@@ -189,13 +191,14 @@ const runMain = async () => {
 runMain();
 ```
 
-All I did was fund the contract 0.1 Ethereum like this:
+All I did was fund the contract 0.001 Ethereum like this:
 
 ```javascript
 const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther('0.1'),
+    value: hre.ethers.utils.parseEther('0.001'),
 });
 ```
+I like deploying to testnets with a smaller amount of ether first to test!
 
  And I also added `await waveContract.deployed()` to make it easy for me to know when it's deployed!
 
