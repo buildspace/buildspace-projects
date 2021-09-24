@@ -63,7 +63,7 @@ When you reach the end of this project, you'll be able to earn an NFT.
 
 This NFT not only looks cool, but it will also get you access to secret opportunities in crypto such as — full-time work, internships, and contract work. This initiative is a work in progress :).
 
-Note: instead of "Capella", yours would say "[Deneb](https://en.wikipedia.org/wiki/Deneb)" which is the name of your cohort! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT. Also -- the name of the project at the top left would be different!
+Note: instead of "Capella", yours would have the name of your cohort --  each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT. Also -- the name of the project at the top left would be different!
 
 To claim the NFT, you'll need to pay [gas fees](https://ethereum.org/en/developers/docs/gas/) which are fees that Ethereum charges you to perform transactions on the network. Gas fees to redeem the NFT vary. I recommend transferring around $50 worth of ether over to your wallet.
 
