@@ -100,7 +100,7 @@ The contents of the ABI file can be found in a fancy JSON file in your hardhat p
 
 So, the question becomes how do we get this JSON file into our frontend? For this project we are going to do some good old "copy pasta"!
 
-Copy the contents from your `WavePortal.json` and then head to your web app. You are going to make a new folder called `utils` under `src`. Under `src` create a file named `WavePortal.json`. So the full path will look like:
+Copy the contents from your `WavePortal.json` and then head to your web app. You are going to make a new folder called `utils` under `src`. Under `utils` create a file named `WavePortal.json`. So the full path will look like:
 
 `src/utils/WavePortal.json`
 
