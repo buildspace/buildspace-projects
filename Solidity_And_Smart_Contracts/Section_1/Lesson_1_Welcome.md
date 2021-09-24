@@ -1,4 +1,5 @@
-### 👋 Welcome
+👋 Welcome
+----------------------------------
 
 You've made it — hell yeah! Welcome :). My name is Farza and I’ll be your instructor. This project is for devs that want to get more into crypto tech. All you really need to know going into this: some terminal skills, some javascript, some react.js. You'll pick up the rest along the way.
 
@@ -9,7 +10,7 @@ Few action items for you before moving on:
 3. **Be sure to attend the kick-off**. If you miss it, no worries. It's not required! You'll get an email with the recording. I'll also post the recording in the Discord.
 
 
-**🚀 This is going to be awesome**
+🚀 This is going to be awesome
 ----------------------------------
 
 I'm really excited to show you how to go from zero -> shipping your own web3 app + Ethereum smart contract.
@@ -21,6 +22,7 @@ This stuff is very new, there's a lot of hype around it, and it can be super dif
 With this project, you're going to learn about crypto tech by actually writing code and just hopping into the good stuff. No B.S. We'll also go over theory and more in-depth concepts, but, it will all be structured around your project.
 
 Here's a little [intro video I made about the project](https://www.loom.com/share/8746b43760c74c6791ba17af9940ea8e)!
+
 
 🏠 How is this all structured?
 ------------------------------
