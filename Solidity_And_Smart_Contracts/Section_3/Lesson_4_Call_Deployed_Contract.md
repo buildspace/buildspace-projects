@@ -37,6 +37,19 @@ const wave = async () => {
 }
 ```
 
+Quick explanation here:
+
+```jsx
+const provider = new ethers.providers.Web3Provider(ethereum);
+const signer = provider.getSigner();
+```
+
+`ethers` is a library that helps our frontend talk to our contract. Be sure to import it at the top using `import { ethers } from "ethers";`.
+
+A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using Alchemy to **deploy**? Well in this case we use nodes that Metamask provides in the background to send/receive data from our deployed contract.
+
+[Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
+
 Connect this function to our wave button.
 
 ```html
@@ -154,12 +167,12 @@ Now that you have a way to access your ABI file let's swap out the property `con
 Wow. Feels good to not see errors right?
 
 
-Once you add that file and click the "Wave" button -- **you'll be officially reading data from your contract on the blockchain through your web client**. 
+Once you add that file and click the "Wave" button -- **you'll be officially reading data from your contract on the blockchain through your web client**. 
 
 📝 Writing data
 ---------------
 
-The code for writing data to our contract isn't super different from reading data. The main difference is that when we want to write new data to our contract, we need to notify the miners so that the transaction can be mined. When we read data, we don't need to do this. Reads are "free" because all we're doing is reading from the blockchain, **we're not changing it. **
+The code for writing data to our contract isn't super different from reading data. The main difference is that when we want to write new data to our contract, we need to notify the miners so that the transaction can be mined. When we read data, we don't need to do this. Reads are "free" because all we're doing is reading from the blockchain, **we're not changing it. **
 
 Here's the code to wave:
 
@@ -207,7 +220,7 @@ When we run this, you'll see that total wave count is increased by 1. You'll als
 
 **NICEEEEEEE :).**
 
-Really good stuff. We now have an actual client that can read and write data to the blockchain. From here, you can do whatever you want. You have the basics down. You can build a decentralized version of Twitter. You can build a way for people to post their favorite memes and allow people to "tip" the people who post the best memes with Ethereum. You can build a decentralized voting system that a country can use to vote in a politician where everything is open and clear. 
+Really good stuff. We now have an actual client that can read and write data to the blockchain. From here, you can do whatever you want. You have the basics down. You can build a decentralized version of Twitter. You can build a way for people to post their favorite memes and allow people to "tip" the people who post the best memes with Ethereum. You can build a decentralized voting system that a country can use to vote in a politician where everything is open and clear. 
 
 The possibilities are truly endless.
 
