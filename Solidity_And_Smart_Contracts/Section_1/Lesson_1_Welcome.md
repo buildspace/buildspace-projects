@@ -94,7 +94,7 @@ By the end, you'll have a site you can show off and actually have people use. Yo
 📺 Where does the Live Kick-Off Happen?
 ---------------------------------------
 
-They'll be happening at <https://www.twitch.tv/buildspace>. Be sure to make an account on Twitch ahead of time so you'll be able to chat during the stream!
+It'll be happening on <https://www.twitch.tv/buildspace>. The recording will be posted on the Discord as well.
 
 
 
