@@ -47,7 +47,7 @@ When you reach the end of this project, you'll be able to earn an NFT.
 
 **You can only claim an NFT if you finish the project within 7-days of the kick-off. After that, you won't be able to claim it!**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff653bc6-1c11-4ab6-8c99-6bb4217d94c6/Untitled.png)
+![Untitled](https://i.imgur.com/56FZo2R.png)
 
 This NFT not only looks cool, but it will also get you access to secret opportunities in crypto such as — full-time work, internships, and contract work. This initiative is a work in progress :).
 
