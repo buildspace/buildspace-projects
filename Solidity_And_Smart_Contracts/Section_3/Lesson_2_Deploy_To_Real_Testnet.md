@@ -52,18 +52,15 @@ So, you'll be doing all this within the next few lessons :).
 
 There are a few testnets out there and the one we'll be using is called "Rinkeby" which is run by the Ethereum foundation.
 
-In order get fake Ethereum, we have to ask the network for some. This fake Ethereum will only work on this specific testnet.
+In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-You can grab some fake Ethereum for rinkeby through a faucet [here](https://app.mycrypto.com/faucet).
+In order get fake ether, we have to ask the network for some. **This fake ether will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet [here](https://app.mycrypto.com/faucet). You'll need to connect your wallet, make an account, and then click that same link again to request funds.
 
-The easiest way to do this is to make a tweet with your **public** rinkeby wallet address (which you can find on metamask) and then input that direct tweet URL into the input box. Why do they make you do this? Take a guess and post your ideas in #course-chat :). 
-
-I made a quick video [showing this here](https://www.loom.com/share/049181acf51140e283f443a4f8e5758e).
 
 🙃 Having trouble getting Testnet ETH?
 -----------------------------------
 
-Sometimes it's almost impossible to get Testnet ETH. This happens when the network is under a lot of load. If the above link doesn't work, please send me your public wallet address in #course-chat and @ me and I'll send you 0.05 ETH in Testnet fake money directly to your wallet which should be near instant :).**
+If the above link doesn't work, please send me your public wallet address and request 0.01 ETH in #faucet-request and drop a funny gif. Either me, or someone from the course will send you some faker ether as soon as they can. The funnier the gif, the faster you will get sent fake ether LOL.
 
 📈 Deploy to Rinkeby testnet.
 ---------------------------------
@@ -74,7 +71,7 @@ We'll need to change our `hardhat.config.js` file. You can find this in the root
 require('@nomiclabs/hardhat-waffle');
 
 module.export = {
-  solidity: '0.8.4',
+  solidity: '0.8.0',
   networks: {
     rinkeby: {
       url: 'YOUR ALCHEMY_API_URL',
