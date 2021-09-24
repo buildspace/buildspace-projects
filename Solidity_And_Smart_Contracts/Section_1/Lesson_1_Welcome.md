@@ -111,4 +111,4 @@ We're partnered with a bunch of dope companies. We'll help you get hired in cryp
 
 [Here's the link.](https://zipschool.typeform.com/to/ot0Py2Vh)
 
-If you want, DM `emboslice#0064` in the Discord with a link to your LinkedIn. She leads recruiting at buildspace and she can see if there any companies we can match you with immediately :). 
+Feel free to also DM `emboslice#0064` in the Discord with a link to your LinkedIn + what you're looking for (ex. full-time, internship, etc). She leads recruiting at buildspace and she can see if there are any companies we can match you with immediately :). No guarantees here!
