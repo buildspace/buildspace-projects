@@ -282,4 +282,4 @@ The goal? You want to give your users the ability to send you a custom message u
 👷‍♀️ Go build a UI!
 --------------------
 
-Go make this thing look how you want it to look! I won't be teaching you much of that here. Feel free to ask questions in #course-chat!
+Go make this thing look how you want it to look! I won't be teaching you much of that here. Feel free to ask questions in #section-4-help!
