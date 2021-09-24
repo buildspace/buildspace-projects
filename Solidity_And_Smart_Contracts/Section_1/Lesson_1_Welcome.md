@@ -107,4 +107,6 @@ Let's get you some open-source rep!!!
 🚨 Optional -- wanna work in crypto?
 --------------------------------------------
 
-We're partnered with a bunch of dope companies. We'll help you get hired :). Fill [this](https://zipschool.typeform.com/to/ot0Py2Vh) form out!
+We're partnered with a bunch of dope companies. We'll help you get hired in crypto. Even if you're just curious, fill out the form!! What's the worst that can happen -- you get connected to some dope crypto companies!?
+
+[Here's the link.](https://zipschool.typeform.com/to/ot0Py2Vh)
