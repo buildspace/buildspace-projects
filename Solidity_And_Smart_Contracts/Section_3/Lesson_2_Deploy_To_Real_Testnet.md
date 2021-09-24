@@ -26,7 +26,9 @@ Alchemy essentially helps us broadcast our contract creation transaction so that
 
 This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
 
-So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57). [Click here](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283) to see my video on how to get your API key for a testnet!
+So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+
+[Click here](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283) to see my video on how to get your API key for a testnet!
 
 🕸️ Testnets
 ------------
