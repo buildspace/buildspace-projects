@@ -244,4 +244,4 @@ Now, it's time for the magic. Check out [this](https://www.loom.com/share/1d30b1
 🚨 Required: Before you click "Next Lesson"
 -------------------------------------------
 
-We just did a lot in the last two lessons. Any questions? Be sure to ask in #course-chat!
+We just did a lot in the last two lessons. Any questions? Be sure to ask in #section-3-help!
