@@ -1,8 +1,13 @@
-You made it! Welcome :).
+### 👋 Welcome
 
-My name is Farza and I'll be your instructor. If you ever need any help, just head to #course-chat in Discord which you get access to once you connect your Discord. That's where all your fellow classmates will be so don't forget to join that!
+You've made it — hell yeah! Welcome :). My name is Farza and I’ll be your instructor. This project is for devs that want to get more into crypto tech. All you really need to know going into this: some terminal skills, some javascript, some react.js. You'll pick up the rest along the way.
 
-If you **don't** have access to #course-chat and already linked your Discord, join the Discord [here](https://discord.gg/mXDqs6Ubcc), and @farza in #general I'll help you get access to the right channels!
+Few action items for you before moving on:
+
+1. **Connect your Discord in the course dashboard.** All the good stuff is going to be happening in a secret category in the Discord called "#nft-course-chat" that you'll only have access to if you connect your Discord.
+2. **Connect your Ethereum wallet in the course dashboard.** If you don't have a wallet that can interact with dApps, you can just install Metamask for free right now. Without a wallet, you can't do the project!
+3. **Be sure to attend the kick-off**. If you miss it, no worries. It's not required! You'll get an email with the recording. I'll also post the recording in the Discord.
+
 
 **🚀 This is going to be awesome**
 ----------------------------------
@@ -15,22 +20,43 @@ This stuff is very new, there's a lot of hype around it, and it can be super dif
 
 With this project, you're going to learn about crypto tech by actually writing code and just hopping into the good stuff. No B.S. We'll also go over theory and more in-depth concepts, but, it will all be structured around your project.
 
-Get started with this [intro video I made about Solidity](https://www.loom.com/share/8746b43760c74c6791ba17af9940ea8e)!
+Here's a little [intro video I made about the project](https://www.loom.com/share/8746b43760c74c6791ba17af9940ea8e)!
 
 🏠 How is this all structured?
 ------------------------------
 
-This is a 1-week project.
+This project usually takes people like 5-10 hours total. Some people knock it out within the same day it starts, others take a few days!
 
-After that, I'll be hosting around 12 virtual co-working sessions of which I recommend you attend at least 3 or 4 of them!
+The "kick-off" is the only live thing in this project and it'll be recorded. The rest of the project is made up of these async lessons.
 
-Basically, co-working sessions at buildspace are specific times for you to work on your project for 1-hour. It's pretty cool. Everyone joins the #cowork-sesh voice channel at a scheduled time (all muted by default), works individually on their projects, and chills with their classmates in a virtual space.
+After that, I'll be hosting "co-working sessions" and will email you days I'm doing them.
 
-During the session, you'll also be able to ask questions in #cowork-sesh-chat and I'll be there answering them. Again, everyone's muted. We just talk in text-chat so people can focus! :)
+Basically, co-working sessions at buildspace are specific times for you to work on your project for 1-hour. It's pretty cool. Everyone joins the #cowork-sesh voice channel at a scheduled time (all muted by default), works individually on their projects, and chills with their classmates in a virtual space. We also play some chill lofi beats!
+
+During the session, you'll also be able to ask questions in #cowork-chat and I'll be there answering them. Again, everyone's muted. We just talk in text-chat so people can focus! :)
 
 ![](https://i.imgur.com/dqbGZae.png)
 
-Don't see a time that works for you? Ping me in #course-chat @farza.
+
+👀 Earn a _buildspace NFT by the end
+------------------------------
+
+When you reach the end of this project, you'll be able to earn an NFT.
+
+**You can only claim an NFT if you finish the project within 7-days of the kick-off. After that, you won't be able to claim it!**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff653bc6-1c11-4ab6-8c99-6bb4217d94c6/Untitled.png)
+
+This NFT not only looks cool, but it will also get you access to secret opportunities in crypto such as — full-time work, internships, and contract work. This initiative is a work in progress :).
+
+Note: instead of "Capella", yours would say "[Deneb](https://en.wikipedia.org/wiki/Deneb)" which is the name of your cohort! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT. Also -- the name of the project at the top left would be different!
+
+To claim the NFT, you'll need to pay [gas fees](https://ethereum.org/en/developers/docs/gas/) which are fees that Ethereum charges you to perform transactions on the network. Gas fees to redeem the NFT vary. I recommend transferring around $50 worth of ether over to your wallet.
+
+If you don't know how to do this, don't worry about it for now :).
+
+*Note: The project itself doesn't require you to have any real money at all! We'll still be deploying to the blockchain using something special Ethereum provides us called a "testnet".*
+
 
 🛠 What will you be building?
 -----------------------------
@@ -50,23 +76,26 @@ You can do whatever you want :).
 
 By the end, you'll have a site you can show off and actually have people use. Your fellow classmates will be your first users!
 
-🤔 Pre-Reqs
------------
-
-For this course, all you need to know is:
-
-1\. How to use a terminal.\
-2\. How to write/run code in at least one langauge (ex. Python, JS, C, Java, etc).\
-3\. (Bonus) How to build a basic site in React.
-
-That's it :). The rest you'll figure out along the way.
 
 📺 Where does the Live Kick-Off Happen?
 ---------------------------------------
 
 They'll be happening at <https://www.twitch.tv/buildspace>. Be sure to make an account on Twitch ahead of time so you'll be able to chat during the stream!
 
-🚨 Optional moment to chat w/ the community!
+
+🤚 How to get help.
+---------------------------------------
+
+When you have a question, hit up the proper channel for the project.
+
+This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord.
+
+Another great time to ask is during co-working sessions which are guaranteed times TAs will be online. During coworking sessions, you can ask questions in `#cowork-chat` on the Disord.
+
+![](https://i.imgur.com/QyUEAef.png)
+
+
+🚨 Optional -- wanna work in crypto?
 --------------------------------------------
 
-Let us know in #course-chat why you're hyped about web3 and crypto! Or, what do you hope to achieve with this project :)? Or, what do you hope to learn? Would love to hear from you.
+We're partnered with a bunch of dope companies. We'll help you get hired :). Fill [this](https://zipschool.typeform.com/to/ot0Py2Vh) form out!
