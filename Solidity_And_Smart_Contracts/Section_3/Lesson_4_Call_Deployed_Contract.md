@@ -89,7 +89,7 @@ const App = () => {
 
 Look at you, already half way down here! Let's move back to our Smart Contract.
 
-When you compile your smart contract, the compiler spits out a bunch of files needed so the Blockchain can actually read the code you wrote. You can find these files in the `artificats` folder located in the root of your Solodity project.
+When you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artificats` folder located in the root of your Solidity project.
 
 Now, you are looking for the ABI content right? This is going to be given to you in a fancy JSON file under:
 
