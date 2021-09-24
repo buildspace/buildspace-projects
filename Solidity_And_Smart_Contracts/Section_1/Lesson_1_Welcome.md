@@ -29,7 +29,7 @@ Here's a little [intro video I made about the project](https://www.loom.com/shar
 
 This project usually takes people like 5-10 hours total. Some people knock it out within the same day it starts, others take a few days!
 
-The "kick-off" is the only live thing in this project and it'll be recorded. The rest of the project is made up of these async lessons.
+The "kick-off" is the only live thing in this project and it'll be recorded. The rest of the project is made up of these async lessons for you to complete at your own pace!
 
 After that, I'll be hosting "co-working sessions" and will email you whenever we do them! Usually we focus them on the weekends.
 
@@ -38,6 +38,18 @@ Basically, co-working sessions at buildspace are specific times for you to work 
 During the session, you'll also be able to ask questions in #cowork-chat and I'll be there answering them. Again, everyone's muted. We just talk in text-chat so people can focus! :)
 
 ![](https://i.imgur.com/dqbGZae.png)
+
+
+🤚 How to get help.
+---------------------------------------
+
+When you have a question, hit up the proper channel for the project.
+
+This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord.
+
+Another great time to ask is during co-working sessions which are guaranteed times TAs will be online. During coworking sessions, you can ask questions in `#cowork-chat` on the Disord.
+
+![](https://i.imgur.com/QyUEAef.png)
 
 
 👀 Earn a _buildspace NFT by the end
@@ -84,17 +96,6 @@ By the end, you'll have a site you can show off and actually have people use. Yo
 
 They'll be happening at <https://www.twitch.tv/buildspace>. Be sure to make an account on Twitch ahead of time so you'll be able to chat during the stream!
 
-
-🤚 How to get help.
----------------------------------------
-
-When you have a question, hit up the proper channel for the project.
-
-This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord.
-
-Another great time to ask is during co-working sessions which are guaranteed times TAs will be online. During coworking sessions, you can ask questions in `#cowork-chat` on the Disord.
-
-![](https://i.imgur.com/QyUEAef.png)
 
 
 🚨 Optional -- wanna work in crypto?
