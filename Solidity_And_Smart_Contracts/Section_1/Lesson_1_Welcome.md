@@ -101,4 +101,6 @@ It'll be happening on <https://www.twitch.tv/buildspace>. The recording will be 
 🚨 Optional -- wanna work in crypto?
 --------------------------------------------
 
-We're partnered with a bunch of dope companies. We'll help you get hired :). Fill [this](https://zipschool.typeform.com/to/ot0Py2Vh) form out!
+We're partnered with a bunch of dope companies. We'll help you get hired. Even if you're just curious, fill it out!! What's the worst that can happen -- you get connected to some dope crypto companies!?
+
+You can find the form [here](https://zipschool.typeform.com/to/ot0Py2Vh) form out!
