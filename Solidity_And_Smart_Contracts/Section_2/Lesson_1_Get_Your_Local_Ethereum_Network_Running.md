@@ -15,7 +15,7 @@ So in this case, we want people to 👋 at us. The bigger picture here is:
 
 I'll explain certain things in-depth as needed (ex. how mining working, how smart contracts are compiled and ran, etc) *but for now lets just focus on getting stuff running*.
 
-If you have any issues throughout here, just drop a message on Discord in  `#course-chat`. 
+If you have any issues throughout here, just drop a message on Discord in  `#section-1-help`. 
 
 ✨ The magic of Hardhat
 ----------------------
