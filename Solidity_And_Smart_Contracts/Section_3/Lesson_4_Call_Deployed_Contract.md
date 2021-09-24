@@ -87,16 +87,18 @@ const App = () => {
 ---------------------------
 **Rather watch me go through this? [Click here](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)!**
 
-Look at you, already half way down here! Let's move back to our Smart Contract.
+Look at you, already half way down here! Let's move back to our smart contract folder.
 
 When you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artificats` folder located in the root of your Solidity project.
 
-Now, you are looking for the ABI content right? This is going to be given to you in a fancy JSON file under:
+The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
+
+The contents of the ABI file can be found in a fancy JSON file in your hardhat project:
 
 `artifacts/contracts/WavePortal.sol/WavePortal.json`
 
 
-Nice! So what is the point of this thing? Essentially, this file tells your frontend what it can do with your Smart Contract. So, the question becomes how do we get this JSON file into our frontend? For this project we are going to do some good old "copy pasta"!
+Nice! So what is the point of this thing? Essentially, this file tells your frontend what it can do with your smart contract. So, the question becomes how do we get this JSON file into our frontend? For this project we are going to do some good old "copy pasta"!
 
 Copy the contents from your `WavePortal.sol` in your Solidity project and then head to your React App. You are going tro make a new file called `WavePortal.json` in the following path:
 
