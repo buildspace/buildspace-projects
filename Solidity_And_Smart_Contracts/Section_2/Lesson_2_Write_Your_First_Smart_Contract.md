@@ -37,7 +37,7 @@ Just a fancy comment.  It's called a "SPDX license identifier", feel free to Go
 pragma solidity ^0.8.0;
 ```
 
-This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use version 0.8.0 of the Solidity compiler, nothing lower. Bonus: Can you find where set our Solidity compiler? Hint: It's in a `config` file :).
+This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use version 0.8.0 of the Solidity compiler, nothing lower. Note, be sure that the compiler version is the same in `hardhat.config.js`.
 
 ```solidity
 import "hardhat/console.sol";
@@ -57,9 +57,9 @@ So, smart contracts kinda look like a `class` in other languages, if you've ever
 
 Let's run this and see what we get!
 
-🚨 Required: Before you click "Next Lesson"
+🚨 Before you click "Next Lesson"
 -------------------------------------------
 
-*Note:if you don't do this, Farza will be very sad :(.*
+*Note: if you don't do this, Farza will be very sad :(.*
 
-Go to #course-chat and post a screenshot with your fancy contract :).
+Go to #progress and post a screenshot with your fancy contract :).
