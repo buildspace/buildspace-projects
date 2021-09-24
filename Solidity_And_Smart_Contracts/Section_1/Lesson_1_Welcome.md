@@ -7,7 +7,7 @@ Few action items for you before moving on:
 
 1. **Connect your Discord in the course dashboard.** All the good stuff is going to be happening in a secret category in the Discord that you'll only have access to if you connect your Discord.
 2. **Connect your Ethereum wallet in the course dashboard.** If you don't have a wallet that can interact with dApps, you can just install Metamask for free right now. Without a wallet, you can't do the project!
-3. **Be sure to attend the kick-off**. If you miss it, no worries. It's not required to attend! The recording will be posted in Discord.
+3. **Be sure to attend the kick-off**. If you miss it, no worries. It's not required! You'll get an email with the recording. I'll also post the recording in the Discord.
 
 
 🚀 This is going to be awesome
@@ -29,27 +29,15 @@ Here's a little [intro video I made about the project](https://www.loom.com/shar
 
 This project usually takes people like 5-10 hours total. Some people knock it out within the same day it starts, others take a few days!
 
-The "kick-off" is the only live thing in this project and it'll be recorded. The rest of the project is made up of these async lessons for you to complete at your own pace!
+The "kick-off" is the only live thing in this project and it'll be recorded. The rest of the project is made up of these async lessons.
 
-After that, I'll be hosting "co-working sessions" and will email you whenever we do them! Usually we focus them on the weekends.
+After that, we'll be hosting "co-working sessions" and will email you days I'm doing them.
 
 Basically, co-working sessions at buildspace are specific times for you to work on your project for 1-hour. It's pretty cool. Everyone joins the #cowork-sesh voice channel at a scheduled time (all muted by default), works individually on their projects, and chills with their classmates in a virtual space. We also play some chill lofi beats!
 
 During the session, you'll also be able to ask questions in #cowork-chat and I'll be there answering them. Again, everyone's muted. We just talk in text-chat so people can focus! :)
 
 ![](https://i.imgur.com/dqbGZae.png)
-
-
-🤚 How to get help.
----------------------------------------
-
-When you have a question, hit up the proper channel for the project.
-
-This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord.
-
-Another great time to ask is during co-working sessions which are guaranteed times TAs will be online. During coworking sessions, you can ask questions in `#cowork-chat` on the Disord.
-
-![](https://i.imgur.com/QyUEAef.png)
 
 
 👀 Earn a _buildspace NFT by the end
@@ -59,15 +47,15 @@ When you reach the end of this project, you'll be able to earn an NFT.
 
 **You can only claim an NFT if you finish the project within 7-days of the kick-off. After that, you won't be able to claim it!**
 
-![Untitled](https://i.imgur.com/56FZo2R.png)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff653bc6-1c11-4ab6-8c99-6bb4217d94c6/Untitled.png)
 
 This NFT not only looks cool, but it will also get you access to secret opportunities in crypto such as — full-time work, internships, and contract work. This initiative is a work in progress :).
 
-Note: instead of "Capella", yours would have the name of your cohort --  each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT. Also -- the name of the project at the top left would be different!
+Note: instead of "Capella", yours would say "[Deneb](https://en.wikipedia.org/wiki/Deneb)" which is the name of your cohort! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT. Also -- the name of the project at the top left would be different!
 
-To claim the NFT, you'll need to pay [gas fees](https://ethereum.org/en/developers/docs/gas/) which are fees that Ethereum charges you to perform transactions on the network. Gas fees to redeem the NFT vary. I recommend transferring around $50 worth of ether over to your wallet.
+To claim the NFT, you'll need to pay [gas fees](https://ethereum.org/en/developers/docs/gas/) which are fees that Ethereum charges you to perform transactions on the network. Gas fees to redeem the NFT vary. I recommend transferring around $30 - $50 worth of ether over to your wallet.
 
-If you don't know how to do this, don't worry about it for now :).
+If you don't know how to do this, don't worry about it for now -- not required.
 
 *Note: The project itself doesn't require you to have any real money at all! We'll still be deploying to the blockchain using something special Ethereum provides us called a "testnet".*
 
@@ -94,13 +82,22 @@ By the end, you'll have a site you can show off and actually have people use. Yo
 📺 Where does the Live Kick-Off Happen?
 ---------------------------------------
 
-It'll be happening on <https://www.twitch.tv/buildspace>. The recording will be posted on the Discord as well.
+They'll be happening at <https://www.twitch.tv/buildspace>. Be sure to make an account on Twitch ahead of time so you'll be able to chat during the stream!
 
+
+🤚 How to get help.
+---------------------------------------
+
+When you have a question, hit up the proper channel for the project.
+
+This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord. If you're part of multiple projects, we sure to ask your questions in the right project category!
+
+Another great time to ask is during co-working sessions which are guaranteed times TAs will be online. During coworking sessions, you can ask questions in `#cowork-chat` on the Disord.
+
+![](https://i.imgur.com/QyUEAef.png)
 
 
 🚨 Optional -- wanna work in crypto?
 --------------------------------------------
 
-We're partnered with a bunch of dope companies. We'll help you get hired. Even if you're just curious, fill it out!! What's the worst that can happen -- you get connected to some dope crypto companies!?
-
-You can find the form [here](https://zipschool.typeform.com/to/ot0Py2Vh) form out!
+We're partnered with a bunch of dope companies. We'll help you get hired :). Fill [this](https://zipschool.typeform.com/to/ot0Py2Vh) form out!
