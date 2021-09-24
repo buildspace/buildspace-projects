@@ -83,10 +83,10 @@ In your terminal window that's keeping your local Ethereum network alive, you'll
 INTERESTING. But...what's gas? What does it mean by block #1? What's the big code next to "Transaction"? I want you try and just Google this stuff. Ask questions in #course-chat :).
 
 
-🚨 Required: Before you click "Next Lesson"
+🚨 Before you click "Next Lesson"
 -------------------------------------------
 
-Honestly, just give yourself a pat on the back. You've done a lot. Next we'll be actually building a website that will interact with our local Ethereum network and it's going to be awesome. Head to #course-chat and let me know how this course is going so far for you. I'd love your feedback.
+Honestly, just give yourself a pat on the back. You've done a lot. Next we'll be actually building a website that will interact with our local Ethereum network and it's going to be awesome. Head to #progress and let me know how this course is going so far for you. I'd love your feedback.
 
 
 🎁 Section Wrap Up
