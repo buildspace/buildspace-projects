@@ -100,12 +100,12 @@ The contents of the ABI file can be found in a fancy JSON file in your hardhat p
 
 So, the question becomes how do we get this JSON file into our frontend? For this project we are going to do some good old "copy pasta"!
 
-Copy the contents from your `WavePortal.sol` in your Solidity project and then head to your React App. You are going tro make a new file called `WavePortal.json` in the following path:
+Copy the contents from your `WavePortal.json` and then head to your web app. You are going to make a new folder called `utils` under `src`. Under `src` create a file named `WavePortal.json`. So the full path will look like:
 
 `src/utils/WavePortal.json`
 
 
-You know the drill, paste the ABI file contents right there!
+Paste the ABI file contents right there!
 
 Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file. Right under where you imported `App.css` go ahead and import your JSON file like so:
 
@@ -147,11 +147,11 @@ const wave = async () => {
   }
   ```
 
-  Now that you have a way to access your ABI file let's swap out the property `contractABI` with `waveportal.abi` to have it look something like this:
+Now that you have a way to access your ABI file let's swap out the property `contractABI` with `waveportal.abi` to have it look something like this:
   
-  `const waveportalContract = new ethers.Contract(contractAddress, waveportal.abi, signer);`
+`const waveportalContract = new ethers.Contract(contractAddress, waveportal.abi, signer);`
 
-  Wow. Feels good to not see errors right?
+Wow. Feels good to not see errors right?
 
 
 Once you add that file and click the "Wave" button -- **you'll be officially reading data from your contract on the blockchain through your web client**. 
