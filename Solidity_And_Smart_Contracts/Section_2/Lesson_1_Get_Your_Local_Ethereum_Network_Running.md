@@ -86,11 +86,11 @@ Go ahead and open the code for the project now in your favorite code editor. I l
 
 Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `sample-script.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. Don't delete the actual folders!
 
-🚨 Required: Before you click "Next Lesson"
+🚨 Before you click "Next Lesson"
 -------------------------------------------
 
-*Note:if you don't do this, Farza will be very sad :(.*
+*Note: if you don't do this, Farza will be very sad :(.*
 
-Head to #course-chat and post a screenshot of **your** terminal showing the output of the test! You just ran a smart contract, that's a big deal!! Show it off :).
+Head to #progress and post a screenshot of **your** terminal showing the output of the test! You just ran a smart contract, that's a big deal!! Show it off :).
 
-P.S: If you **don't** have access to #course-chat and already linked your Discord, join the Discord [here](https://discord.gg/mXDqs6Ubcc), and @farza in #general I'll help you get access to the right channels!
+P.S: If you **don't** have access to #progress, be sure youlinked your Discord, join the Discord [here](https://discord.gg/mXDqs6Ubcc), hit us up in #general we'll help you get access to the right channels!
