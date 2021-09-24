@@ -103,14 +103,6 @@ This is super powerful. It lets us create web apps that update in real-time :). 
 
 I want you to hack around with this and build whatever you want :).
 
-Deploying to mainnet
---------------------
-
-**This isn't required since it costs real money, do it for fun if you want to!**
-
-So, once you're 100% happy with your code and how your web app looks. You can deploy to mainnet which is the main version of the Ethereum blockchain!
-
-This is something I'll cover a bit on the live stream, but, for the most part, if you want to do this I really want you to figure it out! We'll be around in #course-chat for questions, of course!
 
 A note on github
 ----------------
@@ -128,7 +120,7 @@ require('@nomiclabs/hardhat-waffle');
 require('dotenv').config();
 
 module.exports = {
-  solidity: '0.8.4',
+  solidity: '0.8.0',
   networks: {
     rinkeby: {
       url: process.env.STAGING_ALCHEMY_KEY,
@@ -167,7 +159,7 @@ See yah around!!
 🚨 Before you head out...
 -------------------------
 
-Go to #course-chat and show us your final product that we can mess around with :). If you tweet it out and tag @_buildspace I'll retweet it!
+Go to #showcase and show us your final product that we can mess around with :). If you tweet it out and tag @_buildspace we'll retweet it!
 
 What would also be awesome is if you told us in #feedback how you liked this project and the structure of the course. What did you love most about buildspace? What would like us to change for future projects? Your feedback would be awesome!!
 
