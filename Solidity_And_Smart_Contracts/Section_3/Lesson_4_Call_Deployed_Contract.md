@@ -105,7 +105,7 @@ Copy the contents from your `WavePortal.json` and then head to your web app. You
 `src/utils/WavePortal.json`
 
 
-Paste the ABI file contents right there!
+Paste the whole JSON file right there!
 
 Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file. Right under where you imported `App.css` go ahead and import your JSON file like so:
 
@@ -211,10 +211,10 @@ Really good stuff. We now have an actual client that can read and write data to 
 
 The possibilities are truly endless.
 
-🚨 Required: Before you click "Next Lesson"
+🚨 Before you click "Next Lesson"
 -------------------------------------------
 
-*Note:if you don't do this, Farza will be very sad :(.*
+*Note: if you don't do this, Farza will be very sad :(.*
 
 Customize your site a little to show the total number of waves. Maybe show a loading bar while the wave is being mined, whatever you want. Do something a little different!
 
