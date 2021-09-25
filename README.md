@@ -54,6 +54,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/Tanzebruh"><img src="https://avatars.githubusercontent.com/u/63520213?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanzebruh</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=Tanzebruh" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://neilkistner.com/"><img src="https://avatars.githubusercontent.com/u/186971?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Neil Kistner</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=wyze" title="Documentation">📖</a></td>
   </tr>
 </table>
 
