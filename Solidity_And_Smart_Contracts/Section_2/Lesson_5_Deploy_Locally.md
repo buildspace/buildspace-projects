@@ -1,11 +1,10 @@
-👀 Writing a script to deploy locally
--------------------------------------
+## 👀 Writing a script to deploy locally
 
-*"Wait, didn't I already deploy to my local network??"*
+_"Wait, didn't I already deploy to my local network??"_
 
 Well, sorta.
 
-Remember, when you run `scripts/run.js` it's actually 
+Remember, when you run `scripts/run.js` it's actually
 
 1\. Creating a new local Ethereum network.\
 2\. Deploying your contract.\
@@ -13,7 +12,7 @@ Remember, when you run `scripts/run.js` it's actually 
 
 We need a way to keep the local network alive. Why? Well, think about a local server. You want to keep it alive so you can keep talking to it! For example, if you have a local server with an API you made, you want to keep that local server alive so you can work on your website and test it out.
 
-We're going to do the same thing here. 
+We're going to do the same thing here.
 
 Head to your terminal and create a **new** window. In this window, cd back to your `my-wave-portal project`. Then, in here go ahead and run
 
@@ -34,14 +33,15 @@ Under the `scripts` folder, create a file called `deploy.js`. Here's the code fo
 ```javascript
 const main = async () => {
   const [deployer] = await hre.ethers.getSigners();
+  const accountBalance = await deployer.getBalance();
 
-  console.log('Deploying contracts with account: ', deployer.address);
-  console.log('Account balance: ', accountBalance.toString());
+  console.log("Deploying contracts with account: ", deployer.address);
+  console.log("Account balance: ", accountBalance.toString());
 
-  const Token = await hre.ethers.getContractFactory('WavePortal');
+  const Token = await hre.ethers.getContractFactory("WavePortal");
   const portal = await Token.deploy();
 
-  console.log('WavePortal address: ', portal.address);
+  console.log("WavePortal address: ", portal.address);
 };
 
 const runMain = async () => {
@@ -57,8 +57,7 @@ const runMain = async () => {
 runMain();
 ```
 
-🎉 DEPLOY
----------
+## 🎉 DEPLOY
 
 Now the command we're going to run to deploy locally is:
 
@@ -72,7 +71,7 @@ Okay, so once I run that here's what I get:
 
 ![](https://i.imgur.com/ZXehYOk.png)
 
-Epic. 
+Epic.
 
 We deployed the contract, and we also have it's address on the blockchain! Our website is going to need this so it knows where to look on the blockchain for your contract. (Imagine if it had to search the whole blockchain for our contract. That would be...bad!).
 
@@ -82,14 +81,10 @@ In your terminal window that's keeping your local Ethereum network alive, you'll
 
 INTERESTING. But...what's gas? What does it mean by block #1? What's the big code next to "Transaction"? I want you try and just Google this stuff. Ask questions in #course-chat :).
 
-
-🚨 Before you click "Next Lesson"
--------------------------------------------
+## 🚨 Before you click "Next Lesson"
 
 Honestly, just give yourself a pat on the back. You've done a lot. Next we'll be actually building a website that will interact with our local Ethereum network and it's going to be awesome. Head to #progress and let me know how this course is going so far for you. I'd love your feedback.
 
-
-🎁 Section Wrap Up
-------------------
+## 🎁 Section Wrap Up
 
 Nice! You made it to the end of the section. Checkout [this link](https://gist.github.com/adilanchian/9f745fdfa9186047e7a779c02f4bffb7) to make sure you are on track with your code!
