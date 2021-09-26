@@ -76,6 +76,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jackharding",
+      "name": "Jack Harding",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12549439?v=4",
+      "profile": "http://jackharding.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
