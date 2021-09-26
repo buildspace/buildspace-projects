@@ -116,7 +116,9 @@ Lets make sure it works! Here's my updated `run.js`. In this case, I just want t
 ```javascript
 const main = async () => {
   const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
-  const waveContract = await waveContractFactory.deploy();
+  const waveContract = await waveContractFactory.deploy({
+    value: hre.ethers.utils.parseEther('0.1'),
+  });
   await waveContract.deployed();
   console.log('Contract addy:', waveContract.address);
 
