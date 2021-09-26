@@ -188,7 +188,7 @@ const [currentAccount, setCurrentAccount] = useState("");
   const getAllWaves = async () => {
     try {
       if (window.ethereum) {
-        const provider = new ethers.providers.Web3Provider
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         const wavePortalContract = new ethers.Contract(contractAddress, waveportal.abi, signer);
 
