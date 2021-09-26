@@ -138,7 +138,7 @@ const wave = async () => {
         /*
         * You are defining contractABI right here. Let's change this!
         */
-        const waveportalContract = new ethers.Contract(contractAddress, contractABI, signer);
+        const waveportalContract = new ethers.Contract(contractAddress, contractABI.abi, signer);
 
         let count = await waveportalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
