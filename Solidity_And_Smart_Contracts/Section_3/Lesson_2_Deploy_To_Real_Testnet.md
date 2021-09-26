@@ -79,7 +79,7 @@ We'll need to change our `hardhat.config.js` file. You can find this in the root
 ```javascript
 require('@nomiclabs/hardhat-waffle');
 
-module.export = {
+module.exports = {
   solidity: '0.8.0',
   networks: {
     rinkeby: {
