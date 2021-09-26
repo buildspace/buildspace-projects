@@ -59,6 +59,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/pujer"><img src="https://avatars.githubusercontent.com/u/91406719?v=4?s=100" width="100px;" alt=""/><br /><sub><b>pujer</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=pujer" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/MicLeey"><img src="https://avatars.githubusercontent.com/u/15386836?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=MicLeey" title="Documentation">📖</a></td>
     <td align="center"><a href="http://omarnava.dev"><img src="https://avatars.githubusercontent.com/u/8124929?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Omar Nava</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=onalv" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/letsgitcracking"><img src="https://avatars.githubusercontent.com/u/45171676?v=4?s=100" width="100px;" alt=""/><br /><sub><b>letsgitcracking</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=letsgitcracking" title="Documentation">📖</a></td>
   </tr>
 </table>
 
