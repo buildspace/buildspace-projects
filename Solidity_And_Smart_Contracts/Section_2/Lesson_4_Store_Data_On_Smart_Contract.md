@@ -138,7 +138,7 @@ Here's my output:
 
 Pretty awesome, eh :)?
 
-You can also see that wallet address that wave equaled to the address that deployed the contract. I waved at myself!
+You can also see that wallet address that waved equaled to the address that deployed the contract. I waved at myself!
 
 So we:\
 1\. Called our wave function.\
