@@ -122,7 +122,7 @@ Paste the whole JSON file right there!
 
 Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file. Right under where you imported `App.css` go ahead and import your JSON file like so:
 
-`import waveportal from './utils/WavePortal.json';`
+`import contractABI from './utils/WavePortal.json';`
 
 Now that you have this imported and ready to go, you need actually access the ABI content in your code! If you noticed, the contents of that JSON file you imported as a key called `abi`. Thats exactly what you will be accessing in your code here! Let's take a look at where you are actually using this ABI content:
 
