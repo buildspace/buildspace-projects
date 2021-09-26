@@ -137,7 +137,7 @@ const main = async () => {
   let waveTxn = await waveContract.wave('This is wave #2');
   await waveTxn.wait();
 
-  contractBalance = await hre.ethers.provider.getBalance(waveContract.addresss);
+  contractBalance = await hre.ethers.provider.getBalance(waveContract.address);
   console.log(
     'Contract balance:',
     hre.ethers.utils.formatEther(contractBalance)
