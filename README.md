@@ -64,6 +64,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/rohitguptap"><img src="https://avatars.githubusercontent.com/u/5934153?v=4?s=100" width="100px;" alt=""/><br /><sub><b>rohitguptap</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=rohitguptap" title="Documentation">📖</a></td>
     <td align="center"><a href="http://jackharding.dev"><img src="https://avatars.githubusercontent.com/u/12549439?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jack Harding</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=jackharding" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Espequair"><img src="https://avatars.githubusercontent.com/u/12451989?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Espequair</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=Espequair" title="Documentation">📖</a></td>
   </tr>
 </table>
 
