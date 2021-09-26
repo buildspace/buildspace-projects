@@ -138,7 +138,7 @@ const wave = async () => {
         /*
         * You are defining contractABI right here. Let's change this!
         */
-        const waveportalContract = new ethers.Contract(contractAddress, contractABI, signer);
+        const waveportalContract = new ethers.Contract(contractAddress, contractABI.abi, signer);
 
         let count = await waveportalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
@@ -159,13 +159,6 @@ const wave = async () => {
     }
   }
   ```
-
-Now that you have a way to access your ABI file let's swap out the property `contractABI` with `waveportal.abi` to have it look something like this:
-  
-`const waveportalContract = new ethers.Contract(contractAddress, waveportal.abi, signer);`
-
-Wow. Feels good to not see errors right?
-
 
 Once you add that file and click the "Wave" button -- **you'll be officially reading data from your contract on the blockchain through your web client**. 
 
