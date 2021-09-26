@@ -64,7 +64,7 @@ So now we want to test those functions specifically!
 
 ```javascript
 const main = async () => {
-  const [owner, randoPerson] = await hre.ethers.getSigners();
+  const [owner, randomPerson] = await hre.ethers.getSigners();
   const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
@@ -99,10 +99,10 @@ runMain();
 -----------------
 
 ```javascript
-const [owner, randoPerson] = await hre.ethers.getSigners();
+const [owner, randomPerson] = await hre.ethers.getSigners();
 ```
 
-In order to deploy something to the blockchain, we need to have a wallet address! Hardhat does this for us magically in the background, but, here I grabbed the wallet address of contract owner and I also grabbed a random wallet address and called it `randoPerson`. This will make more sense in a moment.
+In order to deploy something to the blockchain, we need to have a wallet address! Hardhat does this for us magically in the background, but, here I grabbed the wallet address of contract owner and I also grabbed a random wallet address and called it `randomPerson`. This will make more sense in a moment.
 
 I also added:
 
@@ -161,7 +161,7 @@ Check this out. I added a few lines at the bottom of the function. I'm not going
 
 ```javascript
 const main = async () => {
-  const [owner, randoPerson] = await hre.ethers.getSigners();
+  const [owner, randomPerson] = await hre.ethers.getSigners();
   const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
@@ -177,7 +177,7 @@ const main = async () => {
 
   waveCount = await waveContract.getTotalWaves();
 
-  waveTxn = await waveContract.connect(randoPerson).wave();
+  waveTxn = await waveContract.connect(randomPerson).wave();
   await waveTxn.wait();
 
   waveCount = await waveContract.getTotalWaves();
@@ -199,7 +199,7 @@ runMain();
 The newest items added to this code block are:
 
 ```javascript
-waveTxn = await waveContract.connect(randoPerson).wave();
+waveTxn = await waveContract.connect(randomPerson).wave();
 await waveTxn.wait();
 
 waveCount = await waveContract.getTotalWaves();
