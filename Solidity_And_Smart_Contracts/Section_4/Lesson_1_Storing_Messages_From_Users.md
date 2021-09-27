@@ -5,15 +5,15 @@ So, we now have a full-fledged web app that can talk to the blockchain!
 
 Now, if we remember, we want our final app to be a place where people can come wave to us, and, send us a message. We also want to show all the past waves/messages we've gotten. That's what we'll be doing in this lesson!
 
-So at the end of the lessons we want to
+So at the end of the lessons we want to;
 
-1\. Let users submit a message along with their wave.
+1\. let users submit a message along with their wave.
 
-2\. Have that data saved somehow on the blockchain.
+2\. have that data saved somehow on the blockchain.
 
-3\. Actually show that data on our site, so, anyone can come to see all the people who have waved at us and their messages.
+3\. show that data on our site, so, anyone can come to see all the people who have waved at us and their messages.
 
-Check out my updated smart contract code. I added lots of comments here to help you see what changed :).
+Check out my updated smart contract code. I have added lots of comments here to help you see what changed :).
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
