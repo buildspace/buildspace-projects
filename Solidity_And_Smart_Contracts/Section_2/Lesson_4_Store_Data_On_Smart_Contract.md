@@ -150,14 +150,14 @@ This is pretty much the basis of most smart contracts. Read functions. Write fun
 Pretty soon, we'll be able to call these functions from our react app that we'll be working on :).
 
 **Bonus:**\
-Why do we do a `waveTxn.wait();` though? What are we waiting for? Why didn't we do a `.wait()` after we read the total number of waves? Post your thoughts in the course-chat on Discord. Whoever gets the right answer I will give $20 in Ethereum :).
+Why do we do a `waveTxn.wait();` though? What are we waiting for? Why didn't we do a `.wait()` after we read the total number of waves? Post your thoughts in the cowork-chat on Discord. Whoever gets the right answer I will give $20 in Ethereum :).
 
 🤝 Test other users 
 --------------------
 
 So, we probably want someone other than us to send us a wave right? It'd be pretty boring if only we could send a wave!! We want to make our website **multiplayer**!
 
-Check this out. I added a few lines at the bottom of the function. I'm not going to explain it much (but please ask questions in #course-chat). Basically this is how we can simulate other people hitting our functions :). Keep an eye on the wallet addresses in your terminal once you change the code and run it.
+Check this out. I added a few lines at the bottom of the function. I'm not going to explain it much (but please ask questions in #cowork-chat). Basically this is how we can simulate other people hitting our functions :). Keep an eye on the wallet addresses in your terminal once you change the code and run it.
 
 ```javascript
 const main = async () => {
