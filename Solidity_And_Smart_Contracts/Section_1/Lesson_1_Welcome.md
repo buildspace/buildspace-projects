@@ -3,7 +3,7 @@
 
 You've made it — hell yeah! Welcome :). My name is Farza and I’ll be your instructor. This project is for devs that want to get more into crypto tech. All you really need to know going into this: some terminal skills, some javascript, some react.js. You'll pick up the rest along the way.
 
-Few action items for you before moving on:
+A few action items for you before moving on:
 
 1. **Connect your Discord in the course dashboard.** All the good stuff is going to be happening in a secret category in the Discord that you'll only have access to if you connect your Discord.
 2. **Connect your Ethereum wallet in the course dashboard.** If you don't have a wallet that can interact with dApps, you can just install Metamask for free right now. Without a wallet, you can't do the project!
@@ -67,7 +67,7 @@ You'll be building a website that I'll be calling the WavePortal --- it'll be a 
 
 You'll be writing + deploying the smart contract and you'll also be building the website that will let people actually connect their wallets and interact with your smart contract.
 
-We're going to make this a little spicy as well. Basically, when someone waves at you there is a random chance they can win a small amount of Ethereum from your site :).
+We're going to make this a little spicy as well. Basically, when someone waves at you there is a random chance they can win a small amount of Ether from your site :).
 
 You'll be able to customize the website as much as you want. For example:
 - Maybe instead of a 👋 you want people to send you a 💩.

@@ -1,11 +1,11 @@
 💸 Send Ethereum to people waving at you
 ----------------------------------------
 
-Now what we want to do is send some Ethereum to people waving at us! For example, maybe you want to make it where there's a 1% chance someone can win $5 from waving at you. Or, maybe you want to make it where everyone who waves at you gets $0.01 in Etheruem for waving at you lol.
+Now what we want to do is send some Ether to people waving at us! For example, maybe you want to make it where there's a 1% chance someone can win $5 from waving at you. Or, maybe you want to make it where everyone who waves at you gets $0.01 in Ether for waving at you lol.
 
-You can even make it where you can manually send Ethereum to people whose messages you loved the most. Maybe they sent you an awesome song!!
+You can even make it where you can manually send Ether to people whose messages you loved the most. Maybe they sent you an awesome song!!
 
-**Easily sending Ethereum to users is a core part of smart contracts and one of the coolest parts about them**, so, let's do it!
+**Easily sending Ether to users is a core part of smart contracts and one of the coolest parts about them**, so, let's do it!
 
 To start we're just going to give everyone who waves at us `0.0001 ether`. Which is $0.31 :). And this is all happening on testnet, so, it's fake $!
 
@@ -38,9 +38,9 @@ We have some new keywords as well. You'll see `require` which basically checks t
 
 In this case, it's checking if `prizeAmount <= address(this).balance`. Here, `address(this).balance` is the **balance of the contract itself.**
 
-Why? **Well, for us to send Ethereum to someone, our contract needs to have Ethereum on it.**
+Why? **Well, for us to send Ether to someone, our contract needs to have Ether on it.**
 
-How this works is when we first deploy the contract, we "fund" it :). So far, we've **never** funded our contract!! It's always been worth 0 ETH. That means our contract can't send people Ethereum because it **simply doesn't have any**! We'll cover funding in the next section!
+How this works is when we first deploy the contract, we "fund" it :). So far, we've **never** funded our contract!! It's always been worth 0 ETH. That means our contract can't send people Ether because it **simply doesn't have any**! We'll cover funding in the next section!
 
 What's cool about
 
@@ -56,10 +56,10 @@ is that it lets us make sure that the *balance of the contract* is bigger than t
 
 Pretty awesome, right :)?
 
-🏦 Fund the contract we can even send Ethereum!
+🏦 Fund the contract we can even send Ether!
 -----------------------------------------------
 
-We've now set up our code send Ethereum. Nice! Now we need to actually make sure our contract is funded, otherwise, we have no Ethereum to send!
+We've now set up our code send Ether. Nice! Now we need to actually make sure our contract is funded, otherwise, we have no Ether to send!
 
 We're going to first work in `run.js`. Remember, run.js is like our testing grounds where we want to make sure our contracts core functionality works before we go and deploy it. It's **really hard** to debug contract code and frontend code at the same time, so, we separate it out!
 
@@ -121,7 +121,7 @@ The magic is on `hre.ethers.utils.parseEther('0.001'),`. This where I say, "go a
 
 I then do `hre.ethers.utils.formatEther(contractBalance)` to test out to see if my contract actually has a balance of 0.1. I use a function that `ethers` gives me here called `getBalance` and pass it my contract's address!
 
-But then, we also want to see if when we call `wave` if 0.0001 Ethereum is properly removed from the contract!! That's why I print the balance out again after I call `wave`.
+But then, we also want to see if when we call `wave` if 0.0001 Ether is properly removed from the contract!! That's why I print the balance out again after I call `wave`.
 
 When we run 
 
@@ -159,7 +159,7 @@ This is what I get:
 
 **Boom**.
 
-We just sent some Ethereum from our contract, big success! And, we know we succeeded because the contract balance went down by 0.0001 Ethereum from 0.1 to 0.0999!
+We just sent some Ether from our contract, big success! And, we know we succeeded because the contract balance went down by 0.0001 Ether from 0.1 to 0.0999!
 
 ✈️ Update deploy script to fund contract
 ----------------------------------------
@@ -191,7 +191,7 @@ const runMain = async () => {
 runMain();
 ```
 
-All I did was fund the contract 0.001 Ethereum like this:
+All I did was fund the contract 0.001 Ether like this:
 
 ```javascript
 const waveContract = await waveContractFactory.deploy({

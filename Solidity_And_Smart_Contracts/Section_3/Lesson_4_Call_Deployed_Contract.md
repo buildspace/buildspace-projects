@@ -213,7 +213,7 @@ When we run this, you'll see that total wave count is increased by 1. You'll als
 
 **NICEEEEEEE :).**
 
-Really good stuff. We now have an actual client that can read and write data to the blockchain. From here, you can do whatever you want. You have the basics down. You can build a decentralized version of Twitter. You can build a way for people to post their favorite memes and allow people to "tip" the people who post the best memes with Ethereum. You can build a decentralized voting system that a country can use to vote in a politician where everything is open and clear. 
+Really good stuff. We now have an actual client that can read and write data to the blockchain. From here, you can do whatever you want. You have the basics down. You can build a decentralized version of Twitter. You can build a way for people to post their favorite memes and allow people to "tip" the people who post the best memes with Ether. You can build a decentralized voting system that a country can use to vote in a politician where everything is open and clear. 
 
 The possibilities are truly endless.
 
