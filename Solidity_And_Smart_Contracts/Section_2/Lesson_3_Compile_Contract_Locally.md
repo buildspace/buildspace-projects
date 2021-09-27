@@ -10,7 +10,7 @@ Now we need to actually\
 
 We need to do this because in the real world, smart contracts live on the blockchain. And, we want our website and smart contract to be used by real people so they can 👋 at us or do whatever you want them to do!
 
-So, even when we're working locally we want to imitate that environment. Technically, we could just compile and run Solidity code, but, what makes Solidity magical is how it can interact with the blockchain and Ethereum wallets (which we'll see more of in next lesson). So, better to just knock this out right now.
+So, even when we're working locally we want to imitate that environment. Technically, we could just compile and run Solidity code, but what makes Solidity magical is how it can interact with the blockchain and Ethereum wallets (which we'll see more of in the next lesson). So, better to just knock this out right now.
 
 We're just going to write a custom script that handles those 3 steps for us.
 
@@ -67,7 +67,7 @@ const waveContract = await waveContractFactory.deploy();
 
 This is pretty fancy :). 
 
-What's happening here is Hardhat will create a local Ethereum network for us, but just for this contract. Then, after the script completes it'll destroy that local network. So, every time you run the contract, it'll be a fresh blockchain. Whats the point? It's kinda like refreshing your local server every time so you always start from a clean slate which makes it easy to debug errors.
+What's happening here is Hardhat will create a local Ethereum network for us, but just for this contract. Then, after the script completes it'll destroy that local network. So, every time you run the contract, it'll be a fresh blockchain. What's the point? It's kinda like refreshing your local server every time so you always start from a clean slate which makes it easy to debug errors.
 
 ```javascript
 await waveContract.deployed();
@@ -114,4 +114,4 @@ So what does this mean? Well, every time you run a terminal command that starts 
 
 Go to #progress and post a screenshot of your terminal with the output.
 
-Be sure to make that console.log whatever you want! You've now written your own contract and ran it by deploying to a local blockchain WOOOOOOOOOO LETS GOOO.
+Be sure to make that console.log whatever you want! You've now written your own contract and run it by deploying to a local blockchain WOOOOOOOOOO LETS GOOO.
