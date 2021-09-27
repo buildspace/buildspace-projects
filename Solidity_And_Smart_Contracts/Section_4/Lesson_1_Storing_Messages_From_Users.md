@@ -101,7 +101,7 @@ const main = async () => {
 
   let waveCount;
   waveCount = await waveContract.getTotalWaves();
-  console.log(count.toNumber());
+  console.log(waveCount.toNumber());
 
   /**
    * Let's send a few waves!
@@ -187,10 +187,11 @@ const [currentAccount, setCurrentAccount] = useState("");
    */
   const getAllWaves = async () => {
     try {
-      if (window.ethereum) {
-        const provider = new ethers.providers.Web3Provider
+      const { ethereum } = window;
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const wavePortalContract = new ethers.Contract(contractAddress, waveportal.abi, signer);
+        const waveportalContract = new ethers.Contract(contractAddress, waveportal.abi, signer);
 
         /*
          * Call the getAllWaves method from your Smart Contract
@@ -254,7 +255,7 @@ return (
 
         {allWaves.map((wave, index) => {
           return (
-            <div style={{ backgroundColor: "OldLace", marginTop: "16px", padding: "8px" }}>
+            <div key={index} style={{ backgroundColor: "OldLace", marginTop: "16px", padding: "8px" }}>
               <div>Address: {wave.address}</div>
               <div>Time: {wave.timestamp.toString()}</div>
               <div>Message: {wave.message}</div>

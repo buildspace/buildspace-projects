@@ -93,4 +93,4 @@ Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `samp
 
 Head to #progress and post a screenshot of **your** terminal showing the output of the test! You just ran a smart contract, that's a big deal!! Show it off :).
 
-P.S: If you **don't** have access to #progress, be sure youlinked your Discord, join the Discord [here](https://discord.gg/mXDqs6Ubcc), hit us up in #general we'll help you get access to the right channels!
+P.S: If you **don't** have access to #progress, be sure you linked your Discord, join the Discord [here](https://discord.gg/mXDqs6Ubcc), hit us up in #general we'll help you get access to the right channels!

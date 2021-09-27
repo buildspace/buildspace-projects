@@ -31,6 +31,69 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "pujer",
+      "name": "pujer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91406719?v=4",
+      "profile": "https://github.com/pujer",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "MicLeey",
+      "name": "Michael",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15386836?v=4",
+      "profile": "https://github.com/MicLeey",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "onalv",
+      "name": "Omar Nava",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8124929?v=4",
+      "profile": "http://omarnava.dev",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "letsgitcracking",
+      "name": "letsgitcracking",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45171676?v=4",
+      "profile": "https://github.com/letsgitcracking",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "rohitguptap",
+      "name": "rohitguptap",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5934153?v=4",
+      "profile": "https://github.com/rohitguptap",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jackharding",
+      "name": "Jack Harding",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12549439?v=4",
+      "profile": "http://jackharding.dev",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Espequair",
+      "name": "Espequair",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12451989?v=4",
+      "profile": "https://github.com/Espequair",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
