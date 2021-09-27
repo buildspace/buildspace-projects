@@ -29,6 +29,7 @@ cd epic-nfts
 npm init -y
 npm install --save-dev hardhat
 ```
+You may see a message about vulnerabilities after you run the last command and install Hardhat. Don't worry about these right now, your code will run just fine!
 
 🔨 Get sample project working
 ---------------------------
