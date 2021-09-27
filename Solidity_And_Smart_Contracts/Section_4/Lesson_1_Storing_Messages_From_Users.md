@@ -3,7 +3,7 @@
 
 So, we now have a full-fledged web app that can talk to the blockchain!
 
-Now, if we remember we want our final app to be a place where people can come, wave to us, and send us a message. We also want to show all the past waves/messages we've gotten. That's what we'll be doing in this lesson!
+Now, if we remember, we want our final app to be a place where people can come wave to us, and, send us a message. We also want to show all the past waves/messages we've gotten. That's what we'll be doing in this lesson!
 
 So at the end of the lessons we want to
 
