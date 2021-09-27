@@ -191,7 +191,7 @@ const [currentAccount, setCurrentAccount] = useState("");
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const waveportalContract = new ethers.Contract(contractAddress, waveportal.abi, signer);
+        const waveportalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         /*
          * Call the getAllWaves method from your Smart Contract
