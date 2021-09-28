@@ -331,7 +331,7 @@ If it worked — AWEEEEESOME YOU JUST DEPLOYED A CONTRACT YESSSS.
 
 Believe it or not. The NFTs you just minted will be on OpenSea's TestNet site.
 
-Head to [testnets.opensea.io/](testnets.opensea.io/). Here's search for your contract address which is the address we deployed to that you can find in your terminal. **Don't click enter**. OpenSea is weird so you'll need click the collection itself when it comes up.
+Head to [testnets.opensea.io/](https://testnets.opensea.io/). Here's search for your contract address which is the address we deployed to that you can find in your terminal. **Don't click enter**. OpenSea is weird so you'll need click the collection itself when it comes up.
 
 ![Untitled](https://i.imgur.com/ePDlYX1.png)
 
