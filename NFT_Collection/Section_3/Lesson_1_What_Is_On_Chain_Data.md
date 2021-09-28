@@ -12,7 +12,7 @@ But, assuming the blockchain stays up forever — our NFT will be up forever! Th
  🖼  What are SVGs
 -------------------
 
-A common way to store NFT data for images is using an SVG. An SVG is an image, but the image itself is built with code.
+A common way to store NFT data for images is using an SVG. A SVG is an image, but the image itself is built with code.
 
 For example, here's a really simple SVG that renders a black box with some white text in the middle.
 
