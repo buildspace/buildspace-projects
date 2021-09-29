@@ -297,7 +297,7 @@ module.exports = {
       accounts: ['YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY'],
     },
   },
-};`
+};
 ```
 
 You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
