@@ -130,6 +130,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "janndriessen",
+      "name": "JD",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2104965?v=4",
+      "profile": "http://www.janndriessen.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
