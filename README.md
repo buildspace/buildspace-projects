@@ -82,6 +82,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/monzee"><img src="https://avatars.githubusercontent.com/u/55887?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mon Zafra</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=monzee" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/honzcha"><img src="https://avatars.githubusercontent.com/u/45900433?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucas</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=honzcha" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="http://www.janndriessen.com"><img src="https://avatars.githubusercontent.com/u/2104965?v=4?s=100" width="100px;" alt=""/><br /><sub><b>JD</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=janndriessen" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
