@@ -148,6 +148,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "rhyspowell",
+      "name": "Rhys Powell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/473860?v=4",
+      "profile": "http://www.rhyspowell.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
