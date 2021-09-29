@@ -94,6 +94,69 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "brolag",
+      "name": "Alfredo Bonilla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1393385?v=4",
+      "profile": "https://alfredobonilla.com/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hamilton0390",
+      "name": "hamilton0390",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91501932?v=4",
+      "profile": "https://github.com/hamilton0390",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "monzee",
+      "name": "Mon Zafra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55887?v=4",
+      "profile": "https://github.com/monzee",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "honzcha",
+      "name": "Lucas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45900433?v=4",
+      "profile": "https://github.com/honzcha",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "janndriessen",
+      "name": "JD",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2104965?v=4",
+      "profile": "http://www.janndriessen.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "leoxs22",
+      "name": "Leandro Narosky",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9098977?v=4",
+      "profile": "http://darumapagos.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "rhyspowell",
+      "name": "Rhys Powell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/473860?v=4",
+      "profile": "http://www.rhyspowell.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
