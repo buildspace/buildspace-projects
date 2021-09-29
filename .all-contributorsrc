@@ -94,6 +94,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "brolag",
+      "name": "Alfredo Bonilla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1393385?v=4",
+      "profile": "https://alfredobonilla.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
