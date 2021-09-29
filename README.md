@@ -84,6 +84,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="http://www.janndriessen.com"><img src="https://avatars.githubusercontent.com/u/2104965?v=4?s=100" width="100px;" alt=""/><br /><sub><b>JD</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=janndriessen" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://darumapagos.com"><img src="https://avatars.githubusercontent.com/u/9098977?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Leandro Narosky</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=leoxs22" title="Documentation">📖</a></td>
   </tr>
 </table>
 
