@@ -121,6 +121,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "honzcha",
+      "name": "Lucas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45900433?v=4",
+      "profile": "https://github.com/honzcha",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
