@@ -59,7 +59,7 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
       if (window.ethereum) {
         const provider = new ethers.providers.Web3Provider
         const signer = provider.getSigner();
-        const wavePortalContract = new ethers.Contract(contractAddress, waveportal.abi, signer);
+        const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         const waves = await wavePortalContract.getAllWaves();
 
