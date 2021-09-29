@@ -30,6 +30,7 @@ npm init -y
 npm install --save-dev hardhat
 ```
 
+
 🔨 Get sample project working
 ---------------------------
 
@@ -38,6 +39,8 @@ Cool, now we should have hardhat. Let's get a sample project going.
 ```
 npx hardhat
 ```
+
+*Note: If you're on Windows using Git Bash to install hardhat, you may run into an error at this step (HH1). You can try using Windows CMD to perform the HardHat install if you run into trouble. Additional info can be found [here](https://github.com/nomiclabs/hardhat/issues/1400#issuecomment-824097242).*
 
 Choose the option to create a sample project. Say yes to everything.
 
