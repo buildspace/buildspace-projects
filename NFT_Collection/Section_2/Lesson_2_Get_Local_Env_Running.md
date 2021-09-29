@@ -29,7 +29,7 @@ cd epic-nfts
 npm init -y
 npm install --save-dev hardhat
 ```
-You may see a message about vulnerabilities after you run the last command and install Hardhat. Don't worry about these right now, your code will run just fine!
+You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Google around a bit about these vulnerabilities if you want to know more!
 
 🔨 Get sample project working
 ---------------------------
