@@ -26,6 +26,18 @@ We made all these lessons Open Source so you can help make our projects even bet
 
 It's simple! Fork this repo, make your changes and then submit a PR! All of our lessons are written in markdown and are pulled *DIRECTLY* from this repo. Once we approve your changes and merge it in, the changes will be live on [_buildspace](https://app.buildspace.so) for the world to see 👀.
 
+## 🤔 Why take this course on _buildspace?
+You have access to all the this content right here in GitHub! Whats the point with signing up with [_buildspace](https://buildspace.so)?
+
+   ### **Hack With Others And The _buildspace Team**
+   You and thousands of other devs are in this together. When you sign up for a project, you are placed in a group of devs who are there to help you succeed! Check out our [Discord](https://discord.gg/CFuBU7RJ42) to see what all the hype is about!
+
+   ### **Co-Working Sessions**
+   Get access to multiple sessions of collabortive coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
+
+   ### **Complete A Project. Get A NFT.**
+   Thats right. Be one of the first 100 people to complete your [_buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
+
 ## ❗️FAQ
 
 ### **Can't Contribute? No Wories!**
