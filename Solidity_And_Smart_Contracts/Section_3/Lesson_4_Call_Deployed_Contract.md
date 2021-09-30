@@ -91,7 +91,7 @@ import './App.css';
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
   /**
-   * Create a varaible here that holds the contract address after you deploy!
+   * Create a variable here that holds the contract address after you deploy!
    */
   const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
 ```
@@ -120,11 +120,25 @@ Copy the contents from your `WavePortal.json` and then head to your web app. You
 
 Paste the whole JSON file right there!
 
-Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file. Right under where you imported `App.css` go ahead and import your JSON file like so:
+Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file and create a refence to it. Right under where you imported `App.css` go ahead and import your JSON file and create your reference to the abi content:
 
-`import contractABI from './utils/WavePortal.json';`
 
-Now that you have this imported and ready to go, you need actually access the ABI content in your code! If you noticed, the contents of that JSON file you imported as a key called `abi`. Thats exactly what you will be accessing in your code here! Let's take a look at where you are actually using this ABI content:
+```javascript
+import React, { useEffect, useState } from "react";
+import { ethers } from "ethers";
+import './App.css';
+import abi from './utils/WavePortal.json';
+
+const App = () => {
+  const [currentAccount, setCurrentAccount] = useState("");
+  
+  const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  /**
+   * Create a variable here that references the abi content!
+   */
+  const contractABI = abi.abi;
+```
+Let's take a look at where you are actually using this ABI content:
 
 ```javascript
 const wave = async () => {
@@ -136,9 +150,9 @@ const wave = async () => {
         const signer = provider.getSigner();
 
         /*
-        * You are defining contractABI right here. Let's change this!
+        * You're using contractABI here
         */
-        const waveportalContract = new ethers.Contract(contractAddress, contractABI.abi, signer);
+        const waveportalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         let count = await waveportalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
@@ -177,7 +191,7 @@ const wave = async () => {
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const waveportalContract = new ethers.Contract(contractAddress, contractABI.abi, signer);
+        const waveportalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         let count = await waveportalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
