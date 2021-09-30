@@ -76,6 +76,12 @@ const Mint = ({ askContractToMintNft }) => (
 )
 ```
 
+When using this component in your `App` you'll need to pass in `askContractToMintNft` as a prop.
+
+```jsx
+<Mint askContractToMintNft={askContractToMintNft}>
+```
+
 
 📂 ABI files
 ----------------
