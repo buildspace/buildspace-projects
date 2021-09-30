@@ -24,7 +24,7 @@ const wave = async () => {
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const waveportalContract = new ethers.Contract(contractAddress, contractABI, signer);
+        const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         let count = await waveportalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
