@@ -1,4 +1,4 @@
-👋 Welcome
+👋 Welcome -> Hi _buildspace Team
 -------------------
 
 You've made it — hell yeah! Welcome :). My name is Farza and I’ll be your instructor. This project is for devs that want to get more into crypto tech. All you really need to know going into this: some terminal skills, some javascript, some react.js. You'll pick up the rest along the way.
