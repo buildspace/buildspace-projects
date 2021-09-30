@@ -202,6 +202,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "FounderCasey",
+      "name": "Casey Wilcox",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19507316?v=4",
+      "profile": "http://promoso.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
