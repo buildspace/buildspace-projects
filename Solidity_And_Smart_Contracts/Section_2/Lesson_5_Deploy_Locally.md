@@ -75,13 +75,13 @@ Okay, so once I run that here's what I get:
 
 Epic. 
 
-We deployed the contract, and we also have it's address on the blockchain! Our website is going to need this so it knows where to look on the blockchain for your contract. (Imagine if it had to search the whole blockchain for our contract. That would be...bad!).
+We deployed the contract, and we also have its address on the blockchain! Our website is going to need this so it knows where to look on the blockchain for your contract. (Imagine if it had to search the whole blockchain for our contract. That would be...bad!).
 
 In your terminal window that's keeping your local Ethereum network alive, you'll see something new!
 
 ![](https://i.imgur.com/DmhZRJN.png)
 
-INTERESTING. But...what's gas? What does it mean by block #1? What's the big code next to "Transaction"? I want you try and just Google this stuff. Ask questions in #course-chat :).
+INTERESTING. But...what's gas? What does it mean by block #1? What's the big code next to "Transaction"? I want you to try and just Google this stuff. Ask questions in #course-chat :).
 
 
 🚨 Before you click "Next Lesson"

@@ -106,7 +106,7 @@ It's important to see here that an attack could technically game your system her
 
 Really, this is one of the strengths of the blockchain. But, can be a bit annoying for some application like ours here!
 
-In any case, no ones going to be attacking our tiny app but I want you to know all this when you're building a dApp that has millions of users!
+In any case, no one's going to be attacking our tiny app but I want you to know all this when you're building a dApp that has millions of users!
 
 Test it
 -------
@@ -201,7 +201,7 @@ contract WavePortal {
     Wave[] waves;
 
     /*
-     * This is an address => uint mapping, meaning I can associated an address with a number!
+     * This is an address => uint mapping, meaning I can associate an address with a number!
      * In this case, I'll be storing the address with the last time the user waved at us.
      */
     mapping(address => uint256) public lastWavedAt;
