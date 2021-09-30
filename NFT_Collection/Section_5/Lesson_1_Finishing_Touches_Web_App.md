@@ -83,7 +83,7 @@ if (chainID !== "0x4" /*String, hex code of the chain ID of the Rinkebey test ne
 ```
 There, now the user will know if they're on the wrong network! 
 The request conforms to [EIP-695](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-695.md) so returns the hex value of the network as a string.
-You can find other the IDs of the other networks on [chainlist](https://chainlist.org/). 
+You can find other the IDs of the other networks on [here](https://docs.metamask.io/guide/ethereum-provider.html#chain-ids). 
 
 
 🙉 Mining animation
