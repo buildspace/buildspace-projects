@@ -68,7 +68,7 @@ Hint, you'll need something in solidity called `require`. And, you'll like also 
 --------------
 Your website is **only** going to work on Rinkeby (since that's where your contract lives).
 
-Be sure to add a nice message somewhere telling users about this. You can also make it dynamic if you want and [detect their network](https://ethereum.stackexchange.com/questions/85194/how-to-check-the-current-metamask-network) and then say something like, "Hey — I see you're connected to mainnet but this only works on Rinkeby!". You can make this as fancy as you want!
+Be sure to add a nice message somewhere telling users about this. You can also make it dynamic if you want and [detect their network](https://docs.metamask.io/guide/ethereum-provider.html#ethereum-networkversion-deprecated) and then say something like, "Hey — I see you're connected to mainnet but this only works on Rinkeby!". You can make this as fancy as you want!
 
 🙉 Mining animation
 --------------
