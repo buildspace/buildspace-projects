@@ -18,12 +18,6 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
 
-const WalletNotConnected = () => (
-  <button className="cta-button connect-wallet-button">
-    Connect to Wallet
-  </button>
-);
-
 const App = () => {
 
     const checkIfWalletIsConnected = () => {
@@ -49,6 +43,9 @@ const App = () => {
 
   return (
 		// blah blah all your html here
+    <button className="cta-button connect-wallet-button">
+      Connect to Wallet
+    </button>
   );
 };
 
@@ -78,13 +75,6 @@ const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
-
-const WalletNotConnected = () => (
-  <button className="cta-button connect-wallet-button">
-    Connect to Wallet
-  </button>
-);
-
 
 const App = () => {
 
@@ -129,6 +119,9 @@ const App = () => {
 
   return (
 		 // blah blah all your html here
+    <button className="cta-button connect-wallet-button">
+      Connect to Wallet
+    </button>
   );
 };
 
@@ -153,24 +146,6 @@ const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
-
-/*
-* We added a simple onClick event on the button.
-*/
-const WalletNotConnected = ({ connectWallet }) => (
-  <button onClick={connectWallet} className="cta-button connect-wallet-button">
-    Connect to Wallet
-  </button>
-);
-
-/*
-* We want the "Connect to Wallet" button to dissapear if they've already connected their wallet!
-*/
-const Mint = () => (
-  <button onClick={null} className="cta-button connect-wallet-button">
-    Mint NFT
-  </button>
-)
 
 const App = () => {
 
@@ -239,7 +214,15 @@ const App = () => {
           <p className="sub-text">
             Each unique. Each beautiful. Discover your NFT today.
           </p>
-          {currentAccount === "" ? <WalletNotConnected connectWallet={connectWallet} /> : <Mint />}
+          {currentAccount === "" ? (
+            <button onClick={connectWallet} className="cta-button connect-wallet-button">
+              Connect to Wallet
+            </button>
+          ) : (
+            <button onClick={null} className="cta-button connect-wallet-button">
+              Mint NFT
+            </button>
+          )}
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
