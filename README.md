@@ -24,7 +24,7 @@ We made all these lessons Open Source so you can help make our projects even bet
 
 ## 🛠 Contributing
 
-Any and all contributions are welcome! GitHub makes it _insanely_ easy to make contributions directly within their web app! [Follow this short guide](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files#editing-files-in-another-users-repository) on how to edit one of our Markdown Lessons right here within GitHub!
+Any and all contributions are welcome! GitHub makes it _insanely_ easy to make contributions directly within their web app! [Follow this short guide](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files#editing-files-in-another-users-repository) on how to edit one of our Markdown lessons right here within GitHub!
 
 Rather watch a video? [Check out this two minute video](https://www.loom.com/share/ea84ce8634824f9e9377e2bc4b06f031), by Alec from _buildspace, for submitting a contribution to a lesson!
 
