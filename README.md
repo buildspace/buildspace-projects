@@ -24,7 +24,9 @@ We made all these lessons Open Source so you can help make our projects even bet
 
 ## 🛠 Contributing
 
-It's simple! Fork this repo, make your changes and then submit a PR! All of our lessons are written in markdown and are pulled *DIRECTLY* from this repo. Once we approve your changes and merge it in, the changes will be live on [_buildspace](https://app.buildspace.so) for the world to see 👀.
+Any and all contributions are welcome! GitHub makes it _insanely_ easy to make contributions directly within their web app! [Follow this short guide](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files#editing-files-in-another-users-repository) on how to edit one of our Markdown lessons right here within GitHub!
+
+Rather watch a video? [Check out this two minute video](https://www.loom.com/share/ea84ce8634824f9e9377e2bc4b06f031), by Alec from _buildspace, for submitting a contribution to a lesson!
 
 ## 🤔 Why take this course on _buildspace?
 You have access to all the this content right here in GitHub! Whats the point with signing up with [_buildspace](https://buildspace.so)?
