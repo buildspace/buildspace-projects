@@ -13,7 +13,7 @@ So in this case, we want people to 👋 at us. The bigger picture here is:
 
 3\. **We're going to build a client website** that will let people easily interact with our smart contract on the blockchain.
 
-I'll explain certain things in-depth as needed (ex. how mining working, how smart contracts are compiled and run, etc) *but for now let's just focus on getting stuff running*.
+I'll explain certain things in-depth as needed (ex. how mining works, how smart contracts are compiled and run, etc) *but for now let's just focus on getting stuff running*.
 
 If you have any issues throughout here, just drop a message on Discord in  `#section-1-help`. 
 

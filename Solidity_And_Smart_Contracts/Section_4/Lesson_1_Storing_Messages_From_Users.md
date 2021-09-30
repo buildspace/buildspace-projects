@@ -42,7 +42,7 @@ contract WavePortal {
 
     /*
      * I declare a variable waves that lets me store an array of structs.
-     * This is what lets me gold all the waves anyone ever sends to me!
+     * This is what lets me hold all the waves anyone ever sends to me!
      */
     Wave[] waves;
 
@@ -52,7 +52,7 @@ contract WavePortal {
 
     /*
      * You'll notice I changed the wave function a little here as well and
-     * now it requires a string called _message. This is the message out user
+     * now it requires a string called _message. This is the message our user
      * sends us from the frontend!
      */
     function wave(string memory _message) public {
@@ -88,7 +88,7 @@ contract WavePortal {
 🧐 Test it
 ----------
 
-Whenever we change our contract, we want to change `run.js` to test the new functionality we added. That how we know it's working how we want! Here's what mines looks like now.
+Whenever we change our contract, we want to change `run.js` to test the new functionality we added. That's how we know it's working how we want! Here's what mine looks like now.
 
 Here's my updated `run.js`. 
 
@@ -140,7 +140,7 @@ The array looks a little scary but we can see the data next to the words `waver`
 
 Note: "timestamp" is given back to us as type "BigNumber". We'll learn how to work with it later but just know there's nothing wrong here!
 
-Looks like things work, lets move to our **frontend** so we can see all our waves on our website!
+Looks like things work, let's move to our **frontend** so we can see all our waves on our website!
 
 ✈️ Re-deploy
 ------------

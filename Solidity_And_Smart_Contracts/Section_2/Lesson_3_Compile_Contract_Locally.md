@@ -114,4 +114,4 @@ So what does this mean? Well, every time you run a terminal command that starts 
 
 Go to #progress and post a screenshot of your terminal with the output.
 
-Be sure to make that console.log whatever you want! You've now written your own contract and run it by deploying to a local blockchain WOOOOOOOOOO LETS GOOO.
+Be sure to make that console.log whatever you want! You've now written your own contract and ran it by deploying to a local blockchain WOOOOOOOOOO LETS GOOO.
