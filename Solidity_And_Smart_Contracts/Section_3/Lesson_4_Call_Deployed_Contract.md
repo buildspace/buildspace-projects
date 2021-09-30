@@ -120,7 +120,7 @@ Copy the contents from your `WavePortal.json` and then head to your web app. You
 
 Paste the whole JSON file right there!
 
-Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file and create a refence to it. Right under where you imported `App.css` go ahead and import your JSON file and create your reference to the abi content:
+Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file and create a reference to it. Right under where you imported `App.css` go ahead and import your JSON file and create your reference to the abi content:
 
 
 ```javascript
