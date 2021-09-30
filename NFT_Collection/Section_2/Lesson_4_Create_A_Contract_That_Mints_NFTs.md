@@ -183,7 +183,7 @@ The next step is a testnet which you can think of as like a "staging" environmen
  💳 Transactions
 ------------------------
 
-So, when we want to perform an action that changes the blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction because we're changing account balances. Doing something that updates a variable in our contract is also considered a transaction because we're changing data. Minting an NFT is a transaction because we're saving data on the contract.
+So, when we want to perform an action that changes the blockchain we call it a *transaction*. For example, sending someone ETH is a transaction because we're changing account balances. Doing something that updates a variable in our contract is also considered a transaction because we're changing data. Minting an NFT is a transaction because we're saving data on the contract.
 
 **Deploying a smart contract is also a transaction.**
 
@@ -225,7 +225,7 @@ There are a few testnets out there and the one we'll be using is called "Rinkeby
 
 In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-In order get fake ether, we have to ask the network for some. **This fake ether will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works lol.
+In order get fake ether, we have to ask the network for some. **This fake ether will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. You just gotta find one that works lol.
 
 For MyCrpyto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
