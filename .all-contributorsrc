@@ -184,6 +184,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "AlmostEfficient",
+      "name": "Abdullah Raza",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42661870?v=4",
+      "profile": "http://raza.run",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
