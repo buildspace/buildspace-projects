@@ -175,6 +175,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "matt-harris",
+      "name": "Matt Harris",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6179051?v=4",
+      "profile": "http://www.matt-harris.net",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
