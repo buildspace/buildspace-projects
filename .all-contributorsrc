@@ -193,6 +193,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "assimovt",
+      "name": "Tair Asim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5113?v=4",
+      "profile": "https://tairasim.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
