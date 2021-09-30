@@ -69,10 +69,10 @@ The rest of the code should already make sense. It looks sorta like the code we 
 Finally, we'll want to call this function when someone clicks the "Mint NFT" button.
 
 ```jsx
-const renderMintUI = () => (
-    <button onClick={askContractToMintNft} className="cta-button connect-wallet-button">
-      Mint NFT
-    </button>
+const Mint = ({ askContractToMintNft }) => (
+  <button onClick={askContractToMintNft} className="cta-button connect-wallet-button">
+    Mint NFT
+  </button>
 )
 ```
 
