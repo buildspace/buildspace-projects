@@ -119,7 +119,7 @@ _setTokenURI(newItemId, "INSERT_YOUR_JSON_URL_HERE");
 Under that line, we can also add a `console.log` to help us see when the NFT is minted and to who!
 
 ```solidity
-console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender)
+console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
 ```
 
 🎉 Mint an NFT locally.
