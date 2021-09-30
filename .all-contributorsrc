@@ -157,6 +157,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "sieis",
+      "name": "Eamonn Cottrell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3012159?v=4",
+      "profile": "https://eamonncottrell.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
