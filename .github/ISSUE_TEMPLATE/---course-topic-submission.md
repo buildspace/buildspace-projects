@@ -4,7 +4,7 @@ about: Do you have a course that you think would be great for _buildspace? Use t
   template to submit it!
 title: "\U0001F4DA Course Topic Submission"
 labels: Course Submission
-assignees: adilanchian, farzaa, DavidBarrick
+assignees: adilanchian, farzaa, DavidBarrick, emboslicev2
 
 ---
 

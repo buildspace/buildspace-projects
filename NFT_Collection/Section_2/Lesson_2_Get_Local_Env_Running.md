@@ -29,6 +29,8 @@ cd epic-nfts
 npm init -y
 npm install --save-dev hardhat
 ```
+You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Google around a bit about these vulnerabilities if you want to know more!
+
 
 🔨 Get sample project working
 ---------------------------
@@ -38,6 +40,8 @@ Cool, now we should have hardhat. Let's get a sample project going.
 ```
 npx hardhat
 ```
+
+*Note: If you're on Windows using Git Bash to install hardhat, you may run into an error at this step (HH1). You can try using Windows CMD to perform the HardHat install if you run into trouble. Additional info can be found [here](https://github.com/nomiclabs/hardhat/issues/1400#issuecomment-824097242).*
 
 Choose the option to create a sample project. Say yes to everything.
 

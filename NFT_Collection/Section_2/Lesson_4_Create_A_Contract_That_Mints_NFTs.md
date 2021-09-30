@@ -185,7 +185,7 @@ The next step is a testnet which you can think of as like a "staging" environmen
  💳 Transactions
 ------------------------
 
-So, when we want to perform an action that changes the blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction because we're changing account balances. Doing something that updates a variable in our contract is also considered a transaction because we're changing data. Minting an NFT is a transaction because we're saving data on the contract.
+So, when we want to perform an action that changes the blockchain we call it a *transaction*. For example, sending someone ETH is a transaction because we're changing account balances. Doing something that updates a variable in our contract is also considered a transaction because we're changing data. Minting an NFT is a transaction because we're saving data on the contract.
 
 **Deploying a smart contract is also a transaction.**
 
@@ -227,7 +227,7 @@ There are a few testnets out there and the one we'll be using is called "Rinkeby
 
 In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-In order get fake ether, we have to ask the network for some. **This fake ether will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works lol.
+In order get fake ether, we have to ask the network for some. **This fake ether will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. You just gotta find one that works lol.
 
 For MyCrpyto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
@@ -299,7 +299,7 @@ module.exports = {
       accounts: ['YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY'],
     },
   },
-};`
+};
 ```
 
 You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
@@ -333,7 +333,7 @@ If it worked — AWEEEEESOME YOU JUST DEPLOYED A CONTRACT YESSSS.
 
 Believe it or not. The NFTs you just minted will be on OpenSea's TestNet site.
 
-Head to [testnets.opensea.io/](testnets.opensea.io/). Here's search for your contract address which is the address we deployed to that you can find in your terminal. **Don't click enter**. OpenSea is weird so you'll need click the collection itself when it comes up.
+Head to [testnets.opensea.io](https://testnets.opensea.io/). Here's search for your contract address which is the address we deployed to that you can find in your terminal. **Don't click enter**. OpenSea is weird so you'll need click the collection itself when it comes up.
 
 ![Untitled](https://i.imgur.com/ePDlYX1.png)
 

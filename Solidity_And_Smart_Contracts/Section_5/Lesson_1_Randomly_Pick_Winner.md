@@ -9,7 +9,7 @@ So right now, our code is set to give the waver 0.0001 Ethereum every single tim
 
 Lets's do the random winner first!
 
-So, generating arandom number in smart contracts is widely known as a **difficult problem**.
+So, generating a random number in smart contracts is widely known as a **difficult problem**.
 
 Why? Well, think about how a random number is generated normally. When you generate a random normally in a program, **it will take a bunch of different numbers from your computer as a source of randomness** like: the speed of the fans, the temperature of the CPU, the number of times you've pressed "L" at 3:52PM since you've bought the computer, your internet speed, and tons of other #s that are difficult for you to control. It takes **all** these numbers that are "random" and puts them together into an algorithm that generates a number that it feels is the best attempt at a truly "random" number. Make sense?
 
@@ -75,7 +75,7 @@ contract WavePortal {
             uint256 prizeAmount = 0.0001 ether;
             require(
                 prizeAmount <= address(this).balance,
-                "Trying to withdraw more money than they contract has."
+                "Trying to withdraw more money than the contract has."
             );
             (bool success, ) = (msg.sender).call{value: prizeAmount}("");
             require(success, "Failed to withdraw money from contract.");
@@ -106,7 +106,7 @@ It's important to see here that an attack could technically game your system her
 
 Really, this is one of the strengths of the blockchain. But, can be a bit annoying for some application like ours here!
 
-In any case, no ones going to be attacking our tiny app but I want you to know all this when you're building a dApp that has millions of users!
+In any case, no one's going to be attacking our tiny app but I want you to know all this when you're building a dApp that has millions of users!
 
 Test it
 -------
@@ -201,7 +201,7 @@ contract WavePortal {
     Wave[] waves;
 
     /*
-     * This is an address => uint mapping, meaning I can associated an address with a number!
+     * This is an address => uint mapping, meaning I can associate an address with a number!
      * In this case, I'll be storing the address with the last time the user waved at us.
      */
     mapping(address => uint256) public lastWavedAt;
