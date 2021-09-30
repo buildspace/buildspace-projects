@@ -166,6 +166,51 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "matcom-chacha",
+      "name": "Gabriela Martinez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61644542?v=4",
+      "profile": "https://github.com/matcom-chacha",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "matt-harris",
+      "name": "Matt Harris",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6179051?v=4",
+      "profile": "http://www.matt-harris.net",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "AlmostEfficient",
+      "name": "Abdullah Raza",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42661870?v=4",
+      "profile": "http://raza.run",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "assimovt",
+      "name": "Tair Asim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5113?v=4",
+      "profile": "https://tairasim.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "FounderCasey",
+      "name": "Casey Wilcox",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19507316?v=4",
+      "profile": "http://promoso.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

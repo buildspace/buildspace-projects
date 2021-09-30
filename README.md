@@ -24,7 +24,9 @@ We made all these lessons Open Source so you can help make our projects even bet
 
 ## 🛠 Contributing
 
-It's simple! Fork this repo, make your changes and then submit a PR! All of our lessons are written in markdown and are pulled *DIRECTLY* from this repo. Once we approve your changes and merge it in, the changes will be live on [_buildspace](https://app.buildspace.so) for the world to see 👀.
+Any and all contributions are welcome! GitHub makes it _insanely_ easy to make contributions directly within their web app! [Follow this short guide](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files#editing-files-in-another-users-repository) on how to edit one of our Markdown lessons right here within GitHub!
+
+Rather watch a video? [Check out this two minute video](https://www.loom.com/share/ea84ce8634824f9e9377e2bc4b06f031), by Alec from _buildspace, for submitting a contribution to a lesson!
 
 ## 🤔 Why take this course on _buildspace?
 You have access to all the this content right here in GitHub! Whats the point with signing up with [_buildspace](https://buildspace.so)?
@@ -87,6 +89,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://darumapagos.com"><img src="https://avatars.githubusercontent.com/u/9098977?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Leandro Narosky</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=leoxs22" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.rhyspowell.com"><img src="https://avatars.githubusercontent.com/u/473860?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rhys Powell</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=rhyspowell" title="Documentation">📖</a></td>
     <td align="center"><a href="https://eamonncottrell.com/"><img src="https://avatars.githubusercontent.com/u/3012159?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Eamonn Cottrell</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=sieis" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/matcom-chacha"><img src="https://avatars.githubusercontent.com/u/61644542?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gabriela Martinez</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=matcom-chacha" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.matt-harris.net"><img src="https://avatars.githubusercontent.com/u/6179051?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Harris</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=matt-harris" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://raza.run"><img src="https://avatars.githubusercontent.com/u/42661870?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abdullah Raza</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=AlmostEfficient" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://tairasim.com"><img src="https://avatars.githubusercontent.com/u/5113?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tair Asim</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=assimovt" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://promoso.io"><img src="https://avatars.githubusercontent.com/u/19507316?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Casey Wilcox</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=FounderCasey" title="Documentation">📖</a></td>
   </tr>
 </table>
 

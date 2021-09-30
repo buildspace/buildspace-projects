@@ -55,11 +55,13 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
 
 ```javascript
  const getAllWaves = async () => {
+    const { ethereum } = window;
+
     try {
       if (window.ethereum) {
-        const provider = new ethers.providers.Web3Provider
+        const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const wavePortalContract = new ethers.Contract(contractAddress, waveportal.abi, signer);
+        const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         const waves = await wavePortalContract.getAllWaves();
 
