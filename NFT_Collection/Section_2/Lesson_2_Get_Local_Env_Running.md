@@ -45,6 +45,85 @@ npx hardhat
 
 Choose the option to create a sample project. Say yes to everything.
 
+**Only if the Sample Project Prompt/Wizard doesn't show, follow the below.
+
+If the prompt to create a sample project doesn't show up (which is rare) you will have to manually create a config file, a Scripts folder and inside asample script file (you'll be deleting this and replacing with your own later anyway).
+```
+You can put this in the config file:
+// We require the Hardhat Runtime Environment explicitly here. This is optional
+// but useful for running the script in a standalone fashion through `node <script>`.
+//
+// When running the script with `npx hardhat run <script>` you'll find the Hardhat
+// Runtime Environment's members available in the global scope.
+const hre = require("hardhat");
+const ethers = hre.ethers;
+
+async function main() {
+  // Hardhat always runs the compile task when running scripts with its command
+  // line interface.
+  //
+  // If this script is run directly using `node` you may want to call compile
+  // manually to make sure everything is compiled
+  // await hre.run('compile');
+
+  // We get the contract to deploy
+  const Greeter = await hre.ethers.getContractFactory("Greeter");
+  const greeter = await Greeter.deploy("Hello, Hardhat!");
+
+  await greeter.deployed();
+
+  console.log("Greeter deployed to:", greeter.address);
+}
+
+// We recommend this pattern to be able to use async/await everywhere
+// and properly handle errors.
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+```  
+  **sample-script.js, which goes in a Script folder. Again this was only if the sample project didn't show up
+  // We require the Hardhat Runtime Environment explicitly here. This is optional
+// but useful for running the script in a standalone fashion through `node <script>`.
+//
+// When running the script with `npx hardhat run <script>` you'll find the Hardhat
+// Runtime Environment's members available in the global scope.
+const hre = require("hardhat");
+const ethers = hre.ethers;
+
+```
+async function main() {
+  // Hardhat always runs the compile task when running scripts with its command
+  // line interface.
+  //
+  // If this script is run directly using `node` you may want to call compile
+  // manually to make sure everything is compiled
+  // await hre.run('compile');
+
+  // We get the contract to deploy
+  const Greeter = await hre.ethers.getContractFactory("Greeter");
+  const greeter = await Greeter.deploy("Hello, Hardhat!");
+
+  await greeter.deployed();
+
+  console.log("Greeter deployed to:", greeter.address);
+}
+
+// We recommend this pattern to be able to use async/await everywhere
+// and properly handle errors.
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+
+```
+  **End
+
+
 The sample project will ask you to install `hardhat-waffle` and `hardhat-ethers`. These are other goodies we'll use later.
 
 Go ahead and install these other dependencies just in case it didn't do it automatically.
