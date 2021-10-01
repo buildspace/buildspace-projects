@@ -96,6 +96,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://tairasim.com"><img src="https://avatars.githubusercontent.com/u/5113?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tair Asim</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=assimovt" title="Documentation">📖</a></td>
     <td align="center"><a href="http://promoso.io"><img src="https://avatars.githubusercontent.com/u/19507316?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Casey Wilcox</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=FounderCasey" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://nicholas-gonzalez.me"><img src="https://avatars.githubusercontent.com/u/48919838?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nick Gonzalez</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=NickGonzalez04" title="Documentation">📖</a></td>
   </tr>
 </table>
 
