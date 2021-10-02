@@ -56,10 +56,10 @@ is that it lets us make sure that the *balance of the contract* is bigger than t
 
 Pretty awesome, right :)?
 
-🏦 Fund the contract we can even send Ethereum!
+🏦 Fund the contract so can send Ethereum!
 -----------------------------------------------
 
-We've now set up our code send Ethereum. Nice! Now we need to actually make sure our contract is funded, otherwise, we have no Ethereum to send!
+We've now set up our code to send Ethereum. Nice! Now we need to actually make sure our contract is funded, otherwise, we have no Ethereum to send!
 
 We're going to first work in `run.js`. Remember, run.js is like our testing grounds where we want to make sure our contracts core functionality works before we go and deploy it. It's **really hard** to debug contract code and frontend code at the same time, so, we separate it out!
 
@@ -117,7 +117,7 @@ const runMain = async () => {
 runMain();
 ```
 
-The magic is on `hre.ethers.utils.parseEther('0.001'),`. This where I say, "go and deploy my contract and fund it with 0.001 Ethereum". This will remove Ethereum from my wallet, and use it to fund the contract. **That's it**.
+The magic is on `hre.ethers.utils.parseEther('0.1'),`. This where I say, "go and deploy my contract and fund it with 0.1 Ethereum". This will remove Ethereum from my wallet, and use it to fund the contract. **That's it**.
 
 I then do `hre.ethers.utils.formatEther(contractBalance)` to test out to see if my contract actually has a balance of 0.1. I use a function that `ethers` gives me here called `getBalance` and pass it my contract's address!
 
