@@ -6,7 +6,7 @@ Awesome. We made it. We've deployed our website. We've deployed our contract. We
 So, our smart contract has this function that retrieves the total number of waves.
 
 ```solidity
-  function getTotalWaves() view public returns (uint256) {
+  function getTotalWaves() public view returns (uint256) {
       console.log("We have %d total waves!", totalWaves);
       return totalWaves;
   }
