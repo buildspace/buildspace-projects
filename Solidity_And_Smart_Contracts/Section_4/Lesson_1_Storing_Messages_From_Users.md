@@ -109,7 +109,7 @@ const main = async () => {
   let waveTxn = await waveContract.wave('A message!');
   await waveTxn.wait(); // Wait for the transaction to be mined
 
-  const [_, randoPerson] = await ethers.getSigners();
+  const [_, randoPerson] = await hre.ethers.getSigners();
   waveTxn = await waveContract.connect(randoPerson).wave('Another message!');
   await waveTxn.wait(); // Wait for the transaction to be mined
 
