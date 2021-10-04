@@ -41,14 +41,11 @@ const App = () => {
     checkIfWalletIsConnected();
   }, [])
 
-  const renderNotConnectedContainer = () => (
+  return (
+    // blah blah all your html here
     <button className="cta-button connect-wallet-button">
       Connect to Wallet
     </button>
-  );
-
-  return (
-		// blah blah all your html here
   );
 };
 
@@ -120,14 +117,11 @@ const App = () => {
     checkIfWalletIsConnected();
   }, [])
 
-  const renderNotConnectedContainer = () => (
+  return (
+    // blah blah all your html here
     <button className="cta-button connect-wallet-button">
       Connect to Wallet
     </button>
-  );
-
-  return (
-		 // blah blah all your html here
   );
 };
 
@@ -210,24 +204,6 @@ const App = () => {
   }, [])
 
   /*
-  * We added a simple onClick event here.
-  */
-  const renderNotConnectedContainer = () => (
-    <button onClick={connectWallet} className="cta-button connect-wallet-button">
-      Connect to Wallet
-    </button>
-  );
-
-  /*
-  * We want the "Connect to Wallet" button to dissapear if they've already connected their wallet!
-  */
-  const renderMintUI = () => (
-    <button onClick={null} className="cta-button connect-wallet-button">
-      Mint NFT
-    </button>
-  )
-
-  /*
   * Added a conditional render! We don't want to show Connect to Wallet if we're already conencted :).
   */
   return (
@@ -238,7 +214,15 @@ const App = () => {
           <p className="sub-text">
             Each unique. Each beautiful. Discover your NFT today.
           </p>
-          {currentAccount === "" ? renderNotConnectedContainer() : renderMintUI()}
+          {currentAccount === "" ? (
+            <button onClick={connectWallet} className="cta-button connect-wallet-button">
+              Connect to Wallet
+            </button>
+          ) : (
+            <button onClick={null} className="cta-button connect-wallet-button">
+              Mint NFT
+            </button>
+          )}
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
