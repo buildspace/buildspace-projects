@@ -1,13 +1,13 @@
 📦 Store the data!
 ------------------
 
-From here, lets add some fanciness to our contract.
+From here, let's add some fanciness to our contract.
 
 We want to be able to let someone wave at us and then store that wave.
 
 So, first thing we need is a function they can hit to wave at us!
 
-The blockchain = Think of it as a cloud provider, kinda like AWS. But, it's owned by no one. And, is ran through compute power powered by random people called miners. We pay miners to run our code.
+The blockchain = Think of it as a cloud provider, kinda like AWS, but it's owned by no one. It's ran by compute power from mining machines all over the world. Usually these people are called miners and we pay them to run our code!
 
 A smart contract = Kinda like our server's code with different functions people can hit.
 
@@ -102,7 +102,7 @@ runMain();
 const [owner, randomPerson] = await hre.ethers.getSigners();
 ```
 
-In order to deploy something to the blockchain, we need to have a wallet address! Hardhat does this for us magically in the background, but, here I grabbed the wallet address of contract owner and I also grabbed a random wallet address and called it `randomPerson`. This will make more sense in a moment.
+In order to deploy something to the blockchain, we need to have a wallet address! Hardhat does this for us magically in the background, but here I grabbed the wallet address of contract owner and I also grabbed a random wallet address and called it `randomPerson`. This will make more sense in a moment.
 
 I also added:
 
@@ -157,7 +157,7 @@ Why do we do a `waveTxn.wait();` though? What are we waiting for? Why didn't we 
 
 So, we probably want someone other than us to send us a wave right? It'd be pretty boring if only we could send a wave!! We want to make our website **multiplayer**!
 
-Check this out. I added a few lines at the bottom of the function. I'm not going to explain it much (but please ask questions in #course-chat). Basically this is how we can simulate other people hitting our functions :). Keep an eye on the wallet addresses in your terminal once you change the code and run it.
+Check this out. I added a few lines at the bottom of the function. I'm not going to explain it much (but please ask questions in #general-chill-chat). Basically this is how we can simulate other people hitting our functions :). Keep an eye on the wallet addresses in your terminal once you change the code and run it.
 
 ```javascript
 const main = async () => {

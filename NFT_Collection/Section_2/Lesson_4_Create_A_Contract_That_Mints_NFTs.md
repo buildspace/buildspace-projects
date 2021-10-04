@@ -102,6 +102,8 @@ We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [
 
 **Note: I'd love for you to create your own JSON metadata instead of just copying mine. Use your own image, name, and description. Maybe you want your NFT to an image of your fav anime character, fav band, whatever!! Make it custom. Don't worry, we'll be able to change this in the future!**
 
+If you decide to use your own image, make sure the URL goes directly to the actual image, not the website that hosts the image! Direct Imgur links look like this - `https://i.imgur.com/123123.png` NOT `https://imgur.com/gallery/123123`. The easiest way to tell is to check if the URL ends in an image extension like `.png` or `.jpg`. 
+
 Now, lets head to our smart contract and change one line. Instead of:
 
 ```solidity
@@ -117,7 +119,7 @@ _setTokenURI(newItemId, "INSERT_YOUR_JSON_URL_HERE");
 Under that line, we can also add a `console.log` to help us see when the NFT is minted and to who!
 
 ```solidity
-console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender)
+console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
 ```
 
 🎉 Mint an NFT locally.
@@ -183,7 +185,7 @@ The next step is a testnet which you can think of as like a "staging" environmen
  💳 Transactions
 ------------------------
 
-So, when we want to perform an action that changes the blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction because we're changing account balances. Doing something that updates a variable in our contract is also considered a transaction because we're changing data. Minting an NFT is a transaction because we're saving data on the contract.
+So, when we want to perform an action that changes the blockchain we call it a *transaction*. For example, sending someone ETH is a transaction because we're changing account balances. Doing something that updates a variable in our contract is also considered a transaction because we're changing data. Minting an NFT is a transaction because we're saving data on the contract.
 
 **Deploying a smart contract is also a transaction.**
 
@@ -225,7 +227,7 @@ There are a few testnets out there and the one we'll be using is called "Rinkeby
 
 In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-In order get fake ether, we have to ask the network for some. **This fake ether will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works lol.
+In order get fake ether, we have to ask the network for some. **This fake ether will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. You just gotta find one that works lol.
 
 For MyCrpyto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
@@ -297,7 +299,7 @@ module.exports = {
       accounts: ['YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY'],
     },
   },
-};`
+};
 ```
 
 You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
@@ -308,7 +310,7 @@ Why do you need to use your private key? Because in order to perform a transacti
 
 Once you've got your config setup we're set to deploy with the deploy script we wrote earlier.
 
-Run this command from the root directory of `epic-nfts`. Notice all we do is change it from `localhost` to `rinkeby`.
+Run this command from the root directory of `epic-nfts`.
 
 ```bash
 npx hardhat run scripts/deploy.js --network rinkeby
@@ -331,7 +333,7 @@ If it worked — AWEEEEESOME YOU JUST DEPLOYED A CONTRACT YESSSS.
 
 Believe it or not. The NFTs you just minted will be on OpenSea's TestNet site.
 
-Head to [testnets.opensea.io/](testnets.opensea.io/). Here's search for your contract address which is the address we deployed to that you can find in your terminal. **Don't click enter**. OpenSea is weird so you'll need click the collection itself when it comes up.
+Head to [testnets.opensea.io](https://testnets.opensea.io/). Here's search for your contract address which is the address we deployed to that you can find in your terminal. **Don't click enter**. OpenSea is weird so you'll need click the collection itself when it comes up.
 
 ![Untitled](https://i.imgur.com/ePDlYX1.png)
 

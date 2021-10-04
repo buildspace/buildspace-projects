@@ -60,7 +60,7 @@ Super exciting that you made it to the end. Pretty big deal!
 
 Before you head out, be sure to add a few of those little final touches from the previous lesson if you feel like it. Those really make the difference. When you're ready, post a link to your project in #showcase. Your fellow classmates will be the first to mint some of your awesome NFTs!
 
-You should also tweet out your final project and show the world your epic creation! What you didn't wasn't easy by any means. This is all new tech. And if you feel up to it, tag @_buildspace :). It gives us a ton of motivation whenever we see people ship their projects.
+You should also tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. This is all new tech. And if you feel up to it, tag @_buildspace :). It gives us a ton of motivation whenever we see people ship their projects.
 
 Thank you for contributing to the future of web3 by learning this stuff. The fact that you know how this works and how to code it up is a superpower. Use your power wisely ;).
 

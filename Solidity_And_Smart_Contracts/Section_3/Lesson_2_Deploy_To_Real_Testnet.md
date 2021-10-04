@@ -52,11 +52,11 @@ So, you'll be doing all this within the next few lessons :).
 
 There are a few testnets out there and the one we'll be using is called "Rinkeby" which is run by the Ethereum foundation.
 
-In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
+In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copy how mainnet works, only difference is no real money is involved.
 
 In order get fake ether, we have to ask the network for some. **This fake ether will only work on this specific testnet.** You can grab some fake Ether for Rinkeby through a faucet. 
 
-For MyCrpyto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
+For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
 | Name | Link | Amount | Time |
 |------|------|--------|------|
@@ -93,6 +93,8 @@ module.exports = {
 **Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** We'll talk about `.env` variables later and how to keep this stuff secret.
 
 You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can grab from metamask and paste that in there as well.
+
+**Note: Accessing your private key can be done by opening MetaMask, change the network to "Rinkeby Test Network" and then click the three dots and select "Account Details" > "Export Private Key"**
 
 Why do you need to use your private key? Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain. And, your username is your public address and your password is your private key. It's kinda like logging into AWS or GCP to deploy.
 
