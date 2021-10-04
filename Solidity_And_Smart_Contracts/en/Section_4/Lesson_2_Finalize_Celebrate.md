@@ -65,17 +65,6 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
 
         const waves = await wavePortalContract.getAllWaves();
 
-        let wavesCleaned = [];
-        waves.forEach(wave => {
-          wavesCleaned.push({
-            address: wave.waver,
-            timestamp: new Date(wave.timestamp * 1000),
-            message: wave.message
-          });
-        });
-
-        setAllWaves(wavesCleaned);
-
         /**
          * Listen in for emitter events!
          */
@@ -88,6 +77,18 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
             message: message
           }]);
         });
+
+        let wavesCleaned = [];
+        waves.forEach(wave => {
+          wavesCleaned.push({
+            address: wave.waver,
+            timestamp: new Date(wave.timestamp * 1000),
+            message: wave.message
+          });
+        });
+
+        setAllWaves(wavesCleaned);
+
       } else {
         console.log("Ethereum object doesn't exist!")
       }
