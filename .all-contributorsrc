@@ -238,6 +238,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "kylestratis",
+      "name": "Kyle Stratis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4088051?v=4",
+      "profile": "https://kylestratis.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
