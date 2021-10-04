@@ -80,6 +80,8 @@ contract WavePortal {
     }
 
     function getTotalWaves() public view returns (uint256) {
+        // Optional: Add this line if you want to see the contract print the value!
+        // We'll also print it over in run.js as well.
         console.log("We have %d total waves!", totalWaves);
         return totalWaves;
     }
