@@ -310,7 +310,7 @@ Why do you need to use your private key? Because in order to perform a transacti
 
 Once you've got your config setup we're set to deploy with the deploy script we wrote earlier.
 
-Run this command from the root directory of `epic-nfts`. Notice all we do is change it from `localhost` to `rinkeby`.
+Run this command from the root directory of `epic-nfts`.
 
 ```bash
 npx hardhat run scripts/deploy.js --network rinkeby

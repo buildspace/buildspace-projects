@@ -1,4 +1,4 @@
-🌊 Give user their Openea link
+🌊 Give user their OpenSea link
 --------------
 
 One thing that’d be awesome is after the NFT is minted we actually give a link to their NFT on OpenSea that they’d be able to share on Twitter or with their friends!!

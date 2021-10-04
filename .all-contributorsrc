@@ -211,6 +211,69 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "NickGonzalez04",
+      "name": "Nick Gonzalez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48919838?v=4",
+      "profile": "https://nicholas-gonzalez.me",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "joshuanwankwo",
+      "name": "Joshua",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36573481?v=4",
+      "profile": "http://www.genesystechhub.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "augurnaut",
+      "name": "Shannon Li",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38844941?v=4",
+      "profile": "https://github.com/augurnaut",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kylestratis",
+      "name": "Kyle Stratis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4088051?v=4",
+      "profile": "https://kylestratis.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "afmsavage",
+      "name": "Antonio Savage",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29739267?v=4",
+      "profile": "https://www.linkedin.com/in/afmsavage/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "markramrattan",
+      "name": "Mark Ramrattan ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1474558?v=4",
+      "profile": "https://github.com/markramrattan",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "JoviDeCroock",
+      "name": "Jovi De Croock",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17125876?v=4",
+      "profile": "https://www.jovidecroock.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

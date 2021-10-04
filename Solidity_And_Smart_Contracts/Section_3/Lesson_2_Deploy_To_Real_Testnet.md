@@ -56,7 +56,7 @@ In order to deploy to Rinkeby, we need fake ether. Why? Because if you were depl
 
 In order get fake ether, we have to ask the network for some. **This fake ether will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. 
 
-For MyCrpyto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
+For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
 | Name | Link | Amount | Time |
 |------|------|--------|------|
