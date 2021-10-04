@@ -42,10 +42,10 @@ const App = () => {
   }, [])
 
   return (
-		// blah blah all your html here
-		<button className="cta-button connect-wallet-button">
-			Connect to Wallet
-		</button>
+    // blah blah all your html here
+    <button className="cta-button connect-wallet-button">
+      Connect to Wallet
+    </button>
   );
 };
 
@@ -118,10 +118,10 @@ const App = () => {
   }, [])
 
   return (
-		 // blah blah all your html here
-		<button className="cta-button connect-wallet-button">
-			Connect to Wallet
-		</button>
+    // blah blah all your html here
+    <button className="cta-button connect-wallet-button">
+      Connect to Wallet
+    </button>
   );
 };
 
