@@ -229,6 +229,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "augurnaut",
+      "name": "Shannon Li",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38844941?v=4",
+      "profile": "https://github.com/augurnaut",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
