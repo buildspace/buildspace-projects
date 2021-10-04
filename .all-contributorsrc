@@ -256,6 +256,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "markramrattan",
+      "name": "Mark Ramrattan ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1474558?v=4",
+      "profile": "https://github.com/markramrattan",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "JoviDeCroock",
+      "name": "Jovi De Croock",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17125876?v=4",
+      "profile": "https://www.jovidecroock.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

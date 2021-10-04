@@ -11,7 +11,7 @@ Here's our black box SVG again.
 </svg>
 ```
 
-Next, we want a way to somehow get this data in our NFT without hosting it somewhere like imgur (which can go down or die any any moment!). Head to [this](https://www.utilities-online.info/base64) website. Paste in your full SVG code above and then click "encode" to get your base64 encoded SVG. Now, ready for some magic? Open a new tab. And in the URL bar paste this:
+Next, we want a way to somehow get this data in our NFT without hosting it somewhere like imgur (which can go down or die at any moment!). Head to [this](https://www.utilities-online.info/base64) website. Paste in your full SVG code above and then click "encode" to get your base64 encoded SVG. Now, ready for some magic? Open a new tab. And in the URL bar paste this:
 
 ```plaintext
 data:image/svg+xml;base64,INSERT_YOUR_BASE64_ENCODED_SVG_HERE
@@ -60,7 +60,7 @@ For example, mines looks like this:
 
 But wait — where will our fancy new JSON file go? Right now, we host it on [this](https://jsonkeeper.com/) random website. If that website goes down, our beautiful NFT is gone forever! Here's what we're going to do. **We're going to base64 encode our entire JSON file.** Just like we encoded our SVG.
 
-Head to [this](https://www.utilities-online.info/base64) website again. Paste in your full JSON metadata w/ the base64 encoded SVG (should look sorta like what I have above) and then click "encode" to get you encoded JSON. 
+Head to [this](https://www.utilities-online.info/base64) website again. Paste in your full JSON metadata with the base64 encoded SVG (should look sorta like what I have above) and then click "encode" to get you encoded JSON. 
 
 Open a new tab. And in the URL bar paste this:
 
