@@ -98,6 +98,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://promoso.io"><img src="https://avatars.githubusercontent.com/u/19507316?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Casey Wilcox</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=FounderCasey" title="Documentation">📖</a></td>
     <td align="center"><a href="https://nicholas-gonzalez.me"><img src="https://avatars.githubusercontent.com/u/48919838?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nick Gonzalez</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=NickGonzalez04" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.genesystechhub.com"><img src="https://avatars.githubusercontent.com/u/36573481?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=joshuanwankwo" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/augurnaut"><img src="https://avatars.githubusercontent.com/u/38844941?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shannon Li</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=augurnaut" title="Documentation">📖</a></td>
   </tr>
 </table>
 
