@@ -77,7 +77,8 @@ We have already addressed requests to the blockchain. We used `ethereum.request`
 ```javascript
 let chainId = await ethereum.request({ method: 'eth_chainId' });
 console.log("Connected to chain " + chainId);
-if (chainId !== "0x4" /*String, hex code of the chain ID of the Rinkebey test network */ ) {
+const rinkebey_chainId = "0x4"; // String, hex code of the chainId of the Rinkebey test network
+if (chainId !== rinkebey_chainId  ) {
 	alert("You are not connected to the Rinkeby Test Network!");
 }
 ```
