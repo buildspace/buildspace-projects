@@ -26,7 +26,7 @@ contract WavePortal {
     uint256 totalWaves;
 
     /*
-     * A little magic, Google what events are in Solodity!
+     * A little magic, Google what events are in Solidity!
      */
     event NewWave(address indexed from, uint256 timestamp, string message);
 
@@ -112,8 +112,8 @@ const main = async () => {
   let waveTxn = await waveContract.wave('A message!');
   await waveTxn.wait(); // Wait for the transaction to be mined
 
-  const [_, randoPerson] = await ethers.getSigners();
-  waveTxn = await waveContract.connect(randoPerson).wave('Another message!');
+  const [_, randomPerson] = await ethers.getSigners();
+  waveTxn = await waveContract.connect(randomPerson).wave('Another message!');
   await waveTxn.wait(); // Wait for the transaction to be mined
 
   let allWaves = await waveContract.getAllWaves();
@@ -287,4 +287,4 @@ The goal? You want to give your users the ability to send you a custom message u
 👷‍♀️ Go build a UI!
 --------------------
 
-Go make this thing look how you want it to look! I won't be teaching you much of that here. Feel free to ask questions in #section-4-help!
+Go make this thing look how you want it to look! I won't be teaching you much of that here. Feel free to ask questions in #section-3-help!
