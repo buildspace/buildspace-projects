@@ -3,7 +3,7 @@
 
 You've made it — hell yeah! Welcome :). My name is Farza and I’ll be your instructor. This project is for devs that want to get more into crypto tech. All you really need to know going into this: some terminal skills, some javascript, some react.js. You'll pick up the rest along the way.
 
-Few action items for you before moving on:
+A few action items for you before moving on:
 
 1. **Connect your Discord in the course dashboard.** All the good stuff is going to be happening in a secret category in the Discord that you'll only have access to if you connect your Discord.
 2. **Connect your Ethereum wallet in the course dashboard.** If you don't have a wallet that can interact with dApps, you can just install Metamask for free right now. Without a wallet, you can't do the project!
@@ -53,7 +53,7 @@ This NFT not only looks cool, but it will also get you access to secret opportun
 
 Note: instead of "Capella", yours would have the name of your cohort and every cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT. Also -- the name of the project at the top left would be different!
 
-To claim the NFT, you'll need to pay [gas fees](https://ethereum.org/en/developers/docs/gas/) which are fees that Ethereum charges you to perform transactions on the network. Gas fees to redeem the NFT vary. I recommend transferring around $30 - $50 worth of ether over to your wallet.
+To claim the NFT, you'll need to pay [gas fees](https://ethereum.org/en/developers/docs/gas/) which are fees that Ethereum charges you to perform transactions on the network. Gas fees to redeem the NFT vary. I recommend transferring around $30 - $50 worth of ETH over to your wallet.
 
 If you don't know how to do this, don't worry about it for now -- not required.
 
@@ -67,7 +67,7 @@ You'll be building a website that I'll be calling the WavePortal --- it'll be a 
 
 You'll be writing + deploying the smart contract and you'll also be building the website that will let people actually connect their wallets and interact with your smart contract.
 
-We're going to make this a little spicy as well. Basically, when someone waves at you there is a random chance they can win a small amount of Ethereum from your site :).
+We're going to make this a little spicy as well. Basically, when someone waves at you there is a random chance they can win a small amount of ETH from your site :).
 
 You'll be able to customize the website as much as you want. For example:
 - Maybe instead of a 👋 you want people to send you a 💩.

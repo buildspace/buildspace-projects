@@ -7,7 +7,7 @@ You can even make it where you can manually send ETH to people whose messages yo
 
 **Easily sending ETH to users is a core part of smart contracts and one of the coolest parts about them**, so, let's do it!
 
-To start we're just going to give everyone who waves at us `0.0001 ether`. Which is $0.31 :). And this is all happening on testnet, so, it's fake $!
+To start we're just going to give everyone who waves at us `0.0001 ETH`. Which is $0.31 :). And this is all happening on testnet, so, it's fake $!
 
 Check out my updated `wave` function on `WavePortal.sol`.
 
@@ -159,7 +159,7 @@ This is what I get:
 
 **Boom**.
 
-We just sent some Ethereum from our contract, big success! And, we know we succeeded because the contract balance went down by 0.0001 ETH from 0.1 to 0.0999!
+We just sent some ETH from our contract, big success! And, we know we succeeded because the contract balance went down by 0.0001 ETH from 0.1 to 0.0999!
 
 ✈️ Update deploy script to fund contract
 ----------------------------------------
@@ -198,7 +198,7 @@ const waveContract = await waveContractFactory.deploy({
     value: hre.ethers.utils.parseEther('0.001'),
 });
 ```
-I like deploying to testnets with a smaller amount of ether first to test!
+I like deploying to testnets with a smaller amount of ETH first to test!
 
  And I also added `await waveContract.deployed()` to make it easy for me to know when it's deployed!
 

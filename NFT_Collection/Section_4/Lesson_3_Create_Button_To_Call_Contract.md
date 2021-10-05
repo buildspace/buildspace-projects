@@ -113,7 +113,7 @@ import myEpicNft from './utils/MyEpicNFT.json';
 
 And we're all done. Shouldn't have errors anymore! You're ready to mint some NFTs!
 
-All you'll need to do from here is click "Mint NFT", pay gas (using your fake ether), wait for the transaction to be mined, and bam! Your NFT should show up on OpenSea either immediately or within 5-15m max.
+All you'll need to do from here is click "Mint NFT", pay gas (using your fake ETH), wait for the transaction to be mined, and bam! Your NFT should show up on OpenSea either immediately or within 5-15m max.
 
 You may be asking yourself wtf gas is. I'm not going to answer that here. But, you can start researching [here](https://ethereum.org/en/developers/docs/gas/) ;).
 
