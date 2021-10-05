@@ -42,7 +42,7 @@ contract WavePortal {
 
     /*
      * I declare a variable waves that lets me store an array of structs.
-     * This is what lets me gold all the waves anyone ever sends to me!
+     * This is what lets me hold all the waves anyone ever sends to me!
      */
     Wave[] waves;
 
@@ -52,7 +52,7 @@ contract WavePortal {
 
     /*
      * You'll notice I changed the wave function a little here as well and
-     * now it requires a string called _message. This is the message out user
+     * now it requires a string called _message. This is the message our user
      * sends us from the frontend!
      */
     function wave(string memory _message) public {
@@ -66,7 +66,7 @@ contract WavePortal {
 
         /*
          * I added some fanciness here, Google it and try to figure out what it is!
-         * Let me know what you learn in #course-chat
+         * Let me know what you learn in #general-chill-chat
          */
         emit NewWave(msg.sender, block.timestamp, _message);
     }
@@ -80,6 +80,9 @@ contract WavePortal {
     }
 
     function getTotalWaves() public view returns (uint256) {
+        // Optional: Add this line if you want to see the contract print the value!
+        // We'll also print it over in run.js as well.
+        console.log("We have %d total waves!", totalWaves);
         return totalWaves;
     }
 }
@@ -88,7 +91,7 @@ contract WavePortal {
 🧐 Test it
 ----------
 
-Whenever we change our contract, we want to change `run.js` to test the new functionality we added. That how we know it's working how we want! Here's what mines looks like now.
+Whenever we change our contract, we want to change `run.js` to test the new functionality we added. That's how we know it's working how we want! Here's what mine looks like now.
 
 Here's my updated `run.js`. 
 
@@ -140,7 +143,7 @@ The array looks a little scary but we can see the data next to the words `waver`
 
 Note: "timestamp" is given back to us as type "BigNumber". We'll learn how to work with it later but just know there's nothing wrong here!
 
-Looks like things work, lets move to our **frontend** so we can see all our waves on our website!
+Looks like things work, let's move to our **frontend** so we can see all our waves on our website!
 
 ✈️ Re-deploy
 ------------
@@ -157,7 +160,7 @@ So, now that we've updated our contract we need to do a few things:
 
 Why do we need to do all this? Well, it's because smart contracts are **immutable.** They can't change. They're permanent. That means changing a contract requires a full redeploy. This will also **reset** all the variables since it'd be treated as a brand new contract. **That means we'd lose all our wave data if we wanted to update the contract's code.**
 
-**Bonus**: In #course-chat, can anyone tell me some solutions here? Where else could we store our wave data where we could update our contract's code and keep our original data around? There are quite a few solutions here let me know what you find!
+**Bonus**: In #general-chill-chat, can anyone tell me some solutions here? Where else could we store our wave data where we could update our contract's code and keep our original data around? There are quite a few solutions here let me know what you find!
 
 So what you'll need to do now is:
 
@@ -191,7 +194,7 @@ const [currentAccount, setCurrentAccount] = useState("");
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const waveportalContract = new ethers.Contract(contractAddress, waveportal.abi, signer);
+        const waveportalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         /*
          * Call the getAllWaves method from your Smart Contract

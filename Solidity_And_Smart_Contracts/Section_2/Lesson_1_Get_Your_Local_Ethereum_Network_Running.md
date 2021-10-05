@@ -13,7 +13,7 @@ So in this case, we want people to 👋 at us. The bigger picture here is:
 
 3\. **We're going to build a client website** that will let people easily interact with our smart contract on the blockchain.
 
-I'll explain certain things in-depth as needed (ex. how mining working, how smart contracts are compiled and ran, etc) *but for now lets just focus on getting stuff running*.
+I'll explain certain things in-depth as needed (ex. how mining works, how smart contracts are compiled and run, etc) *but for now let's just focus on getting stuff running*.
 
 If you have any issues throughout here, just drop a message on Discord in  `#section-1-help`. 
 
@@ -22,7 +22,7 @@ If you have any issues throughout here, just drop a message on Discord in  `#se
 
 1\. We're going to be using a tool called Hardhat a lot. This will let us easily spin up a local Ethereum network and give us fake test ETH and fake test accounts to work with. Remember, it's just like a local server, except the "server" is the blockchain
 
-2\. Quickly compile smart contracts and test them on our local blockchain
+2\. Quickly compile smart contracts and test them on our local blockchain.
 
 First you'll need to get node/npm. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html).
 
@@ -56,7 +56,7 @@ Go ahead and install these other dependencies just in case it didn't do it autom
 npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 ```
 
-Finally, run `npx hardhat accounts` and this should print out a bunch of strings that looks like this: 
+Finally, run `npx hardhat accounts` and this should print out a bunch of strings that look like this: 
 
 `0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`
 

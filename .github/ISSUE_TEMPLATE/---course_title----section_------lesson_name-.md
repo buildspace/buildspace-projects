@@ -1,10 +1,10 @@
 ---
-name: "✨ [COURSE_TITLE]: <SECTION_#> - <LESSON_NAME>"
+name: "✨ Lesson Improvement"
 about: "Found an issue in on of the project lessons? Use this template to submit an
   improvement \U0001F64C"
-title: "✨ Lesson Improvement"
+title: "✨ [COURSE_TITLE]: <SECTION_#> - <LESSON_NAME>"
 labels: improvement
-assignees: adilanchian, farzaa, DavidBarrick
+assignees: adilanchian, farzaa, DavidBarrick, emboslicev2
 
 ---
 

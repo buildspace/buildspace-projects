@@ -3,7 +3,7 @@
 
 Awesome. We made it. We've deployed our website. We've deployed our contract. We've connected our wallet. **Now we need to actually call our contract from our web app** using the credentials we have access to now from Metamask!
 
-So, remember, our contract has the function `makeAnEpicNFT` which will actually mint the NFT. We'll need to now call this function from our web app. Go ahead. and add the following function under the `connectWallet` function.
+So, remember, our contract has the function `makeAnEpicNFT` which will actually mint the NFT. We'll need to now call this function from our web app. Go ahead and add the following function under the `connectWallet` function.
 
 ```javascript
 const askContractToMintNft = async () => {
@@ -69,11 +69,18 @@ The rest of the code should already make sense. It looks sorta like the code we 
 Finally, we'll want to call this function when someone clicks the "Mint NFT" button.
 
 ```jsx
-const renderMintUI = () => (
+return (
+  {currentAccount === "" ? (
+    <button onClick={connectWallet} className="cta-button connect-wallet-button">
+      Connect to Wallet
+    </button>
+  ) : (
+    {/** Add askContractToMintNft Action for the onClick event **/}
     <button onClick={askContractToMintNft} className="cta-button connect-wallet-button">
       Mint NFT
     </button>
-)
+  )}
+);
 ```
 
 
