@@ -29,7 +29,7 @@ Estimating gas is a hard problem and an easy workaround for this (so our users d
 On App.js, I changed the line that sends the wave to 
 
 ```solidity
-waveportalContract.wave(message, { gasLimit: 300000 })
+wavePortalContract.wave(message, { gasLimit: 300000 })
 ```
 
 What this does is make the user pay a set amount of gas of 300,000. And, if they don't use all of it in the transaction they'll automatically be refunded.
