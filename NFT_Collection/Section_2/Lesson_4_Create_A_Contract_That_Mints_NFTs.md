@@ -223,9 +223,9 @@ This is awesome because we can test our application in a real-world scenario whe
 
 There are a few testnets out there and the one we'll be using is called "Rinkeby" which is run by the Ethereum foundation.
 
-In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
+In order to deploy to Rinkeby, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-In order get fake ether, we have to ask the network for some. **This fake ether will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works lol.
+In order get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works lol.
 
 For MyCrpyto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
@@ -242,7 +242,7 @@ You have a few faucets to choose from:
 🙃 Having trouble getting Testnet ETH?
 ------------------------
 
-If the above doesn't work, please send your public wallet address and request 0.01 ETH in #faucet-request and drop a funny gif. Either me, or someone from the course will send you some faker ether as soon as they can. The funnier the gif, the faster you will get sent fake ether LOL.
+If the above doesn't work, please send your public wallet address and request 0.01 ETH in #faucet-request and drop a funny gif. Either me, or someone from the course will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
 
 🚀 Setup a deploy.js file
 ------------------------

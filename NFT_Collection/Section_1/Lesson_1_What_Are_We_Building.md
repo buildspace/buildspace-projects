@@ -33,7 +33,7 @@ This NFT not only looks cool, but it will also get you access to secret opportun
 
 Note: instead of "Capella", yours would say name of your cohort — each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT.
 
-To claim the NFT, you'll need to pay [gas fees](https://ethereum.org/en/developers/docs/gas/) which are fees that Ethereum charges you to perform transactions on the network. Gas fees to redeem the NFT vary. I recommend transferring around $30 - $50 worth of ether over to your wallet.
+To claim the NFT, you'll need to pay [gas fees](https://ethereum.org/en/developers/docs/gas/) which are fees that Ethereum charges you to perform transactions on the network. Gas fees to redeem the NFT vary. I recommend transferring around $30 - $50 worth of ETH over to your wallet.
 
 If you don't know how to do this, don't worry about it for now — not required!
 

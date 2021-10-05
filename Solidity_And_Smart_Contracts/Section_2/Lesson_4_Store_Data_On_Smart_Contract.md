@@ -150,7 +150,7 @@ This is pretty much the basis of most smart contracts. Read functions. Write fun
 Pretty soon, we'll be able to call these functions from our react app that we'll be working on :).
 
 **Bonus:**\
-Why do we do a `waveTxn.wait();` though? What are we waiting for? Why didn't we do a `.wait()` after we read the total number of waves? Post your thoughts in the course-chat on Discord. Whoever gets the right answer I will give $20 in Ether :).
+Why do we do a `waveTxn.wait();` though? What are we waiting for? Why didn't we do a `.wait()` after we read the total number of waves? Post your thoughts in the course-chat on Discord. Whoever gets the right answer I will give $20 in ETH :).
 
 🤝 Test other users 
 --------------------
