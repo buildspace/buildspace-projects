@@ -7,11 +7,11 @@ Now, if we remember, we want our final app to be a place where people can come w
 
 So at the end of the lessons we want to;
 
-1\. let users submit a message along with their wave.
+1\. Let users submit a message along with their wave.
 
-2\. have that data saved somehow on the blockchain.
+2\. Have that data saved somehow on the blockchain.
 
-3\. show that data on our site, so, anyone can come to see all the people who have waved at us and their messages.
+3\. Show that data on our site, so, anyone can come to see all the people who have waved at us and their messages.
 
 Check out my updated smart contract code. I have added lots of comments here to help you see what changed :).
 
