@@ -274,6 +274,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "daeshawnballard",
+      "name": "Daeshawn Ballard",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13078855?v=4",
+      "profile": "http://daeshawn.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
