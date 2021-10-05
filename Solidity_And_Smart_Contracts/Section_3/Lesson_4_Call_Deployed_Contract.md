@@ -6,7 +6,7 @@ Awesome. We made it. We've deployed our website. We've deployed our contract. We
 So, our smart contract has this function that retrieves the total number of waves.
 
 ```solidity
-  function getTotalWaves() view public returns (uint256) {
+  function getTotalWaves() public view returns (uint256) {
       console.log("We have %d total waves!", totalWaves);
       return totalWaves;
   }
@@ -50,7 +50,7 @@ A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we 
 
 [Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
 
-Connect this function to our wave button.
+Connect this function to our wave button by updating the onClick variable from {null} to {wave}:
 
 ```html
 <button className="waveButton" onClick={wave}>
