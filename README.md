@@ -108,6 +108,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://daeshawn.dev"><img src="https://avatars.githubusercontent.com/u/13078855?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daeshawn Ballard</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=daeshawnballard" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.geckoengage.com"><img src="https://avatars.githubusercontent.com/u/43322?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matthew Lanham</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=mattlanham" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/zzJZzz"><img src="https://avatars.githubusercontent.com/u/53538672?v=4?s=100" width="100px;" alt=""/><br /><sub><b>zzJZzz</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=zzJZzz" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://stephenlloydwebber.com"><img src="https://avatars.githubusercontent.com/u/22316563?v=4?s=100" width="100px;" alt=""/><br /><sub><b>S. Lloyd Webber</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=offgridauthor" title="Documentation">📖</a></td>
   </tr>
 </table>
 
