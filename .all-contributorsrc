@@ -274,6 +274,33 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "daeshawnballard",
+      "name": "Daeshawn Ballard",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13078855?v=4",
+      "profile": "http://daeshawn.dev",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mattlanham",
+      "name": "Matthew Lanham",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43322?v=4",
+      "profile": "http://www.geckoengage.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "zzJZzz",
+      "name": "zzJZzz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53538672?v=4",
+      "profile": "https://github.com/zzJZzz",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

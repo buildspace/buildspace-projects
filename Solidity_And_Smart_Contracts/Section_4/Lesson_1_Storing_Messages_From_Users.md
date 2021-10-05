@@ -3,17 +3,17 @@
 
 So, we now have a full-fledged web app that can talk to the blockchain!
 
-Now, if we remember we want our final app to be a place where people can come, wave to us, and send us a message. We also want to show all the past waves/messages we've gotten. That's what we'll be doing in this lesson!
+Now, if you remember, we want our final app to be a place where people can come wave to us and send us a message. We also want to show all the past waves/messages we've gotten. That's what we'll be doing in this lesson!
 
-So at the end of the lessons we want to
+So at the end of the lessons we want to;
 
 1\. Let users submit a message along with their wave.
 
 2\. Have that data saved somehow on the blockchain.
 
-3\. Actually show that data on our site, so, anyone can come to see all the people who have waved at us and their messages.
+3\. Show that data on our site, so, anyone can come to see all the people who have waved at us and their messages.
 
-Check out my updated smart contract code. I added lots of comments here to help you see what changed :).
+Check out my updated smart contract code. I have added lots of comments here to help you see what changed :).
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -26,7 +26,7 @@ contract WavePortal {
     uint256 totalWaves;
 
     /*
-     * A little magic, Google what events are in Solodity!
+     * A little magic, Google what events are in Solidity!
      */
     event NewWave(address indexed from, uint256 timestamp, string message);
 
@@ -112,8 +112,8 @@ const main = async () => {
   let waveTxn = await waveContract.wave('A message!');
   await waveTxn.wait(); // Wait for the transaction to be mined
 
-  const [_, randoPerson] = await ethers.getSigners();
-  waveTxn = await waveContract.connect(randoPerson).wave('Another message!');
+  const [_, randomPerson] = await hre.ethers.getSigners();
+  waveTxn = await waveContract.connect(randomPerson).wave('Another message!');
   await waveTxn.wait(); // Wait for the transaction to be mined
 
   let allWaves = await waveContract.getAllWaves();
@@ -287,4 +287,4 @@ The goal? You want to give your users the ability to send you a custom message u
 👷‍♀️ Go build a UI!
 --------------------
 
-Go make this thing look how you want it to look! I won't be teaching you much of that here. Feel free to ask questions in #section-4-help!
+Go make this thing look how you want it to look! I won't be teaching you much of that here. Feel free to ask questions in #section-3-help!

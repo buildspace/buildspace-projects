@@ -102,7 +102,7 @@ We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [
 
 **Note: I'd love for you to create your own JSON metadata instead of just copying mine. Use your own image, name, and description. Maybe you want your NFT to an image of your fav anime character, fav band, whatever!! Make it custom. Don't worry, we'll be able to change this in the future!**
 
-If you decide to use your own image, make sure the URL goes directly to the actual image, not the website that hosts the image! Direct Imgur links look like this - `https://i.imgur.com/123123.png` NOT `https://imgur.com/gallery/123123`. The easiest way to tell is to check if the URL ends in an image extension like `.png` or `.jpg`. 
+If you decide to use your own image, make sure the URL goes directly to the actual image, not the website that hosts the image! Direct Imgur links look like this - `https://i.imgur.com/123123.png` NOT `https://imgur.com/gallery/123123`. The easiest way to tell is to check if the URL ends in an image extension like `.png` or `.jpg`. You can right click the imgur image and "copy image address". This will give you the correct URL.
 
 Now, lets head to our smart contract and change one line. Instead of:
 
@@ -229,7 +229,7 @@ In order to deploy to Rinkeby, we need fake ETH. Why? Because if you were deploy
 
 In order get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works lol.
 
-For MyCrpyto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
+For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
 You have a few faucets to choose from:
 

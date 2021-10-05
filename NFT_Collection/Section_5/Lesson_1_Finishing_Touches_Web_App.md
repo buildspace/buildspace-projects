@@ -68,7 +68,26 @@ Hint, you'll need something in solidity called `require`. And, you'll like also 
 --------------
 Your website is **only** going to work on Rinkeby (since that's where your contract lives).
 
-Be sure to add a nice message somewhere telling users about this. You can also make it dynamic if you want and [detect their network](https://ethereum.stackexchange.com/questions/85194/how-to-check-the-current-metamask-network) and then say something like, "Hey — I see you're connected to mainnet but this only works on Rinkeby!". You can make this as fancy as you want!
+We're going to to add a nice message telling users about this! 
+
+For that, we make a RPC request to the blockchain to see the ID of the chain our wallet connects to. (Why a chain and not a network? [Good question!](https://ethereum.stackexchange.com/questions/37533/what-is-a-chainid-in-ethereum-how-is-it-different-than-networkid-and-how-is-it))
+
+We have already addressed requests to the blockchain. We used `ethereum.request` with the methods `eth_accounts` and `eth_requestAccounts`. Now we use `eth_chainId` to get the ID.
+
+```javascript
+let chainId = await ethereum.request({ method: 'eth_chainId' });
+console.log("Connected to chain " + chainId);
+
+// String, hex code of the chainId of the Rinkebey test network
+const rinkebyChainId = "0x4"; 
+if (chainId !== rinkebyChainId) {
+	alert("You are not connected to the Rinkeby Test Network!");
+}
+```
+There, now the user will know if they are on the wrong network! 
+The request conforms to [EIP-695](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-695.md) so it returns the hex value of the network as a string.
+You can find the IDs of other networks [here](https://docs.metamask.io/guide/ethereum-provider.html#chain-ids). 
+
 
 🙉 Mining animation
 --------------
