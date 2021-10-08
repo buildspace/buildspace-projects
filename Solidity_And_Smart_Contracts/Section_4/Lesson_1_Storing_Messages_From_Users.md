@@ -194,12 +194,12 @@ const [currentAccount, setCurrentAccount] = useState("");
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const waveportalContract = new ethers.Contract(contractAddress, contractABI, signer);
+        const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         /*
          * Call the getAllWaves method from your Smart Contract
          */
-        const waves = await waveportalContract.getAllWaves();
+        const waves = await wavePortalContract.getAllWaves();
         
 
         /*
@@ -277,7 +277,7 @@ Basically, I just go through `allWaves` and create new divs for every single wav
 So, in `App.js`, our `wave()` function no longer works! If we try to wave it'll give us an error because it's expecting a message to be sent now with it now! For now, you can fix this by hardcoding a message like:
 
 ```
-const waveTxn = await waveportalContract.wave("this is a message")
+const waveTxn = await wavePortalContract.wave("this is a message")
 ```
 
 I'll leave this up you: figure out how to add a textbox that lets users add their own custom message they can send to the wave function :).
