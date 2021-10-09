@@ -66,7 +66,6 @@ When you have a question, hit up the proper channel for the project.
 
 This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord.
 
-Another great time to ask is during co-working sessions which are guaranteed times TAs will be online. During coworking sessions, you can ask questions in `#cowork-chat` on the Discord.
 
 📺 Where does the Live Kick-Off Happen?
 -------------------
