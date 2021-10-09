@@ -79,6 +79,8 @@ They'll be happening at [https://www.twitch.tv/buildspace](https://www.twitch.tv
 
 Let's get you some open-source rep!!
 
+At the very least, drop a ⭐ on the repo if you're feeling fancy!
+
 
 🚨Curious about working in web3?
 -------------------
