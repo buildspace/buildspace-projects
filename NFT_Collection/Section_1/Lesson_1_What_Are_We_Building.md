@@ -59,15 +59,6 @@ But, the NFTs I'll be going over in these guides are these NFTs that are basical
 Coolest part? Everything will be happening *on-chain*. This means all the NFT data will live on the blockchain itself. If that doesn't make sense, don't worry just yet — it will :)!
 
 
-💻 Co-Working Sessions
--------------------
-
-Basically, co-working sessions at buildspace are specific times for you to work on your project for 1-hour. During the hour, the teaching assistants will be very active in the chat answering questions as well.
-
-It's pretty cool. Everyone joins the #cowork-sesh voice channel at a scheduled time (all muted by default) and works individually on their projects with their classmates in a virtual space. We also play some nice lofi beats.
-
-![Untitled](https://i.imgur.com/Nw8EaMv.png)
-
 🤚 How to get help.
 -------------------
 
@@ -75,18 +66,25 @@ When you have a question, hit up the proper channel for the project.
 
 This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord.
 
-Another great time to ask is during co-working sessions which are guaranteed times TAs will be online. During coworking sessions, you can ask questions in `#cowork-chat` on the Discord.
 
 📺 Where does the Live Kick-Off Happen?
 -------------------
 
 They'll be happening at [https://www.twitch.tv/buildspace](https://www.twitch.tv/buildspace). Be sure to make an account on Twitch ahead of time so you'll be able to chat during the stream!
 
-🚨BTW -- wanna work in crypto?
+🤘 See an issue? Want to improve something? Fix it yourself ;).
+---------------------------------------
+
+**[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec` in the Discord :). 
+
+Let's get you some open-source rep!!
+
+
+🚨Curious about working in web3?
 -------------------
 
-We're partnered with a bunch of dope companies. We'll help you get hired in crypto. Even if you're just curious, fill out the form!! What's the worst that can happen -- you get connected to some dope crypto companies!?
+We're partnered with a bunch of awesome web3 companies. We'll help you get hired in crypto. Even if you're just curious, fill out the form!! What's the worst that can happen -- you get connected to some dope crypto companies!?
 
 [Here's the link.](https://zipschool.typeform.com/to/iG2O1lSp)
 
-If you want, DM `emboslice#0064` in the Discord with a link to your LinkedIn. She leads recruiting at buildspace and she can see if there are any companies we can match you with immediately :). No guarantees here!
+
