@@ -92,9 +92,6 @@ When you have a question, hit up the proper channel for the project.
 
 This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord. If you're part of multiple projects, we sure to ask your questions in the right project category!
 
-Another great time to ask is during co-working sessions which are guaranteed times TAs will be online. During coworking sessions, you can ask questions in `#cowork-chat` on the Discord.
-
-![](https://i.imgur.com/QyUEAef.png)
 
 🤘 See an issue? Want to improve something? Fix it yourself ;).
 ---------------------------------------
@@ -104,11 +101,9 @@ Another great time to ask is during co-working sessions which are guaranteed tim
 Let's get you some open-source rep!!!
 
 
-🚨 Optional -- wanna work in crypto?
---------------------------------------------
+🚨Curious about working in web3?
+-------------------
 
-We're partnered with a bunch of dope companies. We'll help you get hired in crypto. Even if you're just curious, fill out the form!! What's the worst that can happen -- you get connected to some dope crypto companies!?
+We're partnered with a bunch of awesome web3 companies. We'll help you get hired in crypto. Even if you're just curious, fill out the form!! What's the worst that can happen -- you get connected to some dope crypto companies!?
 
 [Here's the link.](https://zipschool.typeform.com/to/iG2O1lSp)
-
-Feel free to also DM `emboslice#0064` in the Discord with a link to your LinkedIn + what you're looking for (ex. full-time, internship, etc). She leads recruiting at buildspace and she can see if there are any companies we can match you with immediately :). No guarantees here!
