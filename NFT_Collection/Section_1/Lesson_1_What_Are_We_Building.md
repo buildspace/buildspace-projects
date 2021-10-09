@@ -81,7 +81,7 @@ They'll be happening at [https://www.twitch.tv/buildspace](https://www.twitch.tv
 Let's get you some open-source rep!!
 
 
-🚨BTW -- wanna work in crypto?
+🚨Wanna work in crypto?
 -------------------
 
 We're partnered with a bunch of dope companies. We'll help you get hired in crypto. Even if you're just curious, fill out the form!! What's the worst that can happen -- you get connected to some dope crypto companies!?
