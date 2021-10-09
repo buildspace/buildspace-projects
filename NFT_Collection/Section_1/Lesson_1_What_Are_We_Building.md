@@ -81,13 +81,11 @@ They'll be happening at [https://www.twitch.tv/buildspace](https://www.twitch.tv
 Let's get you some open-source rep!!
 
 
-🚨Wanna work in crypto?
+🚨Curious about working in web3?
 -------------------
 
-We're partnered with a bunch of dope companies. We'll help you get hired in crypto. Even if you're just curious, fill out the form!! What's the worst that can happen -- you get connected to some dope crypto companies!?
+We're partnered with a bunch of awesome web3 companies. We'll help you get hired in crypto. Even if you're just curious, fill out the form!! What's the worst that can happen -- you get connected to some dope crypto companies!?
 
 [Here's the link.](https://zipschool.typeform.com/to/iG2O1lSp)
-
-**Fill out the form even if you're just curious :).** What's the worst that can happen? You get an offer at a dope company :)?
 
 
