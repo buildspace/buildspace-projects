@@ -319,6 +319,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Toruitas",
+      "name": "Stuart Leitch",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7018206?v=4",
+      "profile": "https://github.com/Toruitas",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

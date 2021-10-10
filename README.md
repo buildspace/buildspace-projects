@@ -111,6 +111,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://stephenlloydwebber.com"><img src="https://avatars.githubusercontent.com/u/22316563?v=4?s=100" width="100px;" alt=""/><br /><sub><b>S. Lloyd Webber</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=offgridauthor" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ariahw"><img src="https://avatars.githubusercontent.com/u/30444500?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ariahw</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ariahw" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Toruitas"><img src="https://avatars.githubusercontent.com/u/7018206?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stuart Leitch</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Toruitas" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
