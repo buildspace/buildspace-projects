@@ -42,7 +42,7 @@ You have access to all the this content right here in GitHub! Whats the point wi
 
 ## ❗️FAQ
 
-### **Can't Contribute? No Wories!**
+### **Can't Contribute? No Worries!**
 Feel free to submit an [issue here](https://github.com/zipeducation/buildspace-projects/issues/new/choose) to help us keep track of things that need to be fixed.
 
 ### **How do I make my first contribution?**
