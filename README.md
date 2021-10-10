@@ -42,7 +42,7 @@ You have access to all the this content right here in GitHub! Whats the point wi
 
 ## ❗️FAQ
 
-### **Can't Contribute? No Wories!**
+### **Can't Contribute? No Worries!**
 Feel free to submit an [issue here](https://github.com/zipeducation/buildspace-projects/issues/new/choose) to help us keep track of things that need to be fixed.
 
 ### **How do I make my first contribution?**
@@ -109,6 +109,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.geckoengage.com"><img src="https://avatars.githubusercontent.com/u/43322?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matthew Lanham</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=mattlanham" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/zzJZzz"><img src="https://avatars.githubusercontent.com/u/53538672?v=4?s=100" width="100px;" alt=""/><br /><sub><b>zzJZzz</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=zzJZzz" title="Documentation">📖</a></td>
     <td align="center"><a href="http://stephenlloydwebber.com"><img src="https://avatars.githubusercontent.com/u/22316563?v=4?s=100" width="100px;" alt=""/><br /><sub><b>S. Lloyd Webber</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=offgridauthor" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Toruitas"><img src="https://avatars.githubusercontent.com/u/7018206?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stuart Leitch</b></sub></a><br /><a href="https://github.com/zipeducation/buildspace-projects/commits?author=stuartl" title="Documentation">📖</a></td>
   </tr>
 </table>
 
