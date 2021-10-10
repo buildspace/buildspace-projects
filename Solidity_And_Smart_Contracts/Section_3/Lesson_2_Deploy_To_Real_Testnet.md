@@ -69,7 +69,7 @@ For MyCrypto, you'll need to connect your wallet, make an account, and then clic
 🙃 Having trouble getting Testnet ETH?
 -----------------------------------
 
-If the above link doesn't work, please send me your public wallet address and request 0.01 ETH in #faucet-request and drop a funny gif. Either me, or someone from the course will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
+If the above link doesn't work, please send your public wallet address and request 0.01 ETH in #faucet-request and drop a funny gif. Either me, or someone from the cohort will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
 
 📈 Deploy to Rinkeby testnet.
 ---------------------------------
