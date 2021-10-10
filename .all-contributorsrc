@@ -310,11 +310,20 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ariahw",
+      "name": "ariahw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30444500?v=4",
+      "profile": "https://github.com/ariahw",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
   "projectName": "buildspace-projects",
-  "projectOwner": "zipeducation",
+  "projectOwner": "buildspace",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true
