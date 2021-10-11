@@ -115,6 +115,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Toruitas"><img src="https://avatars.githubusercontent.com/u/7018206?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stuart Leitch</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Toruitas" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/p-zogas"><img src="https://avatars.githubusercontent.com/u/92269771?v=4?s=100" width="100px;" alt=""/><br /><sub><b>p-zogas</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=p-zogas" title="Documentation">📖</a></td>
     <td align="center"><a href="http://stevenmichaelthomas.com"><img src="https://avatars.githubusercontent.com/u/764744?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Steven Thomas</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=stevenmichaelthomas" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/0xandreharrison"><img src="https://avatars.githubusercontent.com/u/1075606?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andre</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xandreharrison" title="Documentation">📖</a></td>
   </tr>
 </table>
 
