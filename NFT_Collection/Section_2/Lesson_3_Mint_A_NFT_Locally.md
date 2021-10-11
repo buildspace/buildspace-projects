@@ -140,7 +140,7 @@ But, there are millions of contracts on the actual blockchain. So, this address 
 
 💨 Run it.
 -------------------
-Before you run this, be sure to change `solidity: "0.8.4",` to `solidity: "0.8.0",` in your `hardhat.config.json`.
+Before you run this, be sure to change `solidity: "0.8.4",` to `solidity: "0.8.0",` in your `hardhat.config.js`.
 
 Let's run it! Open up your terminal and run:
 
