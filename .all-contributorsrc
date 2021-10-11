@@ -337,6 +337,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "stevenmichaelthomas",
+      "name": "Steven Thomas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/764744?v=4",
+      "profile": "http://stevenmichaelthomas.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
