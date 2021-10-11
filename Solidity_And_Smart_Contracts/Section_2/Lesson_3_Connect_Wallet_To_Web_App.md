@@ -75,62 +75,61 @@ import { ethers } from "ethers";
 import './App.css';
 
 const App = () => {
-    /*
-    * Just a state variable we use to store our user's public wallet.
-    */
-    const [currentAccount, setCurrentAccount] = useState("");
+  /*
+  * Just a state variable we use to store our user's public wallet.
+  */
+  const [currentAccount, setCurrentAccount] = useState("");
   
-    const checkIfWalletIsConnected = async () => {
-        try {
-            const { ethereum } = window;
-
-            if (!ethereum) {
-                console.log("Make sure you have metamask!");
-                return;
-            } else {
-                console.log("We have the ethereum object", ethereum);
-            }
-
-            /*
-            * Check if we're authorized to access the user's wallet
-            */
-            const accounts = await ethereum.request({ method: 'eth_accounts' });
-
-            if (accounts.length !== 0) {
-                const account = accounts[0];
-                console.log("Found an authorized account:", account);
-                setCurrentAccount(account)
-            } else {
-                console.log("No authorized account found")
-            }
-        } catch (error) {
-            console.log(error);
-        }
+  const checkIfWalletIsConnected = async () => {
+    try {
+      const { ethereum } = window;
+      
+      if (!ethereum) {
+        console.log("Make sure you have metamask!");
+        return;
+      } else {
+        console.log("We have the ethereum object", ethereum);
+      }
+      
+      /*
+      * Check if we're authorized to access the user's wallet
+      */
+      const accounts = await ethereum.request({ method: 'eth_accounts' });
+      
+      if (accounts.length !== 0) {
+        const account = accounts[0];
+        console.log("Found an authorized account:", account);
+        setCurrentAccount(account)
+      } else {
+        console.log("No authorized account found")
+      }
+    } catch (error) {
+      console.log(error);
     }
-
-    useEffect(() => {
-        checkIfWalletIsConnected();
-    }, [])
-    
-    return (
-        <div className="mainContainer">
-            <div className="dataContainer">
-                <div className="header">
-                    👋 Hey there!
-                </div>
-
-                <div className="bio">
-                    I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and wave at me!
-                </div>
-
-                <button className="waveButton" onClick={null}>
-                    Wave at Me
-                </button>
-            </div>
+  }
+  
+  useEffect(() => {
+    checkIfWalletIsConnected();
+  }, [])
+  
+  return (
+    <div className="mainContainer">
+      <div className="dataContainer">
+        <div className="header">
+          👋 Hey there!
         </div>
+    
+        <div className="bio">
+          I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and wave at me!
+        </div>
+    
+        <button className="waveButton" onClick={null}>
+          Wave at Me
+        </button>
+      </div>
+    </div>
     );
-}
-
+  }
 export default App
 ```
 
@@ -234,7 +233,7 @@ export default App
 
 Our code is getting a little long here, but you can see how short our `connectWallet` function is. In this case, I use the `eth_requestAccounts` function because I'm literally asking Metamask to give me access to the user's wallet.
 
-On line 67, I also added a button so we can call our `connectWallet` function. You'll notice I only show this button if we don't have `currAccount`. If we already have currAccount, then that means we already have access to an authorized account in the user's wallet.
+On line 67, I also added a button so we can call our `connectWallet` function. You'll notice I only show this button if we don't have `currentAccount`. If we already have currentAccount, then that means we already have access to an authorized account in the user's wallet.
 
 🌐 Connect!
 -----------
