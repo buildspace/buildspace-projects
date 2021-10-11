@@ -156,7 +156,7 @@ So, now that we've updated our contract we need to do a few things:
 
 3\. We need to update the abi file on our frontend. 
 
-**People constantly forget to these 3 steps when they change their contract. Don't forget lol.**
+**People constantly forget to do these 3 steps when they change their contract. Don't forget lol.**
 
 Why do we need to do all this? Well, it's because smart contracts are **immutable.** They can't change. They're permanent. That means changing a contract requires a full redeploy. This will also **reset** all the variables since it'd be treated as a brand new contract. **That means we'd lose all our wave data if we wanted to update the contract's code.**
 
@@ -194,12 +194,12 @@ const [currentAccount, setCurrentAccount] = useState("");
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const waveportalContract = new ethers.Contract(contractAddress, contractABI, signer);
+        const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         /*
          * Call the getAllWaves method from your Smart Contract
          */
-        const waves = await waveportalContract.getAllWaves();
+        const waves = await wavePortalContract.getAllWaves();
         
 
         /*
@@ -277,7 +277,7 @@ Basically, I just go through `allWaves` and create new divs for every single wav
 So, in `App.js`, our `wave()` function no longer works! If we try to wave it'll give us an error because it's expecting a message to be sent now with it now! For now, you can fix this by hardcoding a message like:
 
 ```
-const waveTxn = await waveportalContract.wave("this is a message")
+const waveTxn = await wavePortalContract.wave("this is a message")
 ```
 
 I'll leave this up you: figure out how to add a textbox that lets users add their own custom message they can send to the wave function :).

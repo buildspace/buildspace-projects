@@ -310,11 +310,56 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ariahw",
+      "name": "ariahw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30444500?v=4",
+      "profile": "https://github.com/ariahw",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Toruitas",
+      "name": "Stuart Leitch",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7018206?v=4",
+      "profile": "https://github.com/Toruitas",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "p-zogas",
+      "name": "p-zogas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92269771?v=4",
+      "profile": "https://github.com/p-zogas",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "stevenmichaelthomas",
+      "name": "Steven Thomas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/764744?v=4",
+      "profile": "http://stevenmichaelthomas.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "0xandreharrison",
+      "name": "Andre",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1075606?v=4",
+      "profile": "https://github.com/0xandreharrison",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
   "projectName": "buildspace-projects",
-  "projectOwner": "zipeducation",
+  "projectOwner": "buildspace",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true
