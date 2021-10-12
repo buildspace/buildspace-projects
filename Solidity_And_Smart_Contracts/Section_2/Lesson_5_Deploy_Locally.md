@@ -41,7 +41,6 @@ const main = async () => {
 
   const Token = await hre.ethers.getContractFactory('WavePortal');
   const portal = await Token.deploy();
-  await portal.deployed();
 
   console.log('WavePortal address: ', portal.address);
 };
