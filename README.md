@@ -28,6 +28,13 @@ Any and all contributions are welcome! GitHub makes it _insanely_ easy to make c
 
 Rather watch a video? [Check out this two minute video](https://www.loom.com/share/ea84ce8634824f9e9377e2bc4b06f031), by Alec from _buildspace, for submitting a contribution to a lesson!
 
+### Structure
+You will notice in each project folder there is an `en` and `es` folder. We are in the process of translating our projects to Spanish (and hopefully more languages)!
+
+If you are contributing to the English version, make sure your changes are done in the `en/` folder. If you are contributing to the Spanish version, make sure to make your changes in the `es/` folder!
+
+Each project aligns with the content on your buildspace dahsboard. Find the file you want to change and open up a Pull Request for it! Someone from the buildspace team will take a look at it ASAP!
+
 ## 🤔 Why take this course on _buildspace?
 You have access to all the this content right here in GitHub! Whats the point with signing up with [_buildspace](https://buildspace.so)?
 
