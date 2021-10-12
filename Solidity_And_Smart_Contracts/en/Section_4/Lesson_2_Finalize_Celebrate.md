@@ -56,7 +56,6 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
 ```javascript
  const getAllWaves = async () => {
     const { ethereum } = window;
-
     try {
       if (window.ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum);
@@ -65,27 +64,13 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
 
         const waves = await wavePortalContract.getAllWaves();
 
-        /**
-         * Listen in for emitter events!
-         */
-        wavePortalContract.on("NewWave", (from, timestamp, message) => {
-          console.log("NewWave", from, timestamp, message);
-
-          setAllWaves(prevState => [...prevState, {
-            address: from,
-            timestamp: new Date(timestamp * 1000),
-            message: message
-          }]);
-        });
-
-        let wavesCleaned = [];
-        waves.forEach(wave => {
-          wavesCleaned.push({
+        const wavesCleaned = waves.map((wave)=>{
+          return {
             address: wave.waver,
             timestamp: new Date(wave.timestamp * 1000),
             message: wave.message
-          });
-        });
+          }
+        })
 
         setAllWaves(wavesCleaned);
 
@@ -96,6 +81,31 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
       console.log(error);
     }
   }
+
+    /**
+      * Listen in for emitter events!
+    */
+  React.useEffect(()=>{
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner()
+    const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
+    const onNewWave = (from, timestamp,message)=>{
+      console.log("NewWave",from,timestamp,message);
+
+      setAllWaves(prevState => [...prevState,{
+            address:from,
+            timestamp:new Date(timestamp*1000),
+            message:message
+      }])
+    }
+
+    if(window.ethereum){
+      wavePortalContract.on("NewWave",onNewWave);
+    }
+
+    return (wavePortalContract) =>  wavePortalContract.off("NewWave", onNewWave)
+
+  },[])
 ```
 
 At the very bottom you'll see the magic bit of code I added :). Here, I can actually "listen" when my contract throws the `NewWave` event. Like a webhook :). Pretty dope, right?
