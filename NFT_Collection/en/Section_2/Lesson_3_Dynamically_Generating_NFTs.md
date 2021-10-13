@@ -65,7 +65,7 @@ This can be a bit annoying for some application like ours here! In any case, no 
 ✨  Creating the SVG dynamically.
 ------------------
 
-Check out the variable `string baseSvg` on the contract. This looks wild lol. Basically, the only piece of our SVG that ever changes is the three-letter word, right? So what we do is we create a `baseSvg` variable we can reuse over and over as we create new NFTs.
+Check out the variable `string baseSvg` on the contract. This looks wild lol. Basically, the only piece of our SVG that ever changes is the three-word combo, right? So what we do is we create a `baseSvg` variable we can reuse over and over as we create new NFTs.
 
 We then put all together using:
 
@@ -73,7 +73,7 @@ We then put all together using:
 string memory finalSvg = string(abi.encodePacked(baseSvg, first, second, third, "</text></svg>"));
 ```
 
-`</text></svg>` are the closing tags! So for `finalSvg` we're saying, "Hey — go combine my baseSVG, my three-letter word I just generated, and then my closing tags. That's it :)! It looks scary but all we're doing is working with the SVG code.
+`</text></svg>` are the closing tags! So for `finalSvg` we're saying, "Hey — go combine my baseSVG, my three-word combo I just generated, and then my closing tags. That's it :)! It looks scary but all we're doing is working with the SVG code.
 
 😎 Run it!
 ------------------------
