@@ -62,23 +62,23 @@ Think of this like a public API endpoint :).
 
 So now we want to test those functions specifically!
 
-```javascript
+```diff
 const main = async () => {
-  const [owner, randomPerson] = await hre.ethers.getSigners();
++ const [owner, randomPerson] = await hre.ethers.getSigners();
   const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
-
++
   console.log("Contract deployed to:", waveContract.address);
-  console.log("Contract deployed by:", owner.address);
-
-  let waveCount;
-  waveCount = await waveContract.getTotalWaves();
-  
-  let waveTxn = await waveContract.wave();
-  await waveTxn.wait();
-
-  waveCount = await waveContract.getTotalWaves();
++ console.log("Contract deployed by:", owner.address);
++
++ let waveCount;
++  waveCount = await waveContract.getTotalWaves();
++  
++  let waveTxn = await waveContract.wave();
++  await waveTxn.wait();
++
++  waveCount = await waveContract.getTotalWaves();
 };
 
 const runMain = async () => {
@@ -157,7 +157,7 @@ So, we probably want someone other than us to send us a wave right? It'd be pret
 
 Check this out. I added a few lines at the bottom of the function. I'm not going to explain it much (but please ask questions in #general-chill-chat). Basically this is how we can simulate other people hitting our functions :). Keep an eye on the wallet addresses in your terminal once you change the code and run it.
 
-```javascript
+```diff
 const main = async () => {
   const [owner, randomPerson] = await hre.ethers.getSigners();
   const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
@@ -173,10 +173,10 @@ const main = async () => {
   let waveTxn = await waveContract.wave();
   await waveTxn.wait();
 
-  waveCount = await waveContract.getTotalWaves();
-
-  waveTxn = await waveContract.connect(randomPerson).wave();
-  await waveTxn.wait();
++ waveCount = await waveContract.getTotalWaves();
++
++ waveTxn = await waveContract.connect(randomPerson).wave();
++ await waveTxn.wait();
 
   waveCount = await waveContract.getTotalWaves();
 };

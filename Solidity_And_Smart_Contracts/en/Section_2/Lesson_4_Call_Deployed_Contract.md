@@ -83,7 +83,7 @@ WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
 
 You need to get access to this in your React app. It's as easy as creating a new property in your `App.js` file called `contractAddress` and setting it's value to the `WavePortal address` thats printed out in your console:
 
-```javascript
+```diff
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import './App.css';
@@ -93,7 +93,7 @@ const App = () => {
   /**
    * Create a variable here that holds the contract address after you deploy!
    */
-  const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
++ const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
 ```
 
 🛠 Getting ABI File Content
@@ -123,7 +123,7 @@ Paste the whole JSON file right there!
 Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file and create a reference to it. Right under where you imported `App.css` go ahead and import your JSON file and create your reference to the abi content:
 
 
-```javascript
+```diff
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import './App.css';
@@ -136,11 +136,11 @@ const App = () => {
   /**
    * Create a variable here that references the abi content!
    */
-  const contractABI = abi.abi;
++ const contractABI = abi.abi;
 ```
 Let's take a look at where you are actually using this ABI content:
 
-```javascript
+```diff
 const wave = async () => {
     try {
       const { ethereum } = window;
@@ -157,14 +157,14 @@ const wave = async () => {
         let count = await wavePortalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
 
-        const waveTxn = await wavePortalContract.wave();
-        console.log("Mining...", waveTxn.hash);
-
-        await waveTxn.wait();
-        console.log("Mined -- ", waveTxn.hash);
-
-        count = await wavePortalContract.getTotalWaves();
-        console.log("Retrieved total wave count...", count.toNumber());
++       const waveTxn = await wavePortalContract.wave();
++       console.log("Mining...", waveTxn.hash);
++
++       await waveTxn.wait();
++       console.log("Mined -- ", waveTxn.hash);
++
++       count = await wavePortalContract.getTotalWaves();
++       console.log("Retrieved total wave count...", count.toNumber());
       } else {
         console.log("Ethereum object doesn't exist!");
       }

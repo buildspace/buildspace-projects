@@ -113,7 +113,7 @@ Test it
 
 Lets make sure it works! Here's my updated `run.js`. In this case, I just want to make sure the contract balance changes in the case where the person who waved won!
 
-```javascript
+```diff
 const main = async () => {
   const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
   const waveContract = await waveContractFactory.deploy({
@@ -131,13 +131,15 @@ const main = async () => {
   );
 
   /*
-   * Let's try two waves now
+-  * Send Wave
++  * Let's try two waves now
    */
-  const waveTxn = await waveContract.wave('This is wave #1');
+- let waveTxn = await waveContract.wave('A message!');
++ const waveTxn = await waveContract.wave('This is wave #1');
   await waveTxn.wait();
 
-  const waveTxn2 = await waveContract.wave('This is wave #2');
-  await waveTxn2.wait();
++ const waveTxn2 = await waveContract.wave('This is wave #2');
++ await waveTxn2.wait();
 
   contractBalance = await hre.ethers.provider.getBalance(waveContract.address);
   console.log(
