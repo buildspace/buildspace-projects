@@ -8,7 +8,7 @@ So, there are like 100 different ways to set up a basic react project and deploy
 🤯 Replit
 ---------
 
-**Note: You don't have to use replit to build + deploy your site. If you want to use create-react-app + Vercel/Heroku/AWS -- that's totally cool. We created an Open Source proejct you can clone to your machine if you decide to go down this path! [Click here to be taken there 🚀](https://github.com/buildspace/waveportal-starter-project)**
+**Note: You don't have to use replit to build + deploy your site. If you want to use create-react-app + Vercel/Heroku/AWS -- that's totally cool. [Here](https://github.com/buildspace/waveportal-starter-project) is a link to the base repo you can clone and work on locally.**
 
 We'll be using [Replit](https://replit.com/~)! It is a browser-based IDE that lets us easily build web apps and deploy them all from the browser. It is super legit. Instead of having to set up a full local environment and write commands to deploy, it's all just given to us.
 
