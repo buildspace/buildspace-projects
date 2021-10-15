@@ -23,7 +23,7 @@ So for example, mine looks like this:
 data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAzNTAgMzUwIj4NCiAgICA8c3R5bGU+LmJhc2UgeyBmaWxsOiB3aGl0ZTsgZm9udC1mYW1pbHk6IHNlcmlmOyBmb250LXNpemU6IDE0cHg7IH08L3N0eWxlPg0KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9ImJsYWNrIiAvPg0KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBjbGFzcz0iYmFzZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RXBpY0xvcmRIYW1idXJnZXI8L3RleHQ+DQo8L3N2Zz4=
 ```
 
-We turned our SVG code into a nice string :). base64 is basically an accepted standard for encoding data into a string. So when we say `data:image/svg+xml;base64` it's basically saying, "Hey, I'm about to give you base64 encoded data pls process it as an SVG, ty!".
+We turned our SVG code into a nice string :). base64 is basically an accepted standard for encoding data into a string. So when we say `data:image/svg+xml;base64` it's basically saying, "Hey, I'm about to give you base64 encoded data please process it as a SVG, thank you!".
 
 Take that whole string `data:image/svg+xml;base64,INSERT_YOUR_BASE64_ENCODED_SVG_HERE` and paste it in your browser's address bar and boom you'll see the SVG! Note: if you get an error, double-check you followed all the steps properly. It's easy to mess up :).
 
