@@ -11,6 +11,22 @@ Basically, these are the variables.
 
 `https://testnets.opensea.io/assets/INSERT_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`
 
+
+
+--------------------
+**Note: if you're using Rarible b/c OpenSea is being slow to show your NFT's metadata -- check out the link setup below, it's very similar! I actually like using Rarible instead of OpenSea, it's usually way faster to show the metadata. Which is nice b/c your users can instantly see their NFT!**
+
+The link for an NFT on Rarible looks like this:
+
+`https://rinkeby.rarible.com/token/0xb6be7bd567e737c878be478ae1ab33fcf6f716e0:0`
+
+Basically, these are the variables.
+
+`https://rinkeby.rarible.com/token/INSERT_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE`
+
+--------------------
+
+
 So, our web app has the contract address, but not the token id! So, we’ll need to change up our contract to retrieve that. Let’s do it.
 
 We’re going to be using something called `Events` in Solidity. These are sorta like webhooks. Lets write out some of the code and get it working first!
