@@ -345,11 +345,20 @@ HOOOOLY SHIT LETS GO. IM HYPE **FOR** YOU.
 
 Pretty epic, we've created our own NFT contract *and* minted two NFTs. Epic. WHILE THIS IS EPIC, it is *kinda lame —* right? It's just the same Spongebob picture every time! How can we add some randomness to this and generate stuff on the fly? That's what we'll be getting into next :).
 
-Note: **if your NFTs aren't showing up on OpenSea** — wait a few minutes, sometimes OpenSea can take up to 5-10 minutes with this stuff.
-
-**You might also see something like the image below, if that happens — don't worry. It just means OpenSea is catching up on processing your NFT. Just wait for 5-10 minutes and your processed NFT should pop up. BUT PLEASE NOTE, some days, OpenSea can even take upwards of 2-3 hours. So, just bookmark it and come back to it in a few hours if it the image/title don't show up within a few minutes :).** 
+🙀 Help my NFTs aren't showing on OpenSea!
+------------------------
+OpenSea sometimes sucks lol. **If your NFTs aren't showing up on OpenSea** — wait a few minutes, sometimes OpenSea can take like 5-minutes. Somedays it can even take hours. Here's my advice, if it's been like 3-4 minutes and your metadata still looks like this:
 
 ![Untitled](https://i.imgur.com/dVACrDl.png)
+
+**Then use Rarible instead of OpenSea.** Rarible is one of the biggest NFT marketplaces in the world apart from OpenSea. Here's how to set it up:
+
+1. Head to `rinkeby.rarible.com`.
+2. Create this url: `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE.`
+
+For example, here's my link: https://rinkeby.rarible.com/token/0xb6be7bd567e737c878be478ae1ab33fcf6f716e0:0 for the Spongebob NFT!! My `tokenId` is `0` because it was the first mint from that contract.
+
+**Basically, if OpenSea is giving issues just Rarible and Rarible URLs for the rest of the project and ignore using OpenSea.** Eventually, your stuff will show up on OpenSea but it's just slower.
 
 
 💻 The code
@@ -363,7 +372,7 @@ WOOOOOOO. GIVE YOURSELF A PAT ON THE BACK. YOU DEPLOYED A SMART CONTRACT THAT MI
 
 Good stuff :).
 
-You should totally **tweet** out that you just wrote and deployed your smart contract that can mint NFTs and tag @_buildspace. If you want, include a screenshot of the Etherscan page that shows that your contract is on the blockchain or maybe the OpenSea link to your collection!
+You should totally **tweet** out that you just wrote and deployed your smart contract that can mint NFTs and tag @_buildspace. If you want, include a screenshot of the OpenSea/Rarible page that shows that your NFT :)!
 
 You should feel awesome about the fact that you're actually building stuff everyone else is just talking about.  You got superpowers :).
 
