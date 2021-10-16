@@ -108,6 +108,8 @@ npx hardhat run scripts/deploy.js --network rinkeby
 
 Then same as before, wait a minute or two, take the contract address, search it on [https://testnets.opensea.io/](https://testnets.opensea.io/) and you should see your NFT there :). Again, don't click "Enter" when searching -- you need to actually click the collection when it pops up in the search bar.
 
+Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE` if OpenSea is being slow. 
+
 ![Untitled](https://i.imgur.com/Z2mKTpK.png)
 
 🚨Progress report.
