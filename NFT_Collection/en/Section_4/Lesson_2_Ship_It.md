@@ -65,8 +65,8 @@ Thank you for contributing to the future of web3 by learning this stuff. The fac
 
 🌈 Tweet out your final project.
 ---------
-You should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Maybe even make a little video showing off your project and attach that to the tweet. Go show everyone what yah did :).
+You should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Maybe even make a little video showing off your project and attach that to the tweet. Make your tweet look pretty and show off :).
 
-This is all new tech. And if you feel up to it, tag @_buildspace :). It gives us a ton of motivation whenever we see people ship their projects.
+And if you feel up to it, tag @_buildspace :). We'll RT it. Plus, it gives us a ton of motivation whenever we see people ship their projects.
 
 See yah around!!!
