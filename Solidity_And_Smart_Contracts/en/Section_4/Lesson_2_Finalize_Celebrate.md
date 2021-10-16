@@ -156,14 +156,20 @@ I hope this was a fun introduction to web3 and I hope you continue your journey.
 
 I'll keep you all posted on new projects in the Discord :).
 
-See yah around!!
 
 🚨 Before you head out...
 -------------------------
+Go to #showcase in Discord and show us your final product that we can mess around with :).
 
-Go to #showcase and show us your final product that we can mess around with :). If you tweet it out and tag @_buildspace we'll retweet it!
+Also, should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Maybe even make a little video showing off your project and attach that to the tweet. Make your tweet look pretty and show off :).
 
-What would also be awesome is if you told us in #feedback how you liked this project and the structure of the course. What did you love most about buildspace? What would like us to change for future projects? Your feedback would be awesome!!
+And if you feel up to it, tag @_buildspace :). We'll RT it. Plus, it gives us a ton of motivation whenever we see people ship their projects.
+
+Lastly, what would also be awesome is if you told us in #feedback how you liked this project and the structure of the project. What did you love most about buildspace? What would like us to change for future projects? Your feedback would be awesome!!
+
+
+See yah around!!!
+
 
 🎁 Wrap Up
 ----------
