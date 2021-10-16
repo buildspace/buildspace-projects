@@ -333,7 +333,7 @@ If it worked — AWEEEEESOME YOU JUST DEPLOYED A CONTRACT YESSSS.
 
 Believe it or not. The NFTs you just minted will be on OpenSea's TestNet site.
 
-Head to [testnets.opensea.io](https://testnets.opensea.io/). Here's search for your contract address which is the address we deployed to that you can find in your terminal. **Don't click enter**. OpenSea is weird so you'll need click the collection itself when it comes up.
+Head to [testnets.opensea.io](https://testnets.opensea.io/). Search for your contract address which is the address we deployed to that you can find in your terminal, **Don't click enter**, click the collection itself when it comes up in the search.
 
 ![Untitled](https://i.imgur.com/ePDlYX1.png)
 
@@ -347,18 +347,18 @@ Pretty epic, we've created our own NFT contract *and* minted two NFTs. Epic. WHI
 
 🙀 Help my NFTs aren't showing on OpenSea!
 ------------------------
-OpenSea sometimes sucks lol. **If your NFTs aren't showing up on OpenSea** — wait a few minutes, sometimes OpenSea can take like 5-minutes. Somedays it can even take hours. Here's my advice, if it's been like 3-4 minutes and your metadata still looks like this:
+ **If your NFTs aren't showing up on OpenSea** — wait a few minutes, sometimes OpenSea can take like 5-minutes. Here's my advice, if it's been 5 minutes and your metadata still looks like this:
 
 ![Untitled](https://i.imgur.com/dVACrDl.png)
 
-**Then use Rarible instead of OpenSea.** Rarible is one of the biggest NFT marketplaces in the world apart from OpenSea. Here's how to set it up:
+**Then use Rarible instead of OpenSea.** Rarible is another NFT marketplace like OpenSea. Here's how to set it up:
 
 1. Head to `rinkeby.rarible.com`.
 2. Create this url: `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE.`
 
 For example, here's my link: https://rinkeby.rarible.com/token/0xb6be7bd567e737c878be478ae1ab33fcf6f716e0:0 for the Spongebob NFT!! My `tokenId` is `0` because it was the first mint from that contract.
 
-**Basically, if OpenSea is giving issues just Rarible and Rarible URLs for the rest of the project and ignore using OpenSea.** Eventually, your stuff will show up on OpenSea but it's just slower.
+**Basically, if you don't see your NFT on OpenSea within a few minutes, try Rarible and Rarible URLs for the rest of the project.** 
 
 
 💻 The code
