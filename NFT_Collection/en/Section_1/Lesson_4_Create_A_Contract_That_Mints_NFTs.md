@@ -347,7 +347,7 @@ Pretty epic, we've created our own NFT contract *and* minted two NFTs. Epic. WHI
 
 Note: **if your NFTs aren't showing up on OpenSea** — wait a few minutes, sometimes OpenSea can take up to 5-10 minutes with this stuff.
 
-You might also see something like the image below, if that happens — don't worry. I have no idea why it happens lol. Just wait for 5-10 minutes and your processed NFT should pop up.
+**You might also see something like the image below, if that happens — don't worry. It just means OpenSea is catching up on processing your NFT. Just wait for 5-10 minutes and your processed NFT should pop up. BUT PLEASE NOTE, some days, OpenSea can even take upwards for 2-3 hours. So, just bookmark it and come back to it in a few hours if it the image/title don't show up within a few minutes :).** 
 
 ![Untitled](https://i.imgur.com/dVACrDl.png)
 
