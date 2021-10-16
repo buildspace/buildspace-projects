@@ -170,11 +170,11 @@ npx hardhat run scripts/deploy.js --network rinkeby
 
 Once we redeploy, you'll be able to see your NFTs on [https://testnets.opensea.io/](https://testnets.opensea.io/) once you search the newly deployed contract address. Again, **don't click enter**. OpenSea is weird so you'll need click the collection itself when it comes up.
 
-Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE` instead if OpenSea is being slow. 
+_Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE` instead if OpenSea is being slow. _
 
 Contracts are **permanent**. So, whenever we re-deploy our contract we're actually creating a whole new collection.
 
-You should be able to see the new collection on OpenSea :)!
+You should be able to see the new collection on OpenSea or Rarible :)!
 
 🤖 Allowing users to mint.
 ------------------
@@ -187,4 +187,4 @@ So, let's build that :)!
 
 🚨Progress report.
 ------------------------
-If you got one, send a screenshot in #progress of your new dynamically generated NFT on OpenSea or Rarible in #progress :). Also -- if you haven't tweeted an image of your hilarious NFT collection yet now is the time to do so!! Remember to tag @_buildspace!!! We'll RT as many people as we can!
+If you got one, send a screenshot in #progress of your new dynamically generated NFT on OpenSea/Rarible in #progress :). Also -- if you haven't tweeted an image of your hilarious NFT collection yet now is the time to do so!! Remember to tag @_buildspace!!! We'll RT as many people as we can!
