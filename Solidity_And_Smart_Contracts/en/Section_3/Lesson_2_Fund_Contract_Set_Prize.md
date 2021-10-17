@@ -164,7 +164,7 @@ We just sent some ETH from our contract, big success! And, we know we succeeded 
 ✈️ Update deploy script to fund contract
 ----------------------------------------
 
-We need to make a small update to `deploy.js`.
+We need to make a small update to `run.js`.
 
 ```javascript
 const main = async () => {
