@@ -7,7 +7,7 @@ We want to be able to let someone wave at us and then store that wave.
 
 So, first thing we need is a function they can hit to wave at us!
 
-The blockchain = Think of it as a cloud provider, kinda like AWS, but it's owned by no one. It's ran by compute power from mining machines all over the world. Usually these people are called miners and we pay them to run our code!
+The blockchain = Think of it as a cloud provider, kinda like AWS, but it's owned by no one. It's run by compute power from mining machines all over the world. Usually these people are called miners and we pay them to run our code!
 
 A smart contract = Kinda like our server's code with different functions people can hit.
 
@@ -45,7 +45,7 @@ So, that's how you write a function in Solidity.  And, we also added a `totalWa
 
 We also use some magic here with `msg.sender`. This is the wallet address of the person who called the function. This is awesome! It's like built in authentication. We know exactly who called the function because in order to even call a smart contract function, you need to be connected with a valid wallet!
 
-In the future, we can write functions that only certain wallet addresses can hit. For example, we can change this function so that only our address is allowed to send a wave. Or, maybe have it where only your friend's can wave at you!
+In the future, we can write functions that only certain wallet addresses can hit. For example, we can change this function so that only our address is allowed to send a wave. Or, maybe have it where only your friends can wave at you!
 
 ✅ Updating run.js to call our functions
 ---------------------------------------
@@ -208,6 +208,6 @@ waveCount = await waveContract.getTotalWaves();
 
 *Note: if you don't do this, Farza will be very sad :(.*
 
-Customize your code a little!! Maybe you want to store something else? I want you to mess around. Maybe you want to store the address of the sender in an array? Maybe you want to store a map of addresses and wave counts so you keep track of who's waving at you the most? Even if you just change up the variables names and function names to be something you think is interesting that's a big deal. Try to not straight up copy me! Think of your final website and the kind of functionality you want. Build the functionality **you want**.
+Customize your code a little!! Maybe you want to store something else? I want you to mess around. Maybe you want to store the address of the sender in an array? Maybe you want to store a map of addresses and wave counts so you keep track of who's waving at you the most? Even if you just change up the variable names and function names to be something you think is interesting that's a big deal. Try to not straight up copy me! Think of your final website and the kind of functionality you want. Build the functionality **you want**.
 
 Once you're all done here, be sure to post a screenshot of your terminal output in #progress.
