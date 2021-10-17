@@ -373,6 +373,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ngnathan",
+      "name": "Nathan Ng",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1150025?v=4",
+      "profile": "https://github.com/ngnathan",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
