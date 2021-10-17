@@ -1,7 +1,7 @@
 💻 Set up a client
 ------------------
 
-It's time to start working on our website! Our contract is pretty simple, but, lets learn how our front end can interact with our contract ASAP!
+It's time to start working on our website! Our contract is pretty simple, but, let's learn how our front end can interact with our contract ASAP!
 
 So, there are like 100 different ways to set up a basic react project and deploy it. I'm going to show you how to do it here in 10 minutes and by the end you'll actually have a react app fully deployed with its own domain and everything.
 
