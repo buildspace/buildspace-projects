@@ -66,11 +66,13 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
         const waves = await wavePortalContract.getAllWaves();
 
         const wavesCleaned = waves.map((wave)=>{
+
           return {
             address: wave.waver,
             timestamp: new Date(wave.timestamp * 1000),
             message: wave.message
           }
+
         })
 
         setAllWaves(wavesCleaned);
@@ -78,6 +80,7 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
       } else {
         console.log("Ethereum object doesn't exist!")
       }
+
     } catch (error) {
       console.log(error);
     }
@@ -88,14 +91,8 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
     */
   useEffect(()=>{
     let wavePortalContract;
-    let onNewWave;
 
-      if(window.ethereum){
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner()
-        wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
-        
-        onNewWave = (from, timestamp,message)=>{
+    const onNewWave = (from, timestamp,message)=>{
           console.log("NewWave",from,timestamp,message);
           setAllWaves(prevState => [...prevState,{
                 address:from,
@@ -103,6 +100,11 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
                 message:message
           }])
         }
+
+      if(window.ethereum){
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner()
+        wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
         
         wavePortalContract.on("NewWave",onNewWave);
       }
