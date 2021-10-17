@@ -87,13 +87,15 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
       * Listen in for emitter events!
     */
   useEffect(()=>{
-    try{
+    let wavePortalContract;
+    let onNewWave;
+
       if(window.ethereum){
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner()
-        const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
+        wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
         
-        const onNewWave = (from, timestamp,message)=>{
+        onNewWave = (from, timestamp,message)=>{
           console.log("NewWave",from,timestamp,message);
           setAllWaves(prevState => [...prevState,{
                 address:from,
@@ -103,12 +105,13 @@ Check out my code here where I updated `getAllWaves` in `App.js.` 
         }
         
         wavePortalContract.on("NewWave",onNewWave);
-
-        return (wavePortalContract) =>  wavePortalContract.off("NewWave", onNewWave)
       }
-    }catch(e){
-      console.log(e);
-    }
+
+      return ()=>{
+        if(wavePortalContract){
+          wavePortalContract.off("NewWave",onNewWave);
+        }
+      }
   },[])
 ```
 
