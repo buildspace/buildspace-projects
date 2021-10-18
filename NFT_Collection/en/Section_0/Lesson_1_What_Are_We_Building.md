@@ -70,7 +70,7 @@ This project is broken up into 4 sections. You can see what section you're on by
 📺 Where does the Live Kick-Off Happen?
 -------------------
 
-They'll be happening at [Twitch](https://www.twitch.tv/buildspace). Be sure to make an account on Twitch ahead of time so you'll be able to chat during the stream!
+They will be happening on [Twitch](https://www.twitch.tv/buildspace). Be sure to make an account on Twitch ahead of time so you'll be able to chat during the stream!
 
 🤘 See an issue? Want to improve something? Fix it yourself ;).
 ---------------------------------------
