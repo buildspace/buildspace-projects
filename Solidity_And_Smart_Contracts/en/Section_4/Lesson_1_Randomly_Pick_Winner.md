@@ -44,6 +44,10 @@ contract WavePortal {
 
     constructor() payable {
         console.log("We have been constructed!");
+        /*
+            Set the initial seed
+        */
+        seed = (block.timestamp + block.difficulty) % 100;
     }
 
     function wave(string memory _message) public {
@@ -53,20 +57,9 @@ contract WavePortal {
         waves.push(Wave(msg.sender, _message, block.timestamp));
 
         /*
-         * Generate a Psuedo random number between 0 and 100
-         */
-        uint256 randomNumber = (block.difficulty + block.timestamp + seed) % 100;
-        console.log("Random # generated: %s", randomNumber);
-
-        /*
-         * Set the generated, random number as the seed for the next wave
-         */
-        seed = randomNumber;
-
-        /*
          * Give a 50% chance that the user wins the prize.
          */
-        if (randomNumber < 50) {
+        if (randomNumber <= 50) {
             console.log("%s won!", msg.sender);
 
             /*
@@ -80,6 +73,11 @@ contract WavePortal {
             (bool success, ) = (msg.sender).call{value: prizeAmount}("");
             require(success, "Failed to withdraw money from contract.");
         }
+
+        /*
+            Generate a new seed for the next user that sends a wave
+        */
+        seed = (block.difficulty + block.timestamp + seed) % 100;
 
         emit NewWave(msg.sender, block.timestamp, _message);
     }
