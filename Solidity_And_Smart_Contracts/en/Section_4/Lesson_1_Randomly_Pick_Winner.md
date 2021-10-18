@@ -59,7 +59,7 @@ contract WavePortal {
         /*
          * Give a 50% chance that the user wins the prize.
          */
-        if (randomNumber <= 50) {
+        if (seed <= 50) {
             console.log("%s won!", msg.sender);
 
             /*
@@ -96,9 +96,9 @@ Here, I take two numbers given to me by Solidity, `block.difficulty` and `block.
 
 These #'s are *pretty* random. But, technically, both `block.difficulty` and `block.timestamp` could be controlled by a sophisticated attacker. 
 
-To make this harder, I create a variable `seed` that will essentially change based on the random # generated for the previous person who waved at us. So, I combine all three of these variables to create a "random" number. Then I just do `% 100` which will make sure the number is brought down to a range between 0 - 100.
+To make this harder, I create a variable `seed` that will essentially change every time a user sends a new wave. So, I combine all three of these variables to generate a new random seed. Then I just do `% 100` which will make sure the number is brought down to a range between 0 - 100.
 
-That's it! Then I just write a simple if statement to see if the random number is less than 50, if it is -- then the waver wins the prize! So, that means the waver has a 50% chance to win since we wrote `randomNumber < 50`. You can change this to whatever you want :). I just made it 50% because it's easier to test that way!!
+That's it! Then I just write a simple if statement to see if the seed is less than or equal to 50, if it is -- then the waver wins the prize! So, that means the waver has a 50% chance to win since we wrote `seed <= 50`. You can change this to whatever you want :). I just made it 50% because it's easier to test that way!!
 
 It's important to see here that an attack could technically game your system here if they really wanted to. It'd just be really hard. There are other ways to generate random numbers on the blockchain but Solidity doesn't natively give us anything reliable because it can't! All the #'s our contract can access are public and *never* truly random.
 
@@ -206,6 +206,10 @@ contract WavePortal {
 
     constructor() payable {
         console.log("We have been constructed!");
+        /*
+            Set the initial seed
+        */
+        seed = (block.timestamp + block.difficulty) % 100;
     }
 
     function wave(string memory _message) public {
@@ -227,13 +231,7 @@ contract WavePortal {
 
         waves.push(Wave(msg.sender, _message, block.timestamp));
 
-        uint256 randomNumber = (block.difficulty + block.timestamp + seed) %
-            100;
-        console.log("Random # generated: %s", randomNumber);
-
-        seed = randomNumber;
-
-        if (randomNumber < 50) {
+        if (seed <= 50) {
             console.log("%s won!", msg.sender);
 
             uint256 prizeAmount = 0.0001 ether;
@@ -244,6 +242,11 @@ contract WavePortal {
             (bool success, ) = (msg.sender).call{value: prizeAmount}("");
             require(success, "Failed to withdraw money from contract.");
         }
+
+        /*
+            Generate a new seed for the next user that sends a wave
+        */
+        seed = (block.difficulty + block.timestamp + seed) % 100;
 
         emit NewWave(msg.sender, block.timestamp, _message);
     }
