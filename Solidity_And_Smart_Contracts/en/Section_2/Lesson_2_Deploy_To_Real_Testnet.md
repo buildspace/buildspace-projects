@@ -43,7 +43,7 @@ This is awesome because we can test our application in a real-world scenario whe
 
 3\. Wait for it to be mined
 
-4\. Wait for it be broadcasted back to the blockchain telling all the other miners to update their copies
+4\. Wait for it to be broadcasted back to the blockchain telling all the other miners to update their copies
 
 So, you'll be doing all this within the next few lessons :).
 
@@ -54,7 +54,7 @@ There are a few testnets out there and the one we'll be using is called "Rinkeby
 
 In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copy how mainnet works, only difference is no real money is involved.
 
-In order get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. 
+In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. 
 
 For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
