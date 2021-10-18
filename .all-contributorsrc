@@ -382,6 +382,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "nmandal",
+      "name": "Nick Mandal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20245409?v=4",
+      "profile": "https://nickmandal.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
