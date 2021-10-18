@@ -130,6 +130,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://nickmandal.com"><img src="https://avatars.githubusercontent.com/u/20245409?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nick Mandal</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=nmandal" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/chgopichand"><img src="https://avatars.githubusercontent.com/u/12938943?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gopichand</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=chgopichand" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://paulingalls.com"><img src="https://avatars.githubusercontent.com/u/1535097?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Paul Ingalls</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=paulingalls" title="Documentation">📖</a></td>
   </tr>
 </table>
 
