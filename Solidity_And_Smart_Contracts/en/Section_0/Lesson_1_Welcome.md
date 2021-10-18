@@ -90,7 +90,7 @@ They'll be happening at <https://www.twitch.tv/buildspace>. Be sure to make an a
 
 When you have a question, hit up the proper channel for the project.
 
-This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord. If you're part of multiple projects, we sure to ask your questions in the right project category!
+This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord. If you're part of multiple projects, be sure to ask your questions in the right project category!
 
 
 🤘 See an issue? Want to improve something? Fix it yourself ;).
