@@ -127,6 +127,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.gramercystudios.com/"><img src="https://avatars.githubusercontent.com/u/6965321?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Henry</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=amh22" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ngnathan"><img src="https://avatars.githubusercontent.com/u/1150025?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nathan Ng</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ngnathan" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://nickmandal.com"><img src="https://avatars.githubusercontent.com/u/20245409?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nick Mandal</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=nmandal" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
