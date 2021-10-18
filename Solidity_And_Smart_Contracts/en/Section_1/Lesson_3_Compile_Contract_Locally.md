@@ -103,7 +103,7 @@ Directly from the Hardhat docs themselves you will notice this:
 
 So what does this mean? Well, every time you run a terminal command that starts with `npx hardhat` you are getting this `hre` object built on the fly using the `hardhat.config.js` specified in your code! This means you will never have to actually do some sort of import into your files like:
 
-`const hardhat = require("hardhat")`
+`const hre = require("hardhat")`
 
 **TL;DR - you will be seeing `hre` a lot in our code, but never imported anywhere! Checkout this cool [Hardhat documentation](https://hardhat.org/advanced/hardhat-runtime-environment.html) to learn more about it!**
 
