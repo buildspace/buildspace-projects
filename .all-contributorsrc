@@ -409,6 +409,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "FlorianBouron",
+      "name": "Florian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7243879?v=4",
+      "profile": "https://www.linkedin.com/in/florianbouron/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
