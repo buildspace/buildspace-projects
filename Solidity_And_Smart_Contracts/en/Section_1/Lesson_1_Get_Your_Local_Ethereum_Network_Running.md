@@ -26,7 +26,7 @@ If you have any issues throughout here, just drop a message on Discord in  `#se
 
 First you'll need to get node/npm. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html).
 
-Next, lets head to the terminal (Git Bash will not work). Go ahead and cd to the directory you want to work in. Once you're there run these commands:
+Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to the directory you want to work in. Once you're there run these commands:
 
 ```bash
 mkdir my-wave-portal
@@ -38,7 +38,7 @@ npm install --save-dev hardhat
 👏 Get sample project going
 ---------------------------
 
-Cool, now we should have hardhat. Lets get a sample project going.
+Cool, now we should have hardhat. Let's get a sample project going.
 
 Run:
 
