@@ -159,6 +159,28 @@ abi.encodePacked("data:application/json;base64,", json)
 
 All that's happening here is we're putting it all together and adding that same old `data:application/json;base64,` we did before and then we append the base64 encoded json!!
 
+🛠 Debugging the `finalTokenUri` content
+------------------------
+Encoding and decoding the tokenURI content can be painful. To make it easier, you can use [this](https://nftpreview.0xdev.codes/) tool. You would just need to pass your finalTokenUri as a query parameter. 
+
+```solidity
+    string memory finalTokenUri = string(
+        abi.encodePacked("data:application/json;base64,", json)
+    );
+
+    console.log("\n--------------------");
+    console.log(
+        string(
+            abi.encodePacked(
+                "https://nftpreview.0xdev.codes/?code=",
+                finalTokenUri
+            )
+        )
+    );
+    console.log("--------------------\n");
+```
+![](https://imgur.com/a/cfZiWh8)
+
 🚀 Deploy to Rinkeby
 ------------------
 
