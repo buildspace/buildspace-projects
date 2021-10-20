@@ -38,7 +38,7 @@ Let's go line-by-line here.
 // SPDX-License-Identifier: UNLICENSED
 ```
 
-Just a fancy comment.  It's called an "SPDX license identifier", feel free to Google what it is :).
+Just a fancy comment.  It's called an "SPDX license identifier", You can read more about that [here](https://spdx.org/licenses/).
 
 ```solidity
 pragma solidity ^0.8.0;
