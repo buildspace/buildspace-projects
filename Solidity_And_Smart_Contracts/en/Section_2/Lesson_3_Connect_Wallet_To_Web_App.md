@@ -59,7 +59,7 @@ export default App
 🔒 See if we can access the users account
 -----------------------------------------
 
-So when you run this, you should see that line "We have the ethereum object" printed in the console of the website when you go to inspect it.
+So when you run this, you should see that line "We have the ethereum object" printed in the console of the website when you go to inspect it. Make sure you're looking at the console of your project website, not the Replit workspace! You can access the console of your website by opening it in it's own window/tab and launching the developer tools. The URL should look something like this - `https://waveportal-starter-project.yourUsername.repl.co/`
 
 **NICE.**
 
