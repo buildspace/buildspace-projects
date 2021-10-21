@@ -60,7 +60,7 @@ Now on our frontend we add this magical line (I’ll show you where to put it in
 ```javascript
 connectedContract.on("NewEpicNFTMinted", (from, tokenId) => {
 	console.log(from, tokenId.toNumber())
-	alert(`Hey there! We've minted your NFT. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: <https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`>)
+	alert(`Hey there! We've minted your NFT. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: <https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}>`)
 });
 
 ```
