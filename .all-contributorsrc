@@ -436,6 +436,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "tasti",
+      "name": "Tasti Zakarie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4805152?v=4",
+      "profile": "https://www.zakarie.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
