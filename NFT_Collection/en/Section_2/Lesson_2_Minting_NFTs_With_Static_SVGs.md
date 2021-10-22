@@ -114,4 +114,4 @@ Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_
 
 🚨Progress report.
 ------------------------
-If you got one, send a screenshot in #progress of your fancy NFT on OpenSea in #progress :).
+If you get a fancy NFT, make sure to send a screenshot in #progress of it on OpenSea :).
