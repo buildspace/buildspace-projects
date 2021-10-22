@@ -138,6 +138,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/donni106"><img src="https://avatars.githubusercontent.com/u/1942953?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Molnar</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=donni106" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/vSanjeev"><img src="https://avatars.githubusercontent.com/u/5090409?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sanjeev Venkatesan</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=vSanjeev" title="Documentation">📖</a></td>
   </tr>
 </table>
 
