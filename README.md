@@ -134,6 +134,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.linkedin.com/in/florianbouron/"><img src="https://avatars.githubusercontent.com/u/7243879?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Florian</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=FlorianBouron" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ponyolovesham"><img src="https://avatars.githubusercontent.com/u/89746452?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ponyolovesham</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ponyolovesham" title="Documentation">📖</a></td>
     <td align="center"><a href="https://gssakash.netlify.com"><img src="https://avatars.githubusercontent.com/u/52027687?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Akash</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=gssakash" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.zakarie.com"><img src="https://avatars.githubusercontent.com/u/4805152?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tasti Zakarie</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=tasti" title="Documentation">📖</a></td>
   </tr>
 </table>
 
