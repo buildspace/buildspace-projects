@@ -136,6 +136,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://gssakash.netlify.com"><img src="https://avatars.githubusercontent.com/u/52027687?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Akash</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=gssakash" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.zakarie.com"><img src="https://avatars.githubusercontent.com/u/4805152?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tasti Zakarie</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=tasti" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/donni106"><img src="https://avatars.githubusercontent.com/u/1942953?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Molnar</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=donni106" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
