@@ -98,7 +98,8 @@ const App = () => {
 
 🛠 Getting ABI File Content
 ---------------------------
-**Rather watch me go through this? [Click here](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)!**
+**Rather watch me go through this? Checkout out the video below!**
+[Loom](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)
 
 Look at you, already half way down here! Let's move back to our smart contract folder.
 

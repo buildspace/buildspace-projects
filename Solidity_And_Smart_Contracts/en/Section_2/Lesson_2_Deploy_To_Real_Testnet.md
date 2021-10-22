@@ -28,7 +28,8 @@ This is complicated. And, don't worry if you don't fully understand it. As you w
 
 So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
 
-[Click here](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283) to see my video on how to get your API key for a testnet!
+Checkout the video below to see how to get your API key for a testnet!
+[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283)
 
 🕸️ Testnets
 ------------
@@ -58,12 +59,12 @@ In order to get fake ETH, we have to ask the network for some. **This fake ETH w
 
 For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
-| Name | Link | Amount | Time |
-|------|------|--------|------|
-| MyCrypto | https://app.mycrypto.com/faucet | 0.01 | None |
-| Buildspace | https://buildspace-faucet.vercel.app/ | 0.025 | 1d |
-| Ethily | https://ethily.io/rinkeby-faucet/ | 0.2 | 1w |
-| Official Rinkeby | https://faucet.rinkeby.io/ | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
+| Name             | Link                                  | Amount          | Time         |
+| ---------------- | ------------------------------------- | --------------- | ------------ |
+| MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
+| Buildspace       | https://buildspace-faucet.vercel.app/ | 0.025           | 1d           |
+| Ethily           | https://ethily.io/rinkeby-faucet/     | 0.2             | 1w           |
+| Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
 
 
 🙃 Having trouble getting Testnet ETH?

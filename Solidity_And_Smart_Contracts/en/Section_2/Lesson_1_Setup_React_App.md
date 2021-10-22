@@ -18,7 +18,8 @@ I've already created a basic react project that you can **fork** on Replit. **Ju
 
 **One final thing to note here - Replit may not show your app right away! If this happens, just do a quick refresh of your page and try again. Promise, it will work 🤘.**
 
-I made a quick video going over how to edit code on Replit, deploy, get dark mode, etc. [Click here to check it out!](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
+I made a quick video going over how to edit code on Replit, deploy, get dark mode. Check it out below: 
+[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
 
 🦊 Metamask
 -----------
