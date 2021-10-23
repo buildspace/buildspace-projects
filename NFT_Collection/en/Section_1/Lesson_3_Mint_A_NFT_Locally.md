@@ -25,7 +25,7 @@ import "hardhat/console.sol";
 
 contract MyEpicNFT {
     constructor() {
-        console.log("This is my NFT contract. Woah!");
+        console.log("This is my NFT contract. Whoa!");
     }
 }
 ```
@@ -55,7 +55,7 @@ Some magic given to us by Hardhat to do some console logs in our contract. It's 
 ```solidity
 contract MyEpicNFT {
     constructor() {
-        console.log("This is my NFT contract. Woah!");
+        console.log("This is my NFT contract. Whoa!");
     }
 }
 ```
