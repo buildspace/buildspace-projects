@@ -282,6 +282,14 @@ Let's go over how to do this :).
 
 Create a new folder under `contracts` called `libraries`. Create a file named `Base64.sol` and drop it under libraries. Copy and paste the code from [here](https://gist.github.com/farzaa/f13f5d9bda13af68cc96b54851345832) into `Base64.sol`. This basically provides us with some helper functions to let us encode any data into a Base64 string — which is a standard way to encode some piece of data into a string. Don't worry, you'll see how it works in a bit!
 
+
+We'll need to import that library into our contract.
+For that, add the following snippet near the top of your file, with the other imports.
+```solidity
+// Helper we wrote to encode in Base64
+import "./libraries/Base64.sol";
+``` 
+
 Next, we write a function called `tokenURI` in `MyEpicGame.sol`.
 
 ```solidity
