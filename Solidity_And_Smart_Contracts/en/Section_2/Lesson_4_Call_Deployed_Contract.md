@@ -50,7 +50,7 @@ A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we 
 
 [Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
 
-Connect this function to our wave button by updating the onClick variable from {null} to {wave}:
+Connect this function to our wave button by updating the `onClick` prop from `null` to `wave`:
 
 ```html
 <button className="waveButton" onClick={wave}>
