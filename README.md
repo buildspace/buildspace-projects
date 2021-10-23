@@ -18,7 +18,7 @@
 
 ## 📚 Projects
 
-At [_buildspace](https://buildspace.so) we take a lot of time to write projects that make sense and are just straight up fun! Just like software, we are bound to make some mistakes, but thats where you come in.
+At [buildspace](https://buildspace.so) we take a lot of time to write projects that make sense and are just straight up fun! Just like software, we are bound to make some mistakes, but thats where you come in.
 
 We made all these lessons Open Source so you can help make our projects even better and help others conquer the decentralized web 🤘.
 
@@ -26,7 +26,7 @@ We made all these lessons Open Source so you can help make our projects even bet
 
 Any and all contributions are welcome! GitHub makes it _insanely_ easy to make contributions directly within their web app! [Follow this short guide](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files#editing-files-in-another-users-repository) on how to edit one of our Markdown lessons right here within GitHub!
 
-Rather watch a video? [Check out this two minute video](https://www.loom.com/share/ea84ce8634824f9e9377e2bc4b06f031), by Alec from _buildspace, for submitting a contribution to a lesson!
+Rather watch a video? [Check out this two minute video](https://www.loom.com/share/ea84ce8634824f9e9377e2bc4b06f031), by Alec from buildspace, for submitting a contribution to a lesson!
 
 ### Structure
 You will notice in each project folder there is an `en` and `es` folder. We are in the process of translating our projects to Spanish (and hopefully more languages)!
@@ -35,17 +35,17 @@ If you are contributing to the English version, make sure your changes are done 
 
 Each project aligns with the content on your buildspace dahsboard. Find the file you want to change and open up a Pull Request for it! Someone from the buildspace team will take a look at it ASAP!
 
-## 🤔 Why take this course on _buildspace?
-You have access to all the this content right here in GitHub! Whats the point with signing up with [_buildspace](https://buildspace.so)?
+## 🤔 Why take this course on buildspace?
+You have access to all the this content right here in GitHub! Whats the point with signing up with [buildspace](https://buildspace.so)?
 
-   ### **Hack With Others And The _buildspace Team**
+   ### **Hack With Others And The buildspace Team**
    You and thousands of other devs are in this together. When you sign up for a project, you are placed in a group of devs who are there to help you succeed! Check out our [Discord](https://discord.gg/CFuBU7RJ42) to see what all the hype is about!
 
    ### **Co-Working Sessions**
    Get access to multiple sessions of collabortive coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
 
    ### **Complete A Project. Get A NFT.**
-   Thats right. Be one of the first 100 people to complete your [_buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
+   Thats right. Be one of the first 100 people to complete your [buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
 
 ## ❗️FAQ
 
@@ -61,7 +61,7 @@ This is awesome! Your first Open Source contributon is always a great one. If yo
 As always make sure to reach out to us on [Discord](https://discord.gg/CFuBU7RJ42) if you have any questions or concerns!
 
 ### **Have More Questions?**
-We use Discord for tons of our communication! [Click here](https://discord.gg/CFuBU7RJ42) to join our server and reach out to the _buildspace team members if you have any questions or concerns.
+We use Discord for tons of our communication! [Click here](https://discord.gg/CFuBU7RJ42) to join our server and reach out to the buildspace team members if you have any questions or concerns.
 
 ---
 
