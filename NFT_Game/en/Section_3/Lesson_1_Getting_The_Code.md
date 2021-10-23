@@ -1,3 +1,11 @@
+### 🏁 Getting started with React.js
+Now this is where the fun **REALLY** starts. Writing and deploying your smart contract is one thing, but building a portal where anyone in the world can interact with the blockchain is just pure magic ✨.
+
+We are going to be using **React.js** to build our web app. If you are already familiar with React, this will be a breeze. If you haven't done much React, don't worry! You can still make it through this project, but it may feel a bit more difficult. Don't give up! The more you struggle the more you learn 🧠.
+
+We wil lbe using a lot of fanciness with React which isn't as intro friendly. If you really want to get good at React - [checkout this intro course](https://scrimba.com/learn/learnreact) before you get started with this section. I believe you will be an absolute React Wizard after this project 🧙‍♂️.
+
+### ⬇️ Getting the code.
 We'll be using this thing called [Replit](https://replit.com/~)!
 
 It is a browser-based IDE that lets us easily build web apps and deploy them all from the browser. It is super legit. Instead of having to set up a full local environment and write commands to deploy, it's all just given to us.
