@@ -90,7 +90,7 @@ There is a lot happening here but essentially I'm passing in a bunch of values t
 
 Remember, the constructor runs only **once** the first time the contract is ran.
 
-I take the character data in my `constructor` and store it nicely on the contract in a `sturct` of type `CharacterAttributes`. Each `CharacterAttributes` holds the base attributes for each character. 
+I take the character data in my `constructor` and store it nicely on the contract in a `struct` of type `CharacterAttributes`. Each `CharacterAttributes` holds the base attributes for each character. 
 
 ```solidity
 struct CharacterAttributes {
