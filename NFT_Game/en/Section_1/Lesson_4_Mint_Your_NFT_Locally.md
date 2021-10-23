@@ -287,7 +287,7 @@ We'll need to import that library into our contract.
 For that, add the following snippet near the top of your file, with the other imports.
 ```solidity
 // Helper we wrote to encode in Base64
-import { Base64 } from "./libraries/Base64.sol";
+import "./libraries/Base64.sol";
 ``` 
 
 Next, we write a function called `tokenURI` in `MyEpicGame.sol`.
