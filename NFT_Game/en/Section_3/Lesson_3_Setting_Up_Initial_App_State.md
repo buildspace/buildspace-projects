@@ -164,3 +164,8 @@ In the next section we are going to start interacting with our contract to see i
 
 1. Write the logic to actually mint a Character NFT 
 2. Setup our `Arena` component so we can take down any boss in our way 😈
+
+
+🚨 Progress update
+------------------------
+In #progress, post a screenshot of the output of your console showing off your "Connected" Ethereum wallet message! Big deal you got this working. Basic connect wallet stuff is core to the magic of web3!
