@@ -139,3 +139,26 @@ Platforms like OpenSea support `ipfs` links so this works out — they'll know h
 Now, you may be asking yourself — what is Cloudflare doing here? Basically — they're running an IPFS node on our behalf and letting us use it to access files on the network. Technically, you could do this [yourself](https://dev.to/dabit3/uploading-files-to-ipfs-from-a-web-application-50a) as well if you truly wanted to!
 
 **Bam — you're now using IPFS :). Wasn't that hard, right!? Tell all your friends. Tell your parents. Tell the world.**
+
+
+🐸 Show all the other players in the game!
+----------------
+Right now, all you see is yourself and the boss -- what if you could see a list of all the other players? Perhaps you could show their wallet address, their character's image, and how much damage they've dealt to the boss!
+
+**Would make it feel a lot more "multiplayer" :).**
+
+Give it a try. Not going to explain it here but I think you have all the info you need to change the contract and the web app to make this happen! All you'll need to do is create a function like `getAllPlayers` and then call that from your web app + render the data nicely!
+
+
+
+⚡️ Add in critical hit chance
+--------------------
+Many games have a cool concept of a "critical hit", like Pokemon! Introducing RNG to games is really fun since it brings in "chance" to the game. It'd be cool if you implemented critical hits -- for example maybe there's a 5% chance that some of your characters hit for double the damage. Or maybe there's a 20% chance the boss's attack "misses" and the player gets away lucky!
+
+It'd be cool if specific characters also had a higher chance of a critical hit than others! 
+
+![](https://i.imgur.com/S0r7rfm.png)
+
+Getting a **true** random number in Solidity is impossible. Feel free to read more on it [here](https://github.com/buildspace/buildspace-projects/blob/main/Solidity_And_Smart_Contracts/en/Section_4/Lesson_1_Randomly_Pick_Winner.md) from a past buildspace project.
+
+This is where Chainlink comes in -- which is an oracle that can give us numbers that are truly random. Here's a guide on implementing it [here](https://www.youtube.com/watch?v=JqZWariqh5s). You can try to implement random numbers without Chainlink first, like how we do [here](https://github.com/buildspace/buildspace-projects/blob/main/Solidity_And_Smart_Contracts/en/Section_4/Lesson_1_Randomly_Pick_Winner.md).
