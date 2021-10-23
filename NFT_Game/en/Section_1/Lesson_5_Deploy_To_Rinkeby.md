@@ -287,5 +287,6 @@ On top of that, as the creator of the original Pikachu NFTs — I can charge a r
 Okay — lets get to actually programming our game logic now :).
 
 ### 🚨 Progress report!
+*Pls do this or Farza will be sad :(*
 
 Post a screenshot in #progress of your epic NFTs on OpenSea. Perhaps even tweet it out and tell the world what you've done! Be sure to give @_buildspace tag as well :). We love to see people's tweets, it always gives us a dose of dopamine/motivation. Plus -- your tweet could help get new people to get into web3. You never know who may see it and get inspired to start hacking!!!
