@@ -292,3 +292,8 @@ export default App;
 Click your fancy new button and you should see your MetaMask Chrome extension pop up! NOICE.
 
 ![Untitled](https://i.imgur.com/0HsWMpg.png)
+
+
+🚨 Progress update
+------------------------
+In #progress, post a screenshot of your fancy new site and be sure to change up the GIFs and titles to be more something you vibe with. Make it your own!
