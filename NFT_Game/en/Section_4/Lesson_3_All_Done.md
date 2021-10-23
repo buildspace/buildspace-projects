@@ -1,6 +1,6 @@
 ### 😍 You've done it.
 
-Super exciting that you made it to the end. Pretty big deal!
+Super exciting that you made it to the end. Pretty big deal!!
 
 Be sure to add some of *your own* finishing touches as well :).
 
