@@ -323,4 +323,6 @@ alert(`Your NFT is all done -- see it here: https://testnets.opensea.io/assets/$
 
 ### **🚨 Progress report.**
 
-Post a screenshot of your character select screen in #progress -- it's always fun to see everyone's character. It's also a perfect thing to tweet out :). Tell the world about your NFT characters and what your game is all about :).
+Post a screenshot of your character select screen in #progress -- it's always fun to see everyone's characters!! It's also a perfect thing to tweet out :). Tell the world about your NFT characters and what your game is all about :).
+
+![Untitled](https://i.imgur.com/ycbOfNh.png)
