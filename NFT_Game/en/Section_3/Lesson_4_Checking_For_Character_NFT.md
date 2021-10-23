@@ -264,7 +264,7 @@ useEffect(() => {
 }, [currentAccount]);
 ```
 
-Alright, so what the heck is this `[currentAccount]` thing? It's just the user's public wallet address that we get back from Metamask. **Anytime the value of `currentAddress` changes, this `useffect` will get fired**! For example when `currentAccount` changes from `null` to a new wallet address, this logic will be ran. 
+Alright, so what the heck is this `[currentAccount]` thing? It's just the user's public wallet address that we get back from Metamask. **Anytime the value of `currentAccount` changes, this `useffect` will get fired**! For example when `currentAccount` changes from `null` to a new wallet address, this logic will be ran. 
 
 Do some Googling and [checkout this link](https://reactjs.org/docs/hooks-effect.html) from React docs to learn more.
 
