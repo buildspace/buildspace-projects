@@ -323,4 +323,4 @@ alert(`Your NFT is all done -- see it here: https://testnets.opensea.io/assets/$
 
 ### **🚨 Progress report.**
 
-Post your OpenSea link of your character NFT in your current section chat and show off who you are taking to battle!
+Post a screenshot of your character select screen in #progress -- it's always fun to see everyone's character. It's also a perfect thing to tweet out :). Tell the world about your NFT characters and what your game is all about :).
