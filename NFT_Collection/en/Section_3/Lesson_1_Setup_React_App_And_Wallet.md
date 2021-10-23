@@ -22,7 +22,7 @@ Next we need an Ethereum wallet. There are a bunch of these, but, for this proje
 
 Why do we need Metamask? Well. We need to be able to call functions on our smart contract that live on the blockchain. And, to do that we need to have a wallet that has our Ethereum address and private key.
 
-**But, we need something to connect our website with our wallet so we can securely pass our wallet credentials to our website so our website can use those credentials to call our smart contract. You need to have valid credentials to access functions on smart contracts.**
+**But, we need something to connect our website with our wallet, so that we can securely pass our wallet credentials to our website. Our website can then use those credentials to call our smart contract. Ultimately, you need to have valid credentials to access functions on smart contracts.**
 
 It's almost like authentication. We need something to "login" to the blockchain and then use those login credentials to make API requests from our website.
 
