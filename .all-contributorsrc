@@ -517,6 +517,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "msaug",
+      "name": "Mathieu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60658558?v=4",
+      "profile": "https://github.com/msaug",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
