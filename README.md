@@ -145,6 +145,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/0xQueso"><img src="https://avatars.githubusercontent.com/u/78476102?v=4?s=100" width="100px;" alt=""/><br /><sub><b>0xQueso</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xQueso" title="Documentation">📖</a></td>
     <td align="center"><a href="http://garpu.net"><img src="https://avatars.githubusercontent.com/u/6513782?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Peterson</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=kevinmp" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/dwagmi"><img src="https://avatars.githubusercontent.com/u/92296318?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dwagmi</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=dwagmi" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
