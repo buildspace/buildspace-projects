@@ -29,18 +29,6 @@ const [isLoading, setIsLoading] = useState(false);
 Next, we are going to need to set the state when we are running async operations, such as as calling `checkIfUserHasNFT` from our contract. We are going to add these setters in both `useEffects` like so:
 
 ```javascript
-// State
-const [currentAccount, setCurrentAccount] = useState(null);
-const [characterNFT, setCharacterNFT] = useState(null);
-/*
-* New state property added here
-*/
-const [isLoading, setIsLoading] = useState(false);
-```
-
-Next, we are going to need to set the state when we are running async operations, such as as calling `checkIfUserHasNFT` from our contract. We are going to add these setters in both `useEffects` like so:
-
-```javascript
 // UseEffects
 useEffect(() => {
   /*
