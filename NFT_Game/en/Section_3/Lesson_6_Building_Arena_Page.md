@@ -159,7 +159,7 @@ return (
             <img src={boss.imageURI} alt={`Boss ${boss.name}`} />
             <div className="health-bar">
               <progress value={boss.hp} max={boss.maxHp} />
-              <p>{`${boss.hp} / ${MAX_BOSS_HP} HP`}</p>
+              <p>{`${boss.hp} / ${boss.maxHp} HP`}</p>
             </div>
           </div>
         </div>
