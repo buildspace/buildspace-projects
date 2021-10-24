@@ -32,7 +32,7 @@ So that means if five people mint character #1, that means all five people will 
 
 If that doesn't make sense, don't worry! Let's just jump in the code — it'll slowly make more sense.
 
-The first thing we need to do is actually have a way to initialize a character's **default attributes** (ex. their default HP, default attack damage, default image, etc). For example, if we have a charact named "Pikachu", then we need to set Pikachu's base HP, base attack damage, etc. 
+The first thing we need to do is actually have a way to initialize a character's **default attributes** (ex. their default HP, default attack damage, default image, etc). For example, if we have a character named "Pikachu", then we need to set Pikachu's base HP, base attack damage, etc. 
 
 I updated `MyEpicGame.sol` to look like this:
 
