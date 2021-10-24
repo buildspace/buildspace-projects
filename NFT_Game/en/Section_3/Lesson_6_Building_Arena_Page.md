@@ -354,52 +354,53 @@ We are going to dynamically add this class name to our `div` which in turn will 
 * We are going to need to update our character NFT so setCharacterNFT here
 * and make sure to pass it it in your Arena component in App.js
 */
-const Arena = ({ characterNFT, setCharacterNFT }) {
+const Arena = ({ characterNFT, setCharacterNFT }) => {
 	
-	...
+    ...
 
-	// UseEffects
-	useEffect(() => {
-	  const fetchBoss = async () => {
-	    const bossTxn = await gameContract.getBigBoss();
-			console.log('Boss:', bossTxn);
-	    setBoss(transformCharacterData(bossTxn));
-	  };
-		
-		/*
-		* Setup logic when this event is fired off
-		*/
-		const onAttackComplete = (newBossHp, newPlayerHp) => {
-	    const bossHp = newBossHp.toNumber();
-	    const playerHp = newPlayerHp.toNumber();
-	
-	    console.log(`AttackComplete: Boss Hp: ${bossHp} Player Hp: ${playerHp}`);
-	
-		  /*
-		   * Update both player and boss Hp
-		   */
-	    setBoss((prevState) => {
-	      return { ...prevState, hp: bossHp };
-	    });
-	
-	    setCharacterNFT((prevState) => {
-	      return { ...prevState, hp: playerHp };
-	    });
-	  };
-	
-	  if (gameContract) {
-	    fetchBoss();
-			gameContract.on('AttackComplete', onAttackComplete);
-	  }
-	
-	/*
-	* Make sure to clean up this event when this component is removed
-	*/
-	return () => {
-	  if (gameContract) {
-	    gameContract.off('AttackComplete', onAttackComplete);
-	  }
-	}, [gameContract]);
+    // UseEffects
+    useEffect(() => {
+        const fetchBoss = async () => {
+            const bossTxn = await gameContract.getBigBoss();
+            console.log('Boss:', bossTxn);
+            setBoss(transformCharacterData(bossTxn));
+        };
+
+        /*
+        * Setup logic when this event is fired off
+        */
+        const onAttackComplete = (newBossHp, newPlayerHp) => {
+            const bossHp = newBossHp.toNumber();
+            const playerHp = newPlayerHp.toNumber();
+
+            console.log(`AttackComplete: Boss Hp: ${bossHp} Player Hp: ${playerHp}`);
+
+            /*
+            * Update both player and boss Hp
+            */
+            setBoss((prevState) => {
+                return { ...prevState, hp: bossHp };
+            });
+
+            setCharacterNFT((prevState) => {
+                return { ...prevState, hp: playerHp };
+            });
+        };
+
+        if (gameContract) {
+            fetchBoss();
+            gameContract.on('AttackComplete', onAttackComplete);
+        }
+
+        /*
+        * Make sure to clean up this event when this component is removed
+        */
+        return () => {
+            if (gameContract) {
+                gameContract.off('AttackComplete', onAttackComplete);
+            }
+        }
+    }, [gameContract]);
 }
 ```
 
