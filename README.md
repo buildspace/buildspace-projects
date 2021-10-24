@@ -142,6 +142,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/sayf-ismail"><img src="https://avatars.githubusercontent.com/u/63899527?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sayf-ismail</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=sayf-ismail" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/0xayang"><img src="https://avatars.githubusercontent.com/u/89713820?v=4?s=100" width="100px;" alt=""/><br /><sub><b>0xayang</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xayang" title="Documentation">📖</a></td>
     <td align="center"><a href="http://shawnpereira.me"><img src="https://avatars.githubusercontent.com/u/40794711?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shawn Pereira</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=recurshawn" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/0xQueso"><img src="https://avatars.githubusercontent.com/u/78476102?v=4?s=100" width="100px;" alt=""/><br /><sub><b>0xQueso</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xQueso" title="Documentation">📖</a></td>
   </tr>
 </table>
 
