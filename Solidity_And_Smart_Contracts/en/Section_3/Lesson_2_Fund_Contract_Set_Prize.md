@@ -170,7 +170,7 @@ We need to make a small update to `deploy.js`.
 const main = async () => {
   const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
   const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther('0.01'),
+    value: hre.ethers.utils.parseEther('0.001'),
   });
 
   await waveContract.deployed();
@@ -195,7 +195,7 @@ All I did was fund the contract 0.01 ETH like this:
 
 ```javascript
 const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther('0.01'),
+    value: hre.ethers.utils.parseEther('0.001'),
 });
 ```
 I like deploying to testnets with a smaller amount of ETH first to test!
