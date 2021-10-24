@@ -499,6 +499,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "kevinmp",
+      "name": "Kevin Peterson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6513782?v=4",
+      "profile": "http://garpu.net",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
