@@ -64,6 +64,8 @@ contract MyEpicGame is ERC721 {
       }));
 
       CharacterAttributes memory c = defaultCharacters[i];
+      
+      // Hardhat's use of console.log() allows up to 4 parameters in any order of following types: uint, string, bool, address
       console.log("Done initializing %s w/ HP %s, img %s", c.name, c.hp, c.imageURI);
     }
 
