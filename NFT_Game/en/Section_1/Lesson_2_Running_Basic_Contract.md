@@ -127,7 +127,7 @@ console.log("Contract deployed to:", gameContract.address);
 
 Finally, once it's deployed `gameContract.address` will basically give us the address of the deployed contract. This address is how can actually find our contract on the blockchain. Right now on our local blockchain it's just us. So, this isn't that cool.
 
-But, there are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will come in handy when deploy to the actual blockchain in a few lessons.
+But, there are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will come in handy when we deploy to the actual blockchain in a few lessons.
 
 ### **💨 Run it.**
 
