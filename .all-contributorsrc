@@ -490,6 +490,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "0xQueso",
+      "name": "0xQueso",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78476102?v=4",
+      "profile": "https://github.com/0xQueso",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
