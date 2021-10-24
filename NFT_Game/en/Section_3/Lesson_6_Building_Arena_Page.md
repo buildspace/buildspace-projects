@@ -65,9 +65,6 @@ import Arena from './Components/Arena';
 ...
 
 const renderContent = () => {
-  if (isLoading) {
-    return <LoadingIndicator />;
-  }
 
   if (!currentAccount) {
     return (
