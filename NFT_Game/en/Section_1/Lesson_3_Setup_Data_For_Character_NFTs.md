@@ -88,9 +88,9 @@ contract MyEpicGame {
 
 There is a lot happening here but essentially I'm passing in a bunch of values to my `constructor` to set up my characters. Why? Well — I need a way to tell my contract, "Hey — when a player requests a Pikachu NFT, please give that NFT this base HP, this base AD, this base image, etc".
 
-Remember, the constructor runs only **once** the first time the contract is ran.
+Remember, the constructor runs only **once** the first time the contract is run.
 
-I take the character data in my `constructor` and store it nicely on the contract in a `sturct` of type `CharacterAttributes`. Each `CharacterAttributes` holds the base attributes for each character. 
+I take the character data in my `constructor` and store it nicely on the contract in a `struct` of type `CharacterAttributes`. Each `CharacterAttributes` holds the base attributes for each character. 
 
 ```solidity
 struct CharacterAttributes {
