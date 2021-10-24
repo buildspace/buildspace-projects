@@ -481,6 +481,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "recurshawn",
+      "name": "Shawn Pereira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40794711?v=4",
+      "profile": "http://shawnpereira.me",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
