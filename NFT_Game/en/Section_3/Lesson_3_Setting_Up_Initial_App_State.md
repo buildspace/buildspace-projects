@@ -132,7 +132,7 @@ return (
 );
 ```
 
-Note: Remember to import `SelectCharacter` by doing 
+Note: Remember to import `SelectCharacter` by importing it at the top of the file like this `import SelectCharacter from './Components/SelectCharacter';` 
 
 ### 🥵 Make sure stuff is working!
 
