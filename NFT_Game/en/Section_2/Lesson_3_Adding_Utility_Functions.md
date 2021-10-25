@@ -58,7 +58,7 @@ You may be asking yourself, "Why are we building functions to get single variabl
 
 We need to be able to retrieve the boss. Why? Well — when our player is playing the game our will need to be able to show them stuff like the boss's HP, name, image, etc!
 
-This is also very staright forward just like our `getAllDefaultCharacters` function.
+This is also very straight forward just like our `getAllDefaultCharacters` function.
 
 ```solidity
 function getBigBoss() public view returns (BigBoss memory) {
