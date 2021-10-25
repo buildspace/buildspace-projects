@@ -114,4 +114,51 @@ All we need to do is add this line to the bottom of the `attackBoss` function:
 emit AttackComplete(bigBoss.hp, player.hp);
 ```
 
+### ➡️ Deploying the changes.
+
+Great! Now we've added the functions that our web app will be using in our game! Give yourself a pat on the back, it's shaping up to be an awesome game! Remember that we'll need to deploy the contract again for us to use these functions.
+
+Feel free to play around wih the new functions your `run.js` file to get a feel for what these functions do. If not don't worry, we'll be working with them in the next section via our web app.
+
+Before we move on to our web app, we'll need to make sure we have a clean contract ready to go. We'll need to ensure our `deploy.js` file doesn't mint any characters to our address or make any attacks.
+
+Here's my `deploy.js` file after I've removed the minting and attacks from our last deploy.
+
+```javascript
+const main = async () => {
+  const gameContractFactory = await hre.ethers.getContractFactory('MyEpicGame');
+  
+  const gameContract = await gameContractFactory.deploy(                        
+    ["Leo", "Aang", "Pikachu"],       
+    ["https://i.imgur.com/pKd5Sdk.png", 
+    "https://i.imgur.com/xVu4vFL.png", 
+    "https://i.imgur.com/u7T87A6.png"],
+    [100, 200, 300],                    
+    [100, 50, 25],
+    "Elon Musk",
+    "https://i.imgur.com/AksR0tt.png",
+    10000,
+    50
+  );
+
+  await gameContract.deployed();
+  console.log("Contract deployed to:", gameContract.address);
+
+};
+
+const runMain = async () => {
+  try {
+    await main();
+    process.exit(0);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+};
+
+runMain();
+```
+
+All that's left is to deploy it by using `npx hardhat run scripts/deploy.js --network rinkeby`. Remember to save your contract address for the next section.
+
 That's it :). Let's move on to our web app!!
