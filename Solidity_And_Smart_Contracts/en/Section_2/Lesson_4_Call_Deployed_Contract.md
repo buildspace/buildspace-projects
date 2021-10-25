@@ -50,7 +50,7 @@ A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we 
 
 [Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
 
-Connect this function to our wave button by updating the onClick variable from {null} to {wave}:
+Connect this function to our wave button by updating the `onClick` prop from `null` to `wave`:
 
 ```html
 <button className="waveButton" onClick={wave}>
@@ -98,7 +98,8 @@ const App = () => {
 
 🛠 Getting ABI File Content
 ---------------------------
-**Rather watch me go through this? [Click here](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)!**
+**Rather watch me go through this? Checkout out the video below!**
+[Loom](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)
 
 Look at you, already half way down here! Let's move back to our smart contract folder.
 

@@ -25,7 +25,7 @@ import "hardhat/console.sol";
 
 contract MyEpicNFT {
     constructor() {
-        console.log("This is my NFT contract. Woah!");
+        console.log("This is my NFT contract. Whoa!");
     }
 }
 ```
@@ -38,7 +38,7 @@ Let's go line-by-line here.
 // SPDX-License-Identifier: UNLICENSED
 ```
 
-Just a fancy comment.  It's called an "SPDX license identifier", feel free to Google what it is :).
+Just a fancy comment.  It's called an "SPDX license identifier", You can read more about that [here](https://spdx.org/licenses/).
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -55,7 +55,7 @@ Some magic given to us by Hardhat to do some console logs in our contract. It's 
 ```solidity
 contract MyEpicNFT {
     constructor() {
-        console.log("This is my NFT contract. Woah!");
+        console.log("This is my NFT contract. Whoa!");
     }
 }
 ```
@@ -136,7 +136,7 @@ console.log("Contract deployed to:", nftContract.address);
 
 Finally, once it's deployed `nftContract.address` will basically give us the address of the deployed contract. This address is how we can actually find our contract on the blockchain. Right now on our local blockchain it's just us. So, this isn't that cool.
 
-But, there are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will come in handy when deploy to the actual blockchain in a few lessons.
+But, there are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will come in handy when we deploy to the actual blockchain in a few lessons.
 
 💨 Run it.
 -------------------

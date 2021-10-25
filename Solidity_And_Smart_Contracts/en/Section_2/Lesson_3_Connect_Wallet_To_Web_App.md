@@ -3,9 +3,9 @@
 
 So, in order for our website to talk to the blockchain, we need to somehow connect our wallet to it. Once we connect our wallet to our website, our website will have permissions to call smart contracts on our behalf. Remember, it's just like authenticating in to a website.
 
-Head over Replit and go to `App.js` under `src`, this is where we'll be doing all our work.
+Head over to Replit and go to `App.js` under `src`, this is where we'll be doing all our work.
 
-If we're logged in to Metamask, it will automatically inject a special object named `ethereum` into our window. Lets check if we have that first.
+If we're logged in to Metamask, it will automatically inject a special object named `ethereum` into our window. Let's check if we have that first.
 
 ```jsx
 import React, { useEffect } from "react";
@@ -59,7 +59,7 @@ export default App
 🔒 See if we can access the users account
 -----------------------------------------
 
-So when you run this, you should see that line "We have the ethereum object" printed in the console of the website when you go to inspect it.
+So when you run this, you should see that line "We have the ethereum object" printed in the console of the website when you go to inspect it. If you are using Replit, make sure you're looking at the console of your project website, not the Replit workspace! You can access the console of your website by opening it in its own window/tab and launching the developer tools. The URL should look something like this - `https://waveportal-starter-project.yourUsername.repl.co/`
 
 **NICE.**
 
@@ -238,7 +238,8 @@ On line 67, I also added a button so we can call our `connectWallet` function. Y
 🌐 Connect!
 -----------
 
-Now, it's time for the magic. Check out [this](https://www.loom.com/share/1d30b147047141ce8fde590c7673128d?t=0) video.
+Now, it's time for the magic! Check out the video below:
+[Loom](https://www.loom.com/share/1d30b147047141ce8fde590c7673128d?t=0)
 
 🚨 Required: Before you click "Next Lesson"
 -------------------------------------------

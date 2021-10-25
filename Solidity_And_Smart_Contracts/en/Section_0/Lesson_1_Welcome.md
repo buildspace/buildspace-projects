@@ -21,43 +21,20 @@ This stuff is very new, there's a lot of hype around it, and it can be super dif
 
 With this project, you're going to learn about crypto tech by actually writing code and just hopping into the good stuff. No B.S. We'll also go over theory and more in-depth concepts, but, it will all be structured around your project.
 
-Here's a little [intro video I made about the project](https://www.loom.com/share/8746b43760c74c6791ba17af9940ea8e)!
+Checkout a little intro video I made about this project below!
+[Loom](https://www.loom.com/share/8746b43760c74c6791ba17af9940ea8e)
 
 
-🏠 How is this all structured?
-------------------------------
-
-This project usually takes people like 5-10 hours total. Some people knock it out within the same day it starts, others take a few days!
-
-The "kick-off" is the only live thing in this project and it'll be recorded. The rest of the project is made up of these async lessons.
-
-After that, we'll be hosting "co-working sessions" and will email you days I'm doing them.
-
-Basically, co-working sessions at buildspace are specific times for you to work on your project for 1-hour. It's pretty cool. Everyone joins the #cowork-sesh voice channel at a scheduled time (all muted by default), works individually on their projects, and chills with their classmates in a virtual space. We also play some chill lofi beats!
-
-During the session, you'll also be able to ask questions in #cowork-chat and I'll be there answering them. Again, everyone's muted. We just talk in text-chat so people can focus! :)
-
-![](https://i.imgur.com/dqbGZae.png)
-
-
-👀 Earn a _buildspace NFT by the end
-------------------------------
+👀 Earn a buildspace NFT by the end.
+-------------------
 
 When you reach the end of this project, you'll be able to earn an NFT.
 
-**You can only claim an NFT if you finish the project within 7-days of the kick-off. After that, you won't be able to claim it!**
+**We'll airdrop an NFT to your connected wallet if you finish the project within 7-days of the kick-off.**
 
-![Untitled](https://i.imgur.com/nofSO7w.png)
+![Untitled](https://i.imgur.com/HlRJTTf.png)
 
-This NFT not only looks cool, but it will also get you access to secret opportunities in crypto such as — full-time work, internships, and contract work. This initiative is a work in progress :).
-
-Note: instead of "Capella", yours would have the name of your cohort and every cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT. Also -- the name of the project at the top left would be different!
-
-To claim the NFT, you'll need to pay [gas fees](https://ethereum.org/en/developers/docs/gas/) which are fees that Ethereum charges you to perform transactions on the network. Gas fees to redeem the NFT vary. I recommend transferring around $30 - $50 worth of ETH over to your wallet.
-
-If you don't know how to do this, don't worry about it for now -- not required.
-
-*Note: The project itself doesn't require you to have any real money at all! We'll still be deploying to the blockchain using something special Ethereum provides us called a "testnet".*
+Note: instead of "Capella", yours would say name of your cohort — each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT.
 
 
 🛠 What will you be building?
@@ -106,7 +83,8 @@ At the very least, drop a ⭐ on the repo if you're feeling fancy!
 🚨Curious about working in web3?
 -------------------
 
-We're partnered with a bunch of awesome web3 companies. We'll help you get hired in crypto. Even if you're just curious, fill out the form!! What's the worst that can happen -- you get connected to some dope crypto companies!?
+We're partnered with a bunch of awesome web3 companies that want to hire people from the buildspace network. We got companies like OpenSea, Edge and Node, and Chainlink as partners. **Even if you're just curious**, click "Work in Web3" on the side-bar, fill out the form real quick, and check out the opportunties!!
 
-[Here's the link.](https://zipschool.typeform.com/to/iG2O1lSp)
+Worst case scearnio, you get to talk to some really cool people in web3 :).
+
 

@@ -87,7 +87,8 @@ return (
 📂 ABI files
 ----------------
 
-**Made a little video [here](https://www.loom.com/share/2d493d687e5e4172ba9d47eeede64a37) explaining all this ABI stuff. Please give it a watch I go over some important stuff!**
+**Made a little video here explaining all this ABI stuff. Please give it a watch I go over some important stuff!**
+[Loom](https://www.loom.com/share/2d493d687e5e4172ba9d47eeede64a37)
 
 So — when you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
 
@@ -122,7 +123,7 @@ You may be asking yourself wtf gas is. I'm not going to answer that here. But, y
 
 You should be able to go and actually mint an NFT right from your website now. **Let's go!!! THAT'S EPICCCCC.** This is basically how all these NFT minting sites work and you just got it done yourself :).
 
-I actually go through and test the whole thing in the ABI video I already linked above ([here's](https://www.loom.com/share/2d493d687e5e4172ba9d47eeede64a37) the link again). Be sure to give it a watch! I go over some super important stuff around what to do when you **change** your contract. Because your contract is permanent, changes require you to redeploy, update the address on your frontend, and finally update the ABI file on the frontend.
+I actually go through and test the whole thing in the ABI video I already linked above. Be sure to give it a watch! I go over some super important stuff around what to do when you **change** your contract. Because your contract is permanent, changes require you to redeploy, update the address on your frontend, and finally update the ABI file on the frontend.
 
 ✈️ A note on contract redeploys
 ----------------
@@ -135,7 +136,7 @@ Let's say you want to change your contract. You'd need to do 3 things:
 
 3. We need to update the abi file on our frontend.
 
-**People constantly forget to these 3 steps when they change their contract. Don't forget lol.**
+**People constantly forget to do these 3 steps when they change their contract. Don't forget lol.**
 
 Why do we need to do all this? Well, it's because smart contracts are **immutable.** They can't change. They're permanent. That means changing a contract requires a full redeploy. This will also **reset** all the variables since it'd be treated as a brand new contract. **That means we'd lose all our NFT data if we wanted to update the contract's code.**
 

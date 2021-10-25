@@ -1,4 +1,4 @@
-<h1 align="center">🦄_buildspace Projects</h1>
+<h1 align="center">🦄 buildspace Projects</h1>
 
 
 <h3 align="center">
@@ -18,7 +18,7 @@
 
 ## 📚 Projects
 
-At [_buildspace](https://buildspace.so) we take a lot of time to write projects that make sense and are just straight up fun! Just like software, we are bound to make some mistakes, but thats where you come in.
+At [buildspace](https://buildspace.so) we take a lot of time to write projects that make sense and are just straight up fun! Just like software, we are bound to make some mistakes, but thats where you come in.
 
 We made all these lessons Open Source so you can help make our projects even better and help others conquer the decentralized web 🤘.
 
@@ -26,7 +26,7 @@ We made all these lessons Open Source so you can help make our projects even bet
 
 Any and all contributions are welcome! GitHub makes it _insanely_ easy to make contributions directly within their web app! [Follow this short guide](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files#editing-files-in-another-users-repository) on how to edit one of our Markdown lessons right here within GitHub!
 
-Rather watch a video? [Check out this two minute video](https://www.loom.com/share/ea84ce8634824f9e9377e2bc4b06f031), by Alec from _buildspace, for submitting a contribution to a lesson!
+Rather watch a video? [Check out this two minute video](https://www.loom.com/share/ea84ce8634824f9e9377e2bc4b06f031), by Alec from buildspace, for submitting a contribution to a lesson!
 
 ### Structure
 You will notice in each project folder there is an `en` and `es` folder. We are in the process of translating our projects to Spanish (and hopefully more languages)!
@@ -35,17 +35,17 @@ If you are contributing to the English version, make sure your changes are done 
 
 Each project aligns with the content on your buildspace dashboard. Find the file you want to change and open up a Pull Request for it! Someone from the buildspace team will take a look at it ASAP!
 
-## 🤔 Why take this course on _buildspace?
-You have access to all of the content right here in GitHub! What's the point with signing up with [_buildspace](https://buildspace.so)?
+## 🤔 Why take this course on buildspace?
+You have access to all of the content right here in GitHub!
 
-   ### **Hack With Others And The _buildspace Team**
+   ### **Hack With Others And The buildspace Team**
    You and thousands of other devs are in this together. When you sign up for a project, you are placed in a group of devs who are there to help you succeed! Check out our [Discord](https://discord.gg/CFuBU7RJ42) to see what all the hype is about!
 
    ### **Co-Working Sessions**
    Get access to multiple sessions of collaborative coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
 
-   ### **Complete A Project. Get An NFT.**
-   That's right. Be one of the first 100 people to complete your [_buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
+   ### **Complete A Project. Get A NFT.**
+   That's right. Be one of the first 100 people to complete your [buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
 
 ## ❗️FAQ
 
@@ -61,7 +61,7 @@ This is awesome! Your first Open Source contribution is always a great one. If y
 As always make sure to reach out to us on [Discord](https://discord.gg/CFuBU7RJ42) if you have any questions or concerns!
 
 ### **Have More Questions?**
-We use Discord for tons of our communication! [Click here](https://discord.gg/CFuBU7RJ42) to join our server and reach out to the _buildspace team members if you have any questions or concerns.
+We use Discord for tons of our communication! [Click here](https://discord.gg/CFuBU7RJ42) to join our server and reach out to the buildspace team members if you have any questions or concerns.
 
 ---
 
@@ -134,6 +134,21 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.linkedin.com/in/florianbouron/"><img src="https://avatars.githubusercontent.com/u/7243879?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Florian</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=FlorianBouron" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ponyolovesham"><img src="https://avatars.githubusercontent.com/u/89746452?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ponyolovesham</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ponyolovesham" title="Documentation">📖</a></td>
     <td align="center"><a href="https://gssakash.netlify.com"><img src="https://avatars.githubusercontent.com/u/52027687?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Akash</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=gssakash" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.zakarie.com"><img src="https://avatars.githubusercontent.com/u/4805152?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tasti Zakarie</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=tasti" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/donni106"><img src="https://avatars.githubusercontent.com/u/1942953?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Molnar</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=donni106" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/vSanjeev"><img src="https://avatars.githubusercontent.com/u/5090409?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sanjeev Venkatesan</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=vSanjeev" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/sayf-ismail"><img src="https://avatars.githubusercontent.com/u/63899527?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sayf-ismail</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=sayf-ismail" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/0xayang"><img src="https://avatars.githubusercontent.com/u/89713820?v=4?s=100" width="100px;" alt=""/><br /><sub><b>0xayang</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xayang" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://shawnpereira.me"><img src="https://avatars.githubusercontent.com/u/40794711?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shawn Pereira</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=recurshawn" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/0xQueso"><img src="https://avatars.githubusercontent.com/u/78476102?v=4?s=100" width="100px;" alt=""/><br /><sub><b>0xQueso</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xQueso" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://garpu.net"><img src="https://avatars.githubusercontent.com/u/6513782?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Peterson</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=kevinmp" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/dwagmi"><img src="https://avatars.githubusercontent.com/u/92296318?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dwagmi</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=dwagmi" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/msaug"><img src="https://avatars.githubusercontent.com/u/60658558?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mathieu</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=msaug" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/gelopfalcon"><img src="https://avatars.githubusercontent.com/u/4118271?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gerardo Lopez Falcon</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=gelopfalcon" title="Documentation">📖</a></td>
   </tr>
 </table>
 

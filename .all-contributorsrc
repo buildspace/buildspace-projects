@@ -436,6 +436,105 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "tasti",
+      "name": "Tasti Zakarie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4805152?v=4",
+      "profile": "https://www.zakarie.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "donni106",
+      "name": "Daniel Molnar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1942953?v=4",
+      "profile": "https://github.com/donni106",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vSanjeev",
+      "name": "Sanjeev Venkatesan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5090409?v=4",
+      "profile": "https://github.com/vSanjeev",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "sayf-ismail",
+      "name": "sayf-ismail",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63899527?v=4",
+      "profile": "https://github.com/sayf-ismail",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "0xayang",
+      "name": "0xayang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89713820?v=4",
+      "profile": "https://github.com/0xayang",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "recurshawn",
+      "name": "Shawn Pereira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40794711?v=4",
+      "profile": "http://shawnpereira.me",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "0xQueso",
+      "name": "0xQueso",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78476102?v=4",
+      "profile": "https://github.com/0xQueso",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kevinmp",
+      "name": "Kevin Peterson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6513782?v=4",
+      "profile": "http://garpu.net",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "dwagmi",
+      "name": "dwagmi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92296318?v=4",
+      "profile": "https://github.com/dwagmi",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "msaug",
+      "name": "Mathieu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60658558?v=4",
+      "profile": "https://github.com/msaug",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "gelopfalcon",
+      "name": "Gerardo Lopez Falcon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4118271?v=4",
+      "profile": "https://github.com/gelopfalcon",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

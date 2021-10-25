@@ -201,7 +201,8 @@ This is complicated. And, don't worry if you don't fully understand it. As you w
 
 So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
 
-And then check out my video [here](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0) to learn how to get your API key for a testnet.
+And then check out my video below to learn how to get your API key for a testnet:
+[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0)
 
 🕸 Testnets
 ------------------------
