@@ -526,6 +526,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "gelopfalcon",
+      "name": "Gerardo Lopez Falcon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4118271?v=4",
+      "profile": "https://github.com/gelopfalcon",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
