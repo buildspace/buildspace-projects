@@ -33,19 +33,19 @@ You will notice in each project folder there is an `en` and `es` folder. We are 
 
 If you are contributing to the English version, make sure your changes are done in the `en/` folder. If you are contributing to the Spanish version, make sure to make your changes in the `es/` folder!
 
-Each project aligns with the content on your buildspace dahsboard. Find the file you want to change and open up a Pull Request for it! Someone from the buildspace team will take a look at it ASAP!
+Each project aligns with the content on your buildspace dashboard. Find the file you want to change and open up a Pull Request for it! Someone from the buildspace team will take a look at it ASAP!
 
 ## 🤔 Why take this course on buildspace?
-You have access to all the this content right here in GitHub! Whats the point with signing up with [buildspace](https://buildspace.so)?
+You have access to all of the content right here in GitHub!
 
    ### **Hack With Others And The buildspace Team**
    You and thousands of other devs are in this together. When you sign up for a project, you are placed in a group of devs who are there to help you succeed! Check out our [Discord](https://discord.gg/CFuBU7RJ42) to see what all the hype is about!
 
    ### **Co-Working Sessions**
-   Get access to multiple sessions of collabortive coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
+   Get access to multiple sessions of collaborative coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
 
    ### **Complete A Project. Get A NFT.**
-   Thats right. Be one of the first 100 people to complete your [buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
+   That's right. Be one of the first 100 people to complete your [buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
 
 ## ❗️FAQ
 
@@ -53,7 +53,7 @@ You have access to all the this content right here in GitHub! Whats the point wi
 Feel free to submit an [issue here](https://github.com/zipeducation/buildspace-projects/issues/new/choose) to help us keep track of things that need to be fixed.
 
 ### **How do I make my first contribution?**
-This is awesome! Your first Open Source contributon is always a great one. If you're not entirely sure on how to "Fork" a repo or make a "PR" take a look at these awesome resources from Github:
+This is awesome! Your first Open Source contribution is always a great one. If you're not entirely sure on how to "Fork" a repo or make a "PR" take a look at these awesome resources from Github:
 
 [Fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)<br>
 [Create a pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
