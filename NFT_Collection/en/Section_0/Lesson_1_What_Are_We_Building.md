@@ -27,9 +27,9 @@ When you reach the end of this project, you'll be able to earn an NFT.
 
 **We'll airdrop an NFT to your connected wallet if you finish the project within 7-days of the kick-off.**
 
-![Untitled](https://i.imgur.com/HlRJTTf.png)
+![Untitled](https://imgur.com/S6Xok8b)
 
-Note: instead of "Capella", yours would say name of your cohort — each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT.
+Note: instead of "Alkes", yours would say name of your cohort — each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT.
 
 
 🛠 What we're building
