@@ -149,6 +149,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/dwagmi"><img src="https://avatars.githubusercontent.com/u/92296318?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dwagmi</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=dwagmi" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/msaug"><img src="https://avatars.githubusercontent.com/u/60658558?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mathieu</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=msaug" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/gelopfalcon"><img src="https://avatars.githubusercontent.com/u/4118271?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gerardo Lopez Falcon</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=gelopfalcon" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/rin-st"><img src="https://avatars.githubusercontent.com/u/25638585?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rinat Akhunianov</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=rin-st" title="Documentation">📖</a></td>
   </tr>
 </table>
 
