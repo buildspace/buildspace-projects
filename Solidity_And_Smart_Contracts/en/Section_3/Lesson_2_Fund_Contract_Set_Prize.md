@@ -191,7 +191,7 @@ const runMain = async () => {
 runMain();
 ```
 
-All I did was fund the contract 0.01 ETH like this:
+All I did was fund the contract 0.001 ETH like this:
 
 ```javascript
 const waveContract = await waveContractFactory.deploy({
