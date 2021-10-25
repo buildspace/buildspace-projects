@@ -183,13 +183,13 @@ nftHolderAttributes[newItemId] = CharacterAttributes({
 });
 ```
 
-A lot happening here! Basically, **our NFT holds data related to our player's NFT. But, this data is dynamic. For example,** let's say I create a NFT. My default my NFT starts with default stats like:
+A lot happening here! Basically, **our NFT holds data related to our player's NFT. But, this data is dynamic. For example,** let's say I create a NFT. By default my NFT starts with default stats like:
 
 ```json
 {
   characterIndex: 1,
   name: "Aang",
-  imageURI: https://i.imgur.com/xVu4vFL.png,
+  imageURI: "https://i.imgur.com/xVu4vFL.png",
   hp: 200,
   maxHp: 200,
   attackDamage: 50
@@ -204,7 +204,7 @@ Let's say my character is attacked and loses 50 HP, well then HP would go from 2
 {
   characterIndex: 1,
   name: "Aang",
-  imageURI: https://i.imgur.com/xVu4vFL.png,
+  imageURI: "https://i.imgur.com/xVu4vFL.png",
   hp: 150,
   maxHp: 200,
   attackDamage: 50
