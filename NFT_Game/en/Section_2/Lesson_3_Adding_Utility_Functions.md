@@ -11,7 +11,7 @@ Here's how we're going to setup the function:
 ```solidity
 function checkIfUserHasNFT() public view returns (CharacterAttributes memory) {
   // Get the tokenId of the user's character NFT
-  // If the user has a tokenId in the map, return thier character.
+  // If the user has a tokenId in the map, return their character.
   // Else, return an empty character.
 }
 ```
@@ -22,7 +22,7 @@ The plan here is to return `CharacterAttributes` filled with the state of the us
 function checkIfUserHasNFT() public view returns (CharacterAttributes memory) {
   // Get the tokenId of the user's character NFT
   uint256 userNftTokenId = nftHolders[msg.sender];
-  // If the user has a tokenId in the map, return thier character.
+  // If the user has a tokenId in the map, return their character.
   if (userNftTokenId > 0) {
     return nftHolderAttributes[userNftTokenId];
   }
@@ -56,7 +56,7 @@ You may be asking yourself, "Why are we building functions to get single variabl
 
 ### 💀 Retrieve the boss.
 
-We need to be able to retrieve the boss. Why? Well — when our player is playing the game our will need to be able to show them stuff like the boss's HP, name, image, etc!
+We need to be able to retrieve the boss. Why? Well — when our player is playing the game our app will need to be able to show them stuff like the boss's HP, name, image, etc!
 
 This is also very staright forward just like our `getAllDefaultCharacters` function.
 
