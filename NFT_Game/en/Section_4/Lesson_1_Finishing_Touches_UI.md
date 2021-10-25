@@ -12,7 +12,7 @@ Remember that one `LoadingIndicator` component that was given to you? We are fin
 
 ### 🔁 Adding loading indicators to App.js.
 
-We want to make sure to show to the user that something is happening as we are waiting for our app to figure out which scenario we are in. For this it's pretty simple - just show a loading indicator until all our data comes back.
+We want to ensure the user can see something is happening as we are waiting for our app to figure out which scenario we are in. For this it's pretty simple - just show a loading indicator until all our data comes back.
 
 We need to know when something is loading. This is the perfect scenario for a state property. Start by adding an `isLoading` state property right under your `characterNFT` state like so:
 
@@ -503,22 +503,15 @@ Now that we have this all setup, how do we show and hide our toast? If you look 
 const [gameContract, setGameContract] = useState(null);
 const [boss, setBoss] = useState(null);
 const [attackState, setAttackState] = useState('');
+
 /*
 * Toast state management
 */
+
 const [showToast, setShowToast] = useState(false);
 
 ...
-// State
-const [gameContract, setGameContract] = useState(null);
-const [boss, setBoss] = useState(null);
-const [attackState, setAttackState] = useState('');
-/*
-* Toast state management
-*/
-const [showToast, setShowToast] = useState(false);
 
-...
 const runAttackAction = async () => {
   try {
     if (gameContract) {
