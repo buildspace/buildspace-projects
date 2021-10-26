@@ -507,7 +507,6 @@ const [attackState, setAttackState] = useState('');
 /*
 * Toast state management
 */
-
 const [showToast, setShowToast] = useState(false);
 
 ...
