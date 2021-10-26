@@ -83,7 +83,7 @@ So what you'll need to do is:
 
 1. Deploy again using `npx hardhat run scripts/deploy.js --network rinkeby`
 
-2. Change `contractAddress` in `App.js` to be the new contract address we got from the step above in the terminal just like we did before the first time we deployed.
+2. Change `contractAddress` in `constants.js` to be the new contract address we got from the step above in the terminal just like we did before the first time we deployed.
 
 3. Get the updated abi file from `artifacts` like we did before and copy-paste it into your web app just like we did above.
 
