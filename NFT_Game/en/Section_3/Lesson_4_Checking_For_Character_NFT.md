@@ -11,7 +11,7 @@ Here's the flow of getting our web app connected to our deployed smart contract 
 3. Import [ethers.js](https://github.com/ethers-io/ethers.js) to help us talk to our smart contract from the client.
 4. Call a function on our contract to make it do something!
 
-Pretty straightforward, right? Let's dive in!
+Pretty straight forward, right? Let's dive in!
 
 ### 🏠 Get the latest Smart Contract Address.
 
@@ -37,17 +37,17 @@ import { CONTRACT_ADDRESS } from './constants';
 
 [Loom](https://www.loom.com/share/2d493d687e5e4172ba9d47eeede64a37)
 
-**Please watch, as I go over some important stuff (note this video shows this process happening in another project. Don't worry - it's the same exact flow)**
+**Please give it a watch as I go over some important stuff (note this video shows this process happening in another project. Don't worry - it's the same exact flow)**
 
 When you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
 
-Our web app relies on the ABI file to know how to communicate with our contract. Read about this [here](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
+Our web app relies on the ABI file to know how to communicate with our contract. Read more about it [here](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
 
 The contents of the ABI file can be found in a fancy JSON file in your hardhat project:
 
 `artifacts/contracts/MyEpicGame.sol/MyEpicGame.json`
 
-So, the question becomes: how do we get this JSON file into our frontend? The good 'ol copy / paste method!
+So, the question becomes - how do we get this JSON file into our frontend? The good 'ol copy / paste method!
 
 Copy the contents from your `MyEpicGame.json` file and then head to your web app. You are going to make a new folder called `utils` under `src`. Under `utils` create a file named `MyEpicGame.json`. So the full path will look like: `src/utils/MyEpicGame.json`
 
@@ -107,7 +107,7 @@ Our goal is to call our contract to check if the current wallet address has mint
 
 Remember when we created the `checkIfUserHasNFT` in our smart contract?
 
-If the player minted an NFT, that method will return the character NFT metadata. Else, it will return a blank `CharacterAttributes` struct. So - when do we actually want to call this? 
+If the player minted a NFT, that method will return the character NFT metadata. Else, it will return a blank `CharacterAttributes` struct. So - when do we actually want to call this? 
 
 If we think back to scenario #2:
 
