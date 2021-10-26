@@ -118,8 +118,6 @@ emit AttackComplete(bigBoss.hp, player.hp);
 
 Great! Now we've added the functions that our web app will be using in our game! Give yourself a pat on the back, it's shaping up to be an awesome game! Remember that we'll need to deploy the contract again for us to use these functions.
 
-Feel free to play around wih the new functions your `run.js` file to get a feel for what these functions do. If not don't worry, we'll be working with them in the next section via our web app.
-
 Before we move on to our web app, we'll need to make sure we have a clean contract ready to go. We'll need to ensure our `deploy.js` file doesn't mint any characters to our address or make any attacks.
 
 Here's my `deploy.js` file after I've removed the minting and attacks from our last deploy.
