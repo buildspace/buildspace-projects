@@ -29,18 +29,6 @@ const [isLoading, setIsLoading] = useState(false);
 Next, we are going to need to set the state when we are running async operations, such as as calling `checkIfUserHasNFT` from our contract. We are going to add these setters in both `useEffects` like so:
 
 ```javascript
-// State
-const [currentAccount, setCurrentAccount] = useState(null);
-const [characterNFT, setCharacterNFT] = useState(null);
-/*
-* New state property added here
-*/
-const [isLoading, setIsLoading] = useState(false);
-```
-
-Next, we are going to need to set the state when we are running async operations, such as as calling `checkIfUserHasNFT` from our contract. We are going to add these setters in both `useEffects` like so:
-
-```javascript
 // UseEffects
 useEffect(() => {
   /*
@@ -511,16 +499,6 @@ Since we know our Elon will always be hit with the same value from us, we can ju
 Now that we have this all setup, how do we show and hide our toast? If you look at the CSS there is a class called `show` which will show our toast and if we remove the class, it will hide the toast! We actually need to tweak this just a tad to change dynamically change this class name. We are going to create one more state property and then add some logic to add and remove the `show` class:
 
 ```javascript
-// State
-const [gameContract, setGameContract] = useState(null);
-const [boss, setBoss] = useState(null);
-const [attackState, setAttackState] = useState('');
-/*
-* Toast state management
-*/
-const [showToast, setShowToast] = useState(false);
-
-...
 // State
 const [gameContract, setGameContract] = useState(null);
 const [boss, setBoss] = useState(null);

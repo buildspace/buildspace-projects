@@ -33,19 +33,19 @@ You will notice in each project folder there is an `en` and `es` folder. We are 
 
 If you are contributing to the English version, make sure your changes are done in the `en/` folder. If you are contributing to the Spanish version, make sure to make your changes in the `es/` folder!
 
-Each project aligns with the content on your buildspace dahsboard. Find the file you want to change and open up a Pull Request for it! Someone from the buildspace team will take a look at it ASAP!
+Each project aligns with the content on your buildspace dashboard. Find the file you want to change and open up a Pull Request for it! Someone from the buildspace team will take a look at it ASAP!
 
 ## 🤔 Why take this course on buildspace?
-You have access to all the this content right here in GitHub! Whats the point with signing up with [buildspace](https://buildspace.so)?
+You have access to all of the content right here in GitHub!
 
    ### **Hack With Others And The buildspace Team**
    You and thousands of other devs are in this together. When you sign up for a project, you are placed in a group of devs who are there to help you succeed! Check out our [Discord](https://discord.gg/CFuBU7RJ42) to see what all the hype is about!
 
    ### **Co-Working Sessions**
-   Get access to multiple sessions of collabortive coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
+   Get access to multiple sessions of collaborative coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
 
    ### **Complete A Project. Get A NFT.**
-   Thats right. Be one of the first 100 people to complete your [buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
+   That's right. Be one of the first 100 people to complete your [buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
 
 ## ❗️FAQ
 
@@ -53,7 +53,7 @@ You have access to all the this content right here in GitHub! Whats the point wi
 Feel free to submit an [issue here](https://github.com/zipeducation/buildspace-projects/issues/new/choose) to help us keep track of things that need to be fixed.
 
 ### **How do I make my first contribution?**
-This is awesome! Your first Open Source contributon is always a great one. If you're not entirely sure on how to "Fork" a repo or make a "PR" take a look at these awesome resources from Github:
+This is awesome! Your first Open Source contribution is always a great one. If you're not entirely sure on how to "Fork" a repo or make a "PR" take a look at these awesome resources from Github:
 
 [Fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)<br>
 [Create a pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
@@ -148,6 +148,17 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/dwagmi"><img src="https://avatars.githubusercontent.com/u/92296318?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dwagmi</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=dwagmi" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/msaug"><img src="https://avatars.githubusercontent.com/u/60658558?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mathieu</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=msaug" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/gelopfalcon"><img src="https://avatars.githubusercontent.com/u/4118271?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gerardo Lopez Falcon</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=gelopfalcon" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/rin-st"><img src="https://avatars.githubusercontent.com/u/25638585?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rinat Akhunianov</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=rin-st" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/origami7"><img src="https://avatars.githubusercontent.com/u/1388167?v=4?s=100" width="100px;" alt=""/><br /><sub><b>origami7</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=origami7" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/erhuve"><img src="https://avatars.githubusercontent.com/u/59463268?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raymond</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=erhuve" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.indralukmana.com"><img src="https://avatars.githubusercontent.com/u/4124883?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Indra Lukmana</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=indralukmana" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/asebesta"><img src="https://avatars.githubusercontent.com/u/40212583?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aaron Sebesta</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=asebesta" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.JenniferBland.com"><img src="https://avatars.githubusercontent.com/u/10262857?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jennifer Bland</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ratracegrad" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/aeither"><img src="https://avatars.githubusercontent.com/u/36173828?v=4?s=100" width="100px;" alt=""/><br /><sub><b>aeither</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=aeither" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/adheeshdh"><img src="https://avatars.githubusercontent.com/u/64847482?v=4?s=100" width="100px;" alt=""/><br /><sub><b>adheeshdh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=adheeshdh" title="Documentation">📖</a></td>
   </tr>
 </table>
 
