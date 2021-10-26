@@ -157,6 +157,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/asebesta"><img src="https://avatars.githubusercontent.com/u/40212583?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aaron Sebesta</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=asebesta" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.JenniferBland.com"><img src="https://avatars.githubusercontent.com/u/10262857?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jennifer Bland</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ratracegrad" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/aeither"><img src="https://avatars.githubusercontent.com/u/36173828?v=4?s=100" width="100px;" alt=""/><br /><sub><b>aeither</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=aeither" title="Documentation">📖</a></td>
   </tr>
 </table>
 
