@@ -158,7 +158,7 @@ Next, we just need to check that the **character has HP**, if the character is d
 A few things to note here - 
 
 - You'll also notice the special keyword `require` here. Feel free to read more on it [here](https://ethereum.stackexchange.com/questions/60585/what-difference-between-if-and-require-in-solidity).
-- If you are using VSCode, you may have a warning saying "Function state mutability can be restricted to view". Don't stress! This will all be fixed later on as we odd more here :).
+- If you are using VSCode, you may have a warning saying "Function state mutability can be restricted to view". Don't stress! This will all be fixed later on as we add more here :).
 
 ```solidity
 function attackBoss() public {

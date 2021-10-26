@@ -83,7 +83,7 @@ So what you'll need to do is:
 
 1. Deploy again using `npx hardhat run scripts/deploy.js --network rinkeby`
 
-2. Change `contractAddress` in `App.js` to be the new contract address we got from the step above in the terminal just like we did before the first time we deployed.
+2. Change `contractAddress` in `constants.js` to be the new contract address we got from the step above in the terminal just like we did before the first time we deployed.
 
 3. Get the updated abi file from `artifacts` like we did before and copy-paste it into your web app just like we did above.
 
@@ -193,7 +193,7 @@ const gameContract = new ethers.Contract(
   signer
 );
 
-const characterNFT = await gameContract.checkIfUserHasNFT();
+const txn = await gameContract.checkIfUserHasNFT();
 ```
 
 After we create our provider and signer we are all ready to go to create our contract object! Just know that this line is what actually creates the connection to our contract. It needs: the contract's address, ABI file, and a signer. These are the three things we always need to communicate with contracts on the blockchain.
@@ -203,9 +203,9 @@ With this all setup, we can then finally call the `checkIfUserHasNFT` method. Ag
 Feel free to `console.log(txn)` and see what's in it!
 
 ```javascript
-if (characterNFT.name) {
+if (txn.name) {
   console.log('User has character NFT');
-  setCharacterNFT(transformCharacterData(characterNFT));
+  setCharacterNFT(transformCharacterData(txn));
 } else {
   console.log('No character NFT found!');
 }
