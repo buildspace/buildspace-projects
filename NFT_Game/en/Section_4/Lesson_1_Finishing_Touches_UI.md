@@ -509,16 +509,6 @@ const [attackState, setAttackState] = useState('');
 const [showToast, setShowToast] = useState(false);
 
 ...
-// State
-const [gameContract, setGameContract] = useState(null);
-const [boss, setBoss] = useState(null);
-const [attackState, setAttackState] = useState('');
-/*
-* Toast state management
-*/
-const [showToast, setShowToast] = useState(false);
-
-...
 const runAttackAction = async () => {
   try {
     if (gameContract) {
