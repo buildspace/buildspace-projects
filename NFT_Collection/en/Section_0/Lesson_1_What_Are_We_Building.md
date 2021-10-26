@@ -29,7 +29,7 @@ When you reach the end of this project, you'll be able to earn an NFT.
 
 ![Untitled](https://i.imgur.com/4PliKDj.png)
 
-Note: instead of "Alkes", yours would say name of your cohort — each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT.
+Note: instead of "Alkes", yours would say the name of your cohort — each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT.
 
 
 🛠 What we're building
