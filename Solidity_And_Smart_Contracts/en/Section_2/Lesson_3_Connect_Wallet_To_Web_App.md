@@ -9,7 +9,6 @@ If we're logged in to Metamask, it will automatically inject a special object na
 
 ```jsx
 import React, { useEffect } from "react";
-import { ethers } from "ethers";
 import './App.css';
 
 const App = () => {
@@ -71,7 +70,6 @@ Check out the code below.
 
 ```javascript
 import React, { useEffect, useState } from "react";
-import { ethers } from "ethers";
 import './App.css';
 
 const App = () => {
@@ -144,7 +142,6 @@ We need to create a `connectWallet` button. In the world of Web3, connecting you
 
 ```javascript
 import React, { useEffect, useState } from "react";
-import { ethers } from "ethers";
 import './App.css';
 
 const App = () => {
