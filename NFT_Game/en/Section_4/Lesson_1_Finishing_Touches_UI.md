@@ -438,7 +438,7 @@ return (
     )}
 
     {/* Boss */}
-    {boss && (
+    {showToast && (
       <div className="boss-container">
         <div className={`boss-content  ${attackState}`}>
           <h2>🔥 {boss.name} 🔥</h2>
