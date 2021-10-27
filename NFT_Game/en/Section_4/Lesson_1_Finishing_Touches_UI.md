@@ -113,6 +113,46 @@ const renderContent = () => {
 
 If you disconnect your wallet you should see a circular loading indicator before your connect wallet button shows up!
 
+### 🔁 Adding loading indicators to the Connect to Wallet page.
+
+In our landing page, we whould release the `isLoading` state property to be able show our button.
+
+```javascript
+  // Actions
+  const checkIfWalletIsConnected = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        console.log('Make sure you have MetaMask!');
+        /*
+         * We set isLoading here because we use return in the next line
+         */
+        setIsloading(false);
+        return;
+      } else {
+        console.log('We have the ethereum object', ethereum);
+
+        const accounts = await ethereum.request({ method: 'eth_accounts' });
+
+        if (accounts.length !== 0) {
+          const account = accounts[0];
+          console.log('Found an authorized account:', account);
+          setCurrentAccount(account);
+        } else {
+          console.log('No authorized account found');
+        }
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    /*
+     * We release the state property after all the function logic
+     */
+    setIsLoading(false);
+};
+```
+
 ### 🔁 Adding loading indicators to the Select Character page.
 
 In our `SelectCharacter` Component we are going to be minting a character NFT. This is definitely a cool time to add some cool loading indicator. I have the perfect one in mine 👀
