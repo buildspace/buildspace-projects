@@ -32,9 +32,11 @@ Next, we are going to need to set the state when we are running async operations
 // UseEffects
 useEffect(() => {
   /*
-   * Anytime our component mounts, make sure to immiediately set our loading state
+   * Anytime our component mounts, make sure to immediately set our loading state when the wallet is connected.
    */
-  setIsLoading(true);
+  if (currentAccount !== null) {
+    setIsLoading(true);
+  }
   checkIfWalletIsConnected();
 }, []);
 
