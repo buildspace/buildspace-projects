@@ -138,6 +138,8 @@ useEffect(() => {
     if (txn.name) {
       console.log('User has character NFT');
       setCharacterNFT(transformCharacterData(txn));
+    } else {
+      console.log('No character NFT found');
     }
   };
 
