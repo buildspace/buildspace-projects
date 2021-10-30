@@ -111,7 +111,7 @@ In Solidity land, you setup a function that fetches the boss on your contract. A
 // State
 const [gameContract, setGameContract] = useState(null);
 /*
- * State theat will hold our boss metadata
+ * State that will hold our boss metadata
  */
 const [boss, setBoss] = useState(null);
 
