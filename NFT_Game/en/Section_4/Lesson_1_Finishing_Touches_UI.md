@@ -430,7 +430,7 @@ return (
   <div className="arena-container">
     {/* Add your toast HTML right here */}
     {boss && (
-      <div id="toast" className="show">
+      <div id="toast" className={showToast ? 'show' : ''}>
         <div id="desc">{`💥 ${boss.name} was hit for ${characterNFT.attackDamage}!`}</div>
       </div>
     )}
