@@ -66,7 +66,7 @@ npx hardhat run scripts/sample-script.js
 ```
 
 
-Boom! If see some stuff in your terminal about a contract being deployed -- this means your local environment is set up **and** you also ran/deployed a smart contract to a local blockchain.
+Boom! If you see some stuff in your terminal about a contract being deployed, this means that your local environment is set up **and** you also ran/deployed a smart contract to a local blockchain.
 
 This is pretty epic. We'll get into this more, but basically what's happening here is:
 
