@@ -111,11 +111,7 @@ const renderContent = () => {
 };
 ```
 
-If you disconnect your wallet you should see a circular loading indicator before your connect wallet button shows up!
-
-### 🔁 Adding loading indicators to the Connect to Wallet page.
-
-In our landing page, we whould release the `isLoading` state property to be able show our button.
+If you disconnect your wallet you should see a circular loading indicator. We should release the `isLoading` state property for your connect wallet button to show up!
 
 ```javascript
   // Actions
