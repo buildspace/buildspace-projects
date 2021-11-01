@@ -441,7 +441,7 @@ Let's then add the HTML to render what our toast will look like! Go ahead an add
 return (
   <div className="arena-container">
     {/* Add your toast HTML right here */}
-    {showToast && (
+    {showToast && boss && characterNFT && (
       <div id="toast" className="show">
         <div id="desc">{`💥 ${boss.name} was hit for ${characterNFT.attackDamage}!`}</div>
       </div>
