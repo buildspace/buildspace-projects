@@ -116,16 +116,17 @@ Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_
 
 📝Something Extra: Verify contract on Etherscan.
 ------------------
-If you select the **Contract** tab in Etherscan, you will notice a long list of text characters that starts from `0x608060405234801...` Hmm.. what could that be 🤔 ?
+**Note: This section is totally optional, but is a really cool part about Etherscan that you should understand.**
 
+If you select the **Contract** tab in Etherscan, you will notice a long list of text characters that starts from `0x608060405234801...` Hmm.. what could that be 🤔 ?
 
 ![image](https://user-images.githubusercontent.com/60590919/139609052-f4bba83c-f224-44b1-be74-de8eaf31b403.png)
 
 It turns out that this long, gibberish looking group of characters is actually the bytecodes of the contract which you have deployed! Bytecodes represent a series of opcodes in the EVM that will perform instructions for us onchain.
 
-This is a lot of new information to understand, so don't worry if it doesn't make much sense right now. Take a moment to look up what bytecodes and EVM mean! Use Google or reach out in the `#general-chill-chat` on Discord :). [This is also a cool article](https://ethervm.io/) about EVM opcodes
+This is a lot of new information to understand, so don't worry if it doesn't make much sense right now. Take a moment to look up what bytecodes and EVM mean! Use Google or reach out in the `#general-chill-chat` on Discord :). [This is also a cool article](https://ethervm.io/) about EVM opcodes by the way 🤘.
 
-However bytecodes aren't really readable, but Etherscan has the magic to 'convert' them to something more user friendly. For that magic to work, Etherscan will need your help.
+So, we know that bytecodes aren't readable to us. We want to be able to see the code we wrote right in Etherscan. Luckily, Etherscan has the magic to help us do that!
 
 Notice that there is a prompt that requests us to **Verify and Publish** our contract source code. If we follow the link, we are required to manually select our contract settings and paste our code to publish our source code.
 
@@ -160,7 +161,7 @@ module.exports = {
 
 We are almost there! You may have noticed that the `etherscan` object in our config requires an `apiKey`! This means you will need an account with Etherscan to get this key.
 
-If you don't have an account already, head to https://etherscan.io/register to create a free user account. After which head to your profile settings and under `API-KEYs` create a new apikey 
+If you don't have an account already, head to [https://etherscan.io/register](https://etherscan.io/register) to create a free user account. After which head to your profile settings and under `API-KEYs` create a new apikey 
 
 ![image](https://user-images.githubusercontent.com/60590919/139610459-b590bbc1-0d4e-4e78-920b-c45e61bf2d7e.png)
 
@@ -171,10 +172,8 @@ Sweet you got your API key. Time to head back to your `hardhat.config.js` file a
 We are down to our last step I promise. All that remains now is to run the command
 
 ```
-npx hardhat verify YOUR_CONTRACT_ADDRESS --network rinkeby YOUR_CONSTRUCTOR_ARGUMENTS
+npx hardhat verify YOUR_CONTRACT_ADDRESS --network rinkeby _totalSupply
 ```
-
-Your constuctor arguments will simply be inital `_totalSupply` which you have set in your `run.js` script.
 
 If everything runs smoothly, you should see some outputs in the terminal. Mine looks like this:
 
