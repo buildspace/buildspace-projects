@@ -161,7 +161,9 @@ All that's happening here is we're putting it all together and adding that same 
 
 🛠 Debugging the `finalTokenUri` content
 ------------------------
-Encoding and decoding the tokenURI content can be painful. To make it easier, you can use [this](https://nftpreview.0xdev.codes/) tool. You would just need to pass your finalTokenUri as a query parameter. 
+Now that you have your tokenURI setup, how do we know if it's actually correct? After all, this holds all our data for our NFT! You can use a cool tool like - [NFT Preview](https://nftpreview.0xdev.codes/) to see a quick preview of the image and the contents of the json without deploying it again and again on the opensea testnet. 
+
+To make it easier, you can pass the `tokenURI` code as a query parameter like this,
 
 ```solidity
     string memory finalTokenUri = string(
