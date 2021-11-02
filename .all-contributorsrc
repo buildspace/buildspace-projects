@@ -634,6 +634,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "santbob",
+      "name": "Santhosh Nageshwar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/433789?v=4",
+      "profile": "https://santbob.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
