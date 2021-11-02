@@ -39,7 +39,7 @@ Each project aligns with the content on your buildspace dashboard. Find the file
 You have access to all of the content right here in GitHub!
 
    ### **Hack With Others And The buildspace Team**
-   You and thousands of other devs are in this together. When you sign up for a project, you are placed in a group of devs who are there to help you succeed! Check out our [Discord](https://discord.gg/CFuBU7RJ42) to see what all the hype is about!
+   You and thousands of other devs are in this together. When you sign up for a project, you are placed in a group of devs who are there to help you succeed! Check out our [Discord](https://discord.gg/vPmqZqgpsS) to see what all the hype is about!
 
    ### **Co-Working Sessions**
    Get access to multiple sessions of collaborative coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
