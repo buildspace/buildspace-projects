@@ -643,6 +643,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Gudabu",
+      "name": "Gustavo Burgi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/960197?v=4",
+      "profile": "https://twitter.com/gudabu",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
