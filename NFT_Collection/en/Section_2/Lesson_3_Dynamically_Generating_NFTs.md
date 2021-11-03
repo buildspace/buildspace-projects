@@ -181,7 +181,7 @@ To make it easier, you can pass the `tokenURI` code as a query parameter like th
     );
     console.log("--------------------\n");
 ```
-![image](https://imgur.com/a/cfZiWh8)
+![image](https://i.imgur.com/CsBxROj.png)
 
 🚀 Deploy to Rinkeby
 ------------------
