@@ -166,20 +166,20 @@ Now that you have your tokenURI setup, how do we know if it's actually correct? 
 To make it easier, you can pass the `tokenURI` code as a query parameter like this,
 
 ```solidity
-    string memory finalTokenUri = string(
-        abi.encodePacked("data:application/json;base64,", json)
-    );
+string memory finalTokenUri = string(
+    abi.encodePacked("data:application/json;base64,", json)
+);
 
-    console.log("\n--------------------");
-    console.log(
-        string(
-            abi.encodePacked(
-                "https://nftpreview.0xdev.codes/?code=",
-                finalTokenUri
-            )
+console.log("\n--------------------");
+console.log(
+    string(
+        abi.encodePacked(
+            "https://nftpreview.0xdev.codes/?code=",
+            finalTokenUri
         )
-    );
-    console.log("--------------------\n");
+    )
+);
+console.log("--------------------\n");
 ```
 ![image](https://i.imgur.com/CsBxROj.png)
 
