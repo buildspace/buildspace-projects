@@ -159,6 +159,30 @@ abi.encodePacked("data:application/json;base64,", json)
 
 All that's happening here is we're putting it all together and adding that same old `data:application/json;base64,` we did before and then we append the base64 encoded json!!
 
+🛠 Debugging the `finalTokenUri` content
+------------------------
+Now that you have your tokenURI setup, how do we know if it's actually correct? After all, this holds all our data for our NFT! You can use a cool tool like - [NFT Preview](https://nftpreview.0xdev.codes/) to see a quick preview of the image and the contents of the json without deploying it again and again on the opensea testnet. 
+
+To make it easier, you can pass the `tokenURI` code as a query parameter like this,
+
+```solidity
+string memory finalTokenUri = string(
+    abi.encodePacked("data:application/json;base64,", json)
+);
+
+console.log("\n--------------------");
+console.log(
+    string(
+        abi.encodePacked(
+            "https://nftpreview.0xdev.codes/?code=",
+            finalTokenUri
+        )
+    )
+);
+console.log("--------------------\n");
+```
+![image](https://i.imgur.com/CsBxROj.png)
+
 🚀 Deploy to Rinkeby
 ------------------
 
