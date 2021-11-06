@@ -109,7 +109,7 @@ A lot of stuff going on here.
 
 First thing I do is create two state variables which are sorta like permanent global variables on the contract. Read about them [here](https://ethereum.stackexchange.com/a/25556).
 
-```jsx
+```javascript
 mapping(uint256 => CharacterAttributes) public nftHolderAttributes;
 mapping(address => uint256) public nftHolders;
 ```

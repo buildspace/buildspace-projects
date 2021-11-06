@@ -12,7 +12,7 @@ Note: I recommend downloading the [Solidity extension](https://marketplace.visu
 
 I always like starting with a really basic contract, just to get things going.
 
-```jsx
+```javascript
 // SPDX-License-Identifier: UNLICENSED
 
 pragma solidity ^0.8.0;
@@ -30,25 +30,25 @@ Note: Sometimes VSCode itself will throw errors that aren't actually a problem. 
 
 Let's go line-by-line here.
 
-```jsx
+```javascript
 // SPDX-License-Identifier: UNLICENSED
 ```
 
 Just a fancy comment.  It's called an "SPDX license identifier", feel free to Google what it is :).
 
-```jsx
+```javascript
 pragma solidity ^0.8.0;
 ```
 
 This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use version 0.8.0 of the Solidity compiler, nothing lower. Note, be sure your compiler is set to 0.8.0 in `hardhat.config.js`.
 
-```jsx
+```javascript
 import "hardhat/console.sol";
 ```
 
 Some magic given to us by Hardhat to do some console logs in our contract. It's actually challenging to debug smart contracts but this is one of the goodies Hardhat gives us to make life easier.
 
-```jsx
+```javascript
 contract MyEpicGame {
     constructor() {
         console.log("THIS IS MY GAME CONTRACT. NICE.");
@@ -70,7 +70,7 @@ We're just going to write a custom script that handles those 3 steps for us.
 
 Go into the `scripts` directory and make a file named `run.js`. This is what `run.js` is going to have inside it:
 
-```jsx
+```javascript
 const main = async () => {
   const gameContractFactory = await hre.ethers.getContractFactory('MyEpicGame');
   const gameContract = await gameContractFactory.deploy();
@@ -99,13 +99,13 @@ runMain();
 
 Again going line by line here.
 
-```jsx
+```javascript
 const gameContractFactory = await hre.ethers.getContractFactory('MyEpicGame');
 ```
 
 This will actually compile our contract and generate the necessary files we need to work with our contract under the `artifacts` directory. Go check it out after you run this :).
 
-```jsx
+```javascript
 const gameContract = await gameContractFactory.deploy();
 ```
 
@@ -113,7 +113,7 @@ This is pretty fancy :).
 
 What's happening here is Hardhat will create a local Ethereum network for us, but just for this contract. Then, after the script completes it'll destroy that local network. So, every time you run the contract, it'll be a fresh blockchain. Whats the point? It's kinda like refreshing your local server every time so you always start from a clean slate which makes it easy to debug errors.
 
-```jsx
+```javascript
 await gameContract.deployed();
 ```
 
@@ -121,7 +121,7 @@ We'll wait until our contract is officially mined and deployed to our local bloc
 
 Our `constructor` runs when we actually are fully deployed!
 
-```jsx
+```javascript
 console.log("Contract deployed to:", gameContract.address);
 ```
 
@@ -135,7 +135,7 @@ Before you run this, be sure to change `solidity: "0.8.4",` to `solidity: "0.
 
 Let's run it! Open up your terminal and run:
 
-```jsx
+```javascript
 npx hardhat run scripts/run.js
 ```
 

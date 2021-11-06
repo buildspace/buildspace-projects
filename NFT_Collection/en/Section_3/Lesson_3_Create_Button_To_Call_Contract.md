@@ -35,7 +35,7 @@ const askContractToMintNft = async () => {
 
 This will throw some errors. Don't worry! We'll fix it in a bit. Lets step through the code a bit.
 
-```jsx
+```javascript
 const provider = new ethers.providers.Web3Provider(ethereum);
 const signer = provider.getSigner();
 ```
@@ -46,7 +46,7 @@ A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we 
 
 [Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
 
-```jsx
+```javascript
 const connectedContract = new ethers.Contract(CONTRACT_ADDRESS, myEpicNft.abi, signer);
 ```
 
@@ -54,7 +54,7 @@ We'll cover this in a bit. Just know that this line is what actually **creates t
 
 Notice how I hardcode `const CONTRACT_ADDRESS`? **Be sure to change this variable to the deployed contract address of your latest deployed contract**. If you forgot it or lost it don't worry, just re-deploy the contract and get a new address :).
 
-```jsx
+```javascript
 console.log("Going to pop wallet now to pay gas...")
 let nftTxn = await connectedContract.makeAnEpicNFT();
 
@@ -68,7 +68,7 @@ The rest of the code should already make sense. It looks sorta like the code we 
 
 Finally, we'll want to call this function when someone clicks the "Mint NFT" button.
 
-```jsx
+```javascript
 return (
   {currentAccount === "" ? (
     <button onClick={connectWallet} className="cta-button connect-wallet-button">
@@ -108,7 +108,7 @@ Paste the ABI file contents right there in our new file.
 
 Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file. It's just going to be:
 
-```jsx
+```javascript
 import myEpicNft from './utils/MyEpicNFT.json';
 ```
 
