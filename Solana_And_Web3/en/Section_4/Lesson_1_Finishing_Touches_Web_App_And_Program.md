@@ -2,7 +2,7 @@
 
 Let's say you want to add some new functionality to your Solana program.
 
-I said earlier not to touch `[lib.rs](http://lib.rs)` because working locally and redeploying gets weird.
+I said earlier not to touch `lib.rs` because working locally and redeploying gets weird.
 
 So, basically w/ Solana I almost *never* work on `localnet` usually. It's just really annoying to switch between `localnet` and `devnet` constantly.
 
