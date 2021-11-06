@@ -95,7 +95,7 @@ Now, when you go back to your Phantom wallet you should have 5 SOL associated w/
 
 In your web app, we'll need to install two packages. You may remember installing these for your Anchor project, we'll also be using them in our web app :).
 
-```javascript
+```bash
 npm install @project-serum/anchor @solana/web3.js
 ```
 
@@ -265,7 +265,7 @@ Then, we just need to change up `renderConnectedContainer` to account for two ca
 1. User has connected their wallet, but `BaseAccount` account has **not** been created. Give them a button to create account.
 2. User has connected their wallet, and `BaseAccount` exists, so, render `gifList` and let people submit a GIF.
 
-```javascript
+```jsx
 const renderConnectedContainer = () => {
 	// If we hit this, it means the program account hasn't be initialized.
   if (gifList === null) {

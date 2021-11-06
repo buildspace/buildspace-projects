@@ -16,7 +16,7 @@ Head over to your code and go to `App.js` under `src`. This is where the main
 
 If you have the Phantom Wallet extension installed, it will automatically inject a special object named `solana` into your `window` object that has some magical functions. This means before we do anything, we need to check to see if this exists. If it doesn't exist, let's tell our user to go download it:
 
-```javascript
+```jsx
 /*
  * We are going to be using the useEffect hook!
  */
@@ -87,7 +87,7 @@ export default App;
 
 Nice! Not too bad right? Let's break this down a bit:
 
-```javascript
+```jsx
 const checkIfWalletIsConnected = async () => {
   try {
     const { solana } = window;
@@ -109,7 +109,7 @@ Our function here is checking the `window` object in our DOM to see if the Phant
 
 Since we have tested this project fully with Phantom Wallets, we recommend sticking with that. Nothing is stopping you with exploring or supporting other wallets, though 👀.
 
-```javascript
+```jsx
 useEffect(() => {
   window.addEventListener('load', async (event) => {
     await checkIfWalletIsConnected();
@@ -137,7 +137,7 @@ Basically, **Phantom Wallet doesn't just give our wallet credentials to every we
 
 All we need to do is add one more line to our `checkIfWalletIsConnectedCheck` function. Check out the code below:
 
-```javascript
+```jsx
 const checkIfWalletIsConnected = async () => {
   try {
     const { solana } = window;
@@ -183,7 +183,7 @@ We need to create a `connectWallet` button. In the world of web3, connecting y
 
 Ready for the easiest "Sign Up" experience for your life :)? Check it out:
 
-```javascript
+```jsx
 import { useEffect } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
@@ -285,20 +285,20 @@ You may be thinking now - "*how does our app control when to render or not rende
 
 First you will need to import `useState` into your component like so:
 
-```javascript
+```jsx
 import { useEffect, useState } from 'react';
 ```
 
 Then, right above your `checkIfWalletIsConnected` function go ahead and add the following state declaration:
 
-```javascript
+```jsx
 // State
 const [walletAddress, setWalletAddress] = useState(null);
 ```
 
 Very nice. So now that we are ready to hold some state, let's update a few things in our code here:
 
-```javascript
+```jsx
 import { useEffect, useState } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
@@ -387,7 +387,7 @@ export default App;
 
 Look at all this fancy React. Hype. Lets just go over the changes really quick:
 
-```javascript
+```jsx
 const checkIfWalletIsConnected = async () => {
   try {
     const { solana } = window;
@@ -417,14 +417,14 @@ const checkIfWalletIsConnected = async () => {
 
 I think this is pretty self explanatory. We just connected our Phantom Wallet and now received the data from the user's wallet. Now that we have that, let's go ahead and save that in our state to use later. 
 
-```javascript
+```jsx
 {/* Add the condition to show this only if we don't have a wallet address */}
 {!walletAddress && renderNotConnectedContainer()}
 ```
 
 This is a pretty cool piece of code. We are telling React to only call this render method if there is no `walletAddress` set in our state. This is called **conditional rendering** and it will help us keep track of the different states we want to show in our app!
 
-```javascript
+```jsx
 {/* This was solely added for some styling fanciness */}
 <div className={walletAddress ? 'authed-container' : 'container'}>
 ```
@@ -437,7 +437,7 @@ We are almost there! If you click on your spicy new button you notice it still d
 
 Remember that one function we setup, but didn't add any logic to it yet? It's time to add the connect logic to `connectWallet` :
 
-```javascript
+```jsx
 const connectWallet = async () => {
   const { solana } = window;
 
