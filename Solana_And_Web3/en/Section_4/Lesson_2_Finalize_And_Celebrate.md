@@ -26,15 +26,20 @@ Be sure you click "Work in Web3" on the left and fill out your profile if you ha
 
 We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 1-hour pls pls pls drop us a message in #feedback and tag @ davbarrick#0001.
 
+
 ### **🌈 Before you head out.**
 
 Go to **#showcase** in Discord and drop us a link to your final product that we can mess around with :).
 
-Also, you should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Maybe even make a little video showing off your project and attach that to the tweet. Make your tweet look pretty and show off!!
+Also, you should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Also, when you get your NFT be sure to save the file to your computer and attach it to your tweet directly. Looks better that way ;).
 
-And if you feel up to it, tag @_buildspace :). **It gives us a ton of motivation whenever we see people ship their projects.** Plus, you can inspire someone else to get into Solana.
+**We made sure to make the NFT look super cool so you can impress the Twitter-verse!!**
 
-Give us that dopamine hit pls.
+It may sounds weird, but, you being excited about your NFT and Solana on Twitter will likely inspire tons of other devs get into this stuff as well!
+
+Be sure to tag @_buildspace :). We'll RT you!
+
+Give us that dopamine hit pls lol.
 
 Lastly, what would also be awesome is if you told us in #feedback how you liked this project and the structure of the project. What did you love most about buildspace? What sucked? What would like us to change for future projects? Your feedback would be awesome!
 
