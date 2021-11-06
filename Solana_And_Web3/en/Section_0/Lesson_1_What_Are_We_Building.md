@@ -42,7 +42,7 @@ At the very least, drop a ⭐ on the repo if you're feeling fancy!
 
 Let's get you some open-source rep!!!
 
-### **🚨Curious about working in web3?**
+### 👀 **Curious about working in web3?**
 
 **People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
 
@@ -57,3 +57,10 @@ We got companies like OpenSea, Edge and Node, and Chainlink as partners. **Even
 Worst case scenario, you get to talk to some really cool people in web3.
 
 Just do it really quick right now :).
+
+### 🚨 Progress Report
+
+*Please do this else Farza will be sad :(*
+
+Hey! This project is all about GIFs, go ahead and post a GIF you like in `#progress` in the Discord. I like [Giphy](https://giphy.com) for all my GIF needs :).
+**
