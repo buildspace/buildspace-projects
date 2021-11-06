@@ -45,7 +45,7 @@ You may be asking yourself, "Why did it re-deploy? Why isn't it just talking to 
 
 So, we now have a deployed Solana program. Let's connect it up to our web app :).
 
-The first thing we need is the `idl` file that was magically output by `anchor build` earlier without you knowing. You should see it in `target/idl/mysolanaapp.json`.
+The first thing we need is the `idl` file that was magically output by `anchor build` earlier without you knowing. You should see it in `target/idl/myepicproject.json`.
 
 The `idl` file is actually just a JSON file that has some info about our Solana program like the names of our functions and the parameters they accept. This helps our web app actually know how to interact w/ our deployed program.
 
@@ -55,11 +55,11 @@ You'll also see near the bottom it has our program id! This is how our web app w
 
 *Note: if you don't see the idl file or you don't see an "address" parameter near the bottom, then something has gone wrong! Start again from the "Deploy program to the devnet" section of the project.*
 
-Go ahead and copy all the content in `target/idl/mysolanaapp.json`.
+Go ahead and copy all the content in `target/idl/myepicproject.json`.
 
 Head over to your web app.
 
-In the `src` directory of your react app **create an empty file** named `idl.json`. It should be in the same directory as `App.js`. So for me, I have the file at `app/src/idl.json`. Once you create the file, paste the content of `target/idl/mysolanaapp.json` into your newly created `app/src/idl.json`.
+In the `src` directory of your react app **create an empty file** named `idl.json`. It should be in the same directory as `App.js`. So for me, I have the file at `app/src/idl.json`. Once you create the file, paste the content of `target/idl/myepicproject.json` into your newly created `app/src/idl.json`.
 
 Finally, in `App.js`, go ahead and drop this in as an import:
 
