@@ -8,7 +8,7 @@ Thank you for contributing to the future of web3 by learning this stuff. The fac
 
 Tons of people have also gotten full-time jobs at top web3 companies via buildspace. I'm constantly seeing people nail their interviews after they do a few buildspace projects.
 
-![https://camo.githubusercontent.com/c467ff4530007751ca0ab96c2122734535946d62ac5111716c7c82a73a3f6a50/68747470733a2f2f692e696d6775722e636f6d2f5172466a6c4e482e706e67](https://camo.githubusercontent.com/c467ff4530007751ca0ab96c2122734535946d62ac5111716c7c82a73a3f6a50/68747470733a2f2f692e696d6775722e636f6d2f5172466a6c4e482e706e67)
+![Untitled](https://camo.githubusercontent.com/c467ff4530007751ca0ab96c2122734535946d62ac5111716c7c82a73a3f6a50/68747470733a2f2f692e696d6775722e636f6d2f5172466a6c4e482e706e67)
 
 **People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
 
