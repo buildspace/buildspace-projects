@@ -113,7 +113,7 @@ All this gives me is easy access to each character. For example, I can just do `
 
 We then need to update `run.js`. Here's what that looks like:
 
-```jsx
+```javascript
 const main = async () => {
   const gameContractFactory = await hre.ethers.getContractFactory('MyEpicGame');
   const gameContract = await gameContractFactory.deploy(
