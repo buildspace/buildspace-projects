@@ -318,8 +318,9 @@ So, here we created an account *and then* retrieved the account itself!! And, `g
 
 **So, now you'll notice that every time we refresh the page — it asks us to create an account again. We'll fix this later but why does this happen? I made a little video about it below**
 
-**<insert video>**
-gd
+[Loom](https://www.loom.com/share/47d59f74f39c4447a50f0f35145d0792)
+
+
 ### 🚨 Progress Report
 
 *Please do this else Farza will be sad :(*
