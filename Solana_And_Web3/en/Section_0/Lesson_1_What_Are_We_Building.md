@@ -16,7 +16,7 @@ Few action items for you before moving on:
 
 So what will we be building here :)? Here's a little video:
 
-<insert video here>
+[Loom](https://www.loom.com/share/545522add8514005a91ececac5abdab2)
 
 ### **💎 Earning a NFT.**
 
@@ -24,7 +24,7 @@ When you reach the end of this project, you'll be able to earn an NFT.
 
 **We'll airdrop a NFT to your connected wallet if you finish the project within 7-days of the kick-off.**
 
-<insert video here>
+[Loom](https://www.loom.com/share/34fdda64cee643c7ba3e0e936e8a7c73)
 
 **Note: Each cohort is named after a star (ex. [Alkes](https://www.star-facts.com/alkes/), [Beid](https://www.universeguide.com/star/19587/beid), etc)! Also, the # at the bottom will be the # minted which depends on when you finish! Each NFT is unique.** 
 
