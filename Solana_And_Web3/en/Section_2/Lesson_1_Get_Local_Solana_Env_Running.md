@@ -90,8 +90,6 @@ The last thing to test is we want to make sure we can get a **local Solana node 
 solana-test-validator
 ```
 
-*Note: Are you on an M1 Mac? I'm sorry but stuff will be very very jank for you. You'll likely get an error like `illegal hardware instruction`. [Here's](https://github.com/project-serum/anchor/issues/95#issuecomment-913090162) one solution. Basically, M1 is still not supported by lots of different tooling in the crypto ecosystem. You can get it working, but, just a little jank. The solution so far has been to do following the instructions from that Github issue and then use`solana-test-validator --no-bpf-jit` instead. If you have further troubles, ping Nick_G#4818 or dimfeld#9450 in Discord.*
-
 This may take a bit to get started but once it's going you should see something like this:
 
 ![Untitled](https://i.imgur.com/F2YwcAB.png)
@@ -99,6 +97,9 @@ This may take a bit to get started but once it's going you should see something 
 Boom!! You're now running a local validator. Pretty cool :).
 
 Now, go ahead and CONTROL + C to stop the validator. **We're never going to actually use `solana-test-validator` manually ourselves again.** The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;). 
+
+### 💻 M1 Macs
+Are you on an M1 Mac? I'm sorry but stuff will be very very jank for you. You'll likely get an error like `illegal hardware instruction`. [Here's](https://github.com/project-serum/anchor/issues/95#issuecomment-913090162) one solution. Basically, M1 is still not supported by lots of different tooling in the crypto ecosystem. You can get it working, but, just a little jank. The solution so far has been to follow the instructions from that Github issue and then use`solana-test-validator --no-bpf-jit` instead. If you have further troubles, ping Nick_G#4818 or dimfeld#9450 in Discord. If you figure new stuff out, please make a PR and spread the knowledge!
 
 ### ☕️ Install Node, NPM, and Mocha
 
