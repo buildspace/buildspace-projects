@@ -16,7 +16,7 @@ It's going to be **PRETTY HYPE.**
 
 One thing we really love at buildspace is the insane creativity people put into their projects. Make this project your own and do things however you see fit.
 
-**If all you doing is copy/pasting code then this won't be that fun.**
+**If all you're doing is copy/pasting code then this won't be that fun.**
 
 The base web app code I provide is just to get you started. Change things up. Maybe you hate the colors I used. Change it. Maybe you want to make the site more anime themed. Do it.
 
