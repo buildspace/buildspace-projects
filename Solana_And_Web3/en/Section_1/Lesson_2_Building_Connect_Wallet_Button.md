@@ -222,7 +222,7 @@ const App = () => {
   const connectWallet = async () => {};
 
   /*
-   * We want to render this UI when the user hasn't conencted
+   * We want to render this UI when the user hasn't connected
    * their wallet to our app yet.
    */
   const renderNotConnectedContainer = () => (
@@ -249,7 +249,7 @@ const App = () => {
           <p className="sub-text">
             View your GIF collection in the metaverse ✨
           </p>
-          {/* Render your conenct to wallet button right here */}
+          {/* Render your connect to wallet button right here */}
           {renderNotConnectedContainer()}
         </div>
         <div className="footer-container">

@@ -50,6 +50,8 @@ As long as all those commands output a version and didn't error, you're good to 
 
 ### 🔥 Install Solana
 
+*Note: If you're on Windows or an M1 Mac prepare to debug stuff, this will likely not be ezpz. Be strong my friend lol.*
+
 Solana has a super nice CLI that's going to be helpful later when we want to test the programs we write.
 
 Again, the installation steps are pretty straight forward [here](https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool). There are clear steps for getting the Solana CLI installed for Windows, Linux, and Mac.
@@ -98,8 +100,14 @@ Boom!! You're now running a local validator. Pretty cool :).
 
 Now, go ahead and CONTROL + C to stop the validator. **We're never going to actually use `solana-test-validator` manually ourselves again.** The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;). 
 
-### 💻 M1 Macs
-Are you on an M1 Mac? I'm sorry but stuff will be very very jank for you. You'll likely get an error like `illegal hardware instruction`. [Here's](https://github.com/project-serum/anchor/issues/95#issuecomment-913090162) one solution. Basically, M1 is still not supported by lots of different tooling in the crypto ecosystem. You can get it working, but, just a little jank. The solution so far has been to follow the instructions from that Github issue and then use`solana-test-validator --no-bpf-jit` instead. If you have further troubles, ping Nick_G#4818 or dimfeld#9450 in Discord. If you figure new stuff out, please make a PR and spread the knowledge!
+### 💻 M1 Macs and Windows
+Are you on an M1 Mac?
+
+I'm sorry but stuff will be very very jank for you. You'll likely get an error like `illegal hardware instruction`. [Here's](https://github.com/project-serum/anchor/issues/95#issuecomment-913090162) one solution. Basically, M1 is still not supported by lots of different tooling in the crypto ecosystem. You can get it working, but, just a little jank. The solution so far has been to follow the instructions from that Github issue and then use`solana-test-validator --no-bpf-jit` instead. If you have further troubles, ping Nick_G#4818 or dimfeld#9450 in Discord. If you figure new stuff out, please make a PR and spread the knowledge!
+
+Are you on Windows?
+
+I had no issue installing everything on Windows! I think if you've hit a wall, just use [WSL](https://docs.microsoft.com/en-us/windows/wsl/setup/environment) and start the installation again, but, follow the instructions for Linux instead of Windows.
 
 ### ☕️ Install Node, NPM, and Mocha
 
@@ -121,7 +129,7 @@ Anchor is a *really early projec*t run by a few core devs. You're bound to run i
 
 *Seriously — join that Discord, the devs are really helpful.*
 
-Installing this thing was a little troublesome for me, but, I got it working via the steps below! We're going to build it from source. *Note: If you're on Linux, there are some special instructions you can follow [here](https://project-serum.github.io/anchor/getting-started/installation.html#install-anchor). Mac and Windows below.*
+Installing this thing was a little troublesome for me, but, I got it working via the steps below! We're going to build it from source. *Note: If you're on Linux, there are some special instructions you can follow [here](https://project-serum.github.io/anchor/getting-started/installation.html#install-anchor). Mac and Windows below. Also, if you're using Linux for Windows, follow the Linux commands!*
 
 To install Anchor, go ahead an run:
 
@@ -157,6 +165,7 @@ cd myepicproject
 ```
 
 `anchor init` will create a bunch of files/folders for us. It's sorta like `create-react-app` in a way. We'll check out all the stuff it's created in moment.
+
 
 ### 🔑 Create a local keypair.
 
