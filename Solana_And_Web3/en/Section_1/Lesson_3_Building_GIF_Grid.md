@@ -31,7 +31,7 @@ Maybe you want your website to be only anime themed GIFs. Maybe you want to it o
 
 **Change your website's title and description to match the type of GIFs you want people to submit.**
 
-```javascript
+```jsx
 // Change this stuff. Make it themed to something you're interested in.
 // Ex. memes, music, games, cute animals, whatever!
 <p className="header">🖼 GIF Portal</p> 
@@ -46,7 +46,7 @@ NICE. We have some spicy GIFs to test out our app with now. So, how are we going
 
 Let's start by creating a new function called `renderConnectedContainer`  right under the `renderNotConnectedContainer`. This will have some simple UI code that will map through all our GIF links and render them:
 
-```javascript
+```jsx
 const renderConnectedContainer = () => (
   <div className="connected-container">
     <div className="gif-grid">
@@ -117,7 +117,7 @@ It's time for us to think about how other people can add their own GIFs to our a
 
 Let's get started with the input. We only want this input box to be shown when the user has connected their wallet to our app. So, that means we will want to add this code to our `renderConnectedContainer` render method:
 
-```javascript
+```jsx
 const renderConnectedContainer = () => (
   <div className="connected-container">
     {/* Go ahead and add this input and button to start */}
@@ -152,7 +152,7 @@ const [inputValue, setInputValue] = useState('');
 
 Psh - EASY. Now we just need to hook this up to our input element! Head over to your `input` element and change it to look like this:
 
-```javascript
+```jsx
 <input
   type="text"
   placeholder="Enter gif link!"
@@ -196,7 +196,7 @@ Wait a second, nothing happened?
 
 That's because we need to pass this method into the `onClick` attribute on our submit button! Easy. Just change up the submit `button` to call `sendGif`.
 
-```javascript
+```jsx
 <button className="cta-button submit-gif-button" onClick={sendGif}>
   Submit
 </button>
@@ -233,7 +233,7 @@ Then we need to go ahead and setup another `useEffect` that will get called when
 
 Right under your current `useEffect` **create another** `useEffect`.
 
-```javascript
+```jsx
 useEffect(() => {
   window.addEventListener('load', async (event) => {
     await checkIfWalletIsConnected();
@@ -256,7 +256,7 @@ All we are saying here is if we have a `walletAddress` go ahead and run our fetc
 
 So, once our test data is set, we want to use it! For this we are going to head back to the `renderConnectedContainer` function and make a one line change:
 
-```javascript
+```jsx
 const renderConnectedContainer = () => (
     <div className="connected-container">
       <input

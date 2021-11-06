@@ -59,7 +59,7 @@ All this script does is it will write a key pair directly to our file system, th
 
 When you're ready to run this go ahead and do:
 
-```javascript
+```bash
 cd src
 node createKeyPair.js
 ```
