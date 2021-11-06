@@ -31,8 +31,6 @@ Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to th
 ```bash
 mkdir my-wave-portal
 cd my-wave-portal
-npm init -y
-npm install --save-dev hardhat
 ```
 
 👏 Get sample project going
@@ -53,7 +51,7 @@ The sample project will ask you to install hardhat-waffle and hardhat-ethers. Th
 Go ahead and install these other dependencies just in case it didn't do it automatically.
 
 ```bash
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+npm install --save-dev hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 ```
 
 Finally, run `npx hardhat accounts` and this should print out a bunch of strings that look like this: 
