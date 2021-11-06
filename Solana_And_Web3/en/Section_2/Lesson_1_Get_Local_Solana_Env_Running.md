@@ -90,7 +90,7 @@ The last thing to test is we want to make sure we can get a **local Solana node 
 solana-test-validator
 ```
 
-Note: Are you on an M1 Mac? I'm sorry but stuff will be a little jank for you. You'll likely get an error like `illegal hardware instruction`. [Here's](https://github.com/project-serum/anchor/issues/95#issuecomment-913090162) one solution. If you have further troubles, ping Nick_G#4818 in Discord. Basically, M1 is still not supported by lots of different tooling in the crypto ecosystem. You can get it working, but, just a little jank.
+*Note: Are you on an M1 Mac? I'm sorry but stuff will be very very jank for you. You'll likely get an error like `illegal hardware instruction`. [Here's](https://github.com/project-serum/anchor/issues/95#issuecomment-913090162) one solution. Basically, M1 is still not supported by lots of different tooling in the crypto ecosystem. You can get it working, but, just a little jank. The solution so far has been to do following the instructions from that Github issue and then use`solana-test-validator --no-bpf-jit` instead. If you have further troubles, ping Nick_G#4818 or dimfeld#9450 in Discord.*
 
 This may take a bit to get started but once it's going you should see something like this:
 
