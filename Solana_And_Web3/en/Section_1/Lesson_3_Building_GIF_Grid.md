@@ -138,7 +138,9 @@ The main things we added here are an `input` box and a submit `button` .
 
 You can write in this input box and click the button, but you will notice nothing happens! We still need to write the logic and wire it up to this button click.
 
-For this, we are going to use a couple cool new attributes on our `input`: `value` and `onChange`! `value`, is well, the value of what you entered in the input box. `onChange` is a function that gets fired every time the input box value changes. Again, if you're already a React Pro — you can blaze through this stuff.
+For this, we are going to use a couple cool new attributes.
+
+`onChange` is a function that gets fired every time the input box value changes. Again, if you're already a React Pro — you can blaze through this stuff.
 
 To get this to work properly we are going to need to create a new state property called `inputValue` . Let's start there -
 
