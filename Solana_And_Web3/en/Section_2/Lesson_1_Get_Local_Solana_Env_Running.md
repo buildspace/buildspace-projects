@@ -104,11 +104,11 @@ Now, go ahead and CONTROL + C to stop the validator. **We're never going to actu
 ### 💻 M1 Macs and Windows
 Are you on an M1 Mac?
 
-I'm sorry but stuff will be very very jank for you. You'll likely get an error like `illegal hardware instruction`. [Here's](https://github.com/project-serum/anchor/issues/95#issuecomment-913090162) one solution. Basically, M1 is still not supported by lots of different tooling in the crypto ecosystem. You can get it working, but, just a little jank. The solution so far has been to follow the instructions from that Github issue and then use`solana-test-validator --no-bpf-jit` instead. If you have further troubles, ping Nick_G#4818 or dimfeld#9450 in Discord. If you figure new stuff out, please make a PR and spread the knowledge!
+I'm sorry but stuff will be very very jank for you. You'll likely get an error like `illegal hardware instruction`. [Here's](https://github.com/project-serum/anchor/issues/95#issuecomment-913090162) one solution. Basically, M1 is still not supported by lots of different tooling in the crypto ecosystem. You can get it working, but, just a little jank. The solution so far has been to follow the instructions from that Github issue and then use`solana-test-validator --no-bpf-jit` instead. If you have further troubles, ping Nick_G#4818 or dimfeld#9450 in Discord. If you figure new stuff out, please make a PR and spread the knowledge! Nick also wrote this up [here](https://chartreuse-freeze-f9f.notion.site/Mac-M1-Solana-Guide-71371198056f45ed8d1f8c77cba99c73).
 
 Are you on Windows?
 
-I had no issue installing everything on Windows! I think if you've hit a wall, just use [WSL](https://docs.microsoft.com/en-us/windows/wsl/setup/environment) and start the installation again, but, follow the instructions for Linux instead of Windows.
+You'll need [WSL](https://docs.microsoft.com/en-us/windows/wsl/setup/environment) and then you'll need to start the installation again from the top, but, follow the instructions for Linux instead of Windows.
 
 ### ☕️ Install Node, NPM, and Mocha
 
