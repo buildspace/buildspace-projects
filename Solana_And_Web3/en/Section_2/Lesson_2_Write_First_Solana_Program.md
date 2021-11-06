@@ -8,7 +8,7 @@ You'll see all the magic stuff Anchor has generated for us here.
 
 ### 👶 A basic program.
 
-Let's write our first Solana program! This Rust code is going to live in the `[lib.rs](http://lib.rs)` file. 
+Let's write our first Solana program! This Rust code is going to live in the `lib.rs` file. 
 
 Here's what it looks like:
 

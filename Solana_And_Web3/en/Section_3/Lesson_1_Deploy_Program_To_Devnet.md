@@ -142,7 +142,7 @@ This of course is not "Mainnet", but the "Devnet" is run by actual miners and is
 
 **There aren't that many "Solana developers". So this point you're probably in the top 10% of Solana developers lol. Congrats!**
 
-*Note: From this point on, please don't make changes to [lib.rs](http://lib.rs) until I say so. Basically, whenever you change your program you need to redeploy and follow the steps above all over again. I always easily miss steps and get weird bugs lol. Let's focus on the web app now, and after I'll show you a good workflow for changing your program + redeploying after!*
+*Note: From this point on, please don't make changes to lib.rs until I say so. Basically, whenever you change your program you need to redeploy and follow the steps above all over again. I always easily miss steps and get weird bugs lol. Let's focus on the web app now, and after I'll show you a good workflow for changing your program + redeploying after!*
 
 ### 🚨 Progress Report
 
