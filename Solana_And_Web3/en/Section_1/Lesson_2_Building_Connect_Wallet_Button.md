@@ -135,7 +135,7 @@ Next, we need to actually check if we're **authorized** to actually access the u
 
 Basically, **Phantom Wallet doesn't just give our wallet credentials to every website we go to**. It only gives it to websites we authorize. Again, it's just like logging in! But, what we're doing here is **checking if we're "logged in".**
 
-All we need to do is add one more line to our `checkIfWalletIsConnectedCheck` function. Check out the code below:
+All we need to do is add one more line to our `checkIfWalletIsConnected` function. Check out the code below:
 
 ```jsx
 const checkIfWalletIsConnected = async () => {
