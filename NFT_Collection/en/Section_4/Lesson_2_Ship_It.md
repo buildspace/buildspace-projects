@@ -80,7 +80,7 @@ npm i -D @nomiclabs/hardhat-etherscan
 ```
 
 Then in your `hardhat.config.js` add the following
-```
+```javascript
 require("@nomiclabs/hardhat-etherscan");
 
 // Rest of code

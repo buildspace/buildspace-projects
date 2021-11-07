@@ -112,7 +112,6 @@ Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_
 
 ![Untitled](https://i.imgur.com/Z2mKTpK.png)
 
-
 🚨Progress report.
 ------------------------
 If you get a fancy NFT, make sure to send a screenshot in #progress of it on OpenSea :).
