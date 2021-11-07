@@ -54,9 +54,11 @@ const App = () => {
    * Phantom Wallet
    */
   useEffect(() => {
-    window.addEventListener('load', async (event) => {
+    const onLoad = async () => {
       await checkIfWalletIsConnected();
-    });
+    };
+    window.addEventListener('load', onLoad);
+    return () => window.removeEventListener('load', onLoad);
   }, []);
 
   return (
@@ -111,9 +113,11 @@ Since we have tested this project fully with Phantom Wallets, we recommend stick
 
 ```jsx
 useEffect(() => {
-  window.addEventListener('load', async (event) => {
+  const onLoad = async () => {
     await checkIfWalletIsConnected();
-  });
+  };
+  window.addEventListener('load', onLoad);
+  return () => window.removeEventListener('load', onLoad);
 }, []);
 ```
 
@@ -236,9 +240,11 @@ const App = () => {
 
   // UseEffects
   useEffect(() => {
-    window.addEventListener('load', async (event) => {
+    const onLoad = async () => {
       await checkIfWalletIsConnected();
-    });
+    };
+    window.addEventListener('load', onLoad);
+    return () => window.removeEventListener('load', onLoad);
   }, []);
 
   return (
@@ -351,9 +357,11 @@ const App = () => {
 
   // UseEffects
   useEffect(() => {
-    window.addEventListener('load', async (event) => {
+    const onLoad = async () => {
       await checkIfWalletIsConnected();
-    });
+    };
+    window.addEventListener('load', onLoad);
+    return () => window.removeEventListener('load', onLoad);
   }, []);
 
   return (
