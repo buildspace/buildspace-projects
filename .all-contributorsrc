@@ -769,6 +769,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "danicuki",
+      "name": "Daniel Cukier",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77552?v=4",
+      "profile": "http://www.agileandart.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
