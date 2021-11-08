@@ -175,6 +175,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/Meyanis95"><img src="https://avatars.githubusercontent.com/u/67648863?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Meyanis95</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Meyanis95" title="Documentation">📖</a></td>
     <td align="center"><a href="http://jcstein.dev"><img src="https://avatars.githubusercontent.com/u/46639943?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jcs.sol</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jcstein" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://keviningersoll.com"><img src="https://avatars.githubusercontent.com/u/508855?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Ingersoll</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=holic" title="Documentation">📖</a></td>
   </tr>
 </table>
 
