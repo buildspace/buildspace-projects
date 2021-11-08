@@ -170,6 +170,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ericc572"><img src="https://avatars.githubusercontent.com/u/8264400?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Eric Chen</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ericc572" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/chee-chyuan"><img src="https://avatars.githubusercontent.com/u/60590919?v=4?s=100" width="100px;" alt=""/><br /><sub><b>chee-chyuan</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=chee-chyuan" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/stefanofa"><img src="https://avatars.githubusercontent.com/u/9802152?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stefano Faieta</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=stefanofa" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/smckisson"><img src="https://avatars.githubusercontent.com/u/8572416?v=4?s=100" width="100px;" alt=""/><br /><sub><b>smckisson</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=smckisson" title="Documentation">📖</a></td>
   </tr>
 </table>
 
