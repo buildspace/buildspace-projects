@@ -124,7 +124,7 @@ If you disconnect your wallet you should see a circular loading indicator. We sh
         /*
          * We set isLoading here because we use return in the next line
          */
-        setIsloading(false);
+        setIsLoading(false);
         return;
       } else {
         console.log('We have the ethereum object', ethereum);
