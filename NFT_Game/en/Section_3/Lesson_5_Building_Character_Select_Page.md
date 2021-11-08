@@ -2,16 +2,8 @@ We are looking great right now. We have setup two scenarios and got the basics d
 
 Now that we are able to interact with our Smart Contract from our UI and we have created our `SelectCharacter` Component, we can easily grab all mint-able characters from our Smart Contract and display them in our UI. Let's jump right in.
 
-### ⚠️ Note: Deploy.js Check Before You Start
-Before you begin this lesson be sure to remove any function calls and transactions to mint a character or attack a boss in your `scripts/deploy.js` file located found in your solidity contract project folder. This will prevent numerous component mounting errors. 
-```javascript
-  let txn;
-  txn = await gameContract.mintCharacterNFT(2);
-  await txn.wait();
-
-  txn = await gameContract.attackBoss();
-  await txn.wait();
-```
+### 👀 Just one more thing.
+Before you begin, be sure to remove any function calls to mint a character or attack a boss in your `scripts/deploy.js` file! This will help prevent some React state errors in your UI.
 
 ### ♻️ Setting up a reusable contract object.
 
