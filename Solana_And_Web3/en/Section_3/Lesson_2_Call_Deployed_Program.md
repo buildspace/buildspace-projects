@@ -59,7 +59,7 @@ Go ahead and copy all the content in `target/idl/myepicproject.json`.
 
 Head over to your web app.
 
-In the `src` directory of your react app **create an empty file** named `idl.json`. It should be in the same directory as `App.js`. So for me, I have the file at `app/src/idl.json`. Once you create the file, paste the content of `target/idl/myepicproject.json.json` into your newly created `app/src/idl.json`.
+In the `src` directory of your react app **create an empty file** named `idl.json`. It should be in the same directory as `App.js`. So for me, I have the file at `app/src/idl.json`. Once you create the file, paste the content of `target/idl/myepicproject.json` into your newly created `app/src/idl.json`.
 
 Finally, in `App.js`, go ahead and drop this in as an import:
 
