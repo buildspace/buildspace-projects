@@ -679,6 +679,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "stefanofa",
+      "name": "Stefano Faieta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9802152?v=4",
+      "profile": "https://github.com/stefanofa",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
