@@ -168,6 +168,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://twitter.com/gudabu"><img src="https://avatars.githubusercontent.com/u/960197?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gustavo Burgi</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Gudabu" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Utkarshbhimte"><img src="https://avatars.githubusercontent.com/u/13379773?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Utkarsh Bhimte</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Utkarshbhimte" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ericc572"><img src="https://avatars.githubusercontent.com/u/8264400?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Eric Chen</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ericc572" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/chee-chyuan"><img src="https://avatars.githubusercontent.com/u/60590919?v=4?s=100" width="100px;" alt=""/><br /><sub><b>chee-chyuan</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=chee-chyuan" title="Documentation">📖</a></td>
   </tr>
 </table>
 
