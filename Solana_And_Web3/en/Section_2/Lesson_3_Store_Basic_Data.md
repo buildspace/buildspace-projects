@@ -67,7 +67,7 @@ pub struct BaseAccount {
 
 This is dope. Basically, it tells our program what kinda of account it can make and what to hold inside of it. So, here, `BaseAccount` holds one thing and it's an integer named `total_gifs`.
 
-Then, here we actually specific how to initialize it and what to hold in our `StartStuffOff` context.
+Then, here we actually specify how to initialize it and what to hold in our `StartStuffOff` context.
 
 ```rust
 #[derive(Accounts)]
