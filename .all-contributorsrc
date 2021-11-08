@@ -706,6 +706,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jcstein",
+      "name": "jcs.sol",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46639943?v=4",
+      "profile": "http://jcstein.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
