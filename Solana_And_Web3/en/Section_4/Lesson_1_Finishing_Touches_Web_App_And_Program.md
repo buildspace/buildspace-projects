@@ -12,7 +12,7 @@ Then, when I'm ready to test the updates to my program on my web app — I just 
 
 **Whenever you re-deploy, you need to update the IDL file on your web app**
 
-Just like before, you'd copy the contents of the the updated IDL from your Solana project at `target/idl/mysolanaapp.json` and then paste the contents of it to `app/src/idl.json` in your web app.=
+Just like before, you'd copy the contents of the the updated IDL from your Solana project at `target/idl/myepicproject.json` and then paste the contents of it to `app/src/idl.json` in your web app.=
 
 Now, I want to go over a couple of **optional** features you could add in that I think would be fun. Again, these are optional. I also won't be guiding you on how to build them. Will leave it to you to figure out.
 
