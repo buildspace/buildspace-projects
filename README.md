@@ -179,6 +179,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ABusyHippie"><img src="https://avatars.githubusercontent.com/u/25873736?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Business Hippie</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ABusyHippie" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/0xPeterPan"><img src="https://avatars.githubusercontent.com/u/93852969?v=4?s=100" width="100px;" alt=""/><br /><sub><b>0xPeterPan</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xPeterPan" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/joshmayr"><img src="https://avatars.githubusercontent.com/u/32174905?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Josh Mayr</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=joshmayr" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/denishrana09"><img src="https://avatars.githubusercontent.com/u/31031186?v=4?s=100" width="100px;" alt=""/><br /><sub><b>denish rana</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=denishrana09" title="Documentation">📖</a></td>
   </tr>
 </table>
 
