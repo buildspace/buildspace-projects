@@ -7,7 +7,7 @@ Head over to Replit and go to `App.js` under `src`, this is where we'll be doing
 
 If we're logged in to Metamask, it will automatically inject a special object named `ethereum` into our window. Let's check if we have that first.
 
-```jsx
+```javascript
 import React, { useEffect } from "react";
 import './App.css';
 

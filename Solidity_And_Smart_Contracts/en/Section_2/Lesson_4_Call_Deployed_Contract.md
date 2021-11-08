@@ -16,7 +16,7 @@ Lets call this function from our website :).
 
 Go ahead and write this function right under our `connectWallet()` function.
 
-```jsx
+```javascript
 const wave = async () => {
     try {
       const { ethereum } = window;
@@ -39,7 +39,7 @@ const wave = async () => {
 
 Quick explanation here:
 
-```jsx
+```javascript
 const provider = new ethers.providers.Web3Provider(ethereum);
 const signer = provider.getSigner();
 ```

@@ -111,7 +111,43 @@ const renderContent = () => {
 };
 ```
 
-If you disconnect your wallet you should see a circular loading indicator before your connect wallet button shows up!
+If you disconnect your wallet you should see a circular loading indicator. We should release the `isLoading` state property for your connect wallet button to show up!
+
+```javascript
+  // Actions
+  const checkIfWalletIsConnected = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        console.log('Make sure you have MetaMask!');
+        /*
+         * We set isLoading here because we use return in the next line
+         */
+        setIsloading(false);
+        return;
+      } else {
+        console.log('We have the ethereum object', ethereum);
+
+        const accounts = await ethereum.request({ method: 'eth_accounts' });
+
+        if (accounts.length !== 0) {
+          const account = accounts[0];
+          console.log('Found an authorized account:', account);
+          setCurrentAccount(account);
+        } else {
+          console.log('No authorized account found');
+        }
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    /*
+     * We release the state property after all the function logic
+     */
+    setIsLoading(false);
+};
+```
 
 ### 🔁 Adding loading indicators to the Select Character page.
 
@@ -429,8 +465,8 @@ Let's then add the HTML to render what our toast will look like! Go ahead an add
 return (
   <div className="arena-container">
     {/* Add your toast HTML right here */}
-    {boss && (
-      <div id="toast" className="show">
+    {boss && characterNFT && (
+      <div id="toast" className={showToast ? 'show' : ''}>
         <div id="desc">{`💥 ${boss.name} was hit for ${characterNFT.attackDamage}!`}</div>
       </div>
     )}

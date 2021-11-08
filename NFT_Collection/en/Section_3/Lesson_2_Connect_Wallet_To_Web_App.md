@@ -7,7 +7,7 @@ Head over Replit and go to `App.js` under `src`, this is where we'll be doing
 
 If we're logged in to Metamask, it will automatically inject a special object named `ethereum` into our window that has some magical methods. Let's check if we have that first.
 
-```jsx
+```javascript
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 import React, { useEffect } from "react";
@@ -65,7 +65,7 @@ Basically, Metamask doesn't just give our wallet credentials to every website we
 
 Check out the code below.
 
-```jsx
+```javascript
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 import React, { useEffect, useState } from "react";
@@ -137,7 +137,7 @@ We need to create a `connectWallet` button. In the world of Web3, connecting y
 
 Ready for the easiest "login" experience for your life :)? Check it out:
 
-```jsx
+```javascript
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 import React, { useEffect, useState } from "react";

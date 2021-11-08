@@ -24,7 +24,7 @@ We're going to be using a tool called **Hardhat** a lot which let us quickly c
 
 Next, let's head to the terminal. Go ahead and `cd` to the directory you want to work in. Once you're there run these commands:
 
-```jsx
+```javascript
 mkdir epic-game
 cd epic-game
 npm init -y
@@ -37,7 +37,7 @@ You may see a message about vulnerabilities after you run the last command and i
 
 Cool, now we should have hardhat. Let's get a sample project going.
 
-```jsx
+```javascript
 npx hardhat
 ```
 
@@ -49,24 +49,24 @@ The sample project will ask you to install `hardhat-waffle` and `hardhat-ethe
 
 Go ahead and install these other dependencies just in case it didn't do it automatically.
 
-```jsx
+```javascript
 npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 ```
 
 You'll also want to install something called **OpenZeppelin** which is another library that's used a lot to develop secure smart contracts. We'll learn more about it later. For now, just install it :).
 
-```jsx
+```javascript
 npm install @openzeppelin/contracts
 ```
 
 Then run:
 
-```jsx
+```javascript
 npx hardhat run scripts/sample-script.js
 ```
 
 
-Boom! If see some stuff in your terminal about a contract being deployed -- this means your local environment is set up **and** you also ran/deployed a smart contract to a local blockchain.
+Boom! If you see some stuff in your terminal about a contract being deployed, this means that your local environment is set up **and** you also ran/deployed a smart contract to a local blockchain.
 
 This is pretty epic. We'll get into this more, but basically what's happening here is:
 

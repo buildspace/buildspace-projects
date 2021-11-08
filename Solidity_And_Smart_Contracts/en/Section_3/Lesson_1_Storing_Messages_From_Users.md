@@ -235,7 +235,7 @@ Where do we call this brand new `getAllWaves()` function, though? Well -- we wan
 
 The last thing I did was update our HTML code to render the data for us to see!
 
-```jsx
+```javascript
 return (
     <div className="mainContainer">
       <div className="dataContainer">

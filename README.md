@@ -39,7 +39,7 @@ Each project aligns with the content on your buildspace dashboard. Find the file
 You have access to all of the content right here in GitHub!
 
    ### **Hack With Others And The buildspace Team**
-   You and thousands of other devs are in this together. When you sign up for a project, you are placed in a group of devs who are there to help you succeed! Check out our [Discord](https://discord.gg/CFuBU7RJ42) to see what all the hype is about!
+   You and thousands of other devs are in this together. When you sign up for a project, you are placed in a group of devs who are there to help you succeed! Check out our [Discord](https://discord.gg/vPmqZqgpsS) to see what all the hype is about!
 
    ### **Co-Working Sessions**
    Get access to multiple sessions of collaborative coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
@@ -160,6 +160,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/aeither"><img src="https://avatars.githubusercontent.com/u/36173828?v=4?s=100" width="100px;" alt=""/><br /><sub><b>aeither</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=aeither" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/adheeshdh"><img src="https://avatars.githubusercontent.com/u/64847482?v=4?s=100" width="100px;" alt=""/><br /><sub><b>adheeshdh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=adheeshdh" title="Documentation">📖</a></td>
     <td align="center"><a href="http://saeedjabbar.com/"><img src="https://avatars.githubusercontent.com/u/146857?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saeed Jabbar</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=saeedjabbar" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/m4cd4r4"><img src="https://avatars.githubusercontent.com/u/47749761?v=4?s=100" width="100px;" alt=""/><br /><sub><b>m4cd4r4</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=m4cd4r4" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/7i7o"><img src="https://avatars.githubusercontent.com/u/84824996?v=4?s=100" width="100px;" alt=""/><br /><sub><b>7i7o</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=7i7o" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://santbob.com"><img src="https://avatars.githubusercontent.com/u/433789?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Santhosh Nageshwar</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=santbob" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://twitter.com/gudabu"><img src="https://avatars.githubusercontent.com/u/960197?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gustavo Burgi</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Gudabu" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Utkarshbhimte"><img src="https://avatars.githubusercontent.com/u/13379773?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Utkarsh Bhimte</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Utkarshbhimte" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ericc572"><img src="https://avatars.githubusercontent.com/u/8264400?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Eric Chen</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ericc572" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/chee-chyuan"><img src="https://avatars.githubusercontent.com/u/60590919?v=4?s=100" width="100px;" alt=""/><br /><sub><b>chee-chyuan</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=chee-chyuan" title="Documentation">📖</a></td>
   </tr>
 </table>
 
