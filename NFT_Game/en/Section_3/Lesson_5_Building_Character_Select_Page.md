@@ -2,6 +2,9 @@ We are looking great right now. We have setup two scenarios and got the basics d
 
 Now that we are able to interact with our Smart Contract from our UI and we have created our `SelectCharacter` Component, we can easily grab all mint-able characters from our Smart Contract and display them in our UI. Let's jump right in.
 
+### 👀 Just one more thing.
+Before you begin, be sure to remove any function calls to mint a character or attack a boss in your `scripts/deploy.js` file! This will help prevent some React state errors in your UI.
+
 ### ♻️ Setting up a reusable contract object.
 
 Since we know we are going to use our Smart Contract let's start by setting up or `ethers` object to interact with it. It's going to be the same flow as before, with a little twist. Let's start by importing all the things in `Components/SelectCharacter/index.js` :
@@ -37,7 +40,7 @@ const SelectCharacter = ({ setCharacterNFT }) => {
 export default SelectCharacter;
 ```
 
-As soon as our component is mounted, we are going to want to create our `gameContract` to start using right away! We want to display our mint-able characters as soon as possible. Which means we need to call our contract ASAP:
+As soon as our component is mounted, we are going to want to create our `gameContract` to start using right away! We want to display our mint-able characters as soon as possible. Which means we need to call our contract ASAP. Note: This block of code goes under the useState variable ie. under `const [gameContract, setGameContract] = useState(null);`. 
 
 ```javascript
 // UseEffect
