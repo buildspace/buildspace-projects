@@ -90,7 +90,7 @@ contract MyEpicGame is ERC721 {
       name: defaultCharacters[_characterIndex].name,
       imageURI: defaultCharacters[_characterIndex].imageURI,
       hp: defaultCharacters[_characterIndex].hp,
-      maxHp: defaultCharacters[_characterIndex].hp,
+      maxHp: defaultCharacters[_characterIndex].maxHp,
       attackDamage: defaultCharacters[_characterIndex].attackDamage
     });
 
