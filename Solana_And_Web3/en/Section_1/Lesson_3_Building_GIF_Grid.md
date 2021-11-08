@@ -235,9 +235,11 @@ Right under your current `useEffect` **create another** `useEffect`.
 
 ```jsx
 useEffect(() => {
-  window.addEventListener('load', async (event) => {
+  const onLoad = async () => {
     await checkIfWalletIsConnected();
-  });
+  };
+  window.addEventListener('load', onLoad);
+  return () => window.removeEventListener('load', onLoad);
 }, []);
 
 useEffect(() => {
