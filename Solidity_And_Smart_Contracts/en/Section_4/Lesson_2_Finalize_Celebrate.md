@@ -144,6 +144,8 @@ I use dotenv for this.
 npm install --save dotenv
 ```
 
+Your hardhat.config.js file would look something like:
+
 ```javascript
 require('@nomiclabs/hardhat-waffle');
 require('dotenv').config();
