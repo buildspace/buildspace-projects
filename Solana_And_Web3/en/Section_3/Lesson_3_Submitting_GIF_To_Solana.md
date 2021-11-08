@@ -44,7 +44,7 @@ What's happening here is we're generating a new account for our program to talk 
 Under the `src` directory, go ahead and create a file named `createKeyPair.js`. In there, paste this in:
 
 ```javascript
-// Shoutout to Dabbit for helping w/ this!
+// Shoutout to Nader Dabit for helping w/ this!
 // https://twitter.com/dabit3
 
 const fs = require('fs')
