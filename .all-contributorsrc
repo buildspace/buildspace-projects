@@ -742,6 +742,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "joshmayr",
+      "name": "Josh Mayr",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32174905?v=4",
+      "profile": "https://github.com/joshmayr",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
