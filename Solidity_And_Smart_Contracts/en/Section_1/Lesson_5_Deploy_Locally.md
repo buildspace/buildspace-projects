@@ -82,7 +82,7 @@ In your terminal window that's keeping your local Ethereum network alive, you'll
 
 ![](https://i.imgur.com/DmhZRJN.png)
 
-INTERESTING. But...what's gas? What does it mean by block #1? What's the big code next to "Transaction"? I want you try and just Google this stuff. Ask questions in #general-chill-chat :).
+INTERESTING. But...what's gas? What does it mean by block #1? What's the big code next to "Transaction"? I want you to try and Google this stuff. Ask questions in #general-chill-chat :).
 
 
 🚨 Before you click "Next Lesson"
