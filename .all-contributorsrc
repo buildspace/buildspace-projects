@@ -715,6 +715,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "holic",
+      "name": "Kevin Ingersoll",
+      "avatar_url": "https://avatars.githubusercontent.com/u/508855?v=4",
+      "profile": "https://keviningersoll.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
