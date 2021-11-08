@@ -9,7 +9,7 @@ All you really need to know going into this is **some terminal skills, some jav
 Few action items for you before moving on:
 
 1. **Connect your Discord in the project dashboard.** All the good stuff is going to be happening in a secret category in the Discord that you'll only have access to once you connect your Discord.
-2. **Connect your Ethereum wallet in the project dashboard.** We'll airdrop you a NFT once you finish this, and if you don't have a wallet connected we won't be able to airdrop it to you!! **We plan to do NFTs on Solana**, but, for now our whole system is built on Ethereum/Polygon so that's where we'll send the NFTs :).
+2. **Connect your Ethereum wallet in the project dashboard.** We'll airdrop you an NFT once you finish this, and if you don't have a wallet connected we won't be able to airdrop it to you!! **We plan to do NFTs on Solana**, but, for now our whole system is built on Ethereum/Polygon so that's where we'll send the NFTs :).
 3. **Be sure to attend the live kick-off**. If you miss it, no worries. It's not required to attend! The recording will be posted in Discord under **#info-board**.
 
 ### **🛠 The project.**
@@ -18,7 +18,7 @@ So what will we be building here :)? Here's a little video:
 
 [Loom](https://www.loom.com/share/545522add8514005a91ececac5abdab2)
 
-### **💎 Earning a NFT.**
+### **💎 Earning an NFT.**
 
 When you reach the end of this project, you'll be able to earn an NFT.
 
