@@ -98,7 +98,7 @@ This may take a bit to get started but once it's going you should see something 
 
 Boom!! You're now running a local validator. Pretty cool :).
 
-If you run into an issue like below, you'd have to install the OpenSSL library. On Intel Macs ` brew install openssl@1.1 `
+If you are running an Intel Mac and see the error below you will need to install the `OpenSSL` library. The easiest way to do this would be through brew like so:  `brew install openssl@1.1`
 
 ```bash
 solana-gif-portal solana-test-validator
