@@ -99,6 +99,15 @@ This may take a bit to get started but once it's going you should see something 
 
 Boom!! You're now running a local validator. Pretty cool :).
 
+If you are running an Intel Mac and see the error below you will need to install the `OpenSSL` library. The easiest way to do this would be through brew like so:  `brew install openssl@1.1`
+
+```bash
+solana-gif-portal solana-test-validator
+dyld: Library not loaded: /usr/local/opt/openssl@1.1/lib/libssl.1.1.dylib
+  Referenced from: /Users/<your-username>/.local/share/solana/install/active_release/bin/solana-test-validator
+  Reason: image not found
+```
+
 Now, go ahead and CONTROL + C to stop the validator. **We're never going to actually use `solana-test-validator` manually ourselves again.** The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;). 
 
 ### 💻 M1 Macs and Windows
