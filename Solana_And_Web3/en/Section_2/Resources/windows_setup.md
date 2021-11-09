@@ -149,11 +149,12 @@ Now, go ahead and CONTROL + C to stop the validator. **We're never going to actu
 
 ### ☕️ Install Mocha.
 
-Mocha is a nice little testing framework to help us test our Solana programs.
+Mocha is a nice little testing framework to help us test our Solana programs. 
 
 ```bash
-npm install -g mocha
+sudo npm install -g mocha
 ```
+Since you are installing it globally you may have to use the sudo prefix
 
 That's it! We are going to be using this later on :).
 
