@@ -184,6 +184,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://krish-nerkar.ml"><img src="https://avatars.githubusercontent.com/u/49949733?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Krish</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Krish-Nerkar" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.agileandart.com"><img src="https://avatars.githubusercontent.com/u/77552?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Cukier</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=danicuki" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://satyajeetpal.com"><img src="https://avatars.githubusercontent.com/u/1389682?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Satyajeet Pal</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=psatyajeet" title="Documentation">📖</a></td>
   </tr>
 </table>
 
