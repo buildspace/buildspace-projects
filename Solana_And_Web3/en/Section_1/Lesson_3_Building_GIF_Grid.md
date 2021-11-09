@@ -103,7 +103,7 @@ At this point, you should make some changes to this file! This is where all your
 
 ![https://i.imgur.com/PtpFGIa.png](https://i.imgur.com/PtpFGIa.png)
 
-For example, if you're web app is a place where people submit GIFs of cute animals, then maybe the dark mode feel of the website right now won't really fly! Up to you. Change it as you please.
+For example, if your web app is a place where people submit GIFs of cute animals, then maybe the dark mode feel of the website right now won't really fly! Up to you. Change it as you please.
 
 ### 🔤 Creating a GIF input box.
 
