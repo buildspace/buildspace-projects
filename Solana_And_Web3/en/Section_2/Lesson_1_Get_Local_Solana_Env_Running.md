@@ -22,6 +22,14 @@ I like this [tweet](https://twitter.com/armaniferrante/status/143455472509394945
 
 **All this being said, I think Solana is insanely fun once you set it up and get a handle on how it works. It's so fast. The low-gas fees are magical. It's just really fun to be part of a community working on a breakthrough technology. It feels like you're part of the team actually building Solana :).**
 
+### 🚦 Choose your path.
+Getting Solana setup all starts with your machine. There are a bunch of "gotchyas" on different OS's. If you are running an **Intel macOS machine or Linux machine** feel free to move right on through. If you are running a **Windows machine or M1 macOS machine** follow one of the links below:
+
+[Setup Solana on Windows Machine](https://github.com/buildspace/buildspace-projects/tree/main/Solana_And_Web3/en/Section_2/Resources/windows_setup.md)
+[Setup Solana on a M1 macOS Machine](https://github.com/buildspace/buildspace-projects/tree/main/Solana_And_Web3/en/Section_2/Resources/m1_setup.md)
+
+Good luck - you got this!
+
 ### 🦀 Install Rust.
 
 In Solana, programs are written in Rust! If you don't know Rust don't worry. As long as you know some other language — you'll pick it up over the course of this project.
@@ -49,8 +57,6 @@ cargo --version
 As long as all those commands output a version and didn't error, you're good to go!
 
 ### 🔥 Install Solana
-
-*Note: If you're on Windows or an M1 Mac prepare to debug stuff, this will likely not be ezpz. Be strong my friend lol.*
 
 Solana has a super nice CLI that's going to be helpful later when we want to test the programs we write.
 
@@ -109,15 +115,6 @@ dyld: Library not loaded: /usr/local/opt/openssl@1.1/lib/libssl.1.1.dylib
 ```
 
 Now, go ahead and CONTROL + C to stop the validator. **We're never going to actually use `solana-test-validator` manually ourselves again.** The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;). 
-
-### 💻 M1 Macs and Windows
-Are you on an M1 Mac?
-
-I'm sorry but stuff will be very very jank for you. You'll likely get an error like `illegal hardware instruction`. [Here's](https://github.com/project-serum/anchor/issues/95#issuecomment-913090162) one solution. Basically, M1 is still not supported by lots of different tooling in the crypto ecosystem. You can get it working, but, just a little jank. The solution so far has been to follow the instructions from that Github issue and then use`solana-test-validator --no-bpf-jit` instead. If you have further troubles, ping Nick_G#4818 or dimfeld#9450 in Discord. If you figure new stuff out, please make a PR and spread the knowledge!
-
-Are you on Windows?
-
-I had no issue installing everything on Windows! I think if you've hit a wall, just use [WSL](https://docs.microsoft.com/en-us/windows/wsl/setup/environment) and start the installation again, but, follow the instructions for Linux instead of Windows.
 
 ### ☕️ Install Node, NPM, and Mocha
 
