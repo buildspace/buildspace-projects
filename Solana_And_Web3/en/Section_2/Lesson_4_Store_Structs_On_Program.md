@@ -22,7 +22,7 @@ pub mod myepicproject {
     Ok(())
   }
 	 
-  // The fucntion now accepts a gif_link param from the user.
+  // The function now accepts a gif_link param from the user.
   pub fn add_gif(ctx: Context<AddGif>, gif_link: String) -> ProgramResult {
     let base_account = &mut ctx.accounts.base_account;
 		
