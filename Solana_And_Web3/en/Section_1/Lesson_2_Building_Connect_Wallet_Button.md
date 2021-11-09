@@ -367,7 +367,7 @@ const App = () => {
   return (
     <div className="App">
 			{/* This was solely added for some styling fanciness */}
-			<div className={walletAddress ? 'authed-container' : 'container'}>
+			<div className={walletAddress ? 'authed-container' : 'container'}/>
         <div className="header-container">
           <p className="header">🖼 GIF Portal</p>
           <p className="sub-text">
@@ -434,7 +434,7 @@ This is a pretty cool piece of code. We are telling React to only call this rend
 
 ```jsx
 {/* This was solely added for some styling fanciness */}
-<div className={walletAddress ? 'authed-container' : 'container'}>
+<div className={walletAddress ? 'authed-container' : 'container'}/>
 ```
 
 Now that we have seen some conditional rendering, this hopefully makes a bit of sense! We want to change some of our CSS styles based on whether we have a `walletAddress` or not! You will see the difference here in the next section when we build out the GIF grid.
