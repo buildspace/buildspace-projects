@@ -254,3 +254,5 @@ This may take a while the first time you run it! As long as you get the green wo
 That was all pretty tough!!! Definitely one of the more difficult installations.
 
 Post a screenshot of your test working in `#progress` so people know you made it :).
+
+Now go ahead and get back to your [buildspace Dashboard](https://app.buildspace.so/courses/CObd6d35ce-3394-4bd8-977e-cbee82ae07a3) to continue on!
