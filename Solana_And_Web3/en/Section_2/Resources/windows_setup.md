@@ -55,13 +55,13 @@ sudo apt-get install curl
 // Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
-// Restart Ubunt Terminal
+// Restart Ubuntu Terminal
 
-// Test if nvm exists
+// Test if nvm exists - this will return "nvm" and not a version number if working correctly!
 command -v nvm
 
 // Install the latest version of Node.js
-nvm install node
+nvm install --lts
 ```
 
 It's thats easy! One you have this all setup, you are ready to get back on track with the rest of your setup! Just remember - all of your terminal commands **NEED** to be ran in this Ubuntu Terminal from now on.
@@ -100,7 +100,7 @@ As long as all those commands output a version and didn't error, you're good to 
 
 Solana has a super nice CLI that's going to be helpful later when we want to test the programs we write.
 
-Again, the installation steps are pretty straight forward [here](https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool). There are clear steps for getting the Solana CLI installed for Windows.
+Again, the installation steps are pretty straight forward [here](https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool). There are clear steps for getting the Solana CLI installed for Linux.
 
 **Don't** worry about upgrading to the latest version of Solana.
 
@@ -144,15 +144,6 @@ This may take a bit to get started but once it's going you should see something 
 ![Untitled](https://i.imgur.com/F2YwcAB.png)
 
 Boom!! You're now running a local validator. Pretty cool :).
-
-If you are running an Intel Mac and see the error below you will need to install the `OpenSSL` library. The easiest way to do this would be through brew like so:  `brew install openssl@1.1`
-
-```bash
-solana-gif-portal solana-test-validator
-dyld: Library not loaded: /usr/local/opt/openssl@1.1/lib/libssl.1.1.dylib
-  Referenced from: /Users/<your-username>/.local/share/solana/install/active_release/bin/solana-test-validator
-  Reason: image not found
-```
 
 Now, go ahead and CONTROL + C to stop the validator. **We're never going to actually use `solana-test-validator` manually ourselves again.** The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;). 
 
