@@ -130,13 +130,13 @@ const { SystemProgram } = anchor.web3;
 const main = async() => {
   console.log("🚀 Starting test...")
 
-	// Create and set the provider. We set it before but we needed to update it, so that it can communicate with our frontend!
+  // Create and set the provider. We set it before but we needed to update it, so that it can communicate with our frontend!
   const provider = anchor.Provider.env();
   anchor.setProvider(provider);
 
   const program = anchor.workspace.Myepicproject;
 	
-	// Create an account keypair for our program to use.
+  // Create an account keypair for our program to use.
   const baseAccount = anchor.web3.Keypair.generate();
 
   // Call start_stuff_off, pass it the params it needs!
