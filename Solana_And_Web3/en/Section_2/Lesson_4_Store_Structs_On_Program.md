@@ -21,15 +21,16 @@ pub mod myepicproject {
     base_account.total_gifs = 0;
     Ok(())
   }
-	 
-  // The fucntion now accepts a gif_link param from the user.
+
+  // The function now accepts a gif_link param from the user. We also reference the user from the Context
   pub fn add_gif(ctx: Context<AddGif>, gif_link: String) -> ProgramResult {
     let base_account = &mut ctx.accounts.base_account;
-		
+    let user = &mut ctx.accounts.user;
+
 	// Build the struct.
     let item = ItemStruct {
       gif_link: gif_link.to_string(),
-      user_address: *base_account.to_account_info().key,
+      user_address: *user.to_account_info().key,
     };
 		
 	// Add it to the gif_list vector.
@@ -48,10 +49,13 @@ pub struct StartStuffOff<'info> {
   pub system_program: Program <'info, System>,
 }
 
+// Add the signer who calls the AddGif method to the struct so that we can save it
 #[derive(Accounts)]
 pub struct AddGif<'info> {
   #[account(mut)]
   pub base_account: Account<'info, BaseAccount>,
+  #[account(mut)]
+  pub user: Signer<'info>,
 }
 
 // Create a custom struct for us to work with.
@@ -122,10 +126,11 @@ const main = async() => {
   let account = await program.account.baseAccount.fetch(baseAccount.publicKey);
   console.log('👀 GIF Count', account.totalGifs.toString())
 
-  // You'll need to now pass a GIF link to the function!
+  // You'll need to now pass a GIF link to the function! You'll also need to pass in the user submitting the GIF!
   await program.rpc.addGif("insert_a_giphy_link_here", {
     accounts: {
       baseAccount: baseAccount.publicKey,
+      user: provider.wallet.publicKey,
     },
   });
   
