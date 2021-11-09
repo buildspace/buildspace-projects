@@ -25,9 +25,9 @@ I like this [tweet](https://twitter.com/armaniferrante/status/143455472509394945
 ### 🚦 Choose your path.
 Getting Solana setup all starts with your machine. There are a bunch of "gotchyas" on different OS's. If you are running an **Intel macOS machine or Linux machine** feel free to move right on through. If you are running a **Windows machine or M1 macOS machine** follow one of the links below:
 
-[Setup Solana on Windows Machine](https://github.com/buildspace/buildspace-projects/tree/main/Solana_And_Web3/en/Section_2/Resources/windows_setup.md)
+- [Setup Solana on Windows Machine](https://github.com/buildspace/buildspace-projects/tree/main/Solana_And_Web3/en/Section_2/Resources/windows_setup.md)
 
-[Setup Solana on a M1 macOS Machine](https://github.com/buildspace/buildspace-projects/tree/main/Solana_And_Web3/en/Section_2/Resources/m1_setup.md)
+- [Setup Solana on a M1 macOS Machine](https://github.com/buildspace/buildspace-projects/tree/main/Solana_And_Web3/en/Section_2/Resources/m1_setup.md)
 
 Good luck - you got this!
 
