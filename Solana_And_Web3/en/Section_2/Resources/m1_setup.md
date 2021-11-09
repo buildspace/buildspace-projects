@@ -116,7 +116,7 @@ solana-test-validator --no-bpf-jit
 
 This may take a bit to get started but once it's going you should see something like this:
 
-![image](https://i.imgur.com/FUjRage.jp)
+![Untitled](https://i.imgur.com/FUjRage.jpg)
 
 
 Boom!! You're now running a local validator. Pretty cool :).
@@ -184,34 +184,34 @@ anchor init myepicproject --javascript
 cd myepicproject
 ```
 
-`anchor init` will create a bunch of files/folders for us. It's sorta like `create-react-app` in a way. Go ahead and open up your project directory in VSCode and take a look around!
+`anchor init` will create a bunch of files/folders for us. It's sort of like `create-react-app` in a way. Go ahead and open up your project directory in VSCode and take a look around!
 
-Before we dive in, remember settwhen we set our local validator as `solana-test-validator --no-bpf-jit`? Well, we did that because things right now are still really new with M1 Mac's and Anchor. 
+Before we dive in, remember when we set our local validator as `solana-test-validator --no-bpf-jit`? Well, we did that because things right now are still really new with M1 Mac's and Anchor. 
 Anchor actually runs it's own validator, and on the M1 it will fail to do that and throw an error like - `FetchError: request to http://localhost:8899/ failed` when you go to run `anchor test`.
 
-The solution right is to have Anchor run with Solana's validator instead. Pretty dope! Shoutout to our buildSpace Alumni **dimfeld#9450** for helping with this fix! Give him some love!
+The solution right now is to have Anchor run with Solana's validator instead. Pretty dope!
 
 Okay, back to it! Let's open up a new terminal window and run:
 
 
-```
+```bash
 solana-test-validator --no-bpf-jit
 ```
 
 Then run this command: 
 
-```
+```bash
 solana address -k target/deploy/myepicproject-keypair.json
 ```
 
 This will return an address in the terminal. We are going to copy that address and open up our project in our code editor and go to `Anchor.toml` in the root of our project and paste this on line two replacing the address that is already there.
 Now, we will go back over to our terminal where we got set up in our project folder and run:
 
-```
+```bash
 anchor test --skip-local-validator
 ```
 
-This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here. x
+This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
 
 
 ![Untitled](https://i.imgur.com/V35KchA.png)
