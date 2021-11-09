@@ -152,7 +152,7 @@ Now, go ahead and CONTROL + C to stop the validator. **We're never going to actu
 Mocha is a nice little testing framework to help us test our Solana programs.
 
 ```bash
-npm install -g mocha
+sudo npm install -g mocha
 ```
 
 That's it! We are going to be using this later on :).
@@ -170,7 +170,7 @@ Anchor is a *really early projec*t run by a few core devs. You're bound to run i
 To install Anchor, go ahead an run:
 
 ```bash
-npm install --global yarn
+sudo npm install --global yarn
 ```
 
 This is going to help us later down the line :)
