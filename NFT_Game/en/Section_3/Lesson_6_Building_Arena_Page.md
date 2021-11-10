@@ -352,7 +352,7 @@ We are going to dynamically add this class name to our `div` which in turn will 
 ```javascript
 /*
 * We are going to need to update our character NFT so setCharacterNFT here
-* and make sure to pass it it in your Arena component in App.js
+* and make sure to pass it in your Arena component in App.js
 */
 const Arena = ({ characterNFT, setCharacterNFT }) => {
 	
@@ -402,6 +402,16 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
         }
     }, [gameContract]);
 }
+```
+
+Adding it to App.js:
+
+```javascript
+...
+  else if (currentAccount && characterNFT) {
+    return <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />;
+  }
+...
 ```
 
 This should all look pretty familiar to you! Our contract will return `newBossHp` and `newPlayerHp` which we will then use to update the state of both our boss and character NFT. This part may look a bit funky, so let's dive into this a bit:
