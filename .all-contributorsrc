@@ -787,6 +787,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "codywall",
+      "name": "Cody Wall",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22305037?v=4",
+      "profile": "http://codywall.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
