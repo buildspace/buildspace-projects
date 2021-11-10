@@ -796,6 +796,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jamesco",
+      "name": "Jayme Cochrane",
+      "avatar_url": "https://avatars.githubusercontent.com/u/400099?v=4",
+      "profile": "https://github.com/jamesco",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
