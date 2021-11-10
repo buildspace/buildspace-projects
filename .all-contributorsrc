@@ -814,6 +814,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "a19i23",
+      "name": "Alan Villa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6509090?v=4",
+      "profile": "http://alanvilla.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -188,6 +188,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://codywall.com"><img src="https://avatars.githubusercontent.com/u/22305037?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cody Wall</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=codywall" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/jamesco"><img src="https://avatars.githubusercontent.com/u/400099?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jayme Cochrane</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jamesco" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ndirpaya"><img src="https://avatars.githubusercontent.com/u/11097283?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Angus Ndirpaya Jr.</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ndirpaya" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://alanvilla.com"><img src="https://avatars.githubusercontent.com/u/6509090?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alan Villa</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=a19i23" title="Documentation">📖</a></td>
   </tr>
 </table>
 
