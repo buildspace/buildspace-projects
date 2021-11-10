@@ -151,7 +151,7 @@ Here's what I get near the bottom:
 
 **BOOOOM. YOU DID IT.**
 
-As long as you see a "transaction signature", you're good! This means you successfully called the `startStuffOff` function and this signature if basically your receipt.
+As long as you see a "transaction signature", you're good! This means you successfully called the `startStuffOff` function and this signature is basically your receipt.
 
 Pretty epic. You've written a Solana program, **deployed it to your local Solana node**, and are now actually speaking to your deployed program on your local Solana network.
 
