@@ -121,8 +121,14 @@ Let's get started with the input. We only want this input box to be shown when t
 const renderConnectedContainer = () => (
   <div className="connected-container">
     {/* Go ahead and add this input and button to start */}
-    <input type="text" placeholder="Enter gif link!" />
-    <button className="cta-button submit-gif-button">Submit</button>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+      }}
+    >
+      <input type="text" placeholder="Enter gif link!" />
+      <button type="submit" className="cta-button submit-gif-button">Submit</button>
+    </form>
     <div className="gif-grid">
       {TEST_GIFS.map((gif) => (
         <div className="gif-item" key={gif}>
@@ -136,7 +142,7 @@ const renderConnectedContainer = () => (
 
 The main things we added here are an `input` box and a submit `button` .
 
-You can write in this input box and click the button, but you will notice nothing happens! We still need to write the logic and wire it up to this button click.
+You can write in this input box and click the button or press enter, but you will notice nothing happens! We still need to write the logic and wire it up to the form submit.
 
 For this, we are going to use a couple cool new attributes.
 
@@ -174,7 +180,7 @@ const onInputChange = (event) => {
 
 This super, simple function will fire off as you type in the input box and then set the value of it to our `inputValue` property. This way, when we are ready to send out our GIF link to our Solana program, we can easily access that property to get the value.
 
-Finally — lets build a simple "submit" button. Create a new function under the `connectWallet` action called `sendGif` :
+Finally — lets wire up the form submit. Create a new function under the `connectWallet` action called `sendGif` :
 
 ```javascript
 const sendGif = async () => {
@@ -194,12 +200,15 @@ Then simply enough, we check to see if there is any input value in our input box
 
 Wait a second, nothing happened?
 
-That's because we need to pass this method into the `onClick` attribute on our submit button! Easy. Just change up the submit `button` to call `sendGif`.
+That's because we still need to call this method in the `onSubmit` attribute on our form! Easy. Just update the `onSubmit` handler to call our new `sendGif` method.
 
 ```jsx
-<button className="cta-button submit-gif-button" onClick={sendGif}>
-  Submit
-</button>
+<form
+  onSubmit={(event) => {
+    event.preventDefault();
+    sendGif();
+  }}
+>
 ```
 
 Give it one more go and you should now see your link printed out in the console! 
@@ -261,15 +270,22 @@ So, once our test data is set, we want to use it! For this we are going to head 
 ```jsx
 const renderConnectedContainer = () => (
     <div className="connected-container">
-      <input
-        type="text"
-        placeholder="Enter gif link!"
-        value={inputValue}
-        onChange={onInputChange}
-      />
-      <button className="cta-button submit-gif-button" onClick={sendGif}>
-        Submit
-      </button>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          sendGif();
+        }}
+      >
+        <input
+          type="text"
+          placeholder="Enter gif link!"
+          value={inputValue}
+          onChange={onInputChange}
+        />
+        <button type="submit" className="cta-button submit-gif-button">
+          Submit
+        </button>
+      </form>
       <div className="gif-grid">
         {/* Map through gifList instead of TEST_GIFS */}
         {gifList.map((gif) => (

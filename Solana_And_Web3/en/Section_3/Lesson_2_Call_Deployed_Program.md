@@ -281,15 +281,22 @@ const renderConnectedContainer = () => {
 	else {
     return(
       <div className="connected-container">
-        <input
-          type="text"
-          placeholder="Enter gif link!"
-          value={inputValue}
-          onChange={onInputChange}
-        />
-        <button className="cta-button submit-gif-button" onClick={sendGif}>
-          Submit
-        </button>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            sendGif();
+          }}
+        >
+          <input
+            type="text"
+            placeholder="Enter gif link!"
+            value={inputValue}
+            onChange={onInputChange}
+          />
+          <button type="submit" className="cta-button submit-gif-button">
+            Submit
+          </button>
+        </form>
         <div className="gif-grid">
 					{/* We use index as the key instead, also, the src is now item.gifLink */}
           {gifList.map((item, index) => (
