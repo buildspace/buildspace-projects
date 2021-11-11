@@ -107,7 +107,7 @@ Our goal is to call our contract to check if the current wallet address has mint
 
 Remember when we created the `checkIfUserHasNFT` in our smart contract?
 
-If the player minted a NFT, that method will return the character NFT metadata. Else, it will return a blank `CharacterAttributes` struct. So - when do we actually want to call this? 
+If the player minted an NFT, that method will return the character NFT metadata. Else, it will return a blank `CharacterAttributes` struct. So - when do we actually want to call this? 
 
 If we think back to scenario #2:
 

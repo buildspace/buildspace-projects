@@ -254,7 +254,7 @@ Here's what one of their NFT characters looks like.
 
 [Here](https://opensea.io/assets/0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d/78852) it is on OpenSea. **Check out all the different attributes it has on properties, levels, etc.** Get inspired :). All these attributes they have actually affect how this character actually plays in the game itself!
 
-What we’re going to do next is we’re going to actually program in logic to our NFT to “fight” a “boss” in our game. So, that means players will be able to take their NFT to the **arena** and collaborate with other players to “attack” a big boss you’ll create! When a NFT attacks this boss, the boss can attack the NFT back and the player's NFT will **lose health**. The HP value on OpenSea would change :).
+What we’re going to do next is we’re going to actually program in logic to our NFT to “fight” a “boss” in our game. So, that means players will be able to take their NFT to the **arena** and collaborate with other players to “attack” a big boss you’ll create! When an NFT attacks this boss, the boss can attack the NFT back and the player's NFT will **lose health**. The HP value on OpenSea would change :).
 
 Sorta like Pokemon!
 
@@ -280,7 +280,7 @@ Another developer could come in and build another game on top of the Pikachu NFT
 
 Maybe stuff like HP and attack damage is even shared between games, meaning different games could build on top of the original attributes we created.
 
-For example, let’s say we have other devs start building “items” on top of our NFT characters — like swords, shields, potions, etc. Maybe a dev builds something where a NFT character could “equip” a shield in and gain +50 defense. This can all be done in an open, permission-less way :).
+For example, let’s say we have other devs start building “items” on top of our NFT characters — like swords, shields, potions, etc. Maybe a dev builds something where an NFT character could “equip” a shield in and gain +50 defense. This can all be done in an open, permission-less way :).
 
 On top of that, as the creator of the original Pikachu NFTs — I can charge a royalty fee every time someone buys/sells the original NFTs and that means as my NFTs gain popularity I would make money on every sale.
 

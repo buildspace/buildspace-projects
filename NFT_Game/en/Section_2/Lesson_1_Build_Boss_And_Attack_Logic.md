@@ -6,7 +6,7 @@ The whole goal of the game is to attack the boss and bring it’s HP to 0! But, 
 
 Maybe in the future, someone else would be able to build a “revive” function that allows our dead NFTs to regain 100% health points ;). But for now, if our character dies it’s game over. And we can rest easy knowing our character did its best and took one for the team. That means we need other players to attack the boss as well, we can't do this alone.
 
-Let’s first just build a basic boss struct and initialize its data, similar to how we did for our characters. The boss will basically have a name, an image, attack damage, and HP. The boss will *not* be a NFT. The boss’s data will just live on our smart contract.
+Let’s first just build a basic boss struct and initialize its data, similar to how we did for our characters. The boss will basically have a name, an image, attack damage, and HP. The boss will *not* be an NFT. The boss’s data will just live on our smart contract.
 
 We can add the following code right under where we declared `nftHolderAttributes`.
 

@@ -183,7 +183,7 @@ nftHolderAttributes[newItemId] = CharacterAttributes({
 });
 ```
 
-A lot happening here! Basically, **our NFT holds data related to our player's NFT. But, this data is dynamic. For example,** let's say I create a NFT. By default my NFT starts with default stats like:
+A lot happening here! Basically, **our NFT holds data related to our player's NFT. But, this data is dynamic. For example,** let's say I create an NFT. By default my NFT starts with default stats like:
 
 ```json
 {
