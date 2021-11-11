@@ -351,8 +351,10 @@ We are going to dynamically add this class name to our `div` which in turn will 
 
 ```javascript
 /*
-* We are going to need to update our character NFT so setCharacterNFT here
-* and make sure to pass it it in your Arena component in App.js
+* We are going to need to update our character NFT so pass setCharacterNFT here.
+* Also, don't forget to head back to App.js and add pass the setCharacterNFT property to 
+* your Arena component like so:
+* <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />
 */
 const Arena = ({ characterNFT, setCharacterNFT }) => {
 	
