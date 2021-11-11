@@ -1,6 +1,6 @@
 Right now, our program does literally nothing haha. Let's change it up to store some data! 
 
-Our website will allow people to submit GIFs. So, storing something like a `total_gifs` number would be pretty helpful to
+Our website will allow people to submit GIFs. So, storing something like a `total_gifs` number would be pretty helpful too.
 
 ### 🥞 Create an integer to store GIF count.
 
