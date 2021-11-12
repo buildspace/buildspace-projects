@@ -178,7 +178,7 @@ This is going to help us later down the line :)
 From here run:
 
 ```bash
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev libssl-dev
 cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
 ```
 
