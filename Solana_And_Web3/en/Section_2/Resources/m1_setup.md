@@ -66,16 +66,12 @@ Next, we are going to run this command:
 
 ```bash
 ./scripts/cargo-install-all.sh .
-
 ```
 
-This might take some time, so don't be alarmed! Once you're done installing, run this to make sure everything is in working order:
+<details>
+<summary>Having Problems?</summary>
 
-```bash
-solana --version
-```
-
-**Note**: If you receieve an error that looks like this - `greadlink: command not found` you will need to do two things:
+If you receieve an error that looks like this - `greadlink: command not found` you will need to do two things:
 - Install Brew using `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` (this may take a while)
   
 - Add brew to your path using `export PATH="/opt/homebrew/bin:$PATH"`
@@ -84,6 +80,13 @@ solana --version
 
 Then run the script above once more an see if it works!
 If that outputs a version number, you're good to go!
+</details>
+
+This might take some time, so don't be alarmed! Once you're done installing, run this to make sure everything is in working order:
+
+```bash
+solana --version
+```
 
 Next thing you'll want to do is run these two commands separately:
 
