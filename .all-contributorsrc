@@ -823,6 +823,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "srps",
+      "name": "srps",
+      "avatar_url": "https://avatars.githubusercontent.com/u/166349?v=4",
+      "profile": "https://github.com/srps",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
