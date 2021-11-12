@@ -5,7 +5,7 @@ So right now, our code is set to give the waver 0.0001 ETH every single time! Ou
 
 1\. **Randomly** pick a winner.
 
-2\. Create a **cooldown** mechanic to prevent people from spam-waving you in an attempt to win the prize or annoy you. 
+2\. Create a **cooldown** mechanism to prevent people from spam-waving you in an attempt to win the prize or annoy you. 
 
 Lets's do the random winner first!
 
@@ -13,7 +13,7 @@ So, generating a random number in smart contracts is widely known as a **difficu
 
 Why? Well, think about how a random number is generated normally. When you generate a random normally in a program, **it will take a bunch of different numbers from your computer as a source of randomness** like: the speed of the fans, the temperature of the CPU, the number of times you've pressed "L" at 3:52PM since you've bought the computer, your internet speed, and tons of other #s that are difficult for you to control. It takes **all** these numbers that are "random" and puts them together into an algorithm that generates a number that it feels is the best attempt at a truly "random" number. Make sense?
 
-On the blockchain, there is **nearly no source of randomness**. Everything the contract sees, the public sees. Because of that, someone could game the system by just looking at the smart contract, seeing what #'s it relies on for randomness, and then the person could give it the exact numbers they need to win.
+On the blockchain, there is **nearly no source of randomness**. Everything the contract sees, the public sees. Because of that, someone could game the system by just looking at the smart contract, seeing what #s it relies on for randomness, and then the person could give it the exact numbers they need to win.
 
 Let's check out the code below :).
 
@@ -94,13 +94,13 @@ contract WavePortal {
 
 Here, I take two numbers given to me by Solidity, `block.difficulty` and `block.timestamp` and combine them to create a random number. `block.difficulty` tells miners how hard the block will be to mine based on the transactions in the block. Blocks get harder for a # of reasons, but, mainly they get harder when there are more transactions in the block (some miners prefer easier blocks, but, these payout less). `block.timestamp` is just the Unix timestamp that the block is being processed.
 
-These #'s are *pretty* random. But, technically, both `block.difficulty` and `block.timestamp` could be controlled by a sophisticated attacker. 
+These #s are *pretty* random. But, technically, both `block.difficulty` and `block.timestamp` could be controlled by a sophisticated attacker. 
 
 To make this harder, I create a variable `seed` that will essentially change every time a user sends a new wave. So, I combine all three of these variables to generate a new random seed. Then I just do `% 100` which will make sure the number is brought down to a range between 0 - 100.
 
 That's it! Then I just write a simple if statement to see if the seed is less than or equal to 50, if it is -- then the waver wins the prize! So, that means the waver has a 50% chance to win since we wrote `seed <= 50`. You can change this to whatever you want :). I just made it 50% because it's easier to test that way!!
 
-It's important to see here that an attack could technically game your system here if they really wanted to. It'd just be really hard. There are other ways to generate random numbers on the blockchain but Solidity doesn't natively give us anything reliable because it can't! All the #'s our contract can access are public and *never* truly random.
+It's important to see here that an attack could technically game your system here if they really wanted to. It'd just be really hard. There are other ways to generate random numbers on the blockchain but Solidity doesn't natively give us anything reliable because it can't! All the #s our contract can access are public and *never* truly random.
 
 Really, this is one of the strengths of the blockchain. But, can be a bit annoying for some application like ours here!
 
