@@ -17,7 +17,7 @@ const sendGif = async () => {
         user: provider.wallet.publicKey,
       },
     });
-    console.log("GIF sucesfully sent to program", inputValue)
+    console.log("GIF successfully sent to program", inputValue)
 
     await getGifList();
   } catch (error) {
