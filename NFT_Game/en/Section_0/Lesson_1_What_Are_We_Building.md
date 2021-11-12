@@ -5,7 +5,7 @@ You've made it — hell yeah! Welcome :). My name is Farza and I’ll be your in
 Few action items for you before moving on:
 
 1. **Connect your Discord in the project dashboard.** All the good stuff is going to be happening in a secret category in the Discord that you'll only have access to once you connect your Discord.
-2. **Connect your Ethereum wallet in the project dashboard.** We'll airdrop you a NFT once you finish this, and if you don't have a wallet connected we won't be able to airdrop it to you!!
+2. **Connect your Ethereum wallet in the project dashboard.** We'll airdrop you an NFT once you finish this, and if you don't have a wallet connected we won't be able to airdrop it to you!!
 3. **Be sure to attend the live kick-off**. If you miss it, no worries. It's not required to attend! The recording will be posted in Discord under **#info-board**.
 
 ### 🛠 The project.
@@ -14,11 +14,11 @@ So what will we be building here :)? Here's a little video:
 
 [Loom](https://www.loom.com/share/aeea29580aaa4dd88d8c7bc27f938d63)
 
-### 💎 Earning a NFT.
+### 💎 Earning an NFT.
 
 When you reach the end of this project, you'll be able to earn an NFT.
 
-**We'll airdrop a NFT to your connected wallet if you finish the project within 7-days of the kick-off.**
+**We'll airdrop an NFT to your connected wallet if you finish the project within 7-days of the kick-off.**
 
 ![](https://media3.giphy.com/media/kaoTShRCKgtjUIuJge/giphy.gif?cid=790b7611a115c871842a5b77747ba0a4c1d58b884baa5e64&rid=giphy.gif&ct=g)
 

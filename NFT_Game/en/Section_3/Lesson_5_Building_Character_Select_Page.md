@@ -196,7 +196,7 @@ I hope you are starting to see the common trend of interacting with a smart cont
 
 This function is going to call the `mintCharacterNFT` function on our contract. It needs to know which character to mint though, so we pass it the index of that character!
 
-We then just wait for the transaction to finish before we do anything else. Something seems a bit off though... It doesn't look like we are returning any data from our smart contract? How do we know when the NFT is truly minted? **Remember that `event` you created that fires off after a NFT is minted?** Thats the thing we are going to use!
+We then just wait for the transaction to finish before we do anything else. Something seems a bit off though... It doesn't look like we are returning any data from our smart contract? How do we know when the NFT is truly minted? **Remember that `event` you created that fires off after an NFT is minted?** Thats the thing we are going to use!
 
 We are going to listen in for an event from our smart contract that says, "Yo I'm done minting your NFT. You can continue."
 

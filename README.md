@@ -44,7 +44,7 @@ You have access to all of the content right here in GitHub!
    ### **Co-Working Sessions**
    Get access to multiple sessions of collaborative coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
 
-   ### **Complete A Project. Get A NFT.**
+   ### **Complete A Project. Get an NFT.**
    That's right. Be one of the first 100 people to complete your [buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
 
 ## ❗️FAQ

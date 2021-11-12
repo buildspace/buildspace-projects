@@ -46,7 +46,7 @@ Every blockchain has it's own pros and cons. I don't think any one of the big bl
 
 **But we'll have [bridges](https://wiki.polkadot.network/docs/learn-bridges) that let different chains talk to each other.**
 
-That means you can deploy your program on Solana, and have it communicate with a contract on a different blockchain like Ethereum, Avalanche, Polygon, etc. For example, you could buy a NFT on Ethereum and then move it to Solana if you wanted. Or, maybe you could have a bridge that lets you easily move tokens from the Solana chain, to the Ethereum chain.
+That means you can deploy your program on Solana, and have it communicate with a contract on a different blockchain like Ethereum, Avalanche, Polygon, etc. For example, you could buy an NFT on Ethereum and then move it to Solana if you wanted. Or, maybe you could have a bridge that lets you easily move tokens from the Solana chain, to the Ethereum chain.
 
 What would **suck** is if we just had like 100+ different chains and **none** of them could talk to each other. Then, each chain becomes a walled garden where data transfer between chains is near impossible. Users lose the freedom of choice.
 
