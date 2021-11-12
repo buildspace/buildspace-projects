@@ -199,13 +199,13 @@ solana-test-validator --no-bpf-jit
 ```
 ### 🔑 Create a local keypair.
 
-
-Next thing we need to do is actually generate a local Solana wallet to work with. Don't worry about create a passphrase for now, just tap "Enter" when it asks.
+Don't worry about creating a passphrase for now, just press "Enter" when asked!
 
 ```bash
 solana-keygen new -o target/deploy/myepicproject-keypair.json
 ```
-This will generate a new keypair (which is sorta like our local wallet we'll use to talk to our programs via the command line) to `target/deploy/myepicproject-keypair.json`. If you run `solana config get` you'll see something called `Keypair Path` with the path `target/deploy/myepicproject-keypair.json`, that's where the wallet has been created, feel free to check it out!
+
+This will generate a new keypair, which we will use to talk to our Solana programs! You will see this keypair in a generated `JSON` file located at `target/deploy/myepicproject-keypair.json`.
 
 Then run this command: 
 
