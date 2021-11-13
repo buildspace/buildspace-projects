@@ -193,10 +193,20 @@ The solution right now is to have Anchor run with Solana's validator instead. Pr
 
 Okay, back to it! Let's open up a new terminal window and run:
 
-
 ```bash
 solana-test-validator --no-bpf-jit
 ```
+
+### 🔑 Create a local keypair.
+
+In order to talk to our Solana programs, let us generate a new keypair! We can run this command in our terminal: 
+
+```bash
+solana-keygen new -o target/deploy/myepicproject-keypair.json
+```
+(Don't worry about creating a passphrase for now, just press "Enter" when asked!)
+
+You will see this keypair in a generated `JSON` file located at `target/deploy/myepicproject-keypair.json`.
 
 Then run this command: 
 
@@ -204,7 +214,7 @@ Then run this command:
 solana address -k target/deploy/myepicproject-keypair.json
 ```
 
-This will return an address in the terminal. We are going to copy that address and open up our project in our code editor and go to `Anchor.toml` in the root of our project and paste this on line two replacing the address that is already there.
+This will return the keypair in the terminal. We are going to copy that address and open up our project in our code editor and go to `Anchor.toml` in the root of our project and paste this on line two replacing the address that is already there.
 Now, we will go back over to our terminal where we got set up in our project folder and run:
 
 ```bash
