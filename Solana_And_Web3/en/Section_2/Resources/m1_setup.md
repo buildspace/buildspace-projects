@@ -96,8 +96,8 @@ This will output something like this:
 
 ```bash
 Config File: /Users/nicholas-g/.config/solana/cli/config.yml
-RPC URL: https://api.devnet.solana.com 
-WebSocket URL: wss://api.devnet.solana.com/ (computed)
+RPC URL: http://localhost:8899
+WebSocket URL: ws://localhost:8900/ (computed)
 Keypair Path: /Users/nicholas-g/.config/solana/id.json 
 Commitment: confirmed 
 ```
