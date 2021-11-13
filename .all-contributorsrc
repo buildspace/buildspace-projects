@@ -850,6 +850,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "danruss",
+      "name": "danruss",
+      "avatar_url": "https://avatars.githubusercontent.com/u/815250?v=4",
+      "profile": "https://escalantecloud.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
