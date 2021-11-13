@@ -157,7 +157,7 @@ runMain();
 
 *Note: don't forget to pass `addGif` a GIF link where it says `insert_a_giphy_link_here` else you'll get a confusing error like: `baseAccount not provided`.*
 
-Nothing new here really! One of the magic moments for me was when I was the output of `console.log('👀 GIF List', account.gifList)`. It's so cool to be able to just attach data to an account and access data via the account.
+Nothing new here really! One of the magic moments for me was when I saw the output of `console.log('👀 GIF List', account.gifList)`. It's so cool to be able to just attach data to an account and access data via the account.
 
 It's a really weird and new way to think about storing data, but it's pretty cool!!!
 
