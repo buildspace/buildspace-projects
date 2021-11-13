@@ -334,7 +334,7 @@ When I run this via `anchor test` I get:
 👀 GIF Count 1
 ```
 
-NICE. We are now actually storing *and* changing data on our Solana contract. Epic. 
+NICE. We are now actually storing *and* changing data on our Solana program. Epic. 
 
 *Note: You'll notice when you run `anchor test` again it'll start the counter from 0 again. Why? Well — basically it's because whenever we run `anchor test` we generate a key pair for our account via `anchor.web3.Keypair.generate()`. This will actually create a new account every time. On our web app — we'll make sure to address this properly. But for testing purposes it's useful because we can start w/ a fresh account every time we test.*
 
