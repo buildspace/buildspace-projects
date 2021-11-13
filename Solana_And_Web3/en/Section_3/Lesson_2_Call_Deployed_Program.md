@@ -33,7 +33,7 @@ What's actually interesting here is if you go to the [Solana Explorer](https://e
 
 I should mention something super important here. When you ran `anchor test` just now, it'll actually re-deploy the program and then run all the functions on the script.
 
-You may be asking yourself, "Why did it re-deploy? Why isn't it just talking to the program. already deployed? Also, if we re-deployed wouldn't it have been deployed to a completely different program id?".
+You may be asking yourself, "Why did it re-deploy? Why isn't it just talking to the program already deployed? Also, if we re-deployed wouldn't it have been deployed to a completely different program id?".
 
 **So — Solana programs are [upgradeable](https://docs.solana.com/cli/deploy-a-program#redeploy-a-program).** That means when we re-deploy we're updating the same program id to point to the latest version of the program we deployed. And, what's cool here is the *accounts* that the programs talk to will stick around — remember, these accounts keep data related to the program.
 
@@ -317,7 +317,7 @@ Pretty straightforward! I made some changes in `[gifList.map](http://gifList.map
 
 Let's go ahead and test! If you refresh the page and have your wallet connected, you'll see "Do One-Time Initialization For GIF Program Account". When you click this, you'll see Phantom prompt you to pay for the transaction w/ some SOL!!
 
-If all everything went well, then you'll see this in the console:
+If everything went well, then you'll see this in the console:
 
 ![Untitled](https://i.imgur.com/0CdFajf.png)
 
