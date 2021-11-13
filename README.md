@@ -194,6 +194,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/srps"><img src="https://avatars.githubusercontent.com/u/166349?v=4?s=100" width="100px;" alt=""/><br /><sub><b>srps</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=srps" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Uniqcoda"><img src="https://avatars.githubusercontent.com/u/41297833?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mary Etokwudo</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Uniqcoda" title="Documentation">📖</a></td>
     <td align="center"><a href="https://chiarawilden.com"><img src="https://avatars.githubusercontent.com/u/77884268?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chiara Wilden</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=chiarawilden" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://escalantecloud.com"><img src="https://avatars.githubusercontent.com/u/815250?v=4?s=100" width="100px;" alt=""/><br /><sub><b>danruss</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=danruss" title="Documentation">📖</a></td>
   </tr>
 </table>
 
