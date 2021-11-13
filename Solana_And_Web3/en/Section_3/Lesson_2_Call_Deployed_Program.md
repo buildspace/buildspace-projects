@@ -204,7 +204,7 @@ const getGifList = async() => {
     setGifList(account.gifList)
 
   } catch (error) {
-    console.log("Error in getGifs: ", error)
+    console.log("Error in getGifList: ", error)
     setGifList(null);
   }
 }
