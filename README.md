@@ -197,6 +197,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://escalantecloud.com"><img src="https://avatars.githubusercontent.com/u/815250?v=4?s=100" width="100px;" alt=""/><br /><sub><b>danruss</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=danruss" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/tapabratadey"><img src="https://avatars.githubusercontent.com/u/12387917?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tapabratadey</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=tapabratadey" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/metasucks"><img src="https://avatars.githubusercontent.com/u/94183264?v=4?s=100" width="100px;" alt=""/><br /><sub><b>metasucks.eth</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=metasucks" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/btjm123"><img src="https://avatars.githubusercontent.com/u/19306879?v=4?s=100" width="100px;" alt=""/><br /><sub><b>btjm123</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=btjm123" title="Documentation">📖</a></td>
   </tr>
 </table>
 
