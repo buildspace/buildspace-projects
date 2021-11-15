@@ -75,7 +75,7 @@ solana --version
 
 If that output a version number, you're good to go!
 
-Next thing you'll want to do is run these two commands separately:
+Next thing you'll want to do is run these two commands separately:it;d
 
 ```bash
 solana config set --url localhost
