@@ -199,7 +199,7 @@ solana-test-validator --no-bpf-jit
 
 ### 🔑 Create a local keypair.
 
-In order to talk to our Solana programs, let's generate a new keypair! We can run this command in our terminal:
+In order for us to talk to our Solana programs we need to generate a keypair. Really all you need to know about this is it allows us to digitally sign for transactions in Solana! Still curious? [Take a look at this page](https://solana-labs.github.io/solana-web3.js/classes/Keypair.html) for more information!
 
 ```bash
 solana-keygen new -o target/deploy/myepicproject-keypair.json
