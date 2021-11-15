@@ -199,7 +199,7 @@ solana-test-validator --no-bpf-jit
 
 ### 🔑 Create a local keypair.
 
-In order to talk to our Solana programs, let us generate a new keypair! We can run this command in our terminal: 
+In order to talk to our Solana programs, let's generate a new keypair! We can run this command in our terminal:
 
 ```bash
 solana-keygen new -o target/deploy/myepicproject-keypair.json
