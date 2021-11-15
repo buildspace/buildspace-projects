@@ -65,7 +65,7 @@ Again, the installation steps are pretty straight forward [here](https://docs.so
 
 **Don't** worry about upgrading to the latest version of Solana.
 
-*Note: Depending on your system — once you install Solana, it may output a message like "Please update your PATH environment variable" and give you a line to copy and run. Go ahead and copy + run that command so your PATH gets setup properly.*
+*Note: Depending on your system — once you install Solana, it may output a message like "Please update your PATH environment variable" and it'll give you a line to copy and run. Go ahead and copy + run that command so your PATH gets setup properly.*
 
 Once you're done installing, run this to make sure stuff is working: 
 
@@ -75,7 +75,7 @@ solana --version
 
 If that output a version number, you're good to go!
 
-Next thing you'll want to do is run these two commands separately:it;d
+Next thing you'll want to do is run these two commands separately:
 
 ```bash
 solana config set --url localhost
