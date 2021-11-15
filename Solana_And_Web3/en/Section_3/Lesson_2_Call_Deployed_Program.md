@@ -101,6 +101,13 @@ npm install @project-serum/anchor @solana/web3.js
 
 *Note: If you're on Replit you should have these already pre-installed. If you don't and start getting errors later, you can install packages by clicking "Shell" and then running commands like in a normal terminal. They also have a fancy "Packages" installer on the left sidebar.*
 
+Before we can interact with the packages that we installed earlier, we need to import them into our web app! Add the following lines of code at the top of App.js:
+
+```javascript
+import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
+import { Program, Provider, web3 } from '@project-serum/anchor';
+```
+
 Let's create a function called `getProvider`. Add this right below `onInputChange` . Here's the code below.
 
 ```javascript
