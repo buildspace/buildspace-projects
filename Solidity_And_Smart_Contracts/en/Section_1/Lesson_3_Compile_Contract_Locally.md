@@ -1,7 +1,7 @@
 🔥 Imitating the blockchain environment to test
 -----------------------------------------------
 
-You've done it. You written a smart contract. You're a champ!
+You've done it. You've written a smart contract. You're a champ!
 
 Now we need to actually\
 1\. Compile it.\
