@@ -895,6 +895,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "peterferguson",
+      "name": "Peter Ferguson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7002211?v=4",
+      "profile": "http://www.peterferguson.co.uk",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
