@@ -46,9 +46,11 @@ If you decide to go with Replit, make an account with them before moving on!
 
 I've already created a basic react project that you can **fork** on Replit.
 
-[Just click here](https://replit.com/@adilanchian/gif-portal-starter)**, and near the right you'll see the "Fork" button.** Be sure you're logged in, then click this.
+[Just click here](https://replit.com/@adilanchian/gif-portal-starter-project?v=1)**, and near the right you'll see the "Fork" button.** Be sure you're logged in, then click this.
 
 You'll magically clone my repo and full IDE in your browser to work with the code. Once it stops loading and shows you some code click "run" at the top and you're good to go. Might take 2-4 min the first time.
+
+**Please Note: As you go through this project, you may notice that we are referecning `.js` files. In Replit, if you are creating any new JavaScript files, you will need to use the `.jsx` extension instead! Replit has some performance fanciness that requires you use the `.jsx` file extension :).**
 
 Here's a quick video I made for a different project going over some Replit basics:
 
