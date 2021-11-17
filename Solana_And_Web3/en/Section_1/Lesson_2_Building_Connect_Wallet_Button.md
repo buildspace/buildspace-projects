@@ -20,7 +20,7 @@ If you have the Phantom Wallet extension installed, it will automatically inject
 /*
  * We are going to be using the useEffect hook!
  */
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 
@@ -188,7 +188,7 @@ We need to create a `connectWallet` button. In the world of web3, connecting y
 Ready for the easiest "Sign Up" experience for your life :)? Check it out:
 
 ```jsx
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 
@@ -292,7 +292,7 @@ You may be thinking now - "*how does our app control when to render or not rende
 First you will need to import `useState` into your component like so:
 
 ```jsx
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 ```
 
 Then, right above your `checkIfWalletIsConnected` function go ahead and add the following state declaration:
@@ -305,7 +305,7 @@ const [walletAddress, setWalletAddress] = useState(null);
 Very nice. So now that we are ready to hold some state, let's update a few things in our code here:
 
 ```jsx
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 

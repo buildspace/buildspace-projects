@@ -135,7 +135,7 @@ Lets create some variables we're missing. We'll also need to import some stuff.
 Go ahead and add this code in:
 
 ```javascript
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 import { Connection, PublicKey, clusterApiUrl} from '@solana/web3.js';

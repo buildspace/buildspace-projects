@@ -8,9 +8,9 @@ Head over Replit and go to `App.js` under `src`, this is where we'll be doing
 If we're logged in to Metamask, it will automatically inject a special object named `ethereum` into our window that has some magical methods. Let's check if we have that first.
 
 ```javascript
+import React, { useEffect } from "react";
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
-import React, { useEffect } from "react";
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
@@ -34,6 +34,13 @@ const App = () => {
     }
   }
 
+  // Render Methods
+  const renderNotConnectedContainer = () => (
+    <button className="cta-button connect-wallet-button">
+      Connect to Wallet
+    </button>
+  );
+
   /*
   * This runs our function when the page loads.
   */
@@ -42,10 +49,27 @@ const App = () => {
   }, [])
 
   return (
-    // blah blah all your html here
-    <button className="cta-button connect-wallet-button">
-      Connect to Wallet
-    </button>
+    <div className="App">
+      <div className="container">
+        <div className="header-container">
+          <p className="header gradient-text">My NFT Collection</p>
+          <p className="sub-text">
+            Each unique. Each beautiful. Discover your NFT today.
+          </p>
+          {/* Add your render method here */}
+          {renderNotConnectedContainer()}
+        </div>
+        <div className="footer-container">
+          <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
+          <a
+            className="footer-text"
+            href={TWITTER_LINK}
+            target="_blank"
+            rel="noreferrer"
+          >{`built on @${TWITTER_HANDLE}`}</a>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -66,9 +90,9 @@ Basically, Metamask doesn't just give our wallet credentials to every website we
 Check out the code below.
 
 ```javascript
+import React, { useEffect, useState } from "react";
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
-import React, { useEffect, useState } from "react";
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
@@ -113,15 +137,38 @@ const App = () => {
       }
   }
 
+  // Render Methods
+  const renderNotConnectedContainer = () => (
+    <button className="cta-button connect-wallet-button">
+      Connect to Wallet
+    </button>
+  );
+
   useEffect(() => {
     checkIfWalletIsConnected();
   }, [])
 
   return (
-    // blah blah all your html here
-    <button className="cta-button connect-wallet-button">
-      Connect to Wallet
-    </button>
+     <div className="App">
+      <div className="container">
+        <div className="header-container">
+          <p className="header gradient-text">My NFT Collection</p>
+          <p className="sub-text">
+            Each unique. Each beautiful. Discover your NFT today.
+          </p>
+          {renderNotConnectedContainer()}
+        </div>
+        <div className="footer-container">
+          <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
+          <a
+            className="footer-text"
+            href={TWITTER_LINK}
+            target="_blank"
+            rel="noreferrer"
+          >{`built on @${TWITTER_HANDLE}`}</a>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -138,9 +185,9 @@ We need to create a `connectWallet` button. In the world of Web3, connecting y
 Ready for the easiest "login" experience for your life :)? Check it out:
 
 ```javascript
+import React, { useEffect, useState } from "react";
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
-import React, { useEffect, useState } from "react";
 
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
@@ -199,6 +246,13 @@ const App = () => {
     }
   }
 
+  // Render Methods
+  const renderNotConnectedContainer = () => (
+    <button className="cta-button connect-wallet-button">
+      Connect to Wallet
+    </button>
+  );
+
   useEffect(() => {
     checkIfWalletIsConnected();
   }, [])
@@ -215,9 +269,7 @@ const App = () => {
             Each unique. Each beautiful. Discover your NFT today.
           </p>
           {currentAccount === "" ? (
-            <button onClick={connectWallet} className="cta-button connect-wallet-button">
-              Connect to Wallet
-            </button>
+            {renderNotConnectedContainer()}
           ) : (
             <button onClick={null} className="cta-button connect-wallet-button">
               Mint NFT
