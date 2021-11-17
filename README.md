@@ -201,6 +201,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/ashispavan"><img src="https://avatars.githubusercontent.com/u/11900337?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashis Pavan</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ashispavan" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.peterferguson.co.uk"><img src="https://avatars.githubusercontent.com/u/7002211?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Peter Ferguson</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=peterferguson" title="Documentation">📖</a></td>
   </tr>
 </table>
 
