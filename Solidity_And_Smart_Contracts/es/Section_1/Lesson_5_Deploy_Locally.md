@@ -91,7 +91,7 @@ INTERESANTE. Pero... ¿qué es el gas? ¿Qué significa el bloque #1? ¿Qué es 
 En serio, date una palmadita en la espalda. Lo has hecho genial. A continuación, vamos a crear una web que interactue con nuestra red local de Ethereum y va a ser increíble. Dirígete a #progress y dime cómo te está yendo hasta ahora. Me encantaría que me dieras tu opinión.
 
 
-🎁 Cierre de la Sección
+🎁 Repasemos
 ------------------
 
 ¡Muy bien! Has llegado al final de la sección. ¡Revisa [este enlace](https://gist.github.com/adilanchian/9f745fdfa9186047e7a779c02f4bffb7) para asegurarte de que vas por buen camino con tu código!

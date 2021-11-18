@@ -265,3 +265,4 @@ contract WavePortal {
 Try and run `npx hardhat run scripts/run.js` and see the error message you get if you try to wave twice in a row now without waiting 15-minutes :).
 
 Bam! And that's how you build cooldowns!
+
