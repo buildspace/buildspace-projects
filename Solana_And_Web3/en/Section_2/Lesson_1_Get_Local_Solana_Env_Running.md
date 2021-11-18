@@ -179,7 +179,7 @@ If you are running the project locally and don't have yarn installed `anchor ini
 
 ### 🔑 Create a local keypair.
 
-Next thing we need to do is actually generate a local Solana wallet to work with. Don't worry about create a passphrase for now, just tap "Enter" when it asks.
+Next thing we need to do is actually generate a local Solana wallet to work with. Don't worry about creating a passphrase for now, just tap "Enter" when it asks.
 
 ```bash
 solana-keygen new

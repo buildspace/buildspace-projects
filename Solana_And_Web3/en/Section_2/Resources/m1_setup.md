@@ -79,6 +79,17 @@ If you receieve an error that looks like this - `greadlink: command not found` y
 - Install coreutils using `brew install coreutils`
 
 Then run the script above once more an see if it works!
+
+You may encounter additional errors like the following:
+```
+error: failed to download from `https://crates.io/api/v1/crates/console/0.11.3/download`
+
+Caused by:
+  [55] Failed sending data to the peer (Connection died, tried 5 times before giving up)
+```
+
+This is most likely an intermittent error; attempt to run the script again, and it should eventually download. If it _still_ doesn't end up downloading, you can try (locking your cargo version)[https://github.community/t/failed-sending-data-to-the-peer-connection-died-tried-5-times-before-giving-up/189130/4] and running it again.
+
 If that outputs a version number, you're good to go!
 </details>
 

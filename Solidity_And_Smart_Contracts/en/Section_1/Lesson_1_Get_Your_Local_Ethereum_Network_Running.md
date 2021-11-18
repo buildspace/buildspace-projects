@@ -20,7 +20,7 @@ If you have any issues throughout here, just drop a message on Discord in  `#se
 ✨ The magic of Hardhat
 ----------------------
 
-1\. We're going to be using a tool called Hardhat a lot. This will let us easily spin up a local Ethereum network and give us fake test ETH and fake test accounts to work with. Remember, it's just like a local server, except the "server" is the blockchain
+1\. We're going to be using a tool called Hardhat a lot. This will let us easily spin up a local Ethereum network and give us fake test ETH and fake test accounts to work with. Remember, it's just like a local server, except the "server" is the blockchain.
 
 2\. Quickly compile smart contracts and test them on our local blockchain.
 
@@ -38,7 +38,7 @@ npm install --save-dev hardhat
 👏 Get sample project going
 ---------------------------
 
-Cool, now we should have hardhat. Let's get a sample project going.
+Cool, now we should have Hardhat. Let's get a sample project going.
 
 Run:
 
