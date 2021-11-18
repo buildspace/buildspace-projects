@@ -66,16 +66,12 @@ Next, we are going to run this command:
 
 ```bash
 ./scripts/cargo-install-all.sh .
-
 ```
 
-This might take some time, so don't be alarmed! Once you're done installing, run this to make sure everything is in working order:
+<details>
+<summary>Having Problems?</summary>
 
-```bash
-solana --version
-```
-
-**Note**: If you receieve an error that looks like this - `greadlink: command not found` you will need to do two things:
+If you receieve an error that looks like this - `greadlink: command not found` you will need to do two things:
 - Install Brew using `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` (this may take a while)
   
 - Add brew to your path using `export PATH="/opt/homebrew/bin:$PATH"`
@@ -84,6 +80,13 @@ solana --version
 
 Then run the script above once more an see if it works!
 If that outputs a version number, you're good to go!
+</details>
+
+This might take some time, so don't be alarmed! Once you're done installing, run this to make sure everything is in working order:
+
+```bash
+solana --version
+```
 
 Next thing you'll want to do is run these two commands separately:
 
@@ -96,8 +99,8 @@ This will output something like this:
 
 ```bash
 Config File: /Users/nicholas-g/.config/solana/cli/config.yml
-RPC URL: https://api.devnet.solana.com 
-WebSocket URL: wss://api.devnet.solana.com/ (computed)
+RPC URL: http://localhost:8899
+WebSocket URL: ws://localhost:8900/ (computed)
 Keypair Path: /Users/nicholas-g/.config/solana/id.json 
 Commitment: confirmed 
 ```
@@ -193,10 +196,20 @@ The solution right now is to have Anchor run with Solana's validator instead. Pr
 
 Okay, back to it! Let's open up a new terminal window and run:
 
-
 ```bash
 solana-test-validator --no-bpf-jit
 ```
+
+### 🔑 Create a local keypair.
+
+In order for us to talk to our Solana programs we need to generate a keypair. Really all you need to know about this is it allows us to digitally sign for transactions in Solana! Still curious? [Take a look at this page](https://solana-labs.github.io/solana-web3.js/classes/Keypair.html) for more information!
+
+```bash
+solana-keygen new -o target/deploy/myepicproject-keypair.json
+```
+(Don't worry about creating a passphrase for now, just press "Enter" when asked!)
+
+You will see this keypair in a generated `JSON` file located at `target/deploy/myepicproject-keypair.json`.
 
 Then run this command: 
 
@@ -204,7 +217,7 @@ Then run this command:
 solana address -k target/deploy/myepicproject-keypair.json
 ```
 
-This will return an address in the terminal. We are going to copy that address and open up our project in our code editor and go to `Anchor.toml` in the root of our project and paste this on line two replacing the address that is already there.
+This will return the keypair in the terminal. We are going to copy that address and open up our project in our code editor and go to `Anchor.toml` in the root of our project and paste this on line two replacing the address that is already there.
 Now, we will go back over to our terminal where we got set up in our project folder and run:
 
 ```bash

@@ -71,9 +71,7 @@ Finally, we'll want to call this function when someone clicks the "Mint NFT" but
 ```javascript
 return (
   {currentAccount === "" ? (
-    <button onClick={connectWallet} className="cta-button connect-wallet-button">
-      Connect to Wallet
-    </button>
+    {renderNotConnectedContainer()}
   ) : (
     {/** Add askContractToMintNft Action for the onClick event **/}
     <button onClick={askContractToMintNft} className="cta-button connect-wallet-button">

@@ -192,6 +192,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/srps"><img src="https://avatars.githubusercontent.com/u/166349?v=4?s=100" width="100px;" alt=""/><br /><sub><b>srps</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=srps" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Uniqcoda"><img src="https://avatars.githubusercontent.com/u/41297833?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mary Etokwudo</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Uniqcoda" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://chiarawilden.com"><img src="https://avatars.githubusercontent.com/u/77884268?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chiara Wilden</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=chiarawilden" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://escalantecloud.com"><img src="https://avatars.githubusercontent.com/u/815250?v=4?s=100" width="100px;" alt=""/><br /><sub><b>danruss</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=danruss" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/tapabratadey"><img src="https://avatars.githubusercontent.com/u/12387917?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tapabratadey</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=tapabratadey" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/metasucks"><img src="https://avatars.githubusercontent.com/u/94183264?v=4?s=100" width="100px;" alt=""/><br /><sub><b>metasucks.eth</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=metasucks" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/btjm123"><img src="https://avatars.githubusercontent.com/u/19306879?v=4?s=100" width="100px;" alt=""/><br /><sub><b>btjm123</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=btjm123" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/ashispavan"><img src="https://avatars.githubusercontent.com/u/11900337?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashis Pavan</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ashispavan" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.peterferguson.co.uk"><img src="https://avatars.githubusercontent.com/u/7002211?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Peter Ferguson</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=peterferguson" title="Documentation">📖</a></td>
   </tr>
 </table>
 

@@ -33,7 +33,7 @@ What's actually interesting here is if you go to the [Solana Explorer](https://e
 
 I should mention something super important here. When you ran `anchor test` just now, it'll actually re-deploy the program and then run all the functions on the script.
 
-You may be asking yourself, "Why did it re-deploy? Why isn't it just talking to the program. already deployed? Also, if we re-deployed wouldn't it have been deployed to a completely different program id?".
+You may be asking yourself, "Why did it re-deploy? Why isn't it just talking to the program already deployed? Also, if we re-deployed wouldn't it have been deployed to a completely different program id?".
 
 **So — Solana programs are [upgradeable](https://docs.solana.com/cli/deploy-a-program#redeploy-a-program).** That means when we re-deploy we're updating the same program id to point to the latest version of the program we deployed. And, what's cool here is the *accounts* that the programs talk to will stick around — remember, these accounts keep data related to the program.
 
@@ -101,6 +101,13 @@ npm install @project-serum/anchor @solana/web3.js
 
 *Note: If you're on Replit you should have these already pre-installed. If you don't and start getting errors later, you can install packages by clicking "Shell" and then running commands like in a normal terminal. They also have a fancy "Packages" installer on the left sidebar.*
 
+Before we can interact with the packages that we installed earlier, we need to import them into our web app! Add the following lines of code at the top of App.js:
+
+```javascript
+import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
+import { Program, Provider, web3 } from '@project-serum/anchor';
+```
+
 Let's create a function called `getProvider`. Add this right below `onInputChange` . Here's the code below.
 
 ```javascript
@@ -128,7 +135,7 @@ Lets create some variables we're missing. We'll also need to import some stuff.
 Go ahead and add this code in:
 
 ```javascript
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 import { Connection, PublicKey, clusterApiUrl} from '@solana/web3.js';
@@ -144,13 +151,13 @@ const { SystemProgram, Keypair } = web3;
 // Create a keypair for the account that will hold the GIF data.
 let baseAccount = Keypair.generate();
 
-// Get our program's id form the IDL file.
+// Get our program's id from the IDL file.
 const programID = new PublicKey(idl.metadata.address);
 
-// Set our network to devent.
+// Set our network to devnet.
 const network = clusterApiUrl('devnet');
 
-// Control's how we want to acknowledge when a trasnaction is "done".
+// Controls how we want to acknowledge when a transaction is "done".
 const opts = {
   preflightCommitment: "processed"
 }
@@ -204,7 +211,7 @@ const getGifList = async() => {
     setGifList(account.gifList)
 
   } catch (error) {
-    console.log("Error in getGifs: ", error)
+    console.log("Error in getGifList: ", error)
     setGifList(null);
   }
 }
@@ -317,7 +324,7 @@ Pretty straightforward! I made some changes in `[gifList.map](http://gifList.map
 
 Let's go ahead and test! If you refresh the page and have your wallet connected, you'll see "Do One-Time Initialization For GIF Program Account". When you click this, you'll see Phantom prompt you to pay for the transaction w/ some SOL!!
 
-If all everything went well, then you'll see this in the console:
+If everything went well, then you'll see this in the console:
 
 ![Untitled](https://i.imgur.com/0CdFajf.png)
 

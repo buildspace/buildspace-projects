@@ -10,9 +10,9 @@ Okay, so, to be honest getting Solana running and working is **not easy right no
 
 Now, does this mean Solana sucks? Ehhhh. No, I don't think so.
 
-I think Solana is a really **early** piece of technology and because it's so early its changing often so it's hard to just Google a question or get a clear, concise answer from the Solana Docs.
+I think Solana is a really **early** piece of technology and because it's so early it's changing often so it's hard to just Google a question or get a clear, concise answer from the Solana Docs.
 
-Back in 2015, I was really in to machine learning and it was still pretty new. In 2015, machine learning docs sucked and it was hard to just search for an answer to a question myself because most of the time I was the first person asking that question lol. *It was up to me to actually figure out an answer and then update the docs myself.*
+Back in 2015, I was really into machine learning and it was still pretty new. In 2015, machine learning docs sucked and it was hard to just search for an answer to a question myself because most of the time I was the first person asking that question lol. *It was up to me to actually figure out an answer and then update the docs myself.*
 
 That's the price of playing around with a piece of emerging technology :).
 
@@ -65,7 +65,7 @@ Again, the installation steps are pretty straight forward [here](https://docs.so
 
 **Don't** worry about upgrading to the latest version of Solana.
 
-*Note: Depending on your system — once you install Solana, it may output a message like "Please update your PATH environment variable" and it'd give you a line to copy and run. Go ahead and copy + run that command so your PATH gets setup properly.*
+*Note: Depending on your system — once you install Solana, it may output a message like "Please update your PATH environment variable" and it'll give you a line to copy and run. Go ahead and copy + run that command so your PATH gets setup properly.*
 
 Once you're done installing, run this to make sure stuff is working: 
 
@@ -75,7 +75,7 @@ solana --version
 
 If that output a version number, you're good to go!
 
-Next thing you'll want to do is run these two commands separately:
+Next thing you'll want to do is run these two commands separately:it;d
 
 ```bash
 solana config set --url localhost
@@ -133,7 +133,7 @@ We're going to be using this tool called "Anchor" a lot. If you know about Hardh
 
 Anchor is a *really early projec*t run by a few core devs. You're bound to run into a few issues. Be sure to join the [Anchor Discord](https://discord.gg/8HwmBtt2ss) and feel free to ask questions or [create an issue](https://github.com/project-serum/anchor/issues) on their Github as you run into issues. The devs are awesome. Maybe even say you're from buildspace in #general on their Discord :).
 
-**BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search the their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you lol.**
+**BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you lol.**
 
 *Seriously — join that Discord, the devs are really helpful.*
 
@@ -195,7 +195,7 @@ solana address
 
 ### 🥳 Let's run our program.
 
-When we did `anchor init` it create a basic Solana program for us. What we want to do now is:
+When we did `anchor init` it created a basic Solana program for us. What we want to do now is:
 
 1. Compile our program.
 2. Spin up `solana-test-validator` and deploy the program to our **local** Solana network w/ our wallet. This is kinda like deploying our local server w/ new code.
@@ -209,7 +209,7 @@ Anchor is awesome. It lets us do this all in one step by running:
 anchor test
 ```
 
-This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
+This may take a while the first time you run it! As long as you get the green words at the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
 
 ![Untitled](https://i.imgur.com/V35KchA.png)
 
