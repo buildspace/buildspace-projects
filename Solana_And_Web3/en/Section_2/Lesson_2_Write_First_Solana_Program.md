@@ -1,5 +1,9 @@
 Go ahead an open up `myepicproject` in VSCode.
 
+In case you're using `wsl` on windows, then you'd access your 'Ubunto or the Linux Distribution you chose to install' folders by doing the following
+- Click `'windows' + R` to show you the `RUN` Box; where you can type the command "\\wsl$\Ubuntu" and an explorer window would pop
+- Inside these folders, go to `home` folder and then `username` folder; where you will find `myepicproject` inside it
+
 You'll see all the magic stuff Anchor has generated for us here.
 
 **Delete** the contents of `programs/myepicproject/src/lib.rs` and  `tests/myepicproject.js`. Don't actually delete the files, just what's in them.
