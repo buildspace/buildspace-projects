@@ -913,6 +913,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "0xTobias",
+      "name": "Tobias",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86003813?v=4",
+      "profile": "https://github.com/0xTobias",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
