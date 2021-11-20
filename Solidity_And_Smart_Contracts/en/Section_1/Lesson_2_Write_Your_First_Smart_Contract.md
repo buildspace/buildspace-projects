@@ -53,7 +53,7 @@ contract WavePortal {
 }
 ```
 
-So, smart contracts kinda look like a `class` in other languages, if you've ever seen those! Once we initialize this contract for the first time, that constructor will run and print out that line. Please make that line say whatever you want :)!
+So, smart contracts sort of look like a `class` in other languages, if you've ever seen those! Once we initialize this contract for the first time, that constructor will run and print out that line. Please make that line say whatever you want :)!
 
 In the next lesson, we'll run this and see what we get!
 
