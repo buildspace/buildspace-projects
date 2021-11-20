@@ -125,7 +125,7 @@ What's happening here is Hardhat will create a local Ethereum network for us, bu
 await nftContract.deployed();
 ```
 
-We'll wait until our contract is officially mined and deployed to our local blockchain! That's right, hardhat actually creates faker "miners" on your machine to try its best to imitate the actual blockchain. 
+We'll wait until our contract is officially mined and deployed to our local blockchain! That's right, hardhat actually creates fake "miners" on your machine to try its best to imitate the actual blockchain. 
 
 Our `constructor` runs when we actually are fully deployed!
 
