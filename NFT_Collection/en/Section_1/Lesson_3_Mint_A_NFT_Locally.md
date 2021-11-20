@@ -2,7 +2,7 @@
 -------------------
 
 
-*Note: If you already know how to do a lot of the stuff in this section from the "WavePortal" project we ran in a prev project in the past, awesome! You'll get through this quickly :). Much of it is repeated.*
+*Note: If you already know how to do a lot of the stuff in this section from the "WavePortal" project we ran in the past, awesome! You'll get through this quickly :). Much of it is repeated.*
 
 Let's do a little clean-up.
 
