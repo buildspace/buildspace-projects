@@ -904,6 +904,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "javillerenas",
+      "name": "Javi Llerenas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17650062?v=4",
+      "profile": "http://www.javi.rocks",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
