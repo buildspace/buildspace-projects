@@ -62,4 +62,4 @@ In the next lesson, we'll run this and see what we get!
 
 *Note: if you don't do this, Farza will be very sad :(.*
 
-Go to #progress and post a screenshot with your fancy contract :).
+Go to #progress and post a screenshot of your fancy contract in the WavePortal.sol file :).
