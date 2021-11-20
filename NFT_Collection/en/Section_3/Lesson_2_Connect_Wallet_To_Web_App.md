@@ -248,7 +248,7 @@ const App = () => {
 
   // Render Methods
   const renderNotConnectedContainer = () => (
-    <button className="cta-button connect-wallet-button">
+    <button onClick={connectWallet} className="cta-button connect-wallet-button">
       Connect to Wallet
     </button>
   );
@@ -269,7 +269,7 @@ const App = () => {
             Each unique. Each beautiful. Discover your NFT today.
           </p>
           {currentAccount === "" ? (
-            {renderNotConnectedContainer()}
+            renderNotConnectedContainer()
           ) : (
             <button onClick={null} className="cta-button connect-wallet-button">
               Mint NFT
