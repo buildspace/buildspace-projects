@@ -69,7 +69,7 @@ Next, we are going to run this command:
 ```
 
 <details>
-<summary>Having Problems?</summary>
+<summary>Having problems with <code>greadlink</code>?</summary>
 
 If you receieve an error that looks like this - `greadlink: command not found` you will need to do two things:
 - Install Brew using `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` (this may take a while)
@@ -80,6 +80,18 @@ If you receieve an error that looks like this - `greadlink: command not found` y
 
 Then run the script above once more an see if it works!
 If that outputs a version number, you're good to go!
+</details>
+
+<details>
+<summary>Having problems with <code>openssl-sys</code>?</summary>
+
+If you receive an error that looks like this – `error: failed to run custom build command for openssl-sys v0.9.67` you will need to replace the current `openssl` entry with the following line under `[dependencies]` in `programs/bpf_loader/Cargo.toml`:
+
+```toml
+openssl = { version = "0.10", features = ["vendored"] }
+```
+
+For more information refer to [this PR with the original solution](https://github.com/solana-labs/solana/issues/20783).
 </details>
 
 This might take some time, so don't be alarmed! Once you're done installing, run this to make sure everything is in working order:
