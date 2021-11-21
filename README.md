@@ -210,6 +210,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/MatthewAlbrecht"><img src="https://avatars.githubusercontent.com/u/7471272?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matthew Albrecht</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=MatthewAlbrecht" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://samcook.cc"><img src="https://avatars.githubusercontent.com/u/58375830?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sam Cook</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=sjc5" title="Documentation">📖</a></td>
   </tr>
 </table>
 
