@@ -958,6 +958,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "sjc5",
+      "name": "Sam Cook",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58375830?v=4",
+      "profile": "http://samcook.cc",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
