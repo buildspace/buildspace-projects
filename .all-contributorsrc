@@ -967,6 +967,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jjohnson5253",
+      "name": "Jake Johnson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17039257?v=4",
+      "profile": "http://jakejohnson.us",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
