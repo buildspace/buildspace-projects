@@ -922,6 +922,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "saarthdeshpande",
+      "name": "Saarth Deshpande",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42336020?v=4",
+      "profile": "https://saarth.xyz",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
