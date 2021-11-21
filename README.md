@@ -206,6 +206,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/0xTobias"><img src="https://avatars.githubusercontent.com/u/86003813?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tobias</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xTobias" title="Documentation">📖</a></td>
     <td align="center"><a href="https://saarth.xyz"><img src="https://avatars.githubusercontent.com/u/42336020?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saarth Deshpande</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=saarthdeshpande" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/hansestream"><img src="https://avatars.githubusercontent.com/u/80525443?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hansestream</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=hansestream" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/lucastaffo"><img src="https://avatars.githubusercontent.com/u/80546216?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucas Taffo</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=lucastaffo" title="Documentation">📖</a></td>
   </tr>
 </table>
 
