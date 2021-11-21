@@ -182,7 +182,7 @@ await program.account.baseAccount.fetch(baseAccount.publicKey)
 console.log('👀 GIF Count', account.totalGifs.toString())
 ```
 
-Here we actually retrieve the account we created and then access `totalGifs`. When I run this, I get:
+Here we actually retrieve the account we created and then access `totalGifs`. When I run this via `anchor test`, I get:
 
 ```
 🚀 Starting test...
