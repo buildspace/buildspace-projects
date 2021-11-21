@@ -931,6 +931,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "hansestream",
+      "name": "hansestream",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80525443?v=4",
+      "profile": "https://github.com/hansestream",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
