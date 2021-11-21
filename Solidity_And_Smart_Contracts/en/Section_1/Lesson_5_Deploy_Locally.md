@@ -68,7 +68,7 @@ Now the command we're going to run to deploy locally is:
 npx hardhat run scripts/deploy.js --network localhost
 ```
 
-**You need make sure you do this from the** `my-wave-portal` **directory from a different terminal window. We don't want to mess with the terminal window that's keeping our local Ethereum network alive.**
+**You need to make sure you do this from the** `my-wave-portal` **directory from a different terminal window. We don't want to mess with the terminal window that's keeping our local Ethereum network alive.**
 
 Okay, so once I run that here's what I get:
 
