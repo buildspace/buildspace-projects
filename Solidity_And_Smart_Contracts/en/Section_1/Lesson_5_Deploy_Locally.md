@@ -88,7 +88,7 @@ INTERESTING. But...what's gas? What does it mean by block #1? What's the big cod
 🚨 Before you click "Next Lesson"
 -------------------------------------------
 
-Honestly, just give yourself a pat on the back. You've done a lot. Next we'll be actually building a website that will interact with our local Ethereum network and it's going to be awesome. Head to #progress and let me know how this course is going so far for you. I'd love your feedback.
+Honestly, just give yourself a pat on the back. You've done a lot. Next we'll be actually building a website that will interact with our local Ethereum network and it's going to be awesome. Head to #progress and let me know how this project is going so far for you. I'd love your feedback.
 
 
 🎁 Section Wrap Up
