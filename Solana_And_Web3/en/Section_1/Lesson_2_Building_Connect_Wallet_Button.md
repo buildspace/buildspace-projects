@@ -185,7 +185,7 @@ Alright, we are already checking to see if a user is already connected to our ap
 
 We need to create a `connectWallet` button. In the world of web3, connecting your wallet is literally a "Sign Up/Login" button built into one for your user.
 
-Ready for the easiest "Sign Up" experience for your life :)? Check it out:
+Ready for the easiest "Sign Up" experience of your life :)? Check it out:
 
 ```jsx
 import React, { useEffect } from 'react';
