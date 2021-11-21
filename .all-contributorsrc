@@ -976,6 +976,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Vshalson",
+      "name": "Vshalson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53016153?v=4",
+      "profile": "https://vshalson.tech",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
