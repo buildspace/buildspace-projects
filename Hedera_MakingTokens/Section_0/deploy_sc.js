@@ -1,7 +1,6 @@
 const { Client, ContractCreateTransaction, FileCreateTransaction, FileId, Hbar, PrivateKey, ContractCallQuery, ContractFunctionParameters, ContractExecuteTransaction } = require("@hashgraph/sdk");
 require("dotenv").config();
 const json = require('./compiled.json');
-const BigNumber = require('bignumber.js');
 
 async function main () {
 
