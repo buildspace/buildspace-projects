@@ -5,8 +5,8 @@ You've made it — hell yeah! Welcome :). My name is Farza and I’ll be your in
 
 A few action items for you before moving on:
 
-1. **Connect your Discord in the course dashboard.** All the good stuff is going to be happening in a secret category in the Discord that you'll only have access to if you connect your Discord.
-2. **Connect your Ethereum wallet in the course dashboard.** If you don't have a wallet that can interact with dApps, you can just install Metamask for free right now. Without a wallet, you can't do the project!
+1. **Connect your Discord in the project dashboard.** All the good stuff is going to be happening in a secret category in the Discord that you'll only have access to if you connect your Discord.
+2. **Connect your Ethereum wallet in the project dashboard.** If you don't have a wallet that can interact with dApps, you can just install Metamask for free right now. Without a wallet, you can't do the project!
 3. **Be sure to attend the kick-off**. If you miss it, no worries. It's not required! You'll get an email with the recording. I'll also post the recording in the Discord.
 
 

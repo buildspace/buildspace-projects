@@ -35,7 +35,7 @@ If you are contributing to the English version, make sure your changes are done 
 
 Each project aligns with the content on your buildspace dashboard. Find the file you want to change and open up a Pull Request for it! Someone from the buildspace team will take a look at it ASAP!
 
-## 🤔 Why take this course on buildspace?
+## 🤔 Why take this project on buildspace?
 You have access to all of the content right here in GitHub!
 
    ### **Hack With Others And The buildspace Team**
