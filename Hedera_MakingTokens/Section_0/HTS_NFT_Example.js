@@ -12,6 +12,8 @@ async function main() {
     }
 
     client.setOperator(myAcountId, myPrivateKey);
+    
+    // Create token type
 
     const myToken = await new TokenCreateTransaction()
         .setTokenName("Teddy W")
@@ -30,6 +32,8 @@ async function main() {
 
     console.log("My token ID is: " + myTokenId);
     
+    // Mint token of token typ/set meta-dataa
+    
     const diploma = await new TokenMintTransaction()
         .setTokenId(myTokenId)
         .setMetadata([Buffer.from("Qmd3ZfNJ4EojWTkwJ9FVJTDymfBkR1u9WVUbjYAwdRjRz5")])
@@ -46,6 +50,7 @@ async function main() {
         .setNftId(new NftId(myTokenId, diplomaSerial))
         .execute(client)
 
+    //log meta-data
     console.log("My diploma NFTs metadata is: ", diplomaInfo[0].metadata.toString())
 }
 main();
