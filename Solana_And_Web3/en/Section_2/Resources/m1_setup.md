@@ -99,9 +99,9 @@ For more information refer to [this PR with the original solution](https://githu
   
 If you receive an error that looks like this – `toolchain '1.52.1-aarch64-apple-darwin' is not installed` you can try to reinstall it:
 
-```
-  rustup toolchain uninstall stable
-  rustup toolchain install stable
+```bash
+rustup toolchain uninstall stable
+rustup toolchain install stable
 ```
 
 </details>
