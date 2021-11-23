@@ -215,6 +215,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://vshalson.tech"><img src="https://avatars.githubusercontent.com/u/53016153?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vshalson</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Vshalson" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/obikaonusamuel22g44h/"><img src="https://avatars.githubusercontent.com/u/49449271?v=4?s=100" width="100px;" alt=""/><br /><sub><b>OBIKAONU SAMUEL</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=samicey" title="Documentation">📖</a></td>
     <td align="center"><a href="https://bilalmotiwala.space"><img src="https://avatars.githubusercontent.com/u/63723475?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Muhammad Bilal Motiwala</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=bilalmotiwala" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/marcinsola"><img src="https://avatars.githubusercontent.com/u/19410195?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marcin Sola</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=marcinsola" title="Documentation">📖</a></td>
   </tr>
 </table>
 
