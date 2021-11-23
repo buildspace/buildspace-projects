@@ -1,7 +1,7 @@
 ✅ Configura tu ambiente para comenzar a trabajar con la blockchain
 ---------------------------------------------------
 
-​​Antes que nada, necesitamos que nuestra red local de Ethereum funcione. ¡De esta forma vamos a poder compilar y probar el código de nuestro contrato inteligente! ¿Sabes cómo necesitas correr un entorno local para trabajar en él? ¡Aquí es lo mismo!
+​​Antes que nada, necesitamos que nuestra red local de Ethereum funcione. ¡De esta forma vamos a poder compilar y probar el código de nuestro contrato inteligente! ¿Sabes, cómo necesitas ejecutar un entorno local para trabajar en él? ¡Aquí es lo mismo!
 
 Por ahora, todo lo que necesitas saber es que un contrato inteligente es un fragmento de código que vive en la blockchain. La blockchain es un lugar público donde cualquiera puede leer y escribir datos de forma segura por una tarifa. Piensa en eso como AWS o Heroku, ¡excepto que no le pertenece a nadie!
 
@@ -9,7 +9,7 @@ Entonces, en este caso, queremos que la gente nos 👋. El panorama general aqu�
 
 1\. **Vamos a escribir un contrato inteligente**. Ese contrato tiene toda la logica sobre cómo se manejan los 👋. Esto es como el código en el servidor.
 
-2\. **Nuestro contrato inteligente será desplegado a la blockchain.** De esta forma, cualquier persona en el mundo podrá acceder y correr nuestro contrato inteligente (si le damos permiso para hacerlo). Entonces, más o menos como un servidor :).
+2\. **Nuestro contrato inteligente será desplegado a la blockchain.** De esta forma, cualquier persona en el mundo podrá acceder y ejecutar nuestro contrato inteligente (si le damos permiso para hacerlo). Entonces, más o menos como un servidor :).
 
 3\. **Vamos a construir un sitio web para el cliente** Esto permitirá a las personas interactuar fácilmente con nuestro contrato inteligente en la blockchain.
 
