@@ -20,7 +20,7 @@ const TOTAL_MINT_COUNT = 50;
 
 const App = () => {
 
-    const checkIfWalletIsConnected = () => {
+  const checkIfWalletIsConnected = () => {
     /*
     * First make sure we have access to window.ethereum
     */
@@ -78,39 +78,39 @@ const TOTAL_MINT_COUNT = 50;
 
 const App = () => {
 
+  /*
+  * Just a state variable we use to store our user's public wallet. Don't forget to import useState.
+  */
+  const [currentAccount, setCurrentAccount] = useState("");
+  
+  /*
+  * Gotta make sure this is async.
+  */
+  const checkIfWalletIsConnected = async () => {
+    const { ethereum } = window;
+
+    if (!ethereum) {
+        console.log("Make sure you have metamask!");
+        return;
+    } else {
+        console.log("We have the ethereum object", ethereum);
+    }
+
     /*
-    * Just a state variable we use to store our user's public wallet. Don't forget to import useState.
+    * Check if we're authorized to access the user's wallet
     */
-    const [currentAccount, setCurrentAccount] = useState("");
-    
+    const accounts = await ethereum.request({ method: 'eth_accounts' });
+
     /*
-    * Gotta make sure this is async.
+    * User can have multiple authorized accounts, we grab the first one if its there!
     */
-    const checkIfWalletIsConnected = async () => {
-      const { ethereum } = window;
-
-      if (!ethereum) {
-          console.log("Make sure you have metamask!");
-          return;
-      } else {
-          console.log("We have the ethereum object", ethereum);
-      }
-
-      /*
-      * Check if we're authorized to access the user's wallet
-      */
-      const accounts = await ethereum.request({ method: 'eth_accounts' });
-
-      /*
-      * User can have multiple authorized accounts, we grab the first one if its there!
-      */
-      if (accounts.length !== 0) {
-          const account = accounts[0];
-          console.log("Found an authorized account:", account);
-          setCurrentAccount(account)
-      } else {
-          console.log("No authorized account found")
-      }
+    if (accounts.length !== 0) {
+      const account = accounts[0];
+      console.log("Found an authorized account:", account);
+      setCurrentAccount(account)
+    } else {
+      console.log("No authorized account found")
+    }
   }
 
   useEffect(() => {
@@ -148,28 +148,27 @@ const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
 
 const App = () => {
+  const [currentAccount, setCurrentAccount] = useState("");
+  
+  const checkIfWalletIsConnected = async () => {
+    const { ethereum } = window;
 
-    const [currentAccount, setCurrentAccount] = useState("");
-    
-    const checkIfWalletIsConnected = async () => {
-      const { ethereum } = window;
+    if (!ethereum) {
+      console.log("Make sure you have metamask!");
+      return;
+    } else {
+      console.log("We have the ethereum object", ethereum);
+    }
 
-      if (!ethereum) {
-          console.log("Make sure you have metamask!");
-          return;
-      } else {
-          console.log("We have the ethereum object", ethereum);
-      }
+    const accounts = await ethereum.request({ method: 'eth_accounts' });
 
-      const accounts = await ethereum.request({ method: 'eth_accounts' });
-
-      if (accounts.length !== 0) {
-          const account = accounts[0];
-          console.log("Found an authorized account:", account);
-          setCurrentAccount(account)
-      } else {
-          console.log("No authorized account found")
-      }
+    if (accounts.length !== 0) {
+      const account = accounts[0];
+      console.log("Found an authorized account:", account);
+      setCurrentAccount(account)
+    } else {
+      console.log("No authorized account found")
+    }
   }
 
   /*
@@ -214,15 +213,18 @@ const App = () => {
           <p className="sub-text">
             Each unique. Each beautiful. Discover your NFT today.
           </p>
-          {currentAccount === "" ? (
-            <button onClick={connectWallet} className="cta-button connect-wallet-button">
-              Connect to Wallet
-            </button>
-          ) : (
-            <button onClick={null} className="cta-button connect-wallet-button">
-              Mint NFT
-            </button>
-          )}
+          {currentAccount === "" 
+            ? (
+              <button onClick={connectWallet} className="cta-button connect-wallet-button">
+                Connect to Wallet
+              </button>
+            ) 
+            : (
+              <button onClick={null} className="cta-button connect-wallet-button">
+                Mint NFT 
+              </button>
+            )
+          }
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
