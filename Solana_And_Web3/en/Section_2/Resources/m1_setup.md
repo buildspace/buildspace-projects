@@ -162,7 +162,7 @@ Anchor is a *really early projec*t run by a few core devs. You're bound to run i
 To install Anchor, go ahead an run:
 
 ```bash
-cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
+cargo install --git https://github.com/project-serum/anchor --tag v0.18.0 anchor-cli --locked
 ```
 
 The above command may take a while. Once it's done, it may ask you to update you path, remember to do that.
