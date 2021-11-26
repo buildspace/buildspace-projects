@@ -53,11 +53,11 @@ We are to download with this command:
 git clone https://github.com/solana-labs/solana.git/
 ```
 
-Once it has finished cloning, we are going to enter the Solana directory and checkout the version branch `v1.8.2`:
+Once it has finished cloning, we are going to enter the Solana directory and checkout the version branch `v1.8.5`:
 
 ```bash
 cd solana
-git checkout v1.8.2
+git checkout v1.8.5
 ```
 
 `git checkout` is just switching to a stable version, so we can send ourselves some `$SOL` later on without receieving this error `Error: RPC response error -32601: Method not found`.
