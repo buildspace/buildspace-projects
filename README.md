@@ -2,19 +2,27 @@
 
 
 <h3 align="center">
-  <strong>Help build the future of the Decentralized Web.</strong>
+  <strong>Let's build the future of the internet.</strong>
 </h3>
 
 <p align="center">
-    <a href="https://discord.gg/CFuBU7RJ42">
-        <img src="https://img.shields.io/discord/869321815833575434?label=Discord" alt="Discord members online" />
-    </a>
     <a href=".github/CONTRIBUTING.md#-how-to-contribute">
         <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
     </a>
 </p>
 
 ---
+## 👋 Hey! Want to jump from web2 to web3?
+[Join our Discord](https://discord.gg/buildspace). We've built the world's largest community of web3 devs.
+
+Here's what you'll get:
+
+✅ a group of internet friends to build with.
+
+✅ the ability to earn NFTs as you build stuff.
+
+✅ access to web3 experts who can answer any question you have.
+
 
 ## 📚 Projects
 
