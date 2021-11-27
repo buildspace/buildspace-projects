@@ -3,7 +3,7 @@
 
 So, in order for our website to talk to the blockchain, we need to somehow connect our wallet to it. Once we connect our wallet to our website, our website will have permissions to call smart contracts on our behalf. Remember, it's just like authenticating in to a website.
 
-Head over to Replit and go to `App.js` under `src`, this is where we'll be doing all our work.
+Head over to Replit and go to `App.jsx` under `src`, this is where we'll be doing all our work.
 
 If we're logged in to Metamask, it will automatically inject a special object named `ethereum` into our window. Let's check if we have that first.
 
