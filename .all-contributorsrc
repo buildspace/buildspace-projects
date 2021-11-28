@@ -1036,7 +1036,16 @@
       "name": "Mu-Jing-Tsai",
       "avatar_url": "https://avatars.githubusercontent.com/u/11360957?v=4",
       "profile": "https://github.com/moojing",
-       "contributions": [
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "oli-clive-griffin",
+      "name": "Oli Clive-Griffin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70186488?v=4",
+      "profile": "https://github.com/oli-clive-griffin",
+      "contributions": [
         "doc"
       ]
     }
