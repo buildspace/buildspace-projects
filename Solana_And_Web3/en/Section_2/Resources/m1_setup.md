@@ -94,6 +94,18 @@ openssl = { version = "0.10", features = ["vendored"] }
 For more information refer to [this PR with the original solution](https://github.com/solana-labs/solana/issues/20783).
 </details>
 
+<details>
+<summary>Having problems with <code>toolchain</code>?</summary>
+  
+If you receive an error that looks like this – `toolchain '1.52.1-aarch64-apple-darwin' is not installed` you can try to reinstall it:
+
+```bash
+rustup toolchain uninstall stable
+rustup toolchain install stable
+```
+
+</details>
+
 This might take some time, so don't be alarmed! Once you're done installing, run this to make sure everything is in working order:
 
 ```bash
