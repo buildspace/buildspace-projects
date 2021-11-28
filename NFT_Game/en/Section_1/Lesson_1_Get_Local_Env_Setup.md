@@ -74,10 +74,10 @@ This is pretty epic. We'll get into this more, but basically what's happening he
 2. Hardhat will spin up a "local blockchain" on your computer. It's like a mini, test version of Ethereum running on your computer to help you quickly test stuff!
 3. Hardhat will then "deploy" your compiled contract to your local blockchain. That's that address you see at the end there. It's our deployed contract, on our mini version of Ethereum.
 
-If you're curious, feel free to look at the code inside the project to see how it works. Specifically, check out `Greeter.sol` which is the smart contract and `sample-script.js` which actually runs the contract.
+If you're curious, feel free to look at the code inside the project to see how it works. Specifically, check out `Greeter.sol` which is the smart contract and `deploy.js` which actually runs the contract.
 
 Once you're done exploring, let's head to the next section and start our actual game contract.
 
 ### **🚨 Progress report!**
 
-Post a screenshot of your terminal with the output of `sample-script.js` in #progress to show you've gotten your local env working :)!
+Post a screenshot of your terminal with the output of `deploy.js` in #progress to show you've gotten your local env working :)!
