@@ -237,6 +237,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://josefig.com"><img src="https://avatars.githubusercontent.com/u/12861319?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jose Figueroa</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=J12ATA" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/AnuragMunda"><img src="https://avatars.githubusercontent.com/u/87273737?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anurag Munda</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=AnuragMunda" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/aptrishu"><img src="https://avatars.githubusercontent.com/u/22702242?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rishav Kumar</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=aptrishu" title="Documentation">📖</a></td>
   </tr>
 </table>
 
