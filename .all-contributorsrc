@@ -1066,6 +1066,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "helloitsm3",
+      "name": "Sean",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13825491?v=4",
+      "profile": "https://seanleng.now.sh",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
