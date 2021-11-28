@@ -60,6 +60,8 @@ contract WavePortal {
          * Generate a new seed for the next user that sends a wave
          */
         seed = (block.difficulty + block.timestamp + seed) % 100;
+        
+        console.log("Random # generated: %d", seed);
 
         /*
          * Give a 50% chance that the user wins the prize.
