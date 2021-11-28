@@ -232,6 +232,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/oli-clive-griffin"><img src="https://avatars.githubusercontent.com/u/70186488?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oli Clive-Griffin</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=oli-clive-griffin" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/annezhou920"><img src="https://avatars.githubusercontent.com/u/22687249?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anne Zhou</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=annezhou920" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.rokkresearch.com"><img src="https://avatars.githubusercontent.com/u/1169132?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mike V</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=mikevoyt" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://seanleng.now.sh"><img src="https://avatars.githubusercontent.com/u/13825491?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sean</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=helloitsm3" title="Documentation">📖</a></td>
   </tr>
 </table>
 
