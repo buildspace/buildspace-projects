@@ -1111,7 +1111,16 @@
       "contributions": [
         "doc"
       ]
-    }
+   },
+   {
+      "login": "MatthewBenjamin",
+      "name": "Matthew Benjamin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4554972?v=4",
+      "profile": "https://github.com/MatthewBenjamin",
+       "contributions": [
+        "doc"
+      ]
+   }
   ],
   "contributorsPerLine": 7,
   "projectName": "buildspace-projects",
