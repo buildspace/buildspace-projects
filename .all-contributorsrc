@@ -1041,14 +1041,86 @@
       ]
     },
     {
+      "login": "oli-clive-griffin",
+      "name": "Oli Clive-Griffin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70186488?v=4",
+      "profile": "https://github.com/oli-clive-griffin",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "annezhou920",
+      "name": "Anne Zhou",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22687249?v=4",
+      "profile": "https://github.com/annezhou920",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mikevoyt",
+      "name": "Mike V",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1169132?v=4",
+      "profile": "http://www.rokkresearch.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "helloitsm3",
+      "name": "Sean",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13825491?v=4",
+      "profile": "https://seanleng.now.sh",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "J12ATA",
+      "name": "Jose Figueroa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12861319?v=4",
+      "profile": "http://josefig.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "AnuragMunda",
+      "name": "Anurag Munda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87273737?v=4",
+      "profile": "https://github.com/AnuragMunda",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "aptrishu",
+      "name": "Rishav Kumar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22702242?v=4",
+      "profile": "https://github.com/aptrishu",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jpatel3",
+      "name": "Jaimin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1363884?v=4",
+      "profile": "http://generics7.blogspot.com/",
+      "contributions": [
+        "doc"
+      ]
+   },
+   {
       "login": "MatthewBenjamin",
       "name": "Matthew Benjamin",
       "avatar_url": "https://avatars.githubusercontent.com/u/4554972?v=4",
       "profile": "https://github.com/MatthewBenjamin",
-      "contributions": [
+       "contributions": [
         "doc"
       ]
-    }
+   }
   ],
   "contributorsPerLine": 7,
   "projectName": "buildspace-projects",
