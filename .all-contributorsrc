@@ -1036,7 +1036,16 @@
       "name": "Mu-Jing-Tsai",
       "avatar_url": "https://avatars.githubusercontent.com/u/11360957?v=4",
       "profile": "https://github.com/moojing",
-       "contributions": [
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "MatthewBenjamin",
+      "name": "Matthew Benjamin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4554972?v=4",
+      "profile": "https://github.com/MatthewBenjamin",
+      "contributions": [
         "doc"
       ]
     }
