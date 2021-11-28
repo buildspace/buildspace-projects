@@ -1,8 +1,9 @@
 Go ahead an open up `myepicproject` in VSCode.
 
-In case you're using `wsl` on windows, then you'd access your 'Ubunto or the Linux Distribution you chose to install' folders by doing the following
-- Click `'windows' + R` to show you the `RUN` Box; where you can type the command "\\wsl$\Ubuntu" and an explorer window would pop
-- Inside these folders, go to `home` folder and then `username` folder; where you will find `myepicproject` inside it
+If you are on Windows, remember that this all needs to be done with WSL. In case you don't remember where you installed everything in your Ubuntu instance, follow these steps to get back to your project:
+
+Press `'windows' + R` to open up the `RUN` Box. This is where you can type the command `\\wsl$\Ubuntu` and an explorer window should pop up.
+Inside these folders, go to the `home` folder and then `username` folder. This is where you will find `myepicproject`!
 
 You'll see all the magic stuff Anchor has generated for us here.
 
