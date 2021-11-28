@@ -1057,6 +1057,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mikevoyt",
+      "name": "Mike V",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1169132?v=4",
+      "profile": "http://www.rokkresearch.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
