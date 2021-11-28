@@ -266,7 +266,7 @@ This is pretty awesome. In normal games today, you’d buy a game and then pick 
 
 **In this case, players pick their character NFT, then can play their NFT in-game, and own that character in their wallet forever or until they want to sell it to another player.** The selling aspect is extremely interesting, because it means as the player you get something back for playing the game or helping it increase in popularity.
 
-Another interesting is that players would be able to take their character NFT to other games that support it. 
+Another interesting thing is that players would be able to take their character NFT to other games that support it. 
 
 *This is a pretty wild thing to think about. It’s one of the biggest reasons crypto + gaming is so cool.* 
 
