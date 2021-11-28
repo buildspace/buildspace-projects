@@ -2,7 +2,7 @@
 
 Pick your favorite code editor and open up the directory where you setup your hardhat project! Let's do a little clean-up.
 
-We want to delete all the lame starter code generated for us. We're going to write this stuff ourselves! Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `sample-script.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. **Don't delete the actual folders!**
+We want to delete all the lame starter code generated for us. We're going to write this stuff ourselves! Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `deploy.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. **Don't delete the actual folders!**
 
 Now, let's get to writing our NFT contract. If you've never written a smart contract don't worry. **Just follow along. Google stuff you don't understand. Ask questions in Discord.**
 
