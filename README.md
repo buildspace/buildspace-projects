@@ -227,6 +227,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/torquan"><img src="https://avatars.githubusercontent.com/u/22380775?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lυis</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=torquan" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.acollectionofatoms.me"><img src="https://avatars.githubusercontent.com/u/7197998?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ACollectionOfAtoms" title="Documentation">📖</a></td>
   </tr>
 </table>
 
