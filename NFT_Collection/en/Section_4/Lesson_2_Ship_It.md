@@ -113,7 +113,7 @@ Sweet you got your API key. Time to head back to your `hardhat.config.js` file a
 We are down to our last step I promise. All that remains now is to run the command
 
 ```
-npx hardhat verify YOUR_CONTRACT_ADDRESS --network rinkeby _totalSupply
+npx hardhat verify YOUR_CONTRACT_ADDRESS --network rinkeby 
 ```
 
 If everything runs smoothly, you should see some outputs in the terminal. Mine looks like this:
