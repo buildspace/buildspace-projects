@@ -62,7 +62,7 @@ npm install @openzeppelin/contracts
 Then run:
 
 ```javascript
-npx hardhat run scripts/sample-script.js
+npx hardhat run scripts/deploy.js
 ```
 
 
