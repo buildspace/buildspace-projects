@@ -6,6 +6,7 @@ const sendGif = async () => {
     console.log("No gif link given!")
     return
   }
+  setInputValue('');
   console.log('Gif link:', inputValue);
   try {
     const provider = getProvider();
