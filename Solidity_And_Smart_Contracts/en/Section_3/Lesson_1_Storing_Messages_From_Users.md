@@ -57,7 +57,7 @@ contract WavePortal {
      */
     function wave(string memory _message) public {
         totalWaves += 1;
-        console.log("%s has waved!", msg.sender);
+        console.log("%s waved w/ message %s", msg.sender, _message);
 
         /*
          * This is where I actually store the wave data in the array.
