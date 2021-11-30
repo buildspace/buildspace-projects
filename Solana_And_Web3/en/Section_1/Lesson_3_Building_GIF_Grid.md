@@ -298,6 +298,21 @@ const renderConnectedContainer = () => (
   );
 ```
 
+Now let's add a few lines to sendGif() so that when you submit the form, it adds the GIF to gifList and clears the text field :
+
+```javascript
+const sendGif = async () => {
+  if (inputValue.length > 0) {
+    console.log('Gif link:', inputValue);
+    setGifList([...gifList, inputValue]);
+    setInputValue('');
+  } else {
+    console.log('Empty input. Try again.');
+  }
+};
+```
+
+
 It's that easy. Now when we change our `useEffect` to fetch the GIF list from our Solana program, we will have it all ready to go to be rendered!
 
 **This is the base of our web app! EPIC.**
