@@ -274,7 +274,7 @@ Then, we just need to change up `renderConnectedContainer` to account for two ca
 
 ```jsx
 const renderConnectedContainer = () => {
-	// If we hit this, it means the program account hasn't been initialized.
+// If we hit this, it means the program account hasn't been initialized.
   if (gifList === null) {
     return (
       <div className="connected-container">
