@@ -14,8 +14,7 @@ Un smart contract = Algo así como el código de nuestro servidor con diferentes
 Así que, aquí está nuestro contrato actualizado que podemos usar para "almacenar" saludos.
 
 ```solidity
-// SPDX-License-Identifier: UNLICE
-NSED
+// SPDX-License-Identifier: UNLICENSED
 
 pragma solidity ^0.8.0;
 
