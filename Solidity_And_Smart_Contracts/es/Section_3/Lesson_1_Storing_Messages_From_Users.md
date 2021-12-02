@@ -248,7 +248,7 @@ return (
           ¡Soy Farza! He trabajado en coche autónomos. Bastante guay ¿no? ¡Conecta tu cartera de Ethereum y mándame un saludo!
         </div>
 
-        <button className="waveButton" onClick={null}>
+        <button className="waveButton" onClick={wave}>
           Salúdame
         </button>
         
