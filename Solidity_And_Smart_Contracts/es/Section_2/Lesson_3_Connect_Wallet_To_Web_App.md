@@ -41,7 +41,7 @@ const App = () => {
         </div>
 
         <div className="bio">
-          ¡Soy Farza! He trabajado en coche autónomos. Bastante guay ¿no? ¡Conecta tu cartera de Ethereum y mándame un saludo!
+          ¡Soy Farza! He trabajado en coches autónomos. Bastante guay ¿no? ¡Conecta tu cartera de Ethereum y mándame un saludo!
         </div>
 
         <button className="waveButton" onClick={null}>
