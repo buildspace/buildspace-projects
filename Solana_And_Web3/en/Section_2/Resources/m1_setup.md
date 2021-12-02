@@ -248,7 +248,7 @@ Now, we will go back over to our terminal where we got set up in our project fol
 anchor test --skip-local-validator
 ```
 
-This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
+This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here. Note, if you get an error in your terminal that says: "Error: failed to send transaction: Transaction simulation failed: Attempt to load a program that does not exist", scroll up in your terminal error logs to where it says ``Program Id: BWzrLTGaUxBF2jbs6hEgKUaT1rpYuj4JiTmiCFtqJZkD``. Copy and paste your Program Id into both your ``Anchor.toml`` file and ``lib.rs`` file and hit save then run the test again. 
 
 
 ![Untitled](https://i.imgur.com/V35KchA.png)
