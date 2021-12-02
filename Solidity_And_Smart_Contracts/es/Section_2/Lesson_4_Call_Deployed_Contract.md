@@ -190,7 +190,7 @@ const wave = async () => {
         console.log("Recuperado el recuento total de saludos...", count.toNumber());
 
         /*
-        * Ejecutar la onda real de su smart contract
+        * Ejecutar el wave real de tu smart contract
         */
         const waveTxn = await wavePortalContract.wave();
         console.log("Minando...", waveTxn.hash);
