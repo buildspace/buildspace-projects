@@ -139,7 +139,7 @@ test = "node tests/myepicproject.js"
 
 **Keep everything else in `Anchor.toml` the same!**
 
-Finally, lets run it using:
+Finally, let's run it using:
 
 ```bash
 anchor test

@@ -71,7 +71,7 @@ Next, we are going to run this command:
 <details>
 <summary>Having problems with <code>greadlink</code>?</summary>
 
-If you receieve an error that looks like this - `greadlink: command not found` you will need to do two things:
+If you receive an error that looks like this - `greadlink: command not found` you will need to do three things:
 - Install Brew using `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` (this may take a while)
   
 - Add brew to your path using `export PATH="/opt/homebrew/bin:$PATH"`
@@ -79,6 +79,17 @@ If you receieve an error that looks like this - `greadlink: command not found` y
 - Install coreutils using `brew install coreutils`
 
 Then run the script above once more an see if it works!
+
+You may encounter additional errors like the following:
+```
+error: failed to download from `https://crates.io/api/v1/crates/console/0.11.3/download`
+
+Caused by:
+  [55] Failed sending data to the peer (Connection died, tried 5 times before giving up)
+```
+
+This is most likely an intermittent error; attempt to run the script again, and it should eventually download. If it _still_ doesn't end up downloading, you can try [locking your cargo version](https://github.community/t/failed-sending-data-to-the-peer-connection-died-tried-5-times-before-giving-up/189130/4) and running it again.
+
 If that outputs a version number, you're good to go!
 </details>
 
@@ -134,7 +145,7 @@ The last thing to test is we want to make sure we can get a local Solana node ru
 
 First, shoutout to **@dimfled#9450**, and send some love his way! He has 'seen things' building with Solana recently and gave us this step to get things working on M1s!
 
-We are going to run our Solana validator manually. Will exaplin why we need this shortly:
+We are going to run our Solana validator manually. Will explain why we need this shortly:
 
 ```bash
 solana-test-validator --no-bpf-jit
@@ -167,17 +178,17 @@ We're going to be using this tool called "Anchor" a lot. If you know about Hardh
 
 Anchor is a *really early projec*t run by a few core devs. You're bound to run into a few issues. Be sure to join the [Anchor Discord](https://discord.gg/8HwmBtt2ss) and feel free to ask questions or [create an issue](https://github.com/project-serum/anchor/issues) on their Github as you run into issues. The devs are awesome. Maybe even say you're from buildspace in #general on their Discord :).
 
-**BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search the their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you lol.**
+**BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search through their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you lol.**
 
 *Seriously — join that Discord, the devs are really helpful.*
 
-To install Anchor, go ahead an run:
+To install Anchor, go ahead and run:
 
 ```bash
 cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
 ```
 
-The above command may take a while. Once it's done, it may ask you to update you path, remember to do that.
+The above command may take a while and your computer may get a little toasty 🔥. Once it's done, it may ask you to update you path, remember to do that.
 
 From here run:
 
