@@ -82,7 +82,7 @@ pub struct StartStuffOff<'info> {
 
 Looks complicated lol.
 
-First we've got `[account(init, payer = user, space = 9000)]`. **All we're doing here is telling Solana how we want to initialize `BaseAccount`.**
+First we've got `[account(init, payer = user, space = 9000)]`. **All we're doing here is telling Solana how we want to initialize `BaseAccount`.** Note, if after running your test below you get the error `Transaction simulation failed: Error processing Instruction 0: custom program error: 0x64 `, change `space = 9000` to `space = 10000`.
 
 1. `init` will tell Solana to create a new account owned by our current program.
 2. `payer = user` tells our program who's paying for the account to be created. In this case, it's the `user` calling the function. 
