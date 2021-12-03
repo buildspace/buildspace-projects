@@ -201,7 +201,7 @@ If you got that working, nice, you have Anchor!!
 We'll also use Anchor's npm module and Solana Web3 JS — these both will help us connect our web app to our Solana program!
 
 ```bash
-npm install @project-serum/anchor @solana/web3.js
+npm install -g @project-serum/anchor @solana/web3.js
 ```
 
 ### 🏃‍♂️ Create a test project and run it.
