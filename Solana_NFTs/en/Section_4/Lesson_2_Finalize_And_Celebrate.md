@@ -1,8 +1,10 @@
 ### **🚀 Deploy to the world.**
 
-Deploying a React app is has gotten so easy that there is no reason not to do it at this point lol. Plus, it's **free**. You've made it this far, deploying is the final step. Plus -- your fellow builders at buildspace must not be deprived of your NFTs!! Please give us the opportunity to mint your rare creations hehe.
+Deploying a React app has gotten so easy that there is no reason not to do it at this point lol. Plus, it's **free**. You've made it this far, deploying is the final step. Plus -- your fellow builders at buildspace must not be deprived of your NFTs!! Please give us the opportunity to mint your rare creations hehe.
 
-I made a really quick video below on deploying via Vercel. If you're already a Vercel pro, you won't have issues. Basically:
+I made a really quick video below on deploying via Vercel. If you don't want to use Vercel, all good. Use whatever you want.
+
+Basically:
 - Push your latest code up to Github. Don't commit `.cache`.
 - Connect Vercel to your repo.
 - Make sure to set your root to `app`.
@@ -10,7 +12,10 @@ I made a really quick video below on deploying via Vercel. If you're already a V
 - Deploy.
 - Done.
 
+[Loom](https://www.loom.com/share/ce89a285b90a4b34ac358fce9ae7f92d)
 
+Note: On Vercel, you will need to add 6th environment variable `CI=false`. This will make sure our build doesn't fail because of warnings.
+![Untitled](https://i.imgur.com/wn2Uhj4.png).
 
 
 ### **😍 Hello, Solana Master.**
