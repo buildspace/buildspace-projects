@@ -106,17 +106,16 @@ const data = await fetchHashTable(
 );
 
 if (data.length !== 0) {
-    for (const mint of data) {
-      // Get URI
-      const response = await fetch(mint.data.uri);
-      const parse = await response.json();
-      console.log("Past Minted NFT", mint)
-      // Get image URI
-      if (!mints.find((mint) => mint === parse.image)) {
-        setMints((prevState) => [...prevState, parse.image]);
-      }
-    }
-  }
+  const requests = data.map((mint) => {
+    const response = await fetch(mint.data.uri);
+    const parse = await response.json();
+
+    return parse.image;
+  });
+
+  const allMints = await Promise.all(requests);
+  setMints(allMints);
+}
 
 // Remove loading flag.
 setIsLoadingMints(false);
