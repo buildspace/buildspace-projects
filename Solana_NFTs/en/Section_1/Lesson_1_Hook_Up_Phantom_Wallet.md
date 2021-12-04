@@ -1,7 +1,5 @@
 ### 🤖 Let's grab the starter code.
 
-For this project we are going to be using a cool tool called [Vercel](https://vercel.com/) to deploy our app to the world 🌎. But before we do that, we are going to need to get the starter repo that I have created for you!
-
 Start by heading over to [this GitHub link](https://github.com/buildspace/nft-drop-starter-project) where you find the starter repo code. From here you are going to want to make sure you press the "Fork" button in the top right of the page 
 
 ![image](https://i.imgur.com/p2FTyAM.png)
@@ -12,9 +10,9 @@ The final step here is to actually get your newly forked repo on your local mach
 
 ![image](https://i.imgur.com/4QtA8wO.png)
 
-Finally, head to your terminal and `cd` into whatever director your project will live in and run the command:
+Finally, head to your terminal and `cd` into whatever directory your project will live in and run the command:
 
-```bash
+```plaintext
 git clone YOUR_FORKED_LINK
 ```
 
