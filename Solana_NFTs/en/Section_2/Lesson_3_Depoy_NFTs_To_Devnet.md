@@ -58,7 +58,7 @@ solana address
 
 Copy that address and paste it into all three of the `json` files filling in `"INSERT_CREATOR_WALLET_ADDRESS_HERE"`. Don't forget the quotation symbols.
 
-Now we're going to use Metaplex's `uplaod` command to upload our NFTs that live in the `assets` folder.
+Now we're going to use Metaplex's `upload` command to upload our NFTs that live in the `assets` folder.
 
 Notice how we do `./assets` in the command below. That means we need to run this command from just one level outside of the `assets` folder.
 
