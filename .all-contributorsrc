@@ -1210,6 +1210,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "michaelnetter",
+      "name": "Michael Netter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24876403?v=4",
+      "profile": "https://github.com/michaelnetter",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
