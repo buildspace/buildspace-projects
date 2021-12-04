@@ -256,6 +256,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://anhek.dev"><img src="https://avatars.githubusercontent.com/u/1397483?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonin Nhek</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=anhek" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/michaelnetter"><img src="https://avatars.githubusercontent.com/u/24876403?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Netter</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=michaelnetter" title="Documentation">📖</a></td>
     <td align="center"><a href="https://nathias.id"><img src="https://avatars.githubusercontent.com/u/7736324?v=4?s=100" width="100px;" alt=""/><br /><sub><b>nath1as</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=nath1as" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ArpitIngle"><img src="https://avatars.githubusercontent.com/u/37828045?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arpit Ingle</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ArpitIngle" title="Documentation">📖</a></td>
   </tr>
 </table>
 
