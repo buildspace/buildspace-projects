@@ -252,6 +252,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://jester.cafe"><img src="https://avatars.githubusercontent.com/u/1183817?v=4?s=100" width="100px;" alt=""/><br /><sub><b>F. Jovan Jester</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jester7" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.styloria.in"><img src="https://avatars.githubusercontent.com/u/58183359?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Deepak</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=deepak-likes-code" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://anhek.dev"><img src="https://avatars.githubusercontent.com/u/1397483?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonin Nhek</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=anhek" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
