@@ -35,7 +35,7 @@ git version
 > git version 2.31.1 (or higher!)
 
 node --version
-> v14.17.0 (or higher, below v17!)
+> v14.17.0 (or higher, below v17 -- we found that node v16 works best)
 
 yarn --version
 > 1.22.11 (or higher!)
