@@ -192,7 +192,7 @@ If a user has already connected their wallet with your app, this flag will immed
 
 And that's it!
 
-*At this point you should still only be seeing the "Phantom wallet found!"* log statement in your console!
+*At this point you should still only be seeing the "Phantom wallet found!"* log statement in your console! Don't worry if you're seeing the "User Rejected Request" error in the console.
 
 Why is that? Well, the `connect` method will only run **if** the user has already authorized a connection between their wallet and the web app. **Which they've never done so far.** Let's do that next :).
 
