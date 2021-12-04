@@ -1174,6 +1174,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "julianeon",
+      "name": "Julian Martinez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1310178?v=4",
+      "profile": "https://www.reactever.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
