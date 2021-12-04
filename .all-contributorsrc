@@ -1246,6 +1246,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "quiint",
+      "name": "Quiint",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82949194?v=4",
+      "profile": "http://quiint.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
