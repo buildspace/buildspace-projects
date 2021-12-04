@@ -44,9 +44,9 @@ import CountdownTimer from '../CountdownTimer';
 
 From here we can setup our logic to handle when to show this countdown timer.
 
-In our case, we only want to should this component if the current date is **before** the drop date. **Else**, we'll go ahead and show the drop date and time.
+In our case, we only want to show this component if the current date is **before** the drop date. **Else**, we'll go ahead and show the drop date and time.
 
-Now that we have thought figured out, let's write some code near the bottom of `app/src/CandyMachine/index.js`.
+Now that we have that figured out, let's write some code near the bottom of `app/src/CandyMachine/index.js`.
 
 ```jsx
 // Create render function

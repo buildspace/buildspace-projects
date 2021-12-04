@@ -6,9 +6,9 @@ Let's do this.
 
 ### 🎩 Going through the `mintToken` function.
 
-In your `CandyMachine` component you'll see a function named `mintToken`. This is part of Metaplex's front-end library *(huge ****shoutout to the Exiled [Apes Candy Machine Mint repo](https://github.com/exiled-apes/candy-machine-mint) for giving a good baseline for this code)*.
+In your `CandyMachine` component you'll see a function named `mintToken`. This is part of Metaplex's front-end library *(huge **shoutout to the Exiled [Apes Candy Machine Mint repo](https://github.com/exiled-apes/candy-machine-mint)** for giving a good baseline for this code)*.
 
-This function is pretty complex. I'm not going to go through it line by line. Go and figure out how it works yourself! One thing I recommend doing is using CMD + click on functions to see how they work at a lower level. Looking at the code is usually the best way to learn how it works.
+This function is pretty complex. I'm not going to go through it line by line. Go and figure out how it works yourself! One thing I recommend doing is using CMD (MacOS) or CTRL (Windows) + click on functions to see how they work at a lower level. Looking at the code is usually the best way to learn how it works.
 
 But lets look at some chunks of code:
 
@@ -85,7 +85,7 @@ const instructions = [
 ];
 ```
 
-In Solana, a transaction is a bundle of instructions. So, here we bundle a few instructions which are basically functions that live on our candy machine. Metaplex gave us them functions. We just hit them.
+In Solana, a transaction is a bundle of instructions. So, here we bundle a few instructions which are basically functions that live on our candy machine. Metaplex gave us these functions. We just hit them.
 
 ```jsx
 const provider = getProvider();
