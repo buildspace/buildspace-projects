@@ -16,7 +16,7 @@ Back in 2015, I was really into machine learning and it was still pretty new. In
 
 That's the price of playing around with a piece of emerging technology :).
 
-I think Solana is in a similar spot and I really want to make it clear — ****don't expect a super clean developer experience. **You will likely run into random bumps and it's up to you to figure out an answer + help others.**
+I think Solana is in a similar spot and I really want to make it clear — **don't expect a super clean developer experience. You will likely run into random bumps and it's up to you to figure out an answer + help others.**
 
 I like this [tweet](https://twitter.com/armaniferrante/status/1434554725093949452) as well which kinda lays out a similar idea.
 
