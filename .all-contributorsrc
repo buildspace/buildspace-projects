@@ -1165,6 +1165,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "TylerWoolcott",
+      "name": "Tyler Woolcott",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86615652?v=4",
+      "profile": "https://github.com/TylerWoolcott",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
