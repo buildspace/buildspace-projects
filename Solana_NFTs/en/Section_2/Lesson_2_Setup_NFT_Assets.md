@@ -70,7 +70,7 @@ To start, I recommend just picking three PNGs you relate with. Maybe it's three 
 
 I'm going to pick Naruto, Sasuke, and Sakura — my favorite anime trio :).
 
-Feel free to change up `type` as well. Make sure to take a look at [these docs](https://docs.metaplex.com/nft-standard) to understand what you can change around. There are tons of data types you can mess around with for your NFT like `mp4`, `mp3`, and even `html`. Go crazy. Maybe you wanna build music NFTs lol. Maybe you want to build a full on game inside your `html` NFT. No one's stopping you haha.
+Note: Only PNGs are supported right now via the CLI. For other file types like MP4, MP3, HTML, etc you need to create a custom script. See Github issue [here](https://github.com/metaplex-foundation/metaplex/issues/511).
 
 You can even add your own `collection` object if you wanted to give your collection a specific name. Check out an example [here](https://docs.metaplex.com/nft-standard#json-structure).
 
