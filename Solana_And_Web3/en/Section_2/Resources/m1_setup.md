@@ -252,7 +252,7 @@ Then run this command:
 solana address -k target/deploy/myepicproject-keypair.json
 ```
 
-This will return the keypair in the terminal. We are going to copy that address and open up our project in our code editor and go to `Anchor.toml` in the root of our project and paste this on line two replacing the address that is already there.
+This will return the keypair in the terminal. We are going to copy that address and open up our project in our code editor and go to `Anchor.toml` in the root of our project and paste this on line two replacing the address that is already there. Go to the `lib.rs` file located in the project's `programs` directory and paste that address on line three replacing the address that is already there.
 Now, we will go back over to our terminal where we got set up in our project folder and run:
 
 ```bash
