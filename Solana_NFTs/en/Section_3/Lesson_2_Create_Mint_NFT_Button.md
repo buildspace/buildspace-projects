@@ -107,7 +107,7 @@ connection.onSignatureWithOptions(
   txn,
   async (notification, context) => {
     if (notification.type === 'status') {
-      console.log('Receievd status event');
+      console.log('Received status event');
 
       const { result } = notification;
       if (!result.err) {
@@ -120,9 +120,9 @@ connection.onSignatureWithOptions(
 );
 ```
 
-Once we get the signal from our candy machine that the NFT was minted, we let the user know! This is very much like a web hook. Metaplex will actually "emit" a "success" flag on-chain and our web app can capture it. Pretty cool :). 
+Once we get the signal from our candy machine that the NFT was minted, we let the user know! This is very much like a web hook. Metaplex will actually "emit" a "success" flag on-chain and our web app can capture it. Pretty cool :).
 
-I know I blazed through all this stuff, so, be sure to go through it yourself! Also, it'd be awesome if someone just made this one nice NPM module lol. 
+I know I blazed through all this stuff, so, be sure to go through it yourself! Also, it'd be awesome if someone just made this one nice NPM module lol.
 
 ### ✨ Mint your NFT.
 
@@ -155,7 +155,7 @@ Then, on your terminal run:
 solana airdrop 5 INSERT_YOUR_PHANTOM_WALLET_ADDRESS
 ```
 
-And that's it. Congrats on all the free money heh. 
+And that's it. Congrats on all the free money heh.
 
 Cool, so now when you click "Mint NFT", you'll see a pop up like:
 
@@ -198,7 +198,7 @@ const [machineStats, setMachineStats] = useState(null);
 const [mints, setMints] = useState([]);
 ```
 
- 
+
 
 Now that we have a way to store all our minted NFTs let's head over to the `getCandyMachineState` function and add the following code right under our `console.log` line:
 
@@ -254,7 +254,7 @@ if (data.length !== 0) {
 
 Pretty simple here - we need to loop through every mint and get the Token URI. Once we get that URI we can fetch the `json` file and then parse out the asset address of our NFT! At that point, let's store this in our state and we are done.
 
-One thing to note here is the check before setting state. Every time we fetch minted NFTs, it will return every single mint. If we already have one of these mints in our state, don't add it again! 
+One thing to note here is the check before setting state. Every time we fetch minted NFTs, it will return every single mint. If we already have one of these mints in our state, don't add it again!
 
 Okay nice. If you start minting items you should start seeing parsed data with some data being printed out in your console.
 
