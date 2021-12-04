@@ -58,7 +58,7 @@ solana address
 
 Copy that address and paste it into all three of the `json` files filling in `"INSERT_CREATOR_WALLET_ADDRESS_HERE"`. Don't forget the quotation symbols.
 
-Now we're going to use Metaplex's `uplaod` command to upload our NFTs that live in the `assets` folder.
+Now we're going to use Metaplex's `upload` command to upload our NFTs that live in the `assets` folder.
 
 Notice how we do `./assets` in the command below. That means we need to run this command from just one level outside of the `assets` folder.
 
@@ -66,7 +66,7 @@ Notice how we do `./assets` in the command below. That means we need to run this
 ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts upload ./assets --env devnet --keypair ~/.config/solana/devnet.json
 ```
 
-*Note: if you get an error like "no such file or directory, scandir './assets'" it means you ran the command from the wrong place. Be sure to run it in the same directory where your `assests` folder is.*
+*Note: if you get an error like "no such file or directory, scandir './assets'" it means you ran the command from the wrong place. Be sure to run it in the same directory where your `assets` folder is.*
 
 The `upload` command is essentially saying - "Hey Metaplex CLI, take all the NFT pairs in my `assets` folder, upload them to Arweave, initialize the candy machine config holding the pointers to these NFTs, and then save that config on Solana's devnet".
 
