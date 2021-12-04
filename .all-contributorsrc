@@ -1201,6 +1201,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "anhek",
+      "name": "Antonin Nhek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1397483?v=4",
+      "profile": "https://anhek.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
