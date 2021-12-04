@@ -1156,6 +1156,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "willworth",
+      "name": "Will Worth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4967253?v=4",
+      "profile": "http://willworth.dev/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
