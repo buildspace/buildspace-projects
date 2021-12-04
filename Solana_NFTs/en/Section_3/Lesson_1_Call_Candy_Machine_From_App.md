@@ -190,7 +190,7 @@ When we do `fetch` here, we're **actually hitting the Solana Devnet** to retreiv
 
 ### 🧠 **Render the CandyMachine component.**
 
-Let's actually render our `CandyMachine` component. If you scroll all the way to bottom of the `CandyMachine` component you'll we render a bunch of stuff under `return`. Let's show it!
+Let's actually render our `CandyMachine` component. If you scroll all the way to bottom of the `CandyMachine` component you'll see that we render a bunch of stuff under `return`. Let's show it!
 
 Head to `app/src/App.js` and import `CandyMachine`.
 
