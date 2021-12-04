@@ -19,13 +19,13 @@ Vamos a escribir un script personalizado que haga esos tres pasos por nosotros.
 📝 Crear un script para correr nuestro contrato
 -------------------------------------
 
-Ve al directorio ** `scripts` ** y crea un archivo llamado **` run.js`. **
+Ve al directorio **`scripts`** y crea un archivo llamado **`run.js`.**
 
 Para probar un contrato inteligente, tenemos que hacer un montón de cosas bien. Como: compilar, desplegar y luego ejecutar.
 
-Nuestro script hará que sea muy fácil iterar en nuestro contrato muy rápido :).
+Nuestro script hará que sea fácil iterar en nuestro contrato muy rápido :).
 
-Entonces, esto es lo que ** `run.js` ** va a tener:
+Entonces, esto es lo que **`run.js`** va a tener:
 
 ```javascript
 const main = async () => {
@@ -104,14 +104,14 @@ Directamente desde los propios documentos de Hardhat notarás esto:
 
 Entonces, ¿qué significa esto? Bueno, cada vez que ejecutas un comando de terminal que comienza con `npx hardhat`, obtienes este objeto` hre` construido sobre la marcha usando el `hardhat.config.js` especificado en tu código. Esto significa que nunca tendrá que realizar algún tipo de importación en sus archivos como:
 
-`const hardhat = require (" hardhat ")`
+`const hardhat = require ("hardhat")`
 
 **Resumen: verás `hre` mucho en nuestro código, ¡pero nunca se importó a ningún lado! ¡Consulte esta interesante [documentación de Hardhat] (https://hardhat.org/advanced/hardhat-runtime-environment.html) para obtener más información al respecto!**
 
 🚨 Antes de hacer clic en "Siguiente lección"
 -------------------------------------------
 
-* Nota: si no haces esto, Farza se pondrá muy triste: (. *
+* Nota: si no haces esto, Farza se pondrá muy triste :(
 
 Ve a #progress y publica una captura de pantalla de tu terminal con el resultado.
 
