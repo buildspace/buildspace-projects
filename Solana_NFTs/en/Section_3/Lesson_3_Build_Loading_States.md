@@ -59,8 +59,7 @@ const mintToken = async () => {
 
 So we handled the scenario where the mint starts and there is an error, but what about if the mint is successful?
 
-Let's stay in the `mintToken` function and find the event listener thats setup. It should look something like this - it should look a bit something like this
-
+Let's stay in the `mintToken` function and find the event listener that is setup with the changes we made. It should look something like this:
 ```jsx
 if (notification.type === 'status') {
   console.log('Receievd status event');
