@@ -249,6 +249,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://willworth.dev/"><img src="https://avatars.githubusercontent.com/u/4967253?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Will Worth</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=willworth" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/TylerWoolcott"><img src="https://avatars.githubusercontent.com/u/86615652?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tyler Woolcott</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=TylerWoolcott" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.reactever.com"><img src="https://avatars.githubusercontent.com/u/1310178?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julian Martinez</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=julianeon" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://jester.cafe"><img src="https://avatars.githubusercontent.com/u/1183817?v=4?s=100" width="100px;" alt=""/><br /><sub><b>F. Jovan Jester</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jester7" title="Documentation">📖</a></td>
   </tr>
 </table>
 

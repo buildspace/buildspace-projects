@@ -1183,6 +1183,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jester7",
+      "name": "F. Jovan Jester",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1183817?v=4",
+      "profile": "https://jester.cafe",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
