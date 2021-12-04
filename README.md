@@ -245,6 +245,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/andrewkmin"><img src="https://avatars.githubusercontent.com/u/8583903?v=4?s=100" width="100px;" alt=""/><br /><sub><b>am</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=andrewkmin" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/tom-louwagie/"><img src="https://avatars.githubusercontent.com/u/36488178?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tom Louwagie</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=TomLouwagie" title="Documentation">📖</a></td>
   </tr>
 </table>
 
