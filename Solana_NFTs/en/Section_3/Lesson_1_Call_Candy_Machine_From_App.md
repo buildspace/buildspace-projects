@@ -34,11 +34,11 @@ REACT_APP_SOLANA_RPC_HOST=
 
 Let's go one by one (note: **no** quotation symbols needed here).
 
-`REACT_APP_CANDY_MACHINE_CONFIG` - This can be found in your `.cache/devent-temp` JSON file that was created. Look for the value associated with the `config` key.
+`REACT_APP_CANDY_MACHINE_CONFIG` - This can be found in your `.cache/devnet-temp` JSON file that was created. Look for the value associated with the `config` key.
 
-`REACT_APP_CANDY_MACHINE_ID` - This can also be found in the same `.cache/devent-temp` JSON file, look for the value associated with the `candyMachineAddress` key.
+`REACT_APP_CANDY_MACHINE_ID` - This can also be found in the same `.cache/devnet-temp` JSON file, look for the value associated with the `candyMachineAddress` key.
 
-`REACT_APP_TREASURY_ADDRESS` - This can also be found in the same `.cache/devent-temp` JSON file, look for the value associated with the `authority` key.
+`REACT_APP_TREASURY_ADDRESS` - This can also be found in the same `.cache/devnet-temp` JSON file, look for the value associated with the `authority` key.
 
 `REACT_APP_SOLANA_NETWORK` - Set this to `devnet` as this is just the network in which we are accessing our candy machine from
 
