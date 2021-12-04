@@ -34,7 +34,7 @@ In our `assets` folder things are going to look like this:
 
 ![Untitled](https://i.imgur.com/3warkmp.png)
 
-Pretty straight forward right? `0.json` correlates to `0.png`, `1.json` correlates to `1.png` and so on. Now, you're probably wondering what we're going to to be putting inside these `json` files.
+Pretty straight forward right? `0.json` correlates to `0.png`, `1.json` correlates to `1.png` and so on. Now, you're probably wondering what we're going to be putting inside these `json` files.
 
 Let's copy paste the following into `0.json`:
 
