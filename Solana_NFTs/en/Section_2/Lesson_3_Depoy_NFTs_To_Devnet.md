@@ -48,6 +48,10 @@ solana airdrop 5
 
 After that's done, you can run `solana balance` again and bam you'll have some SOL. *Note: if you ever run out of fake SOL, you can just run this command again.*
 
+*Note 2: If you encountered **"balance unchanged"** problems while trying to get the airdrop, you can use this command instead:*
+```plaintext
+solana airdrop 5 --url https://api.devnet.solana.com
+```
 ### 🚀 **Upload the NFTs**
 
 Before you upload, we still need to properly fill in `"INSERT_CREATOR_WALLET_ADDRESS_HERE"` on all three of our `json` files! This is **not** our Phantom wallet address. This address is our **local developer wallet address** which ****can be found by running:
