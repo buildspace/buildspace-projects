@@ -53,7 +53,7 @@ Now that we have that figured out, let's write some code near the bottom of `app
 const renderDropTimer = () => {
   // Get the current date and dropDate in a JavaScript Date object
   const currentDate = new Date();
-  const dropDate = new Date(machineStats.goLiveData * 1000);
+  const dropDate = new Date(machineStats.goLiveDate * 1000);
 
   // If currentDate is before dropDate, render our Countdown component
   if (currentDate < dropDate) {
