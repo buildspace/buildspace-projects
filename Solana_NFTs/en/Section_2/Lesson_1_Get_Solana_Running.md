@@ -70,7 +70,7 @@ solana --version
 If that output a version number, you're good to go! Next thing you'll want to do is run these two commands separately:
 
 ```plaintext
-solana config set --url https://api.devnet.solana.com
+solana config set --url devnet
 solana config get
 ```
 
