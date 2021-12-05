@@ -34,14 +34,14 @@ REACT_APP_SOLANA_RPC_HOST=
 
 Let's go one by one (note: **no** quotation symbols needed here).
 
-**Warning** `.cache/devent-temp` can be found on the top of `assets` folder after running Metaplex command in previous steps.
+**Note:** `.cache/devent-temp` can be found at the root of your folder after running the Metaplex command in previous steps.
+
+`REACT_APP_CANDY_MACHINE_CONFIG` - This can be found in your `.cache/devnet-temp` JSON file that was created. Look for the value associated with the `config` key.
 
 
-`REACT_APP_CANDY_MACHINE_CONFIG` - This can be found in your `.cache/devent-temp` JSON file that was created. Look for the value associated with the `config` key.
+`REACT_APP_CANDY_MACHINE_ID` - This can also be found in the same `.cache/devnet-temp` JSON file, look for the value associated with the `candyMachineAddress` key.
 
-`REACT_APP_CANDY_MACHINE_ID` - This can also be found in the same `.cache/devent-temp` JSON file, look for the value associated with the `candyMachineAddress` key.
-
-`REACT_APP_TREASURY_ADDRESS` - This can also be found in the same `.cache/devent-temp` JSON file, look for the value associated with the `authority` key.
+`REACT_APP_TREASURY_ADDRESS` - This can also be found in the same `.cache/devnet-temp` JSON file, look for the value associated with the `authority` key.
 
 `REACT_APP_SOLANA_NETWORK` - Set this to `devnet` as this is just the network in which we are accessing our candy machine from
 
@@ -193,7 +193,7 @@ When we do `fetch` here, we're **actually hitting the Solana Devnet** to retreiv
 
 ### 🧠 **Render the CandyMachine component.**
 
-Let's actually render our `CandyMachine` component. If you scroll all the way to bottom of the `CandyMachine` component you'll we render a bunch of stuff under `return`. Let's show it!
+Let's actually render our `CandyMachine` component. If you scroll all the way to bottom of the `CandyMachine` component you'll see that we render a bunch of stuff under `return`. Let's show it!
 
 Head to `app/src/App.js` and import `CandyMachine`.
 

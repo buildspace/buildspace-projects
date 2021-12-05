@@ -1156,6 +1156,105 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "willworth",
+      "name": "Will Worth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4967253?v=4",
+      "profile": "http://willworth.dev/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "TylerWoolcott",
+      "name": "Tyler Woolcott",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86615652?v=4",
+      "profile": "https://github.com/TylerWoolcott",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "julianeon",
+      "name": "Julian Martinez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1310178?v=4",
+      "profile": "https://www.reactever.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jester7",
+      "name": "F. Jovan Jester",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1183817?v=4",
+      "profile": "https://jester.cafe",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "deepak-likes-code",
+      "name": "Deepak",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58183359?v=4",
+      "profile": "http://www.styloria.in",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "anhek",
+      "name": "Antonin Nhek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1397483?v=4",
+      "profile": "https://anhek.dev",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "michaelnetter",
+      "name": "Michael Netter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24876403?v=4",
+      "profile": "https://github.com/michaelnetter",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "nath1as",
+      "name": "nath1as",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7736324?v=4",
+      "profile": "https://nathias.id",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ArpitIngle",
+      "name": "Arpit Ingle",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37828045?v=4",
+      "profile": "https://github.com/ArpitIngle",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "katieraby",
+      "name": "Katie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50029859?v=4",
+      "profile": "https://linktr.ee/katieraby",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "quiint",
+      "name": "Quiint",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82949194?v=4",
+      "profile": "http://quiint.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

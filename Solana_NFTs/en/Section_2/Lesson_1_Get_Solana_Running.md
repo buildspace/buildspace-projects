@@ -94,7 +94,7 @@ Dang it! Solana can be rough to get working. We're happy to help though!! Post a
 
 Now that we have our Solana CLI installed, we'll need to install the Metaplex CLI which allows us to actually create our candy machine.
 
-Let's start by cloning a repo from Github. *I recommend cloning the repo to the home folder of your repo. So, you can do a `cd ~`  to get there (not sure what it is on Windows lol).*
+Let's start by cloning a repo from Github. *I recommend cloning the repo to the home folder of your user. So, you can do a `cd ~`  to get there (not sure what it is on Windows lol).*
 
 ```plaintext
 git clone --branch v1.0.0 https://github.com/metaplex-foundation/metaplex.git ~/metaplex-foundation/metaplex

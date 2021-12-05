@@ -154,7 +154,7 @@ So when you run this, you should see that line *"Phantom wallet found!"* print
 
 Next, we need to actually check if we're **authorized** to actually access the user's wallet. Once we have access to this, we can start getting access to the functions in our Solana program 🤘.
 
-Basically, **Phantom Wallet doesn't just give our wallet information to every website we go to**. It only gives it to websites we authorize. So far, have **not** given Phantom explicit access to share our wallet's info.
+Basically, **Phantom Wallet doesn't just give our wallet information to every website we go to**. It only gives it to websites we authorize. So far, we have **not** given Phantom explicit access to share our wallet's info.
 
 The first thing we need to do is check if a user has given us permission to use their wallet on our site — this is sorta like checking if our user is "logged in". All we need to do is add one more line to our `checkIfWalletIsConnected` function. Check out the code below:
 

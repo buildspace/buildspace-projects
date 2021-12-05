@@ -1,4 +1,4 @@
-We are moving right a long here! At this point we have: setup our React app, built a connect to wallet button, setup some conditional rendering based on the state of the user's Solana wallet.
+We are moving right along here! At this point we have: setup our React app, built a connect to wallet button, setup some conditional rendering based on the state of the user's Solana wallet.
 
 In our GIF Portal we want to be able to show GIFs that people submit to our app!
 
