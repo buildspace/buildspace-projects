@@ -27,7 +27,7 @@ const rent = await connection.getMinimumBalanceForRentExemption(
 );
 ```
 
-Here we're creating an account for our NFT. In Solana, programs are **stateless** which is very different Ethereum where contracts hold state. Check out more on accounts [here](https://docs.solana.com/developing/programming-model/accounts).
+Here we're creating an account for our NFT. In Solana, programs are **stateless** which is very different from Ethereum where contracts hold state. Check out more on accounts [here](https://docs.solana.com/developing/programming-model/accounts).
 
 ```jsx
 const accounts = {
