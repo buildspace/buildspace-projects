@@ -8,6 +8,21 @@ Right now, our "drop" already happened since we set the date to be in the past. 
 ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts update_candy_machine --date "1 Dec 2022 00:12:00 GMT" --env devnet --keypair ~/.config/solana/devnet.json
 ```
 
+Remember from a previous lesson: if at any point you run into an error that looks like this:
+```plaintext
+/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts:53
+      return fs.readdirSync(`${val}`).map(file => path.join(val, file));
+                      ^
+TypeError: Cannot read property 'candyMachineAddress' of undefined
+    at /Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts:649:53
+    at step (/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts:53:23)
+    at Object.next (/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts:34:53)
+    at fulfilled (/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts:25:58)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+```
+
+Then it means the command can't access the .cache folder with the important data around your candy machine and NFTs. So if you get this error, be 100% sure you're running your candy machine commands from the same directory where you .cache and assets folders are.
+
 This timer needs to do a few things:
 
 1. Only be shown if the current date is before the drop date we setup
