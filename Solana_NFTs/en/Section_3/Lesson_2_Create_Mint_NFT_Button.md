@@ -6,7 +6,7 @@ Let's do this.
 
 ### 🎩 Going through the `mintToken` function.
 
-In your `CandyMachine` component you'll see a function named `mintToken`. This is part of Metaplex's front-end library *(huge **shoutout to the Exiled [Apes Candy Machine Mint repo](https://github.com/exiled-apes/candy-machine-mint)** for giving a good baseline for this code)*.
+In your `CandyMachine` component you'll see a function named `mintToken`. This is part of Metaplex's front-end library *(huge **shoutout to the [Exiled Apes Candy Machine Mint repo](https://github.com/exiled-apes/candy-machine-mint)** for giving a good baseline for this code)*.
 
 This function is pretty complex. I'm not going to go through it line by line. Go and figure out how it works yourself! One thing I recommend doing is using CMD (MacOS) or CTRL (Windows) + click on functions to see how they work at a lower level. Looking at the code is usually the best way to learn how it works.
 
