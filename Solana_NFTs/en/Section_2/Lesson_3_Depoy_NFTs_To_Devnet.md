@@ -50,7 +50,7 @@ After that's done, you can run `solana balance` again and bam you'll have some S
 
 ### 🚀 **Upload the NFTs**
 
-Before you upload, we still need to properly fill in `"INSERT_CREATOR_WALLET_ADDRESS_HERE"` on all three of our `json` files! This is **not** our Phantom wallet address. This address is our **local developer wallet address** which ****can be found by running:
+Before you upload, we still need to properly fill in `"INSERT_CREATOR_WALLET_ADDRESS_HERE"` on all three of our `json` files! This is **not** our Phantom wallet address. This address is our **local developer wallet address** which can be found by running:
 
 ```plaintext
 solana address
