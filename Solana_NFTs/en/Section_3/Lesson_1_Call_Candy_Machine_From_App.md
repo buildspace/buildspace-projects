@@ -171,7 +171,7 @@ At the end of the day, our candy machine is just a Solana program that lives on 
 
 Once we create our `Program` object, we fetch it's metadata based on our candy machine id.
 
-This line calls the fetch method on our candy machine program and returns `itemsAvailble` , `itemsRedeemed` , `itemsRemaining` , and `goLiveDate`.
+This line calls the fetch method on our candy machine program and returns `itemsAvailable` , `itemsRedeemed` , `itemsRemaining` , and `goLiveDate`.
 
 ```jsx
 // Fetch the metadata from your candy machine
