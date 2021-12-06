@@ -197,6 +197,19 @@ const [machineStats, setMachineStats] = useState(null);
 // New state property
 const [mints, setMints] = useState([]);
 ```
+Set the MachineStats before console.log method
+
+```jsx
+// State
+    setMachineStats({
+      itemsAvailable,
+      itemsRedeemed,
+      itemsRemaining,
+      goLiveData,
+      goLiveDateTimeString,
+    });
+```
+
 
  
 
