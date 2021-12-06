@@ -1300,6 +1300,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "bleafman",
+      "name": "Brandon Leafman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17711952?v=4",
+      "profile": "http://brandonleafman.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
