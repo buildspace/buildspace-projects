@@ -61,7 +61,7 @@ const renderDropTimer = () => {
     // Don't forget to pass over your dropDate!
     return <CountdownTimer dropDate={dropDate} />;
   }
-  
+
   // Else let's just return the current drop date
   return <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>;
 };
@@ -88,20 +88,20 @@ return (
 
 We're just using some basic conditional rendering and calling it in our components render function. Give your page a quick refresh and see what appears!
 
-*Note: if you need to mess around with different dates, don't forget you can use the `update_candy_machine` CLI command to change that to whatever you'd like!* 
+*Note: if you need to mess around with different dates, don't forget you can use the `update_candy_machine` CLI command to change that to whatever you'd like!*
 
 Nice. We can head back to the `CountdownTimer` component to get the rest of the logic setup. We want to see the timer countdown in realtime. We are going to use a bit of JavaScript fanciness to achieve this, but don't worry the logic is super straight forward.
 
 ```jsx
-// Our useEffect will run on comppnent load
+// Our useEffect will run on component load
 useEffect(() => {
   console.log('Setting interval...');
-  
+
   // Use setInterval to run this piece of code every second
   const interval = setInterval(() => {
     const currentDate = new Date().getTime();
     const distance = dropDate - currentDate;
-    
+
     // Here it's as easy as doing some time math to get the different properties
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor(
@@ -109,17 +109,17 @@ useEffect(() => {
     );
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
+
     // We have our desired output, set it in state!
     setTimerString(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-    
+
     // If our distance passes zero this means that it's drop time!
     if (distance < 0) {
       console.log('Clearing interval...');
       clearInterval(interval);
     }
   }, 1000);
-  
+
   // Anytime our component unmounts let's clean up our interval
   return () => {
     if (interval) {
@@ -141,7 +141,7 @@ You have a simple countdown timer that will help your fans know when to come bac
 
 One last thing that could be a really cool add (which is also easy to do) is showing a "Sold Out" state when your machine runs out of NFTs to mint!
 
-Remember — your drop only has a set number of NFTs that are available. 
+Remember — your drop only has a set number of NFTs that are available.
 
 We can figure this out by checking two properties - `itemsRedeemed` and `itemsAvailable` on our `machineStats` state! On top of this we are going to add a bit of fanciness to only show our mint button when we have items to mint and the NFT drop date has been reached!
 
