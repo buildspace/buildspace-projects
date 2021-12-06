@@ -1291,6 +1291,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "daileytj",
+      "name": "Thomas Dailey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13989985?v=4",
+      "profile": "http://dailey.eth",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
