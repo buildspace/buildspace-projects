@@ -4,7 +4,7 @@ This stage is a **three stage** process and something you will want to remember 
 
 1. Upload your NFTs to [Arweave](https://www.arweave.org) (which is a decentralized file-store) and initialize your candy machine's config. 
 2. Create your candy machine on Metaplex's contract.
-3. Update your candy machine with proper the drop date for your NFTs — this is the date when people can actually start minting your NFTs.
+3. Update your candy machine with the proper drop date for your NFTs — this is the date when people can actually start minting your NFTs.
 
 ### 🔑 **Setting up a Solana keypair.**
 
