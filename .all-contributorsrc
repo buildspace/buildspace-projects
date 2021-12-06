@@ -1264,6 +1264,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "laitsky",
+      "name": "Vincent Diamond",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17923065?v=4",
+      "profile": "https://github.com/laitsky",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
