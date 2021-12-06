@@ -204,7 +204,7 @@ waveCount = await waveContract.getTotalWaves();
 🚨 Antes de que hagas clic en "Siguiente lección"
 -------------------------------------------
 
-* Nota: si no haces esto, Farza se pondrá muy triste :(.*
+* Nota: si no haces esto, Farza se pondrá muy triste :( 
 
 ¡Personaliza un poco tu código! ¿Quizás quieras guardar algo más? Quiero que juegues. ¿Quizás deseas almacenar la dirección del remitente en un arreglo? ¿Quizás deseas almacenar un mapa de direcciones y recuentos de saludos para realizar un seguimiento de quién te está saludando con más frecuencia? Incluso si simplemente cambia los nombres de las variables y los nombres de las funciones para que sean algo que creas interesante. ¡Intenta no copiarme directamente! Piense en tu sitio web final y el tipo de funcionalidad que deseas. Crea la funcionalidad **que deseas**.
 
