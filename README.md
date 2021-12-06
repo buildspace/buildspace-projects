@@ -263,6 +263,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/laitsky"><img src="https://avatars.githubusercontent.com/u/17923065?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vincent Diamond</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=laitsky" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://shaikharfan7.github.io/"><img src="https://avatars.githubusercontent.com/u/36654833?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arfan Shaikh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=shaikharfan7" title="Documentation">📖</a></td>
   </tr>
 </table>
 
