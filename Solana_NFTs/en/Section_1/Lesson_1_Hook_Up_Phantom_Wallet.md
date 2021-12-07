@@ -144,33 +144,13 @@ In React, the `useEffect` hook gets called once on component mount when that s
 
 Currently, the Phantom Wallet team suggests to wait for the window to fully finish loading before checking for the `solana` object. Once this event gets called, we can guarantee that this object is available if the user has the Phantom Wallet extension installed.
 
-### **Setup the project & run it.**
-
-In order to get the app you've pulled down running in your browser, we will need to install the dependencies and start up a local server. This project is built using [Create React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) as a base. You can start it up using the `start` script if you are inside of the `app/` directory in the project.
-
-```bash
-cd app
-```
-
-#### npm
-
-```bash
-npm i
-npm run start
-```
-
-#### yarn
-
-```bash
-yarn
-yarn start
-```
-
 ### **🔒 Accessing the user's account.**
 
 So when you run this, you should see that line *"Phantom wallet found!"* printed in the console of the website when you go to inspect it.
 
 ![Untitled](https://i.imgur.com/uyGcSJ4.png)
+
+_For additional instructions on getting your app running, refer to `README.md` at the root of your project._
 
 **NICE.**
 
