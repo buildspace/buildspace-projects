@@ -270,6 +270,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ellyg123"><img src="https://avatars.githubusercontent.com/u/84035493?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ellyg123</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ellyg123" title="Documentation">📖</a></td>
     <td align="center"><a href="http://stevedsimkins.dev"><img src="https://avatars.githubusercontent.com/u/73185218?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Steve Simkins</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=stevedsimkins" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/thierry-skoda-3719238a/"><img src="https://avatars.githubusercontent.com/u/6875849?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thierry Skoda</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=thierryskoda" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
