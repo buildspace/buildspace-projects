@@ -1318,6 +1318,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "stevedsimkins",
+      "name": "Steve Simkins",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73185218?v=4",
+      "profile": "http://stevedsimkins.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
