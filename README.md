@@ -268,6 +268,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://dailey.eth"><img src="https://avatars.githubusercontent.com/u/13989985?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thomas Dailey</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=daileytj" title="Documentation">📖</a></td>
     <td align="center"><a href="http://brandonleafman.com"><img src="https://avatars.githubusercontent.com/u/17711952?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brandon Leafman</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=bleafman" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ellyg123"><img src="https://avatars.githubusercontent.com/u/84035493?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ellyg123</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ellyg123" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://stevedsimkins.dev"><img src="https://avatars.githubusercontent.com/u/73185218?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Steve Simkins</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=stevedsimkins" title="Documentation">📖</a></td>
   </tr>
 </table>
 
