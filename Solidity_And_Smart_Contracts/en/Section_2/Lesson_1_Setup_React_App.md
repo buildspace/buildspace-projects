@@ -41,4 +41,4 @@ So, go ahead and set it all up! Their setup flow is pretty self-explanatory :).
 
 *Note: if you don't do this, Farza will be very sad :(.*
 
-Share a link to your website and post it in #progress. Change up the CSS and text to be whatever you want. Maybe you want it to be more colorful? Maybe you don't care above waves and you want to make a decentralized Twitter clone? Do whatever you want this is your app :).
+Share a link to your website and post it in #progress. Change up the CSS and text to be whatever you want. Maybe you want it to be more colorful? Maybe you don't care about waves and you want to make a decentralized Twitter clone? Do whatever you want this is your app :).

@@ -45,7 +45,7 @@ It would be super cool if you loved a certain GIF submitted by another user SO M
 
 **Solana's super low gas fee means sending small amounts of money like this actually makes sense.** If you do this, you could even make a version of Patreon or BuyMeACoffee on Solana. Not that crazy. You have all the basic skills now.
 
-Who needs Stripe and PayPal when you have a super low, gas fee blockchain that lets you make instant payments?!?
+Who needs Stripe and PayPal when you have a super low-gas fee blockchain that lets you make instant payments?!?
 
 This is another thing I want you to figure out if you want by hanging out in the [Anchor Discord](https://discord.gg/8HwmBtt2ss) or by asking your fellow buildspacers. **Why am I not telling you the answers?** Haha, because I want you to be active in the Solana community, figure shit out, and learn by struggling a bit.
 
