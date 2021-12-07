@@ -16,7 +16,7 @@ function checkIfUserHasNFT() public view returns (CharacterAttributes memory) {
 }
 ```
 
-The plan here is to return `CharacterAttributes` filled with the state of the user's NFT is they have one. If they don't have an NFT for our game in their wallet, we return an empty `CharacterAttributes`.
+The plan here is to return `CharacterAttributes` filled with the state of the user's NFT if they have one. If they don't have an NFT for our game in their wallet, we return an empty `CharacterAttributes`.
 
 ```solidity
 function checkIfUserHasNFT() public view returns (CharacterAttributes memory) {
