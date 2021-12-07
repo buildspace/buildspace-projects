@@ -106,16 +106,16 @@ At this point it's really important to make sure you are connected to the Rinkeb
 ```javascript
 const checkNetwork = async () => {
   try { 
-    if(window.ethereum.networkVersion !== '4'){
+    if (window.ethereum.networkVersion !== '4') {
       alert("Please connect to Rinkeby!")
     }
-  } catch(error){
+  } catch(error) {
     console.log(error)
   }
 }
 ```
 
-Now anytime the page is loaded on the mainnet you will get a notice for your users to switch to rinkeby! 
+Here's a quick breakdown of what we're doing here. Similar to how we normally define ```const { ethereum } = window``` we are using ```networkVersion``` in that ethereum object to check which ethereum network we're on. The ethereum networks have different chain ID's, and the Rinkeby chain ID is "4". All we have to do is say "if the current ethereum network is not Rinkeby, alert the user!" Now anytime the page is not loaded on the Rinkeby you will get a notice for your users to switch to Rinkeby! 
 
 ### Recap 
 
