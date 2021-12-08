@@ -124,7 +124,7 @@ Arweave is pay once, store **forever**. They do this using an [algorithm](https:
 
 You may be asking yourself — "well, who's paying to host my stuff then!?". Well if you look through the source code of the script [here](https://github.com/metaplex-foundation/metaplex/blob/59ab126e41e6d85b53c79ad7358964dadd12b5f4/js/packages/cli/src/helpers/upload/arweave.ts#L93), you'll see that Metaplex pays for it themselves for now to help you out!
 
-### 😡 **Error to be aware of.**
+## 😡 **Error to be aware of.**
 
 If at any point you run into an error that looks like this:
 
@@ -140,7 +140,7 @@ TypeError: Cannot read property 'candyMachineAddress' of undefined
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 ```
 
-Then it means the command can't access the `.cache` folder with the important data around your candy machine and NFTs. So if you get this error, be 100% sure you're running your candy machine commands from the same directory where you `.cache` and `assets` folders are.
+Then it means the command can't access the `.cache` folder with the important data around your candy machine and NFTs. So if you get this error, be 100% sure you're running your candy machine commands from the same directory where you `.cache` and `assets` folders are. This is really easy to mess up since you might be in the ```app``` directory editing your web app and updating the candy machine in the future; double check your directory!!
 
 ### 🚨 Progress Report
 
