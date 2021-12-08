@@ -94,22 +94,38 @@ Dang it! Solana can be rough to get working. We're happy to help though!! Post a
 
 Now that we have our Solana CLI installed, we'll need to install the Metaplex CLI which allows us to actually create our candy machine.
 
-Let's start by cloning a repo from Github. *I recommend cloning the repo to the home folder of your user. So, you can do a `cd ~`  to get there (not sure what it is on Windows lol).*
+Let's start by cloning a repo from Github. *I recommend cloning the repo to the home folder of your user. So, you can do a `cd ~`  to get there.*
+For Windows I recommend to get [Powershell](https://github.com/PowerShell/PowerShell) and use the automatic variable `$HOME` instead of `~`.
 
+Unix / WSL
 ```plaintext
 git clone --branch v1.0.0 https://github.com/metaplex-foundation/metaplex.git ~/metaplex-foundation/metaplex
+```
+Windows
+```plaintext
+git clone --branch v1.0.0 https://github.com/metaplex-foundation/metaplex.git $HOME/metaplex-foundation/metaplex
 ```
 
 From here it's just a matter of installing all the dependencies for this CLI, by using this command in the directory where you just installed Metaplex. Note: I don't actually cd into the folder. I just run all the commands I need from outside the folder. I never actually go inside the `metaplex-foundation` folder. You'll see why this is easier later!
 
+Unix / WSL
 ```plaintext
 yarn install --cwd ~/metaplex-foundation/metaplex/js/
+```
+Windows
+```plaintext
+yarn install --cwd $HOME/metaplex-foundation/metaplex/js/
 ```
 
 Before we move on, let's make sure everything is working as expected by running the following command to get the `version`.
 
+Unix / WSL
 ```plaintext
 ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts --version
+```
+Windows
+```plaintext
+ts-node $HOME/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts --version
 ```
 
 This should spit out `0.0.2`. At this point, we are good to go to start setting up our NFTs :).
