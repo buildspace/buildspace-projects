@@ -4,8 +4,13 @@ At this point we have our NFTs all uploaded to Arweave and we have a basic confi
 
 To deploy your candy machine to Metaplex's contract, it's as easy as running this command in your terminal:
 
+Unix / WSL
 ```plaintext
 ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts create_candy_machine --env devnet --keypair ~/.config/solana/devnet.json -p 1
+```
+Windows
+```plaintext
+ts-node $HOME/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts create_candy_machine --env devnet --keypair $HOME/.config/solana/devnet.json -p 1
 ```
 
 This looks very similar to the upload command, but there are a few main differences:
@@ -38,8 +43,13 @@ But we are missing just one more thing - a drop date! Since our candy machine is
 
 The Metaplex CLI gives a really easy command for you to update your machine's data. Use this to set a drop date for your NFTs:
 
+Unix / WSL
 ```plaintext
 ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts update_candy_machine --date "1 Dec 2021 00:12:00 GMT" --env devnet --keypair ~/.config/solana/devnet.json
+```
+Windows
+```plaintext
+ts-node $HOME/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts update_candy_machine --date "1 Dec 2021 00:12:00 GMT" --env devnet --keypair $HOME/.config/solana/devnet.json
 ```
 
 For now, set your drop date to December 1st, 2021. **This is a past date.** We're doing this for debugging purposes for later down the line. But, just know you could change this date later whenever you want. 
