@@ -14,14 +14,24 @@ In order for us to upload the NFTs to Solana, we need to have a "local wallet" t
 
 This can be done by running the command below. *Note: When it asks, no need to give it a passphrase, can just press enter and keep it empty.*
 
+Unix / WSL
 ```plaintext
 solana-keygen new --outfile ~/.config/solana/devnet.json
+```
+Windows
+```plaintext
+solana-keygen new --outfile $HOME/.config/solana/devnet.json
 ```
 
 From here, we can set this keypair as our default keypair.
 
+UNIX/WSL
 ```plaintext
 solana config set --keypair ~/.config/solana/devnet.json
+```
+Windows
+```plaintext
+solana config set --keypair $HOME/.config/solana/devnet.json
 ```
 
 Now, when we do `solana config get`, you should see `devnet.json` as the `Keypair Path` like below:
@@ -62,8 +72,13 @@ Now we're going to use Metaplex's `upload` command to upload our NFTs that live 
 
 Notice how we do `./assets` in the command below. That means we need to run this command from just one level outside of the `assets` folder.
 
+Unix / WSL
 ```plaintext
 ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts upload ./assets --env devnet --keypair ~/.config/solana/devnet.json
+```
+Windows
+```plaintext
+ts-node $HOME/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts upload ./assets --env devnet --keypair $HOME/.config/solana/devnet.json
 ```
 
 *Note: if you get an error like "no such file or directory, scandir './assets'" it means you ran the command from the wrong place. Be sure to run it in the same directory where your `assets` folder is.*
@@ -99,8 +114,13 @@ You will actually need to delete the `.cache` folder and run `upload` again. Thi
 
 Before moving on, verify your NFTs were actually uploaded by running the `verify` command:
 
+Unix / WSL
 ```plaintext
 ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts verify --keypair ~/.config/solana/devnet.json
+```
+Windows
+```plaintext
+ts-node $HOME/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts verify --keypair $HOME/.config/solana/devnet.json
 ```
 
 *Note: You'll notice here we don't tell this command anything about our NFTs. How then does it know what to verify? Well, the `.cache` folder has all the data. If you look inside `devnet-temp.json` you'll see all our data right there.*
