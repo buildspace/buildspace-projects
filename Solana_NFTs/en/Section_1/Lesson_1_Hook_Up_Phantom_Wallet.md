@@ -194,9 +194,10 @@ And that's it!
 
 *At this point you should still only be seeing the "Phantom wallet found!"* log statement in your console!
 
-Don't worry if you're seeing the "User Rejected Request" error in the console. It is totally expected at this point of the project ;)
+Don't worry if you're seeing the "User Rejected Request" error in the console. It is totally expected at this point of the project ;), It's there because we added that `onlyIfTrusted: true` parameter inside the `connect` method.
+It will make the Phantom wallet reject the user's connection request for now (as the error's name suggests 😁).
 
-Why is that? Well, the `connect` method will only run **if** the user has already authorized a connection between their wallet and the web app. **Which they've never done so far.** Let's do that next :).
+Why is that? Well, the `connect` method with `onlyIfTrusted` parameter set to `true` will only run **if** the user has already authorized a connection between their wallet and the web app. **Which they've never done so far.** Let's do that next :).
 
 ### 🚨 Progress Report
 
