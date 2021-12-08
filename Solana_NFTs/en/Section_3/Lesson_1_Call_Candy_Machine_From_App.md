@@ -186,7 +186,7 @@ const itemsRemaining = itemsAvailable - itemsRedeemed;
 const goLiveData = candyMachine.data.goLiveDate.toNumber();
 ```
 
-When we do `fetch` here, we're **actually hitting the Solana Devnet** to retreive this data. It's looks a lot like we're hitting an API, but, we're actually hitting the blockchain!
+When we do `fetch` here, we're **actually hitting the Solana Devnet** to retrieve this data. It's looks a lot like we're hitting an API, but, we're actually hitting the blockchain!
 
 ### 🧠 **Render the CandyMachine component.**
 
