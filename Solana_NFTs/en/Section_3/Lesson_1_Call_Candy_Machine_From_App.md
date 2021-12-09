@@ -34,7 +34,10 @@ REACT_APP_SOLANA_RPC_HOST=
 
 Let's go one by one (note: **no** quotation symbols needed here).
 
+**Note:** `.cache/devent-temp` can be found at the root of your folder after running the Metaplex command in previous steps.
+
 `REACT_APP_CANDY_MACHINE_CONFIG` - This can be found in your `.cache/devnet-temp` JSON file that was created. Look for the value associated with the `config` key.
+
 
 `REACT_APP_CANDY_MACHINE_ID` - This can also be found in the same `.cache/devnet-temp` JSON file, look for the value associated with the `candyMachineAddress` key.
 
