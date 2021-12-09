@@ -150,6 +150,8 @@ So when you run this, you should see that line *"Phantom wallet found!"* print
 
 ![Untitled](https://i.imgur.com/uyGcSJ4.png)
 
+_For additional instructions on getting your app running, refer to `README.md` at the root of your project._
+
 **NICE.**
 
 Next, we need to actually check if we're **authorized** to actually access the user's wallet. Once we have access to this, we can start getting access to the functions in our Solana program 🤘.
