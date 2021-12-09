@@ -1345,6 +1345,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "joshtsch",
+      "name": "Joshua Tscheschlog | Dev #3635",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14851820?v=4",
+      "profile": "https://github.com/joshtsch",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
