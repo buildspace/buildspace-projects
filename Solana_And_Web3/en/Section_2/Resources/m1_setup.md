@@ -54,11 +54,11 @@ We are to download with this command:
 git clone https://github.com/solana-labs/solana.git/
 ```
 
-Once it has finished cloning, we are going to enter the Solana directory and checkout the version branch `v1.8.2`:
+Once it has finished cloning, we are going to enter the Solana directory and checkout the version branch `v1.8.5`:
 
 ```bash
 cd solana
-git checkout v1.8.2
+git checkout v1.8.5
 ```
 
 `git checkout` is just switching to a stable version, so we can send ourselves some `$SOL` later on without receieving this error `Error: RPC response error -32601: Method not found`.
@@ -72,14 +72,24 @@ Next, we are going to run this command:
 <details>
 <summary>Having problems with <code>greadlink</code>?</summary>
 
-If you receieve an error that looks like this - `greadlink: command not found` you will need to do two things:
+If you receive an error that looks like this - `greadlink: command not found` you will need to do three things:
 
 - Install Brew using `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` (this may take a while)
 - Add brew to your path using `export PATH="/opt/homebrew/bin:$PATH"`
-
 - Install coreutils using `brew install coreutils`
 
 Then run the script above once more an see if it works!
+
+You may encounter additional errors like the following:
+```
+error: failed to download from `https://crates.io/api/v1/crates/console/0.11.3/download`
+
+Caused by:
+  [55] Failed sending data to the peer (Connection died, tried 5 times before giving up)
+```
+
+This is most likely an intermittent error; attempt to run the script again, and it should eventually download. If it _still_ doesn't end up downloading, you can try [locking your cargo version](https://github.community/t/failed-sending-data-to-the-peer-connection-died-tried-5-times-before-giving-up/189130/4) and running it again.
+
 If that outputs a version number, you're good to go!
 
 </details>
@@ -137,7 +147,7 @@ The last thing to test is we want to make sure we can get a local Solana node ru
 
 First, shoutout to **@dimfled#9450**, and send some love his way! He has 'seen things' building with Solana recently and gave us this step to get things working on M1s!
 
-We are going to run our Solana validator manually. Will exaplin why we need this shortly:
+We are going to run our Solana validator manually. Will explain why we need this shortly:
 
 ```bash
 solana-test-validator --no-bpf-jit
@@ -165,17 +175,17 @@ We're going to be using this tool called "Anchor" a lot. If you know about Hardh
 
 Anchor is a *really early projec*t run by a few core devs. You're bound to run into a few issues. Be sure to join the [Anchor Discord](https://discord.gg/8HwmBtt2ss) and feel free to ask questions or [create an issue](https://github.com/project-serum/anchor/issues) on their Github as you run into issues. The devs are awesome. Maybe even say you're from buildspace in #general on their Discord :).
 
-**BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search the their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you lol.**
+**BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search through their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you lol.**
 
 _Seriously — join that Discord, the devs are really helpful._
 
-To install Anchor, go ahead an run:
+To install Anchor, go ahead and run:
 
 ```bash
 cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
 ```
 
-The above command may take a while. Once it's done, it may ask you to update you path, remember to do that.
+The above command may take a while and your computer may get a little toasty 🔥. Once it's done, it may ask you to update you path, remember to do that.
 
 From here run:
 
@@ -240,7 +250,7 @@ Then run this command:
 solana address -k target/deploy/myepicproject-keypair.json
 ```
 
-This will return the keypair in the terminal. We are going to copy that address and open up our project in our code editor and go to `Anchor.toml` in the root of our project and paste this on line two replacing the address that is already there.
+This will return the keypair in the terminal. We are going to copy that address and open up our project in our code editor and go to `Anchor.toml` in the root of our project and paste this on line two replacing the address that is already there. Go to the `lib.rs` file located in the project's `programs` directory and paste that address on line three replacing the address that is already there.
 Now, we will go back over to our terminal where we got set up in our project folder and run:
 
 ```bash
@@ -248,5 +258,7 @@ anchor test --skip-local-validator
 ```
 
 This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
+
+Note, if you get an error in your terminal that says: "Error: failed to send transaction: Transaction simulation failed: Attempt to load a program that does not exist", this most likely means you forgot to add your Program Id in both your `.toml` file and `.rs` file! Go ahead and grab your ID again and verify it's updated in the appropriate spots :).
 
 ![Untitled](https://i.imgur.com/V35KchA.png)
