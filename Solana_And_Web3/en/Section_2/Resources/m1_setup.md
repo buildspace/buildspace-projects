@@ -109,13 +109,13 @@ rustup toolchain install stable
 
 </details>
 
-This might take some time, so don't be alarmed! Once you're done installing, you may need to ensure it is in your path by pasting in your terminal `export PATH="/Users/<install_path>/dev/solana"/bin:"$PATH"` and replacing `<install_path>`, then run this to make sure everything is in working order:
+This might take some time, so don't be alarmed! Once you're done installing, you may need to ensure it is in your path by pasting in your terminal `export PATH="< install_path >/dev/solana"/bin:"$PATH"` and replacing `< install_path >`, then run this to make sure everything is in working order:
 
 ```bash
 solana --version
 ```
 
-Next thing you'll want to do is run these two commands separately:
+Next thing you'll want to do is run these three commands separately:
 
 ```bash
 solana config set --url localhost
