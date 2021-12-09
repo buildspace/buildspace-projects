@@ -274,6 +274,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.linkedin.com/in/thierry-skoda-3719238a/"><img src="https://avatars.githubusercontent.com/u/6875849?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thierry Skoda</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=thierryskoda" title="Documentation">📖</a></td>
     <td align="center"><a href="http://ertyurk.com"><img src="https://avatars.githubusercontent.com/u/30368068?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ertyurk</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ertyurk" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/joshtsch"><img src="https://avatars.githubusercontent.com/u/14851820?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua Tscheschlog &#124; Dev #3635</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=joshtsch" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/tyirenkyi"><img src="https://avatars.githubusercontent.com/u/39198645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Timothy Yirenkyi</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=tyirenkyi" title="Documentation">📖</a></td>
   </tr>
 </table>
 
