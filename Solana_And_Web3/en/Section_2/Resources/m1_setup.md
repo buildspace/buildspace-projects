@@ -73,9 +73,9 @@ Next, we are going to run this command:
 <summary>Having problems with <code>greadlink</code>?</summary>
 
 If you receive an error that looks like this - `greadlink: command not found` you will need to do three things:
+
 - Install Brew using `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` (this may take a while)
 - Add brew to your path using `export PATH="/opt/homebrew/bin:$PATH"`
-
 - Install coreutils using `brew install coreutils`
 
 Then run the script above once more an see if it works!
@@ -119,13 +119,13 @@ rustup toolchain install stable
 
 </details>
 
-This might take some time, so don't be alarmed! Once you're done installing, run this to make sure everything is in working order:
+This might take some time, so don't be alarmed! Once you're done installing, you may need to ensure it is in your path by pasting in your terminal `export PATH="< install_path >/dev/solana"/bin:"$PATH"` and replacing `< install_path >`, then run this to make sure everything is in working order:
 
 ```bash
 solana --version
 ```
 
-Next thing you'll want to do is run these two commands separately:
+Next thing you'll want to do is run these three commands separately:
 
 ```bash
 solana config set --url localhost
