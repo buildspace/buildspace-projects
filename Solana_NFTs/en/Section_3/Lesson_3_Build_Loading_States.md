@@ -107,14 +107,19 @@ const data = await fetchHashTable(
 
 if (data.length !== 0) {
   const requests = data.map((mint) => {
-    const response = await fetch(mint.data.uri);
-    const parse = await response.json();
+    try {
+      const response = await fetch(mint.data.uri);
+      const parse = await response.json();
 
-    return parse.image;
+      return parse.image;
+    } catch(e) {
+      return null;
+    }
   });
 
   const allMints = await Promise.all(requests);
-  setMints(allMints);
+  const filteredMints = allMints.filter(mint => mint !== null);
+  setMints(filteredMints);
 }
 
 // Remove loading flag.

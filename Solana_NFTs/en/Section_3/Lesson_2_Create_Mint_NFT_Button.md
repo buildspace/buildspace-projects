@@ -211,19 +211,27 @@ const data = await fetchHashTable(
 if (data.length !== 0) {
   const requests = data.map((mint) => {
     // Get URI
-    const response = await fetch(mint.data.uri);
-    const parse = await response.json();
-    console.log("Past Minted NFT", mint)
+    try {
+      const response = await fetch(mint.data.uri);
+      const parse = await response.json();
+      console.log("Past Minted NFT", mint)
 
-    // Get image URI
-    return parse.image;
+      // Get image URI
+      return parse.image;
+    } catch(e) {
+      // If any request fails, we'll just disregard it and carry on
+      return null;
+    }
   });
 
   // Wait for all requests to finish
   const allMints = await Promise.all(requests);
 
+  // Filter requests that failed
+  const filteredMints = allMints.filter(mint => mint !== null);
+
   // Store all the minted image URIs
-  setMints(allMints);
+  setMints(filteredMints);
 }
 ```
 
