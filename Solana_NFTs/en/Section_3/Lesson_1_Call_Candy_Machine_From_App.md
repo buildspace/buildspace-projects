@@ -84,7 +84,7 @@ import React, { useEffect } from 'react';
 
 ...
 
-const CandyMachine = ({ walletAddress }) => {
+const CandyMachine = ({ wallet }) => {
 
   ...
   
@@ -215,8 +215,8 @@ return (
           <p className="sub-text">NFT drop machine with fair mint</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
-        {/* Check for walletAddress and then pass in walletAddress */}
-      {walletAddress && <CandyMachine walletAddress={window.solana} />}
+        {/* Check for wallet and then pass in window.solana */}
+      {walletAddress && <CandyMachine wallet={window.solana} />}
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a
@@ -265,7 +265,7 @@ import React, { useEffect, useState } from 'react';
 
 ...
 
-const CandyMachine({walletAddress}) => {
+const CandyMachine({ wallet }) => {
   // Add state property inside your component like this
   const [machineStats, setMachineStats] = useState(null);
 

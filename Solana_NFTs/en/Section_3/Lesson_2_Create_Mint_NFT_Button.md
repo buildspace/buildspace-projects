@@ -15,7 +15,7 @@ But lets look at some chunks of code:
 ```jsx
 const mint = web3.Keypair.generate();
 const token = await getTokenWallet(
-  walletAddress.publicKey,
+  wallet.publicKey,
   mint.publicKey
 );
 const metadata = await getMetadata(mint.publicKey);
@@ -33,13 +33,13 @@ Here we're creating an account for our NFT. In Solana, programs are **stateless*
 const accounts = {
   config,
   candyMachine: process.env.REACT_APP_CANDY_MACHINE_ID,
-  payer: walletAddress.publicKey,
+  payer: wallet.publicKey,
   wallet: process.env.REACT_APP_TREASURY_ADDRESS,
   mint: mint.publicKey,
   metadata,
   masterEdition,
-  mintAuthority: walletAddress.publicKey,
-  updateAuthority: walletAddress.publicKey,
+  mintAuthority: wallet.publicKey,
+  updateAuthority: wallet.publicKey,
   tokenMetadataProgram: TOKEN_METADATA_PROGRAM_ID,
   tokenProgram: TOKEN_PROGRAM_ID,
   systemProgram: SystemProgram.programId,
@@ -55,7 +55,7 @@ Here's are all the params candy machine needs to mint the NFT. It needs everythi
 ```jsx
 const instructions = [
   web3.SystemProgram.createAccount({
-    fromPubkey: walletAddress.publicKey,
+    fromPubkey: wallet.publicKey,
     newAccountPubkey: mint.publicKey,
     space: MintLayout.span,
     lamports: rent,
@@ -65,20 +65,20 @@ const instructions = [
     TOKEN_PROGRAM_ID,
     mint.publicKey,
     0,
-    walletAddress.publicKey,
-    walletAddress.publicKey
+    wallet.publicKey,
+    wallet.publicKey
   ),
   createAssociatedTokenAccountInstruction(
     token,
-    walletAddress.publicKey,
-    walletAddress.publicKey,
+    wallet.publicKey,
+    wallet.publicKey,
     mint.publicKey
   ),
   Token.createMintToInstruction(
     TOKEN_PROGRAM_ID,
     mint.publicKey,
     token,
-    walletAddress.publicKey,
+    wallet.publicKey,
     [],
     1
   ),
