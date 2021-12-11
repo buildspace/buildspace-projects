@@ -215,7 +215,7 @@ return (
           <p className="sub-text">NFT drop machine with fair mint</p>
           {!walletAddress && renderNotConnectedContainer()}
         </div>
-        {/* Check for wallet and then pass in window.solana */}
+        {/* Check for walletAddress and then pass in window.solana */}
       {walletAddress && <CandyMachine wallet={window.solana} />}
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
