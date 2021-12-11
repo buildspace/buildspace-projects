@@ -99,6 +99,24 @@ Import ethers into your `App.js` file:
 import { ethers } from 'ethers';
 ```
 
+### 🌐 Check your Network! 
+
+At this point it's really important to make sure you are connected to the Rinkeby test network with Metamask! If not, you will be trying to use functions on the smart contract that don't exist on the other networks, and it could cause errors in React like "Unhandled Rejection (Error): call revert exception." Something you can add to your React code to keep things straight is a function that lets you know if you're on the wrong network! Try putting this function in your useEffect: 
+
+```javascript
+const checkNetwork = async () => {
+  try { 
+    if (window.ethereum.networkVersion !== '4') {
+      alert("Please connect to Rinkeby!")
+    }
+  } catch(error) {
+    console.log(error)
+  }
+}
+```
+
+Here's a quick breakdown of what we're doing here. Similar to how we normally define ```const { ethereum } = window``` we are using ```networkVersion``` in that ethereum object to check which ethereum network we're on. The ethereum networks have different chain ID's, and the Rinkeby chain ID is "4". All we have to do is say "if the current ethereum network is not Rinkeby, alert the user!" Now anytime the page is not loaded on the Rinkeby you will get a notice for your users to switch to Rinkeby! 
+
 ### Recap 
 
 We have done a lot, so let's make sure we are on the same page here - 

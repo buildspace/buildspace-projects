@@ -33,10 +33,10 @@ const mintToken = async () => {
   // rest of code
   } catch (error) {
     let message = error.msg || 'Minting failed! Please try again!';
-    
-    // If we have an error set our loading flag to false 
+
+    // If we have an error set our loading flag to false
     setIsMinting(false);
-  
+
     if (!error.msg) {
       if (error.message.indexOf('0x138')) {
       } else if (error.message.indexOf('0x137')) {
@@ -51,7 +51,7 @@ const mintToken = async () => {
         message = `Minting period hasn't started yet.`;
       }
     }
-  
+
     console.warn(message);
   }
 }
@@ -62,7 +62,7 @@ So we handled the scenario where the mint starts and there is an error, but what
 Let's stay in the `mintToken` function and find the event listener that is setup with the changes we made. It should look something like this:
 ```jsx
 if (notification.type === 'status') {
-  console.log('Receievd status event');
+  console.log('Received status event');
 
   const { result } = notification;
   if (!result.err) {
@@ -76,7 +76,7 @@ if (notification.type === 'status') {
 
 BOOM. There you have it. Pretty simple right?
 
-At this point all we need to do is add some logic for our UI. At the most basic level, your Mint NFT button should be disabled so people can't mint multiple NFTs at once! Let's go ahead and add a quick "one-liner" that will do that for us: 
+At this point all we need to do is add some logic for our UI. At the most basic level, your Mint NFT button should be disabled so people can't mint multiple NFTs at once! Let's go ahead and add a quick "one-liner" that will do that for us:
 
 ```jsx
 <button
@@ -128,7 +128,7 @@ setIsLoadingMints(false);
 
 Simple enough, we just added `setIsLoadingMints` at the top and at the bottom!
 
-That should handle all the cases of our loading state! Let's add a simple piece of code that will show when we are fetching all minted items. Head to your components render method and add this small piece of code: 
+That should handle all the cases of our loading state! Let's add a simple piece of code that will show when we are fetching all minted items. Head to your components render method and add this small piece of code:
 
 ```jsx
 return (
