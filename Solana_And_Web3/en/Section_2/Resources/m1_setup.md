@@ -259,6 +259,6 @@ anchor test --skip-local-validator
 
 This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
 
-Note, if you get an error in your terminal that says: "Error: failed to send transaction: Transaction simulation failed: Attempt to load a program that does not exist", this most likely means you forgot to add your Program Id in both your `.toml` file and `.rs` file! Go ahead and grab your ID again and verify it's updated in the appropriate spots :).
+Note, if you get an error in your terminal that says: "Error: failed to send transaction: Transaction simulation failed: Attempt to load a program that does not exist", this most likely means you forgot to add your Program Id in both your `Anchor.toml` file and `lib.rs` file! Go ahead and grab your ID again and verify it's updated in the appropriate spots :).
 
 ![Untitled](https://i.imgur.com/V35KchA.png)
