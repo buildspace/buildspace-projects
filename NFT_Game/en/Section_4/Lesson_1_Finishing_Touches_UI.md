@@ -294,7 +294,13 @@ For this all we will need to do is add some conditional rendering in our HTML. G
 </div>;
 ```
 
-Make sure to also add this CSS to your `Arena.css` file:
+Make sure to import `LoadingIndicator` at the top of your `index.js` file:
+
+```javascript
+import LoadingIndicator from '../../Components/LoadingIndicator';
+```
+
+Also make sure to also add this CSS to your `Arena.css` file:
 
 ```css
 .boss-container .loading-indicator {
