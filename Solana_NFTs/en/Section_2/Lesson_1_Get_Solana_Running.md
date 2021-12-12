@@ -52,7 +52,7 @@ If any of these commands are not found, please make sure to install it before mo
 - [ts-node Installation](https://www.npmjs.com/package/ts-node#installation)
 
 Be sure to install `ts-node` globally. I used this command: `npm install -g ts-node`
-> If you run into EACCES permissions errors while installing, please checkout this [link](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally#manually-change-npms-default-directory)
+> If you run into EACCES permissions errors while installing, please checkout this [link](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)
 
 ### **🔥 Install Solana**
 
