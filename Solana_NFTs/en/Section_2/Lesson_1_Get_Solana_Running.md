@@ -84,7 +84,7 @@ Keypair Path: /Users/flynn/.config/solana/id.json
 Commitment: confirmed
 ```
 
-During this entire project we will be building directly on Solana's devnet. This is pretty hype. It's sorta like Solana's version of a "staging" environment. It's an actual blockchain run by real miners and is free to use for developers.
+During this entire project we will be building directly on Solana's devnet. This is pretty hype. It's sorta like Solana's version of a "staging" environment. It's an actual blockchain run by real validators and is free to use for developers.
 
 ### ☹️ Ahhhh help it's broken!
 
