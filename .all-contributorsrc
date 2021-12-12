@@ -1363,6 +1363,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "0xRadiant",
+      "name": "0xRadiant",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94811720?v=4",
+      "profile": "https://github.com/0xRadiant",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
