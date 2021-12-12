@@ -4,7 +4,7 @@ So — the goal is to create a web app that lets users **connect their wallet, c
 
 We'll need to install the Solana CLI and Metaplex CLI to get this going.
 
-The Solana CLI will allow us to deploy to devnet, an actual blockchain run by real miners.
+The Solana CLI will allow us to deploy to devnet, an actual blockchain run by real [validators](https://solana.com/validators).
 
 The Metaplex CLI will allow us to interact with Metaplex's deployed NFT contracts. Using their smart-contracts-as-a-service we can 1) create our own candy machine 2) upload our NFTs to our candy machine 3) allow users to actually hit our candy machine to mint an NFT.
 
