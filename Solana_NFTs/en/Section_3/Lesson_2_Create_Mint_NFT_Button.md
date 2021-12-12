@@ -209,7 +209,7 @@ const data = await fetchHashTable(
 );
 
 if (data.length !== 0) {
-  const requests = data.map((mint) => {
+  const requests = data.map(async (mint) => {
     // Get URI
     try {
       const response = await fetch(mint.data.uri);
@@ -220,6 +220,7 @@ if (data.length !== 0) {
       return parse.image;
     } catch(e) {
       // If any request fails, we'll just disregard it and carry on
+      console.error("Failed retrieving Minted NFT", mint);
       return null;
     }
   });

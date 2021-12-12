@@ -106,13 +106,14 @@ const data = await fetchHashTable(
 );
 
 if (data.length !== 0) {
-  const requests = data.map((mint) => {
+  const requests = data.map(async (mint) => {
     try {
       const response = await fetch(mint.data.uri);
       const parse = await response.json();
 
       return parse.image;
     } catch(e) {
+      console.error("Failed retrieving Minted NFT", mint);
       return null;
     }
   });
