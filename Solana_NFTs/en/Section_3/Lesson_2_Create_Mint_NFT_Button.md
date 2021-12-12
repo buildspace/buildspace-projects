@@ -6,7 +6,7 @@ Let's do this.
 
 ### 🎩 Going through the `mintToken` function.
 
-In your `CandyMachine` component you'll see a function named `mintToken`. This is part of Metaplex's front-end library *(huge **shoutout to the Exiled [Apes Candy Machine Mint repo](https://github.com/exiled-apes/candy-machine-mint)** for giving a good baseline for this code)*.
+In your `CandyMachine` component you'll see a function named `mintToken`. This is part of Metaplex's front-end library *(**huge shoutout to the [Exiled Ape's Candy Machine Mint repo](https://github.com/exiled-apes/candy-machine-mint)** for giving a good baseline for this code)*.
 
 This function is pretty complex. I'm not going to go through it line by line. Go and figure out how it works yourself! One thing I recommend doing is using CMD (MacOS) or CTRL (Windows) + click on functions to see how they work at a lower level. Looking at the code is usually the best way to learn how it works.
 
@@ -27,7 +27,7 @@ const rent = await connection.getMinimumBalanceForRentExemption(
 );
 ```
 
-Here we're creating an account for our NFT. In Solana, programs are **stateless** which is very different Ethereum where contracts hold state. Check out more on accounts [here](https://docs.solana.com/developing/programming-model/accounts).
+Here we're creating an account for our NFT. In Solana, programs are **stateless** which is very different from Ethereum where contracts hold state. Check out more on accounts [here](https://docs.solana.com/developing/programming-model/accounts).
 
 ```jsx
 const accounts = {
@@ -107,7 +107,7 @@ connection.onSignatureWithOptions(
   txn,
   async (notification, context) => {
     if (notification.type === 'status') {
-      console.log('Receievd status event');
+      console.log('Received status event');
 
       const { result } = notification;
       if (!result.err) {
@@ -120,9 +120,9 @@ connection.onSignatureWithOptions(
 );
 ```
 
-Once we get the signal from our candy machine that the NFT was minted, we let the user know! This is very much like a web hook. Metaplex will actually "emit" a "success" flag on-chain and our web app can capture it. Pretty cool :). 
+Once we get the signal from our candy machine that the NFT was minted, we let the user know! This is very much like a web hook. Metaplex will actually "emit" a "success" flag on-chain and our web app can capture it. Pretty cool :).
 
-I know I blazed through all this stuff, so, be sure to go through it yourself! Also, it'd be awesome if someone just made this one nice NPM module lol. 
+I know I blazed through all this stuff, so, be sure to go through it yourself! Also, it'd be awesome if someone just made this one nice NPM module lol.
 
 ### ✨ Mint your NFT.
 
@@ -155,7 +155,7 @@ Then, on your terminal run:
 solana airdrop 5 INSERT_YOUR_PHANTOM_WALLET_ADDRESS
 ```
 
-And that's it. Congrats on all the free money heh. 
+And that's it. Congrats on all the free money heh.
 
 Cool, so now when you click "Mint NFT", you'll see a pop up like:
 
@@ -198,7 +198,7 @@ const [machineStats, setMachineStats] = useState(null);
 const [mints, setMints] = useState([]);
 ```
 
- 
+
 
 Now that we have a way to store all our minted NFTs let's head over to the `getCandyMachineState` function and add the following code right under our `console.log` line:
 

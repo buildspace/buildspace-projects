@@ -22,7 +22,7 @@ But, don't worry too much about exploring yet. Let's get shit working first lol.
 
 Remember those public keys I asked you to keep handy? Well, it's finally time to use them! Before we get started here - **if you are committing your source code to something like Github, make sure you DO NOT commit your `.env` file**. This is common practice for any web app you make. Those files usually contain sensitive information so be **careful**.
 
-Okay, to get started just create a `.env` file at the root of your web app's `app` folder. This is where we will go ahead and store our keys. Add the following to your `/env` to start:
+Okay, to get started just create a `.env` file at the root of your web app's `app` folder. This is where we will go ahead and store our keys. Add the following to your `.env` to start:
 
 ```plaintext
 REACT_APP_CANDY_MACHINE_CONFIG=
@@ -34,7 +34,10 @@ REACT_APP_SOLANA_RPC_HOST=
 
 Let's go one by one (note: **no** quotation symbols needed here).
 
+**Note:** `.cache/devent-temp` can be found at the root of your folder after running the Metaplex command in previous steps.
+
 `REACT_APP_CANDY_MACHINE_CONFIG` - This can be found in your `.cache/devnet-temp` JSON file that was created. Look for the value associated with the `config` key.
+
 
 `REACT_APP_CANDY_MACHINE_ID` - This can also be found in the same `.cache/devnet-temp` JSON file, look for the value associated with the `candyMachineAddress` key.
 
@@ -171,7 +174,7 @@ At the end of the day, our candy machine is just a Solana program that lives on 
 
 Once we create our `Program` object, we fetch it's metadata based on our candy machine id.
 
-This line calls the fetch method on our candy machine program and returns `itemsAvailble` , `itemsRedeemed` , `itemsRemaining` , and `goLiveDate`.
+This line calls the fetch method on our candy machine program and returns `itemsAvailable` , `itemsRedeemed` , `itemsRemaining` , and `goLiveDate`.
 
 ```jsx
 // Fetch the metadata from your candy machine
