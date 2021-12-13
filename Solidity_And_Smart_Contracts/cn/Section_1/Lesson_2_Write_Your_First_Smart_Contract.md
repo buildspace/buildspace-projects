@@ -1,11 +1,13 @@
-👩‍💻 Let's write a contract
+anymose 2021-12-14
+
+👩‍💻 让我们写一个智能合约
 ----------------------------
 
-Awesome, we made it.
+太棒了，我们做到了！Awesome, we made it.
 
-We're just going to hop right into our project.
+我们将直接开始开始项目。We're just going to hop right into our project.
 
-Let's build a smart contract that lets us send a 👋 to our contract and keep track of the total # of waves. This is going to be useful because on your site, you might want to keep track of this #! Feel free to change this to fit your use case.
+让我们来编写一个智能合约发送 👋 到合约上并记录一共有多少次 # 挥动。因为在你的网站上可能会经常需要统计 # 次数，所以它是非常重要的。请根据你的实际需要做出适合你的修改。 Let's build a smart contract that lets us send a 👋 to our contract and keep track of the total # of waves. This is going to be useful because on your site, you might want to keep track of this #! Feel free to change this to fit your use case.
 
 Create a file named **`WavePortal.sol`** under the **`contracts`** directory. File structure is super important when using Hardhat, so, be careful here!
 
