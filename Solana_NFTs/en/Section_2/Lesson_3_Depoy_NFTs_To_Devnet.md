@@ -124,7 +124,7 @@ Arweave is pay once, store **forever**. They do this using an [algorithm](https:
 
 You may be asking yourself — "well, who's paying to host my stuff then!?". Well if you look through the source code of the script [here](https://github.com/metaplex-foundation/metaplex/blob/59ab126e41e6d85b53c79ad7358964dadd12b5f4/js/packages/cli/src/helpers/upload/arweave.ts#L93), you'll see that Metaplex pays for it themselves for now to help you out!
 
-## 😡 **Error to be aware of.**
+### 😡 **Error to be aware of.**
 
 If at any point you run into an error that looks like this:
 
