@@ -42,6 +42,10 @@ const signer = provider.getSigner();
 ```
 
 `ethers` is a library that helps our frontend talk to our contract. Be sure to import it at the top using `import { ethers } from "ethers";`.
+If you run into an error like:
+`Failed to resolve import "ethers" from "src/App.jsx". Does the file exist?`
+Check that the `ethers` library is added in the projects dependency list. If it's missing it can be added manually in Replit from the "packages" tab in the menu to the left
+
 
 A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using Alchemy to **deploy**? Well in this case we use nodes that Metamask provides in the background to send/receive data from our deployed contract.
 
