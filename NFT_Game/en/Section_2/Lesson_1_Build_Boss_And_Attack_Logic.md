@@ -231,7 +231,7 @@ function attackBoss() public {
 }
 ```
 
-`bigBoss.hp < player.attackDamage` is just checking if the boss will have its HP reduced to below 0 based on the players attack damage. For example, if `bigBoss.hp` was 10 and `player.attackDamage` was 30, then we know the boss will have it's HP reduced below 0 which would cause an error! So, we just check that case, and then set the boss hp to 0 manually. Otherwise, we just do `bigBoss.hp = bigBoss.hp - player.attackDamage` which will reduce the boss's HP based on how much damage the player does!
+`bigBoss.hp < player.attackDamage` is just checking if the boss will have its HP reduced to below 0 based on the players attack damage. For example, if `bigBoss.hp` was 10 and `player.attackDamage` was 30, then we know the boss will have its HP reduced below 0 which would cause an error! So, we just check that case, and then set the boss hp to 0 manually. Otherwise, we just do `bigBoss.hp = bigBoss.hp - player.attackDamage` which will reduce the boss's HP based on how much damage the player does!
 
 ### 🔪 Add logic for the boss to attack the player.
 
