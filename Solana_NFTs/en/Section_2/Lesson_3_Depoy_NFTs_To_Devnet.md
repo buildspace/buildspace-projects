@@ -43,10 +43,10 @@ solana balance
 And it should say `0 SOL`. We can't deploy stuff to Solana without SOL, writing data to the blockchain costs money. In this case, we're on dev net so we can just give ourselves fake SOL. Go ahead and run:
 
 ```plaintext
-solana airdrop 5
+solana airdrop 2
 ```
 
-After that's done, you can run `solana balance` again and bam you'll have some SOL. *Note: if you ever run out of fake SOL, you can just run this command again.*
+After that's done, you can run `solana balance` again and bam you'll have some SOL. *Note: only a maximum of 2 SOL can be airdropped on the devnet, and if you ever run out of fake SOL, you can just run this command again.*
 
 ### 🚀 **Upload the NFTs**
 
