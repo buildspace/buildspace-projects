@@ -1,17 +1,16 @@
-📦 Store the data!
+📦 储存数据!
 ------------------
+从这里开始，让我们把我们的合约变得花哨一些。
 
-From here, let's add some fanciness to our contract.
+我们希望能够让某人向我们招手，然后存储该招手。
 
-We want to be able to let someone wave at us and then store that wave.
+所以，我们首先需要的是一个他们可以调用的向我们挥手的函数！
 
-So, first thing we need is a function they can hit to wave at us!
+区块链 = 把它想象成一个云服务提供商，有点像 AWS，但它不归任何人所有。它由来自世界各地的矿机的计算能力运行。通常这些人被称为矿工，我们付钱给他们来运行我们的代码！
 
-The blockchain = Think of it as a cloud provider, kinda like AWS, but it's owned by no one. It's run by compute power from mining machines all over the world. Usually these people are called miners and we pay them to run our code!
+智能合约 = 有点像我们服务器的代码，包含很多可以调用的函数。
 
-A smart contract = Kinda like our server's code with different functions people can hit.
-
-So, here's our updated contract we can use to "store" waves.
+所以，这是我们更新后的可以用来“存储” wave 的合约。
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -38,29 +37,28 @@ contract WavePortal {
     }
 }
 ```
+Boom！
 
-Boom!
+所以，这就是你在 Solidity 中编写函数的方式。而且，我们还添加了一个自动初始化为 0 的 `totalWaves` 变量。但是，这个变量很特别，因为它被称为“状态变量”，而且它很酷，因为它永久存储在合约存储中。
 
-So, that's how you write a function in Solidity.  And, we also added a `totalWaves` variable that automatically is initialized to 0. But, this variable is special because it's called a "state variable" and it's cool because it's stored permanently in contract storage.
+我们还在 `msg.sender` 中使用了一些魔法。这是调用该函数的人的钱包地址。这太棒了！这就像内置身份验证。我们确切地知道是谁调用了这个函数，因为为了调用智能合约函数，你需要连接一个有效的钱包！
 
-We also use some magic here with `msg.sender`. This is the wallet address of the person who called the function. This is awesome! It's like built-in authentication. We know exactly who called the function because in order to even call a smart contract function, you need to be connected with a valid wallet!
+未来我们可以编写只有特定钱包地址才能调用的函数。例如，我们可以更改此功能，以便只允许我们的地址发送挥手。或者，也许把它放在只有你的朋友可以向你挥手的地方！
 
-In the future, we can write functions that only certain wallet addresses can hit. For example, we can change this function so that only our address is allowed to send a wave. Or, maybe have it where only your friends can wave at you!
-
-✅ Updating run.js to call our functions
+✅ 更新 run.js 来调用我们的函数
 ---------------------------------------
 
-So, `run.js` needs to change!
+所以, `run.js` 需要一些改变!
 
-Why?
+为什么?
 
-Well, we need to manually call the functions that we've created. 
+好吧，我们需要手动调用我们创建的函数。
 
-Basically, when we deploy our contract to the blockchain (which we do when we run `waveContractFactory.deploy()`) our functions become available to be called on the blockchain because we used that special **public** keyword on our function.
+基本上，当我们将合约部署到区块链时（我们需要运行 `waveContractFactory.deploy()` ），我们的函数就可以在区块链上调用，因为我们在函数上使用了那个特殊的 **public** 关键字。
 
-Think of this like a public API endpoint :).
+把它想象成一个公共 API 端点:)。
 
-So now we want to test those functions specifically!
+所以现在我们要专门测试这些功能！
 
 ```javascript
 const main = async () => {
@@ -93,26 +91,24 @@ const runMain = async () => {
 
 runMain();
 ```
-**VSCode might auto-import `ethers`. We don't need to import `ethers`. So, make sure you have no imports. Remember, what we talked about last lesson about hre?**
 
-🤔 How's it work?
+**VSCode 可能会自动导入 `ethers`. 我们不需要导入 `ethers`. 所以，确认这里没有任何导入。 记住，上一课我们讲了什么关于hre？**
+
+🤔 这是怎么工作的？
 -----------------
 
 ```javascript
 const [owner, randomPerson] = await hre.ethers.getSigners();
 ```
+为了将某些东西部署到区块链，我们需要有一个钱包地址！ Hardhat在后台为我们做了这件事，但在这里我抓取了合约所有者的钱包地址，我还抓取了一个随机的钱包地址，并将其命名为`randomPerson`。这会更有意义。
 
-In order to deploy something to the blockchain, we need to have a wallet address! Hardhat does this for us magically in the background, but here I grabbed the wallet address of contract owner and I also grabbed a random wallet address and called it `randomPerson`. This will make more sense in a moment.
-
-I also added:
-
+我还添加了这行：
 ```javascript
 console.log("Contract deployed by:", owner.address);
 ```
+我这么做只是因为好奇想看看这个合约部署者的钱包地址
 
-I'm doing this just to see the address of the person deploying our contract. I'm curious!
-
-The last thing I added was this:
+最后我加上这段代码：
 
 ```javascript
 let waveCount;
@@ -124,38 +120,37 @@ await waveTxn.wait();
 waveCount = await waveContract.getTotalWaves();
 ```
 
-Basically, we need to manually call our functions! Just like we would any normal API. First I call the function to grab the # of total waves. Then, I do the wave. Finally, I grab the waveCount one more time to see if it changed.
+基本上，我们需要手动调用我们的函数！就像我们调用任何普通 API 一样。首先我调用函数来获取总挥手数。然后，我调用一次、挥手。最后，我再次抓取 waveCount 以查看它是否发生了变化。
 
-Run the script like you would normally:
+像往常一样运行脚本：
 
 ```bash
 npx hardhat run scripts/run.js
 ```
 
-Here's my output:
+这是输出结果:
 
 ![](https://i.imgur.com/NgfOns3.png)
 
-Pretty awesome, eh :)?
+怎么样，帅不帅 :)?
 
-You can also see that wallet address that waved equaled to the address that deployed the contract. I waved at myself!
+您还可以看到挥手的钱包地址等于部署合约的地址。我对自己挥手！
 
-So we:\
-1\. Called our wave function.\
-2\. Changed the state variable.\
-3\. Read the new value of the variable.
+所以我们：\
+1\. 调用了我们的挥手函数。\
+2\. 改变了状态变量。\
+3\. 读取变量的新值。
 
-This is pretty much the basis of most smart contracts. Read functions. Write functions. And changing a state variable. We have the building blocks we need now to keep on working on our epic WavePortal.
+这几乎是大多数智能合约的基础。读取函数。编写函数。并改变状态变量。我们现在拥有继续开发我们史诗般的 WavePortal 所需的组件。
 
-Pretty soon, we'll be able to call these functions from our react app that we'll be working on :).
+很快，我们将能够从我们将要处理的 React 应用程序中调用这些函数:)。
 
-
-🤝 Test other users 
+🤝 测试其他用户 
 --------------------
 
-So, we probably want someone other than us to send us a wave right? It'd be pretty boring if only we could send a wave!! We want to make our website **multiplayer**!
+所以，我们可能希望我们以外的其他人向我们发送挥手，对吗？要是只能挥个手就太无聊了！！我们想让我们的网站变成**多人游戏**！
 
-Check this out. I added a few lines at the bottom of the function. I'm not going to explain it much (but please ask questions in #general-chill-chat). Basically this is how we can simulate other people hitting our functions :). Keep an eye on the wallet addresses in your terminal once you change the code and run it.
+看一下这个。我在函数底部添加了几行。我不打算解释太多（但请在#general-chill-chat 中提问）。基本上这就是我们如何模拟其他人点击我们的功能:)。更改代码并运行后，请密切注意终端中的钱包地址。
 
 ```javascript
 const main = async () => {
@@ -194,7 +189,7 @@ const runMain = async () => {
 runMain();
 ```
 
-The newest items added to this code block are:
+新加的代码块：
 
 ```javascript
 waveTxn = await waveContract.connect(randomPerson).wave();
@@ -203,11 +198,11 @@ await waveTxn.wait();
 waveCount = await waveContract.getTotalWaves();
 ```
 
-🚨 Before you click "Next Lesson"
+🚨 在你点击”下一节课“之前
 -------------------------------------------
 
-*Note: if you don't do this, Farza will be very sad :(.*
+*Note: 如果你不这样做，Farza 会很伤心:(。*
 
-Customize your code a little!! Maybe you want to store something else? I want you to mess around. Maybe you want to store the address of the sender in an array? Maybe you want to store a map of addresses and wave counts so you keep track of who's waving at you the most? Even if you just change up the variable names and function names to be something you think is interesting that's a big deal. Try to not straight up copy me! Think of your final website and the kind of functionality you want. Build the functionality **you want**.
+稍微自定义你的代码！！也许你想存储其他东西？随便捣鼓吧。也许你想将调用者的地址存储在一个数组中？也许你想存一个地址和挥手次数的map，以便追踪谁挥的手最多？即使你只是将变量名称和函数名称更改为你认为有趣的东西，这也是挺好的。尽量不要直接复制我！想想你的最终网站和你想要的功能类型。做你想要做的。
 
-Once you're all done here, be sure to post a screenshot of your terminal output in #progress.
+在完成所有这里的操作后，请务必在#progress 频道中发布你的命令行输出的屏幕截图。
