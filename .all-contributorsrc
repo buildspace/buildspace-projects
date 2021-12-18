@@ -1372,6 +1372,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "matanwrites",
+      "name": "Matanwrites",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20499416?v=4",
+      "profile": "https://medium.com/@mathieutan",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
