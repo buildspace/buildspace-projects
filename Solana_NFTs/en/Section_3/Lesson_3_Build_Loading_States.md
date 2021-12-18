@@ -110,6 +110,7 @@ if (data.length !== 0) {
     try {
       const response = await fetch(mint.data.uri);
       const parse = await response.json();
+      console.log("Past Minted NFT", mint)
 
       return parse.image;
     } catch(e) {
