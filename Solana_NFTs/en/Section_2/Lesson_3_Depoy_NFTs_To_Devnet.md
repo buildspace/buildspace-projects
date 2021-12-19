@@ -2,17 +2,17 @@ This is going to be one of the most epic parts of this project - bringing your c
 
 This stage is a **three stage** process and something you will want to remember the flow for as you go through and test your full flow in the web app:
 
-1. Upload your NFTs to [Arweave](https://www.arweave.org) (which is a decentralized file-store) and initialize your candy machine's config. 
+1. Upload your NFTs to [Arweave](https://www.arweave.org) (which is a decentralized file-store) and initialize your candy machine's config.
 2. Create your candy machine on Metaplex's contract.
 3. Update your candy machine with the proper drop date for your NFTs — this is the date when people can actually start minting your NFTs.
 
 ### 🔑 **Setting up a Solana keypair.**
 
-In order to get uploading, we need to set up a local Solana keypair. *Note: If you've done this in the past, still follow the instructions below.*
+In order to get uploading, we need to set up a local Solana keypair. _Note: If you've done this in the past, still follow the instructions below._
 
-In order for us to upload the NFTs to Solana, we need to have a "local wallet" to work with in the command line. Remember, you can't talk to Solana unless you have wallet and wallet is basically a "keypair" which is public key and a private key. 
+In order for us to upload the NFTs to Solana, we need to have a "local wallet" to work with in the command line. Remember, you can't talk to Solana unless you have wallet and wallet is basically a "keypair" which is public key and a private key.
 
-This can be done by running the command below. *Note: When it asks, no need to give it a passphrase, can just press enter and keep it empty.*
+This can be done by running the command below. _Note: When it asks, no need to give it a passphrase, can just press enter and keep it empty._
 
 ```plaintext
 solana-keygen new --outfile ~/.config/solana/devnet.json
@@ -43,10 +43,10 @@ solana balance
 And it should say `0 SOL`. We can't deploy stuff to Solana without SOL, writing data to the blockchain costs money. In this case, we're on dev net so we can just give ourselves fake SOL. Go ahead and run:
 
 ```plaintext
-solana airdrop 5
+solana airdrop 2
 ```
 
-After that's done, you can run `solana balance` again and bam you'll have some SOL. *Note: if you ever run out of fake SOL, you can just run this command again.*
+After that's done, you can run `solana balance` again and bam you'll have some SOL. _Note: if you ever run out of fake SOL, you can just run this command again._
 
 ### 🚀 **Upload the NFTs**
 
@@ -66,7 +66,7 @@ Notice how we do `./assets` in the command below. That means we need to run this
 ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts upload ./assets --env devnet --keypair ~/.config/solana/devnet.json
 ```
 
-*Note: if you get an error like "no such file or directory, scandir './assets'" it means you ran the command from the wrong place. Be sure to run it in the same directory where your `assets` folder is.*
+_Note: if you get an error like "no such file or directory, scandir './assets'" it means you ran the command from the wrong place. Be sure to run it in the same directory where your `assets` folder is._
 
 The `upload` command is essentially saying - "Hey Metaplex CLI, take all the NFT pairs in my `assets` folder, upload them to Arweave, initialize the candy machine config holding the pointers to these NFTs, and then save that config on Solana's devnet".
 
@@ -89,7 +89,7 @@ ended at: 2021-12-02T21:14:28.538Z. time taken: 00:00:43
 
 See where it says "initialized config for a candy machine" and then spits out a key? You can actually copy/paste that key on Solana's Devnet Explorer [here](https://explorer.solana.com/?cluster=devnet) to see that it actually deployed to the blockchain. Give it a go!
 
-Just a note: we have **not** created our actual candy machine, we just upload some files and created a config that our candy machine *could* use.
+Just a note: we have **not** created our actual candy machine, we just upload some files and created a config that our candy machine _could_ use.
 
 You'll notice here if you change your NFTs and run `upload` again, it won't actually upload anything new! The reason for that is there is `.cache` folder created that stores this data.
 
@@ -103,7 +103,7 @@ Before moving on, verify your NFTs were actually uploaded by running the `verify
 ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts verify --keypair ~/.config/solana/devnet.json
 ```
 
-*Note: You'll notice here we don't tell this command anything about our NFTs. How then does it know what to verify? Well, the `.cache` folder has all the data. If you look inside `devnet-temp.json` you'll see all our data right there.*
+_Note: You'll notice here we don't tell this command anything about our NFTs. How then does it know what to verify? Well, the `.cache` folder has all the data. If you look inside `devnet-temp.json` you'll see all our data right there._
 
 Your output should look a bit like this if all went well:
 
@@ -140,10 +140,10 @@ TypeError: Cannot read property 'candyMachineAddress' of undefined
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 ```
 
-Then it means the command can't access the `.cache` folder with the important data around your candy machine and NFTs. So if you get this error, be 100% sure you're running your candy machine commands from the same directory where you `.cache` and `assets` folders are. This is really easy to mess up since you might be in the ```app``` directory editing your web app and updating the candy machine in the future; double check your directory!!
+Then it means the command can't access the `.cache` folder with the important data around your candy machine and NFTs. So if you get this error, be 100% sure you're running your candy machine commands from the same directory where you `.cache` and `assets` folders are. This is really easy to mess up since you might be in the `app` directory editing your web app and updating the candy machine in the future; double check your directory!!
 
 ### 🚨 Progress Report
 
-*Please do this else Farza will be sad :(*
+_Please do this else Farza will be sad :(_
 
 Post one of your Arweave links for your NFT in `#progress`!

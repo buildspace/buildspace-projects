@@ -6,7 +6,7 @@ Let's do this.
 
 ### 🎩 Going through the `mintToken` function.
 
-In your `CandyMachine` component you'll see a function named `mintToken`. This is part of Metaplex's front-end library *(**huge shoutout to the [Exiled Ape's Candy Machine Mint repo](https://github.com/exiled-apes/candy-machine-mint)** for giving a good baseline for this code)*.
+In your `CandyMachine` component you'll see a function named `mintToken`. This is part of Metaplex's front-end library _(**huge shoutout to the [Exiled Ape's Candy Machine Mint repo](https://github.com/exiled-apes/candy-machine-mint)** for giving a good baseline for this code)_.
 
 This function is pretty complex. I'm not going to go through it line by line. Go and figure out how it works yourself! One thing I recommend doing is using CMD (MacOS) or CTRL (Windows) + click on functions to see how they work at a lower level. Looking at the code is usually the best way to learn how it works.
 
@@ -14,17 +14,12 @@ But lets look at some chunks of code:
 
 ```jsx
 const mint = web3.Keypair.generate();
-const token = await getTokenWallet(
-  walletAddress.publicKey,
-  mint.publicKey
-);
+const token = await getTokenWallet(walletAddress.publicKey, mint.publicKey);
 const metadata = await getMetadata(mint.publicKey);
 const masterEdition = await getMasterEdition(mint.publicKey);
 const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST;
 const connection = new Connection(rpcHost);
-const rent = await connection.getMinimumBalanceForRentExemption(
-  MintLayout.span
-);
+const rent = await connection.getMinimumBalanceForRentExemption(MintLayout.span);
 ```
 
 Here we're creating an account for our NFT. In Solana, programs are **stateless** which is very different from Ethereum where contracts hold state. Check out more on accounts [here](https://docs.solana.com/developing/programming-model/accounts).
@@ -61,27 +56,9 @@ const instructions = [
     lamports: rent,
     programId: TOKEN_PROGRAM_ID,
   }),
-  Token.createInitMintInstruction(
-    TOKEN_PROGRAM_ID,
-    mint.publicKey,
-    0,
-    walletAddress.publicKey,
-    walletAddress.publicKey
-  ),
-  createAssociatedTokenAccountInstruction(
-    token,
-    walletAddress.publicKey,
-    walletAddress.publicKey,
-    mint.publicKey
-  ),
-  Token.createMintToInstruction(
-    TOKEN_PROGRAM_ID,
-    mint.publicKey,
-    token,
-    walletAddress.publicKey,
-    [],
-    1
-  ),
+  Token.createInitMintInstruction(TOKEN_PROGRAM_ID, mint.publicKey, 0, walletAddress.publicKey, walletAddress.publicKey),
+  createAssociatedTokenAccountInstruction(token, walletAddress.publicKey, walletAddress.publicKey, mint.publicKey),
+  Token.createMintToInstruction(TOKEN_PROGRAM_ID, mint.publicKey, token, walletAddress.publicKey, [], 1),
 ];
 ```
 
@@ -106,17 +83,17 @@ This you already know! We set up a provider, then call `mintNft` which is a func
 connection.onSignatureWithOptions(
   txn,
   async (notification, context) => {
-    if (notification.type === 'status') {
-      console.log('Received status event');
+    if (notification.type === "status") {
+      console.log("Received status event");
 
       const { result } = notification;
       if (!result.err) {
-        console.log('NFT Minted!');
+        console.log("NFT Minted!");
         await getCandyMachineState();
       }
     }
   },
-  { commitment: 'processed' }
+  { commitment: "processed" }
 );
 ```
 
@@ -130,17 +107,17 @@ In your `CandyMachine` component, have your "Mint" button call the `mintToken` f
 
 ```jsx
 return (
-    // Only show this if machineStats is available
-    machineStats && (
-      <div className="machine-container">
-        <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
-        <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
-        <button className="cta-button mint-button" onClick={mintToken}>
-            Mint NFT
-        </button>
-      </div>
-    )
-  );
+  // Only show this if machineStats is available
+  machineStats && (
+    <div className="machine-container">
+      <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
+      <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
+      <button className="cta-button mint-button" onClick={mintToken}>
+        Mint NFT
+      </button>
+    </div>
+  )
+);
 ```
 
 Before clicking "Mint NFT", you need to make sure you have some Devnet SOL on your Phantom Wallet. This is pretty easy.
@@ -152,7 +129,7 @@ First grab you Phantom wallet's public address:
 Then, on your terminal run:
 
 ```plaintext
-solana airdrop 5 INSERT_YOUR_PHANTOM_WALLET_ADDRESS
+solana airdrop 2 INSERT_YOUR_PHANTOM_WALLET_ADDRESS
 ```
 
 And that's it. Congrats on all the free money heh.
@@ -189,7 +166,7 @@ We like making things spicy at buildspace. It's cool to be able to make a mint m
 
 At this point people don't know what items have already been minted from your machine. What if we could show all the NFTs ever minted from your drop? That would inspire others to mint their own NFT as well. It's actually pretty easy to do! Let's dive into some code
 
-We are going to go back to the `CandyMachine` component and make some more changes. Head over to the `index.js` file and start by adding some new state properties we are going to use to store all the  metadata for each minted NFT:
+We are going to go back to the `CandyMachine` component and make some more changes. Head over to the `index.js` file and start by adding some new state properties we are going to use to store all the metadata for each minted NFT:
 
 ```jsx
 // State
@@ -198,22 +175,17 @@ const [machineStats, setMachineStats] = useState(null);
 const [mints, setMints] = useState([]);
 ```
 
-
-
 Now that we have a way to store all our minted NFTs let's head over to the `getCandyMachineState` function and add the following code right under our `console.log` line:
 
 ```jsx
-const data = await fetchHashTable(
-  process.env.REACT_APP_CANDY_MACHINE_ID,
-  true
-);
+const data = await fetchHashTable(process.env.REACT_APP_CANDY_MACHINE_ID, true);
 
 if (data.length !== 0) {
   for (const mint of data) {
     // Get URI
     const response = await fetch(mint.data.uri);
     const parse = await response.json();
-    console.log("Past Minted NFT", mint)
+    console.log("Past Minted NFT", mint);
 
     // Get image URI
     if (!mints.find((mint) => mint === parse.image)) {
@@ -226,13 +198,10 @@ if (data.length !== 0) {
 Not too bad right? Let's go ahead and break some of these pieces down a little more.
 
 ```jsx
-const data = await fetchHashTable(
-  process.env.REACT_APP_CANDY_MACHINE_ID,
-  true
-);
+const data = await fetchHashTable(process.env.REACT_APP_CANDY_MACHINE_ID, true);
 ```
 
-`fetchHashTable` was another one of those functions that was given to you off the bat. I encourage you to take a look at it and try your best to understand it. Basically what it says is: *"Get all the accounts that have a minted NFT on this program and return the Token URI's which point to our metadata for that NFT".*
+`fetchHashTable` was another one of those functions that was given to you off the bat. I encourage you to take a look at it and try your best to understand it. Basically what it says is: _"Get all the accounts that have a minted NFT on this program and return the Token URI's which point to our metadata for that NFT"._
 
 So once you call that we are going to need to actually fetch the metadata from the provided URI:
 
@@ -242,7 +211,7 @@ if (data.length !== 0) {
     // Get URI
     const response = await fetch(mint.data.uri);
     const parse = await response.json();
-    console.log("Past Minted NFT", mint)
+    console.log("Past Minted NFT", mint);
 
     // Fancy JS to avoid adding the same mint twice.
     if (!mints.find((mint) => mint === parse.image)) {
@@ -286,7 +255,7 @@ return (
       <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
       <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
       <button className="cta-button mint-button" onClick={mintToken}>
-          Mint NFT
+        Mint NFT
       </button>
       {/* If we have mints available in our array, let's render some items */}
       {mints.length > 0 && renderMintedItems()}
@@ -307,6 +276,6 @@ Go crazy :).
 
 ### 🚨 Progress Report
 
-*Please do this else Farza will be sad :(*
+_Please do this else Farza will be sad :(_
 
 In `#progress` post a screenshot of your rendered NFTs! Maybe make a tweet here telling the world what you're up to. Be sure to tag `@_buildspace`.
