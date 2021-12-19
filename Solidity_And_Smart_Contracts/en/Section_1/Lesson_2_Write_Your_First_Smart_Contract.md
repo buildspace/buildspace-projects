@@ -5,7 +5,7 @@ Awesome, we made it.
 
 We're just going to hop right into our project.
 
-Lets build a smart contract that lets us send a 👋 to our contract and keep track of the total # of waves. This is going to be useful because on your site, you might want to keep track of this #! Feel free to change this to fit your use case.
+Let's build a smart contract that lets us send a 👋 to our contract and keep track of the total # of waves. This is going to be useful because on your site, you might want to keep track of this #! Feel free to change this to fit your use case.
 
 Create a file named **`WavePortal.sol`** under the **`contracts`** directory. File structure is super important when using Hardhat, so, be careful here!
 

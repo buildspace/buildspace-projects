@@ -81,7 +81,7 @@ Account balance: 3198297774605223721
 WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
 ```
 
-You need to get access to this in your React app. It's as easy as creating a new property in your `App.js` file called `contractAddress` and setting it's value to the `WavePortal address` thats printed out in your console:
+You need to get access to this in your React app. It's as easy as creating a new property in your `App.js` file called `contractAddress` and setting its value to the `WavePortal address` thats printed out in your console:
 
 ```javascript
 import React, { useEffect, useState } from "react";
