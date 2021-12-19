@@ -42,3 +42,21 @@ You definitely should read through that example a few times! I wanted to lay out
 **Remember, at the end of the day a DAO is just a group of strangers with a shared bank account that vote on how to use that bank account.**
 
 If you still don't get it, don't worry. **Let's hop into the code and just build one ourselves :).**
+
+### 🚨 Progress Report
+
+*Please do this else Farza will be sad :(*
+
+Hey! In `#progress` let us all know what kinda DAO you’ll be building for this project. The funnier, the better. If you don’t know yet, just throw something out there! Examples:
+
+**AnimeDAO** — a community of anime lovers that receive $ANIME whenever they interact w/ the community and talk about anime.
+
+**PizzaDAO** — a charity DAO focused around giving away pizza. Members can donate ETH to the charity and receive $PIZZA in return. 
+
+**FarzaDAO** — a DAO for fans of Farza that receive $FARZA whenever they tweet nice things about Farza.
+
+**ArtistDAO** — a DAO of artists that run events and workshops for artists of all levels. Whenever a member runs an event or workshop, they receive $ARTIST.
+
+**PakistanDAO** — a DAO for members of the Pakistani startup community to support each other. Members earn $PAKISTAN whenever they provide value to other founders, for example by giving them advice, beta-testing their products, or supporting them on social media. 
+
+Please don’t copy my exact examples heh. Get creative. **I really want you think hard about something that makes you smile or something your friends would find funny lol.**
