@@ -257,7 +257,7 @@ const goLiveDateTimeString = `${new Date(
 
 If you go to your site, you'll see some stuff is already rendered but we're not rendering any of the actual data. Let's do that. *BTW — the design isn't very nice right now, but, you can fix that :).*
 
-So to show the data, let's hold our candy machine stats in a state variable. Go ahead and import `useState` in your `CandyMachine` component at `app/src/CandyMachine/index.js` then go and add the follow code:
+So to show the data, let's hold our candy machine stats in a state variable. Go ahead and import `useState` in your `CandyMachine` component at `app/src/CandyMachine/index.js` then go and add the following code:
 
 ```jsx
 // Import useState
