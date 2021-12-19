@@ -14,7 +14,7 @@ Few action items for you before moving on:
 
 ### **🤔 What are we building?**
 Check out a quick video I made covering the project here:
-[Loom](https://www.loom.com/share/fd70d3930cf44155acf72e1b48914cd6)
+[Loom](https://www.loom.com/share/e9b6c6fe11fa41f3bf3bdf6ee0683335)
 
 ### **💎 Earning an NFT.**
 
