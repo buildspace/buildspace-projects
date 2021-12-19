@@ -60,4 +60,6 @@ Just do it really quick right now :).
 
 Hey! Go ahead and say gm in `#gm-only` on Discord. This is very important. Extremely important.
 
-If you don't do this then all of humanity will collectively jump and disrupt the Earth's orbit causing it to collide with Venus.Hey 
+If you don't do this then all of humanity will collectively jump and disrupt the Earth's orbit causing it to collide with Venus.
+
+**BTW -- if you want to make a tweet telling the world that you're building your own DAO today and tag [@_buildspace](https://twitter.com/_buildspace)! I always say this, but 1) that tweet could inspire someone else to join web3 and 2) it supports us!**
