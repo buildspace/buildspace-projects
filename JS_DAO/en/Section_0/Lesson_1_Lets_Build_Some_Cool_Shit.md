@@ -12,6 +12,10 @@ Few action items for you before moving on:
 2. **Connect your Ethereum wallet in the project dashboard.** We'll airdrop you an NFT once you finish this, and if you don't have a wallet connected we won't be able to airdrop it to you! By the way - you won't need to pay any gas fees, we'll cover that for you!
 3. **Be sure to attend the live kick-off**. If you miss it, no worries. It's not required to attend!
 
+### **🤔 What are we building?**
+Check out a quick video I made covering the project here:
+[Loom](https://www.loom.com/share/fd70d3930cf44155acf72e1b48914cd6)
+
 ### **💎 Earning an NFT.**
 
 When you reach the end of this project, you'll earn an NFT. Here's what it looks like:
