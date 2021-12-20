@@ -28,7 +28,7 @@ WALLET_ADDRESS=YOUR_WALLET_ADDRESS
 ALCHEMY_API_URL=YOUR_ALCHEMY_API_URL
 ```
 
-*Note: On Replit? You'll need to use [this](https://docs.replit.com/programming-ide/storing-sensitive-information-environment-variables). Basically, .env files don’t work on Replit. Once you add you variables one-by-one w/ the same names. When you’re done you’ll need to start Replit by stopping/running the repo so it picks up the new env variables!* 
+*Note: On Replit? You'll need to use [this](https://docs.replit.com/programming-ide/storing-sensitive-information-environment-variables). Basically, .env files don’t work on Replit. Once you add your variables one-by-one w/ the same names. When you’re done you’ll need to start Replit by stopping/running the repo so it picks up the new env variables!* 
 
 thirdweb needs all this stuff to deploy contracts on your behalf. Nothing is stored on their end, everything stays locally on your `.env` file. **Don't commit your `.env` file to Github. You will get robbed. Be careful.**
 
