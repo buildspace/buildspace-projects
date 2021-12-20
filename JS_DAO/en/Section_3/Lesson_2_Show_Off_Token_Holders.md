@@ -41,9 +41,9 @@ useEffect(() => {
   // with tokenId 0.
   bundleDropModule
     .getAllClaimerAddresses("0")
-    .then((addresess) => {
-      console.log("🚀 Members addresses", addresess)
-      setMemberAddresses(addresess);
+    .then((addresses) => {
+      console.log("🚀 Members addresses", addresses)
+      setMemberAddresses(addresses);
     })
     .catch((err) => {
       console.error("failed to get member list", err);
