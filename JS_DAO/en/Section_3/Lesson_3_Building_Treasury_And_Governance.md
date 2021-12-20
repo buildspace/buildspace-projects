@@ -71,7 +71,7 @@ For the sake of example, let’s just do `votingQuorumFraction: 0` which means
 
 Finally, we have we do `minimumNumberOfTokensNeededToPropose: "0"` which allows anyone to actually create a proposal even if they hold zero governance token. Up to you what you want to set this at! Let’s keep it at zero for now.
 
-Go ahead and run this using `scripts/8-deploy-vote.js`. Here’s what I end up getting:
+Go ahead and run this using `node scripts/8-deploy-vote.js`. Here’s what I end up getting:
 
 ```plaintext
 buildspace-dao-starter % node scripts/8-deploy-vote.js
