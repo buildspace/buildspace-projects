@@ -64,7 +64,8 @@ We are now safe from an admin takeover :).
 
 First, you'll need to import the type `UnsupportedChainIdError` at the top of `App.jsx` to recognize a connection outside of the Rinkeby network. Just add the line below to your other imports.
 
-`import { UnsupportedChainIdError } from "@web3-react/core";`
+```jsx
+import { UnsupportedChainIdError } from "@web3-react/core";`
 
 Next, add the following in your `App.jsx` file right under your last `useEffect`.
 
