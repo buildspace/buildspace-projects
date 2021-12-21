@@ -5,9 +5,6 @@ Cool. Everything is set up, now, we just need to create our first proposal! Head
 ```jsx
 import { ethers } from "ethers";
 import sdk from "./1-initialize-sdk.js";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 // Our voting contract.
 const voteModule = sdk.getVoteModule(
