@@ -80,7 +80,7 @@ buildspace-dao-starter % node scripts/8-deploy-vote.js
 
 ```
 
-This is pretty cool. Basically, we created and deployed a new smart contract that will let us actually vote on proposals on-chain. This is a standard [governance](https://docs.openzeppelin.com/contracts/4.x/api/governance) contract. You can see the exact contract you deployed [here](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/vote/VotingGovernance.sol).
+This is pretty cool. Basically, we created and deployed a new smart contract that will let us actually vote on proposals on-chain. This is a standard [governance](https://docs.openzeppelin.com/contracts/4.x/api/governance) contract. You can see the exact contract you deployed [here](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/vote/VotingGovernor.sol).
 
 If you head to `https://rinkeby.etherscan.io/` you’ll see it there!
 
