@@ -1,92 +1,88 @@
-12.13 Bob 
-
-👋 Welcome
+👋欢迎
 ----------------------------------
 
-You've made it — hell yeah! Welcome :). My name is Farza and I’ll be your instructor. This project is for devs that want to get more into crypto tech. All you really need to know going into this: some terminal skills, some javascript, some react.js. You'll pick up the rest along the way.
+你成功了——天啊！欢迎 ：）。我的名字是法尔扎，我将成为你的导师。该项目适用于想要更多地了解加密技术的开发人员。所有你真正需要知道的：一些终端技能，一些javascript，一些react.js。您将沿途拿起其余的。
 
-A few action items for you before moving on:
+在继续之前，为您准备一些行动项目：
 
-1. **Connect your Discord in the project dashboard.** All the good stuff is going to be happening in a secret category in the Discord that you'll only have access to if you connect your Discord.
-2. **Connect your Ethereum wallet in the project dashboard.** If you don't have a wallet that can interact with dApps, you can just install Metamask for free right now. Without a wallet, you can't do the project!
-3. **Be sure to attend the kick-off**. If you miss it, no worries. It's not required! You'll get an email with the recording. I'll also post the recording in the Discord.
+1. **在项目仪表板中连接您的 Discord。** 所有好东西都将发生在 Discord 的一个秘密类别中，只有在您连接您的 Discord 时才能访问该类别。
+2. **在项目仪表板中连接您的以太坊钱包。** 如果您没有可以与 dApp 交互的钱包，您现在可以免费安装 Metamask。没有钱包，你做不了这个项目！
+3. **一定要参加开球**。如果你错过了，不用担心。这不是必需的！您会收到一封包含录音的电子邮件。我也会在 Discord 中发布录音。
 
 
-🚀 This is going to be awesome
+🚀这会很棒
 ----------------------------------
 
-I'm really excited to show you how to go from zero -> shipping your own web3 app + Ethereum smart contract.
+我真的很高兴向您展示如何从零开始 -> 发布您自己的 web3 应用程序 + 以太坊智能合约。
 
-What does "shipping" mean? Well, it means you'll actually make something and then deploy it to the internet for the world to see and use. You'll be able to show the final project off to your friends, potential employers, and even your dog! The best part is, your fellow classmates will be the first users for your project!!
+“运送”是什么意思？嗯，这意味着您将实际制作一些东西，然后将其部署到互联网上供全世界查看和使用。您将能够向您的朋友、潜在雇主，甚至您的狗展示最终项目！最好的部分是，您的同学将是您项目的第一批用户！！
 
-This stuff is very new, there's a lot of hype around it, and it can be super difficult to understand the best way to learn it.
+这个东西很新，周围有很多炒作，要理解学习它的最佳方式可能会非常困难。
 
-With this project, you're going to learn about crypto tech by actually writing code and just hopping into the good stuff. No B.S. We'll also go over theory and more in-depth concepts, but, it will all be structured around your project.
+通过这个项目，你将通过实际编写代码和跳入好东西来学习加密技术。没有学士学位我们还将讨论理论和更深入的概念，但是，这一切都将围绕您的项目构建。
 
-Checkout a little intro video I made about this project below!
-[Loom](https://www.loom.com/share/8746b43760c74c6791ba17af9940ea8e)
+在下面查看我为这个项目制作的一些介绍视频！
+[织机](https://www.loom.com/share/8746b43760c74c6791ba17af9940ea8e)
 
 
-👀 Earn a buildspace NFT by the end.
+👀 最后获得一个构建空间 NFT。
 -------------------
 
-When you reach the end of this project, you'll be able to earn an NFT.
+当您完成此项目时，您将能够获得 NFT。
 
-**We'll airdrop an NFT to your connected wallet if you finish the project within 7-days of the kick-off.**
+**如果您在启动后的 7 天内完成项目，我们会将 NFT 空投到您连接的钱包中。**
 
-![Untitled](https://i.imgur.com/HlRJTTf.png)
+![无题](https://i.imgur.com/HlRJTTf.png)
 
-Note: instead of "Capella", yours would say name of your cohort — each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT.
+注意：而不是“Capella”，你会说你的队列的名字——每个队列都以一颗星星命名！此外，右下角的 # 将是铸造的 #，这取决于您申请 NFT 的时间。
 
 
-🛠 What will you be building?
+🛠你要建造什么？
 -----------------------------
 
-You'll be building a website that I'll be calling the WavePortal --- it'll be a place where anyone on the internet can learn a little about who you are and send you a 👋 + a message and have that data saved on the blockchain through an Ethereum smart contract. (A smart contract is basically code that lives on the blockchain you can read and write from, we'll talk about this more in a bit).
+你将建立一个我称之为 WavePortal 的网站 --- 它将是一个地方，互联网上的任何人都可以在这里了解你的身份并向你发送 👋 + 消息并保存该数据通过以太坊智能合约在区块链上。 （智能合约基本上是存在于区块链上的代码，您可以从中读取和写入，我们稍后会详细讨论这一点）。
 
-You'll be writing + deploying the smart contract and you'll also be building the website that will let people actually connect their wallets and interact with your smart contract.
+您将编写 + 部署智能合约，您还将构建网站，让人们真正连接他们的钱包并与您的智能合约进行交互。
 
-We're going to make this a little spicy as well. Basically, when someone waves at you there is a random chance they can win a small amount of ETH from your site :).
+我们也要把它弄得有点辣。基本上，当有人向你挥手时，他们有随机的机会从你的网站赢取少量 ETH :)。
 
-You'll be able to customize the website as much as you want. For example:
-- Maybe instead of a 👋 you want people to send you a 💩.
-- Perhaps instead of a plain old message, you want them to send you a Spotify link and create a place where anyone can send you awesome music and have it saved.
-- You can change the smart contract to recognize when one of your friends is waving at you (based on their Ethereum wallet address) and then take them to a page where they get Rick Roll'd.
+您可以根据需要自定义网站。例如：
+- 也许您希望人们给您发送 💩，而不是 👋。
+- 也许不是简单的旧消息，您希望他们向您发送 Spotify 链接，并创建一个任何人都可以向您发送精彩音乐并将其保存的地方。
+- 您可以更改智能合约以识别您的朋友何时向您挥手（根据他们的以太坊钱包地址），然后将他们带到他们获得 Rick Roll 的页面。
 
-You can do whatever you want :).
+你想做什么，就可以做什么 ：）。
 
-By the end, you'll have a site you can show off and actually have people use. Your fellow classmates will be your first users!
-
-
-📺 Where does the Live Kick-Off Happen?
----------------------------------------
-
-They'll be happening at <https://www.twitch.tv/buildspace>. Be sure to make an account on Twitch ahead of time so you'll be able to chat during the stream!
+到最后，您将拥有一个可以炫耀并实际让人们使用的网站。您的同学将是您的第一批用户！
 
 
-🤚 How to get help.
----------------------------------------
+📺 现场开球在哪里举行？
+-------------------------------
 
-When you have a question, hit up the proper channel for the project.
-
-This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord. If you're part of multiple projects, be sure to ask your questions in the right project category!
+它们将在 <https://www.twitch.tv/buildspace> 上发生。请务必提前在 Twitch 上注册一个帐户，以便您可以在直播期间聊天！
 
 
-🤘 See an issue? Want to improve something? Fix it yourself ;).
----------------------------------------
+🤚 如何获得帮助。
+-------------------------------
 
-**[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec` in the Discord :). 
+当您有问题时，请为该项目打开适当的频道。
 
-Let's get you some open-source rep!!!
-
-At the very least, drop a ⭐ on the repo if you're feeling fancy!
+该项目分为 4 个部分。您可以通过查看页面最顶部的进度条来查看您所在的部分。因此，例如，如果您被困在第 3 部分的某些部分，您可以在 Discord 中点击“#section-3-help”。如果您参与多个项目，请务必在正确的项目类别中提出您的问题！
 
 
-🚨Curious about working in web3?
+🤘 看到问题了吗？想要改进一些东西吗？自己修理;)。
+-------------------------------
+
+**[所有这些内容都是完全开源的](https://github.com/buildspace/buildspace-projects)**。如果您发现问题、拼写错误等 - 您可以轻松地自行修复并进行 PR！如果您在这方面需要帮助，请在 Discord 中私信 `@alec` :)。
+
+让我们为您提供一些开源代表！！！
+
+至少，如果您觉得喜欢，请在 repo 上放一个 ⭐ ！
+
+
+🚨对在 web3 中工作感到好奇吗？
 -------------------
 
-We're partnered with a bunch of awesome web3 companies that want to hire people from the buildspace network. We got companies like OpenSea, Edge and Node, and Chainlink as partners. **Even if you're just curious**, click "Work in Web3" on the side-bar, fill out the form real quick, and check out the opportunties!!
+我们与许多优秀的 web3 公司合作，这些公司想要从 buildspace 网络招聘人员。 我们有像 OpenSea、Edge 和 Node 以及 Chainlink 这样的公司作为合作伙伴。 **即使您只是好奇**，请单击侧栏上的“Work in Web3”，快速填写表格，然后查看机会！！
 
-Worst case scenario, you get to talk to some really cool people in web3 :).
-
-
+最坏的情况是，您可以在 web3 中与一些非常酷的人交谈 :)。
