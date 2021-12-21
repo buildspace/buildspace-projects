@@ -1,10 +1,10 @@
 ### 😡 Revoke roles.
 
-If you remember, you actually still hold “minting” rights on the ERC-20 contract. That means you can go and create more token if you wanted which may freak out members of your DAO lol. You could go and mint like a billion token to yourself lol.
+If you remember, you actually still hold “minting” rights on the ERC-20 contract. That means you can go and create more tokens if you wanted which may freak out members of your DAO lol. You could go and mint like a billion tokens to yourself lol.
 
-It’s best if your revoke your “minting” role completely.
+It’s best if you revoke your “minting” role completely.
 
-That way, only the voting contract is able to mint new token. We can do this by adding the following to `scripts/11-revoke-roles.js`:
+That way, only the voting contract is able to mint new tokens. We can do this by adding the following to `scripts/11-revoke-roles.js`:
 
 ```jsx
 import sdk from "./1-initialize-sdk.js";
