@@ -9,9 +9,7 @@ That way, only the voting contract is able to mint new token. We can do this by 
 ```jsx
 import sdk from "./1-initialize-sdk.js";
 
-const tokenModule = sdk.getTokenModule(
-  "INSERT_TOKEN_MODULE_ADDRESS",
-);
+const tokenModule = sdk.getTokenModule("INSERT_TOKEN_MODULE_ADDRESS");
 
 (async () => {
   try {
@@ -27,8 +25,9 @@ const tokenModule = sdk.getTokenModule(
       "🎉 Roles after revoking ourselves",
       await tokenModule.getAllRoleMembers()
     );
-    console.log("✅ Successfully revoked our superpowers from the ERC-20 contract");
-
+    console.log(
+      "✅ Successfully revoked our superpowers from the ERC-20 contract"
+    );
   } catch (error) {
     console.error("Failed to revoke ourselves from the DAO treasury", error);
   }
@@ -63,16 +62,20 @@ We are now safe from an admin takeover :).
 
 ### 👍 Handle basic unsupported network error.
 
-Feel free to add this code in your `App.jsx` file right under your last `useEffect`.
+First, you'll need to import the type `UnsupportedChainIdError` at the top of `App.jsx` to recognize a connection outside of the Rinkeby network. Just add the line below to your other imports.
+
+`import { UnsupportedChainIdError } from "@web3-react/core";`
+
+Next, add the following in your `App.jsx` file right under your last `useEffect`.
 
 ```jsx
-if (error && error.name === "UnsupportedChainIdError") {
+if (error instanceof UnsupportedChainIdError) {
   return (
     <div className="unsupported-network">
       <h2>Please connect to Rinkeby</h2>
       <p>
-        This dapp only works on the Rinkeby network, please switch networks
-        in your connected wallet.
+        This dapp only works on the Rinkeby network, please switch networks in
+        your connected wallet.
       </p>
     </div>
   );
@@ -109,6 +112,6 @@ Take some time here before moving on to really these pages your own. Even if all
 
 ### 🚨 Progress Report
 
-*Please do this or Farza will be sad :(.*
+_Please do this or Farza will be sad :(._
 
 Go ahead and post a screenshot in `#progress` of your DAO’s Dashboard after a little customization!
