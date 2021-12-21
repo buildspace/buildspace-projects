@@ -107,6 +107,9 @@ Head to `9-setup-vote.js` and add the following:
 ```jsx
 import { ethers } from "ethers";
 import sdk from "./1-initialize-sdk.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // This is our governance contract.
 const voteModule = sdk.getVoteModule(
