@@ -1453,6 +1453,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "dnyy",
+      "name": "Daniel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22489645?v=4",
+      "profile": "https://github.com/dnyy",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
