@@ -290,6 +290,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/dnyy"><img src="https://avatars.githubusercontent.com/u/22489645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=dnyy" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://jackyeh.me/"><img src="https://avatars.githubusercontent.com/u/6530117?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jack Yeh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jckyeh" title="Documentation">📖</a></td>
   </tr>
 </table>
 
