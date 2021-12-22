@@ -277,6 +277,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/tyirenkyi"><img src="https://avatars.githubusercontent.com/u/39198645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Timothy Yirenkyi</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=tyirenkyi" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/0xRadiant"><img src="https://avatars.githubusercontent.com/u/94811720?v=4?s=100" width="100px;" alt=""/><br /><sub><b>0xRadiant</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xRadiant" title="Documentation">📖</a></td>
     <td align="center"><a href="https://medium.com/@mathieutan"><img src="https://avatars.githubusercontent.com/u/20499416?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matanwrites</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=matanwrites" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Vxatz"><img src="https://avatars.githubusercontent.com/u/92011898?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vxatz</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Vxatz" title="Documentation">📖</a></td>
   </tr>
 </table>
 
