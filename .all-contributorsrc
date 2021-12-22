@@ -1390,6 +1390,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "chinchaun",
+      "name": "Jean Delannoy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5834140?v=4",
+      "profile": "https://ar.linkedin.com/in/jean-jacques-delannoy",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
