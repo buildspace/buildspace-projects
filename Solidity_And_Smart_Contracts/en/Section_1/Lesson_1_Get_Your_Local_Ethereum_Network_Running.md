@@ -46,12 +46,7 @@ Run:
 npx hardhat
 ```
 
-If you have yarn installed along with npm, you may get errors such as `npm ERR! could not determine executable to run`. If you do, try running the following and you should be able to continue without any errors:
-
-```bash
-yarn add hardhat
-npx hardhat
-```
+*Note: if you have yarn installed along with npm, you may get errors such as `npm ERR! could not determine executable to run`. In this case, you can do `yarn add hardhat`.*
 
 Choose the option to create a sample project. Say yes to everything.
 

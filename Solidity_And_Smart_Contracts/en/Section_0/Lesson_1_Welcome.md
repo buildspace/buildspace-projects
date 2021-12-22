@@ -83,7 +83,7 @@ At the very least, drop a ⭐ on the repo if you're feeling fancy!
 🚨Curious about working in web3?
 -------------------
 
-We're partnered with a bunch of awesome web3 companies that want to hire people from the buildspace network. We got companies like OpenSea, Edge and Node, and Chainlink as partners. **Even if you're just curious**, click "Work in Web3" on the side-bar, fill out the form real quick, and check out the opportunties!!
+We're partnered with a bunch of awesome web3 companies that want to hire people from the buildspace network. We got companies like OpenSea, Edge and Node, and Chainlink as partners. **Even if you're just curious**, click "Work in Web3" on the side-bar, fill out the form real quick, and check out the opportunities!!
 
 Worst case scenario, you get to talk to some really cool people in web3 :).
 

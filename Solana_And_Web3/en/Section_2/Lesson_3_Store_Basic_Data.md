@@ -175,7 +175,7 @@ runMain();
 
 Most of the script is the same but you'll see I pass `startStuffOff` some important params that we specified in the struct `pub struct StartStuffOff`.
 
-*Note: notice also that in `lib.rs` the function is called `start_stuff_off` since in Rust we use `_` vs camel case. But, over in our javascript file we use camel case and actually call `startStuffOff`. This is something nice Anchor does for us so we can follow best practices regardless of what language we're using. You can use underscores in Rust-land and camel case in JS-land.*
+*Note: notice also that in `lib.rs` the function is called `start_stuff_off` since in Rust we use snake case (`snake_case`) instead of camel case. But, over in our javascript file we use camel case and actually call `startStuffOff`. This is something nice Anchor does for us so we can follow best practices regardless of what language we're using. You can use snake case in Rust-land and camel case in JS-land.*
 
 And perhaps the coolest part about all this is where we call:
 
