@@ -210,7 +210,7 @@ const wave = async () => {
 
 Pretty simple, right :)?
 
-What's awesome here is while the transaction is being mined you can actually print out the transaction hash, copy/paste it to [Etherscan](https://rinkeby.etherscan.io/), and see it being processed in real-time :).
+What's awesome here is while the transaction is being mined you can actually print out the transaction hash, copy/paste it to [Etherscan](https://rinkeby.etherscan.io/), and see it being processed in real-time :). Be sure to select the Rinkeby Testnet on the Etherscan site before you search as the Etherscan search functionality only searches the currently selected Ethereum network.
 
 When we run this, you'll see that total wave count is increased by 1. You'll also see that Metamask pops us and asks us to pay "gas" which we pay for using our fake $. There is a great article on it [here](https://ethereum.org/en/developers/docs/gas/). Try and figure out what gas is :).
 
