@@ -1489,6 +1489,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "pietroanello",
+      "name": "pietroanello",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43348480?v=4",
+      "profile": "http://pietroanello.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
