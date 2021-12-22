@@ -61,7 +61,7 @@ const appModule = sdk.getAppModule(
 
 We’re using `deployVoteModule` to actually set up the contract. This will deploy a brand new voting contract!
 
-Notice how we give it `votingTokenAddress`, this is our contract knows which governance token to accept. We don’t want people randomly tryna use $DOGE to vote lol.
+Notice how we give it `votingTokenAddress`, this is how our contract knows which governance token to accept. We don’t want people randomly tryna use $DOGE to vote lol.
 
 We have `proposalStartWaitTimeInSeconds`, which can be useful if you want to give people some time to go over the proposal before they’re allowed to vote on it. Similarly, we have `proposalVotingTimeInSeconds` which just specifies how long someone has to vote once a proposal goes lives.
 
