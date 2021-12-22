@@ -283,6 +283,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://ar.linkedin.com/in/jean-jacques-delannoy"><img src="https://avatars.githubusercontent.com/u/5834140?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jean Delannoy</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=chinchaun" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/directdetour"><img src="https://avatars.githubusercontent.com/u/16309528?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Young</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=directdetour" title="Documentation">📖</a></td>
     <td align="center"><a href="http://rol.fo"><img src="https://avatars.githubusercontent.com/u/7563743?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mathieu Rolfo</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=mathieurolfo" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://alecchendev.com"><img src="https://avatars.githubusercontent.com/u/30279834?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alec Chen</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=alecchendev" title="Documentation">📖</a></td>
   </tr>
 </table>
 
