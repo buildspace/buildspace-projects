@@ -1417,6 +1417,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "alecchendev",
+      "name": "Alec Chen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30279834?v=4",
+      "profile": "http://alecchendev.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
