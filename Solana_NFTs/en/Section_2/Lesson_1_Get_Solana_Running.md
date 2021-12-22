@@ -58,7 +58,7 @@ Be sure to install `ts-node` globally. I used this command: `npm install -g ts-n
 
 The installation steps are pretty straight forward [here](https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool). There are clear steps for getting the Solana CLI installed for Windows, Linux, and Mac.
 
-**Don't** worry about upgrading to the latest version of Solana.
+**Don't** worry about upgrading to the latest version of Solana. You can install the stable version by replacing the version number with "stable" like this: `sh -c "$(curl -sSfL https://release.solana.com/stable/install)"`
 
 *Note: Depending on your system — once you install Solana, it may output a message like "Please update your PATH environment variable" and it'll give you a line to copy and run. Go ahead and copy + run that command so your PATH gets setup properly.*
 
