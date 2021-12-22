@@ -1408,6 +1408,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mathieurolfo",
+      "name": "Mathieu Rolfo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7563743?v=4",
+      "profile": "http://rol.fo",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
