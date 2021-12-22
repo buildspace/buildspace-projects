@@ -281,6 +281,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://ar.linkedin.com/in/jean-jacques-delannoy"><img src="https://avatars.githubusercontent.com/u/5834140?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jean Delannoy</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=chinchaun" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/directdetour"><img src="https://avatars.githubusercontent.com/u/16309528?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Young</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=directdetour" title="Documentation">📖</a></td>
   </tr>
 </table>
 
