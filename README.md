@@ -292,6 +292,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/dnyy"><img src="https://avatars.githubusercontent.com/u/22489645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=dnyy" title="Documentation">📖</a></td>
     <td align="center"><a href="https://jackyeh.me/"><img src="https://avatars.githubusercontent.com/u/6530117?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jack Yeh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jckyeh" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/maf88"><img src="https://avatars.githubusercontent.com/u/2613844?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antoine Moevus</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=maf88" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://mauricewillis.crypto"><img src="https://avatars.githubusercontent.com/u/21006138?v=4?s=100" width="100px;" alt=""/><br /><sub><b>maurice</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Immacio" title="Documentation">📖</a></td>
   </tr>
 </table>
 
