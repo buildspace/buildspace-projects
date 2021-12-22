@@ -285,6 +285,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://rol.fo"><img src="https://avatars.githubusercontent.com/u/7563743?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mathieu Rolfo</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=mathieurolfo" title="Documentation">📖</a></td>
     <td align="center"><a href="http://alecchendev.com"><img src="https://avatars.githubusercontent.com/u/30279834?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alec Chen</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=alecchendev" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/gbstox"><img src="https://avatars.githubusercontent.com/u/10839995?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gbstox</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=gbstox" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://dveni.github.io/"><img src="https://avatars.githubusercontent.com/u/28764301?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dani Vera</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=dveni" title="Documentation">📖</a></td>
   </tr>
 </table>
 

@@ -1435,6 +1435,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "dveni",
+      "name": "Dani Vera",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28764301?v=4",
+      "profile": "https://dveni.github.io/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
