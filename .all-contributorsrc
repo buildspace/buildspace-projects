@@ -1399,6 +1399,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "directdetour",
+      "name": "Matt Young",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16309528?v=4",
+      "profile": "https://github.com/directdetour",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
