@@ -61,7 +61,7 @@ const appModule = sdk.getAppModule(
 
 We’re using `deployVoteModule` to actually set up the contract. This will deploy a brand new voting contract!
 
-Notice how we give it `votingTokenAddress`, this is our contract knows which governance token to accept. We don’t want people randomly tryna use $DOGE to vote lol.
+Notice how we give it `votingTokenAddress`, this is our contract knows which governance token to accept. We don’t want people randomly try to use $DOGE to vote lol.
 
 We have `proposalStartWaitTimeInSeconds`, which can be useful if you want to give people some time to go over the proposal before they’re allowed to vote on it. Similarly, we have `proposalVotingTimeInSeconds` which just specifies how long someone has to vote once a proposal goes lives.
 
@@ -69,7 +69,7 @@ We have `proposalStartWaitTimeInSeconds`, which can be useful if you want to gi
 
 For the sake of example, let’s just do `votingQuorumFraction: 0` which means the proposal will pass regardless of what % of token was used on the vote. This means one person could technically pass a proposal themselves if the other members are on vacation lol. For now, this is fine. The quorum you set in the real world depends on your supply and how much you initially airdropped.
 
-Finally, we have we do `minimumNumberOfTokensNeededToPropose: "0"` which allows anyone to actually create a proposal even if they hold zero governance token. Up to you what you want to set this at! Let’s keep it at zero for now.
+Finally, we have `minimumNumberOfTokensNeededToPropose: "0"` which allows anyone to actually create a proposal even if they hold zero governance token. Up to you what you want to set this at! Let’s keep it at zero for now.
 
 Go ahead and run this using `scripts/8-deploy-vote.js`. Here’s what I end up getting:
 
