@@ -87,7 +87,7 @@ const bundleDrop = sdk.getBundleDropModule(
     
     await bundleDrop.setClaimCondition(0, claimConditionFactory);
     console.log(
-      "✅ Sucessfully set claim condition on bundle drop:",
+      "✅ Successfully set claim condition on bundle drop:",
       bundleDrop.address
     );
   } catch (error) {
@@ -108,7 +108,7 @@ After running `node scripts/4-set-claim-condition.js` here's what I get:
 
 ```
 👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
-✅ Sucessfully set claim condition on bundle drop: 0x31c70F45060AE0870624Dd9D79A1d8dafC095A
+✅ Successfully set claim condition on bundle drop: 0x31c70F45060AE0870624Dd9D79A1d8dafC095A
 ```
 
 Boom! We've successfully interacted w/ our deployed smart contract and have given our NFT certain rules it must follow, hell yea! If you copy-paste your bundle drop address printed out there and search it on `https://rinkeby.etherscan.io/`, you'll see proof right there that we interact w/ the contract!
