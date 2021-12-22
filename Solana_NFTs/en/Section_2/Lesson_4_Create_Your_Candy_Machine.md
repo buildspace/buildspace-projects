@@ -1,4 +1,4 @@
-At this point we have our NFTs all uploaded to Arweave and we have a basic config for our candy machine up on devnet. But, we haven' actually "created" our candy machine. All we've done so far is set up assets.
+At this point we have our NFTs all uploaded to Arweave and we have a basic config for our candy machine up on devnet. But, we haven't actually "created" our candy machine. All we've done so far is set up assets.
 
 ### 👩‍💻 **Deploy candy machine to devnet**
 
