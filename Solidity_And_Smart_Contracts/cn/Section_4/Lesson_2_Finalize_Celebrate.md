@@ -1,66 +1,66 @@
-🎨 Finalize your UI, make it your own.
---------------------------------------
+🎨 完成 UI，发布你自己的产品。
+-------------------------------
 
-You've got all the core functionality down! Now, it's time for you to really make this your own if you haven't already. Change up the CSS, the text, add some funny YouTube embeds, add your own bio, whatever. Make stuff look cool :).
+您已经完成了所有核心功能！现在，如果您还没有的话，是时候真正将它变成您自己的了。更改 CSS、文本、添加一些有趣的 YouTube 嵌入、添加您自己的个人简介等等。让东西看起来很酷:)。
 
-**Spend like 30-minutes on this if you want!! I highly recommend it!**
+**如果你愿意，花 30 分钟在这上面！！我强烈推荐它！**
 
-Btw, while we're testing -- you might want to change your contract's cooldown timer to like 30-seconds instead of 15 minutes like this:
+顺便说一句，在我们进行测试时 - 您可能希望将合约的冷却时间更改为 30 秒而不是 15 分钟，如下所示：
 
 ```
 require(lastWavedAt[msg.sender] + 30 seconds < block.timestamp, "Must wait 30 seconds before waving again.");
 ```
 
-Why? Well it can be annoying while you're testing to only be able to wave every 15-minutes! 
+为什么？好吧，当您测试只能每 15 分钟挥手一次时，这可能会很烦人！
 
-So, I changed mine to 30-seconds!
+所以，我把我的改为 30 秒！
 
-When you deploy your **final** contract, can set this to whatever you want!
+当您部署 **final** 合约时，可以将其设置为您想要的任何内容！
 
-⛽️ Setting gas limit
+⛽️ 设置gas限制
 --------------------
 
-When you try to "wave" now, you may notice you sometimes get an error that looks something like "out of gas". Why?
+当您现在尝试“挥手”时，您可能会注意到有时会出现类似于“gas不足”的错误。为什么？
 
-Well, basically Metamask will try to estimate how much gas a transaction will use. But, sometimes it's wrong! In this case, it's made more difficult by the fact that we have some randomness involved. So, if the contract sends a prize then the waver need to pay more gas since we're running **more** code.
+嗯，基本上 Metamask 会尝试估计交易将使用多少 gas。但是，有时是错误的！在这种情况下，由于我们涉及一些随机性，因此变得更加困难。因此，如果合约发送奖品，那么由于我们正在运行 **more** 代码，因此波动者需要支付更多的 gas。
 
-Estimating gas is a hard problem and an easy workaround for this (so our users don't get angry when a transaction fails) is to set a limit.
+估计 gas 是一个难题，一个简单的解决方法（这样我们的用户在交易失败时不会生气）是设置一个限制。
 
-On App.js, I changed the line that sends the wave to 
+在 App.js 上，我将发送 wave 的行更改为
 
 ```solidity
 wavePortalContract.wave(message, { gasLimit: 300000 })
 ```
 
-What this does is make the user pay a set amount of gas of 300,000. And, if they don't use all of it in the transaction they'll automatically be refunded.
+这样做是让用户支付 300,000 的固定数量的 gas。而且，如果他们没有在交易中使用所有这些，他们将自动获得退款。
 
-So, if a transaction costs 250,000 gas then *after *that transaction is finalized that 50,000 gas left over that the user didn't use will be refunded :).
+因此，如果交易花费 250,000 gas，那么*在交易完成后，用户未使用的剩余 50,000 gas 将被退还:)。
 
-🔍 Validating the transaction
+🔍 验证交易
 ---------------------------
 
-When your contract has been deployed and you're testing it out with your UI and your wallet, it may be confusing at first to determine whether your wallet's account was successfully rewarded with the prize. Your account will have used up some amount of gas and potentially have been rewarded with ETH. So how can you validate whether your contract is working as expected?
+当你的合约被部署并且你正在用你的 UI 和你的钱包测试它时，首先确定你的钱包帐户是否成功获得奖品可能会令人困惑。您的账户将消耗一定数量的 gas 并可能获得 ETH 奖励。那么您如何验证您的合约是否按预期工作？
 
-To validate, you can open up your contract address on [Rinkeby Etherscan](https://rinkeby.etherscan.io/) and view the transactions that have taken place. You'll find all sorts of useful information in here, including the method that was called, which in this case is `Wave`. If you click into a `Wave` transaction, you'll notice that in the `To` property, it will identify that the contract address was called. If the user had won a prize, you'll notice in that field, that the contract has transferred 0.0001 ETH from the contract address to your account address.
+要验证，您可以在 [Rinkeby Etherscan](https://rinkeby.etherscan.io/) 上打开您的合约地址并查看已发生的交易。您会在此处找到各种有用的信息，包括被调用的方法，在本例中为“Wave”。如果您单击“Wave”交易，您会注意到在“To”属性中，它将标识调用了合约地址。如果用户中了奖，您会在该字段中注意到，已从合约地址转移了 0.0001 ETH 到您的帐户地址。
 
-Note that the `Value` of the transaction is still 0 ETH, because the user never paid anything to initiate the wave. The transfer of ETH internally from a smart contract is called an "internal transaction".
+请注意，交易的“价值”仍然是 0 ETH，因为用户从未支付任何费用来发起wave。从智能合约内部转移 ETH 称为“内部交易”。
 
-🎤 Events
+🎤 事件
 ---------
 
-Remember how we used that magic line below in our smart contract? I told you to Google how events in Solidity work. Please do that now if you didn't already!
+还记得我们如何在我们的智能合约中使用下面的魔术线吗？我告诉过你去谷歌搜索 Solidity 中的事件是如何工作的。如果你还没有，请现在就做！
 
 ```solidity
 emit NewWave(msg.sender, block.timestamp, _message);
 ```
 
-At a basic level, events are messages our smart contracts throw out that we can capture on our client in real-time.
+在基本层面上，事件是我们的智能合约抛出的消息，我们可以在客户端上实时捕获这些消息。
 
-Lets say I'm chilling on your website and I just have it open. While I'm doing this, your other friend Jeremy waves to you. Right now, the only way I'd see Jeremy's wave is if I refreshed my page. This seems bad. Wouldn't it be cool if I could know that that contract was updated and have my UI magically update?
+假设我打开你的网站，准备挥手。我这样做时，你的另一个朋友杰里米向你挥手致意。现在，我看到 Jeremy 的挥手的唯一方法是刷新我的页面。这似乎很糟糕。如果我能知道该合约已更新并神奇地更新我的 UI，那不是很酷吗？
 
-Even now, it's kinda annoying when we ourselves submit a message, and then we have to wait for it to be mined and then refresh the page to see all the updated list of messages, right? Lets fix that.
+即使是现在，当我们自己提交一条消息，然后我们必须等待它被挖矿交易然后刷新页面才能看到所有更新的消息列表时，这有点烦人，对吧？让我们解决这个问题。
 
-Check out my code here where I updated `getAllWaves` in `App.js.` 
+在此处查看我在“App.js”中更新“getAllWaves”的代码。
 
 ```javascript
 const getAllWaves = async () => {
@@ -124,27 +124,27 @@ useEffect(() => {
 }, []);
 ```
 
-At the very bottom you'll see the magic bit of code I added :). Here, I can actually "listen" when my contract throws the `NewWave` event. Like a webhook :). Pretty dope, right?
+在最底部你会看到我添加的神奇代码:)。在这里，当我的合约引发 `NewWave` 事件时，我实际上可以“侦听”。就像一个网络钩子:)。很毒，对吧？
 
-I can also access that data on that event like `message` and `from`. Here, I do a `setAllWaves` when I get this event which means the user's message will automatically be appended to my `allWaves` array when we receive the event and our UI will update!
+我还可以访问有关该事件的数据，例如 `message` 和 `from`。在这里，当我收到此事件时，我执行了一个 `setAllWaves`，这意味着当我们收到该事件时，用户的消息将自动附加到我的 `allWaves` 数组中，并且我们的 UI 将更新！
 
-This is super powerful. It lets us create web apps that update in real-time :). Think about if you were making something like a Uber or Twitter on the blockchain, web apps that update in real-time become mega important.
+这个超级强大。它让我们可以创建实时更新的网络应用程序:)。想想如果你在区块链上制作 Uber 或 Twitter 之类的东西，实时更新的网络应用程序就变得非常重要。
 
-I want you to hack around with this and build whatever you want :).
+我希望你解决这个问题并构建你想要的任何东西:)。
 
 
-🙉 A note on github
+🙉 github 上的笔记
 ----------------
 
-**If uploading to Github, don't upload your hardhat config file with your private key to your repo. You will get robbed.**
+**如果上传到 Github，请不要将带有您的私钥的配置文件上传到您的存储库。你会被抢劫。**
 
-I use dotenv for this.
+我为此使用了 dotenv。
 
 ```bash
 npm install --save dotenv
 ```
 
-Your hardhat.config.js file would look something like:
+您的 hardhat.config.js 文件类似于：
 
 ```javascript
 require('@nomiclabs/hardhat-waffle');
@@ -166,7 +166,7 @@ module.exports = {
 };
 ```
 
-And your .env file would look something like:
+你的 .env 文件看起来像：
 
 ```
 STAGING_ALCHEMY_KEY=BLAHBLAH
@@ -174,33 +174,33 @@ PROD_ALCHEMY_KEY=BLAHBLAH
 PRIVATE_KEY=BLAHBLAH
 ```
 
- Be sure to have the .env in your .gitignore.
+确保在您的 .gitignore 中有 .env。
 
-🎉 That's a wrap
+🎉打包
 ----------------
 
-You've done it. You've deployed a smart contract and you've written a web app that talks to it. These are two skills that are going to change the world even more as we move towards a reality where decentralized web apps become more commonplace. 
+你已经做到了。您已经部署了一个智能合约并编写了一个与之对话的网络应用程序。随着我们朝着去中心化 Web 应用程序变得越来越普遍的现实迈进，这两项技能将进一步改变世界。
 
-I hope this was a fun introduction to web3 and I hope you continue your journey.
+我希望这是一个有趣的 web3 介绍，我希望你继续你的旅程。
 
-I'll keep you all posted on new projects in the Discord :).
+我会让大家在 Discord 中发布新项目的信息 :)。
 
 
-🚨 Before you head out...
+🚨 结束前...
 -------------------------
-Go to #showcase in Discord and show us your final product that we can mess around with :).
+转到 Discord 中的 #showcase 并向我们展示您的最终产品，我们可以处理:)。
 
-Also, should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Maybe even make a little video showing off your project and attach that to the tweet. Make your tweet look pretty and show off :).
+此外，应该完全发布您的最终项目并向世界展示您的史诗般的创作！你所做的事情无论如何都不容易。甚至可以制作一个小视频来展示您的项目并将其附加到推文中。让你的推文看起来很漂亮并炫耀:)。
 
-And if you feel up to it, tag @_buildspace :). We'll RT it. Plus, it gives us a ton of motivation whenever we see people ship their projects.
+如果您愿意，请标记@_buildspace :) （译者注：请顺便 @bobjiang123 ）。我们会RT它。此外，每当我们看到人们发布他们的项目时，它都会给我们带来很多动力。
 
-Lastly, what would also be awesome is if you told us in #feedback how you liked this project and the structure of the project. What did you love most about buildspace? What would like us to change for future projects? Your feedback would be awesome!!
-
-
-See yah around!!!
+最后，如果您在#feedback 中告诉我们您对这个项目的喜爱程度以及项目的结构，那也太棒了。你最喜欢构建空间的什么？我们希望为未来的项目做出哪些改变？你的反馈会很棒！！
 
 
-🎁 Wrap Up
+看看啊！！！
+
+
+🎁 总结
 ----------
 
-*YOU DID IT.* Claps all around 👏! Want to see all the code we wrote for this section? Click on [this link](https://gist.github.com/adilanchian/93fbd2e06b3b5d3acb99b5723cebd925) to see it all!
+*你做到了。*周围鼓掌👏！想查看我们为本节编写的所有代码吗？点击[这个链接](https://gist.github.com/adilanchian/93fbd2e06b3b5d3acb99b5723cebd925) 看全部！

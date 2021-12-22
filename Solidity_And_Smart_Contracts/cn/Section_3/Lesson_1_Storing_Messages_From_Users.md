@@ -1,19 +1,19 @@
-📦 Storing messages in arrays using structs
--------------------------------------------
+📦 在数组中使用结构体存储消息
+-------------------------------------
 
-So, we now have a full-fledged web app that can talk to the blockchain!
+所以，我们现在有了一个可以与区块链对话的完整的网络应用程序！
 
-Now, if you remember, we want our final app to be a place where people can come wave to us and send us a message. We also want to show all the past waves/messages we've gotten. That's what we'll be doing in this lesson!
+现在，如果您还记得，我们希望我们的最终应用成为人们可以向我们挥手并给我们发送消息的地方。我们还想显示我们收到的所有过去的挥手和消息。这就是我们在本课中要做的事情！
 
-So at the end of the lessons we want to:
+所以在课程结束时，我们希望：
 
-1\. Let users submit a message along with their wave.
+1\.让用户连同他们的 wave 一起提交消息。
 
-2\. Have that data saved somehow on the blockchain.
+2\.将该数据以某种方式保存在区块链上。
 
-3\. Show that data on our site so anyone can come to see all the people who have waved at us and their messages.
+3\.在我们的网站上显示该数据，以便任何人都可以看到所有向我们挥手致意的人和他们的消息。
 
-Check out my updated smart contract code. I have added lots of comments here to help you see what changed :).
+查看更新的智能合约代码。我在这里添加了很多评论，以帮助您了解发生了什么变化:)。
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -88,12 +88,12 @@ contract WavePortal {
 }
 ```
 
-🧐 Test it
+🧐 测试
 ----------
 
-Whenever we change our contract, we want to change `run.js` to test the new functionality we added. That's how we know it's working how we want! Here's what mine looks like now.
+每当我们更改合约时，我们都希望更改 `run.js` 以测试我们添加的新功能。这就是我们知道它以我们想要的方式工作！这是我现在的样子。
 
-Here's my updated `run.js`. 
+这是我更新的 `run.js`。
 
 ```javascript
 const main = async () => {
@@ -133,50 +133,50 @@ const runMain = async () => {
 runMain();
 ```
 
-Here's what I get in my terminal when I run this using `npx hardhat run scripts/run.js`.
+这是我在终端中使用 `npx hardhat run scripts/run.js` 运行时得到的结果。
 
 ![](https://i.imgur.com/oPKy2dP.png)
 
-Boom! Pretty awesome, right :)? 
+非常棒，对吧:)？
 
-The array looks a little scary but we can see the data next to the words `waver`, `message`, and `timestamp`!! It properly stores our messages `"A message"` and `"Another message"` :).
+该数组看起来有点吓人，但我们可以在单词 `waver`、`message` 和 `timestamp` 旁边看到数据！！它正确地存储了我们的消息`“一条消息”`和`“另一条消息”`:)。
 
-Note: "timestamp" is given back to us as type "BigNumber". We'll learn how to work with it later but just know there's nothing wrong here!
+注意：“时间戳”作为“BigNumber”类型返回给我们。我们稍后将学习如何使用它，但只知道这里没有错！
 
-Looks like things work, let's move to our **frontend** so we can see all our waves on our website!
+看起来一切正常，让我们转到我们的**前端**，以便我们可以在我们的网站上看到我们所有的wave！
 
-✈️ Re-deploy
+✈️重新部署
 ------------
 
-So, now that we've updated our contract we need to do a few things:
+所以，既然我们已经更新了我们的合约，我们需要做一些事情：
 
-1\. We need to deploy it again.
+1\.我们需要重新部署。
 
-2\. We need to update the contract address on our frontend.
+2\.我们需要在前端更新合约地址。
 
-3\. We need to update the abi file on our frontend. 
+3\.我们需要更新前端的 abi 文件。
 
-**People constantly forget to do these 3 steps when they change their contract. Don't forget lol.**
+**人们在更改合约时经常忘记执行这 3 个步骤。别忘了哈哈。**
 
-Why do we need to do all this? Well, it's because smart contracts are **immutable.** They can't change. They're permanent. That means changing a contract requires a full redeploy. This will also **reset** all the variables since it'd be treated as a brand new contract. **That means we'd lose all our wave data if we wanted to update the contract's code.**
+为什么我们需要做这一切？嗯，这是因为智能合约是**不可变的。**合约不能改变。它们是永久性的。这意味着更改合约需要完全重新部署。这也将**重置**所有变量，因为它会被视为一个全新的合约。 **这意味着如果我们想更新合约的代码，我们会丢失所有的 wave 数据。**
 
-**Bonus**: In #general-chill-chat, can anyone tell me some solutions here? Where else could we store our wave data where we could update our contract's code and keep our original data around? There are quite a few solutions here let me know what you find!
+**奖励**：在#general-chill-chat 中，有人可以在这里告诉我一些解决方案吗？我们还能在哪里存储我们的 wave 数据，我们可以在那里更新我们的合约代码并保留我们的原始数据？这里有很多解决方案，让我知道你发现了什么！
 
-So what you'll need to do now is:
+所以你现在需要做的是：
 
-1\. Deploy again using `npx hardhat run scripts/deploy.js --network rinkeby`
+1\.使用 `npx hardhat run scripts/deploy.js --network rinkeby` 再次部署
 
-2\. Change `contractAddress` in `App.js` to be the new contract address we got from the step above in the terminal just like we did before the first time we deployed.
+2\.将`App.js`中的`contractAddress`更改为我们在终端上一步得到的新合约地址，就像我们第一次部署之前所做的一样。
 
-3\. Get the updated abi file from `artifacts` like we did before and copy-paste it into Replit just like we did before. If you forgot how to do this be sure to revisit the lesson [here](https://app.buildspace.so/courses/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b/lessons/LE52134606-af90-47ed-9441-980479599350) and watch the video I made on ABI files below: 
-[Loom](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48).
+3\.像我们之前所做的那样从 `artifacts` 中获取更新的 abi 文件，然后像我们之前所做的那样将其复制粘贴到 Replit 中。如果您忘记了如何执行此操作，请务必重温课程 [此处](https://app.buildspace.so/courses/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b/lessons/LE52134606-af90-47ed-9447959803 ) 并观看我在下面的 ABI 文件中制作的视频：
+[Loom](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)。
 
-**Again -- you need to do this every time you change your contracts code.**
+**再说一遍——每次更改合约代码时都需要这样做。**
 
-🔌 Hooking it all up to our client
+🔌 把这一切都发布给客户
 ----------------------------------
 
-So, here's the new function I added to `App.js`.
+所以，这是我添加到`App.js` 的新函数。
 
 ```javascript
 const [currentAccount, setCurrentAccount] = useState("");
@@ -229,11 +229,11 @@ const [currentAccount, setCurrentAccount] = useState("");
   }
   ```
 
-Pretty simple and very similar to stuff we worked on earlier with how we're connecting to the provider, getting the signer, and connecting to the contract! I do a little magic here by looping through all our waves and saving them nicely in an array that we can use later. Feel free to console.log `waves` to see what you get there if you're having issues.
+非常简单，与我们之前所做的工作非常相似，即我们如何连接到提供者、获取签名者以及连接到合约！我在这里通过循环遍历我们所有的 waves 并将它们保存在我们可以稍后使用的数组中来做一个小魔术。如果遇到问题，请随时到 console.log `waves` 看看你会得到什么。
 
-Where do we call this brand new `getAllWaves()` function, though? Well -- we want to call it when we know for sure the user has a connected wallet with an authorized account because we need an authorized account to call it! Hint: you have to call this function somewhere in `checkIfWalletIsConnected()`. I'll leave it to you to figure it out. Remember, we want to call it when we know for sure we have a connected + authorized account!
+但是，我们在哪里调用这个全新的“getAllWaves()”函数呢？好吧——我们想在我们确定用户有一个带有授权帐户的连接钱包时调用它，因为我们需要一个授权帐户来调用它！提示：你必须在 `checkIfWalletIsConnected()` 的某个地方调用这个函数。我会把它留给你去弄清楚。请记住，当我们确定我们有一个连接+授权的帐户时，我们想调用它！
 
-The last thing I did was update our HTML code to render the data for us to see!
+我做的最后一件事是更新我们的 HTML 代码以呈现数据供我们查看！
 
 ```javascript
 return (
@@ -270,22 +270,22 @@ return (
   );
   ```
 
-Basically, I just go through `allWaves` and create new divs for every single wave and show that data on the screen.
+基本上，我只是通过 `allWaves` 并为每一 waves 创建新的 div 并在屏幕上显示该数据。
 
-🙀 Ah!! `wave()` is broken!
+🙀 啊！！ `wave()` 坏了！
 ---------------------------
 
-So, in `App.js`, our `wave()` function no longer works! If we try to wave it'll give us an error because it's expecting a message to be sent now with it now! For now, you can fix this by hardcoding a message like:
+因此，在`App.js` 中，我们的`wave()` 函数不再起作用！ 如果我们尝试挥手，它会给我们一个错误，因为它现在正在期待一条消息立即与它一起发送！ 现在，您可以通过对消息进行硬编码来解决此问题，例如：
 
 ```
-const waveTxn = await wavePortalContract.wave("this is a message")
+const waveTxn = await wavePortalContract.wave("这是一条消息")
 ```
 
-I'll leave this up you: figure out how to add a textbox that lets users add their own custom message they can send to the wave function :).
+我会把这个留给你：弄清楚如何添加一个文本框，让用户添加他们自己的自定义消息，他们可以发送到 wave 函数:)。
 
-The goal? You want to give your users the ability to send you a custom message using a textbox they can type in! Or, maybe you want them to send you a link to a meme? Or a Spotify link? It's up to you!
+目标？ 您想让您的用户能够使用他们可以输入的文本框向您发送自定义消息！ 或者，也许您希望他们向您发送一个 meme 链接？ 还是 Spotify 链接？ 由你决定！
 
-👷‍♀️ Go build a UI!
+👷‍♀️ 去构建一个 UI！
 --------------------
 
-Go make this thing look how you want it to look! I won't be teaching you much of that here. Feel free to ask questions in #section-3-help!
+去把这个东西变成你想要的样子！ 我不会在这里教你太多。 请随时在#section-3-help 中提问！

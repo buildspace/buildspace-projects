@@ -1,32 +1,32 @@
-✅ Setup your env to start working w/ the blockchain
+✅ 设置你的环境，开始与区块链合作
 ---------------------------------------------------
 
-Before anything, we'll need to get our local Ethereum network working. This is how we can compile and test our smart contract code! You know how you need to spin up a local environment to work on it? Same deal here!
+在做任何事情之前，我们需要让我们的本地Ethereum网络工作。这样我们才能编译和测试我们的智能合约代码! 你知道你需要启动一个本地环境来进行工作吗？这里也一样!
 
-For now, all you need to know is that a smart contract is a piece of code that lives on the blockchain. The blockchain is a public place where anyone can securely read and write data for a fee. Think of it sorta like AWS or Heroku, except no one actually owns it!
+现在，你所需要知道的是，智能合约是一段生活在区块链上的代码。区块链是一个公共场所，任何人都可以安全地读取和写入数据，并收取费用。想想看，它有点像AWS或Heroku，只是没有人真正拥有它
 
-So in this case, we want people to 👋 at us. The bigger picture here is:
+所以在这种情况下，我们希望人们能够👋我们。这里的大背景是：
 
-1\. **We're going to write a smart contract.** That contract has all the logic around how the 👋 s are handled. This is like your server code.
+1\. **我们要写一个智能合约。** 该合约有所有围绕如何处理👋的逻辑。这就像你的服务器代码。
 
-2\. **Our smart contract will be deployed to the blockchain.** This way, anyone in the world will be able to access and run our smart contract (if we give them permission to do so). So, pretty much like a server :).
+2\. **我们的智能合约将被部署到区块链上。** 这样，世界上任何一个人都可以访问和运行我们的智能合约（如果我们允许他们这么做）。所以，很像一个服务器:)。
 
-3\. **We're going to build a client website** that will let people easily interact with our smart contract on the blockchain.
+3\. **我们要建立一个客户端网站**，让人们轻松地与我们在区块链上的智能合约互动。
 
-I'll explain certain things in-depth as needed (ex. how mining works, how smart contracts are compiled and run, etc) *but for now let's just focus on getting stuff running*.
+我会根据需要深入解释某些事情（例如，挖矿是如何进行的，智能合约是如何编译和运行的，等等），*但现在我们只关注让东西运行*。 
 
-If you have any issues throughout here, just drop a message on Discord in  `#section-1-help`. 
+如果你在这里有任何问题，只要在Discord的`#section-1-help`中留言就可以了。 
 
-✨ The magic of Hardhat
+✨ Hardhat的魅力
 ----------------------
 
-1\. We're going to be using a tool called Hardhat a lot. This will let us easily spin up a local Ethereum network and give us fake test ETH and fake test accounts to work with. Remember, it's just like a local server, except the "server" is the blockchain.
+1\. 我们将经常使用一个叫Hardhat的工具。这将让我们轻松地启动一个本地以太坊网络，并给我们提供假的测试ETH和假的测试账户来工作。记住，这就像一个本地服务器，除了 "服务器 "是区块链。
 
-2\. Quickly compile smart contracts and test them on our local blockchain.
+2\. 快速编译智能合约，并在我们的本地区块链上测试它们。
 
-First you'll need to get node/npm. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html).
+首先，你需要得到node/npm。如果你没有它，请前往[这里](https://hardhat.org/tutorial/setting-up-the-environment.html)。
 
-Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to the directory you want to work in. Once you're there run these commands:
+接下来，让我们去终端机（Git Bash不能用）。继续前进，cd到你想工作的目录。一旦你到了那里，运行这些命令。
 
 ```bash
 mkdir my-wave-portal
@@ -35,62 +35,63 @@ npm init -y
 npm install --save-dev hardhat
 ```
 
-👏 Get sample project going
+
+👏 获取样本项目
 ---------------------------
 
-Cool, now we should have Hardhat. Let's get a sample project going.
+酷，现在我们应该有Hardhat了。让我们启动一个示例项目。
 
-Run:
+运行。
 
 ```bash
 npx hardhat
 ```
 
-Choose the option to create a sample project. Say yes to everything.
+选择创建一个样本项目的选项。对一切都说是。
 
-The sample project will ask you to install hardhat-waffle and hardhat-ethers. These are other goodies we'll use later :).
+这个样本项目会要求你安装hardhat-waffle和hardhat-ethers。这些是我们以后会用到的其他好东西:)。
 
-Go ahead and install these other dependencies just in case it didn't do it automatically.
+继续安装这些其他依赖项，以防它没有自动完成。
 
 ```bash
 npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 ```
 
-Finally, run `npx hardhat accounts` and this should print out a bunch of strings that look like this: 
+最后，运行`npx hardhat accounts`，这应该会打印出一堆字符串，看起来像这样。
 
 `0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`
 
-These are Ethereum addresses that Hardhat generates for us to simulate real users on the blockchain. This is going to help us a ton later in the project when we want to simulate users 👋-ing at us!
+这些是Hardhat为我们生成的Ethereum地址，用于模拟区块链上的真实用户。在项目后期，当我们想模拟用户👋在我们身边时，这将对我们有很大的帮助!
 
-🌟 Run it
+🌟 运行它
 ---------
 
-To make sure everything is working, run:
+为了确保一切正常，运行。
 
 ```bash
  npx hardhat compile
 ```
-Then run:
+然后运行。
 
 ```bash
 npx hardhat test
 ```
 
-You should see something like this:
+你应该看到像这样的东西。
 
 ![](https://i.imgur.com/rjPvls0.png)
 
-Lets do a little clean-up.
+让我们做一个小小的清理。
 
-Go ahead and open the code for the project now in your favorite code editor. I like VSCode best! We want to delete all the lame starter code generated for us. We don't need any of that. We're pros ;)!
+继续在你喜欢的代码编辑器中打开项目的代码。我最喜欢VSCode! 我们要删除所有为我们生成的蹩脚的启动代码。我们不需要任何这些东西。我们是专家;)!
 
-Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `sample-script.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. Don't delete the actual folders!
+继续删除`test`下的`sample-test.js`文件。  同时，删除`scripts`下的`sample-script.js`。然后，删除`contracts`下的`Greeter.sol`。不要删除实际的文件夹!
 
-🚨 Before you click "Next Lesson"
+🚨 在你点击 "下一课 "之前
 -------------------------------------------
 
-*Note: if you don't do this, Farza will be very sad :(.*
+*注意：如果你不这样做，Farza会很伤心的：(.*)
 
-Head to #progress and post a screenshot of **your** terminal showing the output of the test! You just ran a smart contract, that's a big deal!! Show it off :).
+前往#progress，并发布一张**你的**终端的截图，显示测试的输出结果! 你刚刚运行了一个智能合约，这可是件大事！! 炫耀一下吧:)。
 
-P.S: If you **don't** have access to #progress, be sure you linked your Discord, join the Discord [here](https://discord.gg/mXDqs6Ubcc), hit us up in #general we'll help you get access to the right channels!
+P.S: 如果你**没有访问#progress的权限，请确保你链接了你的Discord，加入Discord[这里](https://discord.gg/mXDqs6Ubcc)，在#general里打给我们，我们会帮助你进入正确的频道!

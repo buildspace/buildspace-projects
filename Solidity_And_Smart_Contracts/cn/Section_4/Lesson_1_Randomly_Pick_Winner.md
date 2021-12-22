@@ -1,21 +1,21 @@
-😈 Randomly pick winner
+😈 随机抽取中奖者
 -----------------------
 
-So right now, our code is set to give the waver 0.0001 ETH every single time! Our contract will run out of money pretty fast, and then the fun is over and we'd need to add more funds to our contract. In this lesson, I'll walk you through how to:
+所以现在，我们的代码设置为每次都给挥手（wave）者 0.0001 ETH！我们的合约很快就会用完钱，然后就没意思了，我们需要为合约增加更多的资金。在本课中，我将向您介绍如何：
 
-1\. **Randomly** pick a winner.
+1\. **随机**选择一个获胜者。
 
-2\. Create a **cooldown** mechanism to prevent people from spam-waving you in an attempt to win the prize or annoy you. 
+2\.创建一个**冷却**机制，以防止人们向您发送垃圾邮件以试图赢得奖品或惹恼您。
 
-Lets's do the random winner first!
+让我们先做随机赢家！
 
-So, generating a random number in smart contracts is widely known as a **difficult problem**.
+因此，在智能合约中生成随机数被广泛称为**困难问题**。
 
-Why? Well, think about how a random number is generated normally. When you generate a random normally in a program, **it will take a bunch of different numbers from your computer as a source of randomness** like: the speed of the fans, the temperature of the CPU, the number of times you've pressed "L" at 3:52PM since you've bought the computer, your internet speed, and tons of other #s that are difficult for you to control. It takes **all** these numbers that are "random" and puts them together into an algorithm that generates a number that it feels is the best attempt at a truly "random" number. Make sense?
+为什么？好吧，想想一个随机数是如何正常产生的。当您在程序中正常生成随机数时，**它会从您的计算机中获取一堆不同的数字作为随机性的来源**，例如：风扇速度、CPU 温度、您使用的次数'自从您购买计算机后，您在下午 3 点 52 分按了“L”，您的网速，以及您难以控制的大量其他#s。它需要**所有**这些“随机”数字，并将它们放在一个算法中，该算法生成一个数字，这被认为是真正“随机”数字的最佳尝试。说得通？
 
-On the blockchain, there is **nearly no source of randomness**. Everything the contract sees, the public sees. Because of that, someone could game the system by just looking at the smart contract, seeing what #s it relies on for randomness, and then the person could give it the exact numbers they need to win.
+在区块链上，**几乎没有随机性的来源**。合约看到的一切，公众都能看到。正因为如此，有人可以通过查看智能合约来玩弄系统，看看它依赖于随机性的#s，然后这个人就可以给它确切的数字来赢得胜利。
 
-Let's check out the code below :).
+让我们看看下面的代码:)。
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -94,24 +94,24 @@ contract WavePortal {
 }
 ```
 
-Here, I take two numbers given to me by Solidity, `block.difficulty` and `block.timestamp` and combine them to create a random number. `block.difficulty` tells miners how hard the block will be to mine based on the transactions in the block. Blocks get harder for a # of reasons, but, mainly they get harder when there are more transactions in the block (some miners prefer easier blocks, but, these payout less). `block.timestamp` is just the Unix timestamp that the block is being processed.
+在这里，我取了 Solidity 给我的两个数字，`block.difficulty` 和 `block.timestamp`，然后将它们组合起来创建一个随机数。 `block.difficulty` 根据区块中的交易告诉矿工该区块的挖掘难度。由于多种原因，区块变得更难，但是，主要是当区块中有更多交易时它们会变得更难（一些矿工更喜欢简单的区块，但这些支出较少）。 `block.timestamp` 只是块正在被处理的 Unix 时间戳。
 
-These #s are *pretty* random. But, technically, both `block.difficulty` and `block.timestamp` could be controlled by a sophisticated attacker. 
+这些#s 是*非常*随机的。但是，从技术上讲，“block.difficulty”和“block.timestamp”都可以由老练的攻击者控制。
 
-To make this harder, I create a variable `seed` that will essentially change every time a user sends a new wave. So, I combine all three of these variables to generate a new random seed. Then I just do `% 100` which will make sure the number is brought down to a range between 0 - 100.
+为了使这更难，我创建了一个变量“种子”，每次用户发送新wave时，它都会发生本质上的变化。因此，我将所有这三个变量结合起来生成一个新的随机种子。然后我只做“% 100”，这将确保数字降低到 0 - 100 之间的范围。
 
-That's it! Then I just write a simple if statement to see if the seed is less than or equal to 50, if it is -- then the waver wins the prize! So, that means the waver has a 50% chance to win since we wrote `seed <= 50`. You can change this to whatever you want :). I just made it 50% because it's easier to test that way!!
+仅此而已！然后我就写一个简单的if语句，看看种子是否小于或等于50，如果是——那么摇摆不定的人就赢了！所以，这意味着自从我们写了 `seed <= 50` 以来，摇摆者有 50% 的机会获胜。您可以将其更改为您想要的任何内容:)。我只做了 50%，因为这样更容易测试！！
 
-It's important to see here that an attack could technically game your system here if they really wanted to. It'd just be really hard. There are other ways to generate random numbers on the blockchain but Solidity doesn't natively give us anything reliable because it can't! All the #s our contract can access are public and *never* truly random.
+重要的是在这里看到，如果他们真的想要，在技术上可以在这里攻击你的系统。真的会很难还有其他方法可以在区块链上生成随机数，但 Solidity 本身并没有给我们任何可靠的东西，因为它不能！我们的合约可以访问的所有#s 都是公开的，并且*从不*真正随机。
 
-Really, this is one of the strengths of the blockchain. But, can be a bit annoying for some application like ours here!
+真的，这是区块链的优势之一。但是，对于像我们这样的应用程序来说可能有点烦人！
 
-In any case, no one's going to be attacking our tiny app but I want you to know all this when you're building a dApp that has millions of users!
+无论如何，没有人会攻击我们的小应用程序，但我希望您在构建拥有数百万用户的 dApp 时了解这一切！
 
-Test it
+测试
 -------
 
-Lets make sure it works! Here's my updated `run.js`. In this case, I just want to make sure the contract balance changes in the case where the person who waved won!
+让我们确保它有效！这是我更新的 `run.js`。在这种情况下，我只想确保在挥手的人获胜的情况下合约余额发生变化！
 
 ```javascript
 const main = async () => {
@@ -162,22 +162,22 @@ const runMain = async () => {
 runMain();
 ```
 
-You won't always have nice tutorials like this one to guide you on how to test your code. It's up to you to figure out 1) what you want to test 2) how to test it. In this case, I knew I wanted to make sure the contract balance went down by 0.0001 only in the case that a random # less than 50 is generated!
+你不会总是有像这样的好教程来指导你如何测试代码。由您决定 1) 您想测试什么 2) 如何测试它。在这种情况下，我知道我想确保只有在生成小于 50 的随机数的情况下，合约余额才会减少 0.0001！
 
-So, when I run the above code here's what I get:
+所以，当我运行上面的代码时，我得到的是：
 
 ![](https://i.imgur.com/ArXRCsp.png)
 
-Boom! It works. When "79" was generated, the user didn't win the prize. But, when 23 was generated the waver won! And, the contract balance went down by exactly 0.0001. Nice :).
+搞定！有用。生成“79”时，用户没有中奖。但是，当生成 23 时，wave 赢了！而且，合约余额正好减少了 0.0001。好的 ：）。
 
-Cooldowns to prevent spammers
+防止垃圾邮件发送者的冷却时间
 -----------------------------
 
-Awesome. You have a way to randomly send ETH to people now! Now, it might be useful to add a cooldown function to your site so people can't just spam wave at you. Why? Well, maybe you just don't want them to keep on trying to win the prize over and over by waving at you. Or, maybe you don't want *just* *their* messages filling up your wall of messages.
+惊人的。你现在有一种方法可以将 ETH 随机发送给人们！现在，向您的网站添加冷却功能可能会很有用，这样人们就不能只是向您发送垃圾邮件。为什么？好吧，也许你只是不想让他们继续试图通过向你挥手来一遍又一遍地赢得奖品。或者，也许您不希望*只是* *他们的* 消息填满您的消息墙。
 
-Check out the code. I added comments where I added new lines.
+查看代码。我在添加新行的地方添加了注释。
 
-I use a special data structure called a [map](https://medium.com/upstate-interactive/mappings-in-solidity-explained-in-under-two-minutes-ecba88aff96e).
+我使用一种称为 [map](https://medium.com/upstate-interactive/mappings-in-solidity-explained-in-under-two-minutes-ecba88aff96e) 的特殊数据结构。
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -263,7 +263,6 @@ contract WavePortal {
 }
 ```
 
+尝试运行 `npx hardhat run scripts/run.js` 并查看如果尝试连续挥手两次而间隔时间小于 15 分钟时得到的错误消息:)。
 
-Try and run `npx hardhat run scripts/run.js` and see the error message you get if you try to wave twice in a row now without waiting 15-minutes :).
-
-Bam! And that's how you build cooldowns!
+砰！这就是你建立冷却时间的方式！
