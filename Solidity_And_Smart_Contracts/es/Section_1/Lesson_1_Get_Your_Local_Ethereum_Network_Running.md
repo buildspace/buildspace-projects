@@ -90,7 +90,7 @@ Ahora elimina el archivo `sample-test.js` bajo `test`. También, elimina `sample
 🚨 Antes de hacer clic en "Lección siguiente"
 -------------------------------------------
 
-*Nota: si no hace esto, Farza se pondrá muy triste :(.*
+*Nota: si no haces esto, Farza se pondrá muy triste :(.*
 
 Dirígete a #progress y publica una captura de pantalla de **tu** terminal mostrando el resultado de la prueba. ¡Acabas de ejecutar un contrato inteligente, eso es algo grande! Muéstralo :).
 
