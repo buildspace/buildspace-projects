@@ -1471,6 +1471,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "maf88",
+      "name": "Antoine Moevus",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2613844?v=4",
+      "profile": "https://github.com/maf88",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
