@@ -295,6 +295,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://mauricewillis.crypto"><img src="https://avatars.githubusercontent.com/u/21006138?v=4?s=100" width="100px;" alt=""/><br /><sub><b>maurice</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Immacio" title="Documentation">📖</a></td>
     <td align="center"><a href="http://pietroanello.dev"><img src="https://avatars.githubusercontent.com/u/43348480?v=4?s=100" width="100px;" alt=""/><br /><sub><b>pietroanello</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=pietroanello" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/snamber"><img src="https://avatars.githubusercontent.com/u/1277330?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stefan Amberger</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=snamber" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://vvandenb.herokuapp.com/"><img src="https://avatars.githubusercontent.com/u/56999402?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vandenbosch Vasco</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=vvandenb" title="Documentation">📖</a></td>
   </tr>
 </table>
 
