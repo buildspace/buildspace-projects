@@ -1,11 +1,11 @@
-🌅 Using window.ethereum()
+🌅 使用 window.ethereum()
 --------------------------
 
-So, in order for our website to talk to the blockchain, we need to somehow connect our wallet to it. Once we connect our wallet to our website, our website will have permissions to call smart contracts on our behalf. Remember, it's just like authenticating in to a website.
+因此，为了让我们的网站与区块链对话，我们需要以某种方式将我们的钱包连接到它。一旦我们将钱包连接到我们的网站，我们的网站将有权限代表我们调用智能合约。记住，这就像在网站上进行身份验证一样。
 
-Head over to Replit and go to `App.jsx` under `src`, this is where we'll be doing all our work.
+前往Replit，进入`src`下的`App.jsx`，这就是我们要做的所有工作。
 
-If we're logged in to Metamask, it will automatically inject a special object named `ethereum` into our window. Let's check if we have that first.
+如果我们登录了Metamask，它会自动向我们的窗口注入一个名为`ethereum`的特殊对象。让我们先检查一下我们是否有这个对象。
 
 ```javascript
 import React, { useEffect } from "react";
@@ -55,18 +55,18 @@ const App = () => {
 export default App
 ```
 
-🔒 See if we can access the users account
+🔒 看看我们是否可以访问用户的账户
 -----------------------------------------
 
-So when you run this, you should see that line "We have the ethereum object" printed in the console of the website when you go to inspect it. If you are using Replit, make sure you're looking at the console of your project website, not the Replit workspace! You can access the console of your website by opening it in its own window/tab and launching the developer tools. The URL should look something like this - `https://waveportal-starter-project.yourUsername.repl.co/`
+因此，当你运行这个时，你去检查应该看到网站的控制台中打印出那行 "我们有以太坊对象"。如果你使用的是Replit，请确保你看到的是你的项目网站的控制台，而不是Replit的。你可以通过在自己的窗口/标签中打开网站的控制台并启动开发工具来访问它。URL应该是这样的 - `https://waveportal-starter-project.yourUsername.repl.co/`。
 
-**NICE.**
+**很棒.**
 
-Next, we need to actually check if we're authorized to actually access the user's wallet. Once we have access to this, we can call our smart contract!
+接下来，我们需要实际检查我们是否被授权实际访问用户的钱包。一旦我们有了这个权限，我们就可以调用我们的智能合约了。
 
-Basically, Metamask doesn't just give our wallet credentials to every website we go to. It only gives it to websites we authorize. Again, it's just like logging in! But, what we're doing here is **checking if we're "logged in".**
+基本上，Metamask不只是将我们的钱包凭证提供给我们去的每个网站。它只把它提供给我们授权的网站。同样，这就像登录一样! 但是我们在这里做的是**检查我们是否已经 "登录 "了。
 
-Check out the code below.
+请看下面的代码。
 
 ```javascript
 import React, { useEffect, useState } from "react";
@@ -131,14 +131,14 @@ const App = () => {
 export default App
 ```
 
-So, we use that special method `eth_accounts` to see if we're authorized to access any of the accounts in the user's wallet. One thing to keep in mind is that the user could have multiple accounts in their wallet. In this case, we just grab the first one.
+因此，我们使用那个特殊的方法`eth_accounts`来查看我们是否被授权访问用户钱包中的任何账户。需要记住的一点是，用户的钱包里可能有多个账户。在这种情况下，我们只关注第一个。
 
-💰 Build a connect wallet button
+💰 建立一个连接钱包的按钮
 --------------------------------
 
-When you run the above code, the console.log that prints should be `No authorized account found`. Why? Well because we never explicitly told Metamask, "hey Metamask, please give this website access to my wallet". 
+当你运行上述代码时，打印出来的console.log应该是 "没有找到授权账户"。为什么呢？因为我们从未明确告诉Metamask，"嘿，Metamask，请给这个网站访问我的钱包的权限"。 
 
-We need to create a `connectWallet` button. In the world of Web3, connecting your wallet is literally a "Login" button for your user :). Check it out:
+我们需要创建一个`connectWallet`按钮。在Web3的世界里，连接你的钱包对你的用户来说简直就是一个 "登录 "按钮:)。看看这个吧。
 
 ```javascript
 import React, { useEffect, useState } from "react";
@@ -228,17 +228,17 @@ const App = () => {
 export default App
 ```
 
-Our code is getting a little long here, but you can see how short our `connectWallet` function is. In this case, I use the `eth_requestAccounts` function because I'm literally asking Metamask to give me access to the user's wallet.
+我们的代码在这里变得有点长，但你可以看到我们的`connectWallet`函数是多么短。在这种情况下，我使用`eth_requestAccounts`函数，因为我实际上是要求Metamask给我访问用户的钱包。
 
-On line 67, I also added a button so we can call our `connectWallet` function. You'll notice I only show this button if we don't have `currentAccount`. If we already have currentAccount, then that means we already have access to an authorized account in the user's wallet.
+在第67行，我还添加了一个按钮，以便我们可以调用我们的`connectWallet`函数。你会注意到我只在我们没有`currentAccount`的情况下显示这个按钮。如果我们已经有了currentAccount，那么这意味着我们已经可以访问用户钱包中的授权账户。
 
-🌐 Connect!
+🌐 联网！
 -----------
 
-Now, it's time for the magic! Check out the video below:
+现在，是见证奇迹的时候了! 请看下面的视频。
 [Loom](https://www.loom.com/share/1d30b147047141ce8fde590c7673128d?t=0)
 
-🚨 Required: Before you click "Next Lesson"
+🚨 要求。在你点击 "下一课 "之前
 -------------------------------------------
 
-We just did a lot in the last two lessons. Any questions? Be sure to ask in #section-2-help!
+在过去的两节课中，我们刚刚做了很多。 有什么问题吗？请务必在#section-2-help中提问!
