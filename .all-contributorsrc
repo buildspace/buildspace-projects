@@ -1525,6 +1525,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jdanner",
+      "name": "jdanner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1596439?v=4",
+      "profile": "https://github.com/jdanner",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
