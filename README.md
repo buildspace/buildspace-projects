@@ -297,6 +297,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/snamber"><img src="https://avatars.githubusercontent.com/u/1277330?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stefan Amberger</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=snamber" title="Documentation">📖</a></td>
     <td align="center"><a href="https://vvandenb.herokuapp.com/"><img src="https://avatars.githubusercontent.com/u/56999402?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vandenbosch Vasco</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=vvandenb" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/mcintyre94"><img src="https://avatars.githubusercontent.com/u/1711350?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Callum McIntyre</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=mcintyre94" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
