@@ -1,44 +1,44 @@
-💻 Set up a client anymose
+💻 设置客户端
 ------------------
 
-It's time to start working on our website! Our contract is pretty simple, but, let's learn how our front end can interact with our contract ASAP!
+现在是时候开始在我们的网站上工作了! 我们的合约非常简单，但还是让我们尽快了解我们的前端如何与合约进行交互吧！
 
-So, there are like 100 different ways to set up a basic react project and deploy it. I'm going to show you how to do it here in 10 minutes and by the end you'll actually have a react app fully deployed with its own domain and everything.
+所以，可以有100种不同的方法来设置并部署一个基础的react项目。我将在这里向你展示如何在10分钟内完成这个工作，事成之后你将拥有一个完全部署的react应用并拥有自己的域名等其他一切功能。
 
 🤯 Replit
 ---------
 
-**Note: You don't have to use replit to build + deploy your site. If you want to use create-react-app + Vercel/Heroku/AWS -- that's totally cool. [Here](https://github.com/buildspace/waveportal-starter-project) is a link to the base repo you can clone and work on locally.**
+**注意: 你不需要使用replit来建立+部署你的网站。 如果你想使用create-react-app + Vercel/Heroku/AWS -- 那也完全可以。 [这里](https://github.com/buildspace/waveportal-starter-project) 是一个指向基本 repo 的链接，你可以克隆并在本地工作。**
 
-We'll be using [Replit](https://replit.com/~)! It is a browser-based IDE that lets us easily build web apps and deploy them all from the browser. It is super legit. Instead of having to set up a full local environment and write commands to deploy, it's all just given to us.
+我们将使用 [Replit](https://replit.com/~)! 它是一个基于浏览器的集成开发环境，可以让我们轻松地从浏览器构建并部署网络应用，它简直太合适了！你不需要建立一个完整的本地环境，也不需要写命令进行部署，而是直接把它交给我们。
 
-Make an account on Replit before moving on.
+在继续之前，先在Replit上建立一个账户。
 
-I've already created a basic react project that you can **fork** on Replit. **Just go [here](https://replit.com/@adilanchian/waveportal-starter-project?v=1), and near the right you'll see the "Fork" button.** Be sure you're logged in, then click this. You'll magically clone my repo and full IDE in your browser to work with the code. Once it stops loading and shows you some code, click the "Run" button at the top. This can take a solid 2-3 minutes the first time. Basically, Replit is booting up your project and deploying it to an actual domain.
+我已经创建了一个基本的react项目，你可以在Replit **fork** 它. **直接点击 [这里](https://replit.com/@adilanchian/waveportal-starter-project?v=1)，然后在页面右侧你可以看见"Fork" 按钮.** 请确保你已经登录了之后再点击它。 你会神奇地在浏览器里克隆我的repo和完整IDE来处理代码。一旦它停止加载并向你显示一些代码，点击顶部的 "运行 "按钮。这在第一次可能需要2-3分钟。基本上，Replit正在启动你的项目并将其部署到一个实际的域名中。
 
-**Please Note: As you go through this project, you may notice that we are referencing `.js` files. In Replit, if you are creating any new JavaScript files, you will need to use the `.jsx` extension instead! Replit has some performance fanciness that requires you use the `.jsx` file extension :).**
+**请注意: 当你浏览这个项目时，你可能会注意到，我们正在引用`.js`文件， 你将需要使用`.jsx`扩展名来代替! Replit有一些性能上的缺陷，需要你使用`.jsx`文件扩展名:).**。 
 
-I made a quick video going over how to edit code on Replit, deploy, get dark mode. Check it out below: 
+我做了一个快速上手视频，介绍了如何在Replit上编辑代码，部署并开启dark模式。请看：
 [Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
 
 🦊 Metamask
 -----------
 
-Awesome, we have a **deployed** React project we can easily work with. That was simple :).
+太棒了，我们有了一个**部署的**React项目，现在可以轻松地工作。这很简单:)。
 
-Next we need an Ethereum wallet. There are a bunch of these, but, for this project we're going to use Metamask. Download the browser extension and set up your wallet [here](https://metamask.io/download.html). Even if you already have another wallet provider, just use Metamask for now.
+接下来我们需要一个Ethereum钱包。有一堆这样的钱包，但是，对于这个项目，我们将使用Metamask。下载浏览器扩展并设置你的钱包 [这里](https://metamask.io/download.html). 即使你已经有了另一个钱包供应商，现在就使用Metamask吧。
 
-Why do we need Metamask? Well. We need to be able to call functions on our smart contract that live on the blockchain. And, to do that we need to have a wallet that has our Ethereum address and private key.
+为什么我们需要Metamask？嗯……我们需要能够在我们的智能合约上调用住在区块链上的函数。而且，为了做到这一点，我们需要有一个钱包里面有我们的以太坊地址和私钥。
 
-**But, we need something to connect our website with our wallet so we can securely pass our wallet credentials to our website so our website can use those credentials to call our smart contract. You need to have valid credentials to access functions on smart contracts.**
+**但是，我们需要一些东西来连接我们的网站和钱包，这样就可以安全地将钱包凭证传递给网站，然后使用这些凭证来调用我们的智能合约。你需要有有效的凭证来访问智能合约上的功能。**
 
-It's almost like authentication. We need something to "login" to the blockchain and then use those login credentials to make API requests from our website.
+这几乎就像授权认证。我们需要一些东西来 "登录 "区块链，然后使用这些登录凭证从我们的网站发出API请求。
 
-So, go ahead and set it all up! Their setup flow is pretty self-explanatory :).
+因此，请继续设置这一切吧! 他们的设置流程是相当不言自明的:)。
 
-🚨 Before you click "Next Lesson"
+🚨 在你点击 "下一课 "之前
 -------------------------------------------
 
-*Note: if you don't do this, Farza will be very sad :(.*
+*注意：如果你不这样做，法尔扎会很伤心的:(。*
 
-Share a link to your website and post it in #progress. Change up the CSS and text to be whatever you want. Maybe you want it to be more colorful? Maybe you don't care about waves and you want to make a decentralized Twitter clone? Do whatever you want this is your app :).
+分享一个你的网站链接，并在#progress中发布它。把CSS和文本改成你想要的样子。也许你想让它变得更有色彩？也许你不关心潮流，你想做一个去中心化的Twitter克隆？做任何你想做的事，这是你的应用程序:)。
