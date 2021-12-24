@@ -104,6 +104,12 @@ openssl = { version = "0.10", features = ["vendored"] }
 ```
 
 For more information refer to [this PR with the original solution](https://github.com/solana-labs/solana/issues/20783).
+  
+You may run into another problem with openssl saying that it cannot be found. In this case try installing version 1.1 via brew:
+
+```bash
+brew install openssl@1.1
+```
 
 </details>
 
@@ -117,6 +123,27 @@ rustup toolchain uninstall stable
 rustup toolchain install stable
 ```
 
+</details>
+
+<details>
+<summary>Having problems with <code>linking</code>?</summary>
+
+Try adding the following to `~/.cargo/config`:
+
+```toml
+[target.x86_64-apple-darwin]
+rustflags = [
+  "-C", "link-arg=-undefined",
+  "-C", "link-arg=dynamic_lookup",
+]
+
+[target.aarch64-apple-darwin]
+rustflags = [
+  "-C", "link-arg=-undefined",
+  "-C", "link-arg=dynamic_lookup",
+]
+```
+  
 </details>
 
 This might take some time, so don't be alarmed! Once you're done installing, you may need to ensure it is in your path by pasting in your terminal `export PATH="< install_path >/dev/solana"/bin:"$PATH"` and replacing `< install_path >`, then run this to make sure everything is in working order:

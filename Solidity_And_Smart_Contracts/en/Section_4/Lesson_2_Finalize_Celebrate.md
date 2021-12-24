@@ -185,6 +185,11 @@ I hope this was a fun introduction to web3 and I hope you continue your journey.
 
 I'll keep you all posted on new projects in the Discord :).
 
+🤟 Your NFT!
+-----------
+
+We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
+
 
 🚨 Before you head out...
 -------------------------
