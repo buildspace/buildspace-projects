@@ -281,7 +281,7 @@ So, in `App.js`, our `wave()` function no longer works! If we try to wave it'll 
 const waveTxn = await wavePortalContract.wave("this is a message")
 ```
 
-I'll leave this up you: figure out how to add a textbox that lets users add their own custom message they can send to the wave function :).
+I'll leave this up to you: figure out how to add a textbox that lets users add their own custom message they can send to the wave function :).
 
 The goal? You want to give your users the ability to send you a custom message using a textbox they can type in! Or, maybe you want them to send you a link to a meme? Or a Spotify link? It's up to you!
 
