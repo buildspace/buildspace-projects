@@ -51,7 +51,7 @@ const tokenModule = sdk.getTokenModule(
 
   try {
     const amount = 6_900;
-    // Create proposal to transfer ourselves 6,900 token for being awesome.
+    // Create proposal to transfer ourselves 6,900 tokens for being awesome.
     await voteModule.propose(
       "Should the DAO transfer " +
       amount + " tokens from the treasury to " +
@@ -78,7 +78,7 @@ const tokenModule = sdk.getTokenModule(
       "✅ Successfully created proposal to reward ourselves from the treasury, let's hope people vote for it!"
     );
   } catch (error) {
-    console.error("failed to create first proposal", error);
+    console.error("failed to create second proposal", error);
   }
 })();
 
