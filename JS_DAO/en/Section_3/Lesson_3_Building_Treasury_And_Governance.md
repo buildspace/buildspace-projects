@@ -61,7 +61,7 @@ const appModule = sdk.getAppModule(
 
 We’re using `deployVoteModule` to actually set up the contract. This will deploy a brand new voting contract!
 
-Notice how we give it `votingTokenAddress`, this is our contract knows which governance token to accept. We don’t want people randomly tryna use $DOGE to vote lol.
+Notice how we give it `votingTokenAddress`. This is our contract that knows which governance token to accept. We don’t want people randomly tryna use $DOGE to vote lol.
 
 We have `proposalStartWaitTimeInSeconds`, which can be useful if you want to give people some time to go over the proposal before they’re allowed to vote on it. Similarly, we have `proposalVotingTimeInSeconds` which just specifies how long someone has to vote once a proposal goes lives.
 
@@ -160,7 +160,7 @@ const tokenModule = sdk.getTokenModule(
 
 A pretty simple script here! We do two things:
 
-1. We grab the total # of tokens we have in our wallet using `tokenModule.balanceOf`. Remember, right now our wallet will has basically the entire supply apart from the token we airdropped.
+1. We grab the total # of tokens we have in our wallet using `tokenModule.balanceOf`. Remember, right now our wallet has basically the entire supply apart from the token we airdropped.
 2. We take the total supply we own, get 90% of it, and transfer that 90% to the voting module using `tokenModule.transfer`. You can transfer 100% if you want to! But, maybe you wanna keep some token for yourself as the creator!
 
 Once you finish up, we can run this using `node scripts/9-setup-vote.js`. Here’s what I get as my output:
