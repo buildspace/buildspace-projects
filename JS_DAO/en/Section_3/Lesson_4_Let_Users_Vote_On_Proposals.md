@@ -51,7 +51,7 @@ const tokenModule = sdk.getTokenModule(
 
   try {
     const amount = 6_900;
-    // Create proposal to transfer ourselves 6,900 token for being awesome.
+    // Create proposal to transfer ourselves 6,900 tokens for being awesome.
     await voteModule.propose(
       "Should the DAO transfer " +
       amount + " tokens from the treasury to " +
@@ -78,7 +78,7 @@ const tokenModule = sdk.getTokenModule(
       "✅ Successfully created proposal to reward ourselves from the treasury, let's hope people vote for it!"
     );
   } catch (error) {
-    console.error("failed to create first proposal", error);
+    console.error("failed to create second proposal", error);
   }
 })();
 
@@ -127,7 +127,7 @@ const [proposals, setProposals] = useState([]);
 const [isVoting, setIsVoting] = useState(false);
 const [hasVoted, setHasVoted] = useState(false);
 
-// Retreive all our existing proposals from the contract.
+// Retrieve all our existing proposals from the contract.
 useEffect(() => {
   if (!hasClaimedNFT) {
     return;
@@ -151,7 +151,7 @@ useEffect(() => {
     return;
   }
 
-  // If we haven't finished retreieving the proposals from the useEffect above
+  // If we haven't finished retrieving the proposals from the useEffect above
   // then we can't check if the user voted yet!
   if (!proposals.length) {
     return;
