@@ -264,7 +264,7 @@ return (
 );
 ```
 
-EZPZ. Anytime our `mints` property changes, our component will see if it can be rendered our not! By this point you should have some NFTs minted. Go ahead and refresh your page and see if you get some images that render!
+EZPZ. Anytime our `mints` property changes, our component will see if it can be rendered or not! By this point you should have some NFTs minted. Go ahead and refresh your page and see if you get some images that render!
 
 Note - this may take a bit of time so don't be alarmed if it doesn't appear right away! I actually am not 100% sure why this takes so long. If someone wants to figure that out and make a PR [here](https://github.com/buildspace/buildspace-projects) to explain, that'd be awesome!
 

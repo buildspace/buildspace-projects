@@ -12,6 +12,10 @@ Few action items for you before moving on:
 2. **Connect your Ethereum wallet in the project dashboard.** We'll airdrop you an NFT once you finish this, and if you don't have a wallet connected we won't be able to airdrop it to you! By the way - you won't need to pay any gas fees, we'll cover that for you!
 3. **Be sure to attend the live kick-off**. If you miss it, no worries. It's not required to attend!
 
+### **🤔 What are we building?**
+Check out a quick video I made covering the project here:
+[Loom](https://www.loom.com/share/e9b6c6fe11fa41f3bf3bdf6ee0683335)
+
 ### **💎 Earning an NFT.**
 
 When you reach the end of this project, you'll earn an NFT. Here's what it looks like:
@@ -60,4 +64,6 @@ Just do it really quick right now :).
 
 Hey! Go ahead and say gm in `#gm-only` on Discord. This is very important. Extremely important.
 
-If you don't do this then all of humanity will collectively jump and disrupt the Earth's orbit causing it to collide with Venus.Hey 
+If you don't do this then all of humanity will collectively jump and disrupt the Earth's orbit causing it to collide with Venus.
+
+**BTW -- if you want to make a tweet telling the world that you're building your own DAO today and tag [@_buildspace](https://twitter.com/_buildspace)! I always say this, but 1) that tweet could inspire someone else to join web3 and 2) it supports us!**

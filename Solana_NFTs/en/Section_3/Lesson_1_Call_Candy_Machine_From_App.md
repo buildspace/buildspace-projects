@@ -22,7 +22,7 @@ But, don't worry too much about exploring yet. Let's get shit working first lol.
 
 Remember those public keys I asked you to keep handy? Well, it's finally time to use them! Before we get started here - **if you are committing your source code to something like Github, make sure you DO NOT commit your `.env` file**. This is common practice for any web app you make. Those files usually contain sensitive information so be **careful**.
 
-Okay, to get started just create a `.env` file at the root of your web app's `app` folder. This is where we will go ahead and store our keys. Add the following to your `.env` to start:
+Okay, to get started just create a `.env` file at the root of your web app's `app` folder (i.e `nft-drop-starter-project/app/.env`). This is where we will go ahead and store our keys. Add the following to your `.env` to start:
 
 ```plaintext
 REACT_APP_CANDY_MACHINE_CONFIG=
@@ -34,7 +34,7 @@ REACT_APP_SOLANA_RPC_HOST=
 
 Let's go one by one (note: **no** quotation symbols needed here).
 
-**Note:** `.cache/devent-temp` can be found at the root of your folder after running the Metaplex command in previous steps.
+**Note:** `.cache/devnet-temp` can be found at the root of your folder after running the Metaplex command in previous steps.
 
 `REACT_APP_CANDY_MACHINE_CONFIG` - This can be found in your `.cache/devnet-temp` JSON file that was created. Look for the value associated with the `config` key.
 
@@ -189,7 +189,7 @@ const itemsRemaining = itemsAvailable - itemsRedeemed;
 const goLiveData = candyMachine.data.goLiveDate.toNumber();
 ```
 
-When we do `fetch` here, we're **actually hitting the Solana Devnet** to retreive this data. It's looks a lot like we're hitting an API, but, we're actually hitting the blockchain!
+When we do `fetch` here, we're **actually hitting the Solana Devnet** to retrieve this data. It's looks a lot like we're hitting an API, but, we're actually hitting the blockchain!
 
 ### 🧠 **Render the CandyMachine component.**
 

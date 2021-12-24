@@ -303,19 +303,15 @@ function tokenURI(uint256 _tokenId) public view override returns (string memory)
   string memory strAttackDamage = Strings.toString(charAttributes.attackDamage);
 
   string memory json = Base64.encode(
-    bytes(
-      string(
-        abi.encodePacked(
-          '{"name": "',
-          charAttributes.name,
-          ' -- NFT #: ',
-          Strings.toString(_tokenId),
-          '", "description": "This is an NFT that lets people play in the game Metaverse Slayer!", "image": "',
-          charAttributes.imageURI,
-          '", "attributes": [ { "trait_type": "Health Points", "value": ',strHp,', "max_value":',strMaxHp,'}, { "trait_type": "Attack Damage", "value": ',
-          strAttackDamage,'} ]}'
-        )
-      )
+    abi.encodePacked(
+      '{"name": "',
+      charAttributes.name,
+      ' -- NFT #: ',
+      Strings.toString(_tokenId),
+      '", "description": "This is an NFT that lets people play in the game Metaverse Slayer!", "image": "',
+      charAttributes.imageURI,
+      '", "attributes": [ { "trait_type": "Health Points", "value": ',strHp,', "max_value":',strMaxHp,'}, { "trait_type": "Attack Damage", "value": ',
+      strAttackDamage,'} ]}'
     )
   );
 
@@ -355,9 +351,7 @@ So, this may look pretty crazy but it's just us structuring the data to follow t
 
 ```solidity
 string memory json = Base64.encode(
-  bytes(
-    string(
-      abi.encodePacked(
+  abi.encodePacked(
         '{"name": "',
         charAttributes.name,
         ' -- NFT #: ',
@@ -366,8 +360,6 @@ string memory json = Base64.encode(
         charAttributes.imageURI,
         '", "attributes": [ { "trait_type": "Health Points", "value": ',strHp,', "max_value":',strMaxHp,'}, { "trait_type": "Attack Damage", "value": ',
         strAttackDamage,'} ]}'
-      )
-    )
   )
 );
 ```
