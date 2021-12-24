@@ -26,6 +26,8 @@ If you have any issues throughout here, just drop a message on Discord in  `#se
 
 First you'll need to get node/npm. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html).
 
+*Note: if you are installing node on an M1 macOS machine you will need to install node version 15 or greater*
+
 Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to the directory you want to work in. Once you're there run these commands:
 
 ```bash
