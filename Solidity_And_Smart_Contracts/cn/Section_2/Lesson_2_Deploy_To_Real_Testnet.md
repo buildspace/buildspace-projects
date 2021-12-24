@@ -1,63 +1,63 @@
-📤 Setting up to deploy to the blockchain
+📤 设置部署到区块链上
 -----------------------------------------
 
-Go ahead and close the terminal with your local blockchain network running which is where you ran `npx hardhat node`. We won't need it anymore ;). I mainly just wanted to show you how deploying works locally.
+继续并关闭你的本地区块链网络运行的终端，也就是你运行`npx hardhat node`的地方。我们不再需要它了；）。我主要是想告诉你在本地的部署是如何进行的。
 
-Now we're going to be doing the real deal, deploying to the actual blockchain.
+现在我们要做的是真正的交易，部署到实际的区块链上。
 
-Go ahead and make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+继续吧，在 Alchemy [这里](https://alchemy.com/?r=b93d1f12b8828a57)创建一个账户。
 
-Sorry for having you make so many accounts, but, this ecosystem is complex and we want to take advantage of the awesome tools out there. What Alchemy does is it gives us a simple way to deploy to the real Ethereum blockchain.
+很抱歉让你建立这么多账户，但是，这个生态系统很复杂，我们想利用现有的强大工具。Alchemy所做的是为我们提供了一个简单的方法来部署到真正的以太坊区块链上。
 
-💳 Transactions
+💳 交易
 ---------------
 
-So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction. Doing something that updates a variable in our contract is also considered a transaction. 
+因此，当我们想在以太坊区块链上执行一个动作时，我们称之为*交易*。例如，向某人发送Ethereum就是一个交易。做一些更新我们合约中的变量的事情，也被认为是一个交易。
 
-So when we call `wave` and it does `totalWaves += 1`, that's a transaction! **Deploying a smart contract is also a transaction.**
+因此，当我们调用`wave`，并且它做了`totalWaves += 1`，这就是一个交易！**部署智能合约也是一个交易。 **部署一个智能合约也是一个交易。
 
-Remember, the blockchain has no owner. It's just a bunch of computers around the world run by **miners** that have a copy of the blockchain.
+记住，区块链没有主人。它只是世界上由**人运行的一堆计算机，它们拥有区块链的副本。
 
-When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
+当我们部署我们的合约时，我们需要告诉**所有这些**矿工，"嘿，这是一个新的智能合约，请把我的智能合约添加到区块链上，然后把它也告诉其他人"。
 
-This is where Alchemy comes in.
+这就是 Alchemy 炼金术的由来。
 
-Alchemy essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
+炼金术本质上是帮助我们广播合约创建交易，以便它能尽快被矿工捡到。一旦交易被挖掘出来，它就会作为合法交易被广播到区块链上。从那里开始，每个人都会更新他们的区块链副本。
 
-This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
+这很复杂。而且，如果你不完全理解它，也不用担心。当你写更多的代码并实际构建这个应用程序时，它自然会变得更有意义。 
 
-So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+所以，在Alchemy先创建一个账户吧 [这里](https://alchemy.com/?r=b93d1f12b8828a57)。
 
-Checkout the video below to see how to get your API key for a testnet!
+请看下面的视频，看看如何为测试网获得你的API密钥!
 [Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283)
 
-🕸️ Testnets
+🕸️ 测试网
 ------------
 
-We're not going to be deploying to the "Ethereum mainnet" until the very end. Why? Because it costs real $ and it's not worth messing up! We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake $ so we can test stuff out as much as we want. But, it's important to know that testnets are run by actual miners and mimic real-world scenarios.
+直到最后，我们才会部署到 "以太坊主网"。为什么？因为它需要花费真金白银，而且不值得去搞破坏 我们将从 "testnet "开始，它是 "mainnet "的一个克隆，但它使用的是假美元，所以我们可以尽情地测试东西。但是，重要的是要知道，测试网是由实际的矿工运行的，并模仿现实世界的场景。
 
-This is awesome because we can test our application in a real-world scenario where we're actually going to:
+这很了不起，因为我们可以在一个真实世界的场景中测试我们的应用程序，我们确实需要要这样做。
 
-1\. Broadcast our transaction
+1\. 广播我们的交易信息
 
-2\. Wait for it to be picked up by actual miners
+2\. 等待它被真正的矿工捡到
 
-3\. Wait for it to be mined
+3\. 等到它被开采出来
 
-4\. Wait for it to be broadcasted back to the blockchain telling all the other miners to update their copies
+4\. 等待它被广播回区块链，告诉所有其他矿工更新他们的副本。
 
-So, you'll be doing all this within the next few lessons :).
+因此，你将在接下来的几节课内完成这一切 :)。
 
-🤑 Getting some fake $
+🤑 获得一些假币 $
 ------------------------
 
-There are a few testnets out there and the one we'll be using is called "Rinkeby" which is run by the Ethereum foundation.
+现在有几个测试网，我们将使用的测试网叫做 "Rinkeby"，由以太坊基金会管理。
 
-In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copy how mainnet works, only difference is no real money is involved.
+为了部署到Rinkeby，我们需要假的Ether。为什么？因为如果你要部署到真正的以太坊主网，你会使用真钱！所以，测试网复制了主网的工作方式，唯一的区别是不涉及真钱。
 
-In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. Make sure that your MetaMask wallet is set to the "Rinkeby Test Network" before using faucet.
+为了获得假ETH，我们必须向网络索取一些。**这种假ETH只在这个特定的测试网络上工作。**你可以通过水龙头为Rinkeby获得一些假ETH。在使用龙头之前，请确保你的MetaMask钱包被设置为 "Rinkeby测试网络"。
 
-For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
+对于MyCrypto，你需要连接你的钱包，建立一个账户，然后再次点击同一个链接来请求资金。对于官方的Rinkeby水龙头，如果它列出了0个队列，就不值得花时间去发推特/Facebook公开帖子。
 
 | Name             | Link                                  | Amount          | Time         |
 | ---------------- | ------------------------------------- | --------------- | ------------ |
@@ -67,15 +67,15 @@ For MyCrypto, you'll need to connect your wallet, make an account, and then clic
 | Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
 
 
-🙃 Having trouble getting Testnet ETH?
+🙃 在获取Testnet ETH方面遇到困难？
 -----------------------------------
 
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
+如果上述方法不起作用，请在#faucet-request频道中使用`/faucet`命令，我们的机器人会给你发送一些! 如果你想要更多，请发送你的公共钱包地址，并提交一个有趣的gif。无论是我，还是项目的某个人，都会尽快给你发送一些假的ETH。gif越有趣，你就越快得到假ETH。
 
-📈 Deploy to Rinkeby testnet.
+📈 部署到Rinkeby测试网
 ---------------------------------
 
-We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
+我们需要改变我们的`hardhat.config.js`文件。你可以在你的智能合约项目的根目录下找到它。
 
 ```javascript
 require('@nomiclabs/hardhat-waffle');
@@ -91,26 +91,26 @@ module.exports = {
 };
 ```
 
-**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** We'll talk about `.env` variables later and how to keep this stuff secret.
+**注意：不要把这个文件提交给GITHUB，它有你的私钥，你会被黑客攻击和抢劫的！这个私钥和你的主网私钥是一样的。**我们稍后会讨论`.env`变量以及如何保持这些东西的机密。
 
-You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can grab from metamask and paste that in there as well.
+你可以从Alchemy仪表板上获得你的API URL并粘贴进去。然后，你将需要你的**私人**rinkeby密钥（不是你的公共地址！），你可以从metamask中复制并粘贴到那里。
 
-**Note: Accessing your private key can be done by opening MetaMask, change the network to "Rinkeby Test Network" and then click the three dots and select "Account Details" > "Export Private Key"**
+**注意：访问你的私钥可以通过打开MetaMask，将网络改为 "Rinkeby测试网络"，然后点击三个点，选择 "账户细节">"导出私钥 "**。
 
-Why do you need to use your private key? Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain. And, your username is your public address and your password is your private key. It's kinda like logging into AWS or GCP to deploy.
+为什么你需要使用你的私钥？因为为了执行像部署合同这样的交易，你需要 "登录 "到区块链上。所以你的用户名是你的公共地址，你的密码是你的私钥。这有点像登录AWS或GCP进行部署。
 
-Once you've got your config setup we're set to deploy with the deploy script we wrote earlier.
+一旦你设置好了你的配置，我们就可以用我们之前写的部署脚本进行部署了。
 
-Run this command from the root directory of `my-wave-portal`. Notice all we do is change it from `localhost` to `rinkeby`.
+在`my-wave-portal`的根目录下运行这个命令。注意我们所做的只是把它从`localhost`改为`rinkeby`。
 
 ```bash
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
 
-❤️ Deployed! 
+❤️ 部署！
 -------------
 
-Here's my output:
+这是我的输出
 
 ```bash
 Deploying contracts with the account: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
@@ -118,32 +118,32 @@ Account balance: 3198297774605223721
 WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
 ```
 
-Copy that address of the deployed contract in the last line and save it somewhere. Don't lose it! You'll need it for the frontend later :). Yours will be different from mine.
+复制最后一行中部署合同的地址，并将其保存在某个地方。不要丢失它! 你以后会需要它来做前端:)，你的和我的是不一样的。
 
-**You just deployed your contract. WOOOOOOOOO.**
+**你刚刚部署了你的合同，WOOOOOOO。**
 
-You can actually take that address and then paste it into Etherscan [here](https://rinkeby.etherscan.io/). Etherscan is a place that just shows us the state of the blockchain and helps us see where our transaction is at. You should see your transaction here :). It may take a minute to show up!
+你实际上可以把这个地址，然后粘贴到Etherscan[这里](https://rinkeby.etherscan.io/)。Etherscan是一个向我们展示区块链状态的地方，帮助我们看到我们的交易处于什么位置。你应该在这里看到你的交易:)。它可能需要一分钟才能显示出来!
 
-For example, [here's](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA808cE84E00E97d940dBD26E) mine!
+举例， [这里](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA808cE84E00E97d940dBD26E)是我的！
 
-🚨 Before you click "Next Lesson"
+🚨 在你点击 "下一课 "之前
 ---------------------------------
 
-**YOU JUST DID A LOT.**
+**你刚刚做了很多。**
 
-You should totally **tweet** out that you just wrote and deployed your first smart contract and tag @_buildspace. If you want, include a screenshot of the Etherscan page that shows that your contract is on the blockchain!
+你完全应该**发推特**，说你刚刚编写并部署了你的第一个智能合约，并@_buildspace。如果你愿意，请附上以太坊页面的截图，显示你的合约已经在区块链上了。
 
-It's a big deal that you got this far. You created and deployed something to the actual blockchain. **Holy shit**. **I'm proud of you.**
+你能走到这一步，是件大事。你创造并部署了一些东西到实际的区块链上。**我勒个去**。**我为你感到骄傲**。
 
-You're now someone who is actually "doing" the thing that mostly everyone else is just "talking" about.
+你现在是一个真正在 "做 "的人，而大多数其他人只是在 "谈论 "这件事。
 
-You're a step closer to mastering the arts of web3.
+你离掌握web3的艺术又近了一步。
 
-KEEP GOING :).
+继续努力 :).
 
 --
 
-*Ty to the people who have already been tweeting about us, y'all are legends <3.*
+*感谢那些已经在推特上介绍我们的人，你们都是传奇人物。 <3.*
 
 ![](https://i.imgur.com/1lMrpFh.png)
 
