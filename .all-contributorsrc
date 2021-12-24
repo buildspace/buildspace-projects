@@ -1552,6 +1552,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "awaxman11",
+      "name": "Adam Waxman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1845114?v=4",
+      "profile": "http://awaxman.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
