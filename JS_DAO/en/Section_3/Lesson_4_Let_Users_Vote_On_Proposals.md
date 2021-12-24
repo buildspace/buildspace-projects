@@ -127,7 +127,7 @@ const [proposals, setProposals] = useState([]);
 const [isVoting, setIsVoting] = useState(false);
 const [hasVoted, setHasVoted] = useState(false);
 
-// Retreive all our existing proposals from the contract.
+// Retrieve all our existing proposals from the contract.
 useEffect(() => {
   if (!hasClaimedNFT) {
     return;
@@ -151,7 +151,7 @@ useEffect(() => {
     return;
   }
 
-  // If we haven't finished retreieving the proposals from the useEffect above
+  // If we haven't finished retrieving the proposals from the useEffect above
   // then we can't check if the user voted yet!
   if (!proposals.length) {
     return;
