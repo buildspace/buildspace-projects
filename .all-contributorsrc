@@ -1534,6 +1534,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "alexisweill",
+      "name": "Alexis Weill",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13684308?v=4",
+      "profile": "https://github.com/alexisweill",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
