@@ -31,6 +31,7 @@ const bundleDrop = sdk.getBundleDropModule(
 Pretty straightforward!
 
 The first thing we're doing is accessing our `bundleDrop` module, which is our ERC-1155 contract. The `INSERT_DROP_MODULE_ADDRESS` is the address printed out from the step before. It's the address printed out after `Successfully deployed bundleDrop module, address`.
+You can also find this on your thirdweb dashboard. Your thirdweb dashboard will display the project you are currently working on and it will show the module address there as well for you to easily copy and paste.
 
 Then, we're setting up our actual NFT on our ERC-1155 using `createBatch`. We need to set up some properties:
 
