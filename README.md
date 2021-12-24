@@ -303,6 +303,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/alexisweill"><img src="https://avatars.githubusercontent.com/u/13684308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alexis Weill</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=alexisweill" title="Documentation">📖</a></td>
     <td align="center"><a href="https://kevinjones.engineer"><img src="https://avatars.githubusercontent.com/u/20748598?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Jones</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=joneskj55" title="Documentation">📖</a></td>
     <td align="center"><a href="http://awaxman.com"><img src="https://avatars.githubusercontent.com/u/1845114?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Waxman</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=awaxman11" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/vplasencia"><img src="https://avatars.githubusercontent.com/u/52170174?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vivian Plasencia</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=vplasencia" title="Documentation">📖</a></td>
   </tr>
 </table>
 
