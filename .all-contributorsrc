@@ -1588,6 +1588,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jtordgeman",
+      "name": "Johnny Tordgeman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1730357?v=4",
+      "profile": "https://medium.com/@fsjohnny",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
