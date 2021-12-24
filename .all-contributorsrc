@@ -1579,6 +1579,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "burakozkirdeniz",
+      "name": "Burak Özkırdeniz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5032199?v=4",
+      "profile": "http://burak.id",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
