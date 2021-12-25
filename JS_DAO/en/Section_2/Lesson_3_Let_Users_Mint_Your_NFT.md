@@ -109,10 +109,10 @@ const App = () => {
       return;
     }
 
-    const bal = await bundleDropModule.balanceOf(address, "0");
+    const balance = await bundleDropModule.balanceOf(address, "0");
    
     try {
-      if(bal.gt(0)) {
+      if(balance.gt(0)) {
           setHasClaimedNFT(true);
           console.log("🌟 this user has a membership NFT!");
       } else {
