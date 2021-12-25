@@ -26,7 +26,7 @@ const [memberTokenAmounts, setMemberTokenAmounts] = useState({});
 // The array holding all of our members addresses.
 const [memberAddresses, setMemberAddresses] = useState([]);
 
-// A fancy function to shorten someones wallet address, no need to show the whole thing. 
+// A fancy function to shorten someones wallet address, no need to show the whole thing.
 const shortenAddress = (str) => {
   return str.substring(0, 6) + "..." + str.substring(str.length - 4);
 };
@@ -36,14 +36,14 @@ useEffect(() => {
   if (!hasClaimedNFT) {
     return;
   }
-  
+
   // Just like we did in the 7-airdrop-token.js file! Grab the users who hold our NFT
   // with tokenId 0.
   bundleDropModule
     .getAllClaimerAddresses("0")
-    .then((addresess) => {
-      console.log("🚀 Members addresses", addresess)
-      setMemberAddresses(addresess);
+    .then((addresses) => {
+      console.log("🚀 Members addresses", addresses)
+      setMemberAddresses(addresses);
     })
     .catch((err) => {
       console.error("failed to get member list", err);
@@ -90,7 +90,7 @@ Looks like a lot at first! But just know we’re doing three things:
 
 2) We’re calling `getAllHolderBalances` to get the token balances of everyone who hold’s our token on our ERC-20 contract.
 
-3) We’re combining the data into `memberList` which is one nice array the combines both the member’s address and their token balance. Feel free to check out what `useMemo` does [here](https://reactjs.org/docs/hooks-reference.html#usememo). It’s a fancy way in React to store a computed variable. 
+3) We’re combining the data into `memberList` which is one nice array the combines both the member’s address and their token balance. Feel free to check out what `useMemo` does [here](https://reactjs.org/docs/hooks-reference.html#usememo). It’s a fancy way in React to store a computed variable.
 
 Now, you may be asking yourself, “Can’t we just do `getAllHolderBalances` to grab everyone that holds our token?”. Well, basically, someone can be in our DAO and hold zero token! *And, that’s okay.* So still want them to show up on the list.
 
