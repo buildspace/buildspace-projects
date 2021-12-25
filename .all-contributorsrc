@@ -1507,6 +1507,87 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "vvandenb",
+      "name": "Vandenbosch Vasco",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56999402?v=4",
+      "profile": "https://vvandenb.herokuapp.com/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mcintyre94",
+      "name": "Callum McIntyre",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1711350?v=4",
+      "profile": "https://github.com/mcintyre94",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jdanner",
+      "name": "jdanner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1596439?v=4",
+      "profile": "https://github.com/jdanner",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "alexisweill",
+      "name": "Alexis Weill",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13684308?v=4",
+      "profile": "https://github.com/alexisweill",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "joneskj55",
+      "name": "Kevin Jones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20748598?v=4",
+      "profile": "https://kevinjones.engineer",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "awaxman11",
+      "name": "Adam Waxman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1845114?v=4",
+      "profile": "http://awaxman.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vplasencia",
+      "name": "Vivian Plasencia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52170174?v=4",
+      "profile": "https://github.com/vplasencia",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ihanif",
+      "name": "ihanif",
+      "avatar_url": "https://avatars.githubusercontent.com/u/459490?v=4",
+      "profile": "https://github.com/ihanif",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "burakozkirdeniz",
+      "name": "Burak Özkırdeniz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5032199?v=4",
+      "profile": "http://burak.id",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
