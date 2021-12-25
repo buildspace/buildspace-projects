@@ -104,25 +104,25 @@ const App = () => {
     sdk.setProviderOrSigner(signer);
   }, [signer]);
 
-  useEffect(() => {
-    if (!address) {
+    useEffect(async () => {
+    if(!address) {
       return;
     }
-    return bundleDropModule
-      .balanceOf(address, "0")
-      .then((balance) => {
-        if (balance.gt(0)) {
+
+    const bal = await bundleDropModule.balanceOf(address, "0");
+   
+    try {
+      if(bal.gt(0)) {
           setHasClaimedNFT(true);
-          console.log("🌟 this user has a membership NFT!")
-        } else {
+          console.log("🌟 this user has a membership NFT!");
+      } else {
           setHasClaimedNFT(false);
           console.log("😭 this user doesn't have a membership NFT.")
-        }
-      })
-      .catch((error) => {
+      }
+    } catch (error) {
         setHasClaimedNFT(false);
         console.error("failed to nft balance", error);
-      });
+    }
   }, [address]);
 
   if (!address) {
