@@ -5,27 +5,25 @@ Okay, now we're going to actually deploy metadata associated with our membership
 Head over to `scripts/3-config-nft.js` and add in:
 
 ```jsx
-import sdk from "./1-initialize-sdk.js";
-import { readFileSync } from "fs";
+import sdk from './1-initialize-sdk.js';
+import { readFileSync } from 'fs';
 
-const bundleDrop = sdk.getBundleDropModule(
-  "INSERT_DROP_MODULE_ADDRESS",
-);
+const bundleDrop = sdk.getBundleDropModule('INSERT_DROP_MODULE_ADDRESS');
 
 (async () => {
   try {
     await bundleDrop.createBatch([
       {
-        name: "Leaf Village Headband",
-        description: "This NFT will give you access to NarutoDAO!",
-        image: readFileSync("scripts/assets/headband.png"),
+        name: 'Leaf Village Headband',
+        description: 'This NFT will give you access to NarutoDAO!',
+        image: readFileSync('scripts/assets/headband.png'),
       },
     ]);
-    console.log("✅ Successfully created a new NFT in the drop!");
+    console.log('✅ Successfully created a new NFT in the drop!');
   } catch (error) {
-    console.error("failed to create the new NFT", error);
+    console.error('failed to create the new NFT', error);
   }
-})()
+})();
 ```
 
 Pretty straightforward!
@@ -38,7 +36,7 @@ Then, we're setting up our actual NFT on our ERC-1155 using `createBatch`. We ne
 - **description**: The description of our NFT
 - **image**: The image for our NFT. This is the image of the NFT that users will claim to be able to access your DAO.
 
-*Remember, because it's an ERC-1155, all our members will mint the same NFT.*
+_Remember, because it's an ERC-1155, all our members will mint the same NFT._
 
 Be sure to replace `image: readFileSync("scripts/assets/headband.png")` with your own image. Same as before, be sure it's a local image this won't work if you use an internet link.
 
@@ -68,11 +66,9 @@ Now we need to actually set up our "claim conditions". What's the max # of NFTs 
 Head over to `scripts/4-set-claim-condition.js` and add:
 
 ```jsx
-import sdk from "./1-initialize-sdk.js";
+import sdk from './1-initialize-sdk.js';
 
-const bundleDrop = sdk.getBundleDropModule(
-  "INSERT_DROP_MODULE_ADDRESS",
-);
+const bundleDrop = sdk.getBundleDropModule('INSERT_DROP_MODULE_ADDRESS');
 
 (async () => {
   try {
@@ -83,14 +79,18 @@ const bundleDrop = sdk.getBundleDropModule(
       maxQuantity: 50_000,
       maxQuantityPerTransaction: 1,
     });
-    
-    
+
     await bundleDrop.setClaimCondition(0, claimConditionFactory);
-    console.log("✅ Sucessfully set claim condition on bundle drop:", bundleDrop.address);
+    console.log(
+      `✅ Sucessfully set claim condition on bundle drop: ${bundleDrop.address}`
+    );
   } catch (error) {
-    console.error("Failed to set claim condition", error);
+    console.error(
+      `Failed to set claim condition on bundle drop: ${bundleDrop.address}`,
+      error
+    );
   }
-})()
+})();
 ```
 
 Same thing here as before, be sure to replace `INSERT_DROP_MODULE_ADDRESS` with your ERC-1155 contract's address.
@@ -114,6 +114,6 @@ Boom! We've successfully interacted w/ our deployed smart contract and have give
 
 ### 🚨 Progress Report
 
-*Please do this or Farza will be sad :(.*
+_Please do this or Farza will be sad :(._
 
 Hey! Go ahead and share the membership NFT you chose in `#progress` and tell us why you chose this epic NFT for your DAO.
