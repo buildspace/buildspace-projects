@@ -162,7 +162,11 @@ useEffect(() => {
     .hasVoted(proposals[0].proposalId, address)
     .then((hasVoted) => {
       setHasVoted(hasVoted);
-      console.log("🥵 User has already voted")
+      if (hasVoted) {
+        console.log("🥵 User has already voted");
+      } else {
+        console.log("🙂 User has not voted yet");
+      }
     })
     .catch((err) => {
       console.error("failed to check if wallet has voted", err);
