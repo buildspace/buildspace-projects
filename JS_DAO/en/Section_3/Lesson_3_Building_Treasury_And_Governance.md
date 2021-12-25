@@ -69,7 +69,7 @@ We have `proposalStartWaitTimeInSeconds`, which can be useful if you want to gi
 
 For the sake of example, let’s just do `votingQuorumFraction: 0` which means the proposal will pass regardless of what % of token was used on the vote. This means one person could technically pass a proposal themselves if the other members are on vacation lol. For now, this is fine. The quorum you set in the real world depends on your supply and how much you initially airdropped.
 
-Finally, we have we do `minimumNumberOfTokensNeededToPropose: "0"` which allows anyone to actually create a proposal even if they hold zero governance token. Up to you what you want to set this at! Let’s keep it at zero for now.
+Finally, we have we do `minimumNumberOfTokensNeededToPropose: "0"` which allows anyone to actually create a proposal even if they hold zero governance token. Let's keep it at 0 for now. You may have to set a manual gas limit if you set this to a different value.
 
 Go ahead and run this using `node scripts/8-deploy-vote.js`. Here’s what I end up getting:
 
