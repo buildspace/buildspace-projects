@@ -286,6 +286,28 @@ anchor test --skip-local-validator
 
 This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
 
-Note, if you get an error in your terminal that says: "Error: failed to send transaction: Transaction simulation failed: Attempt to load a program that does not exist", this most likely means you forgot to add your Program Id in both your `.toml` file and `.rs` file! Go ahead and grab your ID again and verify it's updated in the appropriate spots :).
-
 ![Untitled](https://i.imgur.com/V35KchA.png)
+
+<details>
+<summary>Having problems with <code>Error: failed to send transaction: Transaction simulation failed: Attempt to load a program that does not exist</code>?</summary>
+If you get this error, this most likely means you forgot to add your Program Id in both your `.toml` file and `.rs` file! Go ahead and grab your ID again and verify it's updated in the appropriate spots :).
+</details>
+
+<details>
+  <summary>Having problems with <code>Insufficient funds</code> or <code>Error: Deploying program failed: Error processing Instruction 1: custom program error: 0x1 There was a problem deploying: Output { status: ExitStatus(unix_wait_status(256)), stdout: "", stderr: "" }</code>?</summary>
+  
+This means that you don't have enough SOL. Aidrop some SOL to your locahost:
+
+```bash
+solana airdrop 2 --url localhost
+```
+
+Issue the above commands multiple times so that you get enough SOLs.
+
+Check that you have enough balance:
+```bash
+solana balance
+```
+</details>
+
+
