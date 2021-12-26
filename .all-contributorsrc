@@ -1597,6 +1597,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jeffreyiacono",
+      "name": "Jeff Iacono",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63325?v=4",
+      "profile": "https://github.com/jeffreyiacono",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
