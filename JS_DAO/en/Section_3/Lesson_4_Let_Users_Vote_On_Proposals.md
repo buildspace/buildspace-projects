@@ -162,7 +162,7 @@ useEffect(() => {
     .hasVoted(proposals[0].proposalId, address)
     .then((hasVoted) => {
       setHasVoted(hasVoted);
-      if(hasVoted) {
+      if (hasVoted) {
         console.log("🥵 User has already voted")
       }
     })
