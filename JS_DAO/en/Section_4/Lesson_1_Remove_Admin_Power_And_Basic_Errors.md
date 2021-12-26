@@ -63,10 +63,16 @@ We are now safe from an admin takeover :).
 
 ### 👍 Handle basic unsupported network error.
 
-Feel free to add this code in your `App.jsx` file right under your last `useEffect`.
+First, you'll need to import the type `UnsupportedChainIdError` at the top of `App.jsx` to recognize a connection outside of the Rinkeby network. Just add the line below to your other imports.
 
 ```jsx
-if (error && error.name === "UnsupportedChainIdError") {
+import { UnsupportedChainIdError } from "@web3-react/core";
+```
+
+Next, add the following in your `App.jsx` file right under your last `useEffect`.
+
+```jsx
+if (error instanceof UnsupportedChainIdError ) {
   return (
     <div className="unsupported-network">
       <h2>Please connect to Rinkeby</h2>
