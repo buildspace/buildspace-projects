@@ -111,7 +111,7 @@ We're also running this:
     console.error("Failed to get apps from the sdk", err);
     process.exit(1);
   }
-})(
+})()
 ```
 
 To make sure we can retrieve the project we made using thirdweb's web app!
