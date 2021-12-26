@@ -22,7 +22,7 @@ When you deploy your **final** contract, can set this to whatever you want!
 
 When you try to "wave" now, you may notice you sometimes get an error that looks something like "out of gas". Why?
 
-Well, basically Metamask will try to estimate how much gas a transaction will use. But, sometimes it's wrong! In this case, it's made more difficult by the fact that we have some randomness involved. So, if the contract sends a prize then the waver need to pay more gas since we're running **more** code.
+Well, basically Metamask will try to estimate how much gas a transaction will use. But, sometimes it's wrong! In this case, it's made more difficult by the fact that we have some randomness involved. So, if the contract sends a prize then the waver needs to pay more gas since we're running **more** code.
 
 Estimating gas is a hard problem and an easy workaround for this (so our users don't get angry when a transaction fails) is to set a limit.
 
