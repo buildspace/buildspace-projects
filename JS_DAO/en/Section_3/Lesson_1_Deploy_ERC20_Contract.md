@@ -237,7 +237,7 @@ You could create your own little airdrop formula just like ENS did for example:
 
 ![Untitled](https://i.imgur.com/IqboZsX.png)
 
-You want to think — “The people who are receiving token will have more power over the DAO. Is this good? Are the biggest token holders going to do the right thing for the DAO?”.  This gets into the very broad topic of tokenomics which you can read about [here](https://www.google.com/search?q=tokenommics).
+You want to think — “The people who are receiving token will have more power over the DAO. Is this good? Are the biggest token holders going to do the right thing for the DAO?”.  This gets into the very broad topic of tokenomics which you can read about [here](https://www.google.com/search?q=tokenomics).
 
 Okay, so now if I head back to by ERC-20 contract on Etherscan, I can see all my new token holders and how much of`$HOKAGE` they own.
 
