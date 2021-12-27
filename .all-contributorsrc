@@ -1660,6 +1660,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "JoaquimLey",
+      "name": "Joaquim Ley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6922748?v=4",
+      "profile": "https://joaquimley.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
