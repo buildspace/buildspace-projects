@@ -67,12 +67,12 @@ Lets head to `run.js` and make some changes to make sure everything works. Here'
 
 ```javascript
 const main = async () => {
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther('0.1'),
+    value: hre.ethers.utils.parseEther("0.1"),
   });
   await waveContract.deployed();
-  console.log('Contract addy:', waveContract.address);
+  console.log("Contract addy:", waveContract.address);
 
   /*
    * Get Contract balance
@@ -81,14 +81,14 @@ const main = async () => {
     waveContract.address
   );
   console.log(
-    'Contract balance:',
+    "Contract balance:",
     hre.ethers.utils.formatEther(contractBalance)
   );
 
   /*
    * Send Wave
    */
-  let waveTxn = await waveContract.wave('A message!');
+  let waveTxn = await waveContract.wave("A message!");
   await waveTxn.wait();
 
   /*
@@ -96,7 +96,7 @@ const main = async () => {
    */
   contractBalance = await hre.ethers.provider.getBalance(waveContract.address);
   console.log(
-    'Contract balance:',
+    "Contract balance:",
     hre.ethers.utils.formatEther(contractBalance)
   );
 
@@ -117,7 +117,7 @@ const runMain = async () => {
 runMain();
 ```
 
-The magic is on `hre.ethers.utils.parseEther('0.1'),`. This is where I say, "go and deploy my contract and fund it with 0.1 ETH". This will remove ETH from my wallet, and use it to fund the contract. **That's it**.
+The magic is on `hre.ethers.utils.parseEther("0.1"),`. This is where I say, "go and deploy my contract and fund it with 0.1 ETH". This will remove ETH from my wallet, and use it to fund the contract. **That's it**.
 
 I then do `hre.ethers.utils.formatEther(contractBalance)` to test out to see if my contract actually has a balance of 0.1. I use a function that `ethers` gives me here called `getBalance` and pass it my contract's address!
 
@@ -168,14 +168,14 @@ We need to make a small update to `deploy.js`.
 
 ```javascript
 const main = async () => {
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther('0.001'),
+    value: hre.ethers.utils.parseEther("0.001"),
   });
 
   await waveContract.deployed();
 
-  console.log('WavePortal address: ', waveContract.address);
+  console.log("WavePortal address: ", waveContract.address);
 };
 
 const runMain = async () => {
@@ -195,7 +195,7 @@ All I did was fund the contract 0.001 ETH like this:
 
 ```javascript
 const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther('0.001'),
+    value: hre.ethers.utils.parseEther("0.001"),
 });
 ```
 I like deploying to testnets with a smaller amount of ETH first to test!
@@ -212,11 +212,11 @@ npx hardhat run scripts/deploy.js --network rinkeby
 
 Now when you go to [Etherscan](https://rinkeby.etherscan.io/) and paste in your contract address you'll see that your contract now has a value of 0.001 ETH! Success!
 
-**Remember to update your frontend with the new contract address *and* the new ABI file. Otherwise, it will** **break**. 
+**Remember to update your frontend with the new contract address *and* the new ABI file. Otherwise, it will** **break**.
 
 Test out your wave function and make sure it still works!
 
 🎁 Wrap Up
 ----------
 
-There is something about using actual ETH to fuel your contracts right? Take a look at [this link](https://gist.github.com/adilanchian/236fe9f3a56b73751060800cae3a780d) to see all the code written in this section! 
+There is something about using actual ETH to fuel your contracts right? Take a look at [this link](https://gist.github.com/adilanchian/236fe9f3a56b73751060800cae3a780d) to see all the code written in this section!
