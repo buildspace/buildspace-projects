@@ -32,40 +32,36 @@ const shortenAddress = (str) => {
 };
 
 // This useEffect grabs all our the addresses of our members holding our NFT.
-useEffect(() => {
+useEffect(async () => {
   if (!hasClaimedNFT) {
     return;
   }
   
   // Just like we did in the 7-airdrop-token.js file! Grab the users who hold our NFT
   // with tokenId 0.
-  bundleDropModule
-    .getAllClaimerAddresses("0")
-    .then((addresess) => {
-      console.log("🚀 Members addresses", addresess)
-      setMemberAddresses(addresess);
-    })
-    .catch((err) => {
-      console.error("failed to get member list", err);
-    });
+  try {
+    const memberAddresses = await bundleDropModule.getAllClaimerAddresses("0");
+    setMemberAddresses(memberAddresses);
+    console.log("🚀 Members addresses", memberAddresses);
+  } catch (error) {
+    console.error("failed to get member list", error);
+  }
 }, [hasClaimedNFT]);
 
 // This useEffect grabs the # of token each member holds.
-useEffect(() => {
+useEffect(async () => {
   if (!hasClaimedNFT) {
     return;
   }
 
   // Grab all the balances.
-  tokenModule
-    .getAllHolderBalances()
-    .then((amounts) => {
-      console.log("👜 Amounts", amounts)
-      setMemberTokenAmounts(amounts);
-    })
-    .catch((err) => {
-      console.error("failed to get token amounts", err);
-    });
+  try {
+    const amounts = await tokenModule.getAllHolderBalances();
+    setMemberTokenAmounts(amounts);
+    console.log("👜 Amounts", amounts);
+  } catch (error) {
+    console.error("failed to get token amounts", error);
+  }
 }, [hasClaimedNFT]);
 
 // Now, we combine the memberAddresses and memberTokenAmounts into a single array
