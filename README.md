@@ -321,6 +321,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://joaquimley.com"><img src="https://avatars.githubusercontent.com/u/6922748?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joaquim Ley</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=JoaquimLey" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ImTorres"><img src="https://avatars.githubusercontent.com/u/18602213?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Imtorres</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Imtorres" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Ando-O"><img src="https://avatars.githubusercontent.com/u/73496577?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ando-O</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Ando-O" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/sebitokazu"><img src="https://avatars.githubusercontent.com/u/27930663?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sebitokazu</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=sebitokazu" title="Documentation">📖</a></td>
   </tr>
 </table>
 
