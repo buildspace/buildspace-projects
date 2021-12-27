@@ -61,7 +61,8 @@ const appModule = sdk.getAppModule(
 
 We’re using `deployVoteModule` to actually set up the contract. This will deploy a brand new voting contract!
 
-Notice how we give it `votingTokenAddress`, this is our contract knows which governance token to accept. We don’t want people randomly try to use $DOGE to vote lol.
+
+Notice how we give it `votingTokenAddress`, this is how our contract knows which governance token to accept. We don’t want people randomly trying to use $DOGE to vote lol.
 
 We have `proposalStartWaitTimeInSeconds`, which can be useful if you want to give people some time to go over the proposal before they’re allowed to vote on it. Similarly, we have `proposalVotingTimeInSeconds` which just specifies how long someone has to vote once a proposal goes lives.
 
@@ -71,7 +72,7 @@ For the sake of example, let’s just do `votingQuorumFraction: 0` which means
 
 Finally, we have `minimumNumberOfTokensNeededToPropose: "0"` which allows anyone to actually create a proposal even if they hold zero governance token. Up to you what you want to set this at! Let’s keep it at zero for now.
 
-Go ahead and run this using `scripts/8-deploy-vote.js`. Here’s what I end up getting:
+Go ahead and run this using `node scripts/8-deploy-vote.js`. Here’s what I end up getting:
 
 ```plaintext
 buildspace-dao-starter % node scripts/8-deploy-vote.js
@@ -80,7 +81,7 @@ buildspace-dao-starter % node scripts/8-deploy-vote.js
 
 ```
 
-This is pretty cool. Basically, we created and deployed a new smart contract that will let us actually vote on proposals on-chain. This is a standard [governance](https://docs.openzeppelin.com/contracts/4.x/api/governance) contract. You can see the exact contract you deployed [here](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/vote/VotingGovernance.sol).
+This is pretty cool. Basically, we created and deployed a new smart contract that will let us actually vote on proposals on-chain. This is a standard [governance](https://docs.openzeppelin.com/contracts/4.x/api/governance) contract. You can see the exact contract you deployed [here](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/vote/VotingGovernor.sol).
 
 If you head to `https://rinkeby.etherscan.io/` you’ll see it there!
 

@@ -12,7 +12,7 @@ Sorry for having you make so many accounts, but, this ecosystem is complex and w
 💳 Transactions
 ---------------
 
-So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction. Doing something that updates a variable in our contract is also considered a transaction. 
+So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction. Doing something that updates a variable in our contract is also considered a transaction.
 
 So when we call `wave` and it does `totalWaves += 1`, that's a transaction! **Deploying a smart contract is also a transaction.**
 
@@ -78,14 +78,14 @@ If the above doesn't work, use the `/faucet` command in the #faucet-request chan
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
 
 ```javascript
-require('@nomiclabs/hardhat-waffle');
+require("@nomiclabs/hardhat-waffle");
 
 module.exports = {
-  solidity: '0.8.0',
+  solidity: "0.8.0",
   networks: {
     rinkeby: {
-      url: 'YOUR_ALCHEMY_API_URL',
-      accounts: ['YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY'],
+      url: "YOUR_ALCHEMY_API_URL",
+      accounts: ["YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY"],
     },
   },
 };

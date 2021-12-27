@@ -32,9 +32,7 @@ ReactDOM.render(
       connectors={connectors}
       supportedChainIds={supportedChainIds}
     >
-      <div className="landing">
-        <App />
-      </div>
+      <App />
     </ThirdwebWeb3Provider>
   </React.StrictMode>,
   document.getElementById('root')
