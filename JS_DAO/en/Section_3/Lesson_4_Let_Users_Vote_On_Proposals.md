@@ -30,7 +30,7 @@ const tokenModule = sdk.getTokenModule(
           nativeTokenValue: 0,
           transactionData: tokenModule.contract.interface.encodeFunctionData(
             // We're doing a mint! And, we're minting to the voteModule, which is
-            // acting as our treasruy.
+            // acting as our treasury.
             "mint",
             [
               voteModule.address,
