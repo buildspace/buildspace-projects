@@ -56,9 +56,27 @@ const instructions = [
     lamports: rent,
     programId: TOKEN_PROGRAM_ID,
   }),
-  Token.createInitMintInstruction(TOKEN_PROGRAM_ID, mint.publicKey, 0, walletAddress.publicKey, walletAddress.publicKey),
-  createAssociatedTokenAccountInstruction(token, walletAddress.publicKey, walletAddress.publicKey, mint.publicKey),
-  Token.createMintToInstruction(TOKEN_PROGRAM_ID, mint.publicKey, token, walletAddress.publicKey, [], 1),
+   Token.createInitMintInstruction(
+    TOKEN_PROGRAM_ID,
+    mint.publicKey,
+    0,
+    walletAddress.publicKey,
+    walletAddress.publicKey
+  ),
+  createAssociatedTokenAccountInstruction(
+    token,
+    walletAddress.publicKey,
+    walletAddress.publicKey,
+    mint.publicKey
+  ),
+  Token.createMintToInstruction(
+    TOKEN_PROGRAM_ID,
+    mint.publicKey,
+    token,
+    walletAddress.publicKey,
+    [],
+    1
+  ),
 ];
 ```
 
@@ -83,17 +101,17 @@ This you already know! We set up a provider, then call `mintNft` which is a func
 connection.onSignatureWithOptions(
   txn,
   async (notification, context) => {
-    if (notification.type === "status") {
-      console.log("Received status event");
+    if (notification.type === 'status') {
+      console.log('Received status event');
 
       const { result } = notification;
       if (!result.err) {
-        console.log("NFT Minted!");
+        console.log('NFT Minted!');
         await getCandyMachineState();
       }
     }
   },
-  { commitment: "processed" }
+  { commitment: 'processed' }
 );
 ```
 
@@ -109,10 +127,10 @@ In your `CandyMachine` component, have your "Mint" button call the `mintToken` f
 return (
   // Only show this if machineStats is available
   machineStats && (
-    <div className="machine-container">
+    <div className='machine-container'>
       <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
       <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
-      <button className="cta-button mint-button" onClick={mintToken}>
+      <button className='cta-button mint-button' onClick={mintToken}>
         Mint NFT
       </button>
     </div>
@@ -185,7 +203,7 @@ if (data.length !== 0) {
     // Get URI
     const response = await fetch(mint.data.uri);
     const parse = await response.json();
-    console.log("Past Minted NFT", mint);
+    console.log('Past Minted NFT', mint);
 
     // Get image URI
     if (!mints.find((mint) => mint === parse.image)) {
@@ -211,7 +229,7 @@ if (data.length !== 0) {
     // Get URI
     const response = await fetch(mint.data.uri);
     const parse = await response.json();
-    console.log("Past Minted NFT", mint);
+    console.log('Past Minted NFT', mint);
 
     // Fancy JS to avoid adding the same mint twice.
     if (!mints.find((mint) => mint === parse.image)) {
@@ -233,11 +251,11 @@ Let's start displaying this in our app now! We are going to start by making a re
 
 ```jsx
 const renderMintedItems = () => (
-  <div className="gif-container">
-    <p className="sub-text">Minted Items ✨</p>
-    <div className="gif-grid">
+  <div className='gif-container'>
+    <p className='sub-text'>Minted Items ✨</p>
+    <div className='gif-grid'>
       {mints.map((mint) => (
-        <div className="gif-item" key={mint}>
+        <div className='gif-item' key={mint}>
           <img src={mint} alt={`Minted NFT ${mint}`} />
         </div>
       ))}
@@ -251,10 +269,10 @@ Nice. Now that we have this function ready to call, we actually need to place it
 ```jsx
 return (
   machineStats && (
-    <div className="machine-container">
+    <div className='machine-container'>
       <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
       <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
-      <button className="cta-button mint-button" onClick={mintToken}>
+      <button className='cta-button mint-button' onClick={mintToken}>
         Mint NFT
       </button>
       {/* If we have mints available in our array, let's render some items */}
