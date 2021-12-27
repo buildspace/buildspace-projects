@@ -86,7 +86,7 @@ You'll need the public address associated w/ your Phantom wallet which you can g
 Now, go ahead and run this from your terminal.
 
 ```bash
-solana airdrop 5 INSERT_YOUR_PHANTOM_PUBLIC_ADDRESS_HERE  --url devnet
+solana airdrop 2 INSERT_YOUR_PHANTOM_PUBLIC_ADDRESS_HERE  --url devnet
 ```
 
 Now, when you go back to your Phantom wallet you should have 5 SOL associated w/ your devnet wallet. Nice :).

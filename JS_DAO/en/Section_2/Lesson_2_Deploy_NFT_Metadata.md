@@ -31,6 +31,10 @@ const bundleDrop = sdk.getBundleDropModule(
 Pretty straightforward!
 
 The first thing we're doing is accessing our `bundleDrop` module, which is our ERC-1155 contract. The `INSERT_DROP_MODULE_ADDRESS` is the address printed out from the step before. It's the address printed out after `Successfully deployed bundleDrop module, address`.
+You can also find this on your thirdweb dashboard. Your thirdweb dashboard will display the project you are currently working on and it will show the module address there as well for you to easily copy and paste.
+
+![image](https://user-images.githubusercontent.com/73496577/147307704-386a1676-1caa-46d6-890a-78a4d146a6c1.png)
+
 
 Then, we're setting up our actual NFT on our ERC-1155 using `createBatch`. We need to set up some properties:
 
@@ -86,7 +90,7 @@ const bundleDrop = sdk.getBundleDropModule(
     
     
     await bundleDrop.setClaimCondition(0, claimConditionFactory);
-    console.log("✅ Sucessfully set claim condition!");
+    console.log("✅ Successfully set claim condition on bundle drop:", bundleDrop.address);
   } catch (error) {
     console.error("Failed to set claim condition", error);
   }
@@ -105,7 +109,7 @@ After running `node scripts/4-set-claim-condition.js` here's what I get:
 
 ```
 👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
-✅ Sucessfully set claim condition on bundle drop: 0x31c70F45060AE0870624Dd9D79A1d8dafC095A
+✅ Successfully set claim condition on bundle drop: 0x31c70F45060AE0870624Dd9D79A1d8dafC095A
 ```
 
 Boom! We've successfully interacted w/ our deployed smart contract and have given our NFT certain rules it must follow, hell yea! If you copy-paste your bundle drop address printed out there and search it on `https://rinkeby.etherscan.io/`, you'll see proof right there that we interact w/ the contract!

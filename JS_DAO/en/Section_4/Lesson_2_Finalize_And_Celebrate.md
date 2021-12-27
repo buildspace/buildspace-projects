@@ -32,7 +32,7 @@ Go to **#showcase** in Discord and drop us a link to your final product that w
 
 Also, you should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Maybe even make a little video showing off your project and attach that to the tweet. Make your tweet look pretty and show off!!
 
-And if you feel up to it, tag [@_buildspace](https://twitter.com/_buildspace) :). **It gives us a ton of motivation whenever we see people ship their projects.** Plus, you can inspire someone else to get into Solana.
+And if you feel up to it, tag [@_buildspace](https://twitter.com/_buildspace) :). **It gives us a ton of motivation whenever we see people ship their projects.** Plus, you can inspire someone else to get into web3.
 
 Give us that dopamine hit pls.
 
