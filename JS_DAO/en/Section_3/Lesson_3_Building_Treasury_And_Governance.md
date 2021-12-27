@@ -53,7 +53,7 @@ const appModule = sdk.getAppModule(
       voteModule.address,
     );
   } catch (err) {
-    console.log("Failed to deploy vote module", err);
+    console.error("Failed to deploy vote module", err);
   }
 })();
 
