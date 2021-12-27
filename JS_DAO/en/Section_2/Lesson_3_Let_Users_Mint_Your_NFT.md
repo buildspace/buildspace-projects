@@ -17,7 +17,7 @@ import { ThirdwebSDK } from "@3rdweb/sdk";
 From there, here's what we're going to add:
 
 ```jsx
-// We instatiate the sdk on Rinkeby.
+// We instantiate the sdk on Rinkeby.
 const sdk = new ThirdwebSDK("rinkeby");
 
 // We can grab a reference to our ERC-1155 contract.
@@ -142,19 +142,20 @@ const App = () => {
     // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
     bundleDropModule
     .claim("0", 1)
-    .catch((err) => {
-      console.error("failed to claim", err);
-      setIsClaiming(false);
-    })
-    .finally(() => {
-      // Stop loading state.
-      setIsClaiming(false);
+    .then(() => {
       // Set claim state.
       setHasClaimedNFT(true);
       // Show user their fancy new NFT!
       console.log(
         `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
       );
+    })
+    .catch((err) => {
+      console.error("failed to claim", err);
+    })
+    .finally(() => {
+      // Stop loading state.
+      setIsClaiming(false);
     });
   }
 
