@@ -1723,6 +1723,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "zeosamaster",
+      "name": "Fábio Matias",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11465535?v=4",
+      "profile": "https://github.com/zeosamaster",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
