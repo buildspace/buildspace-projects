@@ -2,7 +2,7 @@
 
 ## 📚 Uma pequena introdução sobre blockchain
 
-Antes de qualquer coisa, vamos precisar colocar nossa rede local de Ethereum para funcionar. É dessa maneira que vamos poder compilar e testar nosso código de contratos inteligentes! Você sabe como é necessário criar um ambiente local pra trabalhar? Mesma coisa aqui!
+Antes de qualquer coisa, vamos precisar colocar nossa rede local de Ethereum para funcionar. É dessa maneira que vamos poder compilar e testar nosso código de contratos inteligentes! Você sabe como é necessário criar um ambiente local para trabalhar? Mesma coisa aqui!
 
 Por enquanto, tudo o que você precisa saber é que um contrato inteligente é um pedaço de código que vive na blockchain. A blockhain é um lugar público onde qualquer um pode seguramente ler e escrever dados por uma taxa. Pense nisso em algo como a AWS ou Heroku, com exceção de que ninguém a possui! Ela é mantida por milhares de pessoas aleatórias conhecidas como "mineradores".
 
@@ -10,7 +10,7 @@ O quadro maior aqui é:
 
 1 -- Nós vamos escrever um contrato inteligente. Esse contrato tem toda a lógica ao redor das nossas NFTs.
 
-2 -- Nosso contrato inteligente será implamntado na blockchain. Dessa maneira, qualquer pessoa no mundo terá acesso e poderá usar nosso contrato inteligente - e vamos deixar eles "mintarem" NFTs!
+2 -- Nosso contrato inteligente será implantado na blockchain. Dessa maneira, qualquer pessoa no mundo terá acesso e poderá usar nosso contrato inteligente - e vamos deixar eles "mintarem" NFTs!
 
 3 -- Nós vamos construir um site que permitirá que as pessoas "mintem" NFT's facilmente da nossa coleção.
 
@@ -54,7 +54,7 @@ npm install --save-dev @nomiclabs/hardhat-waffle
 ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 ```
 
-Você também vai querer instalar algo chamado **OpenZeppelin**, que é uma outra livaria muito usada para desenvolver contratos inteligentes seguros. Nós vamos aprender mais sobre isso depois. Por agora, só instale-o.
+Você também vai querer instalar algo chamado **OpenZeppelin**, que é uma outra library muito usada para desenvolver contratos inteligentes seguros. Nós vamos aprender mais sobre isso depois. Por agora, só instale-o.
 
 ```bash
 npm install @openzeppelin/contracts
