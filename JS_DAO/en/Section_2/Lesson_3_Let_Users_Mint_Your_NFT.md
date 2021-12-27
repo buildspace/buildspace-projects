@@ -141,7 +141,7 @@ const App = () => {
     setIsClaiming(true);
     // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
     bundleDropModule
-    .claim('0', 1)
+    .claim("0", 1)
     .then(() => {
       // Set claim state.
       setHasClaimedNFT(true);
@@ -151,7 +151,7 @@ const App = () => {
       );
     })
     .catch((err) => {
-      console.error('failed to claim', err);
+      console.error("failed to claim", err);
     })
     .finally(() => {
       // Stop loading state.
