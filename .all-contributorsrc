@@ -1696,6 +1696,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "avila-lucas",
+      "name": "Lucas Avila",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35459678?v=4",
+      "profile": "https://www.linkedin.com/in/lucas-avila",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
