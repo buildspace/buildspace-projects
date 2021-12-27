@@ -1,6 +1,6 @@
 ## 🔥 Finishing touches on the UI.
 
-You've probably noticed quite a few spots where nothing was was indicated that something was happening to the user when you did things like minted a character NFT or fetched big boss data. I wanted to go through and show you the loading indicators I thought could be cool to add!
+You've probably noticed quite a few spots where nothing was indicated that something was happening to the user when you did things like minted a character NFT or fetched big boss data. I wanted to go through and show you the loading indicators I thought could be cool to add!
 
 We are going to setup a few loading indicators:
 
