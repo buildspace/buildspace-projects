@@ -1,12 +1,12 @@
 ### 🤖 Let's grab the starter code.
 
-Start by heading over to [this GitHub link](https://github.com/buildspace/nft-drop-starter-project) where you find the starter repo code. From here you are going to want to make sure you press the "Fork" button in the top right of the page 
+Start by heading over to [this GitHub link](https://github.com/buildspace/nft-drop-starter-project) where you find the starter repo code. From here you are going to want to make sure you press the "Fork" button in the top right of the page
 
 ![image](https://i.imgur.com/p2FTyAM.png)
 
 Sweet! When you fork this repo, you are actually creating an identical copy of it that lives under your Github profile. So now you have your own version of this code that you can edit to your hearts content :). This will also come in handy when we are ready to deploy our app to Vercel 🤘.
 
-The final step here is to actually get your newly forked repo on your local machine. Click the "Code" button and copy that link! 
+The final step here is to actually get your newly forked repo on your local machine. Click the "Code" button and copy that link!
 
 ![image](https://i.imgur.com/4QtA8wO.png)
 
@@ -150,6 +150,8 @@ So when you run this, you should see that line *"Phantom wallet found!"* print
 
 ![Untitled](https://i.imgur.com/uyGcSJ4.png)
 
+_For additional instructions on getting your app running, refer to `README.md` at the root of your project._
+
 **NICE.**
 
 Next, we need to actually check if we're **authorized** to actually access the user's wallet. Once we have access to this, we can start getting access to the functions in our Solana program 🤘.
@@ -194,7 +196,10 @@ And that's it!
 
 *At this point you should still only be seeing the "Phantom wallet found!"* log statement in your console!
 
-Why is that? Well, the `connect` method will only run **if** the user has already authorized a connection between their wallet and the web app. **Which they've never done so far.** Let's do that next :).
+Don't worry if you're seeing the "User Rejected Request" error in the console. It is totally expected at this point of the project ;), It's there because we added that `onlyIfTrusted: true` parameter inside the `connect` method.
+It will make the Phantom wallet reject the user's connection request for now (as the error's name suggests 😁).
+
+Why is that? Well, the `connect` method with `onlyIfTrusted` parameter set to `true` will only run **if** the user has already authorized a connection between their wallet and the web app. **Which they've never done so far.** Let's do that next :).
 
 ### 🚨 Progress Report
 

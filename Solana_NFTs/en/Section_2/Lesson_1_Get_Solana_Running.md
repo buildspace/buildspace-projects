@@ -4,7 +4,7 @@ So — the goal is to create a web app that lets users **connect their wallet, c
 
 We'll need to install the Solana CLI and Metaplex CLI to get this going.
 
-The Solana CLI will allow us to deploy to devnet, an actual blockchain run by real miners.
+The Solana CLI will allow us to deploy to devnet, an actual blockchain run by real [validators](https://solana.com/validators).
 
 The Metaplex CLI will allow us to interact with Metaplex's deployed NFT contracts. Using their smart-contracts-as-a-service we can 1) create our own candy machine 2) upload our NFTs to our candy machine 3) allow users to actually hit our candy machine to mint an NFT.
 
@@ -52,12 +52,13 @@ If any of these commands are not found, please make sure to install it before mo
 - [ts-node Installation](https://www.npmjs.com/package/ts-node#installation)
 
 Be sure to install `ts-node` globally. I used this command: `npm install -g ts-node`
+> If you run into EACCES permissions errors while installing, please checkout this [link](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)
 
 ### **🔥 Install Solana**
 
 The installation steps are pretty straight forward [here](https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool). There are clear steps for getting the Solana CLI installed for Windows, Linux, and Mac.
 
-**Don't** worry about upgrading to the latest version of Solana.
+**Don't** worry about upgrading to the latest version of Solana. You can install the stable version by replacing the version number with "stable" like this: `sh -c "$(curl -sSfL https://release.solana.com/stable/install)"`
 
 *Note: Depending on your system — once you install Solana, it may output a message like "Please update your PATH environment variable" and it'll give you a line to copy and run. Go ahead and copy + run that command so your PATH gets setup properly.*
 
@@ -70,7 +71,7 @@ solana --version
 If that output a version number, you're good to go! Next thing you'll want to do is run these two commands separately:
 
 ```plaintext
-solana config set --url https://api.devnet.solana.com
+solana config set --url devnet
 solana config get
 ```
 
@@ -84,7 +85,7 @@ Keypair Path: /Users/flynn/.config/solana/id.json
 Commitment: confirmed
 ```
 
-During this entire project we will be building directly on Solana's devnet. This is pretty hype. It's sorta like Solana's version of a "staging" environment. It's an actual blockchain run by real miners and is free to use for developers.
+During this entire project we will be building directly on Solana's devnet. This is pretty hype. It's sorta like Solana's version of a "staging" environment. It's an actual blockchain run by real validators and is free to use for developers.
 
 ### ☹️ Ahhhh help it's broken!
 

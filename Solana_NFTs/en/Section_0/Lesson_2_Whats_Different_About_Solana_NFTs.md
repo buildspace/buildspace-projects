@@ -31,10 +31,10 @@ One thing that's very special about the candy machine is it won't accept a user'
 5. The program goes to mint an NFT for Person B who happened to be processed first in parallel. Person A gets an error like — "No more NFTs".
 6. Person A loses the race and is sad, and has now lost money on an NFT they never received. Person B is happy.
 
-This is classic problem is parallel computing. The fix is to use something called a [mutex](https://doc.rust-lang.org/std/sync/struct.Mutex.html) along with an [atomic transaction](https://en.wikipedia.org/wiki/Atomicity_(database_systems)) which are both decently complex to implement.
+This is a classic problem in parallel computing. The fix is to use something called a [mutex](https://doc.rust-lang.org/std/sync/struct.Mutex.html) along with an [atomic transaction](https://en.wikipedia.org/wiki/Atomicity_(database_systems)) which are both decently complex to implement.
 
 **Metaplex's candy machine implements this stuff for us :).**
 
-Candy machine also has some other goodies it gives us as well which we'll cover later but hope this overview helps later down the line!! Feel free to come back to it once you get more into the candy machine stuff.
+Candy machine also has some other goodies it gives us as well which we'll cover later, but I hope this overview helps later down the line!! Feel free to come back to it once you get more into the candy machine stuff.
 
 Note: We won't be explaining what NFTs are here. If you're confused around what an NFT is, check out [this](https://github.com/buildspace/buildspace-projects/blob/main/NFT_Collection/en/Section_1/Lesson_1_What_Is_A_NFT.md) quick bonus section we wrote.

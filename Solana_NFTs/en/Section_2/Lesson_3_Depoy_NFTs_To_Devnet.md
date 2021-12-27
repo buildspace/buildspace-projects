@@ -43,7 +43,7 @@ solana balance
 And it should say `0 SOL`. We can't deploy stuff to Solana without SOL, writing data to the blockchain costs money. In this case, we're on dev net so we can just give ourselves fake SOL. Go ahead and run:
 
 ```plaintext
-solana airdrop 5
+solana airdrop 2
 ```
 
 After that's done, you can run `solana balance` again and bam you'll have some SOL. *Note: if you ever run out of fake SOL, you can just run this command again.*
@@ -140,7 +140,7 @@ TypeError: Cannot read property 'candyMachineAddress' of undefined
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 ```
 
-Then it means the command can't access the `.cache` folder with the important data around your candy machine and NFTs. So if you get this error, be 100% sure you're running your candy machine commands from the same directory where you `.cache` and `assets` folders are.
+Then it means the command can't access the `.cache` folder with the important data around your candy machine and NFTs. So if you get this error, be 100% sure you're running your candy machine commands from the same directory where you `.cache` and `assets` folders are. This is really easy to mess up since you might be in the ```app``` directory editing your web app and updating the candy machine in the future; double check your directory!!
 
 ### 🚨 Progress Report
 
