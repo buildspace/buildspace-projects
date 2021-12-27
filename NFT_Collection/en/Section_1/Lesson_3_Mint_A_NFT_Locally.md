@@ -50,7 +50,7 @@ This is the version of the Solidity compiler we want our contract to use. It bas
 import "hardhat/console.sol";
 ```
 
-Some magic given to us by Hardhat to do some console logs in our contract. It's actually challenging to debug smart contracts but this is one of the goodies Hardhat gives us to make life easier.
+Some magic given to us by Hardhat allows us to do some console logs in our contract. It's actually challenging to debug smart contracts but this is one of the goodies Hardhat gives us to make life easier.
 
 ```solidity
 contract MyEpicNFT {
