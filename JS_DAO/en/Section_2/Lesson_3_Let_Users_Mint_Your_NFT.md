@@ -147,7 +147,7 @@ const App = () => {
       setHasClaimedNFT(true);
       // Show user their fancy new NFT!
       console.log(
-          `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
+        `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
       );
     })
     .catch((err) => {
@@ -157,7 +157,7 @@ const App = () => {
       // Stop loading state.
       setIsClaiming(false);
     });
-  };
+  }
 
   // Render mint nft screen.
   return (
