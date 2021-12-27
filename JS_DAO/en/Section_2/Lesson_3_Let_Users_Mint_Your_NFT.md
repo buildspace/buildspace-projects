@@ -136,7 +136,28 @@ const App = () => {
       </div>
     );
   }
-    
+  
+  const mintNft = () => {
+    setIsClaiming(true);
+    // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
+    bundleDropModule
+    .claim("0", 1)
+    .then(() => {
+      // Set claim state.
+    setHasClaimedNFT(true);
+      // Show user their fancy new NFT!
+    console.log(
+      `🌊 Successfully Minted! Check it our on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
+    );
+  })
+    .catch((err) => {
+      console.error("failed to claim", err);
+    })
+    .finally(() => {
+      // Stop loading state.
+      setIsClaiming(false);
+    });
+}
     
   // Render mint nft screen.
   return (
@@ -144,27 +165,7 @@ const App = () => {
       <h1>Mint your free 🍪DAO Membership NFT</h1>
       <button
         disabled={isClaiming}
-        onClick={() => 
-          setIsClaiming(true);
-          // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
-          bundleDropModule
-          .claim("0", 1)
-          .then(() => {
-            // Set claim state.
-            setHasClaimedNFT(true);
-              // Show user their fancy new NFT!
-            console.log(
-                `Successfully Minted! Check it our on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
-              );
-            })
-          .catch((err) => {
-            console.error("failed to claim", err);
-            })
-          .finally(() => {
-            // Stop loading state.
-            setIsClaiming(false);
-            });
-        }}
+        onClick={() => mintNft()}
       >
         {isClaiming ? "Minting..." : "Mint your nft (FREE)"}
       </button>
