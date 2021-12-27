@@ -1642,6 +1642,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "suud",
+      "name": "suud",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10183975?v=4",
+      "profile": "https://discord.com/users/suud#9841",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
