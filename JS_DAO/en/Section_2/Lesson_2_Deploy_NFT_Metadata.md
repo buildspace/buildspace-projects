@@ -90,7 +90,7 @@ const bundleDrop = sdk.getBundleDropModule(
     
     
     await bundleDrop.setClaimCondition(0, claimConditionFactory);
-    console.log("✅ Sucessfully set claim condition on bundle drop:", bundleDrop.address);
+    console.log("✅ Successfully set claim condition on bundle drop:", bundleDrop.address);
   } catch (error) {
     console.error("Failed to set claim condition", error);
   }
