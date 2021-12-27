@@ -326,6 +326,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/rshorser"><img src="https://avatars.githubusercontent.com/u/779867?v=4?s=100" width="100px;" alt=""/><br /><sub><b>rshorser</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=rshorser" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/kuriakinzeng"><img src="https://avatars.githubusercontent.com/u/1982709?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kuriakin Zeng</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=kuriakinzeng" title="Documentation">📖</a></td>
   </tr>
 </table>
 
