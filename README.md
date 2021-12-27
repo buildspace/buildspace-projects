@@ -317,6 +317,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://discord.com/users/suud#9841"><img src="https://avatars.githubusercontent.com/u/10183975?v=4?s=100" width="100px;" alt=""/><br /><sub><b>suud</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=suud" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/TrinidadHype"><img src="https://avatars.githubusercontent.com/u/12192595?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mitra</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=TrinidadHype" title="Documentation">📖</a></td>
   </tr>
 </table>
 
