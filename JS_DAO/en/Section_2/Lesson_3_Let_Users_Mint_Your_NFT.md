@@ -144,12 +144,12 @@ const App = () => {
     .claim("0", 1)
     .then(() => {
       // Set claim state.
-    setHasClaimedNFT(true);
+      setHasClaimedNFT(true);
       // Show user their fancy new NFT!
-    console.log(
+      console.log(
       `🌊 Successfully Minted! Check it our on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
-    );
-  })
+      );
+    })
     .catch((err) => {
       console.error("failed to claim", err);
     })
@@ -157,8 +157,8 @@ const App = () => {
       // Stop loading state.
       setIsClaiming(false);
     });
-}
-    
+  }
+  
   // Render mint nft screen.
   return (
     <div className="mint-nft">
