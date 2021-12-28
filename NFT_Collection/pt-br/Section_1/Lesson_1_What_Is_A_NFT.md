@@ -4,7 +4,7 @@ Eu vi tantos tutoriais complicarem isso. Então, vou tentar manter a explicaçã
 
 Um NFT é um "token" que uma pessoa pode possuir que liga a algum "dado" (exemplo. liga a uma arte digital, a um vídeo, imagem, etc). O truque com NFTs é que cada "token" tem um identificador único, que confere ao dono o poder de provar que o NFT é único. Vamos ver o código depois :).
 
-Vamos passar por um examplo rapidamente.
+Vamos passar por um exemplo rapidamente.
 
 ## 🎨 Esboços de Picasso
 
@@ -14,13 +14,13 @@ Sabemos que cada esboço é único, porque podemos ver um lápis físico desenha
 
 Também sabemos que Picasso que desenhou os esboços. Como? Bem - porque Picasso disse que desenhou e assinou-os! Você pode comprar esse esboço original de Picasso agora e ter a certificação de que você tem um "Original Picasso", da galeria que Picasso os vendeu.
 
-Você precisa confiarm que o certificado da galeria será respeitado a longo termo, mas, no geral, isso é fáciL!
+Você precisa confiar que o certificado da galeria será respeitado a longo termo, mas, no geral, isso é fácil!
 
 ![](https://i.imgur.com/FLBd1l0.png)
 
 ## 👨‍💻 Picasso NFTs
 
-Vamos dar uma olhada nesse examplo no **Mundo NFT** agora.
+Vamos dar uma olhada nesse exemplo no **Mundo NFT** agora.
 
 Digamos que picasso queria criar uma coleção de 100 de seus esboços, onde cada esboço é uma **arte digital**, como um arquivo JPEG.
 

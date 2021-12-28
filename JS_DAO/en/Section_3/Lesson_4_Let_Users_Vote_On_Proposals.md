@@ -30,7 +30,7 @@ const tokenModule = sdk.getTokenModule(
           nativeTokenValue: 0,
           transactionData: tokenModule.contract.interface.encodeFunctionData(
             // We're doing a mint! And, we're minting to the voteModule, which is
-            // acting as our treasruy.
+            // acting as our treasury.
             "mint",
             [
               voteModule.address,
@@ -51,7 +51,7 @@ const tokenModule = sdk.getTokenModule(
 
   try {
     const amount = 6_900;
-    // Create proposal to transfer ourselves 6,900 token for being awesome.
+    // Create proposal to transfer ourselves 6,900 tokens for being awesome.
     await voteModule.propose(
       "Should the DAO transfer " +
       amount + " tokens from the treasury to " +
@@ -78,7 +78,7 @@ const tokenModule = sdk.getTokenModule(
       "✅ Successfully created proposal to reward ourselves from the treasury, let's hope people vote for it!"
     );
   } catch (error) {
-    console.error("failed to create first proposal", error);
+    console.error("failed to create second proposal", error);
   }
 })();
 
@@ -108,7 +108,7 @@ buildspace-dao-starter % node scripts/10-create-vote-proposals.js
 
 BOOM. There are our proposals. The last thing we’re going to do is actually let users vote on proposals from our DAO dashboard now!
 
-### ✍️ Lets users vote on proposals from the dashboard.
+### ✍️ Let users vote on proposals from the dashboard.
 
 Finally, let’s bring it all home. Right now, our proposals live on our smart contract. But, we want our users to easily be able to see them and vote! Let’s do that. Head to `App.jsx`. Go ahead and add this under `tokenModule`.
 
@@ -127,7 +127,7 @@ const [proposals, setProposals] = useState([]);
 const [isVoting, setIsVoting] = useState(false);
 const [hasVoted, setHasVoted] = useState(false);
 
-// Retreive all our existing proposals from the contract.
+// Retrieve all our existing proposals from the contract.
 useEffect(() => {
   if (!hasClaimedNFT) {
     return;
@@ -151,7 +151,7 @@ useEffect(() => {
     return;
   }
 
-  // If we haven't finished retreieving the proposals from the useEffect above
+  // If we haven't finished retrieving the proposals from the useEffect above
   // then we can't check if the user voted yet!
   if (!proposals.length) {
     return;
@@ -162,7 +162,9 @@ useEffect(() => {
     .hasVoted(proposals[0].proposalId, address)
     .then((hasVoted) => {
       setHasVoted(hasVoted);
-      console.log("🥵 User has already voted")
+      if (hasVoted) {
+        console.log("🥵 User has already voted")
+      }
     })
     .catch((err) => {
       console.error("failed to check if wallet has voted", err);

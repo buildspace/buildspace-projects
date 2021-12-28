@@ -37,7 +37,9 @@ PROD_ALCHEMY_KEY=BLAHBLAH
 PRIVATE_KEY=BLAHBLAH
 ```
 
-(don't commit your .env after this lol).
+(don't commit your `.env` after this lol, make sure it's in your `.gitignore` file).
+
+Remember the change we made to `.gitignore` earlier? You can now revert it by removing the `hardhat.config.js` line, because now that file only contains variables representing your keys, and not your actual key info.
 
 🌎 A note on IPFS
 ----------------

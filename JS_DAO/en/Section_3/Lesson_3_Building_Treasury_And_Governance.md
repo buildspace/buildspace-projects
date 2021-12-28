@@ -53,7 +53,7 @@ const appModule = sdk.getAppModule(
       voteModule.address,
     );
   } catch (err) {
-    console.log("Failed to deploy vote module", err);
+    console.error("Failed to deploy vote module", err);
   }
 })();
 
@@ -61,7 +61,7 @@ const appModule = sdk.getAppModule(
 
 We’re using `deployVoteModule` to actually set up the contract. This will deploy a brand new voting contract!
 
-Notice how we give it `votingTokenAddress`, this is our contract knows which governance token to accept. We don’t want people randomly tryna use $DOGE to vote lol.
+Notice how we give it `votingTokenAddress`. This is our contract that knows which governance token to accept. We don’t want people randomly trying to use $DOGE to vote lol.
 
 We have `proposalStartWaitTimeInSeconds`, which can be useful if you want to give people some time to go over the proposal before they’re allowed to vote on it. Similarly, we have `proposalVotingTimeInSeconds` which just specifies how long someone has to vote once a proposal goes lives.
 
@@ -69,9 +69,9 @@ We have `proposalStartWaitTimeInSeconds`, which can be useful if you want to gi
 
 For the sake of example, let’s just do `votingQuorumFraction: 0` which means the proposal will pass regardless of what % of token was used on the vote. This means one person could technically pass a proposal themselves if the other members are on vacation lol. For now, this is fine. The quorum you set in the real world depends on your supply and how much you initially airdropped.
 
-Finally, we have we do `minimumNumberOfTokensNeededToPropose: "0"` which allows anyone to actually create a proposal even if they hold zero governance token. Up to you what you want to set this at! Let’s keep it at zero for now.
+Finally, we have `minimumNumberOfTokensNeededToPropose: "0"` which allows anyone to actually create a proposal even if they hold zero governance token. Up to you what you want to set this at! Let’s keep it at zero for now.
 
-Go ahead and run this using `scripts/8-deploy-vote.js`. Here’s what I end up getting:
+Go ahead and run this using `node scripts/8-deploy-vote.js`. Here’s what I end up getting:
 
 ```plaintext
 buildspace-dao-starter % node scripts/8-deploy-vote.js
@@ -80,7 +80,7 @@ buildspace-dao-starter % node scripts/8-deploy-vote.js
 
 ```
 
-This is pretty cool. Basically, we created and deployed a new smart contract that will let us actually vote on proposals on-chain. This is a standard [governance](https://docs.openzeppelin.com/contracts/4.x/api/governance) contract. You can see the exact contract you deployed [here](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/vote/VotingGovernance.sol).
+This is pretty cool. Basically, we created and deployed a new smart contract that will let us actually vote on proposals on-chain. This is a standard [governance](https://docs.openzeppelin.com/contracts/4.x/api/governance) contract. You can see the exact contract you deployed [here](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/vote/VotingGovernor.sol).
 
 If you head to `https://rinkeby.etherscan.io/` you’ll see it there!
 
@@ -160,7 +160,7 @@ const tokenModule = sdk.getTokenModule(
 
 A pretty simple script here! We do two things:
 
-1. We grab the total # of tokens we have in our wallet using `tokenModule.balanceOf`. Remember, right now our wallet will has basically the entire supply apart from the token we airdropped.
+1. We grab the total # of tokens we have in our wallet using `tokenModule.balanceOf`. Remember, right now our wallet has basically the entire supply apart from the token we airdropped.
 2. We take the total supply we own, get 90% of it, and transfer that 90% to the voting module using `tokenModule.transfer`. You can transfer 100% if you want to! But, maybe you wanna keep some token for yourself as the creator!
 
 Once you finish up, we can run this using `node scripts/9-setup-vote.js`. Here’s what I get as my output:
