@@ -28,7 +28,7 @@ Aqui está nosso SVG caixa preta novamente.
 </svg>
 ```
 
-Depois, precisamos de algum jeito pegear os dados das nossas NFT sem hospedar em algum lugar como o imgur (que pode cair ou morrer a qualquer momento!). Vá até [esse](https://www.utilities-online.info/base64) site. Cole todo o código SVG acima e clique em "encode" para pegar seu SVG base 64 encoded. Agora, está pronto para alguma mágica? Abra uma nova guia. E no URL, digite isso:
+Depois, precisamos de algum jeito pegar os dados das nossas NFT sem hospedar em algum lugar como o imgur (que pode cair ou morrer a qualquer momento!). Vá até [esse](https://www.utilities-online.info/base64) site. Cole todo o código SVG acima e clique em "encode" para pegar seu SVG base 64 encoded. Agora, está pronto para alguma mágica? Abra uma nova guia. E no URL, digite isso:
 
 ```plaintext
 data:image/svg+xml;base64,INSERT_YOUR_BASE64_ENCODED_SVG_HERE
@@ -52,7 +52,7 @@ Ok, **épico**. Essa é uma maneira de manter os dados da nossa imagem NFT perma
 
 Lembra dos metadados JSON?
 
-Então, eu mudei um pouco para nossas NFTs de três palavras :). Mesma coisa! Um nome, descrição e imagem. Mas agora, aoa invés de apontar para um link imgur, vamos apontar pra nossa string codificada com base64.
+Então, eu mudei um pouco para nossas NFTs de três palavras :). Mesma coisa! Um nome, descrição e imagem. Mas agora, ao invés de apontar para um link imgur, vamos apontar para a nossa string codificada com base64.
 
 ```json
 {
