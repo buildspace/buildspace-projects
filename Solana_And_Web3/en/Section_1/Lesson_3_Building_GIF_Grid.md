@@ -1,4 +1,4 @@
-We are moving right a long here! At this point we have: setup our React app, built a connect to wallet button, setup some conditional rendering based on the state of the user's Solana wallet.
+We are moving right along here! At this point we have: setup our React app, built a connect to wallet button, setup some conditional rendering based on the state of the user's Solana wallet.
 
 In our GIF Portal we want to be able to show GIFs that people submit to our app!
 
@@ -225,9 +225,9 @@ The flow will look a little something like this:
 
 Since we have this test data setup, we can easily simulate this fetch so it's just plug and play when we are ready to actually call our program!
 
-**We're doing a lot of set up here. Why? Because it'll be worth it later to not worry about this stuff.** Solana isn't ezpz, especially if you're new to Rust. So, its better to set up dumb UI stuff now we can fully focus on our Solana program after.
+**We're doing a lot of set up here. Why? Because it'll be worth it later to not worry about this stuff.** Solana isn't ezpz, especially if you're new to Rust. So, it's better to set up dumb UI stuff now we can fully focus on our Solana program after.
 
-Cool lets do this. We are going to hold our GIF list in a state property on our component. 
+Cool let's do this. We are going to hold our GIF list in a state property on our component. 
 
 So, let's start by creating this state property right under our `walletAddress` declaration: 
 
@@ -297,6 +297,21 @@ const renderConnectedContainer = () => (
     </div>
   );
 ```
+
+Now let's add a few lines to sendGif() so that when you submit the form, it adds the GIF to gifList and clears the text field :
+
+```javascript
+const sendGif = async () => {
+  if (inputValue.length > 0) {
+    console.log('Gif link:', inputValue);
+    setGifList([...gifList, inputValue]);
+    setInputValue('');
+  } else {
+    console.log('Empty input. Try again.');
+  }
+};
+```
+
 
 It's that easy. Now when we change our `useEffect` to fetch the GIF list from our Solana program, we will have it all ready to go to be rendered!
 
