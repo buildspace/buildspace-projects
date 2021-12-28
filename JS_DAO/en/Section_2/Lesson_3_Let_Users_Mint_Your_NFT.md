@@ -57,7 +57,7 @@ const App = () => {
       });
   }, [address]);
 
-  // ... include all your other code that was alread there below.
+  // ... include all your other code that was already there below.
 ```
 
 We just tell thirdweb that we want to be on Rinkeby using `new ThirdwebSDK("rinkeby")`. Then, we create `bundleDropModule` and all we need is the address of our deployed ERC-1155 contract! When we do this, thirdweb gives us a little object we can easily use to interact with our contract.
