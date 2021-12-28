@@ -118,6 +118,12 @@ const tokenModule = sdk.getTokenModule(
   }
 })();
 ```
+Remember that the address to insert here is your **Token Module address**. If you enter the wrong address, you might get an error like this one: 'UNPREDICTABLE_GAS_LIMIT'.
+
+Again, you can refer to your cool thirdweb dashboard for this address if you lost it! You should now see that the token module has popped up!
+
+![image](https://user-images.githubusercontent.com/73496577/147308250-cf6a90cb-fd4e-4ec0-b5be-f4b9a7e25e1f.png)
+
 
 So, here we’re actually minting the token supply and setting the `amount` we want to mint and set as the max supply of token. We then do `amountWith18Decimals` which is pretty important. Basically, it will convert our token supply number to a string with 18 decimal places. So, `1000000` turns into `"1000000.000000000000000000"` — it adds 18 decimal places and turns the # into a string. We do this for two reasons:
 
@@ -237,7 +243,7 @@ You could create your own little airdrop formula just like ENS did for example:
 
 ![Untitled](https://i.imgur.com/IqboZsX.png)
 
-You want to think — “The people who are receiving token will have more power over the DAO. Is this good? Are the biggest token holders going to do the right thing for the DAO?”.  This gets into the very broad topic of tokenomics which you can read about [here](https://www.google.com/search?q=tokenommics).
+You want to think — “The people who are receiving token will have more power over the DAO. Is this good? Are the biggest token holders going to do the right thing for the DAO?”.  This gets into the very broad topic of tokenomics which you can read about [here](https://www.google.com/search?q=tokenomics).
 
 Okay, so now if I head back to by ERC-20 contract on Etherscan, I can see all my new token holders and how much of`$HOKAGE` they own.
 
