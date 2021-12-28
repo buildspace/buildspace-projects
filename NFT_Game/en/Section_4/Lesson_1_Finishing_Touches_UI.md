@@ -260,7 +260,13 @@ The last spot we want to add some sort of loading indicator is in our `Arena` Co
 
 The cool thing about this component is we actually already have some state setup for this - `attackState` ! We know when an attack is happening when our `attackState`  == `attacking` so why don't we just use that?
 
-For this all we will need to do is add some conditional rendering in our HTML. Go ahead and add this: 
+For this all we will need to do is add some conditional rendering in our HTML. First make sure to import `LoadingIndicator` at the top of your Arena/index.jsx file like so:
+
+```javascript
+import LoadingIndicator from '../LoadingIndicator';
+```
+
+Then go ahead and add this: 
 
 ```javascript
 <div className="arena-container">
