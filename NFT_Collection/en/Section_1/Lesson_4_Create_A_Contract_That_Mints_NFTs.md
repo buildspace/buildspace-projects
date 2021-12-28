@@ -17,7 +17,7 @@ contract MyEpicNFT is ERC721URIStorage {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
-  // We need to pass the name of our NFTs token and it's symbol.
+  // We need to pass the name of our NFTs token and its symbol.
   constructor() ERC721 ("SquareNFT", "SQUARE") {
     console.log("This is my NFT contract. Woah!");
   }
@@ -94,7 +94,7 @@ The `tokenURI` is where the actual NFT data lives. And it usually **links** to a
 }
 ```
 
-You can customize this, but, almost every NFT has a name, description, and a link to something like a video, image, etc. It can even have custom attributes on it!
+You can customize this, but, almost every NFT has a name, description, and a link to something like a video, image, etc. It can even have custom attributes on it! Be careful with the structure of your metadata, if your structure does not match the [OpenSea Requirements](https://docs.opensea.io/docs/metadata-standards) your NFT will appear broken on the website.
 
 This is all part of the `ERC721` standards and it allows people to build websites on top of NFT data. For example, [OpenSea](https://opensea.io/assets) is a marketplace for NFTs. And, every NFT on OpenSea follows the `ERC721` metadata standard which makes it easy for people to buy/sell NFTs. Imagine if everyone followed their own NFT standards and structured their metadata however they wanted, it'd be chaos!
 
@@ -228,7 +228,7 @@ There are a few testnets out there and the one we'll be using is called "Rinkeby
 
 In order to deploy to Rinkeby, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-In order get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works lol.
+In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works lol.
 
 For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
@@ -245,7 +245,7 @@ You have a few faucets to choose from:
 🙃 Having trouble getting Testnet ETH?
 ------------------------
 
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the course will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
+If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
 
 🚀 Setup a deploy.js file
 ------------------------
@@ -306,6 +306,11 @@ module.exports = {
 You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
 
 **Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** We'll talk about `.env` variables later and how to keep this stuff secret.
+
+In the meantime - open your `.gitignore` file and add a line for `hardhat.config.js`. You can remove this later when you set up `.env`.
+```
+hardhat.config.js
+```
 
 Why do you need to use your private key? Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain and sign/deploy the contract. And, your username is your public address and your password is your private key. It's kinda like logging into AWS or GCP to deploy.
 

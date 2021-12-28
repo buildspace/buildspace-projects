@@ -6,7 +6,7 @@ I said earlier not to touch `lib.rs` because working locally and redeploying get
 
 So, basically w/ Solana I almost *never* work on `localnet` usually. It's just really annoying to switch between `localnet` and `devnet` constantly.
 
-Instead, I update my program and then to test it just my script via `anchor test` on `tests/myepicproject.js` to make sure stuff is working and Anchor will actually run the test on `devnet` directly which is pretty cool.
+Instead, I update my program and then, to test it, just run my script via `anchor test` on `tests/myepicproject.js` to make sure stuff is working and Anchor will actually run the test on `devnet` directly which is pretty cool.
 
 Then, when I'm ready to test the updates to my program on my web app — I just do an `anchor deploy`. From there you need to make sure you grab the updated IDL file for your web app.
 
@@ -45,7 +45,7 @@ It would be super cool if you loved a certain GIF submitted by another user SO M
 
 **Solana's super low gas fee means sending small amounts of money like this actually makes sense.** If you do this, you could even make a version of Patreon or BuyMeACoffee on Solana. Not that crazy. You have all the basic skills now.
 
-Who need Stripe and PayPal when you have a super low-gas fee blockchain that lets you instant payments?!?
+Who needs Stripe and PayPal when you have a super low-gas fee blockchain that lets you make instant payments?!?
 
 This is another thing I want you to figure out if you want by hanging out in the [Anchor Discord](https://discord.gg/8HwmBtt2ss) or by asking your fellow buildspacers. **Why am I not telling you the answers?** Haha, because I want you to be active in the Solana community, figure shit out, and learn by struggling a bit.
 

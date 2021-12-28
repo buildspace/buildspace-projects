@@ -12,7 +12,7 @@ Sorry for having you make so many accounts, but, this ecosystem is complex and w
 💳 Transactions
 ---------------
 
-So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction. Doing something that updates a variable in our contract is also considered a transaction. 
+So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction. Doing something that updates a variable in our contract is also considered a transaction.
 
 So when we call `wave` and it does `totalWaves += 1`, that's a transaction! **Deploying a smart contract is also a transaction.**
 
@@ -55,7 +55,7 @@ There are a few testnets out there and the one we'll be using is called "Rinkeby
 
 In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copy how mainnet works, only difference is no real money is involved.
 
-In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. 
+In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. Make sure that your MetaMask wallet is set to the "Rinkeby Test Network" before using faucet.
 
 For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
@@ -65,12 +65,13 @@ For MyCrypto, you'll need to connect your wallet, make an account, and then clic
 | Buildspace       | https://buildspace-faucet.vercel.app/ | 0.025           | 1d           |
 | Ethily           | https://ethily.io/rinkeby-faucet/     | 0.2             | 1w           |
 | Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
+| Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
 
 
 🙃 Having trouble getting Testnet ETH?
 -----------------------------------
 
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the course will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
+If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
 
 📈 Deploy to Rinkeby testnet.
 ---------------------------------
@@ -78,14 +79,14 @@ If the above doesn't work, use the `/faucet` command in the #faucet-request chan
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
 
 ```javascript
-require('@nomiclabs/hardhat-waffle');
+require("@nomiclabs/hardhat-waffle");
 
 module.exports = {
-  solidity: '0.8.0',
+  solidity: "0.8.0",
   networks: {
     rinkeby: {
-      url: 'YOUR_ALCHEMY_API_URL',
-      accounts: ['YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY'],
+      url: "YOUR_ALCHEMY_API_URL",
+      accounts: ["YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY"],
     },
   },
 };

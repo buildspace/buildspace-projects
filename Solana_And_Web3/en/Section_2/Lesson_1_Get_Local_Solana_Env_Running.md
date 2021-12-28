@@ -16,7 +16,7 @@ Back in 2015, I was really into machine learning and it was still pretty new. In
 
 That's the price of playing around with a piece of emerging technology :).
 
-I think Solana is in a similar spot and I really want to make it clear — ****don't expect a super clean developer experience. **You will likely run into random bumps and it's up to you to figure out an answer + help others.**
+I think Solana is in a similar spot and I really want to make it clear — **don't expect a super clean developer experience. You will likely run into random bumps and it's up to you to figure out an answer + help others.**
 
 I like this [tweet](https://twitter.com/armaniferrante/status/1434554725093949452) as well which kinda lays out a similar idea.
 
@@ -145,7 +145,7 @@ To install Anchor, go ahead an run:
 cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
 ```
 
-The above command may take a while. Once it's done, it may ask you to update you path, remember to do that.
+The above command may take a while. Once it's done, it may ask you to update your path, remember to do that.
 
 From here run:
 
@@ -174,10 +174,12 @@ cd myepicproject
 
 `anchor init` will create a bunch of files/folders for us. It's sorta like `create-react-app` in a way. We'll check out all the stuff it's created in moment.
 
+If you are running the project locally and don't have yarn installed `anchor init` will fail. To solve this you can install yarn by running `npm install --global yarn
+`.
 
 ### 🔑 Create a local keypair.
 
-Next thing we need to do is actually generate a local Solana wallet to work with. Don't worry about create a passphrase for now, just tap "Enter" when it asks.
+Next thing we need to do is actually generate a local Solana wallet to work with. Don't worry about creating a passphrase for now, just tap "Enter" when it asks.
 
 ```bash
 solana-keygen new

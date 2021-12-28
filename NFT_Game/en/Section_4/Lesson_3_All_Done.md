@@ -22,11 +22,11 @@ For example, let's say you're a great frontend engineer. If you finished this pr
 
 I just wanna inspire you to work in web3 lol. This shit is awesome. And it'd be cool if you gave it a shot ;).
 
-Be sure you click "Work in Web3" on the left and fill out your profile if you haven't done so already!!! **We're partnered w/ some of the best web3 companies in the world (ex. OpenSea, Chainlink, Edge and Node, and more) and th ey want to hire devs from the buildspace network :).** You've already picked up a skill that is actually extremely valuable and companies are paying top dollar for awesome web3 engineers.
+Be sure you click "Work in Web3" on the left and fill out your profile if you haven't done so already!!! **We're partnered w/ some of the best web3 companies in the world (ex. OpenSea, Chainlink, Edge and Node, and more) and they want to hire devs from the buildspace network :).** You've already picked up a skill that is actually extremely valuable and companies are paying top dollar for awesome web3 engineers.
 
 ### 🤟 Your NFT!
 
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 1-hour pls pls pls drop us a message in #feedback.
+We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
 
 ### 🌈 Before you head out.
 

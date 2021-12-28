@@ -2,19 +2,27 @@
 
 
 <h3 align="center">
-  <strong>Help build the future of the Decentralized Web.</strong>
+  <strong>Let's build the future of the internet.</strong>
 </h3>
 
 <p align="center">
-    <a href="https://discord.gg/CFuBU7RJ42">
-        <img src="https://img.shields.io/discord/869321815833575434?label=Discord" alt="Discord members online" />
-    </a>
     <a href=".github/CONTRIBUTING.md#-how-to-contribute">
         <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
     </a>
 </p>
 
 ---
+## 👋 Hey! Want to jump from web2 to web3?
+[Join our Discord](https://discord.gg/buildspace). We've built the world's largest community of web3 devs.
+
+Here's what you'll get:
+
+✅ a group of internet friends to build with.
+
+✅ the ability to earn NFTs as you build stuff.
+
+✅ access to web3 experts who can answer any question you have.
+
 
 ## 📚 Projects
 
@@ -35,7 +43,7 @@ If you are contributing to the English version, make sure your changes are done 
 
 Each project aligns with the content on your buildspace dashboard. Find the file you want to change and open up a Pull Request for it! Someone from the buildspace team will take a look at it ASAP!
 
-## 🤔 Why take this course on buildspace?
+## 🤔 Why take this project on buildspace?
 You have access to all of the content right here in GitHub!
 
    ### **Hack With Others And The buildspace Team**
@@ -202,6 +210,125 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/ashispavan"><img src="https://avatars.githubusercontent.com/u/11900337?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashis Pavan</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ashispavan" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.peterferguson.co.uk"><img src="https://avatars.githubusercontent.com/u/7002211?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Peter Ferguson</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=peterferguson" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.javi.rocks"><img src="https://avatars.githubusercontent.com/u/17650062?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Javi Llerenas</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=javillerenas" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/0xTobias"><img src="https://avatars.githubusercontent.com/u/86003813?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tobias</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xTobias" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://saarth.xyz"><img src="https://avatars.githubusercontent.com/u/42336020?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Saarth Deshpande</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=saarthdeshpande" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/hansestream"><img src="https://avatars.githubusercontent.com/u/80525443?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hansestream</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=hansestream" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/lucastaffo"><img src="https://avatars.githubusercontent.com/u/80546216?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucas Taffo</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=lucastaffo" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/MatthewAlbrecht"><img src="https://avatars.githubusercontent.com/u/7471272?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matthew Albrecht</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=MatthewAlbrecht" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://samcook.cc"><img src="https://avatars.githubusercontent.com/u/58375830?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sam Cook</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=sjc5" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://jakejohnson.us"><img src="https://avatars.githubusercontent.com/u/17039257?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jake Johnson</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jjohnson5253" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://vshalson.tech"><img src="https://avatars.githubusercontent.com/u/53016153?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vshalson</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Vshalson" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/obikaonusamuel22g44h/"><img src="https://avatars.githubusercontent.com/u/49449271?v=4?s=100" width="100px;" alt=""/><br /><sub><b>OBIKAONU SAMUEL</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=samicey" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://bilalmotiwala.space"><img src="https://avatars.githubusercontent.com/u/63723475?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Muhammad Bilal Motiwala</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=bilalmotiwala" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/marcinsola"><img src="https://avatars.githubusercontent.com/u/19410195?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marcin Sola</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=marcinsola" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/torquan"><img src="https://avatars.githubusercontent.com/u/22380775?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lυis</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=torquan" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.acollectionofatoms.me"><img src="https://avatars.githubusercontent.com/u/7197998?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ACollectionOfAtoms" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/moojing"><img src="https://avatars.githubusercontent.com/u/11360957?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mu-Jing-Tsai</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=moojing" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/oli-clive-griffin"><img src="https://avatars.githubusercontent.com/u/70186488?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oli Clive-Griffin</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=oli-clive-griffin" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/annezhou920"><img src="https://avatars.githubusercontent.com/u/22687249?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anne Zhou</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=annezhou920" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.rokkresearch.com"><img src="https://avatars.githubusercontent.com/u/1169132?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mike V</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=mikevoyt" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://seanleng.now.sh"><img src="https://avatars.githubusercontent.com/u/13825491?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sean</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=helloitsm3" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://josefig.com"><img src="https://avatars.githubusercontent.com/u/12861319?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jose Figueroa</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=J12ATA" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/AnuragMunda"><img src="https://avatars.githubusercontent.com/u/87273737?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anurag Munda</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=AnuragMunda" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/aptrishu"><img src="https://avatars.githubusercontent.com/u/22702242?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rishav Kumar</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=aptrishu" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://generics7.blogspot.com/"><img src="https://avatars.githubusercontent.com/u/1363884?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jaimin</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jpatel3" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/MatthewBenjamin"><img src="https://avatars.githubusercontent.com/u/4554972?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matthew Benjamin</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=MatthewBenjamin" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://andrewqu.me"><img src="https://avatars.githubusercontent.com/u/32676955?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Qu</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=quuu" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/carneym"><img src="https://avatars.githubusercontent.com/u/23642417?v=4?s=100" width="100px;" alt=""/><br /><sub><b>carneym</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=carneym" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/andrewkmin"><img src="https://avatars.githubusercontent.com/u/8583903?v=4?s=100" width="100px;" alt=""/><br /><sub><b>am</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=andrewkmin" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/tom-louwagie/"><img src="https://avatars.githubusercontent.com/u/36488178?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tom Louwagie</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=TomLouwagie" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://willworth.dev/"><img src="https://avatars.githubusercontent.com/u/4967253?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Will Worth</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=willworth" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/TylerWoolcott"><img src="https://avatars.githubusercontent.com/u/86615652?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tyler Woolcott</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=TylerWoolcott" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.reactever.com"><img src="https://avatars.githubusercontent.com/u/1310178?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julian Martinez</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=julianeon" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://jester.cafe"><img src="https://avatars.githubusercontent.com/u/1183817?v=4?s=100" width="100px;" alt=""/><br /><sub><b>F. Jovan Jester</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jester7" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.styloria.in"><img src="https://avatars.githubusercontent.com/u/58183359?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Deepak</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=deepak-likes-code" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://anhek.dev"><img src="https://avatars.githubusercontent.com/u/1397483?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonin Nhek</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=anhek" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/michaelnetter"><img src="https://avatars.githubusercontent.com/u/24876403?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Netter</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=michaelnetter" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://nathias.id"><img src="https://avatars.githubusercontent.com/u/7736324?v=4?s=100" width="100px;" alt=""/><br /><sub><b>nath1as</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=nath1as" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ArpitIngle"><img src="https://avatars.githubusercontent.com/u/37828045?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arpit Ingle</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ArpitIngle" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://linktr.ee/katieraby"><img src="https://avatars.githubusercontent.com/u/50029859?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Katie</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=katieraby" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://quiint.dev"><img src="https://avatars.githubusercontent.com/u/82949194?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Quiint</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=quiint" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Karl-EdwardFPJeanMehu"><img src="https://avatars.githubusercontent.com/u/7329138?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Karl-Edward F. P. Jean-Mehu</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Karl-EdwardFPJeanMehu" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/laitsky"><img src="https://avatars.githubusercontent.com/u/17923065?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vincent Diamond</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=laitsky" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://shaikharfan7.github.io/"><img src="https://avatars.githubusercontent.com/u/36654833?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arfan Shaikh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=shaikharfan7" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/aftr101"><img src="https://avatars.githubusercontent.com/u/30045098?v=4?s=100" width="100px;" alt=""/><br /><sub><b>aftr101</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=aftr101" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://dailey.eth"><img src="https://avatars.githubusercontent.com/u/13989985?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thomas Dailey</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=daileytj" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://brandonleafman.com"><img src="https://avatars.githubusercontent.com/u/17711952?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brandon Leafman</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=bleafman" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ellyg123"><img src="https://avatars.githubusercontent.com/u/84035493?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ellyg123</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ellyg123" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://stevedsimkins.dev"><img src="https://avatars.githubusercontent.com/u/73185218?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Steve Simkins</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=stevedsimkins" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/thierry-skoda-3719238a/"><img src="https://avatars.githubusercontent.com/u/6875849?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thierry Skoda</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=thierryskoda" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://ertyurk.com"><img src="https://avatars.githubusercontent.com/u/30368068?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ertyurk</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ertyurk" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/joshtsch"><img src="https://avatars.githubusercontent.com/u/14851820?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joshua Tscheschlog &#124; Dev #3635</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=joshtsch" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/tyirenkyi"><img src="https://avatars.githubusercontent.com/u/39198645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Timothy Yirenkyi</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=tyirenkyi" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/0xRadiant"><img src="https://avatars.githubusercontent.com/u/94811720?v=4?s=100" width="100px;" alt=""/><br /><sub><b>0xRadiant</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xRadiant" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://medium.com/@mathieutan"><img src="https://avatars.githubusercontent.com/u/20499416?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matanwrites</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=matanwrites" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Vxatz"><img src="https://avatars.githubusercontent.com/u/92011898?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vxatz</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Vxatz" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://ar.linkedin.com/in/jean-jacques-delannoy"><img src="https://avatars.githubusercontent.com/u/5834140?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jean Delannoy</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=chinchaun" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/directdetour"><img src="https://avatars.githubusercontent.com/u/16309528?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Young</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=directdetour" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://rol.fo"><img src="https://avatars.githubusercontent.com/u/7563743?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mathieu Rolfo</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=mathieurolfo" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://alecchendev.com"><img src="https://avatars.githubusercontent.com/u/30279834?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alec Chen</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=alecchendev" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/gbstox"><img src="https://avatars.githubusercontent.com/u/10839995?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gbstox</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=gbstox" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://dveni.github.io/"><img src="https://avatars.githubusercontent.com/u/28764301?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dani Vera</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=dveni" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/matt-sorg/"><img src="https://avatars.githubusercontent.com/u/4528634?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matt Sorg</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Tamgros" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/dnyy"><img src="https://avatars.githubusercontent.com/u/22489645?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=dnyy" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://jackyeh.me/"><img src="https://avatars.githubusercontent.com/u/6530117?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jack Yeh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jckyeh" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/maf88"><img src="https://avatars.githubusercontent.com/u/2613844?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antoine Moevus</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=maf88" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://mauricewillis.crypto"><img src="https://avatars.githubusercontent.com/u/21006138?v=4?s=100" width="100px;" alt=""/><br /><sub><b>maurice</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Immacio" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://pietroanello.dev"><img src="https://avatars.githubusercontent.com/u/43348480?v=4?s=100" width="100px;" alt=""/><br /><sub><b>pietroanello</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=pietroanello" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/snamber"><img src="https://avatars.githubusercontent.com/u/1277330?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stefan Amberger</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=snamber" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://vvandenb.herokuapp.com/"><img src="https://avatars.githubusercontent.com/u/56999402?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vandenbosch Vasco</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=vvandenb" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/mcintyre94"><img src="https://avatars.githubusercontent.com/u/1711350?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Callum McIntyre</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=mcintyre94" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/jdanner"><img src="https://avatars.githubusercontent.com/u/1596439?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jdanner</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jdanner" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/alexisweill"><img src="https://avatars.githubusercontent.com/u/13684308?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alexis Weill</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=alexisweill" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://kevinjones.engineer"><img src="https://avatars.githubusercontent.com/u/20748598?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Jones</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=joneskj55" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://awaxman.com"><img src="https://avatars.githubusercontent.com/u/1845114?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Waxman</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=awaxman11" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/vplasencia"><img src="https://avatars.githubusercontent.com/u/52170174?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vivian Plasencia</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=vplasencia" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ihanif"><img src="https://avatars.githubusercontent.com/u/459490?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ihanif</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ihanif" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://burak.id"><img src="https://avatars.githubusercontent.com/u/5032199?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Burak Özkırdeniz</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=burakozkirdeniz" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/rodacode"><img src="https://avatars.githubusercontent.com/u/10322616?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nico</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=rodacode" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/jeffreyiacono"><img src="https://avatars.githubusercontent.com/u/63325?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jeff Iacono</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jeffreyiacono" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/gerryhendrickx"><img src="https://avatars.githubusercontent.com/u/22911812?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gerryhendrickx</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=gerryhendrickx" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/akvashi24"><img src="https://avatars.githubusercontent.com/u/29390062?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adin Vashi</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=akvashi24" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/garricn"><img src="https://avatars.githubusercontent.com/u/13260696?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Garric G. Nahapetian</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=garricn" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/yoyothesheep"><img src="https://avatars.githubusercontent.com/u/33908481?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yoyothesheep</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=yoyothesheep" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://discord.com/users/suud#9841"><img src="https://avatars.githubusercontent.com/u/10183975?v=4?s=100" width="100px;" alt=""/><br /><sub><b>suud</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=suud" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/TrinidadHype"><img src="https://avatars.githubusercontent.com/u/12192595?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mitra</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=TrinidadHype" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://joaquimley.com"><img src="https://avatars.githubusercontent.com/u/6922748?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joaquim Ley</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=JoaquimLey" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ImTorres"><img src="https://avatars.githubusercontent.com/u/18602213?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Imtorres</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Imtorres" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Ando-O"><img src="https://avatars.githubusercontent.com/u/73496577?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ando-O</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Ando-O" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/sebitokazu"><img src="https://avatars.githubusercontent.com/u/27930663?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sebitokazu</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=sebitokazu" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/lucas-avila"><img src="https://avatars.githubusercontent.com/u/35459678?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucas Avila</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=avila-lucas" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/rshorser"><img src="https://avatars.githubusercontent.com/u/779867?v=4?s=100" width="100px;" alt=""/><br /><sub><b>rshorser</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=rshorser" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/kuriakinzeng"><img src="https://avatars.githubusercontent.com/u/1982709?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kuriakin Zeng</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=kuriakinzeng" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/zeosamaster"><img src="https://avatars.githubusercontent.com/u/11465535?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fábio Matias</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=zeosamaster" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://thesoorajsingh.hashnode.dev"><img src="https://avatars.githubusercontent.com/u/50406680?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sooraj Singh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=thesoorajsingh" title="Documentation">📖</a></td>
   </tr>
 </table>
 

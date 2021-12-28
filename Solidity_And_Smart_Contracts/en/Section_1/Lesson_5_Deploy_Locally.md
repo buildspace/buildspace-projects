@@ -36,14 +36,14 @@ const main = async () => {
   const [deployer] = await hre.ethers.getSigners();
   const accountBalance = await deployer.getBalance();
 
-  console.log('Deploying contracts with account: ', deployer.address);
-  console.log('Account balance: ', accountBalance.toString());
+  console.log("Deploying contracts with account: ", deployer.address);
+  console.log("Account balance: ", accountBalance.toString());
 
-  const Token = await hre.ethers.getContractFactory('WavePortal');
+  const Token = await hre.ethers.getContractFactory("WavePortal");
   const portal = await Token.deploy();
   await portal.deployed();
 
-  console.log('WavePortal address: ', portal.address);
+  console.log("WavePortal address: ", portal.address);
 };
 
 const runMain = async () => {
@@ -68,7 +68,7 @@ Now the command we're going to run to deploy locally is:
 npx hardhat run scripts/deploy.js --network localhost
 ```
 
-**You need make sure you do this from the** `my-wave-portal` **directory from a different terminal window. We don't want to mess with the terminal window that's keeping our local Ethereum network alive.**
+**You need to make sure you do this from the** `my-wave-portal` **directory from a different terminal window. We don't want to mess with the terminal window that's keeping our local Ethereum network alive.**
 
 Okay, so once I run that here's what I get:
 
@@ -88,7 +88,7 @@ INTERESTING. But...what's gas? What does it mean by block #1? What's the big cod
 🚨 Before you click "Next Lesson"
 -------------------------------------------
 
-Honestly, just give yourself a pat on the back. You've done a lot. Next we'll be actually building a website that will interact with our local Ethereum network and it's going to be awesome. Head to #progress and let me know how this course is going so far for you. I'd love your feedback.
+Honestly, just give yourself a pat on the back. You've done a lot. Next we'll be actually building a website that will interact with our local Ethereum network and it's going to be awesome. Head to #progress and let me know how this project is going so far for you. I'd love your feedback.
 
 
 🎁 Section Wrap Up

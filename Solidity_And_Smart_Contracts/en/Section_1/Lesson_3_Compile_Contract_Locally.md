@@ -29,7 +29,7 @@ So, this is what **`run.js`** is going to have:
 
 ```javascript
 const main = async () => {
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
   console.log("Contract deployed to:", waveContract.address);
@@ -81,7 +81,7 @@ console.log("Contract deployed to:", waveContract.address);
 
 Finally, once it's deployed `waveContract.address`  will basically give us the address of the deployed contract. This address is how we can actually find our contract on the blockchain. There are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will be more important a bit later once we deploy to a real Ethereum network.
 
-Lets run it!
+Let's run it!
 
 ```bash
 npx hardhat run scripts/run.js

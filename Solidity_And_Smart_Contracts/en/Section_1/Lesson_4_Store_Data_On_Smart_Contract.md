@@ -24,7 +24,7 @@ contract WavePortal {
     uint256 totalWaves;
 
     constructor() {
-        console.log("Yo yo, I am a contract am I am smart");
+        console.log("Yo yo, I am a contract and I am smart");
     }
 
     function wave() public {
@@ -43,7 +43,7 @@ Boom!
 
 So, that's how you write a function in Solidity.  And, we also added a `totalWaves` variable that automatically is initialized to 0. But, this variable is special because it's called a "state variable" and it's cool because it's stored permanently in contract storage.
 
-We also use some magic here with `msg.sender`. This is the wallet address of the person who called the function. This is awesome! It's like built in authentication. We know exactly who called the function because in order to even call a smart contract function, you need to be connected with a valid wallet!
+We also use some magic here with `msg.sender`. This is the wallet address of the person who called the function. This is awesome! It's like built-in authentication. We know exactly who called the function because in order to even call a smart contract function, you need to be connected with a valid wallet!
 
 In the future, we can write functions that only certain wallet addresses can hit. For example, we can change this function so that only our address is allowed to send a wave. Or, maybe have it where only your friends can wave at you!
 
@@ -65,7 +65,7 @@ So now we want to test those functions specifically!
 ```javascript
 const main = async () => {
   const [owner, randomPerson] = await hre.ethers.getSigners();
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
 
@@ -74,7 +74,7 @@ const main = async () => {
 
   let waveCount;
   waveCount = await waveContract.getTotalWaves();
-  
+
   let waveTxn = await waveContract.wave();
   await waveTxn.wait();
 
@@ -160,12 +160,12 @@ Check this out. I added a few lines at the bottom of the function. I'm not going
 ```javascript
 const main = async () => {
   const [owner, randomPerson] = await hre.ethers.getSigners();
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
 
-  console.log('Contract deployed to:', waveContract.address);
-  console.log('Contract deployed by:', owner.address);
+  console.log("Contract deployed to:", waveContract.address);
+  console.log("Contract deployed by:", owner.address);
 
   let waveCount;
   waveCount = await waveContract.getTotalWaves();

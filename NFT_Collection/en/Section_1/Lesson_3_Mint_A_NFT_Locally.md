@@ -2,7 +2,7 @@
 -------------------
 
 
-*Note: If you already know how to do a lot of the stuff in this section from the "WavePortal" project we ran in a prev project in the past, awesome! You'll get through this quickly :). Much of it is repeated.*
+*Note: If you already know how to do a lot of the stuff in this section from the "WavePortal" project we ran in the past, awesome! You'll get through this quickly :). Much of it is repeated.*
 
 Let's do a little clean-up.
 
@@ -50,7 +50,7 @@ This is the version of the Solidity compiler we want our contract to use. It bas
 import "hardhat/console.sol";
 ```
 
-Some magic given to us by Hardhat to do some console logs in our contract. It's actually challenging to debug smart contracts but this is one of the goodies Hardhat gives us to make life easier.
+Some magic given to us by Hardhat allows us to do some console logs in our contract. It's actually challenging to debug smart contracts but this is one of the goodies Hardhat gives us to make life easier.
 
 ```solidity
 contract MyEpicNFT {
@@ -125,7 +125,7 @@ What's happening here is Hardhat will create a local Ethereum network for us, bu
 await nftContract.deployed();
 ```
 
-We'll wait until our contract is officially mined and deployed to our local blockchain! That's right, hardhat actually creates faker "miners" on your machine to try its best to imitate the actual blockchain. 
+We'll wait until our contract is officially mined and deployed to our local blockchain! That's right, hardhat actually creates fake "miners" on your machine to try its best to imitate the actual blockchain. 
 
 Our `constructor` runs when we actually are fully deployed!
 

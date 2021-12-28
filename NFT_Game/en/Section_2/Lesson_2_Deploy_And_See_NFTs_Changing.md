@@ -62,7 +62,7 @@ I deploy using `npx hardhat run scripts/deploy.js --network rinkeby`. From there
 Contract deployed to: 0x02f59Dc14666c4480Ae4b477eFfF15949970dfeA 
 ```
 
-Once you wait a few min, sites like OpenSea or Rarible should you your NFT w/ it's update HP #.
+Once you wait a few mins, sites like OpenSea or Rarible should show your NFT w/ it's update HP #.
 
 So in this case, I minted one `Pikachu` character NFT and then had `Pikachu` attack `Elon Musk` twice. `Pikachu` **started at 300 HP**, so if he attacks Elon twice, then that means `Pikachu` should have 200 HP.
 

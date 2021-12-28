@@ -6,6 +6,7 @@ const sendGif = async () => {
     console.log("No gif link given!")
     return
   }
+  setInputValue('');
   console.log('Gif link:', inputValue);
   try {
     const provider = getProvider();
@@ -26,9 +27,7 @@ const sendGif = async () => {
 };
 ```
 
-Now, you'll be able to submit a link, approve the transaction Phantom, and your web app should now show you the GIF you just submitted :).
-
-**<insert video showing sendGif in action>**
+Now, you'll be able to submit a link, approve the transaction via Phantom, and your web app should now show you the GIF you just submitted :).
 
 ### 🙈 Solve the issue of the account not persisting.
 

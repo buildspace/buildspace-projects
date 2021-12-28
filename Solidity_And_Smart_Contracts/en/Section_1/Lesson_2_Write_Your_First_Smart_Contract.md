@@ -5,7 +5,7 @@ Awesome, we made it.
 
 We're just going to hop right into our project.
 
-Lets build a smart contract that lets us send a 👋 to our contract and keep track of the total # of waves. This is going to be useful because on your site, you might want to keep track of this #! Feel free to change this to fit your use case.
+Let's build a smart contract that lets us send a 👋 to our contract and keep track of the total # of waves. This is going to be useful because on your site, you might want to keep track of this #! Feel free to change this to fit your use case.
 
 Create a file named **`WavePortal.sol`** under the **`contracts`** directory. File structure is super important when using Hardhat, so, be careful here!
 
@@ -53,7 +53,7 @@ contract WavePortal {
 }
 ```
 
-So, smart contracts kinda look like a `class` in other languages, if you've ever seen those! Once we initialize this contract for the first time, that constructor will run and print out that line. Please make that line say whatever you want :)!
+So, smart contracts sort of look like a `class` in other languages, if you've ever seen those! Once we initialize this contract for the first time, that constructor will run and print out that line. Please make that line say whatever you want :)!
 
 In the next lesson, we'll run this and see what we get!
 
@@ -62,4 +62,4 @@ In the next lesson, we'll run this and see what we get!
 
 *Note: if you don't do this, Farza will be very sad :(.*
 
-Go to #progress and post a screenshot with your fancy contract :).
+Go to #progress and post a screenshot of your fancy contract in the WavePortal.sol file :).
