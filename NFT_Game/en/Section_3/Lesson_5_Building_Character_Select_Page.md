@@ -138,7 +138,7 @@ const renderCharacters = () =>
       <button
         type="button"
         className="character-mint-button"
-        onClick={mintCharacterNFTAction(index)}
+        onClick={() => mintCharacterNFTAction(index)}
       >{`Mint ${character.name}`}</button>
     </div>
   ));
