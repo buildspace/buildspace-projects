@@ -1,4 +1,4 @@
-*Note: this lesson is a bit longer than the others!*
+_Note: this lesson is a bit longer than the others!_
 
 Now that we got all our scripts good to go and the basics down, we're going to mint some NFTs! Here's what my updated `MyEpicNFT.sol` looks like:
 
@@ -63,7 +63,7 @@ Same thing here, we're using `_tokenIds` to keep track of the NFTs unique identi
 _safeMint(msg.sender, newItemId);
 ```
 
-When we do `_safeMint(msg.sender, newItemId)` it's pretty much saying: "mint the NFT with id `newItemId` to the user with address `msg.sender`". Here, `msg.sender` is a variable [Solidity itself provides](https://docs.soliditylang.org/en/develop/units-and-global-variables.html#block-and-transaction-properties) that easily gives us access to the **public address** of the person calling the contract. 
+When we do `_safeMint(msg.sender, newItemId)` it's pretty much saying: "mint the NFT with id `newItemId` to the user with address `msg.sender`". Here, `msg.sender` is a variable [Solidity itself provides](https://docs.soliditylang.org/en/develop/units-and-global-variables.html#block-and-transaction-properties) that easily gives us access to the **public address** of the person calling the contract.
 
 What's awesome here is this is a **super-secure way to get the user's public address**. Keeping public address itself a secret isn't an issue, that's already public!! Everyone sees it. But, by using `msg.sender` you can't "fake" someone else's public address unless you had their wallet credentials and called the contract on their behalf!
 
@@ -81,8 +81,7 @@ _tokenIds.increment();
 
 After the NFT is minted, we increment `tokenIds` using `_tokenIds.increment()` (which is a function OpenZeppelin gives us). This makes sure that next time an NFT is minted, it'll have a different `tokenIds` identifier. No one can have a `tokenIds` that's already been minted too.
 
-🎟 `tokenURI` and running locally.
-------------------------
+## 🎟 `tokenURI` and running locally.
 
 The `tokenURI` is where the actual NFT data lives. And it usually **links** to a JSON file called the `metadata` that looks something like this:
 
@@ -122,28 +121,26 @@ Under that line, we can also add a `console.log` to help us see when the NFT is 
 console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
 ```
 
-🎉 Mint an NFT locally.
-------------------------
+## 🎉 Mint an NFT locally.
 
 From here, all we'll need to do is actually change our `run.js` file to actually call our `makeAnEpicNFT()` function. Here's all we need to do:
 
 ```javascript
 const main = async () => {
-  const nftContractFactory = await hre.ethers.getContractFactory('MyEpicNFT');
+  const nftContractFactory = await hre.ethers.getContractFactory("MyEpicNFT");
   const nftContract = await nftContractFactory.deploy();
   await nftContract.deployed();
   console.log("Contract deployed to:", nftContract.address);
 
   // Call the function.
-  let txn = await nftContract.makeAnEpicNFT()
+  let txn = await nftContract.makeAnEpicNFT();
   // Wait for it to be mined.
-  await txn.wait()
+  await txn.wait();
 
   // Mint another NFT for fun.
-  txn = await nftContract.makeAnEpicNFT()
+  txn = await nftContract.makeAnEpicNFT();
   // Wait for it to be mined.
-  await txn.wait()
-
+  await txn.wait();
 };
 
 const runMain = async () => {
@@ -175,15 +172,13 @@ So, right now every time someone mints an NFT with this function, it's always th
 
 Now, let's move to the next step — deploying to a testnet :).
 
-🎉 Deploy to Rinkeby and see on OpenSea
-------------------------
+## 🎉 Deploy to Rinkeby and see on OpenSea
 
 When we use `run.js`, it's just us working locally.
 
-The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to to **view our NFT online** and we are a step closer to getting this to **real users.** 
+The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to to **view our NFT online** and we are a step closer to getting this to **real users.**
 
- 💳 Transactions
-------------------------
+## 💳 Transactions
 
 So, when we want to perform an action that changes the blockchain we call it a *transaction*. For example, sending someone ETH is a transaction because we're changing account balances. Doing something that updates a variable in our contract is also considered a transaction because we're changing data. Minting an NFT is a transaction because we're saving data on the contract.
 
@@ -204,13 +199,11 @@ So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57
 And then check out my video below to learn how to get your API key for a testnet:
 [Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0)
 
-🕸 Testnets
-------------------------
+## 🕸 Testnets
 
 We're not going to be deploying to the "Ethereum mainnet" for now. Why? Because it costs real $ and it's not worth messing up! We're just learning right now. We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake $ so we can test stuff out as much as we want. But, it's important to know that testnets are run by actual miners and mimic real-world scenarios.
 
 This is awesome because we can test our application in a real-world scenario where we're actually going to:
-
 
 1. Broadcast our transaction
 
@@ -220,9 +213,7 @@ This is awesome because we can test our application in a real-world scenario whe
 
 4. Wait for it be broadcasted back to the blockchain telling all the other miners to update their copies
 
-
-🤑 Getting some fake $
-------------------------
+## 🤑 Getting some fake $
 
 There are a few testnets out there and the one we'll be using is called "Rinkeby" which is run by the Ethereum foundation.
 
@@ -234,41 +225,39 @@ For MyCrypto, you'll need to connect your wallet, make an account, and then clic
 
 You have a few faucets to choose from:
 
-| MyCrypto | https://app.mycrypto.com/faucet 
+| MyCrypto | https://app.mycrypto.com/faucet
 
 | Buildspace | https://buildspace-faucet.vercel.app/
 
-| Ethily | https://ethily.io/rinkeby-faucet/ 
+| Ethily | https://ethily.io/rinkeby-faucet/
 
-| Official Rinkeby | https://faucet.rinkeby.io/ 
+| Official Rinkeby | https://faucet.rinkeby.io/
 
-🙃 Having trouble getting Testnet ETH?
-------------------------
+## 🙃 Having trouble getting Testnet ETH?
 
 If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
 
-🚀 Setup a deploy.js file
-------------------------
+## 🚀 Setup a deploy.js file
 
 It's good practice to separate your deploy script from your `run.js` script. `run.js` is where we mess around a lot, we want to keep it separate. Go ahead and create a file named `deploy.js` under the `scripts` folder. Copy-paste all of `run.js` into `deploy.js`. It's going to be exactly the same right now. I added some `console.log` statements, though.
 
 ```javascript
 const main = async () => {
-  const nftContractFactory = await hre.ethers.getContractFactory('MyEpicNFT');
+  const nftContractFactory = await hre.ethers.getContractFactory("MyEpicNFT");
   const nftContract = await nftContractFactory.deploy();
   await nftContract.deployed();
   console.log("Contract deployed to:", nftContract.address);
 
   // Call the function.
-  let txn = await nftContract.makeAnEpicNFT()
+  let txn = await nftContract.makeAnEpicNFT();
   // Wait for it to be mined.
-  await txn.wait()
-  console.log("Minted NFT #1")
+  await txn.wait();
+  console.log("Minted NFT #1");
 
-  txn = await nftContract.makeAnEpicNFT()
+  txn = await nftContract.makeAnEpicNFT();
   // Wait for it to be mined.
-  await txn.wait()
-  console.log("Minted NFT #2")
+  await txn.wait();
+  console.log("Minted NFT #2");
 };
 
 const runMain = async () => {
@@ -284,20 +273,19 @@ const runMain = async () => {
 runMain();
 ```
 
-**📈 Deploy to Rinkeby testnet.**
-------------------------
+## **📈 Deploy to Rinkeby testnet.**
 
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
 
 ```javascript
-require('@nomiclabs/hardhat-waffle');
+require("@nomiclabs/hardhat-waffle");
 
 module.exports = {
-  solidity: '0.8.0',
+  solidity: "0.8.0",
   networks: {
     rinkeby: {
-      url: 'YOUR_ALCHEMY_API_URL',
-      accounts: ['YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY'],
+      url: "YOUR_ALCHEMY_API_URL",
+      accounts: ["YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY"],
     },
   },
 };
@@ -334,8 +322,7 @@ Get used to using Etherscan because it's like the easiest way to track deploymen
 
 If it worked — AWEEEEESOME YOU JUST DEPLOYED A CONTRACT YESSSS.
 
-🌊 View on OpenSea
-------------------------
+## 🌊 View on OpenSea
 
 Believe it or not. The NFTs you just minted will be on OpenSea's TestNet site.
 
@@ -349,11 +336,11 @@ So here, you'd click "SquareNFT" under "Collections", and boom you'll see the NF
 
 HOOOOLY SHIT LETS GO. IM HYPE **FOR** YOU.
 
-Pretty epic, we've created our own NFT contract *and* minted two NFTs. Epic. WHILE THIS IS EPIC, it is *kinda lame —* right? It's just the same Spongebob picture every time! How can we add some randomness to this and generate stuff on the fly? That's what we'll be getting into next :).
+Pretty epic, we've created our own NFT contract _and_ minted two NFTs. Epic. WHILE THIS IS EPIC, it is _kinda lame —_ right? It's just the same Spongebob picture every time! How can we add some randomness to this and generate stuff on the fly? That's what we'll be getting into next :).
 
-🙀 Help my NFTs aren't showing on OpenSea!
-------------------------
- **If your NFTs aren't showing up on OpenSea** — wait a few minutes, sometimes OpenSea can take like 5-minutes. Here's my advice, if it's been 5 minutes and your metadata still looks like this:
+## 🙀 Help my NFTs aren't showing on OpenSea!
+
+**If your NFTs aren't showing up on OpenSea** — wait a few minutes, sometimes OpenSea can take like 5-minutes. Here's my advice, if it's been 5 minutes and your metadata still looks like this:
 
 ![Untitled](https://i.imgur.com/dVACrDl.png)
 
@@ -364,25 +351,23 @@ Pretty epic, we've created our own NFT contract *and* minted two NFTs. Epic. WHI
 
 For example, here's my link: https://rinkeby.rarible.com/token/0xb6be7bd567e737c878be478ae1ab33fcf6f716e0:0 for the Spongebob NFT!! My `tokenId` is `0` because it was the first mint from that contract.
 
-**Basically, if you don't see your NFT on OpenSea within a few minutes, try Rarible and Rarible URLs for the rest of the project.** 
+**Basically, if you don't see your NFT on OpenSea within a few minutes, try Rarible and Rarible URLs for the rest of the project.**
 
-
-💻 The code
-------------------------
+## 💻 The code
 
 [Here](https://gist.github.com/farzaa/483c04bd5929b92d6c4a194bd3c515a5) is a link to what our code looks like up to this point.
 
-🚨Progress report.
-------------------------
+## 🚨Progress report.
+
 WOOOOOOO. GIVE YOURSELF A PAT ON THE BACK. YOU DEPLOYED A SMART CONTRACT THAT MINTS NFTS. WOW.
 
 Good stuff :).
 
-You should totally **tweet** out that you just wrote and deployed your smart contract that can mint NFTs and tag @_buildspace. If you want, include a screenshot of the OpenSea/Rarible page that shows that your NFT :)!
+You should totally **tweet** out that you just wrote and deployed your smart contract that can mint NFTs and tag @\_buildspace. If you want, include a screenshot of the OpenSea/Rarible page that shows that your NFT :)!
 
-You should feel awesome about the fact that you're actually building stuff everyone else is just talking about.  You got superpowers :).
+You should feel awesome about the fact that you're actually building stuff everyone else is just talking about. You got superpowers :).
 
-*Ty to the people who have already been tweeting about us, y'all are legends <3.*
+_Ty to the people who have already been tweeting about us, y'all are legends <3._
 
 ![](https://i.imgur.com/ftXoVsn.png)
 

@@ -1,13 +1,30 @@
-🤘 Create our SVG
---------------------
+## 🤘 Create our SVG
 
 Here's our black box SVG again.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350">
-    <style>.base { fill: white; font-family: serif; font-size: 14px; }</style>
-    <rect width="100%" height="100%" fill="black" />
-    <text x="50%" y="50%" class="base" dominant-baseline="middle" text-anchor="middle">EpicLordHamburger</text>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  preserveAspectRatio="xMinYMin meet"
+  viewBox="0 0 350 350"
+>
+  <style>
+    .base {
+      fill: white;
+      font-family: serif;
+      font-size: 14px;
+    }
+  </style>
+  <rect width="100%" height="100%" fill="black" />
+  <text
+    x="50%"
+    y="50%"
+    class="base"
+    dominant-baseline="middle"
+    text-anchor="middle"
+  >
+    EpicLordHamburger
+  </text>
 </svg>
 ```
 
@@ -31,8 +48,7 @@ Okay, **epic**. This is a way to keep our NFTs image data permanent and availabl
 
 ![Untitled](https://i.imgur.com/f9mXVSb.png)
 
-☠️ Get rid of the hosted JSON.
---------------------
+## ☠️ Get rid of the hosted JSON.
 
 Remember our JSON metadata?
 
@@ -40,9 +56,9 @@ Well, I changed it just a little bit for our three-word NFTs :). Same thing! A n
 
 ```json
 {
-    "name": "EpicLordHamburger",
-    "description": "An NFT from the highly acclaimed square collection",
-    "image": "data:image/svg+xml;base64,INSERT_YOUR_BASE64_ENCODED_SVG_HERE"
+  "name": "EpicLordHamburger",
+  "description": "An NFT from the highly acclaimed square collection",
+  "image": "data:image/svg+xml;base64,INSERT_YOUR_BASE64_ENCODED_SVG_HERE"
 }
 ```
 
@@ -52,15 +68,15 @@ For example, mine looks like this:
 
 ```json
 {
-    "name": "EpicLordHamburger",
-    "description": "An NFT from the highly acclaimed square collection",
-    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAzNTAgMzUwIj4NCiAgICA8c3R5bGU+LmJhc2UgeyBmaWxsOiB3aGl0ZTsgZm9udC1mYW1pbHk6IHNlcmlmOyBmb250LXNpemU6IDE0cHg7IH08L3N0eWxlPg0KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9ImJsYWNrIiAvPg0KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBjbGFzcz0iYmFzZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RXBpY0xvcmRIYW1idXJnZXI8L3RleHQ+DQo8L3N2Zz4="
+  "name": "EpicLordHamburger",
+  "description": "An NFT from the highly acclaimed square collection",
+  "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAzNTAgMzUwIj4NCiAgICA8c3R5bGU+LmJhc2UgeyBmaWxsOiB3aGl0ZTsgZm9udC1mYW1pbHk6IHNlcmlmOyBmb250LXNpemU6IDE0cHg7IH08L3N0eWxlPg0KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9ImJsYWNrIiAvPg0KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBjbGFzcz0iYmFzZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RXBpY0xvcmRIYW1idXJnZXI8L3RleHQ+DQo8L3N2Zz4="
 }
 ```
 
 But wait — where will our fancy new JSON file go? Right now, we host it on [this](https://jsonkeeper.com/) random website. If that website goes down, our beautiful NFT is gone forever! Here's what we're going to do. **We're going to base64 encode our entire JSON file.** Just like we encoded our SVG.
 
-Head to [this](https://www.utilities-online.info/base64) website again. Paste in your full JSON metadata with the base64 encoded SVG (should look sorta like what I have above) and then click "encode" to get you encoded JSON. 
+Head to [this](https://www.utilities-online.info/base64) website again. Paste in your full JSON metadata with the base64 encoded SVG (should look sorta like what I have above) and then click "Q
 
 Open a new tab. And in the URL bar paste this:
 
@@ -82,9 +98,7 @@ Here's a screenshot of mine:
 
 Note: It's **very easy** to mess up here when your encoding + copy-pasting stuff. So, be very careful!!! And double-check everything works. If things are breaking, follow all the steps again!
 
-
-🚀 Change up our contract, deploy.
---------------------
+## 🚀 Change up our contract, deploy.
 
 Okay awesome, we've got this fancy base64 encoded JSON file. How do we get it on our contract? Simple head to `MyEpicNFT.sol` and — we just copy-paste the whole big string into our contract.
 
@@ -108,10 +122,10 @@ npx hardhat run scripts/deploy.js --network rinkeby
 
 Then same as before, wait a minute or two, take the contract address, search it on [https://testnets.opensea.io/](https://testnets.opensea.io/) and you should see your NFT there :). Again, don't click "Enter" when searching -- you need to actually click the collection when it pops up in the search bar.
 
-Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE` if OpenSea is being slow. 
+Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE` if OpenSea is being slow.
 
 ![Untitled](https://i.imgur.com/Z2mKTpK.png)
 
-🚨Progress report.
-------------------------
+## 🚨Progress report.
+
 If you get a fancy NFT, make sure to send a screenshot of it on OpenSea in the `#progress` channel in Discord!
