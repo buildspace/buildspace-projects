@@ -186,7 +186,7 @@ Então, quando nós quisermos performar uma ação que mude a blockchain, nós c
 
 Lembre-se, a blockchain não tem dono. É só um monte de computadores ao redor do mundo rodando através de **mineradores** que tem a cópia da blockchain.
 
-Quando implementarmos nosso contrato,  nós preciamos falar  **para todos esses** mineradores, "ei, esse é um contrato inteligente novo, por favor adicione meu contrato inteligente à blockchain e diga para todo mundo sobre ele também".
+Quando implementarmos nosso contrato,  nós precisamos falar  **para todos esses** mineradores, "ei, esse é um contrato inteligente novo, por favor adicione meu contrato inteligente à blockchain e diga para todo mundo sobre ele também".
 
 Aqui é onde o [Alchemy](https://alchemy.com/?r=b93d1f12b8828a57) entra.
 
@@ -196,7 +196,7 @@ Isso é complicado. E, não se preocupe se você não entendeu completamente. En
 
 Então, crie uma conta com o Alchemy [aqui](https://alchemy.com/?r=b93d1f12b8828a57).
 
-E depois dê uma olhada no meu vídeo abaixo para aprender como pegar sua API key para uma testnet: 
+E depois dê uma olhada no meu vídeo abaixo para aprender como pegar sua API key para uma testnet:
 [Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0)
 )
 
@@ -233,7 +233,6 @@ Você tem alguns faucets para escolher:
 | Ethily | https://ethily.io/rinkeby-faucet/
 
 | Official Rinkeby | https://faucet.rinkeby.io/
-
 
 ## 🚀 Configurar um arquivo deploy.js
 
@@ -293,7 +292,7 @@ Você pode conseguir URL da sua API no dashboard do Alchemy e colar ali mesmo. D
 
 **Nota: NÃO FAÇA COMMIT DESSE ARQUIVO NO GITHUB. ELE CONTÉM SUA CHAVE PRIVADA. VOCÊ PODE SER ROUBADO E HACKEADO. ESSA CHAVE PRIVADA É A MESMA QUE A DA MAINNET.** Nós vamos falar sobre variáveis `.env` depois e como mantê-las em segredo.
 
-Por quê você precisa dessa chave privada? Porque para perfomar uma transação como fazer deploy de um contrato, você precisa "logar" na blockchain e assinar/ fazer deploy do contrato. E, o seu nome de usuário é o seu endereço público, e sua senha é sua chave privada. É como fazer login na AWS ou GCP para fazer deploy.
+Por quê você precisa dessa chave privada? Porque para performar uma transação como fazer deploy de um contrato, você precisa "logar" na blockchain e assinar/ fazer deploy do contrato. E, o seu nome de usuário é o seu endereço público, e sua senha é sua chave privada. É como fazer login na AWS ou GCP para fazer deploy.
 
 Uma vez que você configurou o seu setup, estamos prontos para fazer o deploy com o script que escrevemos mais cedo.
 
@@ -311,7 +310,7 @@ Quando eu rodo esse comando, esse é o resultado (o seu vai ser diferente):
 
 Podemos ter certeza que tudo funcionou corretamente usando o [Rinkeby Etherscan](https://rinkeby.etherscan.io/) onde você pode colar o endereço do contrato e ver o que está acontecendo com ele.
 
-Se acostume a usar o Etherscan porque é a maneira mais fácil de acompanhar os deploys e se alguma coisa der errado. Se não está aparecendo no Etherscan, significa que ou está processando ainda ou algo deu errado. 
+Se acostume a usar o Etherscan porque é a maneira mais fácil de acompanhar os deploys e se alguma coisa der errado. Se não está aparecendo no Etherscan, significa que ou está processando ainda ou algo deu errado.
 
 Se funcionou - INCRÍVEL!!! VOCÊ ACABOU DE IMPLEMENTAR UM CONTRATO!
 
@@ -349,5 +348,3 @@ Por exemplo, esse é meu link: https://rinkeby.rarible.com/token/0xb6be7bd567e73
 ## 💻 O código
 
 [Aqui](https://gist.github.com/farzaa/483c04bd5929b92d6c4a194bd3c515a5) está um link para como o nosso código se parece até esse ponto.
-
-
