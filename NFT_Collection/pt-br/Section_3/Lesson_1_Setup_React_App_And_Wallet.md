@@ -1,5 +1,4 @@
-🤯 Replit
----------------------
+## 🤯 Replit
 
 Nós vamos usar essa coisa chamada  [Replit](https://replit.com/~)!
 
@@ -9,16 +8,15 @@ Nota: **Você não precisa usar o replit para construir + fazer deploy do seu si
 
 Crie uma conta no Replit antes de seguir em frente.
 
-Eu já criei um projecto básico em react que você pode fazer o  **fork** no Replit.  **Apenas vá [aqui](https://replit.com/@adilanchian/nft-starter-project?v=1), e perto da direita você verá o botão de Fork.** Tenha certeza que você está logado, e clique nisso.
+Eu já criei um projeto básico em react que você pode fazer o  **fork** no Replit.  **Apenas vá [aqui](https://replit.com/@adilanchian/nft-starter-project?v=1), e perto da direita você verá o botão de Fork.** Tenha certeza que você está logado, e clique nisso.
 
-Você irá magicamente clonar meu repositória e a IDE inteira no seu navegador para trabalhar com o código. Uma vez que parar de carregar e mostrar algum código, clique em "run" em cima e você está pronto. Pode levar 2 a 4 minutos na primeira vez.
+Você irá magicamente clonar meu repositório e a IDE inteira no seu navegador para trabalhar com o código. Uma vez que parar de carregar e mostrar algum código, clique em "run" em cima e você está pronto. Pode levar 2 a 4 minutos na primeira vez.
 
 **Nota: Ao longo desse projeto, você pode perceber que nós estamos referenciando arquivos `.js`. No Replit, se você estiver criando novos arquivos JavaScript, você vai precisar usar a extensão `.jsx`! Replit tem algumas performances chiques que pedem que você usa `.jsx` na extensão de arquivo :).**
 
-🦊 Configurar o Metamask
----------------------
+## 🦊 Configurar o Metamask
 
-Incrível, nós temos um projecto em React **já feito o deploy** que podemos trabalhar facilmente. Isso foi simples :).
+Incrível, nós temos um projeto em React **já feito o deploy** que podemos trabalhar facilmente. Isso foi simples :).
 
 Após isso, precisamos de uma carteira Ethereum. Existem muitas, mas para esse projeto, vamos usar o Metamask. Baixe a extensão de navegador e configure sua carteira [aqui](https://metamask.io/download.html). Mesmo que você já usar outra carteira, só use o Metamask por agora.
 

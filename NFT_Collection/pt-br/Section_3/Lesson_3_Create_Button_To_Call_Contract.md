@@ -132,7 +132,7 @@ Você deve estar pronto para mintar uma NFT direto do seu site agora. **Isso é 
 
 Eu testei todo o código no vídeo ABI que linkei acima. Tenha certeza de assisti-lo. Eu passo por coisas super importantes sobre o que fazer quando você **muda** o contrato. Porque o seu contrato é permanente, mudanças requerem fazer outro deploy, atualizar o endereço no frontend, e finalmente atualizar o arquivo ABI no frontend
 
-## ✈️ Uma nota em redeploys de contrato
+## ✈️ Uma nota sobre o redeploy do contrato
 
 Digamos que você quer mudar seu contrato. Você precisa de 3 coisas:
 

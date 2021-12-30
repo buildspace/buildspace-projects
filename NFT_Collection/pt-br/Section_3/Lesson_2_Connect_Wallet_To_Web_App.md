@@ -80,7 +80,7 @@ Então quando você rodar isso, você deve ver aquela linha "We have the Ethereu
 
 **BOA.**
 
-Depois, nós precisamos checar se estamos autorizados mesmo a acessar a carteira do usuário. Uma vez que tivermos acesso a isso, podemos chamar noss contrato inteligente.
+Depois, nós precisamos checar se estamos autorizados mesmo a acessar a carteira do usuário. Uma vez que tivermos acesso a isso, podemos chamar nosso contrato inteligente.
 
 Basicamente, o Metamask não dá as credenciais da carteira para todo website que vamos. Ele apenas dá para sites que foram autorizados. De novo, é como fazer login! Mas, o que estamos fazendo aqui é  **checando se estamos logados.**
 
