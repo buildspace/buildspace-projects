@@ -153,7 +153,7 @@ If you disconnect your wallet you should see a circular loading indicator. We sh
 
 In our `SelectCharacter` Component we are going to be minting a character NFT. This is definitely a cool time to add some cool loading indicator. I have the perfect one in mine 👀
 
-Let's start by heading to this `Components/SelectCharacter/index.js` . Just like in `App.js` , we are going to want to hold state to know when we are the minting phase or not. Start by adding a new state property like so:
+Let's start by heading to this `Components/SelectCharacter/index.jsx` . Just like in `App.js` , we are going to want to hold state to know when we are the minting phase or not. Start by adding a new state property like so:
 
 ```javascript
 // State

@@ -10,11 +10,11 @@ Nice. So it looks like we have three different views we need to create! We are g
 
 ### 🧱 Setting up the SelectCharacter Component.
 
-Let's start off with creating our `SelectCharacter` Component! Head to the `src/Components/SelectCharacter` folder and create a new file named `index.js` . This directory will hold the core logic for our `SelectCharacter` component as well as it's styling! You should already see a `SelectCharacter.css` file in there with a bunch of styling! 
+Let's start off with creating our `SelectCharacter` Component! Head to the `src/Components/SelectCharacter` folder and create a new file named `index.jsx` . This directory will hold the core logic for our `SelectCharacter` component as well as it's styling! You should already see a `SelectCharacter.css` file in there with a bunch of styling! 
 
 Oh, one thing to note - you probably see the `LoadingIndicator` component in the `Components` folder. Don't worry about that just yet, we will get to it later 🤘.
 
-Now that we have our folder structure all setup, let's go ahead and add the base logic for a component. Start by creating a new file named `index.js` in your fresh `SelectCharacter` folder. In this folder go ahead and add the following code:
+Now that we have our folder structure all setup, let's go ahead and add the base logic for a component. Start by creating a new file named `index.jsx` in your fresh `SelectCharacter` folder. In this folder go ahead and add the following code:
 
 ```javascript
 import React, { useEffect, useState } from 'react';

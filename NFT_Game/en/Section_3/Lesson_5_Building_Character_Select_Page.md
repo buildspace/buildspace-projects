@@ -7,7 +7,7 @@ Before you begin, be sure to remove any function calls to mint a character or at
 
 ### ♻️ Setting up a reusable contract object.
 
-Since we know we are going to use our Smart Contract let's start by setting up or `ethers` object to interact with it. It's going to be the same flow as before, with a little twist. Let's start by importing all the things in `Components/SelectCharacter/index.js` :
+Since we know we are going to use our Smart Contract let's start by setting up or `ethers` object to interact with it. It's going to be the same flow as before, with a little twist. Let's start by importing all the things in `Components/SelectCharacter/index.jsx` :
 
 ```javascript
 import React, { useEffect, useState } from 'react';
@@ -40,7 +40,7 @@ const SelectCharacter = ({ setCharacterNFT }) => {
 export default SelectCharacter;
 ```
 
-As soon as our component is mounted, we are going to want to create our `gameContract` to start using right away! We want to display our mint-able characters as soon as possible. Which means we need to call our contract ASAP. Note: This block of code goes under the useState variable ie. under `const [gameContract, setGameContract] = useState(null);`. 
+As soon as our component is mounted, we are going to want to create our `gameContract` to start using right away! We want to display our mint-able characters as soon as possible. Which means we need to call our contract ASAP. Note: This block of code goes under the useState variable ie. under `const [gameContract, setGameContract] = useState(null);`.
 
 ```javascript
 // UseEffect
