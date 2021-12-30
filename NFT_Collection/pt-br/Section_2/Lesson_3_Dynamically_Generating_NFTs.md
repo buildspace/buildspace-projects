@@ -65,3 +65,16 @@ Isso pode ser um pouco irritante para alguns aplicativos como o nosso aqui! Em q
 
 ✨  Criando o SVG dinamicamente.
 ------------------
+
+Verifique a variável `string baseSvg` no contrato. Isso ta louco demais rs. Basicamente, a única parte do nosso SVG que muda é o combo de três palavras, certo? Então o que fazemos é criar uma variável `baseSvg` que podemos reutilizar continuamente conforme criamos novos NFTs.
+
+
+Em seguida, reunimos tudo usando:
+
+```
+string memory finalSvg = string(abi.encodePacked(baseSvg, first, second, third, "</text></svg>"));
+```
+`</text></svg>` são as tags de fechamento! Então, para `finalSvg`, estamos dizendo: "Ei - vá combinar meu baseSVG, meu combo de três palavras que acabei de gerar e minhas tags de fechamento." É isso aí :)! Parece assustador, mas tudo o que estamos fazendo é trabalhar com o código SVG.
+
+😎 Run it!
+------------------------
