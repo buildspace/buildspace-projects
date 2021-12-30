@@ -57,9 +57,7 @@ O que isso está fazendo é pegar duas coisas: a string atual `FIRST_WORD` e uma
 
 **Isso não é aleatoriedade verdadeira.** Mas é o melhor que temos por agora!
 
-There are other ways to generate random numbers on the blockchain (check out [Chainlink](https://docs.chain.link/docs/chainlink-vrf/)) but Solidity doesn't natively give us anything reliable because it can't! All the #'s our contract can access are public and never truly random.
-
-Existem outras maneiras de gerar números aleatórios no blockchain (verifique o [Chainlink] (https://docs.chain.link/docs/chainlink-vrf/)), mas o Solidity nativamente não nos dá nada confiável porque não pode! Todos as varaiveis que nosso contrato pode acessar são públicas e nunca verdadeiramente aleatórios.
+Existem outras maneiras de gerar números aleatórios no blockchain (verifique o [Chainlink](https://docs.chain.link/docs/chainlink-vrf/)), mas o Solidity nativamente não nos dá nada confiável porque não pode! Todos as varaiveis que nosso contrato pode acessar são públicas e nunca verdadeiramente aleatórios.
 
 Isso pode ser um pouco irritante para alguns aplicativos como o nosso aqui! Em qualquer caso, ninguém vai atacar nosso pequeno aplicativo, mas quero que você saiba de tudo isso quando estiver construindo um dApp que tem milhões de usuários!
 
@@ -76,5 +74,5 @@ string memory finalSvg = string(abi.encodePacked(baseSvg, first, second, third, 
 ```
 `</text></svg>` são as tags de fechamento! Então, para `finalSvg`, estamos dizendo: "Ei - vá combinar meu baseSVG, meu combo de três palavras que acabei de gerar e minhas tags de fechamento." É isso aí :)! Parece assustador, mas tudo o que estamos fazendo é trabalhar com o código SVG.
 
-😎 Run it!
+😎 Executando!
 ------------------------
