@@ -36,3 +36,32 @@ Observação: Eu comendo entre 15-20 palavras por array. Notei que cerca de 10 g
 
 🥴 Números aleatórios.
 ------------------
+
+```solidity
+function pickRandomFirstWord
+```
+
+Esta função parece meio descoladona, né? Vamos falar sobre como estamos escolhendo aleatoriamente as coisas dos arrays
+
+Então, gerar um número aleatório em contratos inteligentes é amplamente conhecido como um **problema difícil**.
+
+Por quê? Bem, pense em como um número aleatório é gerado normalmente. Quando você gera um número aleatório normalmente em um programa, **pegará vários números diferentes de seu computador como uma fonte de aleatoriedade** como: a velocidade das ventoinhas, a temperatura da CPU, o número de vezes que você pressionou "L" às 15:52 desde que comprou o computador, a velocidade da sua internet e vários outros variáveis que são difíceis de controlar. Ele pega **todos** esses números que são "aleatórios" e os coloca juntos em um algoritmo que gera um número que parece ser a melhor tentativa de um número verdadeiramente "aleatório". Fez sentido?
+
+No blockchain, não há **quase nenhuma fonte de aleatoriedade**. É determinista e tudo o que o contrato vê, o público vê. Por causa disso, alguém poderia enganar o sistema apenas olhando para o smart contract, vendo em que variável ele se baseia para aleatoriedade, e então a pessoa poderia manipulá-lo, se quisesse.
+
+```solidity
+random(string(abi.encodePacked("FIRST_WORD", Strings.toString(tokenId))));
+```
+
+O que isso está fazendo é pegar duas coisas: a string atual `FIRST_WORD` e uma versão stringificada do` tokenId`. Eu combino essas duas strings usando `abi.encodePacked` e então essa string combinada é o que eu uso como fonte de aleatoriedade.
+
+**Isso não é aleatoriedade verdadeira.** Mas é o melhor que temos por agora!
+
+There are other ways to generate random numbers on the blockchain (check out [Chainlink](https://docs.chain.link/docs/chainlink-vrf/)) but Solidity doesn't natively give us anything reliable because it can't! All the #'s our contract can access are public and never truly random.
+
+Existem outras maneiras de gerar números aleatórios no blockchain (verifique o [Chainlink] (https://docs.chain.link/docs/chainlink-vrf/)), mas o Solidity nativamente não nos dá nada confiável porque não pode! Todos as varaiveis que nosso contrato pode acessar são públicas e nunca verdadeiramente aleatórios.
+
+Isso pode ser um pouco irritante para alguns aplicativos como o nosso aqui! Em qualquer caso, ninguém vai atacar nosso pequeno aplicativo, mas quero que você saiba de tudo isso quando estiver construindo um dApp que tem milhões de usuários!
+
+✨  Criando o SVG dinamicamente.
+------------------
