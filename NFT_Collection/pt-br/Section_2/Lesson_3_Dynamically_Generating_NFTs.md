@@ -76,3 +76,88 @@ string memory finalSvg = string(abi.encodePacked(baseSvg, first, second, third, 
 
 😎 Executando!
 ------------------------
+
+Depois de escrever tudo, vá em frente e execute-o usando `npx hardhat run scripts0/run.js`. Verifique a saida produzido por `console.log(finalSvg);`.
+
+Isto é oque aparece no meu terminal.
+
+```plaintext
+This is my NFT contract. Woah!
+Contract deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+--------------------
+<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'><style>.base { fill: white; font-family: serif; font-size: 24px; }</style><rect width='100%' height='100%' fill='black' /><text x='50%' y='50%' class='base' dominant-baseline='middle' text-anchor='middle'>SandwichSakuraNinja</text></svg>
+--------------------
+
+An NFT w/ ID 0 has been minted to 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+--------------------
+<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'><style>.base { fill: white; font-family: serif; font-size: 24px; }</style><rect width='100%' height='100%' fill='black' /><text x='50%' y='50%' class='base' dominant-baseline='middle' text-anchor='middle'>GoatSasukeNinja</text></svg>
+--------------------
+
+An NFT w/ ID 1 has been minted to 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+```
+
+Haha, isso é um monte de coisas. Vá em frente e copie um dos SVGs que foi gerado em seu terminal e cole-o [aqui](https://www.svgviewer.dev/) para ver o que você obtém.
+
+Você poderá ver o SVG que foi gerado! Aqui está o meu:
+
+![Untitled](https://i.imgur.com/uS8SXYu.png)
+
+**TACALE PAU NESSE CARRINHO!!!!** Geramos isso aleatoriamente em nosso contrato! Se você pegar o outro SVG gerado perceberá que ele é diferente. Tudo está sendo gerado instantaneamente. YAY.
+
+👩‍💻 Gerando os metadados dinamicamente.
+------------------
+
+Agora, precisamos definir os metadados JSON! Primeiro, precisamos de algumas funções auxiliares. Crie uma pasta chamada `libraries` em `contracts`. Em `libraries`, crie um arquivo chamado` Base64.sol` e copie e cole o código [aqui](https://gist.github.com/farzaa/f13f5d9bda13af68cc96b54851345832) nele. Este arquivo tem algumas funções auxiliares criadas por outra pessoa para nos ajudar a converter nosso SVG e JSON para Base64 no Solidity.
+
+Okay, agora atualize o nosso contrato.
+
+**Mesma coisa, escrevi todo o código e adicionei comentários [aqui](https://gist.github.com/farzaa/dc45da3eb91a41913767f3eb4d7830f1).**
+
+Sinta-se à vontade para copiar e colar algumas dessas partes e entender como funciona depois de executá-lo :). Às vezes eu gosto de fazer isso porque posso ver o código sendo executado e entender como funciona depois!!
+
+Depois de executar o contrato, aqui está o que recebo do terminal:
+
+```plaintext
+Compilation finished successfully
+This is my NFT contract. Woah!
+Contract deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+--------------------
+data:application/json;base64,eyJuYW1lIjogIlNhbmR3aWNoU2FrdXJhTmluamEiLCAiZGVzY3JpcHRpb24iOiAiQSBoaWdobHkgYWNjbGFpbWVkIGNvbGxlY3Rpb24gb2Ygc3F1YXJlcy4iLCAiaW1hZ2UiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBuYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNuSUhCeVpYTmxjblpsUVhOd1pXTjBVbUYwYVc4OUozaE5hVzVaVFdsdUlHMWxaWFFuSUhacFpYZENiM2c5SnpBZ01DQXpOVEFnTXpVd0p6NDhjM1I1YkdVK0xtSmhjMlVnZXlCbWFXeHNPaUIzYUdsMFpUc2dabTl1ZEMxbVlXMXBiSGs2SUhObGNtbG1PeUJtYjI1MExYTnBlbVU2SURJMGNIZzdJSDA4TDNOMGVXeGxQanh5WldOMElIZHBaSFJvUFNjeE1EQWxKeUJvWldsbmFIUTlKekV3TUNVbklHWnBiR3c5SjJKc1lXTnJKeUF2UGp4MFpYaDBJSGc5SnpVd0pTY2dlVDBuTlRBbEp5QmpiR0Z6Y3owblltRnpaU2NnWkc5dGFXNWhiblF0WW1GelpXeHBibVU5SjIxcFpHUnNaU2NnZEdWNGRDMWhibU5vYjNJOUoyMXBaR1JzWlNjK1UyRnVaSGRwWTJoVFlXdDFjbUZPYVc1cVlUd3ZkR1Y0ZEQ0OEwzTjJaejQ9In0=
+--------------------
+
+An NFT w/ ID 0 has been minted to 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+--------------------
+data:application/json;base64,eyJuYW1lIjogIkdvYXRTYXN1a2VOaW5qYSIsICJkZXNjcmlwdGlvbiI6ICJBIGhpZ2hseSBhY2NsYWltZWQgY29sbGVjdGlvbiBvZiBzcXVhcmVzLiIsICJpbWFnZSI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MG5hSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY25JSEJ5WlhObGNuWmxRWE53WldOMFVtRjBhVzg5SjNoTmFXNVpUV2x1SUcxbFpYUW5JSFpwWlhkQ2IzZzlKekFnTUNBek5UQWdNelV3Sno0OGMzUjViR1UrTG1KaGMyVWdleUJtYVd4c09pQjNhR2wwWlRzZ1ptOXVkQzFtWVcxcGJIazZJSE5sY21sbU95Qm1iMjUwTFhOcGVtVTZJREkwY0hnN0lIMDhMM04wZVd4bFBqeHlaV04wSUhkcFpIUm9QU2N4TURBbEp5Qm9aV2xuYUhROUp6RXdNQ1VuSUdacGJHdzlKMkpzWVdOckp5QXZQangwWlhoMElIZzlKelV3SlNjZ2VUMG5OVEFsSnlCamJHRnpjejBuWW1GelpTY2daRzl0YVc1aGJuUXRZbUZ6Wld4cGJtVTlKMjFwWkdSc1pTY2dkR1Y0ZEMxaGJtTm9iM0k5SjIxcFpHUnNaU2MrUjI5aGRGTmhjM1ZyWlU1cGJtcGhQQzkwWlhoMFBqd3ZjM1puUGc9PSJ9
+--------------------
+
+An NFT w/ ID 1 has been minted to 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+```
+
+ISSO É ÉPICO. 
+
+NOS ACABAMOS DE GERAR DINAMICAMENTE UM NFT INTEIRO. DENTRO DA BLOCKCHAIN (ON-CHAIN). ESTE É um MOMENTO EPICO. 
+
+Se você pegar um dos blobs `data:application/json;base64` e jogar na barra de endereço do navegador, verá todos os metadados JSON como antes. Exceto que agora tudo é feito automaticamente em nosso contrato :).
+
+👀 Como raios funciona o `finalTokenUri`?
+------------------
+
+Essa linha grande com `string memory json = Base64.encode` pode parecer um pouco confusa, mas, só parece confusa por causa de todas as aspas rs. Tudo o que estamos fazendo é codificar em base64 os metadados JSON! Mas - está tudo **on-chain**. Então, todo esse JSON viverá no próprio contrato.
+
+Nós tambem adicionamos dinamicamente o `name` e o SVG codificado em base64!
+
+Finalmente, temos este `finalTokenUri` onde colocamos tudo junto e fazemos:
+
+```solidity
+abi.encodePacked("data:application/json;base64,", json)
+```
+
+Tudo o que está acontecendo aqui é que estamos juntando tudo e adicionando o nosso velho conhecido `data:application/json;base64,` que fizemos antes e depois acrescentamos o json codificado em base64!!
+
+
+🛠 Debugando o conteudo de `finalTokenUri`
+------------------------
