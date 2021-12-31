@@ -194,7 +194,7 @@ npx hardhat run scripts/deploy.js --network rinkeby
 
 Assim que fizermos o redeploy, você poderá ver seus NFTs em [https://testnets.opensea.io/](https://testnets.opensea.io/) assim que pesquisar o endereço do contrato recém deployado. Novamente, **não clique o botão enter**. O OpenSea é estranho, então você precisa clicar na própria coleção quando ela aparecer.
 
-OBSERVAÇÃO: Lembre-se de usar`https://rinkeby.rarible.com/token/INSIRA_O_ENDEREÇO_DE_CONTRATO_AQUI:INSIRA_O_TOKEN_ID_AQUI` se você estiver usando o Rarible.
+OBSERVAÇÃO: Lembre-se de usar `https://rinkeby.rarible.com/token/INSIRA_O_ENDEREÇO_DE_CONTRATO_AQUI:INSIRA_O_TOKEN_ID_AQUI` se você estiver usando o Rarible.
 
 Os contratos são **permanentes**. Então, toda vez que você redeployar o nosso contrato na verdade, estamos criando uma coleção totalmente nova.
 
