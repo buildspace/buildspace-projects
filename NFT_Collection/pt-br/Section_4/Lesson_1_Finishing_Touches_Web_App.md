@@ -38,7 +38,7 @@ Então, adicione esta linha no final da função `makeAnEpicNFT`, então, esta �
 
 Em um nível básico, os `Events` são mensagens que nossos contratos emitem para que podemos capturar em nosso cliente em tempo real. No caso o nossa NFT, só porque nossa transação é minerada **não significa que a transação resultou na cunhagem de NFT**. Pode ter sido apenas um erro!! Mesmo se houvesse um erro, ainda teria sido extraído no processo.
 
-É por isso que uso eventos aqui. Sou capaz de emitir `(emit)` um evento no contrato e, em seguida, capturar esse evento no front-end. Observe que no meu `event` envio o` newItemId` que precisamos no frontend, certo :)?
+É por isso que uso os `Events` aqui. Sou capaz de emitir `(emit)` um evento no contrato e, em seguida, capturar esse evento no front-end. Observe que no meu `event` envio o` newItemId` que precisamos no frontend, certo :)?
 
 Novamente, é como um web hook. Exceto que este vai ser o webhook mais fácil de configurar rs.
 
@@ -121,7 +121,7 @@ Talvez a parte mais importante!
 
 Normalmente, quando as pessoas querem ver uma coleção NFT, elas olham para ela no OpenSea!! É uma maneira super fácil das pessoas admirarem a sua coleção. Portanto, se você vincular seu site ao seu amigo, eles saberão que é legítimo!!
 
-Adicione um pequeno botão que diz "🌊 Exibir coleção no OpenSea" e quando seus usuários clicarem nele, ele será vinculado à sua coleção! Lembre-se de que o link de suas coleções muda toda vez que você altera o contrato. Portanto, certifique-se de vincular sua coleção mais recente e final. Por exemplo, [Esta](https://testnets.opensea.io/collection/squarenft-vu901lkj40) é minha a coleção.
+Adicione um pequeno botão que diz "🌊 Exibir coleção no OpenSea" e quando seus usuários clicarem nele, ele será vinculado à sua coleção! Lembre-se de que o link de suas coleções muda toda vez que você altera o contrato. Portanto, certifique-se de vincular sua coleção mais recente e final. Por exemplo, [essa](https://testnets.opensea.io/collection/squarenft-vu901lkj40) é a minha coleção.
 
 Nota: Este link você precisará codificar. Eu deixei uma variável no topo para você preencher. Ela não pode ser gerada dinamicamente a menos que você use a API OpenSea (que é um exagero por enquanto rs).
 
