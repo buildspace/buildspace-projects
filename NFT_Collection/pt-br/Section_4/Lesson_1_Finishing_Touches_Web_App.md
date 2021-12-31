@@ -38,7 +38,7 @@ Então, adicione esta linha no final da função `makeAnEpicNFT`, então, esta �
 
 Em um nível básico, os `Events` são mensagens que nossos contratos emitem para que podemos capturar em nosso cliente em tempo real. No caso o nossa NFT, só porque nossa transação é minerada **não significa que a transação resultou na cunhagem de NFT**. Pode ter sido apenas um erro!! Mesmo se houvesse um erro, ainda teria sido extraído no processo.
 
-É por isso que uso os `Events` aqui. Sou capaz de emitir `(emit)` um evento no contrato e, em seguida, capturar esse evento no front-end. Observe que no meu `event` envio o` newItemId` que precisamos no frontend, certo :)?
+É por isso que uso os `Events` aqui. Sou capaz de emitir `(emit)` um evento no contrato e, em seguida, capturar esse evento no front-end. Observe que no meu `event` envio o `newItemId` que precisamos no frontend, certo :)?
 
 Novamente, é como um web hook. Exceto que este vai ser o webhook mais fácil de configurar rs.
 
@@ -101,7 +101,7 @@ if (chainId !== rinkebyChainId) {
 }
 ```
 Pronto, agora o usuário saberá se está na rede errada!
-A solicitação está em conformidade com o [EIP-695] (https://github.com/ethereum/EIPs/blob/master/EIPS/eip-695.md), portanto, retorna o valor hexadecimal da rede como uma string.
+A solicitação está em conformidade com o [EIP-695](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-695.md), portanto, retorna o valor hexadecimal da rede como uma string.
 Você pode achar os IDs de outras redes [aqui](https://docs.metamask.io/guide/ethereum-provider.html#chain-ids). 
 
 🙉 Animação de mineração
