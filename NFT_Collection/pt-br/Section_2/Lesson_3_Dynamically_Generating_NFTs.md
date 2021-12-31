@@ -139,7 +139,7 @@ An NFT w/ ID 1 has been minted to 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
 
 ISSO É ÉPICO. 
 
-NOS ACABAMOS DE GERAR DINAMICAMENTE UM NFT INTEIRO. DENTRO DA BLOCKCHAIN (ON-CHAIN). ESTE É um MOMENTO EPICO. 
+NOS ACABAMOS DE GERAR DINAMICAMENTE UM NFT INTEIRO. DENTRO DA BLOCKCHAIN (ON-CHAIN). ESTE É UM MOMENTO ÉPICO. 
 
 Se você pegar um dos blobs `data:application/json;base64` e jogar na barra de endereço do navegador, verá todos os metadados JSON como antes. Exceto que agora tudo é feito automaticamente em nosso contrato :).
 
@@ -161,3 +161,56 @@ Tudo o que está acontecendo aqui é que estamos juntando tudo e adicionando o n
 
 🛠 Debugando o conteudo de `finalTokenUri`
 ------------------------
+
+Agora que você configurou o tokenURI, como sabemos se ele está realmente correto? Afinal, ele contém todos os nossos dados para nosso NFT! Você pode usar uma ferramenta legal como - [NFT Preview](https://nftpreview.0xdev.codes/) para ver uma visualização rápida da imagem e o conteúdo do json sem deplpoar de novo e e de novo na testnet do opensea.
+
+Para facilitar, você pode passar o código `tokenURI` como um parâmetro de consulta como este,
+
+```solidity
+string memory finalTokenUri = string(
+    abi.encodePacked("data:application/json;base64,", json)
+);
+
+console.log("\n--------------------");
+console.log(
+    string(
+        abi.encodePacked(
+            "https://nftpreview.0xdev.codes/?code=",
+            finalTokenUri
+        )
+    )
+);
+console.log("--------------------\n");
+```
+![image](https://i.imgur.com/CsBxROj.png)
+
+🚀 Deployando na Rinkeby
+------------------
+A parte mais legal é que podemos apenas re-deployar sem alterar nosso script usando:
+
+```bash
+npx hardhat run scripts/deploy.js --network rinkeby
+```
+
+Assim que fizermos o redeploy, você poderá ver seus NFTs em [https://testnets.opensea.io/](https://testnets.opensea.io/) assim que pesquisar o endereço do contrato recém deployado. Novamente, **não clique o botão enter**. O OpenSea é estranho, então você precisa clicar na própria coleção quando ela aparecer.
+
+OBSERVAÇÃO: Lembre-se de usar`https://rinkeby.rarible.com/token/INSIRA_O_ENDEREÇO_DE_CONTRATO_AQUI:INSIRA_O_TOKEN_ID_AQUI` se você estiver usando o Rarible.
+
+Os contratos são **permanentes**. Então, toda vez que você redeployar o nosso contrato na verdade, estamos criando uma coleção totalmente nova.
+
+Você deve conseguir ver a nova coleção no OpenSea ou no Rarible :)!
+
+🤖 Permitindo que os usuários cunhem (Mint).
+------------------
+
+Épico - agora podemos cunhar NFTs dinamicamente e temos esta função `makeAnEpicNFT` que os usuários podem chamar. Muito progresso foi feito!! Mas não há como pessoas aleatórias criarem NFTs :(.
+
+Tudo o que precisamos é um site que permita que os usuários criem um NFT por conta própria.
+
+
+Então, vamos construir isso :)!
+
+🚨 Relatório de progresso.
+------------------------
+
+Se você tiver um, envie uma captura de tela em #progress de seu novo NFT gerado dinamicamente no OpenSea/Rarible em #progress :). Além disso - se você ainda não tweetou uma imagem de sua coleção maravilhosa de NFT, agora é a hora de fazê-lo!! Lembre-se de marcar @_buildspace !!! Traremos o máximo de pessoas possível!
