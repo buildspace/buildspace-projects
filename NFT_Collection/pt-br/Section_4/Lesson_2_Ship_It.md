@@ -144,3 +144,27 @@ Obrigado por contribuir para o futuro da web3 ao aprender essas coisas. O fato d
 
 🔮 Levando seu projeto adiante!
 ---------
+
+O que você aprendeu neste projeto é apenas o começo! Há muito mais que você pode fazer com NFTs e smart contracts. Aqui estão alguns exemplos que você pode pesquisar mais ✨
+
+- **Venda seus NFTs** - No momento, seus usuários só precisam pagar taxas de gás para cunhar seus incríveis NFTs e você não receberá nenhum dinheiro! Existem várias maneiras de alterar seu contrato inteligente que faz o usuário pagar para cunhar suas transações, como adicionar ```payable``` ao seu contrato e usar ``` require``` para definir um valor mínimo. Já que você está lidando com dinheiro real aqui, é melhor fazer sua pesquisa com cuidado e perguntar aos especialistas se seu código está seguro. O OpenZeppelin tem um fórum onde você pode fazer perguntas como esta [aqui!](https://forum.openzeppelin.com/t/implementation-of-sellable-nft/5517/)
+
+- **Adicionar Royalties** - Você também pode adicionar royalties ao seu contrato que lhe daria uma porcentagem de cada venda futura de seu NFT! Leia mais sobre isso aqui: [EIP-2981: NFT Royaly Standard](https://eips.ethereum.org/EIPS/eip-2981/)
+
+- **Teste seus contratos localmente** - Se você quiser testar seus contratos mais extensivamente sem implantar em uma rede de teste como Rinkeby, o Hardhat permitirá que você faça isso! A melhor maneira de conseguir isso é abrir uma janela de terminal separada, navegar até o diretório do projeto e, em seguida, executar ```npx hardhat node``` e manter essa janela aberta! Assim como no início do projeto, você verá um monte de contas com muito ether. Em uma outra janela de terminal, você pode executar seus scripts de teste e observá-los afetando sua janela de nó!
+
+🤟 Seu NFT!
+---------
+Enviaremos seu NFT dentro de uma hora e enviaremos um e-mail assim que estiver em sua carteira. Ele está sendo executado em um cron job! Se você não receber o e-mail em 24 horas, por favor, envie-nos uma mensagem em #feedback e tag @ **alec#8853**.
+
+🌈 Antes de sair...
+---------
+Vá para #showcase no Discord e nos mostre seu produto final com o qual podemos mexer :).
+
+Além disso, você deve twittar o seu projeto final e mostrar ao mundo a sua criação incrível! O que você fez não foi fácil de forma alguma. Talvez até faça um pequeno vídeo mostrando seu projeto e anexe no tweet. Faça seu tweet parecer bonito e se exiba um pouco :).
+
+E se você quiser, marque @_buildspace :). Vamos fazer o RT. Além disso, isso nos dá muita motivação sempre que vemos pessoas enviando seus projetos.
+
+Por último, o que também seria incrível é se você nos dissesse em #feedback como gostou deste projeto e da estrutura do projeto. O que você mais ama no buildspace? O que gostaria que mudássemos para projetos futuros? Seu feedback seria incrível!!
+
+Te vejo por aí!!!
