@@ -32,29 +32,28 @@ const App = () => {
   // State variable for us to know if user has our NFT.
   const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
 
-  useEffect(() => {
+  useEffect(async () => {
     // If they don't have an connected wallet, exit!
     if (!address) {
       return;
     }
     
     // Check if the user has the NFT by using bundleDropModule.balanceOf
-    return bundleDropModule
-      .balanceOf(address, "0")
-      .then((balance) => {
-        // If balance is greater than 0, they have our NFT!
-        if (balance.gt(0)) {
+    const balance = await bundleDropModule.balanceOf(address, "0");
+   
+    try {
+      // If balance is greater than 0, they have our NFT!
+      if(balance.gt(0)) {
           setHasClaimedNFT(true);
-          console.log("🌟 this user has a membership NFT!")
-        } else {
+          console.log("🌟 this user has a membership NFT!");
+      } else {
           setHasClaimedNFT(false);
           console.log("😭 this user doesn't have a membership NFT.")
-        }
-      })
-      .catch((error) => {
+      }
+    } catch (error) {
         setHasClaimedNFT(false);
         console.error("failed to nft balance", error);
-      });
+    }
   }, [address]);
 
   // ... include all your other code that was alread there below.
@@ -105,25 +104,25 @@ const App = () => {
     sdk.setProviderOrSigner(signer);
   }, [signer]);
 
-  useEffect(() => {
-    if (!address) {
+    useEffect(async () => {
+    if(!address) {
       return;
     }
-    return bundleDropModule
-      .balanceOf(address, "0")
-      .then((balance) => {
-        if (balance.gt(0)) {
+
+    const balance = await bundleDropModule.balanceOf(address, "0");
+   
+    try {
+      if(balance.gt(0)) {
           setHasClaimedNFT(true);
-          console.log("🌟 this user has a membership NFT!")
-        } else {
+          console.log("🌟 this user has a membership NFT!");
+      } else {
           setHasClaimedNFT(false);
           console.log("😭 this user doesn't have a membership NFT.")
-        }
-      })
-      .catch((error) => {
+      }
+    } catch (error) {
         setHasClaimedNFT(false);
         console.error("failed to nft balance", error);
-      });
+    }
   }, [address]);
 
   if (!address) {
