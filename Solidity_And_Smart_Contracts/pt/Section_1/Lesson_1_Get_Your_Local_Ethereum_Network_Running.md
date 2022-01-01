@@ -103,6 +103,4 @@ Vá em frente e exclua o arquivo `sample-test.js` em `test`. Além disso, exclua
 
 Vá para #progress e poste uma captura de tela do **seu** terminal mostrando o resultado do teste! Você acabou de assinar um contrato inteligente, isso é um grande negócio!! Mostre-o :).
 
-P.S: If you **don't** have access to #progress, be sure you linked your Discord, join the Discord [here](https://discord.gg/mXDqs6Ubcc), hit us up in #general we'll help you get access to the right channels!
-
-PS: Se você **não** tem acesso a #progress, certifique-se de vincular seu Discord, junte-se ao Discord [aqui](https://discord.gg/mXDqs6Ubcc), entre em contato conosco em #general e nós te ajudaremos você a obter acesso aos canais certos!
+PS: Se você **não** tem acesso a #progress, certifique-se de vincular seu Discord, junte-se ao Discord [aqui](https://discord.gg/mXDqs6Ubcc), entre em contato conosco em #general e nós te ajudaremos a obter acesso aos canais certos!
