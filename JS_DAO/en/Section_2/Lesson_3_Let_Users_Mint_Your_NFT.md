@@ -201,7 +201,7 @@ Okay, so if you remember we need to handle two cases:
 
 2) if we detect that the user doesn't have our NFT, we'll give them a button to mint one.
 
-This is pretty easy. All we need to add is the following to `App.jsx`
+This is pretty easy. All we need to add is the following to `App.jsx` before rendering mint nft screen.
 
 ```jsx
 if (!address) {
