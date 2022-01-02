@@ -290,19 +290,19 @@ This may take a while the first time you run it! As long as you get the green wo
 
 <details>
 <summary>Having problems with <code>Error: failed to send transaction: Transaction simulation failed: Attempt to load a program that does not exist</code>?</summary>
-If you get this error, this most likely means you forgot to add your Program Id in both your `.toml` file and `.rs` file! Go ahead and grab your ID again and verify it's updated in the appropriate spots :).
+If you get this error, this most likely means you forgot to add your Program Id in both your <code>.toml</code> file and <code>.rs</code> file! Go ahead and grab your ID again and verify it's updated in the appropriate spots :).
 </details>
 
 <details>
   <summary>Having problems with <code>Insufficient funds</code> or <code>Error: Deploying program failed: Error processing Instruction 1: custom program error: 0x1 There was a problem deploying: Output { status: ExitStatus(unix_wait_status(256)), stdout: "", stderr: "" }</code>?</summary>
   
-This means that you don't have enough SOL. Aidrop some SOL to your locahost:
+This means that you don't have enough SOL. Airdrop some SOL to your locahost:
 
 ```bash
 solana airdrop 2 --url localhost
 ```
 
-Issue the above commands multiple times so that you get enough SOLs.
+Run the above commands multiple times so that you get enough SOLs.
 
 Check that you have enough balance:
 ```bash
