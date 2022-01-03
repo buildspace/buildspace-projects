@@ -30,7 +30,7 @@ Para o próximo passo precisaremos de uma carteira Ethereum. Tem um monte dessas
 
 Por que nós precisamos do Metamask? Olha, lembra daquele smart contract que vive na blockchain? Nós precisamos ser capazes de chamar as funções dele. E, para fazer isso, nós precisamos de uma carteira que tem o nosso endereço Ethereum e a nossa chave privada.
 
-**Mas, nós precisamos de algo que conecte o nosso website com a nossa carteira para que nós possamos passar de forma segura as credenciais da nossa carteira para o nosso site, e então o nosso possa usar essas credenciais para chamar o nosso smart contract. Você precisa ter credenciais válidas para acessar as funções no smart contract.**
+**Mas, nós precisamos de algo que conecte o nosso website com a nossa carteira para que nós possamos passar de forma segura as credenciais da dela para o nosso site, para que então ele possa usar essas credenciais para chamar o nosso smart contract. Você precisa ter credenciais válidas para acessar as funções no smart contract.**
 
 É parecido com um processo de autenticação. Nós precisamos de algo para "logar" na blockchain e então usar essas credenciais para fazer as requisições da API a partir do nosso site.
 
