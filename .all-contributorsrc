@@ -1750,6 +1750,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Quinncuatro",
+      "name": "Henry Quinn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5264878?v=4",
+      "profile": "https://HenryNeeds.coffee",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
