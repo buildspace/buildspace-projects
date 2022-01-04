@@ -54,27 +54,28 @@ Portanto, você fará tudo isso nas próximas lições :).
 
 Existem algumas testnets por aí e nós iremos utilizar uma chamada "Rinkeby" que é apoiada pela fundação Ethereum.
 
-In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copy how mainnet works, only difference is no real money is involved.
+Para deployar na Rinkeby, nós precisamos de ether de mentira. Por quê? Porque se você estivesse deployando na mainnet, você usaria dinheiro real! Logo, testnets copiam a forma que a mainnet funciona, a única diferença é que não tem dinheiro de verdade envolvido. 
 
-In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. Make sure that your MetaMask wallet is set to the "Rinkeby Test Network" before using faucet.
+Para conseguir ETH de mentira, nós temos que pedir um pouco para a rede. **Esse ETH de mentirinha só vai funcionar nessa testnet específica.** Você pode conseguir um pouco de ETH de mentira para a Rinkeby através de uma _faucet_. Confira se a sua carteira MetaMask está listando a "Rinkeby Test Network" antes de usar a faucet.
 
-For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
+Para MyCrypto, clique no link e lá você precisará conectar sua carteira, criar uma conta, e então clicar no mesmo link para solicitar fundos. Para a faucet oficial da Rinkeby, se ela estiver listando 0 peers, nem vale a pena perder tempo fazendo um tweet/post público no Facebook.
 
-| Name             | Link                                  | Amount          | Time         |
+| Nome             | Link                                  | Quantidade      | Tempo        |
 | ---------------- | ------------------------------------- | --------------- | ------------ |
-| MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
+| MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | Nenhum       |
 | Buildspace       | https://buildspace-faucet.vercel.app/ | 0.025           | 1d           |
-| Ethily           | https://ethily.io/rinkeby-faucet/     | 0.2             | 1w           |
+| Ethily           | https://ethily.io/rinkeby-faucet/     | 0.2             | 1sem         |
 | Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
-| Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
+| Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | Nenhum       |
 
 
-🙃 Having trouble getting Testnet ETH?
+🙃 Está com dificuldade para conseguir ETH na Testnet?
 -----------------------------------
 
+Se as instruções acima não funcionarem, use o comando `/faucet` no canal #faucet-request e o nosso bot vai te mandar um pouco! Se você quiser um pouco mais, mande o endereço público da sua carteira e deixe um gif engraçado junto. Eu ou outra pessoa do projeto vai te mandar um pouco de ETH de mentira assim que pudermos. Quanto mais engraçado o gif, mais rápido vão te enviar o ETH de mentira LOL.
 If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
 
-📈 Deploy to Rinkeby testnet.
+📈 Deploy na Rinkeby testnet.
 ---------------------------------
 
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
