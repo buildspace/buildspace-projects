@@ -1813,6 +1813,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "garyghayrat",
+      "name": "Gary Ghayrat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61768337?v=4",
+      "profile": "http://gary.gg",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
