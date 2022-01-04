@@ -1804,6 +1804,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "davidhead",
+      "name": "David Head",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17344591?v=4",
+      "profile": "http://head.ai",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
