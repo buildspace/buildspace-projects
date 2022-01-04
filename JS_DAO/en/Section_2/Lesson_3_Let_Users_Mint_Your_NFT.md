@@ -183,7 +183,7 @@ When you actually go to mint the NFT, Metamask will pop so you can pay gas. Once
 
 ![Untitled](https://i.imgur.com/PjjDSxd.png)
 
-Nice! Here you'll see my NFT here has "6 owners". You’ll also see it says “You own 1” which you’d see on your end as well as long as you minted one!
+Nice! Here you'll see my NFT has "6 owners". You’ll also see it says “You own 1” which you’d see on your end as well as long as you minted one!
 
 ![Untitled](https://i.imgur.com/fdn9Qs4.png)
 
