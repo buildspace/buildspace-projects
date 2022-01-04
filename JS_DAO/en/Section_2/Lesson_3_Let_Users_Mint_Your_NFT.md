@@ -17,7 +17,7 @@ import { ThirdwebSDK } from "@3rdweb/sdk";
 From there, here's what we're going to add:
 
 ```jsx
-// We instatiate the sdk on Rinkeby.
+// We instantiate the sdk on Rinkeby.
 const sdk = new ThirdwebSDK("rinkeby");
 
 // We can grab a reference to our ERC-1155 contract.
@@ -136,28 +136,29 @@ const App = () => {
       </div>
     );
   }
-
+  
   const mintNft = () => {
     setIsClaiming(true);
     // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
     bundleDropModule
     .claim("0", 1)
-    .catch((err) => {
-      console.error("failed to claim", err);
-      setIsClaiming(false);
-    })
-    .finally(() => {
-      // Stop loading state.
-      setIsClaiming(false);
+    .then(() => {
       // Set claim state.
       setHasClaimedNFT(true);
       // Show user their fancy new NFT!
       console.log(
-        `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
+        `🌊 Successfully Minted! Check it our on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
       );
+    })
+    .catch((err) => {
+      console.error("failed to claim", err);
+    })
+    .finally(() => {
+      // Stop loading state.
+      setIsClaiming(false);
     });
   }
-
+  
   // Render mint nft screen.
   return (
     <div className="mint-nft">
@@ -183,7 +184,7 @@ When you actually go to mint the NFT, Metamask will pop so you can pay gas. Once
 
 ![Untitled](https://i.imgur.com/PjjDSxd.png)
 
-Nice! Here you'll see my NFT here has "6 owners". You’ll also see it says “You own 1” which you’d see on your end as well as long as you minted on!
+Nice! Here you'll see my NFT has "6 owners". You’ll also see it says “You own 1” which you’d see on your end as well as long as you minted one!
 
 ![Untitled](https://i.imgur.com/fdn9Qs4.png)
 
