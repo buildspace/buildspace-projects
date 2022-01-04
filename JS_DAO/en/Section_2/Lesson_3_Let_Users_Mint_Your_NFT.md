@@ -17,7 +17,7 @@ import { ThirdwebSDK } from "@3rdweb/sdk";
 From there, here's what we're going to add:
 
 ```jsx
-// We instatiate the sdk on Rinkeby.
+// We instantiate the sdk on Rinkeby.
 const sdk = new ThirdwebSDK("rinkeby");
 
 // We can grab a reference to our ERC-1155 contract.
@@ -147,7 +147,7 @@ const App = () => {
       setHasClaimedNFT(true);
       // Show user their fancy new NFT!
       console.log(
-      `🌊 Successfully Minted! Check it our on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
+        `🌊 Successfully Minted! Check it our on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
       );
     })
     .catch((err) => {

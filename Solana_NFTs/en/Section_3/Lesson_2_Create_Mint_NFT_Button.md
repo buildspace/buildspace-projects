@@ -209,17 +209,30 @@ const data = await fetchHashTable(
 );
 
 if (data.length !== 0) {
-  for (const mint of data) {
+  const requests = data.map(async (mint) => {
     // Get URI
-    const response = await fetch(mint.data.uri);
-    const parse = await response.json();
-    console.log("Past Minted NFT", mint)
+    try {
+      const response = await fetch(mint.data.uri);
+      const parse = await response.json();
+      console.log("Past Minted NFT", mint)
 
-    // Get image URI
-    if (!mints.find((mint) => mint === parse.image)) {
-      setMints((prevState) => [...prevState, parse.image]);
+      // Get image URI
+      return parse.image;
+    } catch(e) {
+      // If any request fails, we'll just disregard it and carry on
+      console.error("Failed retrieving Minted NFT", mint);
+      return null;
     }
-  }
+  });
+
+  // Wait for all requests to finish
+  const allMints = await Promise.all(requests);
+
+  // Filter requests that failed
+  const filteredMints = allMints.filter(mint => mint !== null);
+
+  // Store all the minted image URIs
+  setMints(filteredMints);
 }
 ```
 
@@ -238,23 +251,34 @@ So once you call that we are going to need to actually fetch the metadata from t
 
 ```jsx
 if (data.length !== 0) {
-  for (const mint of data) {
+  const requests = data.map(async (mint) => {
     // Get URI
-    const response = await fetch(mint.data.uri);
-    const parse = await response.json();
-    console.log("Past Minted NFT", mint)
-
-    // Fancy JS to avoid adding the same mint twice.
-    if (!mints.find((mint) => mint === parse.image)) {
-      setMints((prevState) => [...prevState, parse.image]);
+    try {
+      const response = await fetch(mint.data.uri);
+      const parse = await response.json();
+      console.log("Past Minted NFT", mint);
+      
+      // Get image URI
+      return parse.image;
+    } catch(e) {
+      // If any request fails, we'll just disregard it and carry on
+      console.error("Failed retrieving Minted NFT", mint);
+      return null;
     }
-  }
+  });
+  
+  // Wait for all requests to finish
+  const allMints = await Promise.all(requests);
+  
+  // Filter requests that failed
+  const filteredMints = allMints.filter(mint => mint !== null);
+  
+  // Store all the minted image URIs
+  setMints(allMints);
 }
 ```
 
-Pretty simple here - we need to loop through every mint and get the Token URI. Once we get that URI we can fetch the `json` file and then parse out the asset address of our NFT! At that point, let's store this in our state and we are done.
-
-One thing to note here is the check before setting state. Every time we fetch minted NFTs, it will return every single mint. If we already have one of these mints in our state, don't add it again!
+Pretty simple here - we need to loop through every mint, get the Token URI, use it to fetch the `json` file and then parse out the asset address of each of our NFT! After we got them all, let's store them in our state and we are done.
 
 Okay nice. If you start minting items you should start seeing parsed data with some data being printed out in your console.
 
@@ -295,9 +319,9 @@ return (
 );
 ```
 
-EZPZ. Anytime our `mints` property changes, our component will see if it can be rendered our not! By this point you should have some NFTs minted. Go ahead and refresh your page and see if you get some images that render!
+EZPZ. Anytime our `mints` property changes, our component will see if it can be rendered or not! By this point you should have some NFTs minted. Go ahead and refresh your page and see if you get some images that render!
 
-Note - this may take a bit of time so don't be alarmed if it doesn't appear right away! I actually am not 100% sure why this takes so long. If someone wants to figure that out and make a PR [here](https://github.com/buildspace/buildspace-projects) to explain, that'd be awesome!
+Note - this may take a bit of time so don't be alarmed if it doesn't appear right away! When we call `fetchHashTable`, it fetches all accounts that have interacted with the program (using `MetadataProgram.getProgramAccounts`) and that takes some time. After we get that info, we can request the metadata for all NFTs in parallel and it's smooth sailing until we get all those shiny minted images on your UI!
 
 ![Untitled](https://i.imgur.com/rRry6SK.png)
 

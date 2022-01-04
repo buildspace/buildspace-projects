@@ -1,6 +1,6 @@
 ### 🍪 Getting started w/ thirdweb.
 
-Awesome! We've can now connect to a user's wallet which means we can now check if they're in our DAO! In order to join our DAO, the user will need a membership NFT. If they don't have a membership NFT, we'll prompt them actually mint a membership NFT and join our DAO!
+Awesome! We can now connect to a user's wallet, which means we can now check if they're in our DAO! In order to join our DAO, the user will need a membership NFT. If they don't have a membership NFT, we'll prompt them actually mint a membership NFT and join our DAO!
 
 But, there's a problem. In order for us to mint NFTs, we need to write + deploy our own NFT smart contract. **This is actually where ThirdWeb comes in clutch.**
 
@@ -28,7 +28,7 @@ WALLET_ADDRESS=YOUR_WALLET_ADDRESS
 ALCHEMY_API_URL=YOUR_ALCHEMY_API_URL
 ```
 
-*Note: On Replit? You'll need to use [this](https://docs.replit.com/programming-ide/storing-sensitive-information-environment-variables). Basically, .env files don’t work on Replit. Once you add you variables one-by-one w/ the same names. When you’re done you’ll need to start Replit by stopping/running the repo so it picks up the new env variables!* 
+*Note: On Replit? You'll need to use [this](https://docs.replit.com/programming-ide/storing-sensitive-information-environment-variables). Basically, .env files don’t work on Replit. You should use this method to add your variables one-by-one w/ the same names. When you’re done you’ll need to start Replit by stopping/running the repo so it picks up the new env variables!* 
 
 thirdweb needs all this stuff to deploy contracts on your behalf. Nothing is stored on their end, everything stays locally on your `.env` file. **Don't commit your `.env` file to Github. You will get robbed. Be careful.**
 
@@ -111,7 +111,7 @@ We're also running this:
     console.error("Failed to get apps from the sdk", err);
     process.exit(1);
   }
-})(
+})()
 ```
 
 To make sure we can retrieve the project we made using thirdweb's web app!

@@ -104,6 +104,12 @@ openssl = { version = "0.10", features = ["vendored"] }
 ```
 
 For more information refer to [this PR with the original solution](https://github.com/solana-labs/solana/issues/20783).
+  
+You may run into another problem with openssl saying that it cannot be found. In this case try installing version 1.1 via brew:
+
+```bash
+brew install openssl@1.1
+```
 
 </details>
 
@@ -117,6 +123,27 @@ rustup toolchain uninstall stable
 rustup toolchain install stable
 ```
 
+</details>
+
+<details>
+<summary>Having problems with <code>linking</code>?</summary>
+
+Try adding the following to `~/.cargo/config`:
+
+```toml
+[target.x86_64-apple-darwin]
+rustflags = [
+  "-C", "link-arg=-undefined",
+  "-C", "link-arg=dynamic_lookup",
+]
+
+[target.aarch64-apple-darwin]
+rustflags = [
+  "-C", "link-arg=-undefined",
+  "-C", "link-arg=dynamic_lookup",
+]
+```
+  
 </details>
 
 This might take some time, so don't be alarmed! Once you're done installing, you may need to ensure it is in your path by pasting in your terminal `export PATH="< install_path >/dev/solana"/bin:"$PATH"` and replacing `< install_path >`, then run this to make sure everything is in working order:
@@ -259,6 +286,6 @@ anchor test --skip-local-validator
 
 This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
 
-Note, if you get an error in your terminal that says: "Error: failed to send transaction: Transaction simulation failed: Attempt to load a program that does not exist", this most likely means you forgot to add your Program Id in both your `.toml` file and `.rs` file! Go ahead and grab your ID again and verify it's updated in the appropriate spots :).
+Note, if you get an error in your terminal that says: "Error: failed to send transaction: Transaction simulation failed: Attempt to load a program that does not exist", this most likely means you forgot to add your Program Id in both your `Anchor.toml` file and `lib.rs` file! Go ahead and grab your ID again and verify it's updated in the appropriate spots :).
 
 ![Untitled](https://i.imgur.com/V35KchA.png)

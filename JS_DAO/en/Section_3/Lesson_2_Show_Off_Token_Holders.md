@@ -31,7 +31,7 @@ const shortenAddress = (str) => {
   return str.substring(0, 6) + "..." + str.substring(str.length - 4);
 };
 
-// This useEffect grabs all our the addresses of our members holding our NFT.
+// This useEffect grabs all the addresses of our members holding our NFT.
 useEffect(() => {
   if (!hasClaimedNFT) {
     return;
@@ -41,9 +41,9 @@ useEffect(() => {
   // with tokenId 0.
   bundleDropModule
     .getAllClaimerAddresses("0")
-    .then((addresess) => {
-      console.log("🚀 Members addresses", addresess)
-      setMemberAddresses(addresess);
+    .then((addresses) => {
+      console.log("🚀 Members addresses", addresses)
+      setMemberAddresses(addresses);
     })
     .catch((err) => {
       console.error("failed to get member list", err);
