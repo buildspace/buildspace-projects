@@ -1831,6 +1831,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "developing-coder",
+      "name": "Codebender",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13328088?v=4",
+      "profile": "https://github.com/developing-coder",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
