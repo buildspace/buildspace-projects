@@ -329,6 +329,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/kuriakinzeng"><img src="https://avatars.githubusercontent.com/u/1982709?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kuriakin Zeng</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=kuriakinzeng" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/zeosamaster"><img src="https://avatars.githubusercontent.com/u/11465535?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fábio Matias</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=zeosamaster" title="Documentation">📖</a></td>
     <td align="center"><a href="http://thesoorajsingh.hashnode.dev"><img src="https://avatars.githubusercontent.com/u/50406680?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sooraj Singh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=thesoorajsingh" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://dumb.art"><img src="https://avatars.githubusercontent.com/u/3288353?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jacob Mizraji</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=zisko" title="Documentation">📖</a></td>
   </tr>
 </table>
 
