@@ -1840,6 +1840,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "SpenceUK",
+      "name": "Chris Spence",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17364469?v=4",
+      "profile": "https://github.com/SpenceUK",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
