@@ -1822,6 +1822,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "thomastraum",
+      "name": "Thomas Traum",
+      "avatar_url": "https://avatars.githubusercontent.com/u/294291?v=4",
+      "profile": "http://www.thomastraum.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
