@@ -331,6 +331,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://thesoorajsingh.hashnode.dev"><img src="https://avatars.githubusercontent.com/u/50406680?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sooraj Singh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=thesoorajsingh" title="Documentation">📖</a></td>
     <td align="center"><a href="http://dumb.art"><img src="https://avatars.githubusercontent.com/u/3288353?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jacob Mizraji</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=zisko" title="Documentation">📖</a></td>
     <td align="center"><a href="https://HenryNeeds.coffee"><img src="https://avatars.githubusercontent.com/u/5264878?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Henry Quinn</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Quinncuatro" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/k8ives"><img src="https://avatars.githubusercontent.com/u/22897756?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kate</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=k8ives" title="Documentation">📖</a></td>
   </tr>
 </table>
 
