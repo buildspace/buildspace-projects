@@ -336,6 +336,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/yieldjessyield"><img src="https://avatars.githubusercontent.com/u/15604270?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jesse</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=yieldjessyield" title="Documentation">📖</a></td>
     <td align="center"><a href="https://rajkharvar.vercel.app/"><img src="https://avatars.githubusercontent.com/u/39342288?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raj Kharvar</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=rajkharvar" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/jnftguy"><img src="https://avatars.githubusercontent.com/u/96616377?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jnftguy</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jnftguy" title="Documentation">📖</a></td>
   </tr>
 </table>
 
