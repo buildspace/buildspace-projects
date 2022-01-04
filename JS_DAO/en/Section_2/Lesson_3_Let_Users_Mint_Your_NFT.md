@@ -136,7 +136,7 @@ const App = () => {
       </div>
     );
   }
-
+  
   const mintNft = () => {
     setIsClaiming(true);
     // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
@@ -147,7 +147,7 @@ const App = () => {
       setHasClaimedNFT(true);
       // Show user their fancy new NFT!
       console.log(
-        `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
+        `🌊 Successfully Minted! Check it our on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
       );
     })
     .catch((err) => {
@@ -158,7 +158,7 @@ const App = () => {
       setIsClaiming(false);
     });
   }
-
+  
   // Render mint nft screen.
   return (
     <div className="mint-nft">
