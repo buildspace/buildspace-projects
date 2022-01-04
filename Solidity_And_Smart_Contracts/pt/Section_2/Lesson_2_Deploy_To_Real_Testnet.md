@@ -73,12 +73,11 @@ Para MyCrypto, clique no link e lá você precisará conectar sua carteira, cria
 -----------------------------------
 
 Se as instruções acima não funcionarem, use o comando `/faucet` no canal #faucet-request e o nosso bot vai te mandar um pouco! Se você quiser um pouco mais, mande o endereço público da sua carteira e deixe um gif engraçado junto. Eu ou outra pessoa do projeto vai te mandar um pouco de ETH de mentira assim que pudermos. Quanto mais engraçado o gif, mais rápido vão te enviar o ETH de mentira LOL.
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
 
 📈 Deploy na Rinkeby testnet.
 ---------------------------------
 
-We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
+Nós precisaremos mudar nosso arquivo `hardhat.config.js`. Você pode encontrá-lo na pasta raiz do projeto do seu smart contract.
 
 ```javascript
 require("@nomiclabs/hardhat-waffle");
@@ -94,26 +93,26 @@ module.exports = {
 };
 ```
 
-**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** We'll talk about `.env` variables later and how to keep this stuff secret.
+**Nota: NÃO FAÇA COMMIT DESTE ARQUIVO NO GITHUB. ELE TEM SUA CHAVE PRIVADA. VOCÊ SERÁ HACKEADO + ROUBADO. ESSA CHAVE É A MESMA DA CHAVE PRIVADA DA SUA MAINET.** Nós falaremos sobre `.env` (variáveis de ambiente) depois e como manter essas coisas secretas.
 
-You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can grab from metamask and paste that in there as well.
+Você pode copiar a URL da API da Alchemy na dashboard dela e colar no código. Depois, você vai precisar da sua chave **privada** da rinkeby (não é o seu endereço público!) que você pode pegar do metamask e colar no código também.
 
-**Note: Accessing your private key can be done by opening MetaMask, change the network to "Rinkeby Test Network" and then click the three dots and select "Account Details" > "Export Private Key"**
+**Nota: Acesse a sua chave privada ao abrir o MetaMask, mudar a rede para "Rinkeby Test Network" e depois clicar nos três pontinhos e selecionar "Account Details" > "Export Private Key"**
 
-Why do you need to use your private key? Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain. And, your username is your public address and your password is your private key. It's kinda like logging into AWS or GCP to deploy.
+Por quê você precisa usar sua chave privada? Para fazer uma transação como deployar um contrato, você precisa "logar" à blockchain. E, seu username é seu endereço público e sua senha é sua chave privada. É parecido com logar na AWS ou GCP para deployar.
 
-Once you've got your config setup we're set to deploy with the deploy script we wrote earlier.
+Uma vez que você arrumou seu arquivo config está tudo pronto para deployar o script de deploy que escrevemos antes.
 
-Run this command from the root directory of `my-wave-portal`. Notice all we do is change it from `localhost` to `rinkeby`.
+Rode este commando da pasta raiz do `my-wave-portal`. Percea que tudo que nós fizemos foi mudar de `localhost` para `rinkeby`.
 
 ```bash
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
 
-❤️ Deployed! 
+❤️ Deployado! 
 -------------
 
-Here's my output:
+Aqui está meu output
 
 ```bash
 Deploying contracts with the account: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
@@ -121,32 +120,32 @@ Account balance: 3198297774605223721
 WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
 ```
 
-Copy that address of the deployed contract in the last line and save it somewhere. Don't lose it! You'll need it for the frontend later :). Yours will be different from mine.
+Copie aquele endereço do contrato deployado na ultima linha e salve-o em algum lugar. Não o perca! Você precisará dele para o frontend depois :). O seu será um pouco diferente do meu.
 
-**You just deployed your contract. WOOOOOOOOO.**
+**Você acabou de deployar seu contracto. WOOOOOOOOO.**
 
-You can actually take that address and then paste it into Etherscan [here](https://rinkeby.etherscan.io/). Etherscan is a place that just shows us the state of the blockchain and helps us see where our transaction is at. You should see your transaction here :). It may take a minute to show up!
+Você pode pegar aquele endereço e colar no Etherscan [aqui](https://rinkeby.etherscan.io/). Etherscan é um lugar que nos mostra o estado da blockchain e nos ajuda a ver em que situaçao nossa transação se encontrar. Você pode ver sua transação aqui :). Pode demorar um pouquinho para aparecer!
 
-For example, [here's](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA808cE84E00E97d940dBD26E) mine!
+Por exemplo, [aqui](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA808cE84E00E97d940dBD26E) está o meu!
 
-🚨 Before you click "Next Lesson"
+🚨 Antes de clicar em "Próxima Lição"
 ---------------------------------
 
-**YOU JUST DID A LOT.**
+**VOCÊ ACABOU DE FAZER MUITA COISA.**
 
-You should totally **tweet** out that you just wrote and deployed your first smart contract and tag @_buildspace. If you want, include a screenshot of the Etherscan page that shows that your contract is on the blockchain!
+Você deveria **tweetar** que você acabou de escrever e deployar seu primeiro smart contract e marcar @_buildspace. Se você quiser, coloque um print da página do Etherscan que mostra que seu contrato está na blockchain!
 
-It's a big deal that you got this far. You created and deployed something to the actual blockchain. **Holy shit**. **I'm proud of you.**
+É muito importante você ter chegado até aqui. Você realmente criou e deployou algo na blockchain. **Caramba**. **Estou orgulhoso.**
 
-You're now someone who is actually "doing" the thing that mostly everyone else is just "talking" about.
+Agora você é realmente uma pessoa que está "fazendo" a coisa que a maioria das pessoas estão apenas "falando" sobre.
 
-You're a step closer to mastering the arts of web3.
+Você está um passo mais próximo de se tornar mestre das artes da web3.
 
-KEEP GOING :).
+CONTINUE A NADAR :).
 
 --
 
-*Ty to the people who have already been tweeting about us, y'all are legends <3.*
+*Um obrigado para as pessoas que já estão tweetando sobre nós, todos vocês são lendas <3.*
 
 ![](https://i.imgur.com/1lMrpFh.png)
 
