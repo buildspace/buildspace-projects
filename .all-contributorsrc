@@ -1741,6 +1741,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "zisko",
+      "name": "Jacob Mizraji",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3288353?v=4",
+      "profile": "http://dumb.art",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
