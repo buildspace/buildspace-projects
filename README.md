@@ -338,6 +338,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://rajkharvar.vercel.app/"><img src="https://avatars.githubusercontent.com/u/39342288?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Raj Kharvar</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=rajkharvar" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/jnftguy"><img src="https://avatars.githubusercontent.com/u/96616377?v=4?s=100" width="100px;" alt=""/><br /><sub><b>jnftguy</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jnftguy" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/fox-222"><img src="https://avatars.githubusercontent.com/u/96783584?v=4?s=100" width="100px;" alt=""/><br /><sub><b>fox-222</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=fox-222" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://head.ai"><img src="https://avatars.githubusercontent.com/u/17344591?v=4?s=100" width="100px;" alt=""/><br /><sub><b>David Head</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=davidhead" title="Documentation">📖</a></td>
   </tr>
 </table>
 
