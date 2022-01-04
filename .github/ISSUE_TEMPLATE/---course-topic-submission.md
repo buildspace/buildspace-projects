@@ -4,7 +4,7 @@ about: Do you have a project that you think would be great for buildspace? Use t
   template to submit it!
 title: "\U0001F4DA Project Topic Submission"
 labels: Project Submission
-assignees: adilanchian, farzaa, DavidBarrick, emboslicev2
+assignees: adilanchian, farzaa, emboslicev2
 
 ---
 
