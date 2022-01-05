@@ -15,7 +15,7 @@ We need a way to keep the local network alive. Why? Well, think about a local se
 
 We're going to do the same thing here. 
 
-Head to your terminal and create a **new** window. In this window, cd back to your `my-wave-portal project`. Then, in here go ahead and run
+Head to your terminal and create a **new** window. In this window, cd back to your `my-wave-portal` project. Then, in here go ahead and run
 
 ```bash
 npx hardhat node
