@@ -30,7 +30,7 @@ That means as Mario rises in popularity, the NFT needed to play Mario games also
 
 Coolest part? **Players retain a ton of the value.** Players can always hold/sell the original NFTs that would increase in value as the games/characters get more popular. It incentivizes players to help make the game huge as well. Everyone wins :).
 
-**This may sounds crazy but this is pretty much exactly how Axie Infinity works.** I**t's doing billions of dollars in revenue every year.** You can buy some Axie NFTs [here](https://marketplace.axieinfinity.com/?__cf_chl_jschl_tk__=pmd_ybIeMQm0TAMzOvPj1DcoPlIZeWIcL5r4nwefM60mDTM-1634675045-0-gqNtZGzNAjujcnBszQoR) and start playing. As the Axie universe grows more popular, the NFTs increase in value as well!
+**This may sounds crazy but this is pretty much exactly how Axie Infinity works. It's doing billions of dollars in revenue every year.** You can buy some Axie NFTs [here](https://marketplace.axieinfinity.com/?__cf_chl_jschl_tk__=pmd_ybIeMQm0TAMzOvPj1DcoPlIZeWIcL5r4nwefM60mDTM-1634675045-0-gqNtZGzNAjujcnBszQoR) and start playing. As the Axie universe grows more popular, the NFTs increase in value as well!
 
 ### 😢 An issue: inflation.
 

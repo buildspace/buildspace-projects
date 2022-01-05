@@ -1741,6 +1741,114 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "zisko",
+      "name": "Jacob Mizraji",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3288353?v=4",
+      "profile": "http://dumb.art",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Quinncuatro",
+      "name": "Henry Quinn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5264878?v=4",
+      "profile": "https://HenryNeeds.coffee",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "k8ives",
+      "name": "Kate",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22897756?v=4",
+      "profile": "https://github.com/k8ives",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "yieldjessyield",
+      "name": "Jesse",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15604270?v=4",
+      "profile": "https://github.com/yieldjessyield",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "rajkharvar",
+      "name": "Raj Kharvar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39342288?v=4",
+      "profile": "https://rajkharvar.vercel.app/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jnftguy",
+      "name": "jnftguy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96616377?v=4",
+      "profile": "https://github.com/jnftguy",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "fox-222",
+      "name": "fox-222",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96783584?v=4",
+      "profile": "https://github.com/fox-222",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "davidhead",
+      "name": "David Head",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17344591?v=4",
+      "profile": "http://head.ai",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "garyghayrat",
+      "name": "Gary Ghayrat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61768337?v=4",
+      "profile": "http://gary.gg",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "thomastraum",
+      "name": "Thomas Traum",
+      "avatar_url": "https://avatars.githubusercontent.com/u/294291?v=4",
+      "profile": "http://www.thomastraum.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "developing-coder",
+      "name": "Codebender",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13328088?v=4",
+      "profile": "https://github.com/developing-coder",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "SpenceUK",
+      "name": "Chris Spence",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17364469?v=4",
+      "profile": "https://github.com/SpenceUK",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -59,7 +59,7 @@ contract MyEpicGame {
   CharacterAttributes[] defaultCharacters;
 
   // Data passed in to the contract when it's first created initializing the characters.
-  // We're going to actually pass these values in from from run.js.
+  // We're going to actually pass these values in from run.js.
   constructor(
     string[] memory characterNames,
     string[] memory characterImageURIs,
