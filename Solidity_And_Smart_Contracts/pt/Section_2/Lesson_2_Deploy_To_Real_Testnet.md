@@ -7,7 +7,7 @@ A partir de agora nós vamos pra vida real, deployando numa blockchain de verdad
 
 Abra uma conta na Alchemy [aqui](https://alchemy.com/?r=b93d1f12b8828a57).
 
-Foi mal por pedir que abra tantas contas, mas, esse ecossistema é complexo e queremos usufruir de todas as ferramentas maravilhosas disponíveis. O que a Alchemy faz é nos dar um jeito simples de deployar na blockchain do Ethereum.
+Foi mal por pedir que abra tantas contas, mas, esse ecossistema é complexo e queremos usufruir de todas as ferramentas maravilhosas disponíveis. O que a Alchemy faz é nos dar um jeito simples de fazer o deploy na blockchain do Ethereum.
 
 💳 Transações
 ---------------
@@ -72,7 +72,7 @@ Para MyCrypto, clique no link e lá você precisará conectar sua carteira, cria
 🙃 Está com dificuldade para conseguir ETH na Testnet?
 -----------------------------------
 
-Se as instruções acima não funcionarem, use o comando `/faucet` no canal #faucet-request e o nosso bot vai te mandar um pouco! Se você quiser um pouco mais, mande o endereço público da sua carteira e deixe um gif engraçado junto. Eu ou outra pessoa do projeto vai te mandar um pouco de ETH de mentira assim que pudermos. Quanto mais engraçado o gif, mais rápido vão te enviar o ETH de mentira LOL.
+Se as instruções acima não funcionarem, use o comando `/faucet` no canal #faucet-request e o nosso bot vai te mandar um pouco! Se você quiser um pouco mais, mande o endereço público da sua carteira e deixe um gif engraçado junto. Eu ou outra pessoa do projeto vai te mandar um pouco de ETH de mentira assim que pudermos. Quanto mais engraçado o gif, mais rápido vão te enviar o ETH de mentira KKKKKKK.
 
 📈 Deploy na Rinkeby testnet.
 ---------------------------------
@@ -93,7 +93,7 @@ module.exports = {
 };
 ```
 
-**Nota: NÃO FAÇA COMMIT DESTE ARQUIVO NO GITHUB. ELE TEM SUA CHAVE PRIVADA. VOCÊ SERÁ HACKEADO + ROUBADO. ESSA CHAVE É A MESMA DA CHAVE PRIVADA DA SUA MAINET.** Nós falaremos sobre `.env` (variáveis de ambiente) depois e como manter essas coisas secretas.
+**Nota: NÃO FAÇA COMMIT DESTE ARQUIVO NO GITHUB. ELE TEM SUA CHAVE PRIVADA. VOCÊ SERÁ HACKEADO + ROUBADO. ESSA CHAVE É A MESMA DA CHAVE PRIVADA DA SUA MAINNET.** Nós falaremos sobre `.env` (variáveis de ambiente) depois e como manter essas coisas secretas.
 
 Você pode copiar a URL da API da Alchemy na dashboard dela e colar no código. Depois, você vai precisar da sua chave **privada** da rinkeby (não é o seu endereço público!) que você pode pegar do metamask e colar no código também.
 
@@ -103,7 +103,7 @@ Por quê você precisa usar sua chave privada? Para fazer uma transação como d
 
 Uma vez que você arrumou seu arquivo config está tudo pronto para deployar o script de deploy que escrevemos antes.
 
-Rode este commando da pasta raiz do `my-wave-portal`. Percea que tudo que nós fizemos foi mudar de `localhost` para `rinkeby`.
+Rode este commando da pasta raiz do `my-wave-portal`. Perceba que tudo que nós fizemos foi mudar de `localhost` para `rinkeby`.
 
 ```bash
 npx hardhat run scripts/deploy.js --network rinkeby
@@ -124,7 +124,7 @@ Copie aquele endereço do contrato deployado na ultima linha e salve-o em algum 
 
 **Você acabou de deployar seu contracto. WOOOOOOOOO.**
 
-Você pode pegar aquele endereço e colar no Etherscan [aqui](https://rinkeby.etherscan.io/). Etherscan é um lugar que nos mostra o estado da blockchain e nos ajuda a ver em que situaçao nossa transação se encontrar. Você pode ver sua transação aqui :). Pode demorar um pouquinho para aparecer!
+Você pode pegar aquele endereço e colar no Etherscan [aqui](https://rinkeby.etherscan.io/). Etherscan é um lugar que nos mostra o estado da blockchain e nos ajuda a ver em que situação nossa transação se encontrar. Você pode ver sua transação aqui :). Pode demorar um pouquinho para aparecer!
 
 Por exemplo, [aqui](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA808cE84E00E97d940dBD26E) está o meu!
 
