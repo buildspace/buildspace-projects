@@ -56,7 +56,7 @@ const instructions = [
     lamports: rent,
     programId: TOKEN_PROGRAM_ID,
   }),
-   Token.createInitMintInstruction(
+  Token.createInitMintInstruction(
     TOKEN_PROGRAM_ID,
     mint.publicKey,
     0,
