@@ -55,16 +55,16 @@ You'll also see near the bottom it has our program id! This is how our web app w
 
 *Note: if you don't see the idl file or you don't see an "address" parameter near the bottom, then something has gone wrong! Start again from the "Deploy program to the devnet" section of the project.*
 
-Instead of copying the idl we can actually upload the idl to solana directly and fetch it from our web app!
+How do we give the idl to our web app?
+We can either copy the idl file and open it on the web app or we can actually upload the idl to solana directly and fetch it from our web app later!
 
 ```
 anchor idl init  -f target/idl/myepicproject.json `solana address -k target/deploy/myepicproject-keypair.json`
 ```
 
+Basically we are telling anchor to upload our idl for our program address, nice!! 
 
-Basically we are telling anchor to upload our idl at for our program address
-
-> Please note that for subsequent update to the idl, so each time you deploy a new version of your solana program you would have to use `anchor idl upgrade` instead of `anchor idl init`
+> Please note that everytime you redeploy your solana program, you need to tell solana how your program api looks like, we can do so with `anchor idl upgrade` instead of `anchor idl init`
 
 
 Head over to your web app.
@@ -181,7 +181,7 @@ const { SystemProgram, Keypair } = web3;
 // Create a keypair for the account that will hold the GIF data.
 let baseAccount = Keypair.generate();
 
-// This is the address of your solana program, if you forget just run solana address -k target/deploy/myepicproject-keypair.json
+// This is the address of your solana program, if you forgot, just run solana address -k target/deploy/myepicproject-keypair.json
 const programID = new PublicKey(YOUR_PROGRAM_ADDRESS_HERE);
 
 // Set our network to devnet.
@@ -203,7 +203,7 @@ All pretty straightforward and things will make more sense as we start using the
 
 `SystemProgram` is a reference to the [core program](https://docs.solana.com/developing/runtime-facilities/programs#system-program) that runs Solana we already talked about. `Keypair.generate()` gives us some parameters we need to create the `BaseAccount` account that will hold the GIF data for our program.
 
-Then, we use reuse our programID so that we can tell the Solana Runtime which program we are trying to talk to, then we specify that we want to make sure we connect to devnet by doing `clusterApiUrl('devnet')`.
+Then, we reuse our programID to tell the Solana Runtime which program we are trying to talk to, finally we make sure we connect to devnet by doing `clusterApiUrl('devnet')`.
 
 This `preflightCommitment: "processed"` thing is interesting. You can read on it a little [here](https://solana-labs.github.io/solana-web3.js/modules.html#Commitment). Basically, we can actually choose *when* to receive a confirmation for when our transaction has succeeded. Because the blockchain is fully decentralized, we can choose how long we want to wait for a transaction. Do we want to wait for just one node to acknowledge our transaction? Do we want to wait for the whole Solana chain to acknowledge our transaction?
 
@@ -235,7 +235,7 @@ const getProgram = async () => {
   // Get metadata about your solana program
   const idl = await Program.fetchIdl(programID, getProvider());
   // Create a program that you can call
-  return new Program(idl, programAddress, getProvider());
+  return new Program(idl, programID, getProvider());
 };
 
 const getGifList = async() => {
