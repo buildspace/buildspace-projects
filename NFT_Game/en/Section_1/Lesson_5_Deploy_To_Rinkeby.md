@@ -6,6 +6,10 @@ The next step is a testnet which you can think of as like a "staging" environmen
 
 ### 🦊 Metamask
 
+**BEST PRACTICE! Create a new account in MetaMask strictly for development purposes. This way, if your development account credentials accidentally leak, your real funds will still be safe.**
+
+[Instructions for adding an account in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-MetaMask-wallet)
+
 Next we need an Ethereum wallet. There are a bunch of these, but, for this project we're going to use Metamask. Download the browser extension and set up your wallet [here](https://metamask.io/download.html). Even if you already have another wallet provider, just use Metamask for now.
 
 Why do we need Metamask? Well. We need to be able to call functions on our smart contract that live on the blockchain. And, to do that we need to have a wallet that has our Ethereum address and private key.
@@ -156,7 +160,7 @@ module.exports = {
 
 You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
 
-**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** We'll talk about `.env` variables later and how to keep this stuff secret.
+**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY. TO REDUCE RISK EVEN MORE, IT'S ALWAYS BEST TO HAVE A DEDICATED DEVELOPMENT ACCOUNT IN METAMASK.** We'll talk about `.env` variables later and how to keep this stuff secret.
 
 Why do you need to use your private key? Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain and sign/deploy the contract. Also, your username is your public address and your password is your private key. It's kinda like logging into AWS or GCP to deploy.
 
