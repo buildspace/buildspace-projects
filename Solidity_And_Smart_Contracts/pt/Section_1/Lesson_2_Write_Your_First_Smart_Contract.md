@@ -5,7 +5,7 @@ Incrível, nós conseguimos.
 
 Vamos pular direto para o nosso projeto.
 
-Vamos escrever um contrato inteligente que nos permita enviar um 👋 para o nosso contrato e manter o controle do número total de ondas. Isso será útil porque, em seu site, você pode querer acompanhar isso! Sinta-se à vontade para alterar isso para se adequar ao seu caso.
+Vamos escrever um contrato inteligente que nos permita enviar um 👋 para o nosso contrato e manter o controle do número total de acenos. Isso será útil porque, em seu site, você pode querer acompanhar isso! Sinta-se à vontade para alterar isso para se adequar ao seu caso.
 
 Crie um arquivo chamado **`WavePortal.sol`** no diretório **`contracts`**. A estrutura do arquivo é super importante ao usar o Hardhat, então, tome cuidado aqui!
 
@@ -20,7 +20,7 @@ import "hardhat/console.sol";
 
 contract WavePortal {
     constructor() {
-        console.log("Yo yo, I am a contract and I am smart");
+        console.log("Oiii, eu sou um contrato e eu sou inteligente");
     }
 }
 ```
@@ -43,7 +43,7 @@ Esta é a versão do compilador Solidity que queremos que nosso contrato use. El
 import "hardhat/console.sol";
 ```
 
-Alguma magia que nos foi dada pelo Hardhat para fazer alguns console logs em nosso contrato. Na verdade, é desafiador debugar contratos inteligentes, mas esta é uma das vantagens que o Hardhat nos oferece para tornar isso um mamão com açúcar.
+Uma magia que nos foi dada pelo Hardhat para fazer alguns console logs em nosso contrato. Na verdade, é desafiador debugar contratos inteligentes, mas esta é uma das vantagens que o Hardhat nos oferece para tornar isso um mamão com açúcar.
 
 ```solidity
 contract WavePortal {
@@ -53,7 +53,7 @@ contract WavePortal {
 }
 ```
 
-Portanto, os contratos inteligentes parecem uma espécie de `class` em outras linguagens, se você já viu isso! Assim que inicializarmos este contrato pela primeira vez, o construtor executará e imprimirá essa linha. Por favor, faça essa linha dizer o que você quiser :)!
+Portanto, se você já viu isso, os contratos inteligentes parecem uma espécie de `class` em outras linguagens! Assim que inicializarmos este contrato pela primeira vez, o construtor executará e imprimirá essa linha. Por favor, faça essa linha dizer o que você quiser :)!
 
 Na próxima lição, vamos executar isso e ver o que temos!
 
