@@ -40,27 +40,59 @@ Let's copy paste the following into `0.json`:
 
 ```json
 {
-  "name": "NAME_OF_NFT",
-  "symbol": "",
-  "image": "0.png",
-  "properties": {
-    "files": [
-      {
-        "uri": "0.png",
-        "type": "image/png"
-      }
+    "name": "NAME_OF_NFT",
+    "symbol": "",
+    "description": "DESCRIBE_YOUR_NFT_COLLECTION_HERE",
+    "seller_fee_basis_points": 500,
+    "image": "0.png",
+    "attributes": [
+        {"trait_type": "Layer-1", "value": "0"},
+        {"trait_type": "Layer-2", "value": "0"}, 
+        {"trait_type": "Layer-3", "value": "0"},
+        {"trait_type": "Layer-4", "value": "1"}
     ],
-    "creators": [
-      {
-        "address": "INSERT_CREATOR_WALLET_ADDRESS_HERE",
-        "share": 100
-      }
-    ]
-  }
+    "properties": {
+        "creators": [{"address": "INSERT_CREATOR_WALLET_ADDRESS_HERE", "share": 100}],
+        "files": [{"uri": "0.png", "type": "image/png"}]
+    },
+    "collection": {"name": "numbers", "family": "numbers"}
 }
 ```
 
 This is the base information you will need to get up and running with each NFT. Metaplex will take this data and store it **on-chain** for you. How nice. There are certain attributes that change for each `json` file like: `name`, `image`, and `uri`.
+
+**Making a small configuration!**
+
+Alright, now that we have our JSON files lets make one more so we can that will helps us update multiple drops! 
+So outside your app and assets file make a new JSON file called `config.json` 
+
+![Untitled](https://i.imgur.com/FDpfc6k.png)
+
+Perfect now inside your `config.json` file go ahead and copy the following:
+
+```json
+{
+    "price": 1.0,
+    "number": 10,
+    "gatekeeper": null,
+    "solTreasuryAccount": "<YOUR WALLET ADDRESS>",
+    "splTokenAccount": null,
+    "splToken": null,
+    "goLiveDate": "25 Dec 2021 00:00:00 GMT",
+    "endSettings": null,
+    "whitelistMintSettings": null,
+    "hiddenSettings": null,
+    "storage": "arweave-sol",
+    "ipfsInfuraProjectId": null,
+    "ipfsInfuraSecret": null,
+    "awsS3Bucket": null,
+    "noRetainAuthority": false,
+    "noMutable": false
+}
+```
+This JSON file will be how Candy Mchine is operated so the settings you use are super important when setting up your Candy Machine!
+Some of the settings are pretty basic such as `price`, `solTreasuryAccount`, and `goLiveDate`. 
+If you want more info on all the other settings Check out [here](https://docs.metaplex.com/candy-machine-v2/configuration)
 
 **Now, this is the time for you to get insanely creative. Come up with three random NFTs for your collection.**
 
