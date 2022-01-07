@@ -116,7 +116,7 @@ We're also running this:
 
 To make sure we can retrieve the project we made using thirdweb's web app!
 
-Before executing the function, make sure you have Node 12+ installed, you can check your version with:
+Before executing the function, make sure you have Node 16+ installed, you can check your version with:
 
 ```plaintext
 node -v
