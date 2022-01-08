@@ -107,6 +107,12 @@ From here it's just a matter of installing all the dependencies for this CLI, by
 yarn install --cwd ~/metaplex-foundation/metaplex/js/
 ```
 
+In case you get an error such as `There appears to be trouble with your network connection. Retrying...`, you may try using:
+```plaintext
+yarn install --cwd ~/metaplex-foundation/metaplex/js/ --network-timeout 600000
+```
+Most of the time this happens because the default timeout that is set in the Yarn configuration is too low, so when this time runs out it assumes that it's a network problem. 
+
 Before we move on, let's make sure everything is working as expected by running the following command to get the `version`.
 
 ```plaintext
