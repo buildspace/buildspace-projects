@@ -26,7 +26,6 @@ Okay, to get started just create a `.env` file at the root of your web app's `ap
 
 ```plaintext
 REACT_APP_CANDY_MACHINE_ID=
-REACT_APP_TREASURY_ADDRESS=
 REACT_APP_SOLANA_NETWORK=
 REACT_APP_SOLANA_RPC_HOST=
 ```
@@ -70,7 +69,7 @@ It's also good to start with this because if we can grab the metadata then that 
 
 Head over to `app/src/CandyMachine/index.js`.
 
-Start by importing `useEffect` and setting up an `useffect` that calls a function named `getCandyMachineState` which we'll be setting up.
+Start by importing `useEffect` and setting up an `useEffect` that calls a function named `getCandyMachineState` which we'll be setting up.
 
 ```jsx
 import React, { useEffect } from 'react';
@@ -114,7 +113,7 @@ Okay, back to `getCandyMachineState`. Make it somewhere under `getProvider`. Her
 
 ```jsx
 // Declare getCandyMachineState as an async method
-const getCandyMachineState = async () => { 
+const getCandyMachineState = async () => {
   const provider = getProvider();
   
   // Get metadata about your deployed candy machine program
@@ -133,7 +132,12 @@ const getCandyMachineState = async () => {
   const itemsRedeemed = candyMachine.itemsRedeemed.toNumber();
   const itemsRemaining = itemsAvailable - itemsRedeemed;
   const goLiveData = candyMachine.data.goLiveDate.toNumber();
-
+  const presale =
+    candyMachine.data.whitelistMintSettings &&
+    candyMachine.data.whitelistMintSettings.presale &&
+    (!candyMachine.data.goLiveDate ||
+      candyMachine.data.goLiveDate.toNumber() > new Date().getTime() / 1000);
+  
   // We will be using this later in our UI so let's generate this now
   const goLiveDateTimeString = `${new Date(
     goLiveData * 1000
@@ -145,6 +149,7 @@ const getCandyMachineState = async () => {
     itemsRemaining,
     goLiveData,
     goLiveDateTimeString,
+    presale,
   });
 };
 ```
@@ -180,6 +185,11 @@ const itemsAvailable = candyMachine.data.itemsAvailable.toNumber();
 const itemsRedeemed = candyMachine.itemsRedeemed.toNumber();
 const itemsRemaining = itemsAvailable - itemsRedeemed;
 const goLiveData = candyMachine.data.goLiveDate.toNumber();
+const presale =
+  candyMachine.data.whitelistMintSettings &&
+  candyMachine.data.whitelistMintSettings.presale &&
+  (!candyMachine.data.goLiveDate ||
+    candyMachine.data.goLiveDate.toNumber() > new Date().getTime() / 1000);
 ```
 
 When we do `fetch` here, we're **actually hitting the Solana Devnet** to retrieve this data. It's looks a lot like we're hitting an API, but, we're actually hitting the blockchain!
@@ -230,7 +240,7 @@ Notice how we pass in `window.solana` to `CandyMachine` :).
 
 Okay! Now, we shouldn't have any more errors and our `useEffect` in `CandyMachine` should fire as soon as we refresh our page.
 
-Go ahead and refresh your page and you should see a little something like this:
+Go ahead and refresh your page and you should see a little something like this in your console:
 
 ![Untitled](https://i.imgur.com/Z6ogT3P.png)
 
@@ -260,7 +270,7 @@ import React, { useEffect, useState } from 'react';
 
 const CandyMachine({walletAddress}) => {
   // Add state property inside your component like this
-  const [machineStats, setMachineStats] = useState(null);
+  const [candyMachine, setCandyMachine] = useState(null);
 
   ...
 
@@ -282,12 +292,34 @@ const CandyMachine({walletAddress}) => {
     ).toGMTString()}`
   
     // Add this data to your state to render
-    setMachineStats({
-      itemsAvailable,
-      itemsRedeemed,
-      itemsRemaining,
-      goLiveData,
-      goLiveDateTimeString,
+    setCandyMachine({
+      id: process.env.REACT_APP_CANDY_MACHINE_ID,
+      program,
+      state: {
+        itemsAvailable,
+        itemsRedeemed,
+        itemsRemaining,
+        goLiveData,
+        goLiveDateTimeString,
+        isSoldOut: itemsRemaining === 0,
+        isActive:
+          (presale ||
+            candyMachine.data.goLiveDate.toNumber() < new Date().getTime() / 1000) &&
+          (candyMachine.endSettings
+            ? candyMachine.endSettings.endSettingType.date
+              ? candyMachine.endSettings.number.toNumber() > new Date().getTime() / 1000
+              : itemsRedeemed < candyMachine.endSettings.number.toNumber()
+            : true),
+        isPresale: presale,
+        goLiveDate: candyMachine.data.goLiveDate,
+        treasury: candyMachine.wallet,
+        tokenMint: candyMachine.tokenMint,
+        gatekeeper: candyMachine.data.gatekeeper,
+        endSettings: candyMachine.data.endSettings,
+        whitelistMintSettings: candyMachine.data.whitelistMintSettings,
+        hiddenSettings: candyMachine.data.hiddenSettings,
+        price: candyMachine.data.price,
+      },
     });
   
     console.log({
@@ -301,17 +333,17 @@ const CandyMachine({walletAddress}) => {
 }
 ```
 
-All we did was create a state variable and then make a call to `setMachineStats` to set the data.
+All we did was create a state variable and then make a call to `setCandyMachine` to set the data.
 
 With that, we can easily render some cool pieces of data here. Go ahead and add this UI code to your render function:
 
 ```jsx
 return (
   // Only show this if machineStats is available
-  machineStats && (
+  candyMachine && (
     <div className="machine-container">
-      <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
-      <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
+      <p>{`Drop Date: ${candyMachine.state.goLiveDateTimeString}`}</p>
+      <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
       <button className="cta-button mint-button" onClick={null}>
           Mint NFT
       </button>
