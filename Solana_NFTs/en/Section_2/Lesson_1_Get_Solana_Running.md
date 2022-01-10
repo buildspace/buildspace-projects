@@ -115,6 +115,8 @@ ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.
 
 This should spit out `0.0.2`. At this point, we are good to go to start setting up our NFTs :).
 
+**Note**: If you're on MacOS, you might run into an issue if you had the old version of the Metaplex CLI installed. Make sure you delete the `metaplex-foundation` or `metaplex` directory in your `~` folder!
+ 
 ### 🚨 Progress Report
 
 *Please do this else Farza will be sad :(*
