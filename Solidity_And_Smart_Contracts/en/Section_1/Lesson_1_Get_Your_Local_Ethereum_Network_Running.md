@@ -64,6 +64,8 @@ Finally, run `npx hardhat accounts` and this should print out a bunch of strings
 
 `0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`
 
+> If you misspelled `accounts` , for example `account` , you might get an [HH303 error](https://hardhat.org/errors/?#HH303) .
+
 These are Ethereum addresses that Hardhat generates for us to simulate real users on the blockchain. This is going to help us a ton later in the project when we want to simulate users 👋-ing at us!
 
 🌟 Run it
