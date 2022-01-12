@@ -2,7 +2,7 @@ Now that we have access to a wallet address we can start minting character NFTs 
 
 This section is going to help you understand how we will be rendering each state of our app. Why don't we just break down the logic real quick:
 
-1. If user has has not connected to your app - **Show Connect To Wallet Button**
+1. If user has not connected to your app - **Show Connect To Wallet Button**
 2. If user has connected to your app **AND** does not have a character NFT - **Show `SelectCharacter` Component**
 3. If user has connected to your app AND does have a character NFT - **Show `Arena` Component.** The `Arena` is where users will be able to attack our boss!
 
