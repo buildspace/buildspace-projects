@@ -191,7 +191,7 @@ useEffect(() => {
     // Call Solana Program
 
     // Set state
-    setGifList(TEST_GIFS);
+    set(TEST_GIFS);
   }
 }, [walletAddress]);
 ```
@@ -318,7 +318,7 @@ const renderConnectedContainer = () => {
 }
 ```
 
-Pretty straightforward! I made some changes in `[gifList.map](http://gifList.map)`. Watch out for those!
+Pretty straightforward! I made some changes in `gifList.map`. Watch out for those!
 
 ### 🥳 Let's test!
 
