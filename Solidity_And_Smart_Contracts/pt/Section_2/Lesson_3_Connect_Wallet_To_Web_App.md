@@ -5,7 +5,7 @@ Então, para nosso website conversar com a blockchain, nós precisamos encontrar
 
 Vá até o Replit e vá para `App.jsx` abaixo de `src`, é aí que faremos todo nosso trabalho.
 
-Se estivermos logados no Metamask, ele automaticamente irá injetar um objeto especial chamado named `ethereum` na nossa janela. Vamos primeiro conferir se nós já temos isso.
+Se estivermos logados no Metamask, ele automaticamente irá injetar um objeto especial chamado `ethereum` na nossa janela. Vamos primeiro conferir se nós já temos isso.
 
 ```javascript
 import React, { useEffect } from "react";
