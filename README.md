@@ -345,6 +345,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/developing-coder"><img src="https://avatars.githubusercontent.com/u/13328088?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Codebender</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=developing-coder" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/SpenceUK"><img src="https://avatars.githubusercontent.com/u/17364469?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chris Spence</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=SpenceUK" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/maoqingcode"><img src="https://avatars.githubusercontent.com/u/48938610?v=4?s=100" width="100px;" alt=""/><br /><sub><b>maoqingcode</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=maoqingcode" title="Documentation">📖</a></td>
   </tr>
 </table>
 
