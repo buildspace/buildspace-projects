@@ -124,7 +124,14 @@ And finally, you're good to deploy :)! Go ahead and run:
 anchor deploy
 ```
 
-You should see the word "Deploy success" :).
+You should see the word "Deploy success" :). However, if you encounter the following error:
+```
+Error: RPC request error: cluster version query failed: error sending request for url (http://localhost:8899/): error trying to connect: tcp connect error: Connection refused (os error 111) 
+```
+try running the following instead:
+```bash
+anchor deploy --provider.cluster devnet
+```
 
 Once you do, you head to the [Solana Explorer](https://explorer.solana.com/?cluster=devnet) to see if it all worked! *Note: make sure you go to the top right, click "Mainnet" and then click "Devnet" since we deployed to Devnet.*
 
