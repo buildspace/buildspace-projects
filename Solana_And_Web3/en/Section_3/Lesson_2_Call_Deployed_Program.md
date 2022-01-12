@@ -9,6 +9,11 @@ Go ahead run it using:
 ```bash
 anchor test
 ```
+_Note: Again, if it fails, try:_
+```bash
+anchor test --provider.cluster devnet
+```
+
 
 As long as nothing crashed and it's showing you something like:
 
