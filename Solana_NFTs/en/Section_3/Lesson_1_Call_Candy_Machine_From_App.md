@@ -20,30 +20,30 @@ But, don't worry too much about exploring yet. Let's get shit working first lol.
 
 ### 🌲 **Setup `.env` properties**
 
-Remember those public keys I asked you to keep handy? Well, it's finally time to use them! Before we get started here - **if you are committing your source code to something like Github, make sure you DO NOT commit your `.env` file**. This is common practice for any web app you make. Those files usually contain sensitive information so be **careful**.
+Remember those public keys I asked you to keep handy? Well, it's finally time to use them! 
 
-Okay, to get started just create a `.env` file at the root of your web app's `app` folder (i.e `nft-drop-starter-project/app/.env`). This is where we will go ahead and store our keys. Add the following to your `.env` to start:
+Open the file `.env.example` located in the folder `~/metaplex-foundation/metaplex/js/packages/candy-machine-ui`, there you see the following:
 
 ```plaintext
-REACT_APP_CANDY_MACHINE_ID=
-REACT_APP_SOLANA_NETWORK=
-REACT_APP_SOLANA_RPC_HOST=
+REACT_APP_CANDY_MACHINE_ID=<YOUR CANDY MACHINE PROGRAM ID>
+
+REACT_APP_SOLANA_NETWORK=devnet
+REACT_APP_SOLANA_RPC_HOST=https://api.devnet.solana.com
 ```
 
-Let's go one by one (note: **no** quotation symbols needed here).
+Let's go one by one.
 
-**Note:** `.cache/devnet-temp` can be found at the root of your folder after running the Metaplex command in previous steps.
+`REACT_APP_CANDY_MACHINE_ID` - This is the address I asked you to keep handy. **No** quotation symbols are needed here. If you've lost the addresss, it can be found in the `.cache/devnet-temp` JSON file. The file is in root of your folder after running the Metaplex command in previous steps, look for the value associated with the `candyMachine` key. 
 
-
-`REACT_APP_CANDY_MACHINE_ID` - This is the address I asked you to keep handy. If you've lost it, it can be found in the `.cache/devnet-temp` JSON file, look for the value associated with the `candyMachine` key. 
-
-`REACT_APP_SOLANA_NETWORK` - Set this to `devnet` as this is just the network in which we are accessing our candy machine from
+`REACT_APP_SOLANA_NETWORK` - This is set to `devnet`, this is just the network in which we are accessing our candy machine from
 
 `REACT_APP_SOLANA_RPC_HOST` - This is pretty much the same as above. Since we are accessing out Candy Machine on devnet we need to point the RPC to that devnet link which is `https://explorer-api.devnet.solana.com`
+  
+Once your `REACT_APP_CANDY_MACHINE_ID` has been updated. Rename the file `.env.example` to `.env`
+
+After these changes are made, run the command `yarn install && yarn start` inside the folder `~/metaplex-foundation/metaplex/js/packages/candy-machine-ui`.
 
 Cool, this all looks setup. Our web app needs all these variables so it knows stuff like: what candy machine to talk to, what network to mint on, etc.
-
-When you change `.env`, I've found I need to actually kill my React process in Terminal and do `npm run start` again. So, be sure to do that whenever you change the `.env` file.
 
 One more random thing to do before moving on. In Phantom go to Settings → Change Network → and choose "Devnet". Our candy machine lives on devnet so we need to make sure our wallet is on devnet as well!
 
