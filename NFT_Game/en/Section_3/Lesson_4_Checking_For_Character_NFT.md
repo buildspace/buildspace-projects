@@ -47,7 +47,7 @@ The contents of the ABI file can be found in a fancy JSON file in your hardhat p
 
 `artifacts/contracts/MyEpicGame.sol/MyEpicGame.json`
 
-So, the question becomes - how do we get this JSON file into our frontend? The good 'ol copy / paste method!
+So, the question becomes - how do we get this JSON file into our frontend? The good ol' copy / paste method!
 
 Copy the contents from your `MyEpicGame.json` file and then head to your web app. You are going to make a new folder called `utils` under `src`. Under `utils` create a file named `MyEpicGame.json`. So the full path will look like: `src/utils/MyEpicGame.json`
 
