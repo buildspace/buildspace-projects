@@ -10,7 +10,7 @@ Agora precisamos realmente\
 
 Precisamos fazer isso porque no mundo real, os contratos inteligentes vivem na blockchain. E queremos que nosso site e contrato inteligente sejam usados por pessoas reais para que eles possam 👋 para nós ou fazer o que você quiser que elas façam!
 
-Então, mesmo quando estamos trabalhando localmente, queremos imitar esse ambiente. Tecnicamente, poderíamos apenas compilar e executar o código Solidity, mas o que torna o Solidity mágico é como ele pode interagir com as blockchain e carteiras Ethereum (que veremos mais na próxima lição). Então, é melhor acabar com isso agora.
+Então, mesmo quando estamos trabalhando localmente, queremos imitar esse ambiente. Tecnicamente, poderíamos apenas compilar e executar o código Solidity, mas o que torna o Solidity mágico é como ele pode interagir com a blockchain e carteiras Ethereum (que veremos mais na próxima lição). Então, é melhor acabar com isso agora.
 
 Vamos apenas escrever um script personalizado que trata dessas 3 etapas para nós.
 
