@@ -79,7 +79,7 @@ Vamos esperar até que nosso contrato seja oficialmente deployado em nossa rede 
 console.log("Contrato deployado para:", waveContract.address);
 ```
 
-Finalmente, uma vez deployado, o `waveContract.address` basicamente nos dará o endereço do contrato implantado. Este endereço é como podemos realmente encontrar nosso contrato no blockchain. Existem milhões de contratos na rede blockchain de verdade. Assim, este endereço nos dá acesso fácil ao contrato com o qual estamos interessados em trabalhar! Isso será mais importante um pouco mais tarde, quando deployarmos em uma rede Ethereum real.
+Finalmente, uma vez deployado, o `waveContract.address` basicamente nos dará o endereço do contrato implantado. Este endereço é como podemos realmente encontrar nosso contrato na blockchain. Existem milhões de contratos na rede blockchain de verdade. Assim, este endereço nos dá acesso fácil ao contrato com o qual estamos interessados em trabalhar! Isso será mais importante um pouco mais tarde, quando deployarmos em uma rede Ethereum real.
 
 Vamos executá-lo!
 
