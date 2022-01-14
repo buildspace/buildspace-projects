@@ -14,11 +14,11 @@ Foi mal por pedir que abra tantas contas, mas, esse ecossistema é complexo e qu
 
 Então, quando nós queremos realizar uma ação na blockchain do Ethereum nós a chamamos de *transação*. Por exemplo, enviar Ethereum para alguém é uma transação. Fazer algo que atualiza uma variável no nosso contrato também é considerado uma transação.
 
-Quando chamamos a função `wave` e ela faz `totalWaves += 1`, isso é uma transação! **Deployar um smart contract também é uma transação.**
+Quando chamamos a função `wave` e ela faz `totalWaves += 1`, isso é uma transação! **Deployar um contrato inteligente também é uma transação.**
 
 Lembre-se, a blockchain não tem dono(a). Ela é um monte de computadores de **mineradores** do mundo todo que rodam uma cópia da blockchain.
 
-Quando deployamos o nosso contrato, nós precisamos informar **todos esses** mineradores, "ow, esse é um novo smart contract, por favor adicione-o na blockchain e informe todo mundo sobre isso".
+Quando deployamos o nosso contrato, nós precisamos informar **todos esses** mineradores, "ow, esse é um novo contrato inteligente, por favor adicione-o na blockchain e informe todo mundo sobre isso".
 
 É aqui que o Alchemy entra.
 
