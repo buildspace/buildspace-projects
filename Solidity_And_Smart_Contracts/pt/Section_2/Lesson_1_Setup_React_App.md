@@ -1,4 +1,4 @@
-💻 Configure um cliente
+💻 Configure um ambiente
 ------------------
 
 É hora de começar a trabalhar no nosso website! Nosso contrato é bem simples, mas vamos aprender como nosso front end pode interagir com o nosso contrato o mais rápido possível!
