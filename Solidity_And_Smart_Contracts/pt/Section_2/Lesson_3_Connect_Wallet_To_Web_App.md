@@ -1,7 +1,7 @@
 🌅 Usando window.ethereum()
 --------------------------
 
-Então, para nosso website conversar com a blockchain, nós precisamos encontrar alguma forma de conectar nossa carteira a ele. Uma vez que ela está conectada ao nosso site, ele terá permissão para chamar smart contracts por nós. Lembre-se, isso é parecido com o processo de autenticação em um website.
+Então, para nosso website conversar com a blockchain, nós precisamos encontrar alguma forma de conectar nossa carteira a ele. Uma vez que ela está conectada ao nosso site, ele terá permissão para chamar contrato inteligente por nós. Lembre-se, isso é parecido com o processo de autenticação em um website.
 
 Vá até o Replit e vá para `App.jsx` abaixo de `src`, é aí que faremos todo nosso trabalho.
 
