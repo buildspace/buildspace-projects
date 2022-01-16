@@ -1,20 +1,20 @@
 📒 Leia direto da blockchain através do seu website
 -----------------------------------------------
 
-Impressionante. Nós conseguimos. Nós deployamos nosso website. Nós deployamos nosso contrato. Nós conectamos nossa carteira. Agora precisamos chamar nosso contrato diretamente do nosso website usando as credenciais que agora temos acesso to do Metamask!
+Impressionante. Nós conseguimos. Nós deployamos nosso website. Nós deployamos nosso contrato. Nós conectamos nossa carteira. Agora precisamos chamar nosso contrato diretamente do nosso website usando as credenciais que agora temos acesso do Metamask!
 
-So, our smart contract has this function that retrieves the total number of waves.
+Então, nosso contrato inteligente tem esta função que traz o total de acenos.
 
 ```solidity
   function getTotalWaves() public view returns (uint256) {
-      console.log("We have %d total waves!", totalWaves);
+      console.log("Nós temos um total de %d acenos!", totalWaves);
       return totalWaves;
   }
 ```
 
-Lets call this function from our website :).
+Vamos chamar essa função no nosso site :).
 
-Go ahead and write this function right under our `connectWallet()` function.
+Vá em frente e escreva esta função logo abaixo da nossa função `connectWallet()`.
 
 ```javascript
 const wave = async () => {
@@ -27,9 +27,9 @@ const wave = async () => {
         const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         let count = await wavePortalContract.getTotalWaves();
-        console.log("Retrieved total wave count...", count.toNumber());
+        console.log("Total de acenos retornado...", count.toNumber());
       } else {
-        console.log("Ethereum object doesn't exist!");
+        console.log("Objeto Ethereum não existe!");
       }
     } catch (error) {
       console.log(error)
@@ -37,28 +37,28 @@ const wave = async () => {
 }
 ```
 
-Quick explanation here:
+Explicação rápida aqui:
 
 ```javascript
 const provider = new ethers.providers.Web3Provider(ethereum);
 const signer = provider.getSigner();
 ```
 
-`ethers` is a library that helps our frontend talk to our contract. Be sure to import it at the top using `import { ethers } from "ethers";`.
+`ethers` é uma biblioteca que ajuda nosso frontend a interagir com nosso contrato. Não se esqueça de importá-lo no início usando `import { ethers } from "ethers";`.
 
-A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using Alchemy to **deploy**? Well in this case we use nodes that Metamask provides in the background to send/receive data from our deployed contract.
+Um "Provider" é o que de fato usamos para interagir com os nodes Ethereum. Você se lembra como usamos o Alchemy para **deployar**? Bem neste caso nós usaremos os nodes que o Metamask oferece por trás dos panos para enviar/receber informações do nosso contrato deployado.
 
-[Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
+[Aqui](https://docs.ethers.io/v5/api/signer/#signers) está um link explicando o que um signer é na linha 2.
 
-Connect this function to our wave button by updating the `onClick` prop from `null` to `wave`:
+Conecte essa função ao nosso butão de aceno ao atualizar o `onClick` prop de `null` para `wave`:
 
 ```html
 <button className="waveButton" onClick={wave}>
-    Wave at Me
+    Acene para mim
 </button>
 ```
 
-Awesome.
+Impressionante.
 
 So, right now this code **breaks**. In our replit shell it'll say:
 
