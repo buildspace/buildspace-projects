@@ -46,11 +46,11 @@ const signer = provider.getSigner();
 
 `ethers` é uma biblioteca que ajuda nosso frontend a interagir com nosso contrato. Não se esqueça de importá-lo no início usando `import { ethers } from "ethers";`.
 
-Um "Provider" é o que de fato usamos para interagir com os nodes Ethereum. Você se lembra como usamos o Alchemy para **deployar**? Bem neste caso nós usaremos os nodes que o Metamask oferece por trás dos panos para enviar/receber informações do nosso contrato deployado.
+Um "Provider" é o que de fato usamos para interagir com os nodes Ethereum. Você se lembra como usamos o Alchemy para **deployar**? Bem, neste caso nós usaremos os nodes que o Metamask oferece por trás dos panos para enviar/receber informações do nosso contrato deployado.
 
 [Aqui](https://docs.ethers.io/v5/api/signer/#signers) está um link explicando o que um signer é na linha 2.
 
-Conecte essa função ao nosso butão de aceno ao atualizar o `onClick` prop de `null` para `wave`:
+Conecte a função anterior ao nosso butão de aceno atualizando o prop do `onClick` de `null` para `wave`:
 
 ```html
 <button className="waveButton" onClick={wave}>
@@ -60,11 +60,11 @@ Conecte essa função ao nosso butão de aceno ao atualizar o `onClick` prop de 
 
 Impressionante.
 
-So, right now this code **breaks**. In our replit shell it'll say:
+Então, nesse momento o nosso código **quebra**. Na shell do nosso replit shell vai dizer:
 
 ![](https://i.imgur.com/JP2rryE.png)
 
-We need those two variables!!
+Nós precisamos dessas duas variáveis!!
 
 So, contract address you have -- right? Remember when you deployed your contract and I told you to save the address? This is what it's asking for!
 
