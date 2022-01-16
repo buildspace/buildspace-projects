@@ -60,15 +60,15 @@ Conecte a função anterior ao nosso butão de aceno atualizando o prop do `onCl
 
 Impressionante.
 
-Então, nesse momento o nosso código **quebra**. Na shell do nosso replit shell vai dizer:
+Então, nesse momento o nosso código **quebra**. Na shell do nosso replit vai dizer:
 
 ![](https://i.imgur.com/JP2rryE.png)
 
 Nós precisamos dessas duas variáveis!!
 
-So, contract address you have -- right? Remember when you deployed your contract and I told you to save the address? This is what it's asking for!
+Você tem o endereço do contrato -- né? Lembra quando você fez o deploy do seu contrato e eu te falaei para salvar o endereço dele? É isso que está sendo pedido aqui!
 
-But, what's an ABI? Much earlier I mentioned how when you compile a contract, it creates a bunch of files for you under `artifacts`. An ABI is one of those files.
+Mas, o que é uma ABI? Anteriormente eu mencionei que quando você compila um contrato, ele criar vários arquivos para você na pasta `artifacts`. Uma ABI é um desses arquivos.
 
 🏠 Setting Your Contract Address
 -----------------------------
