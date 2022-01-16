@@ -14,7 +14,7 @@ import myEpicGame from '../../utils/MyEpicGame.json';
 import './Arena.css';
 
 /*
- * We pass in our characterNFT metadata so we can a cool card in our UI
+ * We pass in our characterNFT metadata so we can show a cool card in our UI
  */
 const Arena = ({ characterNFT }) => {
   // State
