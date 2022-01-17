@@ -70,18 +70,18 @@ Você tem o endereço do contrato -- né? Lembra quando você fez o deploy do se
 
 Mas, o que é uma ABI? Anteriormente eu mencionei que quando você compila um contrato, ele criar vários arquivos para você na pasta `artifacts`. Uma ABI é um desses arquivos.
 
-🏠 Setting Your Contract Address
+🏠 Configurando Endereço do Seu Contrato
 -----------------------------
 
-Remember when you deployed your contract to the Rinkeby Testnet (epic btw)? The output from that deployment included your smart contract address which should look something like this:
+Lembra quando você fez o deploy do seu contrato na Testenet da Rinkby (épico, diga-se de passagem)? A informação mostrada na tela inlcuia o endereço do seu contrato inteligente e deve ser parecida como algo assim:
 
 ```
-Deploying contracts with the account: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
-Account balance: 3198297774605223721
-WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
+Deployando contratos com a conta: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
+Balanço da conta: 3198297774605223721
+Endereço do WavePortal: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
 ```
 
-You need to get access to this in your React app. It's as easy as creating a new property in your `App.js` file called `contractAddress` and setting its value to the `WavePortal address` thats printed out in your console:
+Você precisa conseguir acesso a essas informações no seu aplicativo React. E é tão fácil quanto criar uma nova propriedade no seu arquivo `App.js` chamada `contractAddress` e configurar o valor dela para `Endereço do WavePortal` que apareceu no seu console:
 
 ```javascript
 import React, { useEffect, useState } from "react";
@@ -91,37 +91,37 @@ import "./App.css";
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
   /**
-   * Create a variable here that holds the contract address after you deploy!
+   * Crie uma variável aqui que guarda o endereço do contrato depois que você fez o deploy!
    */
   const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
 ```
 
-🛠 Getting ABI File Content
+🛠 Pegando o Conteúdo do Arquivo ABI 
 ---------------------------
-**Rather watch me go through this? Checkout out the video below!**
+**Não é melhor me assistir fazenod isso? Confira o vídeo abaixo!**
 [Loom](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)
 
-Look at you, already half way down here! Let's move back to our smart contract folder.
+Olha só, você já tem meio caminho andado! Vamos voltar para a pasta do nosso contrato inteligente.
 
-When you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
+Quando você compila seu contrato inteligente, o compilador criar vários arquivos necessários para possibilitar a sua intereção com o contrato. Você pode encontrar esses arquivos na pasta `artifacts` localizada na raiz do seu projeto Solidity.
 
-The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
+O arquivo ABI é o que nosso web app precisa para saber como se comunicar com nosso contrato. Leia sobre isso [aqui](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
 
-The contents of the ABI file can be found in a fancy JSON file in your hardhat project:
+O conteúdo do arquivo ABI podem ser encontrados em um sofisticado arquivo JSON no seu projeto hardhat:
 
 `artifacts/contracts/WavePortal.sol/WavePortal.json`
 
 
-So, the question becomes how do we get this JSON file into our frontend? For this project we are going to do some good old "copy pasta"!
+Então, a pergunta que temos que responde é: como colocamos esse arquivo JSON no nosso frontend? Para este projeto nós iremos fazer o bom e velho "copiar e colar"!
 
-Copy the contents from your `WavePortal.json` and then head to your web app. You are going to make a new folder called `utils` under `src`. Under `utils` create a file named `WavePortal.json`. So the full path will look like:
+Copie o conteúdo do seu `WavePortal.json` e então vá para o seu web app. Você irá criar uma nova pasta chamada `utils` dentro da pasta `src`. Dentro de `utils` crie uma arquivo chamado `WavePortal.json`. Portanto o caminho completo vai ficar assim:
 
 `src/utils/WavePortal.json`
 
 
-Paste the whole JSON file right there!
+Cole o arquivo JSON inteiro ali mesmo!
 
-Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file and create a reference to it. Right under where you imported `App.css` go ahead and import your JSON file and create your reference to the abi content:
+Agora que você tem o seu arquivo com todo o conteúdo do seu ABI pronto, é hora de importá-lo para o seu arquivo `App.js` e criar uma referência para ele. Logo abaixo de onde você fez o import do `App.css` faça também o importo do seu arquivo JSON e crie a referência do conteúdo do abi:
 
 
 ```javascript
@@ -135,11 +135,11 @@ const App = () => {
 
   const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
   /**
-   * Create a variable here that references the abi content!
+   * Crie uma variável aqui que referencie o conteúdo do abi!
    */
   const contractABI = abi.abi;
 ```
-Let's take a look at where you are actually using this ABI content:
+Vamos ver onde de fato você está usando este conteúdo do ABI:
 
 ```javascript
 const wave = async () => {
@@ -151,14 +151,14 @@ const wave = async () => {
         const signer = provider.getSigner();
 
         /*
-        * You're using contractABI here
+        * Você está usando o contractABI aqui
         */
         const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         let count = await wavePortalContract.getTotalWaves();
-        console.log("Retrieved total wave count...", count.toNumber());
+        console.log("Total de acenos retornado...", count.toNumber());
       } else {
-        console.log("Ethereum object doesn't exist!");
+        console.log("Objeto Ethereum não existe!");
       }
     } catch (error) {
       console.log(error)
@@ -166,14 +166,14 @@ const wave = async () => {
   }
   ```
 
-Once you add that file and click the "Wave" button -- **you'll be officially reading data from your contract on the blockchain through your web client**.
+Uma vez que você adiciona aquele arquivo e clica no botão "Acene" -- **você estará oficialmente lendo informações do seu contrato na blockchain através do seu cliente web**.
 
-📝 Writing data
+📝 Escrevendo informações
 ---------------
 
-The code for writing data to our contract isn't super different from reading data. The main difference is that when we want to write new data to our contract, we need to notify the miners so that the transaction can be mined. When we read data, we don't need to do this. Reads are "free" because all we're doing is reading from the blockchain, **we're not changing it. **
+O código para escrever informações para o seu contrato não é muito diferente do que lê as informações. A principal diferença é que quando nós queremos escrever novas informações para o nosso contrato, nós precisamos notificar os mineradores para que a transação seja minerada. Quando lemos informações, não precisamos fazer isso. Leitura é "gratuita" porque tudo que estamos fazendo é ler da blockchain, **ela não está sendo alterada. **
 
-Here's the code to wave:
+Aqui está o código para acenar:
 
 ```javascript
 const wave = async () => {
@@ -189,18 +189,18 @@ const wave = async () => {
         console.log("Retrieved total wave count...", count.toNumber());
 
         /*
-        * Execute the actual wave from your smart contract
+        * Execute de verdade o aceno do seu contrato inteligente
         */
         const waveTxn = await wavePortalContract.wave();
-        console.log("Mining...", waveTxn.hash);
+        console.log("Minerando...", waveTxn.hash);
 
         await waveTxn.wait();
-        console.log("Mined -- ", waveTxn.hash);
+        console.log("Minerado -- ", waveTxn.hash);
 
         count = await wavePortalContract.getTotalWaves();
-        console.log("Retrieved total wave count...", count.toNumber());
+        console.log("Total de acenos retornado...", count.toNumber());
       } else {
-        console.log("Ethereum object doesn't exist!");
+        console.log("Objeto Ethereum não existe!");
       }
     } catch (error) {
       console.log(error)
@@ -208,31 +208,31 @@ const wave = async () => {
   }
 ```
 
-Pretty simple, right :)?
+Bem simples, né :)?
 
-What's awesome here is while the transaction is being mined you can actually print out the transaction hash, copy/paste it to [Etherscan](https://rinkeby.etherscan.io/), and see it being processed in real-time :).
+O que é incrível aqui é que enquanto a transação está sendo minerada você pode imprimir o hash da transação, copiá-lo/colá-lo no [Etherscan](https://rinkeby.etherscan.io/), e vê-lo sendo processado em tempo real :).
 
-When we run this, you'll see that total wave count is increased by 1. You'll also see that Metamask pops us and asks us to pay "gas" which we pay for using our fake $. There is a great article on it [here](https://ethereum.org/en/developers/docs/gas/). Try and figure out what gas is :).
+Quando rodamos isso, você verá que o contador de acenos terá aumentado em 1. Você também verá que o Metamask pedirá para pagar o "gas" que nós pagaremos usando nosso $ de mentirinha. Tem um artigo muito bom sobre isso [aqui](https://ethereum.org/en/developers/docs/gas/). Tente entender o que é gas :).
 
-🎉 Success
+🎉 Sucesso
 ----------
 
-**NICEEEEEEE :).**
+**BOAAAAAAA :).**
 
-Really good stuff. We now have an actual client that can read and write data to the blockchain. From here, you can do whatever you want. You have the basics down. You can build a decentralized version of Twitter. You can build a way for people to post their favorite memes and allow people to "tip" the people who post the best memes with ETH. You can build a decentralized voting system that a country can use to vote in a politician where everything is open and clear.
+Muita coisa legal mesmo. Agora temos um cliente de verdade que pode ler e escrever informações na blockchain. A partir daqui você pode fazer qualquer coisa que quiser. Você já aprendeu o básico. Você pode construir uma versão descentralizada do Twitter. Você pode contruir algo para as pessoas postarem seus memes favoritos e permitir que as pessoas deem "gorjeta" em ETH para as pessoas que postarem os melhores memes. Você pode construir um sistema de votação descentralizado que um país pode usá-lo para votações onde tudo é aberto e claro.
 
-The possibilities are truly endless.
+As possibilidades são verdadeiramente infinitas.
 
-🚨 Before you click "Next Lesson"
+🚨 Antes de clicar em "Próxima Lição"
 -------------------------------------------
 
-*Note: if you don't do this, Farza will be very sad :(.*
+*Nota: se vocÊ não fizer isso, Farza ficará muito triste :(.*
 
-Customize your site a little to show the total number of waves. Maybe show a loading bar while the wave is being mined, whatever you want. Do something a little different!
+Customize seu site um pouco para mostrar o número total de acenos. Talvez mostrar uma barra de carregamento enquanto o aceno está sendo minerado, qualquer coisa que você quiser. Faça algo um pouco diferente!
 
-Once you feel like you're ready, share the link to your website with us in #progress so we can connect our wallets and wave at you :).
+Assim que você sentir que está pronto, compartilhe o link do seu website conosco em #progress para que possamos conectar nossas carteiras e acenar para você :).
 
-🎁 Wrap Up
+🎁 Revisando
 --------------------
 
-You are on your way to conquering the decentralized web. IMPRESSIVE. Take a look at all the code you wrote in this section by visiting [this link](https://gist.github.com/adilanchian/71890bf4fcd8f78e94c77cf694b24659) to make sure you are on track with your code!
+Você está a caminho de conquistar a web descentralizada. IMPRESSIONANTE. Dê uma olhada em todo o código que você escreveu nesta seção ao visitar [este link](https://gist.github.com/adilanchian/71890bf4fcd8f78e94c77cf694b24659) para conferir se está tudo certo no seu código!
