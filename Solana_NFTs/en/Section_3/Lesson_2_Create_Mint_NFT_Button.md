@@ -165,7 +165,7 @@ First grab you Phantom wallet's public address:
 Then, on your terminal run:
 
 ```plaintext
-solana airdrop 5 INSERT_YOUR_PHANTOM_WALLET_ADDRESS
+solana airdrop 2 INSERT_YOUR_PHANTOM_WALLET_ADDRESS
 ```
 
 And that's it. Congrats on all the free money heh.
