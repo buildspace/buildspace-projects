@@ -14,7 +14,7 @@ Let's start off with creating our `SelectCharacter` Component! Head to the `src/
 
 Oh, one thing to note - you probably see the `LoadingIndicator` component in the `Components` folder. Don't worry about that just yet, we will get to it later 🤘.
 
-Now that we have our folder structure all setup, let's go ahead and add the base logic for a component. Start by creating a new file named `index.js` in your fresh `SelectCharacter` folder. In this folder go ahead and add the following code:
+Now that we have our folder structure all setup, let's go ahead and add the base logic for a component. Start by creating a new file named `index.js` in your fresh `SelectCharacter` folder. In this file go ahead and add the following code:
 
 ```javascript
 import React, { useEffect, useState } from 'react';
