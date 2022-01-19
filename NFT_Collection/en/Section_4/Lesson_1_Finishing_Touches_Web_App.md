@@ -43,7 +43,7 @@ At a basic level, events are messages our smart contracts throw out that we can 
 
 Thats why I use events here. I’m able to `emit` an event on the contract and then capture that event on the frontend. Notice in my `event` I send the `newItemId` which we need on the frontend, right :)?
 
-Again, it’s sorta like a web hook. Except this is going to be the easiest webhook ever to setup lol.
+Again, it’s sorta like a web hook. Except this is going to be the easiest webhook ever to setup.
 
 Be sure to read more on events [here](https://docs.soliditylang.org/en/v0.4.21/contracts.html#events).
 
@@ -107,7 +107,7 @@ You can find the IDs of other networks [here](https://docs.metamask.io/guide/eth
 
 🙉 Mining animation
 --------------
-Some of your users might be super confused when they click mint and nothing happens for like 15 seconds lol! Maybe add a loading animation? Make it happen! Not covering it here :).
+Some of your users might be super confused when they click mint and nothing happens for like 15 seconds! Maybe add a loading animation? Make it happen! Not covering it here :).
 
 
 🐦 Add your Twitter
@@ -122,7 +122,7 @@ Usually, when people want to see an NFT collection, they look at it on OpenSea!!
 
 Add a little button that says "🌊 View Collection on OpenSea" and then when your users clicks it, it links to your collection! Remember, your collections link changes every time you change the contract. So be sure to link your latest and final collection. For example, [this](https://testnets.opensea.io/collection/squarenft-vu901lkj40) is my collection.
 
-Note: This link you'll need to hardcode. I left a variable at the top for you to fill in. It can't be dynamically generated unless you use the OpenSea API (which is overkill for now lol).
+Note: This link you'll need to hardcode. I left a variable at the top for you to fill in. It can't be dynamically generated unless you use the OpenSea API (which is overkill for now).
 
 
 🚨 Progress report!

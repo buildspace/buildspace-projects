@@ -166,7 +166,7 @@ Maybe you don't even want characters. Maybe instead you want people to mint "**w
 
 Maybe you want your characters to have things like "mana", "energy", or "chakra" where your character can cast certain "spells" using these attributes.
 
-**Customize your characters. It's what makes this fun + your own.** For example, I added Leonardo DiCaprio and Pikachu as characters because I thought it'd be funny as hell lol — and I chuckle every time I see it haha.
+**Customize your characters. It's what makes this fun + your own.** For example, I added Leonardo DiCaprio and Pikachu as characters because I thought it'd be funny as hell — and I chuckle every time I see it haha.
 
 Changing around little things like the character will make you feel more like it's your own thing and you'll be a little more motivated to build this thing all the way :).
 

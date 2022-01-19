@@ -49,7 +49,7 @@ Pretty ezpz!! BTW, you'll need `INSERT_YOUR_APP_ADDRESS`. If you lost it, feel f
 
 We call `deployTokenModule` which will deploy a standard [ERC-20](https://docs.openzeppelin.com/contracts/2.x/api/token/erc20) token contract for you which is the standard all the massive coins on Ethereum adopt. All you need to give it is your token’s `name` and `symbol`! Have fun with this one, don’t copy me of course. I hope you're building something **you** think is cool!
 
-Here I give my token the symbol HOKAGE. If you don’t know what that is — check [this](https://naruto.fandom.com/wiki/Hokage) out lol. TLDR: If you’re a Hokage you’re one of the best ninja’s of all time.
+Here I give my token the symbol HOKAGE. If you don’t know what that is — check [this](https://naruto.fandom.com/wiki/Hokage) out. TLDR: If you’re a Hokage you’re one of the best ninja’s of all time.
 
 BTW — you can see the exact contract thirdweb uses [here](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/Coin.sol).
 
@@ -145,7 +145,7 @@ Now for the epic part. Go back to your ERC-20 contract in Etherscan. You’ll no
 
 Go ahead and click the tracker and you’ll see all the supply info along with stuff like: who holds your token, who’s transferring around tokens, and how much token is being moved around. You’ll also see here we have a “Max Total Supply”.
 
-Pretty cool. We did this all with a couple of lines of Javascript. That’s wild. You can literally go make the next meme coin at this point if you wanted to lol.
+Pretty cool. We did this all with a couple of lines of Javascript. That’s wild. You can literally go make the next meme coin at this point if you wanted to.
 
 ![Untitled](https://i.imgur.com/vmeoTfU.png)
 
@@ -237,7 +237,7 @@ buildspace-dao-starter % node scripts/7-airdrop-token.js
 
 YOOOO. You just did an airdrop, hell yes!! In my case, you can see I have 6 unique members in my DAO and they all received the airdrop. In your case, it’ll likely be just you right now! Feel free to run this script again as more members join.
 
-**In the real world**, an airdrop usually happens just one time. But, we’re just hacking around right now so it’s okay. Plus, there are no real rules to this world lol. If you wanna do 4 airdrops a day go for it!
+**In the real world**, an airdrop usually happens just one time. But, we’re just hacking around right now so it’s okay. Plus, there are no real rules to this world. If you wanna do 4 airdrops a day go for it!
 
 You could create your own little airdrop formula just like ENS did for example:
 

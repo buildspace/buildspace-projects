@@ -439,7 +439,7 @@ This is a pretty cool piece of code. We are telling React to only call this rend
 
 Now that we have seen some conditional rendering, this hopefully makes a bit of sense! We want to change some of our CSS styles based on whether we have a `walletAddress` or not! You will see the difference here in the next section when we build out the GIF grid.
 
-### 🔥 Okay — now ACTUALLY connect to wallet lol.
+### 🔥 Okay — now ACTUALLY connect to wallet.
 
 We are almost there! If you click on your spicy new button you notice it still doesn't do anything! What the heck — that's pretty lame 👎. 
 

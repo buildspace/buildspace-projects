@@ -28,7 +28,7 @@ Head to [this](https://www.svgviewer.dev/) website and paste in the code above t
 
 This is really cool because it lets us create **images with code**.
 
-SVGs can be customized **a lot.** You can even animate them lol. Feel free to read up more on them [here](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial).
+SVGs can be customized **a lot.** You can even animate them. Feel free to read up more on them [here](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial).
 
 🤘 What we're going to do.
 -------------------

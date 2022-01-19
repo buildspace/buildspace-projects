@@ -47,7 +47,7 @@ They'll even show up on OpenSea :).
 
 You'll be able to customize the NFT itself as much as you want at the end and do whatever you want.
 
-But, the NFTs I'll be going over in these guides are these NFTs that are basically a square box with a randomly generated three-word combination at the center. Why? Because I think it's funny lol. Some of these three-word combos are really fkin funny.
+But, the NFTs I'll be going over in these guides are these NFTs that are basically a square box with a randomly generated three-word combination at the center. Why? Because I think it's funny. Some of these three-word combos are really fkin funny.
 
 Coolest part? Everything will be happening *on-chain*. This means all the NFT data will live on the blockchain itself. If that doesn't make sense, don't worry just yet — it will :)!
 

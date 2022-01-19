@@ -1,7 +1,7 @@
 💸 Send ETH to people waving at you
 ----------------------------------------
 
-Now what we want to do is send some ETH to people waving at us! For example, maybe you want to make it where there's a 1% chance someone can win $5 from waving at you. Or, maybe you want to make it where everyone who waves at you gets $0.01 in ETH for waving at you lol.
+Now what we want to do is send some ETH to people waving at us! For example, maybe you want to make it where there's a 1% chance someone can win $5 from waving at you. Or, maybe you want to make it where everyone who waves at you gets $0.01 in ETH for waving at you.
 
 You can even make it where you can manually send ETH to people whose messages you loved the most. Maybe they sent you an awesome song!!
 

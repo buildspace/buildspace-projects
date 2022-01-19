@@ -78,7 +78,7 @@ We now have a boss whose data lives on our contract. The boss I chose is `Elon M
 
 **Please choose your own boss — maybe it's Darth Vader? Maybe it's your uncle? Maybe it's your cat?** Whatever you choose, make sure it's your own!! Don't copy me :).
 
-It would actually be funny if the boss was your pet dog, and, instead of trying to destroy your pet dog you're trying to get your dog to love you more. And, the more people that "pat" your dog on the head, the more your dog loves that player. You could even have a leaderboard of people who patted your dog the most lol.
+It would actually be funny if the boss was your pet dog, and, instead of trying to destroy your pet dog you're trying to get your dog to love you more. And, the more people that "pat" your dog on the head, the more your dog loves that player. You could even have a leaderboard of people who patted your dog the most.
 
 Anyways, be creative. This is your project :).
 
@@ -149,7 +149,7 @@ Player w/ character Pikachu about to attack. Has 300 HP and 25 AD
 Boss Elon Musk has 10000 HP and 50 AD
 ```
 
-Looks good! `Pikachu` is about to attack our boss `Elon Musk` lol. Everything worked perfectly and we're now properly retrieving the NFT's state :).
+Looks good! `Pikachu` is about to attack our boss `Elon Musk`. Everything worked perfectly and we're now properly retrieving the NFT's state :).
 
 ### 🔍 Do some checks before attacking.
 

@@ -41,7 +41,7 @@ At the very least, drop a ⭐ on the repo if you're feeling fancy!
 ### **🚨Curious about working in web3?**
 **People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
 
-There is so much work to do and most of the work doesn't even have to do w/ smart contracts lol. **Being an engineer in web3 just means you take your web2 skills and apply them to web3.**
+There is so much work to do and most of the work doesn't even have to do w/ smart contracts. **Being an engineer in web3 just means you take your web2 skills and apply them to web3.**
 
 We're partnered with a bunch of awesome web3 companies that want to hire people from the buildspace network. We got companies like OpenSea, Edge and Node, and Chainlink as partners. **Even if you're just curious**, click "Work in Web3" on the side-bar, fill out the form real quick, and check out the opportunities!!
 

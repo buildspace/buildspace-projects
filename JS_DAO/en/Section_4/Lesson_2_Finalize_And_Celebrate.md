@@ -28,7 +28,7 @@ We'll airdrop you your NFT within an hour and will email you once it's in your w
 
 ### **🌈 Before you head out.**
 
-Go to **#showcase** in Discord and drop us a link to your final product that we can mess around with. If you didn’t use Replit, be sure to deploy with something like Vercel or Netlify. **You made it this far, you better deploy your site lol.**
+Go to **#showcase** in Discord and drop us a link to your final product that we can mess around with. If you didn’t use Replit, be sure to deploy with something like Vercel or Netlify. **You made it this far, you better deploy your site.**
 
 Also, you should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Maybe even make a little video showing off your project and attach that to the tweet. Make your tweet look pretty and show off!!
 

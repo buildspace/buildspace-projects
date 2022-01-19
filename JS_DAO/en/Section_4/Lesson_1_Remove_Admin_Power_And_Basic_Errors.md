@@ -1,6 +1,6 @@
 ### 😡 Revoke roles.
 
-If you remember, you actually still hold “minting” rights on the ERC-20 contract. That means you can go and create more tokens if you wanted which may freak out members of your DAO lol. You could go and mint like a billion tokens to yourself lol.
+If you remember, you actually still hold “minting” rights on the ERC-20 contract. That means you can go and create more tokens if you wanted which may freak out members of your DAO. You could go and mint like a billion tokens to yourself.
 
 It’s best if you revoke your “minting” role completely.
 
@@ -109,9 +109,9 @@ You can read more about liquidity pools [here](https://docs.uniswap.org/protocol
 
 Take some time to customize your web app a little. Change up some colors. Change up the copy. Add some cool emojis. Head to `public/index.html` and change up stuff like the title and description!
 
-Random idea: when people are voting, play your country’s national anthem or something lolol.
+Random idea: when people are voting, play your country’s national anthem or somethingol.
 
-Take some time here before moving on to really make these pages your own. Even if all you do is change the background colors that’s good lol. Have fun with it.
+Take some time here before moving on to really make these pages your own. Even if all you do is change the background colors that’s good. Have fun with it.
 
 ### 🚨 Progress Report
 

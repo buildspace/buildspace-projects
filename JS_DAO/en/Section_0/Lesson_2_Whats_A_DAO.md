@@ -14,7 +14,7 @@ I feel like even after reading this, I still don’t understand what the heck a 
 
 ![Untitled](https://i.imgur.com/ocP0bNm.png)
 
-YC has an extremely centralized approach where a small # of key people decide who to invest in — which isn't a bad thing! I want to stress that just because something is centralized **doesn't mean it's bad lol.**
+YC has an extremely centralized approach where a small # of key people decide who to invest in — which isn't a bad thing! I want to stress that just because something is centralized **doesn't mean it's bad.**
 
 🤠 Y-Combinator as a DAO.
 ----------------------
@@ -59,4 +59,4 @@ Hey! In `#progress` let us all know what kinda DAO you’ll be building for this
 
 **PakistanDAO** — a DAO for members of the Pakistani startup community to support each other. Members earn $PAKISTAN whenever they provide value to other founders, for example by giving them advice, beta-testing their products, or supporting them on social media. 
 
-Please don’t copy my exact examples heh. Get creative. **I really want you think hard about something that makes you smile or something your friends would find funny lol.**
+Please don’t copy my exact examples heh. Get creative. **I really want you think hard about something that makes you smile or something your friends would find funny.**

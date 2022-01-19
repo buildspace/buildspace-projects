@@ -16,7 +16,7 @@ Now, does this mean Solana sucks? Ehhhh. No, I don't think so.
 
 I think Solana is a really **early** piece of technology and because it's so early it's changing often so it's hard to just Google a question or get a clear, concise answer from the Solana Docs.
 
-Back in 2015, I was really into machine learning and it was still pretty new. In 2015, machine learning docs sucked and it was hard to just search for an answer to a question myself because most of the time I was the first person asking that question lol. *It was up to me to actually figure out an answer and then update the docs myself.*
+Back in 2015, I was really into machine learning and it was still pretty new. In 2015, machine learning docs sucked and it was hard to just search for an answer to a question myself because most of the time I was the first person asking that question. *It was up to me to actually figure out an answer and then update the docs myself.*
 
 That's the price of playing around with a piece of emerging technology :).
 
@@ -95,7 +95,7 @@ Dang it! Solana can be rough to get working. We're happy to help though!! Post a
 
 Now that we have our Solana CLI installed, we'll need to install the Metaplex CLI which allows us to actually create our candy machine.
 
-Let's start by cloning a repo from Github. *I recommend cloning the repo to the home folder of your user. So, you can do a `cd ~`  to get there (not sure what it is on Windows lol).*
+Let's start by cloning a repo from Github. *I recommend cloning the repo to the home folder of your user. So, you can do a `cd ~`  to get there (not sure what it is on Windows).*
 
 ```plaintext
 git clone https://github.com/metaplex-foundation/metaplex.git ~/metaplex-foundation/metaplex

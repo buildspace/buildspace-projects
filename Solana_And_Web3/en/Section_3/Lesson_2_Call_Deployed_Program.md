@@ -120,7 +120,7 @@ const getProvider = () => {
 }
 ```
 
-This of course will throw a bunch of errors since we have none of the variables lol. But, this is basically us creating a `provider` which is an **authenticated connection to Solana**. Notice how `window.solana` is needed here!
+This of course will throw a bunch of errors since we have none of the variables. But, this is basically us creating a `provider` which is an **authenticated connection to Solana**. Notice how `window.solana` is needed here!
 
 Why? Because to make a `provider` we need a connected wallet. **You already did this earlier** when you click "Connect" on Phantom which gave it permission to give our web app access to our wallet.
 

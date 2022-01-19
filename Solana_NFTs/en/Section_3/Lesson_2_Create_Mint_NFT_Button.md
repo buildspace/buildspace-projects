@@ -135,7 +135,7 @@ Finally, after all the checks have passed, we create the instructions for actual
 ```
 This you already know! We use a provider, our wallet, all our instructions, and then call `sendTransactions` which is a function that talks to the blockchain. **This is the magic line where we actually hit our candy machine** **and tell it to mint our NFT.**
 
-I know I blazed through all this stuff, so, be sure to go through it yourself! Also, it'd be awesome if someone just made this one nice NPM module lol.
+I know I blazed through all this stuff, so, be sure to go through it yourself! Also, it'd be awesome if someone just made this one nice NPM module.
 
 ### ✨ Mint your NFT.
 
@@ -176,7 +176,7 @@ Cool, so now when you click "Mint NFT", you'll see a pop up like:
 
 Once you click "Approve" and pay the transaction fee, it'll tell your candy machine to mint the NFT.
 
-**We don't have any loading indicators currently setup here**, so it may look like nothing is happening lol. I would suggest keeping a console open for the browser you are in to see the logs go through. It'll take like 3-10 seconds.
+**We don't have any loading indicators currently setup here**, so it may look like nothing is happening. I would suggest keeping a console open for the browser you are in to see the logs go through. It'll take like 3-10 seconds.
 
 Once your NFT successfully mints, you'll see something like this in your console:
 

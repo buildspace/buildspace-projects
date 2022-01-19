@@ -14,7 +14,7 @@ But, Solana programs can interact w/ "accounts".
 
 Again, accounts are basically files that programs can read and write to. The word "accounts" is confusing and super shitty. For example, when you create a wallet on Solana — you create an "account". But, your program can also make an "account" that it can write data to. Programs themselves are considered "accounts". 
 
-**Everything is an account lol**. Just remember an account isn't just like your actual wallet — **it's a general way for programs to pass data between each other**. Read about them more [here](https://docs.solana.com/developing/programming-model/accounts). 
+**Everything is an account**. Just remember an account isn't just like your actual wallet — **it's a general way for programs to pass data between each other**. Read about them more [here](https://docs.solana.com/developing/programming-model/accounts). 
 
 Check out the code below, I added some comments as well.
 
@@ -80,7 +80,7 @@ pub struct StartStuffOff<'info> {
 }
 ```
 
-Looks complicated lol.
+Looks complicated.
 
 First we've got `[account(init, payer = user, space = 9000)]`. **All we're doing here is telling Solana how we want to initialize `BaseAccount`.**
 

@@ -77,7 +77,7 @@ Note: For MyCrypto, you'll need to connect your wallet, make an account, and the
 
 **Please try the above faucets a few times before giving up. They are not very reliable and take a little bit of effort to get working! MyCrypto is the one I use all the time and hasn't messed up for me yet.**
 
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. The funny GIF is very important. The funnier the GIF, the faster your request will likely be taken lol.
+If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. The funny GIF is very important. The funnier the GIF, the faster your request will likely be taken.
 
 Someone from the cohort will send you some fake ETH as soon as they can! 
 
@@ -276,7 +276,7 @@ For example, let’s say I have 100,000 people mint my “Pikachu” NFT for my 
 
 Another developer could come in and build another game on top of the Pikachu NFT and allow any player who has the NFT to enter their game and play it! They could make it where anyone w/ the Pikachu NFT would be able to play as Pikachu in their game. It’s totally up to them.
 
-*Note: In this case, the Pokemon creators might get mad lol. But, imagine Pikachu was your own original character!* 
+*Note: In this case, the Pokemon creators might get mad. But, imagine Pikachu was your own original character!* 
 
 Maybe stuff like HP and attack damage is even shared between games, meaning different games could build on top of the original attributes we created.
 

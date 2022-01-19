@@ -237,7 +237,7 @@ I think this is pretty self explanatory. We just connected our Phantom Wallet an
 
 Here, we're telling React to only call this render method if there is no `walletAddress` set in our state. So, if there is no wallet address that means a user has not connected their wallet and we should show them the button to connect their wallet. 
 
-### 😅 **Okay — now actually connect to wallet lol.**
+### 😅 **Okay — now actually connect to wallet.**
 
 We are almost there! If you click on your spicy new button you notice it still doesn't do anything! What the heck — that's pretty lame 👎.
 

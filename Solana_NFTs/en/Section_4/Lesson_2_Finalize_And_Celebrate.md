@@ -1,6 +1,6 @@
 ### **🚀 Deploy to the world.**
 
-Deploying a React app has gotten so easy that there is no reason not to do it at this point lol. Plus, it's **free**. You've made it this far, deploying is the final step. Plus -- your fellow builders at buildspace must not be deprived of your NFTs!! Please give us the opportunity to mint your rare creations hehe.
+Deploying a React app has gotten so easy that there is no reason not to do it at this point. Plus, it's **free**. You've made it this far, deploying is the final step. Plus -- your fellow builders at buildspace must not be deprived of your NFTs!! Please give us the opportunity to mint your rare creations hehe.
 
 I made a really quick video below on deploying via Vercel. If you don't want to use Vercel, all good. Use whatever you want.
 
@@ -31,13 +31,13 @@ Tons of people have also gotten full-time jobs at top web3 companies via buildsp
 
 **People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
 
-There is so much work to do and most of the work doesn't even have to do w/ smart contracts lol. **Being an engineer in web3 just means you take your web2 skills and apply them to web3.**
+There is so much work to do and most of the work doesn't even have to do w/ smart contracts. **Being an engineer in web3 just means you take your web2 skills and apply them to web3.**
 
 I want to quickly go over wtf it means to "work in web3" as an engineer. *Do you need to be a pro at Solana? Do you need to know how every little thing about the blockchain works?*
 
 For example, let's say you're a great frontend engineer. If you finished this project, **you have almost everything you need to be a great frontend engineer at a web3 company**. For example, the company may say "Hey — pls go and build our connect to wallet feature" — and you'd already have a solid idea on how to do that :).
 
-I just wanna inspire you to work in web3 lol. This shit is awesome. And it'd be cool if you gave it a shot ;).
+I just wanna inspire you to work in web3. This shit is awesome. And it'd be cool if you gave it a shot ;).
 
 Be sure you click "Work in Web3" on the left and fill out your profile if you haven't done so already!!! **We're partnered w/ some of the best web3 companies in the world (ex. Uniswap, OpenSea, Chainlink, Edge and Node, and more) and they want to hire devs from the buildspace network :).** You've already picked up a skill that is actually extremely valuable and companies are paying top dollar for awesome web3 engineers.
 

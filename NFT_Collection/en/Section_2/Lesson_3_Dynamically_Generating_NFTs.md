@@ -24,7 +24,7 @@ string[] thirdWords = ["YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR
 
 These are our random words!! Please have fun with this. Just make sure each word is a single word with no spaces!
 
-The funnier the words the better this will be lol. I liked making each array a certain theme. For example, `firstWords` could be the first names of your fav anime characters. Then, `secondWords` could be a food you like. And, `thirdWords` could be names of random animals. Have fun with it!!! Make this yours.
+The funnier the words the better this will be. I liked making each array a certain theme. For example, `firstWords` could be the first names of your fav anime characters. Then, `secondWords` could be a food you like. And, `thirdWords` could be names of random animals. Have fun with it!!! Make this yours.
 
 Here are some of mine. I like the first row to be words that feel like they "describe" something!
 
@@ -65,7 +65,7 @@ This can be a bit annoying for some application like ours here! In any case, no 
 ✨  Creating the SVG dynamically.
 ------------------
 
-Check out the variable `string baseSvg` on the contract. This looks wild lol. Basically, the only piece of our SVG that ever changes is the three-word combo, right? So what we do is we create a `baseSvg` variable we can reuse over and over as we create new NFTs.
+Check out the variable `string baseSvg` on the contract. This looks wild. Basically, the only piece of our SVG that ever changes is the three-word combo, right? So what we do is we create a `baseSvg` variable we can reuse over and over as we create new NFTs.
 
 We then put all together using:
 
@@ -147,7 +147,7 @@ If you take one of the `data:application/json;base64` blobs and drop it in your 
 👀 How tf does `finalTokenUri` work?
 ------------------
 
-That big line with `string memory json = Base64.encode` may look pretty confusing, but, it only looks confusing because of all the quotation marks lol. All we're doing is we're base64 encoding the JSON metadata! But — it's all **on-chain**. So, all that JSON will live on the contract itself.
+That big line with `string memory json = Base64.encode` may look pretty confusing, but, it only looks confusing because of all the quotation marks. All we're doing is we're base64 encoding the JSON metadata! But — it's all **on-chain**. So, all that JSON will live on the contract itself.
 
 We also dynamically add the `name` and the base64 encoded SVG as well!
 
