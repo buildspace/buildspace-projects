@@ -6,7 +6,7 @@ The next step is a testnet which you can think of as like a "staging" environmen
 
 ### 🦊 Metamask
 
-**BEST PRACTICE! Create a new account in MetaMask strictly for development purposes. This way, if your development account credentials accidentally leak, your real funds will still be safe.**
+**Note: It's a good idea to create a new account in MetaMask strictly for development purposes. This way, if your development account credentials accidentally leak, your real funds will still be safe.**
 
 [Instructions for adding an account in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-MetaMask-wallet)
 
