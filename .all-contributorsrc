@@ -1894,6 +1894,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mrvdot",
+      "name": "Alex Vanston",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2058452?v=4",
+      "profile": "http://www.mrvdot.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
