@@ -120,7 +120,7 @@ Before we move on, let's give this a quick test! We should be able to see some c
 
 **🦄 LOOK AT THAT. You just pulled some data from your smart contract 🦄**
 
-Always a site to see thats for sure. This is cool and all, but it would be even cooler if it showed up in our app right?
+Always a sight to see, that's for sure. This is cool and all, but it would be even cooler if it showed up in our app, right?
 
 ### 👓 Actually rendering the characters UI.
 
