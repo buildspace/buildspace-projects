@@ -348,6 +348,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/maoqingcode"><img src="https://avatars.githubusercontent.com/u/48938610?v=4?s=100" width="100px;" alt=""/><br /><sub><b>maoqingcode</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=maoqingcode" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.softsquare.nl"><img src="https://avatars.githubusercontent.com/u/11157347?v=4?s=100" width="100px;" alt=""/><br /><sub><b>turiGiuliano</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=TuriGuilano" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/abhinavpathak21/"><img src="https://avatars.githubusercontent.com/u/56548922?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abhinav Pathak</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=AbhinavXT" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/DiegoGCh"><img src="https://avatars.githubusercontent.com/u/64449084?v=4?s=100" width="100px;" alt=""/><br /><sub><b>DiegoGCh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=DiegoGCh" title="Documentation">📖</a></td>
   </tr>
 </table>
 
