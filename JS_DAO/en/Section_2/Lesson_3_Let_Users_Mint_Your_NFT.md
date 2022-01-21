@@ -37,7 +37,7 @@ const App = () => {
     if (!address) {
       return;
     }
-    
+
     // Check if the user has the NFT by using bundleDropModule.balanceOf
     return bundleDropModule
       .balanceOf(address, "0")
@@ -136,7 +136,7 @@ const App = () => {
       </div>
     );
   }
-  
+
   const mintNft = () => {
     setIsClaiming(true);
     // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
@@ -147,7 +147,7 @@ const App = () => {
       setHasClaimedNFT(true);
       // Show user their fancy new NFT!
       console.log(
-        `🌊 Successfully Minted! Check it our on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
+        `🌊 Successfully Minted! Check it our on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address.toLowerCase()}/0`
       );
     })
     .catch((err) => {
@@ -158,7 +158,7 @@ const App = () => {
       setIsClaiming(false);
     });
   }
-  
+
   // Render mint nft screen.
   return (
     <div className="mint-nft">
@@ -188,7 +188,7 @@ Nice! Here you'll see my NFT has "6 owners". You’ll also see it says “You ow
 
 ![Untitled](https://i.imgur.com/fdn9Qs4.png)
 
-This is because I actually had a few friends mint this NFT for me to test it out. Also, because it's an ERC-1155 **everyone is an owner of the same NFT**. This is pretty cool and it's also more gas efficient. Minting an ERC721 costs 96,073 gas. Minting an ERC1155 costs 51,935 gas. Why? Because everyone is sharing the same NFT data. We don't have to copy new data for each user. 
+This is because I actually had a few friends mint this NFT for me to test it out. Also, because it's an ERC-1155 **everyone is an owner of the same NFT**. This is pretty cool and it's also more gas efficient. Minting an ERC721 costs 96,073 gas. Minting an ERC1155 costs 51,935 gas. Why? Because everyone is sharing the same NFT data. We don't have to copy new data for each user.
 
 ### 🛑 Show DAO Dashboard only if user owns the NFT.
 
@@ -227,9 +227,9 @@ That’s it! Now, when you refresh the page you’ll see that you’re in the DA
 
 Finally, if you connect your wallet and **don’t** have the membership NFT, it’ll prompt you to mint one. I recommend you test this case:
 
-1) **disconnect** your wallet from your web app 
+1) **disconnect** your wallet from your web app
 
-2) actually [create a new account](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-MetaMask-wallet) 
+2) actually [create a new account](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-MetaMask-wallet)
 
 Which will get you a fresh public address so you can have a new address to receive the NFT on. Metamask lets you have as many accounts as you want.
 
