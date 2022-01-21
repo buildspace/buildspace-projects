@@ -353,6 +353,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="http://www.mrvdot.com"><img src="https://avatars.githubusercontent.com/u/2058452?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alex Vanston</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=mrvdot" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://shapes.ltd"><img src="https://avatars.githubusercontent.com/u/6533433?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Halaprix, Lord</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=halaprix" title="Documentation">📖</a></td>
   </tr>
 </table>
 
