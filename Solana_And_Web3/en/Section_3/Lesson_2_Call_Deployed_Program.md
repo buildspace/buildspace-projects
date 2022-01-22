@@ -108,7 +108,7 @@ import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
 import { Program, Provider, web3 } from '@project-serum/anchor';
 ```
 
-*Note: If you get an error `global is not defined`, change the vite.config.js into:
+*Note: If you get an error related to `buffer` or `global is not defined`, import buffer library into App.jsx and change the vite.config.js into:
 ```
 import reactRefresh from '@vitejs/plugin-react-refresh';
 import { defineConfig } from "vite";
@@ -133,6 +133,11 @@ export default defineConfig({
     }
   }
 })
+```
+
+```
+import { Buffer } from 'buffer';
+window.Buffer = Buffer;`
 ```
 
 Let's create a function called `getProvider`. Add this right below `onInputChange` . Here's the code below.
