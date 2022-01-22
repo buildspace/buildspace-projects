@@ -32,7 +32,7 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
 }
 ```
@@ -161,7 +161,7 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
   ```
@@ -203,7 +203,7 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 ```
