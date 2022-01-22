@@ -45,7 +45,7 @@ const main = async () => {
 
   console.log("WavePortal address: ", waveContract.address);
 };
-};
+
 
 const runMain = async () => {
   try {
