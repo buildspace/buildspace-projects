@@ -89,7 +89,7 @@ Now, go ahead and run this from your terminal.
 solana airdrop 2 INSERT_YOUR_PHANTOM_PUBLIC_ADDRESS_HERE  --url devnet
 ```
 
-Now, when you go back to your Phantom wallet you should have 5 SOL associated w/ your devnet wallet. Nice :).
+Now, when you go back to your Phantom wallet you should have 2 SOL associated w/ your devnet wallet. Nice :).
 
 ### 🍔 Setup a Solana `provider` on our web app.
 
