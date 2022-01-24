@@ -37,7 +37,7 @@ const App = () => {
     if (!address) {
       return;
     }
-    
+
     // Check if the user has the NFT by using bundleDropModule.balanceOf
     const balance = await bundleDropModule.balanceOf(address, "0");
    
@@ -56,7 +56,7 @@ const App = () => {
     }
   }, [address]);
 
-  // ... include all your other code that was alread there below.
+  // ... include all your other code that was already there below.
 ```
 
 We just tell thirdweb that we want to be on Rinkeby using `new ThirdwebSDK("rinkeby")`. Then, we create `bundleDropModule` and all we need is the address of our deployed ERC-1155 contract! When we do this, thirdweb gives us a little object we can easily use to interact with our contract.
@@ -178,11 +178,11 @@ When you actually go to mint the NFT, Metamask will pop so you can pay gas. Once
 
 ![Untitled](https://i.imgur.com/PjjDSxd.png)
 
-Nice! Here you'll see my NFT here has "6 owners". You’ll also see it says “You own 1” which you’d see on your end as well as long as you minted on!
+Nice! Here you'll see my NFT has "6 owners". You’ll also see it says “You own 1” which you’d see on your end as well as long as you minted one!
 
 ![Untitled](https://i.imgur.com/fdn9Qs4.png)
 
-This is because I actually had a few friends mint this NFT for me to test it out. Also, because it's an ERC-1155 **everyone is an owner of the same NFT**. This is pretty cool and it's also more gas efficient. Minting an ERC721 costs 96,073 gas. Minting an ERC1155 costs 51,935 gas. Why? Because everyone is sharing the same NFT data. We don't have to copy new data for each user. 
+This is because I actually had a few friends mint this NFT for me to test it out. Also, because it's an ERC-1155 **everyone is an owner of the same NFT**. This is pretty cool and it's also more gas efficient. Minting an ERC721 costs 96,073 gas. Minting an ERC1155 costs 51,935 gas. Why? Because everyone is sharing the same NFT data. We don't have to copy new data for each user.
 
 ### 🛑 Show DAO Dashboard only if user owns the NFT.
 
@@ -192,7 +192,7 @@ Okay, so if you remember we need to handle two cases:
 
 2) if we detect that the user doesn't have our NFT, we'll give them a button to mint one.
 
-This is pretty easy. All we need to add is the following to `App.jsx`
+This is pretty easy. All we need to add is the following to `App.jsx` before rendering mint nft screen.
 
 ```jsx
 if (!address) {
@@ -221,9 +221,9 @@ That’s it! Now, when you refresh the page you’ll see that you’re in the DA
 
 Finally, if you connect your wallet and **don’t** have the membership NFT, it’ll prompt you to mint one. I recommend you test this case:
 
-1) **disconnect** your wallet from your web app 
+1) **disconnect** your wallet from your web app
 
-2) actually [create a new account](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-MetaMask-wallet) 
+2) actually [create a new account](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-MetaMask-wallet)
 
 Which will get you a fresh public address so you can have a new address to receive the NFT on. Metamask lets you have as many accounts as you want.
 

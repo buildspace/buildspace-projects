@@ -95,7 +95,7 @@ const checkIfWalletIsConnected = async () => {
     const { solana } = window;
 
     if (solana) {
-      if (solana.isPhantom { {
+      if (solana.isPhantom) {
         console.log('Phantom wallet found!');
       }
     } else {
