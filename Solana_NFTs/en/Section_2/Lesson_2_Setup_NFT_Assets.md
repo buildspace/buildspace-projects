@@ -14,7 +14,9 @@ In the `assets` we are going to have pairs of files that are associated to each 
 
 You can load as many NFTs as you want in this machine, but we are going to start with just **three** to get you familiar with everything thats needed.
 
-To keep track of which asset goes with each `json` metadata we want to give it a really simple naming convention — numbers! Each PNG is paired with it's own JSON file.
+To keep track of which asset goes with each `json` metadata we want to give it a really simple naming convention — numbers! Each PNG is paired with it's own JSON file. Two things to note:
+1. You need to start at 0.
+2. There can be no gaps in the naming.
 
 In our `assets` folder things are going to look like this:
 
@@ -52,7 +54,7 @@ Let's copy paste the following into `0.json`:
     ],
     "creators": [
       {
-        "address": "INSERT_CREATOR_WALLET_ADDRESS_HERE",
+        "address": "INSERT_YOUR_WALLET_ADDRESS_HERE",
         "share": 100
       }
     ]
@@ -74,7 +76,7 @@ Note: Only PNGs are supported right now via the CLI. For other file types like M
 
 You can even add your own `collection` object if you wanted to give your collection a specific name. Check out an example [here](https://docs.metaplex.com/nft-standard#json-structure).
 
-*Note: You'll also see this thing on each file* `"INSERT_CREATOR_WALLET_ADDRESS_HERE"` and `share`, ignore this for now we'll talk about it later. 
+Finally, make sure you replace `"INSERT_YOUR_WALLET_ADDRESS_HERE"` with your Phantom wallet address (don't forget the quotes). This is shown in the single NFT view and resolves to twitter handles if it is connected via Solana Name Service. You can have multiple creators in the `creators` array. The `share` attribute is the percentage of royalties that each creator will receive. Since you're the only creator here, you get everything!
 
 ### 🚨 Progress Report
 

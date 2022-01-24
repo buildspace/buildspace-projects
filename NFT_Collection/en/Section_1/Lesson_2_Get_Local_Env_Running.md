@@ -69,7 +69,7 @@ You should see something like this:
 
 ![Untitled](https://i.imgur.com/LIYT9tf.png)
 
-Boom! If you see this means your local environment is set up **and** you also ran/deployed a smart contract to a local blockchain.
+Boom! If you see this it means your local environment is set up **and** you also ran/deployed a smart contract to a local blockchain.
 
 This is pretty epic. We'll get into this more but basically what's happening here step-by-step is:
 

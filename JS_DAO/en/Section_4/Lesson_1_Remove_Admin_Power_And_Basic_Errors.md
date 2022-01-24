@@ -1,10 +1,10 @@
 ### 😡 Revoke roles.
 
-If you remember, you actually still hold “minting” rights on the ERC-20 contract. That means you can go and create more token if you wanted which may freak out members of your DAO lol. You could go and mint like a billion token to yourself lol.
+If you remember, you actually still hold “minting” rights on the ERC-20 contract. That means you can go and create more tokens if you wanted which may freak out members of your DAO lol. You could go and mint like a billion tokens to yourself lol.
 
-It’s best if your revoke your “minting” role completely.
+It’s best if you revoke your “minting” role completely.
 
-That way, only the voting contract is able to mint new token. We can do this by adding the following to `scripts/11-revoke-roles.js`:
+That way, only the voting contract is able to mint new tokens. We can do this by adding the following to `scripts/11-revoke-roles.js`:
 
 ```jsx
 import sdk from "./1-initialize-sdk.js";
@@ -63,10 +63,16 @@ We are now safe from an admin takeover :).
 
 ### 👍 Handle basic unsupported network error.
 
-Feel free to add this code in your `App.jsx` file right under your last `useEffect`.
+First, you'll need to import the type `UnsupportedChainIdError` at the top of `App.jsx` to recognize a connection outside of the Rinkeby network. Just add the line below to your other imports.
 
 ```jsx
-if (error && error.name === "UnsupportedChainIdError") {
+import { UnsupportedChainIdError } from "@web3-react/core";
+```
+
+Next, add the following in your `App.jsx` file right under your last `useEffect`.
+
+```jsx
+if (error instanceof UnsupportedChainIdError ) {
   return (
     <div className="unsupported-network">
       <h2>Please connect to Rinkeby</h2>
@@ -105,7 +111,7 @@ Take some time to customize your web app a little. Change up some colors. Change
 
 Random idea: when people are voting, play your country’s national anthem or something lolol.
 
-Take some time here before moving on to really these pages your own. Even if all you do is change the background colors that’s good lol. Have fun with it.
+Take some time here before moving on to really make these pages your own. Even if all you do is change the background colors that’s good lol. Have fun with it.
 
 ### 🚨 Progress Report
 
