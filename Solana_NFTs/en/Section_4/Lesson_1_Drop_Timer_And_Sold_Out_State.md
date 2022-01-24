@@ -164,7 +164,7 @@ This should be a really easy one to do! Let's head over to our `CandyMachine` co
 
 ```jsx
 return (
-  candyMachine.state && (
+  candyMachine && candyMachine.state && (
     <div className="machine-container">
       {renderDropTimer()}
       <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
@@ -175,13 +175,10 @@ return (
           <button
             className="cta-button mint-button"
             onClick={mintToken}
-            disabled={isMinting}
           >
             Mint NFT
           </button>
         )}
-      {mints.length > 0 && renderMintedItems()}
-      {isLoadingMints && <p>LOADING MINTS...</p>}
     </div>
   )
 );
