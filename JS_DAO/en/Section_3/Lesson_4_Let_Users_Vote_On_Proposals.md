@@ -161,10 +161,10 @@ useEffect(async () => {
     if(hasVoted) {
       console.log("🥵 User has already voted");
     } else {
-      console.log("User has not voted")
+      console.log("🙂 User has not voted yet");
     }
   } catch (error) {
-    console.error("failed to check if wallet has voted", error);
+    console.error("Failed to check if wallet has voted", error);
   }
 }, [hasClaimedNFT, proposals, address]);
 ```
