@@ -30,7 +30,7 @@ const tokenModule = sdk.getTokenModule(
           nativeTokenValue: 0,
           transactionData: tokenModule.contract.interface.encodeFunctionData(
             // We're doing a mint! And, we're minting to the voteModule, which is
-            // acting as our treasruy.
+            // acting as our treasury.
             "mint",
             [
               voteModule.address,
@@ -108,7 +108,7 @@ buildspace-dao-starter % node scripts/10-create-vote-proposals.js
 
 BOOM. There are our proposals. The last thing we’re going to do is actually let users vote on proposals from our DAO dashboard now!
 
-### ✍️ Lets users vote on proposals from the dashboard.
+### ✍️ Let users vote on proposals from the dashboard.
 
 Finally, let’s bring it all home. Right now, our proposals live on our smart contract. But, we want our users to easily be able to see them and vote! Let’s do that. Head to `App.jsx`. Go ahead and add this under `tokenModule`.
 
@@ -161,10 +161,10 @@ useEffect(async () => {
     if(hasVoted) {
       console.log("🥵 User has already voted");
     } else {
-      console.log("User has not voted")
+      console.log("🙂 User has not voted yet");
     }
   } catch (error) {
-    console.error("failed to check if wallet has voted", error);
+    console.error("Failed to check if wallet has voted", error);
   }
 }, [hasClaimedNFT, proposals, address]);
 ```

@@ -111,7 +111,7 @@ Take some time to customize your web app a little. Change up some colors. Change
 
 Random idea: when people are voting, play your country’s national anthem or something lolol.
 
-Take some time here before moving on to really these pages your own. Even if all you do is change the background colors that’s good lol. Have fun with it.
+Take some time here before moving on to really make these pages your own. Even if all you do is change the background colors that’s good lol. Have fun with it.
 
 ### 🚨 Progress Report
 
