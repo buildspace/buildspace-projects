@@ -24,7 +24,7 @@ Be sure you click "Work in Web3" on the left and fill out your profile if you ha
 
 ### **🤟 Your NFT!**
 
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 1-hour pls pls pls drop us a message in #feedback and tag @ davbarrick#0001.
+We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
 
 
 ### **🌈 Before you head out.**

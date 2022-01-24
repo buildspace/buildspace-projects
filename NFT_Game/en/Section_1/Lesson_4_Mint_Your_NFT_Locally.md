@@ -69,7 +69,7 @@ contract MyEpicGame is ERC721 {
       console.log("Done initializing %s w/ HP %s, img %s", c.name, c.hp, c.imageURI);
     }
 
-    // I increment tokenIds here so that my first NFT has an ID of 1.
+    // I increment _tokenIds here so that my first NFT has an ID of 1.
     // More on this in the lesson!
     _tokenIds.increment();
   }
@@ -233,7 +233,7 @@ Map the user's public wallet address to the NFTs tokenId. What this lets me do l
 _tokenIds.increment();
 ```
 
-After the NFT is minted, we increment `tokenIds` using `_tokenIds.increment()` (which is a function OpenZeppelin gives us). This makes sure that next time an NFT is minted, it'll have a different `tokenIds` identifier. No one can have a `tokenIds` that's already been minted.
+After the NFT is minted, we increment `_tokenIds` using `_tokenIds.increment()` (which is a function OpenZeppelin gives us). This makes sure that next time an NFT is minted, it'll have a different `_tokenIds` identifier. No one can have a `_tokenIds` that's already been minted.
 
 ### 😳 Running it locally.
 
@@ -303,19 +303,15 @@ function tokenURI(uint256 _tokenId) public view override returns (string memory)
   string memory strAttackDamage = Strings.toString(charAttributes.attackDamage);
 
   string memory json = Base64.encode(
-    bytes(
-      string(
-        abi.encodePacked(
-          '{"name": "',
-          charAttributes.name,
-          ' -- NFT #: ',
-          Strings.toString(_tokenId),
-          '", "description": "This is an NFT that lets people play in the game Metaverse Slayer!", "image": "',
-          charAttributes.imageURI,
-          '", "attributes": [ { "trait_type": "Health Points", "value": ',strHp,', "max_value":',strMaxHp,'}, { "trait_type": "Attack Damage", "value": ',
-          strAttackDamage,'} ]}'
-        )
-      )
+    abi.encodePacked(
+      '{"name": "',
+      charAttributes.name,
+      ' -- NFT #: ',
+      Strings.toString(_tokenId),
+      '", "description": "This is an NFT that lets people play in the game Metaverse Slayer!", "image": "',
+      charAttributes.imageURI,
+      '", "attributes": [ { "trait_type": "Health Points", "value": ',strHp,', "max_value":',strMaxHp,'}, { "trait_type": "Attack Damage", "value": ',
+      strAttackDamage,'} ]}'
     )
   );
 
@@ -355,9 +351,7 @@ So, this may look pretty crazy but it's just us structuring the data to follow t
 
 ```solidity
 string memory json = Base64.encode(
-  bytes(
-    string(
-      abi.encodePacked(
+  abi.encodePacked(
         '{"name": "',
         charAttributes.name,
         ' -- NFT #: ',
@@ -366,8 +360,6 @@ string memory json = Base64.encode(
         charAttributes.imageURI,
         '", "attributes": [ { "trait_type": "Health Points", "value": ',strHp,', "max_value":',strMaxHp,'}, { "trait_type": "Attack Damage", "value": ',
         strAttackDamage,'} ]}'
-      )
-    )
   )
 );
 ```

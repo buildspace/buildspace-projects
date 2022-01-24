@@ -22,7 +22,7 @@ I know it’s hard to believe, but you created a full-fledged DAO. I hope at the
 
 **Be sure to click the button at the bottom of this page and submit your final link. Otherwise, our system won't mark you as "complete".**
 
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 1-hour pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
+We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
 
 [Loom](https://www.loom.com/share/99c4d4bddd624661b84e551c1257027e)
 
@@ -32,7 +32,7 @@ Go to **#showcase** in Discord and drop us a link to your final product that w
 
 Also, you should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Maybe even make a little video showing off your project and attach that to the tweet. Make your tweet look pretty and show off!!
 
-And if you feel up to it, tag [@_buildspace](https://twitter.com/_buildspace) :). **It gives us a ton of motivation whenever we see people ship their projects.** Plus, you can inspire someone else to get into Solana.
+And if you feel up to it, tag [@_buildspace](https://twitter.com/_buildspace) :). **It gives us a ton of motivation whenever we see people ship their projects.** Plus, you can inspire someone else to get into web3.
 
 Give us that dopamine hit pls.
 

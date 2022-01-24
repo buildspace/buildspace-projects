@@ -72,7 +72,7 @@ This is pretty epic. We'll get into this more, but basically what's happening he
 
 1. Hardhat compiles your smart contract from solidity to bytecode.
 2. Hardhat will spin up a "local blockchain" on your computer. It's like a mini, test version of Ethereum running on your computer to help you quickly test stuff!
-3. Hardhat will then "deploy" your compiled contract to your local blockchain. That's that address you see at the end there. It's our deployed contract, on our mini version of Ethereum.
+3. Hardhat will then "deploy" your compiled contract to your local blockchain. That's the address you see at the end there. It's our deployed contract, on our mini version of Ethereum.
 
 If you're curious, feel free to look at the code inside the project to see how it works. Specifically, check out `Greeter.sol` which is the smart contract and `sample-script.js` which actually runs the contract.
 

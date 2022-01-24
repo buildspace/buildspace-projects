@@ -17,7 +17,7 @@ contract MyEpicNFT is ERC721URIStorage {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
-  // We need to pass the name of our NFTs token and it's symbol.
+  // We need to pass the name of our NFTs token and its symbol.
   constructor() ERC721 ("SquareNFT", "SQUARE") {
     console.log("This is my NFT contract. Woah!");
   }
@@ -94,7 +94,7 @@ The `tokenURI` is where the actual NFT data lives. And it usually **links** to a
 }
 ```
 
-You can customize this, but, almost every NFT has a name, description, and a link to something like a video, image, etc. It can even have custom attributes on it!
+You can customize this, but, almost every NFT has a name, description, and a link to something like a video, image, etc. It can even have custom attributes on it! Be careful with the structure of your metadata, if your structure does not match the [OpenSea Requirements](https://docs.opensea.io/docs/metadata-standards) your NFT will appear broken on the website.
 
 This is all part of the `ERC721` standards and it allows people to build websites on top of NFT data. For example, [OpenSea](https://opensea.io/assets) is a marketplace for NFTs. And, every NFT on OpenSea follows the `ERC721` metadata standard which makes it easy for people to buy/sell NFTs. Imagine if everyone followed their own NFT standards and structured their metadata however they wanted, it'd be chaos!
 
@@ -306,6 +306,11 @@ module.exports = {
 You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
 
 **Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** We'll talk about `.env` variables later and how to keep this stuff secret.
+
+In the meantime - open your `.gitignore` file and add a line for `hardhat.config.js`. You can remove this later when you set up `.env`.
+```
+hardhat.config.js
+```
 
 Why do you need to use your private key? Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain and sign/deploy the contract. And, your username is your public address and your password is your private key. It's kinda like logging into AWS or GCP to deploy.
 

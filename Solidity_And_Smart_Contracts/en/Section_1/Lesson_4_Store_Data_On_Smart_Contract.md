@@ -65,7 +65,7 @@ So now we want to test those functions specifically!
 ```javascript
 const main = async () => {
   const [owner, randomPerson] = await hre.ethers.getSigners();
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
 
@@ -74,7 +74,7 @@ const main = async () => {
 
   let waveCount;
   waveCount = await waveContract.getTotalWaves();
-  
+
   let waveTxn = await waveContract.wave();
   await waveTxn.wait();
 
@@ -160,12 +160,12 @@ Check this out. I added a few lines at the bottom of the function. I'm not going
 ```javascript
 const main = async () => {
   const [owner, randomPerson] = await hre.ethers.getSigners();
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
 
-  console.log('Contract deployed to:', waveContract.address);
-  console.log('Contract deployed by:', owner.address);
+  console.log("Contract deployed to:", waveContract.address);
+  console.log("Contract deployed by:", owner.address);
 
   let waveCount;
   waveCount = await waveContract.getTotalWaves();

@@ -31,14 +31,20 @@ const shortenAddress = (str) => {
   return str.substring(0, 6) + "..." + str.substring(str.length - 4);
 };
 
+<<<<<<< HEAD
 // This useEffect grabs all our the addresses of our members holding our NFT.
 useEffect(async () => {
+=======
+// This useEffect grabs all the addresses of our members holding our NFT.
+useEffect(() => {
+>>>>>>> d0850dfba052a3ae4ae6c4bd17afc55caef21079
   if (!hasClaimedNFT) {
     return;
   }
   
   // Just like we did in the 7-airdrop-token.js file! Grab the users who hold our NFT
   // with tokenId 0.
+<<<<<<< HEAD
   try {
     const memberAddresses = await bundleDropModule.getAllClaimerAddresses("0");
     setMemberAddresses(memberAddresses);
@@ -46,6 +52,17 @@ useEffect(async () => {
   } catch (error) {
     console.error("failed to get member list", error);
   }
+=======
+  bundleDropModule
+    .getAllClaimerAddresses("0")
+    .then((addresses) => {
+      console.log("🚀 Members addresses", addresses)
+      setMemberAddresses(addresses);
+    })
+    .catch((err) => {
+      console.error("failed to get member list", err);
+    });
+>>>>>>> d0850dfba052a3ae4ae6c4bd17afc55caef21079
 }, [hasClaimedNFT]);
 
 // This useEffect grabs the # of token each member holds.

@@ -4,7 +4,7 @@ about: "Found an issue in on of the project lessons? Use this template to submit
   improvement \U0001F64C"
 title: "✨ [COURSE_TITLE]: <SECTION_#> - <LESSON_NAME>"
 labels: improvement
-assignees: adilanchian, farzaa, DavidBarrick, emboslicev2
+assignees: adilanchian, farzaa, emboslicev2
 
 ---
 

@@ -6,7 +6,7 @@ Let's do this.
 
 ### 🎩 Going through the `mintToken` function.
 
-In your `CandyMachine` component you'll see a function named `mintToken`. This is part of Metaplex's front-end library *(**huge shoutout to the [Exiled Ape's Candy Machine Mint repo](https://github.com/exiled-apes/candy-machine-mint)** for giving a good baseline for this code)*.
+In your `CandyMachine` component you'll see a function named `mintToken`. This is part of Metaplex's front-end library.
 
 This function is pretty complex. I'm not going to go through it line by line. Go and figure out how it works yourself! One thing I recommend doing is using CMD (MacOS) or CTRL (Windows) + click on functions to see how they work at a lower level. Looking at the code is usually the best way to learn how it works.
 
@@ -14,43 +14,25 @@ But lets look at some chunks of code:
 
 ```jsx
 const mint = web3.Keypair.generate();
-const token = await getTokenWallet(
-  walletAddress.publicKey,
-  mint.publicKey
-);
-const metadata = await getMetadata(mint.publicKey);
-const masterEdition = await getMasterEdition(mint.publicKey);
-const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST;
-const connection = new Connection(rpcHost);
-const rent = await connection.getMinimumBalanceForRentExemption(
-  MintLayout.span
-);
+
+const userTokenAccountAddress = (
+  await getAtaForMint(mint.publicKey, walletAddress.publicKey)
+)[0];
 ```
 
 Here we're creating an account for our NFT. In Solana, programs are **stateless** which is very different from Ethereum where contracts hold state. Check out more on accounts [here](https://docs.solana.com/developing/programming-model/accounts).
 
 ```jsx
-const accounts = {
-  config,
-  candyMachine: process.env.REACT_APP_CANDY_MACHINE_ID,
-  payer: walletAddress.publicKey,
-  wallet: process.env.REACT_APP_TREASURY_ADDRESS,
-  mint: mint.publicKey,
-  metadata,
-  masterEdition,
-  mintAuthority: walletAddress.publicKey,
-  updateAuthority: walletAddress.publicKey,
-  tokenMetadataProgram: TOKEN_METADATA_PROGRAM_ID,
-  tokenProgram: TOKEN_PROGRAM_ID,
-  systemProgram: SystemProgram.programId,
-  rent: web3.SYSVAR_RENT_PUBKEY,
-  clock: web3.SYSVAR_CLOCK_PUBKEY,
-};
+const userPayingAccountAddress = candyMachine.state.tokenMint
+  ? (await getAtaForMint(candyMachine.state.tokenMint, walletAddress.publicKey))[0]
+  : walletAddress.publicKey;
 
+const candyMachineAddress = candyMachine.id;
+const remainingAccounts = [];
 const signers = [mint];
 ```
 
-Here's are all the params candy machine needs to mint the NFT. It needs everything from `payer` (which is the person paying + receiving for the NFT) to the `mint` which is account address of the NFT we'll be minting.
+Here's are all the params candy machine needs to mint the NFT. It needs everything from `userPayingAccountAddress` (which is the person paying + receiving for the NFT) to the `mint` which is account address of the NFT we'll be minting.
 
 ```jsx
 const instructions = [
@@ -58,7 +40,10 @@ const instructions = [
     fromPubkey: walletAddress.publicKey,
     newAccountPubkey: mint.publicKey,
     space: MintLayout.span,
-    lamports: rent,
+    lamports:
+      await candyMachine.program.provider.connection.getMinimumBalanceForRentExemption(
+        MintLayout.span,
+      ),
     programId: TOKEN_PROGRAM_ID,
   }),
   Token.createInitMintInstruction(
@@ -66,21 +51,21 @@ const instructions = [
     mint.publicKey,
     0,
     walletAddress.publicKey,
-    walletAddress.publicKey
+    walletAddress.publicKey,
   ),
   createAssociatedTokenAccountInstruction(
-    token,
+    userTokenAccountAddress,
     walletAddress.publicKey,
     walletAddress.publicKey,
-    mint.publicKey
+    mint.publicKey,
   ),
   Token.createMintToInstruction(
     TOKEN_PROGRAM_ID,
     mint.publicKey,
-    token,
+    userTokenAccountAddress,
     walletAddress.publicKey,
     [],
-    1
+    1,
   ),
 ];
 ```
@@ -88,39 +73,67 @@ const instructions = [
 In Solana, a transaction is a bundle of instructions. So, here we bundle a few instructions which are basically functions that live on our candy machine. Metaplex gave us these functions. We just hit them.
 
 ```jsx
-const provider = getProvider();
-const idl = await Program.fetchIdl(candyMachineProgram, provider);
-const program = new Program(idl, candyMachineProgram, provider);
-
-const txn = await program.rpc.mintNft({
-  accounts,
-  signers,
-  instructions,
-});
+    if (candyMachine.state.gatekeeper) {
+    }
+    
+    if (candyMachine.state.whitelistMintSettings) {
+    }
+  
+    if (candyMachine.state.tokenMint) {
+    }
 ```
-
-This you already know! We set up a provider, then call `mintNft` which is a function that lives on our candy machine. **This is the magic line where we actually hit our candy machine** **and tell it to mint our NFT.**
+Here, we're checking if the Candy machine is using a captcha to prevent bots (`gatekeeper`), if there is a whitelist setup, or of the mint is token gated. Each of these has a different set of checks which the users' account needs to pass. Once passed, additional instructions are pushed into the transaction.
 
 ```jsx
-// Setup listener
-connection.onSignatureWithOptions(
-  txn,
-  async (notification, context) => {
-    if (notification.type === 'status') {
-      console.log('Received status event');
+const metadataAddress = await getMetadata(mint.publicKey);
+const masterEdition = await getMasterEdition(mint.publicKey);
 
-      const { result } = notification;
-      if (!result.err) {
-        console.log('NFT Minted!');
-        await getCandyMachineState();
-      }
-    }
-  },
-  { commitment: 'processed' }
+const [candyMachineCreator, creatorBump] = await getCandyMachineCreator(
+  candyMachineAddress,
+);
+
+instructions.push(
+  await candyMachine.program.instruction.mintNft(creatorBump, {
+    accounts: {
+      candyMachine: candyMachineAddress,
+      candyMachineCreator,
+      payer: walletAddress.publicKey,
+      wallet: candyMachine.state.treasury,
+      mint: mint.publicKey,
+      metadata: metadataAddress,
+      masterEdition,
+      mintAuthority: walletAddress.publicKey,
+      updateAuthority: walletAddress.publicKey,
+      tokenMetadataProgram: TOKEN_METADATA_PROGRAM_ID,
+      tokenProgram: TOKEN_PROGRAM_ID,
+      systemProgram: SystemProgram.programId,
+      rent: web3.SYSVAR_RENT_PUBKEY,
+      clock: web3.SYSVAR_CLOCK_PUBKEY,
+      recentBlockhashes: web3.SYSVAR_RECENT_BLOCKHASHES_PUBKEY,
+      instructionSysvarAccount: web3.SYSVAR_INSTRUCTIONS_PUBKEY,
+    },
+    remainingAccounts:
+      remainingAccounts.length > 0 ? remainingAccounts : undefined,
+  }),
 );
 ```
+Finally, after all the checks have passed, we create the instructions for actually minting the NFT. 
 
-Once we get the signal from our candy machine that the NFT was minted, we let the user know! This is very much like a web hook. Metaplex will actually "emit" a "success" flag on-chain and our web app can capture it. Pretty cool :).
+```jsx
+  try {
+    return (
+      await sendTransactions(
+        candyMachine.program.provider.connection,
+        candyMachine.program.provider.wallet,
+        [instructions, cleanupInstructions],
+        [signers, []],
+      )
+    ).txs.map(t => t.txid);
+  } catch (e) {
+    console.log(e);
+  }
+```
+This you already know! We use a provider, our wallet, all our instructions, and then call `sendTransactions` which is a function that talks to the blockchain. **This is the magic line where we actually hit our candy machine** **and tell it to mint our NFT.**
 
 I know I blazed through all this stuff, so, be sure to go through it yourself! Also, it'd be awesome if someone just made this one nice NPM module lol.
 
@@ -152,7 +165,7 @@ First grab you Phantom wallet's public address:
 Then, on your terminal run:
 
 ```plaintext
-solana airdrop 5 INSERT_YOUR_PHANTOM_WALLET_ADDRESS
+solana airdrop 2 INSERT_YOUR_PHANTOM_WALLET_ADDRESS
 ```
 
 And that's it. Congrats on all the free money heh.
@@ -183,130 +196,8 @@ You've put in a ton of work to make this happen and now it's time to have some f
 
 Take some time now to kinda clean stuff up. Clean up your code a little. Change up some CSS. Take a breather :).
 
-### 👀 Display minted NFTs from your drop.
-
-We like making things spicy at buildspace. It's cool to be able to make a mint machine, but what else can we do?
-
-At this point people don't know what items have already been minted from your machine. What if we could show all the NFTs ever minted from your drop? That would inspire others to mint their own NFT as well. It's actually pretty easy to do! Let's dive into some code
-
-We are going to go back to the `CandyMachine` component and make some more changes. Head over to the `index.js` file and start by adding some new state properties we are going to use to store all the  metadata for each minted NFT:
-
-```jsx
-// State
-const [machineStats, setMachineStats] = useState(null);
-// New state property
-const [mints, setMints] = useState([]);
-```
-
-
-
-Now that we have a way to store all our minted NFTs let's head over to the `getCandyMachineState` function and add the following code right under our `console.log` line:
-
-```jsx
-const data = await fetchHashTable(
-  process.env.REACT_APP_CANDY_MACHINE_ID,
-  true
-);
-
-if (data.length !== 0) {
-  for (const mint of data) {
-    // Get URI
-    const response = await fetch(mint.data.uri);
-    const parse = await response.json();
-    console.log("Past Minted NFT", mint)
-
-    // Get image URI
-    if (!mints.find((mint) => mint === parse.image)) {
-      setMints((prevState) => [...prevState, parse.image]);
-    }
-  }
-}
-```
-
-Not too bad right? Let's go ahead and break some of these pieces down a little more.
-
-```jsx
-const data = await fetchHashTable(
-  process.env.REACT_APP_CANDY_MACHINE_ID,
-  true
-);
-```
-
-`fetchHashTable` was another one of those functions that was given to you off the bat. I encourage you to take a look at it and try your best to understand it. Basically what it says is: *"Get all the accounts that have a minted NFT on this program and return the Token URI's which point to our metadata for that NFT".*
-
-So once you call that we are going to need to actually fetch the metadata from the provided URI:
-
-```jsx
-if (data.length !== 0) {
-  for (const mint of data) {
-    // Get URI
-    const response = await fetch(mint.data.uri);
-    const parse = await response.json();
-    console.log("Past Minted NFT", mint)
-
-    // Fancy JS to avoid adding the same mint twice.
-    if (!mints.find((mint) => mint === parse.image)) {
-      setMints((prevState) => [...prevState, parse.image]);
-    }
-  }
-}
-```
-
-Pretty simple here - we need to loop through every mint and get the Token URI. Once we get that URI we can fetch the `json` file and then parse out the asset address of our NFT! At that point, let's store this in our state and we are done.
-
-One thing to note here is the check before setting state. Every time we fetch minted NFTs, it will return every single mint. If we already have one of these mints in our state, don't add it again!
-
-Okay nice. If you start minting items you should start seeing parsed data with some data being printed out in your console.
-
-![Untitled](https://i.imgur.com/ybqT4m5.png)
-
-Let's start displaying this in our app now! We are going to start by making a render function that will render out a grid of these assets:
-
-```jsx
-const renderMintedItems = () => (
-  <div className="gif-container">
-    <p className="sub-text">Minted Items ✨</p>
-    <div className="gif-grid">
-      {mints.map((mint) => (
-        <div className="gif-item" key={mint}>
-          <img src={mint} alt={`Minted NFT ${mint}`} />
-        </div>
-      ))}
-    </div>
-  </div>
-);
-```
-
-Nice. Now that we have this function ready to call, we actually need to place it in our component render function! Head over to the return block and add the following code:
-
-```jsx
-return (
-  machineStats && (
-    <div className="machine-container">
-      <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
-      <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
-      <button className="cta-button mint-button" onClick={mintToken}>
-          Mint NFT
-      </button>
-      {/* If we have mints available in our array, let's render some items */}
-      {mints.length > 0 && renderMintedItems()}
-    </div>
-  )
-);
-```
-
-EZPZ. Anytime our `mints` property changes, our component will see if it can be rendered our not! By this point you should have some NFTs minted. Go ahead and refresh your page and see if you get some images that render!
-
-Note - this may take a bit of time so don't be alarmed if it doesn't appear right away! I actually am not 100% sure why this takes so long. If someone wants to figure that out and make a PR [here](https://github.com/buildspace/buildspace-projects) to explain, that'd be awesome!
-
-![Untitled](https://i.imgur.com/rRry6SK.png)
-
-**Feel free to render other info that you get as well, like the "name" of the NFT, which # minted it is, or even the wallet address of the NFTs owner.**
-
-Go crazy :).
-
 ### 🚨 Progress Report
 
 *Please do this else Farza will be sad :(*
 
-In `#progress` post a screenshot of your rendered NFTs! Maybe make a tweet here telling the world what you're up to. Be sure to tag `@_buildspace`.
+In `#progress` post a screenshot of your minted NFTs! Maybe make a tweet here telling the world what you're up to. Be sure to tag `@_buildspace`.
