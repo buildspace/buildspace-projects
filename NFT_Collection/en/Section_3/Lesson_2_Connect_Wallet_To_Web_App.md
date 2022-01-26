@@ -257,7 +257,7 @@ const App = () => {
   }, [])
 
   /*
-  * Added a conditional render! We don't want to show Connect to Wallet if we're already conencted :).
+  * Added a conditional render! We don't want to show Connect to Wallet if we're already connected :).
   */
   return (
     <div className="App">
