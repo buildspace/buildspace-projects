@@ -1939,6 +1939,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "vamonke",
+      "name": "Varick Lim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28843390?v=4",
+      "profile": "https://github.com/vamonke",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
