@@ -356,6 +356,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://shapes.ltd"><img src="https://avatars.githubusercontent.com/u/6533433?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Halaprix, Lord</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=halaprix" title="Documentation">📖</a></td>
     <td align="center"><a href="http://www.richparrish.com/"><img src="https://avatars.githubusercontent.com/u/5246402?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rich Parrish</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=rps" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/edwinyoyada"><img src="https://avatars.githubusercontent.com/u/5466522?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Edwin Yoyada</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=edwinyoyada" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ropats16"><img src="https://avatars.githubusercontent.com/u/50047129?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ropats16</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ropats16" title="Documentation">📖</a></td>
   </tr>
 </table>
 
