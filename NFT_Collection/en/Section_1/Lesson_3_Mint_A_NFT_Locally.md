@@ -44,7 +44,7 @@ Just a fancy comment.  It's called an "SPDX license identifier", You can read m
 pragma solidity ^0.8.0;
 ```
 
-This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use a version 0.8.0 or higher, but not higher than 0.9.0. Note, be sure your compiler is set to 0.8.0 in `hardhat.config.js`.
+This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use a Solidity compiler with its version 0.8.0 or higher, but not higher than 0.9.0. Note, be sure your compiler is set accordingly (eg. 0.8.0) in `hardhat.config.js`.
 
 ```solidity
 import "hardhat/console.sol";
