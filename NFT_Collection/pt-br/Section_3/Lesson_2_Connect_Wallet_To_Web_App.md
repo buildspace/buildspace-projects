@@ -1,10 +1,10 @@
-## 🌅 Using window.ethereum()
+## 🌅 Usando window.ethereum()
 
-So, in order for our website to talk to the blockchain, we need to somehow connect our wallet to it. Once we connect our wallet to our website, our website will have permission to call smart contracts on our behalf. **Remember, it's just like authenticating into a website.**
+Então, para o nosso site conseguir falar com a blockchain, precisamos de alguma maneira conectar nossa carteira nele. Uma vez que conectarmos a carteira no site, ele vai ter a permissão para chamar contratos inteligentes no nosso nome. **Lembre-se, é como ser autenticado para entrar em um site.**
 
-Head over Replit and go to `App.js` under `src`, this is where we'll be doing all our work.
+Vá para o Replit e vá para  `App.js` dentro de `src`, aqui é onde vamos estar fazendo todo trabalho.
 
-If we're logged in to Metamask, it will automatically inject a special object named `ethereum` into our window that has some magical methods. Let's check if we have that first.
+Se estivermos logados no Metamask, um objeto especial chamado  `ethereum`  será injetado dentro da nossa aba, que tem alguns métodos mágicos. Vamos checar se temos isso primeiro.
 
 ```javascript
 import React, { useEffect } from "react";
@@ -20,7 +20,7 @@ const TOTAL_MINT_COUNT = 50;
 const App = () => {
   const checkIfWalletIsConnected = () => {
     /*
-     * First make sure we have access to window.ethereum
+     * Primeiro tenha certeza que temos acesso a window.ethereum
      */
     const { ethereum } = window;
 
@@ -40,7 +40,7 @@ const App = () => {
   );
 
   /*
-   * This runs our function when the page loads.
+   * Isso roda nossa função quando a página carrega.
    */
   useEffect(() => {
     checkIfWalletIsConnected();
@@ -54,7 +54,7 @@ const App = () => {
           <p className="sub-text">
             Each unique. Each beautiful. Discover your NFT today.
           </p>
-          {/* Add your render method here */}
+          {/* adicione o seu render method aqui */}
           {renderNotConnectedContainer()}
         </div>
         <div className="footer-container">
@@ -74,24 +74,24 @@ const App = () => {
 export default App;
 ```
 
-## 🔒 See if we can access the user's account
+## 🔒 Ver se conseguimos acessar a conta do usuário
 
-So when you run this, you should see that line "We have the Ethereum object" printed in the console of the website when you go to inspect it. If you are using Replit, make sure you're looking at the console of your project website, not the Replit workspace! You can access the console of your website by opening it in its own window/tab and launching the developer tools. The URL should look something like this - `https://nft-starter-project.yourUsername.repl.co/`
+Então quando você rodar isso, você deve ver aquela linha "We have the Ethereum object" escrita no console do site quando você for inspecioná-lo. Se você estiver usando o Replit, tenha certeza que você está olhando para o console do site do projeto, e não o do Replit! Você pode acessar o console do seu site abrindo ele na sua própria aba e carregando as ferramentas de desenvolvedor. O URL deve se parecer com isso - `https://nft-starter-project.yourUsername.repl.co/`
 
-**NICE.**
+**BOA.**
 
-Next, we need to actually check if we're authorized to actually access the user's wallet. Once we have access to this, we can call our smart contract!
+Depois, nós precisamos checar se estamos autorizados mesmo a acessar a carteira do usuário. Uma vez que tivermos acesso a isso, podemos chamar nosso contrato inteligente.
 
-Basically, Metamask doesn't just give our wallet credentials to every website we go to. It only gives it to websites we authorize. Again, it's just like logging in! But, what we're doing here is **checking if we're "logged in".**
+Basicamente, o Metamask não dá as credenciais da carteira para todo website que vamos. Ele apenas dá para sites que foram autorizados. De novo, é como fazer login! Mas, o que estamos fazendo aqui é  **checando se estamos logados.**
 
-Check out the code below.
+Cheque o código abaixo.
 
 ```javascript
 import React, { useEffect, useState } from "react";
 import "./styles/App.css";
 import twitterLogo from "./assets/twitter-logo.svg";
 
-// Constants
+// Constantes
 const TWITTER_HANDLE = "_buildspace";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = "";
@@ -99,12 +99,12 @@ const TOTAL_MINT_COUNT = 50;
 
 const App = () => {
   /*
-   * Just a state variable we use to store our user's public wallet. Don't forget to import useState.
+   * Só uma variável de estado que usamos pra armazenar nossa carteira pública. Não esqueça de importar o useState.
    */
   const [currentAccount, setCurrentAccount] = useState("");
 
   /*
-   * Gotta make sure this is async.
+   * Precisamos ter certeza que isso é assíncrono.
    */
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
@@ -117,12 +117,12 @@ const App = () => {
     }
 
     /*
-     * Check if we're authorized to access the user's wallet
+     * Checa se estamos autorizados a carteira do usuário.
      */
     const accounts = await ethereum.request({ method: "eth_accounts" });
 
     /*
-     * User can have multiple authorized accounts, we grab the first one if its there!
+     * Usuário pode ter múltiplas carteiras autorizadas, nós podemos pegar a primeira que está lá!
      */
     if (accounts.length !== 0) {
       const account = accounts[0];
@@ -171,13 +171,14 @@ const App = () => {
 export default App;
 ```
 
-## 🛍 Build a connect wallet button
+## 🛍 Construir um botão de conecte sua carteira
 
-When you run the above code, the console.log that prints should be `No authorized account found`. Why? Well because we never explicitly told Metamask, _"hey Metamask, please give this website access to my wallet"._
+Quando você rodar o código acima, o console.log deve escrever   `Nenhuma conta autorizada foi encontrada. (No authorized account found")`. Por quê? Porque nós nunca dissemos explicitamente para o Metamask, _"hey metamask, por favor dê acesso à minha carteira para esse site_.
 
-We need to create a `connectWallet` button. In the world of Web3, connecting your wallet is literally a "Login" button for your user.
+Precisamos criar um botão  `connectWallet` . No mundo da Web3, conectar a sua carteira é literalmente um botão de Login para o usuário.
 
-Ready for the easiest "login" experience for your life :)? Check it out:
+Pronto para o login mais fácil da sua vida? :)
+Cheque:
 
 ```javascript
 import React, { useEffect, useState } from "react";
@@ -214,7 +215,7 @@ const App = () => {
   };
 
   /*
-   * Implement your connectWallet method here
+   * Implemente seu método connectWallet aqui
    */
   const connectWallet = async () => {
     try {
@@ -226,14 +227,14 @@ const App = () => {
       }
 
       /*
-       * Fancy method to request access to account.
+       * Método chique para pedir acesso a conta.
        */
       const accounts = await ethereum.request({
         method: "eth_requestAccounts",
       });
 
       /*
-       * Boom! This should print out public address once we authorize Metamask.
+       * Boom! Isso deve escrever o endereço público uma vez que autorizar o Metamask.
        */
       console.log("Connected", accounts[0]);
       setCurrentAccount(accounts[0]);
@@ -257,7 +258,7 @@ const App = () => {
   }, []);
 
   /*
-   * Added a conditional render! We don't want to show Connect to Wallet if we're already connected :).
+   * Adicionei um render condicional! Nós não queremos mostrar o Connect to Wallet se já estivermos conectados
    */
   return (
     <div className="App">
@@ -291,7 +292,3 @@ const App = () => {
 
 export default App;
 ```
-
-## 🚨Progress report.
-
-Post a screenshot of your website in #progress!
