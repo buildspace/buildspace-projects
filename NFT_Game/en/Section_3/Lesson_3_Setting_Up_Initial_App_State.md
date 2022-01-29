@@ -144,9 +144,9 @@ We've done a lot! At this point, let's make sure both methods are working:
 
 The first scenario is where the user has not connected to our app w/ their wallet — so show them the connect to wallet button!
 
-Note: Make sure your wallet is not connected to your app from a past project. To do this, open your MetaMask extension and click on the three dots on the right. You should then see "Connected sites". Go ahead and click that. In the list of connected sites, you should see an entry ending with `id.repl.co` and a trash can icon next to it. Just click the trash can icon to remove your wallet address connection from your app. 
+Note: Make sure your wallet is not connected to your app from a past project. To do this, open your MetaMask extension and click on the three dots on the right. You should then see "Connected sites". Go ahead and click that. In the list of connected sites, you should see an entry ending with `id.repl.co` (`localhost:3000` if working on local environment) and a trash can icon next to it. Just click the trash can icon to remove your wallet address connection from your app. 
 
-![Connected sites](https://imgur.com/cikRCBY.png)
+![Connected sites](https://i.imgur.com/zPAVBYb.png)
 
 Go ahead and refresh your page and and you should see your "Connect To Wallet" button ready to go! Go ahead and connect! Once you do, your console should print out the word `Connected` and then your wallet's public address!
 
