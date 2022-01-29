@@ -108,7 +108,7 @@ import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
 import { Program, Provider, web3 } from '@project-serum/anchor';
 ```
 
-*Note:*  
+*Note (only for Replit users):*  
 *1. If you get an error `global is not defined`, change the vite.config.js into:*
 ```javascript
 import reactRefresh from '@vitejs/plugin-react-refresh';
