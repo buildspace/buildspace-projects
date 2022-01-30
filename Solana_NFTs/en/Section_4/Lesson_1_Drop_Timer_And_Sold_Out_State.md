@@ -90,7 +90,6 @@ return (
       <button
         className="cta-button mint-button"
         onClick={mintToken}
-        disabled={isMinting}
       >
         Mint NFT
       </button>
