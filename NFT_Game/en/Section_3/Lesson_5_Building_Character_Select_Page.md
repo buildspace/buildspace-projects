@@ -7,7 +7,7 @@ Before you begin, be sure to remove any function calls to mint a character or at
 
 ### ♻️ Setting up a reusable contract object.
 
-Since we know we are going to use our Smart Contract let's start by setting up or `ethers` object to interact with it. It's going to be the same flow as before, with a little twist. Let's start by importing all the things in `Components/SelectCharacter/index.js` :
+Since we know we are going to use our Smart Contract let's start by setting up an `ethers` object to interact with it. It's going to be the same flow as before, with a little twist. Let's start by importing all the things in `Components/SelectCharacter/index.js` :
 
 ```javascript
 import React, { useEffect, useState } from 'react';
@@ -120,7 +120,7 @@ Before we move on, let's give this a quick test! We should be able to see some c
 
 **🦄 LOOK AT THAT. You just pulled some data from your smart contract 🦄**
 
-Always a site to see thats for sure. This is cool and all, but it would be even cooler if it showed up in our app right?
+Always a sight to see, that's for sure. This is cool and all, but it would be even cooler if it showed up in our app, right?
 
 ### 👓 Actually rendering the characters UI.
 

@@ -2,7 +2,7 @@ Now that we have access to a wallet address we can start minting character NFTs 
 
 This section is going to help you understand how we will be rendering each state of our app. Why don't we just break down the logic real quick:
 
-1. If user has has not connected to your app - **Show Connect To Wallet Button**
+1. If user has not connected to your app - **Show Connect To Wallet Button**
 2. If user has connected to your app **AND** does not have a character NFT - **Show `SelectCharacter` Component**
 3. If user has connected to your app AND does have a character NFT - **Show `Arena` Component.** The `Arena` is where users will be able to attack our boss!
 
@@ -14,7 +14,7 @@ Let's start off with creating our `SelectCharacter` Component! Head to the `src/
 
 Oh, one thing to note - you probably see the `LoadingIndicator` component in the `Components` folder. Don't worry about that just yet, we will get to it later 🤘.
 
-Now that we have our folder structure all setup, let's go ahead and add the base logic for a component. Start by creating a new file named `index.js` in your fresh `SelectCharacter` folder. In this folder go ahead and add the following code:
+Go ahead and add the following code to the `index.js` you just created:
 
 ```javascript
 import React, { useEffect, useState } from 'react';

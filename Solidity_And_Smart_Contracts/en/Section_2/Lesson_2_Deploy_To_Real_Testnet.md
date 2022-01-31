@@ -12,7 +12,7 @@ Sorry for having you make so many accounts, but, this ecosystem is complex and w
 💳 Transactions
 ---------------
 
-So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction. Doing something that updates a variable in our contract is also considered a transaction.
+So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone ETH is a transaction. Doing something that updates a variable in our contract is also considered a transaction.
 
 So when we call `wave` and it does `totalWaves += 1`, that's a transaction! **Deploying a smart contract is also a transaction.**
 

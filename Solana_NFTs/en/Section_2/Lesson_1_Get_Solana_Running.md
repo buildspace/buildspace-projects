@@ -107,6 +107,12 @@ From here it's just a matter of installing all the dependencies for this CLI, by
 yarn install --cwd ~/metaplex-foundation/metaplex/js/
 ```
 
+In case you get an error such as `There appears to be trouble with your network connection. Retrying...`, you may try using:
+```plaintext
+yarn install --cwd ~/metaplex-foundation/metaplex/js/ --network-timeout 600000
+```
+Most of the time this happens because the default timeout that is set in the Yarn configuration is too low, so when this time runs out it assumes that it's a network problem. 
+
 Before we move on, let's make sure everything is working as expected by running the following command to get the `version`.
 
 ```plaintext
@@ -115,6 +121,8 @@ ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.
 
 This should spit out `0.0.2`. At this point, we are good to go to start setting up our NFTs :).
 
+**Note**: If you're on MacOS, you might run into an issue if you had the old version of the Metaplex CLI installed. Make sure you delete the `metaplex-foundation` or `metaplex` directory in your `~` folder!
+ 
 ### 🚨 Progress Report
 
 *Please do this else Farza will be sad :(*

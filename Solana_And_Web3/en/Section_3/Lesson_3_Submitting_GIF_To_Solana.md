@@ -92,4 +92,4 @@ You can also run `createKeyPair.js` as many times as you want and this will let 
 
 *Please do this else Farza will be sad :(*
 
-You got GIFs submissions working!! Post a screenshot in `#progress` with your GIFs being retrieved form your Solana program :).
+You got GIFs submissions working!! Post a screenshot in `#progress` with your GIFs being retrieved from your Solana program :).
