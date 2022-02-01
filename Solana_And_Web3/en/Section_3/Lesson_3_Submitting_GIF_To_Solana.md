@@ -68,7 +68,7 @@ Make sure you `cd` into the directory `createKeyPair.js` is located.
 
 This will generate a file named `keypair.json` with our fancy keypair :).
 
-**Note for Replit users**: You can actually run shell commands directly in Replit. Click the word "Shell", then just do `cd src` and then `node createKeyPair.js` and it'll work as if you were using a local terminal!
+**Note for Replit users**: You can actually run shell commands directly in Replit. Click the word "Shell", then just do `cd src` and then `node createKeyPair.jsx` and it'll work as if you were using a local terminal!
 
 Now that we have this file, we just need to change up `App.js` a little. At the top, you'll need to import the key pair like this:
 
