@@ -55,7 +55,7 @@ There are a few testnets out there and the one we'll be using is called "Rinkeby
 
 In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copy how mainnet works, only difference is no real money is involved.
 
-In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. Make sure that your MetaMask wallet is set to the "Rinkeby Test Network" before using faucet. Click the "Show/hide test networks" if needed.
+In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. Make sure that your MetaMask wallet is set to the "Rinkeby Test Network" before using faucet. You may not see your test netowrks in your Metamask wallet, if this is the case try clicking the "show/hide test networks" option to enable them!
 
 For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
