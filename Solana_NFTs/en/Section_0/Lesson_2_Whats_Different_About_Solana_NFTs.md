@@ -14,7 +14,7 @@ Using Metaplex is **very** different. With Metaplex we **don't** need to write o
 
 This is kinda wild. It's like a smart-contract-as-a-service lol.
 
-Some of you may be like "wtf that's lame I wanna create a custom program myself". You can totally do that. [Here's](https://github.com/metaplex-foundation/metaplex/blob/master/rust/nft-candy-machine/src/lib.rs) the code. But, it's quite complex. Why? Mostly because Solana allows for parallel transactions. So, your code needs to account for cases like "if 5 people go to mint an NFT at the same time and there are only 2 left, who get's it?".
+Some of you may be like "wtf that's lame I wanna create a custom program myself". You can totally do that. [Here's](https://github.com/metaplex-foundation/metaplex-program-library/blob/master/candy-machine/program/src/lib.rs) the code. But, it's quite complex. Why? Mostly because Solana allows for parallel transactions. So, your code needs to account for cases like "if 5 people go to mint an NFT at the same time and there are only 2 left, who get's it?".
 
 In Ethereum this is easy. It's all synchronous and atomic so we don't need to think about that. But, part of Solana's sell is that it can do parallel transactions which makes it faster. **But, this makes the code more complex.** So, tools like Metaplex are extremely useful. They handle the edge cases for us and give us a smart contract we can interact with.
 
