@@ -336,7 +336,7 @@ return (
 );
 ```
 
-We are going to dynamically add this class name to our `div` which in turn will apply some new styles to it! One thing to note here is you can change these attack state names, but make sure you update them in the `Arena.css` file as the are the class names needed for the animations to work!
+We are going to dynamically add this class name to our `div` which in turn will apply some new styles to it! One thing to note here is you can change these attack state names, but make sure you update them in the `Arena.css` file as they are the class names needed for the animations to work!
 
 **NOICE.** We should be good to go to try and land an attack on Elon. Go ahead and click the Attack button and see what happens! You should see a few things:
 
@@ -403,7 +403,7 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
 }
 ```
 
-Also, don't forget to head back to `App.js` and add pass the `setCharacterNFT` property to your Arena component:
+Also, don't forget to head back to `App.js` and pass the `setCharacterNFT` property to your Arena component:
 
 ```javascript
   <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />
