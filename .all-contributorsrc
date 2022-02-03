@@ -1948,6 +1948,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ko-sakuma",
+      "name": "Ko Sakuma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64699157?v=4",
+      "profile": "https://github.com/ko-sakuma",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
