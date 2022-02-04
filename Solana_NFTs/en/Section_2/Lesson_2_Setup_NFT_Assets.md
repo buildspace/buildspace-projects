@@ -72,7 +72,7 @@ To start, I recommend just picking three PNGs you relate with. Maybe it's three 
 
 I'm going to pick Naruto, Sasuke, and Sakura — my favorite anime trio :).
 
-Note: Only PNGs are supported right now via the CLI. For other file types like MP4, MP3, HTML, etc you need to create a custom script. See Github issue [here](https://github.com/metaplex-foundation/metaplex/issues/511).
+Note: Only PNGs are supported right now via the CLI. For other file types like MP4, MP3, HTML, etc you need to create a custom script. See Github issue [here](https://github.com/metaplex-foundation/metaplex/pull/1601).
 
 You can even add your own `collection` object if you wanted to give your collection a specific name. Check out an example [here](https://docs.metaplex.com/nft-standard#json-structure).
 
