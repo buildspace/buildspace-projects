@@ -74,7 +74,7 @@ I'm going to pick Naruto, Sasuke, and Sakura — my favorite anime trio :).
 
 Note: Only PNGs are supported right now via the CLI. For other file types like MP4, MP3, HTML, etc you need to create a custom script. See Github issue [here](https://github.com/metaplex-foundation/metaplex/issues/511).
 
-You can even add your own `collection` object if you wanted to give your collection a specific name. Check out an example [here](https://docs.metaplex.com/nft-standard#json-structure).
+You can even add your own `collection` object if you wanted to give your collection a specific name. Check out an example [here](https://docs.metaplex.com/candy-machine-v2/preparing-assets#-image-0png).
 
 Finally, make sure you replace `"INSERT_YOUR_WALLET_ADDRESS_HERE"` with your Phantom wallet address (don't forget the quotes). This is shown in the single NFT view and resolves to twitter handles if it is connected via Solana Name Service. You can have multiple creators in the `creators` array. The `share` attribute is the percentage of royalties that each creator will receive. Since you're the only creator here, you get everything!
 
