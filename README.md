@@ -376,6 +376,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/mkarots"><img src="https://avatars.githubusercontent.com/u/7574557?v=4?s=100" width="100px;" alt=""/><br /><sub><b>@mkarots</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=mkarots" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Meta-Sean"><img src="https://avatars.githubusercontent.com/u/35508684?v=4?s=100" width="100px;" alt=""/><br /><sub><b>meta-sean</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=meta-sean" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/constanteen"><img src="https://avatars.githubusercontent.com/u/30834215?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chilo Nwokolo</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=constanteen" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/0xphantomsec"><img src="https://avatars.githubusercontent.com/u/47511217?v=4?s=100" width="100px;" alt=""/><br /><sub><b>0xphantomsec</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xphantomsec" title="Documentation">📖</a></td>
   </tr>
 </table>
 
