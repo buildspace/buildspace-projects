@@ -2047,6 +2047,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mkarots",
+      "name": "@mkarots",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7574557?v=4",
+      "profile": "https://github.com/mkarots",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

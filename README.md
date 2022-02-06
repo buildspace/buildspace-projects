@@ -373,6 +373,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://scderya@gmail.com"><img src="https://avatars.githubusercontent.com/u/32437044?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chad</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=WaterlessPiano2" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Tarun-k-Gupta"><img src="https://avatars.githubusercontent.com/u/77499904?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tarun Gupta</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Tarun-k-Gupta" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/AlbertSawZ"><img src="https://avatars.githubusercontent.com/u/32249096?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Miguel Guerrero</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=albertsawz" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/mkarots"><img src="https://avatars.githubusercontent.com/u/7574557?v=4?s=100" width="100px;" alt=""/><br /><sub><b>@mkarots</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=mkarots" title="Documentation">📖</a></td>
   </tr>
 </table>
 
