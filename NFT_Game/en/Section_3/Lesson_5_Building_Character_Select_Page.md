@@ -278,7 +278,7 @@ const onCharacterMint = async (sender, tokenId, characterIndex) => {
 
 This method is called anytime a new character NFT is minted. Simply print out the data to make sure things are looking good and then we need to get the actual metadata of our newly minted character NFT! If you are experienced in React, you may see some routes where we can get the character metadata without having to call our contract again! Definitely make this change if you know how :). If not, no worries! We already setup this logic on our contract (thank your past self at this moment).
 
-All we are doing is called the `checkIfUserHasNFT` function which will return all of our metadata! at that point, we can transform the data and set in our state. Once our state is set, we will be transported to our `Arena` Component (as soon as we set it up of course).
+All we are doing is calling the `checkIfUserHasNFT` function which will return all of our metadata! At that point, we can transform the data and set it in our state. Once our state is set, we will be transported to our `Arena` Component (as soon as we set it up of course).
 
 ```javascript
 gameContract.on('CharacterNFTMinted', onCharacterMint);
@@ -316,7 +316,7 @@ Here's what mines looks like:
 
 AHH YES. There is my Leo. One thing to note here - make sure to look for your NFT on the [https://testnets.opensea.io/](https://testnets.opensea.io/) since we are using Rinkeby!
 
-You freaking did it! Now that we have our character NFT we can finally go out and protect the Metaverse from rouge beings ⚔️.
+You freaking did it! Now that we have our character NFT we can finally go out and protect the Metaverse from rogue beings ⚔️.
 
 Feel free to also set up an `alert` that automatically gives your player the OpenSea link when it's done minting. For example something like:
 

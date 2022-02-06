@@ -34,7 +34,7 @@ wavePortalContract.wave(message, { gasLimit: 300000 })
 
 What this does is make the user pay a set amount of gas of 300,000. And, if they don't use all of it in the transaction they'll automatically be refunded.
 
-So, if a transaction costs 250,000 gas then *after *that transaction is finalized that 50,000 gas left over that the user didn't use will be refunded :).
+So, if a transaction costs 250,000 gas then *after* that transaction is finalized that 50,000 gas left over that the user didn't use will be refunded :).
 
 🔍 Validating the transaction
 ---------------------------

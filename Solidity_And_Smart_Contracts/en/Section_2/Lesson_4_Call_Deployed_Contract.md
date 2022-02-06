@@ -32,7 +32,7 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
 }
 ```
@@ -98,9 +98,6 @@ const App = () => {
 
 🛠 Getting ABI File Content
 ---------------------------
-**Rather watch me go through this? Checkout out the video below!**
-[Loom](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)
-
 Look at you, already half way down here! Let's move back to our smart contract folder.
 
 When you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
@@ -161,7 +158,7 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
   ```
@@ -203,7 +200,7 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 ```

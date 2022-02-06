@@ -238,7 +238,7 @@ You have a few faucets to choose from:
 
 | Buildspace | https://buildspace-faucet.vercel.app/
 
-| Ethily | https://ethily.io/rinkeby-faucet/ 
+| Chainlink | https://faucets.chain.link/rinkeby
 
 | Official Rinkeby | https://faucet.rinkeby.io/ 
 

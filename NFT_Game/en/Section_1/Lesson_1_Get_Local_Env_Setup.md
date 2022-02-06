@@ -1,6 +1,6 @@
 *Note: If you've taken previous projects at buildspace, many of the initial setup items in the next two lessons are repeated from previous projects. If you already understand it, awesome! You're a pro. Feel free to blaze through it really fast.*
 
-### **📚 A little blockchain primer.**
+### **📚 A little blockchain primer**
 
 Before anything, we'll need to get our local Ethereum network working. This is how we can compile and test our smart contract code! You know how you need to spin up a local environment to work on? Same deal here!
 
@@ -16,7 +16,7 @@ The bigger picture here is:
 
 I recommend also reading over [these](https://ethereum.org/en/developers/docs/intro-to-ethereum/) docs when you can for fun. These are the best guides on the internet for understanding how Ethereum works in my opinion!
 
-### **⚙️ Setup local tooling.**
+### **⚙️ Setup local tooling**
 
 We're going to be using a tool called **Hardhat** a lot which let us quickly compile smart contracts and test them locally. First you'll need to get node/npm. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html).
 

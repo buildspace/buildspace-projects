@@ -82,7 +82,7 @@ In Solana, a transaction is a bundle of instructions. So, here we bundle a few i
     if (candyMachine.state.tokenMint) {
     }
 ```
-Here, we're checking if the Candy machine is using a captcha to prevent bots (`gatekeeper`), if there is a whitelist setup, or of the mint is token gated. Each of these has a different set of checks which the users' account needs to pass. Once passed, additional instructions are pushed into the transaction.
+Here, we're checking if the Candy machine is using a captcha to prevent bots (`gatekeeper`), if there is a whitelist setup, or if the mint is token gated. Each of these has a different set of checks which the users' account needs to pass. Once passed, additional instructions are pushed into the transaction.
 
 ```jsx
 const metadataAddress = await getMetadata(mint.publicKey);

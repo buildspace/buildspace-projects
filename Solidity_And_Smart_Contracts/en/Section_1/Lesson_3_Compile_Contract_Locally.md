@@ -95,7 +95,7 @@ You should see your `console.log` run from within the contract and then you shou
 🎩 Hardhat & HRE
 ----------------
 
-In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of sorcery is this? 
+In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of magic trick is this? 
 
 Directly from the Hardhat docs themselves you will notice this:
 
