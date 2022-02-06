@@ -316,7 +316,7 @@ Here's what mines looks like:
 
 AHH YES. There is my Leo. One thing to note here - make sure to look for your NFT on the [https://testnets.opensea.io/](https://testnets.opensea.io/) since we are using Rinkeby!
 
-You freaking did it! Now that we have our character NFT we can finally go out and protect the Metaverse from rouge beings ⚔️.
+You freaking did it! Now that we have our character NFT we can finally go out and protect the Metaverse from rogue beings ⚔️.
 
 Feel free to also set up an `alert` that automatically gives your player the OpenSea link when it's done minting. For example something like:
 
