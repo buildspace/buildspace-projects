@@ -1966,6 +1966,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "0xJepsen",
+      "name": "Waylon Jepsen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57912727?v=4",
+      "profile": "https://github.com/0xJepsen",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

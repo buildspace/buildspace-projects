@@ -362,6 +362,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/kayvannj"><img src="https://avatars.githubusercontent.com/u/2337268?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kayvan Najafzadeh</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=kayvannj" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/0xJepsen"><img src="https://avatars.githubusercontent.com/u/57912727?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Waylon Jepsen</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xJepsen" title="Documentation">📖</a></td>
   </tr>
 </table>
 
