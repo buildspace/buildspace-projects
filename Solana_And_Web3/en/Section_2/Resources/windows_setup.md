@@ -76,6 +76,7 @@ To install Rust just use this command -
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 ```
 
+Please restart Ubuntu console after installation is finished.
 Once you're done, verify by doing:
 
 ```bash
