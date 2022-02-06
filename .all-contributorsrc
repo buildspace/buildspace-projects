@@ -1975,6 +1975,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "dcts",
+      "name": "dcts",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44790691?v=4",
+      "profile": "http://dcts.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
