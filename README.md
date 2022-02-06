@@ -367,6 +367,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/anipaul2"><img src="https://avatars.githubusercontent.com/u/74004409?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aniketh Paul</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=anipaul2" title="Documentation">📖</a></td>
     <td align="center"><a href="https://bandism.net/"><img src="https://avatars.githubusercontent.com/u/22633385?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ikko Ashimine</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=eltociear" title="Documentation">📖</a></td>
     <td align="center"><a href="http://altugbakan.eth"><img src="https://avatars.githubusercontent.com/u/43248015?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Altuğ Bakan</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=altugbakan" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.sicongzhao.com"><img src="https://avatars.githubusercontent.com/u/4151699?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sicong Zhao</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=sicongzhao" title="Documentation">📖</a></td>
   </tr>
 </table>
 
