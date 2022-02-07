@@ -16,7 +16,7 @@ I **won't** be going into deep detail on the *all* the contents of `CandyMachine
 
 Some of the stuff in this file is pretty advanced, but explore it and mess around with it as you please. The best way to learn this stuff is just by reading the code yourself and playing around with it.
 
-But, don't worry too much about exploring yet. Let's get shit working first lol.
+But, don't worry too much about exploring yet. Let's get shit working first.
 
 ### 🌲 **Setup `.env` properties**
 
@@ -166,7 +166,7 @@ const program = new Program(idl, candyMachineProgram, provider);
 
 In order for us to talk to our candy machine, we'll need two things - **the `IDL` and a `Program` object**. The `IDL` has info our web app needs around how to interact w/ the candy machine. The `Program` is an object that we can use to actually **directly interact** with the candy machine.
 
-You know how you create a `DB` connection in web2? Well — here we're doing something similar lol. But, we're creating a connection to Solana.
+You know how you create a `DB` connection in web2? Well — here we're doing something similar. But, we're creating a connection to Solana.
 
 At the end of the day, our candy machine is just a Solana program that lives on Metaplex! This means we can interact with it exactly like we would with any program that lives on Solana.
 
@@ -354,7 +354,7 @@ return (
 
 It's that simple! You should see all the data nicely rendered on your web app now.
 
-I provided a `CandyMachine.css` file that includes some base styles for you. When you are ready to make some changes, head over there and add whatever CSS you want to make it your own. Even if you're lazy, just change some colors around. Make this your own. Don't just follow me lol. 
+I provided a `CandyMachine.css` file that includes some base styles for you. When you are ready to make some changes, head over there and add whatever CSS you want to make it your own. Even if you're lazy, just change some colors around. Make this your own. Don't just follow me. 
 
 You'll notice you have a fancy looking Mint NFT button, but when you click it, it does nothing 😔.
 

@@ -190,7 +190,7 @@ And if you already voted, you’ll see something like:
 
 ![Untitled](https://i.imgur.com/zOQ6Rim.png)
 
-The next chunk of code is kinda massive lol. It deals with actually rendering the proposals that we just retrieved here so that users can have three options to vote:
+The next chunk of code is kinda massive. It deals with actually rendering the proposals that we just retrieved here so that users can have three options to vote:
 
 1) For
 
@@ -217,7 +217,7 @@ Then any member would be able to execute the proposal via our governance contrac
 
 For example. Let’s say we’re dealing with the proposal where we’re minting an additional 420,000 token. If `votes "for" proposal > votes "against" proposal`  — then anyone can trigger the proposal and bam our contract will mint the token. Kinda wild, right? We have to trust no one except the blockchain.
 
-Imagine being in a corrupt country, voting for something, and then your government lies to you and says “Hey actually we didn’t get enough votes jk” when you really did lol. Or, imagine they say, “Okay, we got enough votes we’ll do this we promise” and never do!
+Imagine being in a corrupt country, voting for something, and then your government lies to you and says “Hey actually we didn’t get enough votes jk” when you really did. Or, imagine they say, “Okay, we got enough votes we’ll do this we promise” and never do!
 
 In this case, everything is codified and code does not lie.
 

@@ -46,7 +46,7 @@ Let's get you some open-source rep!!!
 
 **People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
 
-There is so much work to do and most of the work doesn't even have to do w/ smart contracts lol. Being an engineer in web3 just means you take your web2 skills and apply them to web3.
+There is so much work to do and most of the work doesn't even have to do w/ smart contracts. Being an engineer in web3 just means you take your web2 skills and apply them to web3.
 
 Web3 also desperately needs designers, product managers, marketers, and more.
 

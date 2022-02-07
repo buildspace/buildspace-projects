@@ -43,7 +43,7 @@ A lot of stuff going on here. First you'll see I "inherit" an OpenZeppelin contr
 
 The NFT standard is known as `ERC721` which you can read a bit about [here](https://eips.ethereum.org/EIPS/eip-721). OpenZeppelin essentially implements the NFT standard for us and then lets us write our own logic on top of it to customize it. That means we don't need to write boiler plate code.
 
-It'd be crazy to write a HTTP server from scratch without using a library, right? Of course, unless you wanted to explore lol. But we just wanna get up and running here.
+It'd be crazy to write a HTTP server from scratch without using a library, right? Of course, unless you wanted to explore. But we just wanna get up and running here.
 
 Similarly — it'd be crazy to just write an NFT contract from complete scratch! You can explore the `ERC721` contract we're inheriting from [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol).
 
@@ -228,7 +228,7 @@ There are a few testnets out there and the one we'll be using is called "Rinkeby
 
 In order to deploy to Rinkeby, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works lol.
+In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works.
 
 For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
@@ -245,7 +245,7 @@ You have a few faucets to choose from:
 🙃 Having trouble getting Testnet ETH?
 ------------------------
 
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
+If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH.
 
 🚀 Setup a deploy.js file
 ------------------------

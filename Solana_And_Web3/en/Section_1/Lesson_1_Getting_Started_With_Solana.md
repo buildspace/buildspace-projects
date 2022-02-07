@@ -8,7 +8,7 @@ We'll allow our user to essentially "auth" with their Solana wallet. Building au
 
 In this case it's **a lot** easier than you may think! Here's the plan:
 
-1. Get the base web app code for this project (I provided some starter HTML/CSS so you can focus on the things that truly matter lol).
+1. Get the base web app code for this project (I provided some starter HTML/CSS so you can focus on the things that truly matter).
 2. Write the code that will allow users to connect their Solana wallet and connect to your app to setup a basic "auth" state.
 3. Hop into writing your first Solana program w/ Rust + deploy to the actual blockchain.
 

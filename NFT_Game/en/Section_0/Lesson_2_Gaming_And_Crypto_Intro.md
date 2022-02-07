@@ -1,6 +1,6 @@
 It's worth briefly talking about why gaming + crypto is so interesting. I feel like when most people talk about this topic they throw out really big numbers like, "Blah game did $1.2 billion in revenue this quarter" or something like that. But, it's more than that! It helps to explain why this stuff is cool. 
 
-For example, Axie Infinity is an NFT-based game that has done **[$2.6 billion dollars](https://dappradar.com/ethereum/games/axie-infinity)** in NFT trades so far. But... what the f does that even mean?! lol.
+For example, Axie Infinity is an NFT-based game that has done **[$2.6 billion dollars](https://dappradar.com/ethereum/games/axie-infinity)** in NFT trades so far. But... what the f does that even mean?!.
 
 Why are people losing their minds over things like this?
 

@@ -36,7 +36,7 @@ PROD_ALCHEMY_KEY=BLAHBLAH
 PRIVATE_KEY=BLAHBLAH
 ```
 
-(don't commit your .env after this lol).
+(don't commit your .env after this).
 
 ### 🌎 Get your image assets up in IPFS.
 
@@ -64,7 +64,7 @@ If you are using **Brave Browser** (which has IPFS built in) you can just type t
 ipfs://INSERT_YOUR_CID_HERE
 ```
 
-And that'll actually start an IPFS node on your local machine and retrieve the file! But again, I've only done this on **Brave.** If you try to do it on something like Chrome it just does a Google search lol.
+And that'll actually start an IPFS node on your local machine and retrieve the file! But again, I've only done this on **Brave.** If you try to do it on something like Chrome it just does a Google search.
 
 ![Untitled](https://i.imgur.com/vQ9Wsr0.png)
 

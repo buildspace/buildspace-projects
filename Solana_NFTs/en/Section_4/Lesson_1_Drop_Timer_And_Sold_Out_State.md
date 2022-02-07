@@ -143,7 +143,7 @@ useEffect(() => {
 }, []);
 ```
 
-Feel free to just copy paste all this lol time stuff I rarely understand I almost always copy paste it from StackOverflow hehe.
+Feel free to just copy paste all this time stuff I rarely understand I almost always copy paste it from StackOverflow hehe.
 
 That's it!
 

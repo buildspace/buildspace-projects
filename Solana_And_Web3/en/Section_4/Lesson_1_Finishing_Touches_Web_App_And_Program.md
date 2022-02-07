@@ -49,7 +49,7 @@ Who needs Stripe and PayPal when you have a super low-gas fee blockchain that le
 
 This is another thing I want you to figure out if you want by hanging out in the [Anchor Discord](https://discord.gg/8HwmBtt2ss) or by asking your fellow buildspacers. **Why am I not telling you the answers?** Haha, because I want you to be active in the Solana community, figure shit out, and learn by struggling a bit.
 
-For example, here's me asking the same question lol:
+For example, here's me asking the same question:
 
 ![Untitled](https://i.imgur.com/b94aOcG.png)
 

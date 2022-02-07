@@ -40,9 +40,9 @@ How?
 
 Okay, so, hope that makes *some sense*.
 
-This is an extremely powerful concept — the idea that any file can be made unique and valuable is amazing. It's also why you may be seeing Twitter going crazy about NFTs lately lol. NFTs are something that are already shifting art, gaming, and more.
+This is an extremely powerful concept — the idea that any file can be made unique and valuable is amazing. It's also why you may be seeing Twitter going crazy about NFTs lately. NFTs are something that are already shifting art, gaming, and more.
 
-I don't expect you to fully get it yet. If it makes zero sense, maybe read it again! Just make sure it makes a *tiny bit* of sense before moving on lol. I just want to give you a little bit of base knowledge.
+I don't expect you to fully get it yet. If it makes zero sense, maybe read it again! Just make sure it makes a *tiny bit* of sense before moving on. I just want to give you a little bit of base knowledge.
 
 If you have a question you're curious about, feel free to ask it #section-1-help.
 

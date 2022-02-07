@@ -163,7 +163,7 @@ We're going to be using this tool called "Anchor" a lot. If you know about Hardh
 
 Anchor is a *really early projec*t run by a few core devs. You're bound to run into a few issues. Be sure to join the [Anchor Discord](https://discord.gg/8HwmBtt2ss) and feel free to ask questions or [create an issue](https://github.com/project-serum/anchor/issues) on their Github as you run into issues. The devs are awesome. Maybe even say you're from buildspace in #general on their Discord :).
 
-**BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search the their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you lol.**
+**BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search the their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you.**
 
 *Seriously — join that Discord, the devs are really helpful.*
 
@@ -233,7 +233,7 @@ When we did `anchor init` it create a basic Solana program for us. What we want 
 
 Anchor is awesome. It lets us do this all in one step by running:
 
-*Note: Be sure you **don't** have `solana-test-validator` running anywhere else it'll conflict w/ Anchor. This took me a while to figure out lol.*
+*Note: Be sure you **don't** have `solana-test-validator` running anywhere else it'll conflict w/ Anchor. This took me a while to figure out.*
 
 ```bash
 anchor test

@@ -126,7 +126,7 @@ You'll also see I "inherit" an OpenZeppelin contract using `is ERC721`  when I
 
 The NFT standard is known as `ERC721` which you can read a bit about [here](https://eips.ethereum.org/EIPS/eip-721). OpenZeppelin essentially implements the NFT standard for us and then lets us write our own logic on top of it to customize it. That means we don't need to write boilerplate code.
 
-It'd be crazy to write a HTTP server from scratch without using a library, right? Of course, unless you wanted to explore lol. Similarly — it'd be crazy to just write an NFT contract from complete scratch! You can explore the `ERC721` contract we're inheriting from [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol).
+It'd be crazy to write a HTTP server from scratch without using a library, right? Of course, unless you wanted to explore. Similarly — it'd be crazy to just write an NFT contract from complete scratch! You can explore the `ERC721` contract we're inheriting from [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol).
 
 ```solidity
 _tokenIds.increment();

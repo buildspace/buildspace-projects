@@ -61,13 +61,13 @@ const appModule = sdk.getAppModule(
 
 We’re using `deployVoteModule` to actually set up the contract. This will deploy a brand new voting contract!
 
-Notice how we give it `votingTokenAddress`. This is our contract that knows which governance token to accept. We don’t want people randomly trying to use $DOGE to vote lol.
+Notice how we give it `votingTokenAddress`. This is our contract that knows which governance token to accept. We don’t want people randomly trying to use $DOGE to vote.
 
 We have `proposalStartWaitTimeInSeconds`, which can be useful if you want to give people some time to go over the proposal before they’re allowed to vote on it. Similarly, we have `proposalVotingTimeInSeconds` which just specifies how long someone has to vote once a proposal goes lives.
 
 `votingQuorumFraction` is really interesting. Let’s say a member creates a proposal and the other **199** DAO members are on vacation at Disney World and aren’t online. Well, in this case, if that one DAO member creates the proposal and votes “YES” on their own proposal — that means 100% of the votes said “YES” (since there was only one vote) and the proposal **would pass once** `proposalVotingTimeInSeconds` is up! To avoid this, we use a quorum which says “In order for a proposal to pass, a minimum x % of token must be used in the vote”.
 
-For the sake of example, let’s just do `votingQuorumFraction: 0` which means the proposal will pass regardless of what % of token was used on the vote. This means one person could technically pass a proposal themselves if the other members are on vacation lol. For now, this is fine. The quorum you set in the real world depends on your supply and how much you initially airdropped.
+For the sake of example, let’s just do `votingQuorumFraction: 0` which means the proposal will pass regardless of what % of token was used on the vote. This means one person could technically pass a proposal themselves if the other members are on vacation. For now, this is fine. The quorum you set in the real world depends on your supply and how much you initially airdropped.
 
 Finally, we have `minimumNumberOfTokensNeededToPropose: "0"` which allows anyone to actually create a proposal even if they hold zero governance token. Up to you what you want to set this at! Let’s keep it at zero for now.
 

@@ -75,7 +75,7 @@ Let's say you wanted to randomly change your contract right now. Here's what we'
 
 3. Update the abi file on our frontend (copy/paste from `artifacts` folder).
 
-**People constantly forget to do these 3 steps when they change their contract. Don't forget lol.**
+**People constantly forget to do these 3 steps when they change their contract. Don't forget.**
 
 Why do we need to do all this? Because smart contracts are **immutable.** They can't change. They're permanent. That means changing a contract requires a full redeploy. Redeploying will also **reset** all the variables since it'd be treated as a brand new contract. **That means we lose all our NFT data when we update the contract's code.**
 
