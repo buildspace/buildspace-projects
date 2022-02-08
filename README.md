@@ -380,6 +380,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="http://hakeem-almidan.com"><img src="https://avatars.githubusercontent.com/u/27740273?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hakeem Almidan</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Hakeemmidan" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/LieAlbertTriAdrian"><img src="https://avatars.githubusercontent.com/u/12984659?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Albert Lie Adrian</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=LieAlbertTriAdrian" title="Documentation">📖</a></td>
   </tr>
 </table>
 
