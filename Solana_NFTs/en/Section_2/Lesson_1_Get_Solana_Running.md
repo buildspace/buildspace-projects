@@ -95,6 +95,8 @@ Dang it! Solana can be rough to get working. We're happy to help though!! Post a
 
 Now that we have our Solana CLI installed, we'll need to install the Metaplex CLI which allows us to actually create our candy machine.
 
+**If you have a Mac with M1 chip, you'll need to install some additional dependencies before installing the Metaplex CLI**, follow these [instructions](https://docs.metaplex.com/storefront/installation#apple-m1-chip). 
+
 Let's start by cloning the metaplex repo from Github. Check [here](https://github.com/metaplex-foundation/metaplex/tags) for tag name of the latest version, you can replace `v1.1.1` with the latest version. *I recommend cloning the repo to the home folder of your user. So, you can do a `cd ~`  to get there (not sure what it is on Windows lol).*
 
 ```plaintext
