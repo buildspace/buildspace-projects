@@ -101,22 +101,22 @@ Let's start by cloning the metaplex repo from Github. Check [here](https://githu
 git clone -b v1.1.1 https://github.com/metaplex-foundation/metaplex.git
 ```
 
-From here it's just a matter of installing all the dependencies for this CLI, by using this command in the directory where you just installed Metaplex. Note: I don't actually cd into the folder. I just run all the commands I need from outside the folder. I never actually go inside the `metaplex-foundation` folder. You'll see why this is easier later!
+From here it's just a matter of installing all the dependencies for this CLI, by using this command in the directory where you just installed Metaplex. Note: I don't actually cd into the folder. I just run all the commands I need from outside the folder. I never actually go inside the `metaplex` folder. You'll see why this is easier later!
 
 ```plaintext
-yarn install --cwd ~/metaplex-foundation/metaplex/js/
+yarn install --cwd ~/metaplex/js/
 ```
 
 In case you get an error such as `There appears to be trouble with your network connection. Retrying...`, you may try using:
 ```plaintext
-yarn install --cwd ~/metaplex-foundation/metaplex/js/ --network-timeout 600000
+yarn install --cwd ~/metaplex/js/ --network-timeout 600000
 ```
 Most of the time this happens because the default timeout that is set in the Yarn configuration is too low, so when this time runs out it assumes that it's a network problem. 
 
 Before we move on, let's make sure everything is working as expected by running the following command to get the `version`.
 
 ```plaintext
-ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts --version
+ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts --version
 ```
 
 This should spit out `0.0.2`. At this point, we are good to go to start setting up our NFTs :).
