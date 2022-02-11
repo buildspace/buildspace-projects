@@ -26,7 +26,7 @@ Start by heading over [here](https://github.com/buildspace/buildspace-dao-starte
 
 ![](https://i.imgur.com/OnOIO2A.png)
 
-Sweet! When you fork this repo, you are actually creating an identical copy of it that lives under your Github profile. So now you have your own version of this code that you can edit to your hearts content.
+Sweet! When you fork this repo, you are actually creating an identical copy of it that lives under your Github profile. So now you have your own version of this code that you can edit to your heart's content.
 
 The final step here is to actually get your newly forked repo on your local machine. Click the "Code" button and copy that link!
 
