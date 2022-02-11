@@ -1,11 +1,11 @@
 ### ⏳ Building a drop timer
 
-We have have an awesome setup for dropping some fancy NFTs on a certain date. The only thing we are missing now is a cool way to show people that a drop is happening soon! Why don't we go ahead and add a countdown timer.
+We have an awesome setup for dropping some fancy NFTs on a certain date. The only thing we are missing now is a cool way to show people that a drop is happening soon! Why don't we go ahead and add a countdown timer.
 
 Right now, our "drop" already happened since we set the date to be in the past. Feel free to change the date to sometime in future in the config.json file and apply it using the `update_candy_machine` command. 
 
 ```plaintext
-ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts update_candy_machine -e devnet  -k ~/.config/solana/devnet.json -cp config.json
+ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts update_candy_machine -e devnet -k ~/.config/solana/devnet.json -cp config.json
 ```
 
 Remember from a previous lesson: if at any point you run into an error that looks like this:
@@ -21,7 +21,7 @@ TypeError: Cannot read property 'candyMachineAddress' of undefined
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 ```
 
-Then it means the command can't access the .cache folder with the important data around your candy machine and NFTs. So if you get this error, be 100% sure you're running your candy machine commands from the same directory where you .cache and assets folders are.
+Then it means the command can't access the .cache folder with the important data around your candy machine and NFTs. So if you get this error, be 100% sure you're running your candy machine commands from the same directory where your `/.cache` and `/assets` folders are.
 
 This timer needs to do a few things:
 
@@ -68,7 +68,7 @@ Now that we have that figured out, let's write some code near the bottom of `app
 const renderDropTimer = () => {
   // Get the current date and dropDate in a JavaScript Date object
   const currentDate = new Date();
-  const dropDate = new Date(candyMachine.state.goLiveData * 1000);
+  const dropDate = new Date(candyMachine.state.goLiveDate * 1000);
 
   // If currentDate is before dropDate, render our Countdown component
   if (currentDate < dropDate) {
@@ -93,8 +93,6 @@ return (
       >
         Mint NFT
       </button>
-      {mints.length > 0 && renderMintedItems()}
-      {isLoadingMints && <p>LOADING MINTS...</p>}
     </div>
   )
 );
