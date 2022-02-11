@@ -71,7 +71,7 @@ Once you set up your wallet, be sure to switch the network to "**Rinkeby**" whic
 
 We're **not** going to be deploying to the "Ethereum mainnet". Why? Because it costs real $ and it's not worth messing up. We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake $ so we can test stuff out as much as we want. But, it's important to know that testnets are run by actual miners and mimic real-world scenarios.
 
-We'll be using "Rinkeby" which is ran by the Ethereum Foundation. To get some fake ETH, head to the buildspace Discord, and go to the `#faucet-request` under the "Resources" section. In this channel run:
+We'll be using "Rinkeby" which is run by the Ethereum Foundation. To get some fake ETH, head to the buildspace Discord, and go to the `#faucet-request` under the "Resources" section. In this channel run:
 
 ```plaintext
 /faucet INSERT_YOUR_PUBLIC_ADDRESS_HERE
@@ -79,7 +79,7 @@ We'll be using "Rinkeby" which is ran by the Ethereum Foundation. To get some fa
 
 You can find your public address [here](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-).
 
-Once you transaction is mined, you'll have some fake ETH in your wallet.
+Once your transaction is mined, you'll have some fake ETH in your wallet.
 
 ![Untitled](https://i.imgur.com/9kZbhTN.png)
 
