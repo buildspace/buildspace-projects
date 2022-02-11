@@ -87,9 +87,7 @@ We can return values from `view` functions easily because these are simple read-
 
 Luckily, we have a solution and they're called [Events](https://ethereum.stackexchange.com/a/11232). These are basically like webhooks. We can "fire" an event from Solidity, and then "catch" that event on our web app. Pretty freaking cool right :)? Let's do it!
 
-Create these two events, can add them under where we create `mapping(address => uint256) public nftHolders`. We need to basically tell Solidity the format of our events before we start firing them.
-
-I also added an `AttackComplete` event which will be useful when we build our UI for "attacking" the boss — since we'll need to know if we successfully attacked the boss!
+We create the `CharacterNFTMinted` event under `mapping(address => uint256) public nftHolders`. Why? Well, we need to tell Solidity the format of our events before we start firing them. You can see I also added an `AttackComplete` event which will be useful when we build our UI for "attacking" the boss — since we'll need to know if the attack was successful!
 
 ```solidity
 event CharacterNFTMinted(address sender, uint256 tokenId, uint256 characterIndex);

@@ -98,7 +98,7 @@ Here, I take two numbers given to me by Solidity, `block.difficulty` and `block.
 
 These #s are *pretty* random. But, technically, both `block.difficulty` and `block.timestamp` could be controlled by a sophisticated attacker. 
 
-To make this harder, I create a variable `seed` that will essentially change every time a user sends a new wave. So, I combine all three of these variables to generate a new random seed. Then I just do `% 100` which will make sure the number is brought down to a range between 0 - 100.
+To make this harder, I create a variable `seed` that will essentially change every time a user sends a new wave. So, I combine all three of these variables to generate a new random seed. Then I just do `% 100` which will make sure the number is brought down to a range between 0 - 99.
 
 That's it! Then I just write a simple if statement to see if the seed is less than or equal to 50, if it is -- then the waver wins the prize! So, that means the waver has a 50% chance to win since we wrote `seed <= 50`. You can change this to whatever you want :). I just made it 50% because it's easier to test that way!!
 

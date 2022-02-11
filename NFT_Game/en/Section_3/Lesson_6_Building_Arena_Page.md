@@ -14,7 +14,7 @@ import myEpicGame from '../../utils/MyEpicGame.json';
 import './Arena.css';
 
 /*
- * We pass in our characterNFT metadata so we can a cool card in our UI
+ * We pass in our characterNFT metadata so we can show a cool card in our UI
  */
 const Arena = ({ characterNFT }) => {
   // State
@@ -336,9 +336,9 @@ return (
 );
 ```
 
-We are going to dynamically add this class name to our `div` which in turn will apply some new styles to it! One thing to note here is you can change these attack state names, but make sure you update them in the `Arena.css` file as the are the class names needed for the animations to work!
+We are going to dynamically add this class name to our `div` which in turn will apply some new styles to it! One thing to note here is that you can change these attack state names, just make sure to update them in the `Arena.css` file as well. That's where the styling for the animations is defined!
 
-**NOICE.** We should be good to go to try and land an attack on Elon. Go ahead and click the Attack button and see what happens! You should see a few things:
+**NOICE.** We should be ready to try and land an attack on Elon. Go ahead and click the Attack button and see what happens! You should see a few things:
 
 1. MetaMask pops up to make sure you want to confirm the attack action
 2. You should see logs in your console starting with "Attacking boss..."

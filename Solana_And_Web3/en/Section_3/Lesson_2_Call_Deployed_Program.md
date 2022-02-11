@@ -89,7 +89,7 @@ Now, go ahead and run this from your terminal.
 solana airdrop 2 INSERT_YOUR_PHANTOM_PUBLIC_ADDRESS_HERE  --url devnet
 ```
 
-Now, when you go back to your Phantom wallet you should have 5 SOL associated w/ your devnet wallet. Nice :).
+Now, when you go back to your Phantom wallet you should have 2 SOL associated w/ your devnet wallet. Nice :).
 
 ### 🍔 Setup a Solana `provider` on our web app.
 
@@ -106,6 +106,38 @@ Before we can interact with the packages that we installed earlier, we need to i
 ```javascript
 import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
 import { Program, Provider, web3 } from '@project-serum/anchor';
+```
+
+*Note (only for Replit users):*  
+*1. If you get an error `global is not defined`, change the vite.config.js into:*
+```javascript
+import reactRefresh from '@vitejs/plugin-react-refresh';
+import { defineConfig } from "vite";
+/**
+ * https://vitejs.dev/config/
+ * @type { import('vite').UserConfig }
+ */
+export default defineConfig({
+  define: {
+    global: {},
+    process: {
+      'env': {}
+    } 
+  },
+  plugins: [reactRefresh()],
+  server: {
+    host: '0.0.0.0',
+    hmr: {
+      port: 443,
+    }
+  }
+})
+```
+
+*2. If you get an error related to `buffer`, add it to `App.jsx`:*
+```javascript
+import { Buffer } from 'buffer';
+window.Buffer = Buffer;
 ```
 
 Let's create a function called `getProvider`. Add this right below `onInputChange` . Here's the code below.
@@ -318,7 +350,7 @@ const renderConnectedContainer = () => {
 }
 ```
 
-Pretty straightforward! I made some changes in `[gifList.map](http://gifList.map)`. Watch out for those!
+Pretty straightforward! I made some changes in `gifList.map`. Watch out for those!
 
 ### 🥳 Let's test!
 

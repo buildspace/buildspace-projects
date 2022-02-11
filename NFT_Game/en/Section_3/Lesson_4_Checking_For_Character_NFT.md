@@ -39,7 +39,7 @@ import { CONTRACT_ADDRESS } from './constants';
 
 **Please give it a watch as I go over some important stuff (note this video shows this process happening in another project. Don't worry - it's the same exact flow)**
 
-When you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
+When you compile your smart contract, the compiler spits out a bunch of files that let you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
 
 Our web app relies on the ABI file to know how to communicate with our contract. Read more about it [here](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
 

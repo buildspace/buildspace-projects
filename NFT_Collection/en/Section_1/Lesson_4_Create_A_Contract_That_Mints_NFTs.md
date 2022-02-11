@@ -6,7 +6,7 @@ Now that we got all our scripts good to go and the basics down, we're going to m
 pragma solidity ^0.8.0;
 
 // We first import some OpenZeppelin Contracts.
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "hardhat/console.sol";
 
@@ -238,7 +238,7 @@ You have a few faucets to choose from:
 
 | Buildspace | https://buildspace-faucet.vercel.app/
 
-| Ethily | https://ethily.io/rinkeby-faucet/ 
+| Chainlink | https://faucets.chain.link/rinkeby
 
 | Official Rinkeby | https://faucet.rinkeby.io/ 
 

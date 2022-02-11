@@ -56,10 +56,8 @@ const App = () => {
     try {
       const { solana } = window;
 
-      if (solana) {
-        if (solana.isPhantom) {
+      if (solana && solana.isPhantom) {
           console.log('Phantom wallet found!');
-        }
       } else {
         alert('Solana object not found! Get a Phantom Wallet 👻');
       }
@@ -111,10 +109,8 @@ const checkIfWalletIsConnected = async () => {
   try {
     const { solana } = window;
 
-    if (solana) {
-      if (solana.isPhantom) {
+    if (solana && solana.isPhantom) {
         console.log('Phantom wallet found!');
-      }
     } else {
       alert('Solana object not found! Get a Phantom Wallet 👻');
     }
@@ -165,8 +161,7 @@ const checkIfWalletIsConnected = async () => {
   try {
     const { solana } = window;
 
-    if (solana) {
-      if (solana.isPhantom) {
+    if (solana && solana.isPhantom) {
         console.log('Phantom wallet found!');
 
         /*
@@ -178,7 +173,6 @@ const checkIfWalletIsConnected = async () => {
           'Connected with Public Key:',
           response.publicKey.toString()
         );
-      }
     } else {
       alert('Solana object not found! Get a Phantom Wallet 👻');
     }

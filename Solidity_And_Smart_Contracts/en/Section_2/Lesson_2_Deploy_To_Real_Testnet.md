@@ -12,7 +12,7 @@ Sorry for having you make so many accounts, but, this ecosystem is complex and w
 💳 Transactions
 ---------------
 
-So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone Ethereum is a transaction. Doing something that updates a variable in our contract is also considered a transaction.
+So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone ETH is a transaction. Doing something that updates a variable in our contract is also considered a transaction.
 
 So when we call `wave` and it does `totalWaves += 1`, that's a transaction! **Deploying a smart contract is also a transaction.**
 
@@ -63,7 +63,6 @@ For MyCrypto, you'll need to connect your wallet, make an account, and then clic
 | ---------------- | ------------------------------------- | --------------- | ------------ |
 | MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
 | Buildspace       | https://buildspace-faucet.vercel.app/ | 0.025           | 1d           |
-| Ethily           | https://ethily.io/rinkeby-faucet/     | 0.2             | 1w           |
 | Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
 | Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
 
@@ -86,7 +85,7 @@ module.exports = {
   networks: {
     rinkeby: {
       url: "YOUR_ALCHEMY_API_URL",
-      accounts: ["YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY"],
+      accounts: ["YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY"]
     },
   },
 };

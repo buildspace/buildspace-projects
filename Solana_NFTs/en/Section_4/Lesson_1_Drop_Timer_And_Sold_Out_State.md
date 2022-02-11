@@ -2,10 +2,10 @@
 
 We have have an awesome setup for dropping some fancy NFTs on a certain date. The only thing we are missing now is a cool way to show people that a drop is happening soon! Why don't we go ahead and add a countdown timer.
 
-Right now, our "drop" already happened since we set the date to be in the past. Feel free to change the date to sometime in future using the `update_candy_machine` command. Here, I set it to Dec 1, 2022.
+Right now, our "drop" already happened since we set the date to be in the past. Feel free to change the date to sometime in future in the config.json file and apply it using the `update_candy_machine` command. 
 
 ```plaintext
-ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts update_candy_machine --date "1 Dec 2022 00:12:00 GMT" --env devnet --keypair ~/.config/solana/devnet.json
+ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts update_candy_machine -e devnet  -k ~/.config/solana/devnet.json -cp config.json
 ```
 
 Remember from a previous lesson: if at any point you run into an error that looks like this:
@@ -68,7 +68,7 @@ Now that we have that figured out, let's write some code near the bottom of `app
 const renderDropTimer = () => {
   // Get the current date and dropDate in a JavaScript Date object
   const currentDate = new Date();
-  const dropDate = new Date(machineStats.goLiveData * 1000);
+  const dropDate = new Date(candyMachine.state.goLiveData * 1000);
 
   // If currentDate is before dropDate, render our Countdown component
   if (currentDate < dropDate) {
@@ -78,19 +78,18 @@ const renderDropTimer = () => {
   }
 
   // Else let's just return the current drop date
-  return <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>;
+  return <p>{`Drop Date: ${candyMachine.state.goLiveDateTimeString}`}</p>;
 };
 
 return (
-  machineStats && (
+  candyMachine.state && (
     <div className="machine-container">
       {/* Add this at the beginning of our component */}
       {renderDropTimer()}
-      <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
+      <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
       <button
         className="cta-button mint-button"
         onClick={mintToken}
-        disabled={isMinting}
       >
         Mint NFT
       </button>
@@ -158,30 +157,27 @@ One last thing that could be a really cool add (which is also easy to do) is sho
 
 Remember — your drop only has a set number of NFTs that are available.
 
-We can figure this out by checking two properties - `itemsRedeemed` and `itemsAvailable` on our `machineStats` state! On top of this we are going to add a bit of fanciness to only show our mint button when we have items to mint and the NFT drop date has been reached!
+We can figure this out by checking two properties - `itemsRedeemed` and `itemsAvailable` on our `candyMachine.state` property! On top of this we are going to add a bit of fanciness to only show our mint button when we have items to mint and the NFT drop date has been reached!
 
 This should be a really easy one to do! Let's head over to our `CandyMachine` component and head to the components render function. Add the following:
 
 ```jsx
 return (
-  machineStats && (
+  candyMachine && candyMachine.state && (
     <div className="machine-container">
       {renderDropTimer()}
-      <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
+      <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
         {/* Check to see if these properties are equal! */}
-        {machineStats.itemsRedeemed === machineStats.itemsAvailable ? (
+        {candyMachine.state.itemsRedeemed === candyMachine.state.itemsAvailable ? (
           <p className="sub-text">Sold Out 🙊</p>
         ) : (
           <button
             className="cta-button mint-button"
             onClick={mintToken}
-            disabled={isMinting}
           >
             Mint NFT
           </button>
         )}
-      {mints.length > 0 && renderMintedItems()}
-      {isLoadingMints && <p>LOADING MINTS...</p>}
     </div>
   )
 );
