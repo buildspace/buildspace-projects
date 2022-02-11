@@ -6,7 +6,7 @@ Let's head over to `App.jsx`. What we'll be doing now is
 
 Let's do it! We'll attack case #1 first, we need to detect if the user has our NFT.
 
-### 🤔 Check if user owns a membership NFT.
+### 🤔 Check if a user owns a membership NFT.
 
 Head over to `App.jsx`. At the top add:
 
@@ -139,15 +139,15 @@ const App = () => {
 
   const mintNft = () => {
     setIsClaiming(true);
-    // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
+    // Call bundleDropModule.claim("0", 1) to mint the nft to the user's wallet.
     bundleDropModule
     .claim("0", 1)
     .then(() => {
       // Set claim state.
       setHasClaimedNFT(true);
-      // Show user their fancy new NFT!
+      // Show the user their fancy new NFT!
       console.log(
-        `🌊 Successfully Minted! Check it our on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address.toLowerCase()}/0`
+        `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address.toLowerCase()}/0`
       );
     })
     .catch((err) => {
@@ -176,7 +176,7 @@ const App = () => {
 export default App;
 ```
 
-Okay a lot of stuff happening! The first thing we do is set up our `signer` which is what we need to actually send transactions on behalf of a user. See more [here](https://docs.ethers.io/v5/api/signer/). From there, we call `bundleDropModule.claim("0", 1)` to actually mint the NFT to the users wallet when they click the button. In this case the tokenId of our membership NFT is `0` so we pass 0. Then, we pass `1` because we only want to mint one membership NFT to the user's wallet!
+Okay a lot of stuff happening! The first thing we do is set up our `signer` which is what we need to actually send transactions on behalf of a user. See more [here](https://docs.ethers.io/v5/api/signer/). From there, we call `bundleDropModule.claim("0", 1)` to actually mint the NFT to the user's wallet when they click the button. In this case the tokenId of our membership NFT is `0` so we pass 0. Then, we pass `1` because we only want to mint one membership NFT to the user's wallet!
 
 Once it's all done, we do `setIsClaiming(false)` to stop the loading state. And, then we do `setHasClaimedNFT(true)` so that we can let our react app know that this user has successfully claimed an NFT.
 
