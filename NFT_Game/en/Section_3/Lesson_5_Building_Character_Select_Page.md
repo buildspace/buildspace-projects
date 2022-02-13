@@ -138,7 +138,7 @@ const renderCharacters = () =>
       <button
         type="button"
         className="character-mint-button"
-        onClick={mintCharacterNFTAction(index)}
+        onClick={()=> mintCharacterNFTAction(index)}
       >{`Mint ${character.name}`}</button>
     </div>
   ));
@@ -190,7 +190,7 @@ const mintCharacterNFTAction = (characterId) => async () => {
 };
 ```
 
-*Note: Remember to uncomment out `onClick={mintCharacterNFTAction(index)}` in `renderCharacters`.*
+*Note: Remember to uncomment out `onClick={()=> mintCharacterNFTAction(index)}` in `renderCharacters`.*
 
 I hope you are starting to see the common trend of interacting with a smart contract! If you have the `onClick` attribute commented out in your render method code, make sure to uncomment it now.
 
