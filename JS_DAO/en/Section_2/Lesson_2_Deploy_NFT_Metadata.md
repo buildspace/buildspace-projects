@@ -44,7 +44,7 @@ Then, we're setting up our actual NFT on our ERC-1155 using `createBatch`. We ne
 
 *Remember, because it's an ERC-1155, all our members will mint the same NFT.*
 
-Be sure to replace `image: readFileSync("scripts/assets/headband.png")` with your own image. Same as before, be sure it's a local image this won't work if you use an internet link.
+Be sure to replace `image: readFileSync("scripts/assets/headband.png")` with your own image. Same as before, be sure it's a local image as this won't work if you use an internet link.
 
 I'm building NarutoDAO, so, my members will need a Lead Village Headband to join hehe:
 
