@@ -16,7 +16,7 @@ A quick review here you just:
 
 ✅ built a dapp that lets people connect their wallet, get an NFT, see a DAO Dashboard where they can see other members + actually vote on proposals that are executed directly by your governance contract.
 
-I know it’s hard to believe, but you created a full-fledged DAO. I hope at the very least this project gave you a grasp on what a DAO is and how one works. There is of course more to a DAO then what we covered in this project here, stuff like tokenomics, running an actual community, planning your DAOs roadmap, etc — these are all things we haven't covered by hey I’m sure you’ll figure it out ;).
+I know it’s hard to believe, but you created a full-fledged DAO. I hope at the very least this project gave you a grasp on what a DAO is and how one works. There is of course more to a DAO then what we covered in this project here, stuff like tokenomics, running an actual community, planning your DAOs roadmap, etc — these are all things we haven't covered but hey I’m sure you’ll figure it out ;).
 
 ### **🤟 Your NFT!**
 
