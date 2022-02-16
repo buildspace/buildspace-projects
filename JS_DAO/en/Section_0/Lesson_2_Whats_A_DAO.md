@@ -59,4 +59,4 @@ Hey! In `#progress` let us all know what kinda DAO you’ll be building for this
 
 **PakistanDAO** — a DAO for members of the Pakistani startup community to support each other. Members earn $PAKISTAN whenever they provide value to other founders, for example by giving them advice, beta-testing their products, or supporting them on social media. 
 
-Please don’t copy my exact examples heh. Get creative. **I really want you think hard about something that makes you smile or something your friends would find funny lol.**
+Please don’t copy my exact examples heh. Get creative. **I really want you to think hard about something that makes you smile or something your friends would find funny lol.**
