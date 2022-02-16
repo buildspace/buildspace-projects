@@ -5,7 +5,7 @@ We have have an awesome setup for dropping some fancy NFTs on a certain date. Th
 Right now, our "drop" already happened since we set the date to be in the past. Feel free to change the date to sometime in future in the config.json file and apply it using the `update_candy_machine` command. 
 
 ```plaintext
-ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts update_candy_machine -e devnet  -k ~/.config/solana/devnet.json -cp config.json
+ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts update_candy_machine -e devnet  -k ~/.config/solana/devnet.json -cp config.json
 ```
 
 Remember from a previous lesson: if at any point you run into an error that looks like this:
