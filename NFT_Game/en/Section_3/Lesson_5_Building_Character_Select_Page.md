@@ -321,7 +321,7 @@ You freaking did it! Now that we have our character NFT we can finally go out an
 Feel free to also set up an `alert` that automatically gives your player the OpenSea link when it's done minting. For example something like:
 
 ```javascript
-alert(`Your NFT is all done -- see it here: https://testnets.opensea.io/assets/${gameContract}/${tokenId.toNumber()}`)
+alert(`Your NFT is all done -- see it here: https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
 ```
 
 ### **🚨 Progress report.**
