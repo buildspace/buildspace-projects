@@ -1,6 +1,6 @@
 ### **👋 Welcome**
 
-You’ve made it — hell yeah! Welcome :). My name is Raza and I’m going to be your installation wizard to the blockchain. 
+You’ve made it — hell yeah! **Welcome :)**. My name is Raza and I’m going to be your installation wizard to the blockchain. 
 
 This project is for devs who want to understand web3 apps by just building one themselves. All you really need to know going into this: 
 
