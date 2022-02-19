@@ -30,7 +30,7 @@ The first thing we create is a function `modifier`. This allows us to change the
 
 The weird part of it is the `_;` at the end. All it really means is that any function using the modifier should be executed **after** the require. So if `_;` was before the require, the withdraw function would be called first, then the require, which would be kind of useless since it would revert anyway.
 
-As for the `withdraw()` function, all it does is it fetches the balance of the contract and sends it to the requester (which has to be the owner for the function to run). This is a simple way of withdrawing your funds. `msg.ender.call{value: amount}("")` is the magic line where we send money :). The syntax is a little weird! Notice how we pass it `amount`! `require(success` is where we know the transaction was a success :). If it wasn't, it'd mark the transaction as an error and say `"Failed to withdraw Matic"`.
+As for the `withdraw()` function, all it does is it fetches the balance of the contract and sends it to the requester (which has to be the owner for the function to run). This is a simple way of withdrawing your funds. `msg.sender.call{value: amount}("")` is the magic line where we send money :). The syntax is a little weird! Notice how we pass it `amount`! `require(success` is where we know the transaction was a success :). If it wasn't, it'd mark the transaction as an error and say `"Failed to withdraw Matic"`.
 
 ### 🤠 Setting contract owner
 
