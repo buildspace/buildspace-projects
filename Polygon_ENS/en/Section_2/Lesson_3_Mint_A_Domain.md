@@ -20,6 +20,7 @@ const App = () => {
 	const [currentAccount, setCurrentAccount] = useState('');
 	// Add some state data propertie
 	const [domain, setDomain] = useState('');
+	const [loading, setLoading] = useState(false);
   const [record, setRecord] = useState('');
 
   const connectWallet = async () => {
