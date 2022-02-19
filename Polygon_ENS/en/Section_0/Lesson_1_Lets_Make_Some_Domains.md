@@ -18,7 +18,7 @@ Few action items for you before moving on:
 
 ### 🚀 This is going to be awesome
 
-[Loom](https://www.loom.com/share/6ebcf1ad7b9741b7ad693f486ad3cb28)
+[Loom](https://www.loom.com/share/09bc6da901a34b3983be4338b02eba82)
 
 I’m super excited to show you how to go from zero → shipping your own web3 app on a Polygon L2.
 
