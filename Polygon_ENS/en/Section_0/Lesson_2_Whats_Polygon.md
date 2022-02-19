@@ -20,6 +20,6 @@ Feel free to read more about L2 scaling solutions [here](https://mirror.xyz/dcbu
 
 You might be thinking “Hmm, do I really want to learn how to use another blockchain???”.
 
-Well, no! You don’t! Since the Polygon PoS chain is EVM (Ethereum Virtual Machine) compatible, everything that runs on the Ethereum can also run on Polygon without any changes
+Well, no! You don’t! Since the Polygon PoS chain is EVM (Ethereum Virtual Machine) compatible, everything that runs on Ethereum can also run on Polygon without any changes
 
 This makes it super easy to move contracts to Polygon so you don’t have to sell your kidneys to pay transaction fees. For most dApps, Polygon just makes a lot more sense because of how much faster and cheaper it is. All the popular Ethereum tools such as Hardhat, Remix, Truffle and Web3js work on Polygon; all you need to do is change the network you’re on!
