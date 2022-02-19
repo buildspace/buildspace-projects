@@ -37,7 +37,7 @@ Just like that you are able to retrieve all the domains minted on your contract 
 
 ### 💔 Check domain validity on the contract
 
-One thing that has probably been on your mind is - “Raza this is cool and all, but what happens if someone else tries to mint a domain that I already created? Thats lame af 👎”
+One thing that has probably been on your mind is - “Raza this is cool and all, but what happens if someone tries to mint a domain that is **really** long? Thats lame af 👎”
 
 WELP - you’d be right! That is super lame. Right now, we’re checking if a domain is valid using JavaScript in our React app. This isn’t the best of ideas since someone can interact with our contract directly to mint an invalid domain! 
 
@@ -78,7 +78,7 @@ function register(string calldata name) public payable {
 
 That’s it! If you deploy this contract, you’ll be doing a whole lot more than before. 
 
-Look at you, saving gas, being efficient, and checking domain validity on the blockchain. What’s next? Are you gonna **upgrade** your smart contracts? LOL (ya thats exactly what’s going to happen).
+Look at you, saving gas, being efficient, and checking domain validity on the blockchain. What’s next? Are you gonna **upgrade** your smart contracts? LOL 
 
 ### **🚨Progress report.**
 
