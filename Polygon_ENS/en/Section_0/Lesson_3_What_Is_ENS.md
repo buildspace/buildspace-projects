@@ -12,7 +12,7 @@ So, now that we know how hype Polygon is and what ENS is - how does this all fit
 
 We’re going to be making a smaller version of ENS on the Polygon blockchain: we’ll let anyone buy a domain NFT and point it to something. This is awesome cause once your contract is on the blockchain, any data it has will be universal! Anyone can read the names and look at what it’s pointing to. And because blockchains are so unstoppable, no one can remove your data or kill your epic domain.
 
-**Btw — making a new top level domain like `.dev` or `.net` takes 4-5 years and costs like $185,000+ in the web2 world. We’re going to do this IN A WEEKEND with at the cost of a few cups of coffee!**
+**Btw — making a new top level domain like `.dev` or `.net` takes 4-5 years and costs like $185,000+ in the web2 world. We’re going to do this IN A WEEKEND with at the most the cost of a few cups of coffee!**
 
 ### 🤔 The super cool (definitely not expensive) Ethereum Name Service
 
