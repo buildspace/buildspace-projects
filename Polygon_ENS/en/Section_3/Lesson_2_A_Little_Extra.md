@@ -78,7 +78,7 @@ function register(string calldata name) public payable {
 
 That’s it! If you deploy this contract, you’ll be doing a whole lot more than before. 
 
-Look at you, saving gas, being efficient, and checking domain validity on the blockchain. What’s next? Are you gonna **upgrade** your smart contracts? LOL (ya thats exactly what’s going to happen).
+Look at you, saving gas, being efficient, and checking domain validity on the blockchain. What’s next? Are you gonna **upgrade** your smart contracts? LOL 
 
 ### **🚨Progress report.**
 
