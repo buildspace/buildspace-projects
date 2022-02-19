@@ -385,6 +385,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/seowglen"><img src="https://avatars.githubusercontent.com/u/50524862?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Seow Li Chong Glen</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=seowglen" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/jte0711"><img src="https://avatars.githubusercontent.com/u/25585845?v=4?s=100" width="100px;" alt=""/><br /><sub><b>James</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jte0711" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/for"><img src="https://avatars.githubusercontent.com/u/7262123?v=4?s=100" width="100px;" alt=""/><br /><sub><b>for</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=for" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/N44TS"><img src="https://avatars.githubusercontent.com/u/96575678?v=4?s=100" width="100px;" alt=""/><br /><sub><b>N44TS</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=N44TS" title="Documentation">📖</a></td>
   </tr>
 </table>
 
