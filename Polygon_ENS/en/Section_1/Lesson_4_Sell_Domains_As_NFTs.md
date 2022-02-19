@@ -47,7 +47,7 @@ contract Domains {
     function register(string calldata name) public payable{
         require(domains[name] == address(0));
         
-        uint _price = this.price(name);
+        uint _price = price(name);
 
 				// Check if enough Matic was paid in the transaction
         require(msg.value >= _price, "Not enough Matic paid");
@@ -66,7 +66,7 @@ You’ll notice something extra spice here! We added `payable` to `register`.
 I also added:
 
 ```solidity
-uint _price = this.price(name);  
+uint _price = price(name);  
 require(msg.value >= _price, "Not enough Matic paid");
 ```
 
@@ -229,7 +229,7 @@ contract Domains is ERC721URIStorage {
   function register(string calldata name) public payable {
     require(domains[name] == address(0));
 
-    uint256 _price = this.price(name);
+    uint256 _price = price(name);
     require(msg.value >= _price, "Not enough Matic paid");
 		
 		// Combine the name passed into the function  with the TLD
@@ -392,7 +392,7 @@ Now that we have a sick asset that will show off our domain, let’s go deeper i
 function register(string calldata name) public payable {
   require(domains[name] == address(0));
 
-  uint256 _price = this.price(name);
+  uint256 _price = price(name);
   require(msg.value >= _price, "Not enough Matic paid");
 	
   string memory _name = string(abi.encodePacked(name, ".", tld));
