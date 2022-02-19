@@ -2128,6 +2128,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "for",
+      "name": "for",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7262123?v=4",
+      "profile": "https://github.com/for",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
