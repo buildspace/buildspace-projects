@@ -36,7 +36,16 @@ So, go ahead and set it all up! Their setup flow is pretty self-explanatory :).
 
 ### ⛓️ Adding Polygon to Metamask
 
-Since the Polygon networks aren’t in Metamask by default, you’ll need to add them. Head over to [https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/](https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/) with the browser you have Metamask installed on and follow the guide to add it using Polygonscan. Make sure you add **both** the testnet and the mainnet lol, they’re separate.
+Since the Polygon networks aren’t in Metamask by default, you’ll need to add them.
+
+Here's what you'll need to do:
+1. Go to the [Polygonscan Mumbai](https://mumbai.polygonscan.com/) website with the browser you have Metamask installed on
+2. Scroll all the way to the bottom
+3. Click on the "Add Mumbai Network" button on the bottom right
+
+That will pop open Metamask and you can add it! 
+
+Make sure you add **both** the testnet and the mainnet lol, they’re separate.
 
 ### 🤑 Getting some fake $
 
@@ -48,23 +57,11 @@ In order to get fake MATIC, we have to ask the network for some. **This fake MAT
 
 *Note: You can find your public Polygon address [here](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-).*
 
-To get some fake MATIC, head to the buildspace Discord, and go to the `#faucet-request` under the "Resources" section. In this channel run:
-
-```
-/faucet INSERT_YOUR_PUBLIC_ADDRESS_HERE MUMBAI
-```
-
-Remember to add `MUMBAI` at the end there!
+To get some fake MATIC, head over to Polygon’s faucet system here - [https://faucet.polygon.technology/](https://faucet.polygon.technology/)
 
 Once your transaction is mined, you'll have some fake MATIC in your wallet.
 
 ![https://i.imgur.com/2IjDg3x.png](https://i.imgur.com/2IjDg3x.png)
-
-### 🙃 Having trouble getting Testnet MATIC?
-
-If the above doesn't work, head over to Polygon’s faucet system here - [https://faucet.polygon.technology/](https://faucet.polygon.technology/)
-
-It works essentially every time 🤘.
 
 ### 🚀 Setup a deploy.js file
 

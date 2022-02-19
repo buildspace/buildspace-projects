@@ -36,11 +36,11 @@ contract Domains {
         uint len = StringUtils.strlen(name);
         require(len > 0);
         if (len == 3) {
-	        return 5 * 10**18; // 5 MATIC = 5 000 000 000 000 000 000 (18 decimals) 
+          return 5 * 10**17; // 5 MATIC = 5 000 000 000 000 000 000 (18 decimals). We're going with 0.5 Matic cause the faucets don't give a lot
         } else if (len == 4) {
-	        return 3 * 10**18; // To charge smaller amounts, reduce the decimals
+	        return 3 * 10**17; // To charge smaller amounts, reduce the decimals. This is 0.3
         } else {
-	        return 1 * 10**18;
+	        return 1 * 10**17;
         }
     }
 
@@ -356,9 +356,9 @@ SVGs can be customized **a lot.** You can even animate them lol. Feel free to 
 
 **SICK**. I have been jamming to the Mortal Kombat theme song so this is what my final NFT looks like 😎:
 
-![Untitled](ENS%20on%20Pol%20097f9/Untitled.png)
+![https://i.imgur.com/epYuKfc.png](https://i.imgur.com/epYuKfc.png)
 
-It’s a simple SVG with the classic buildspace gradient and the Polygon logo. You’re welcome to customize the SVG however you want. Maybe you want a rainbow emoji instead of the polygon logo. If you’re so bold - you could even try an animated SVG 👀 
+Make sure you customise your SVG! Maybe you want a rainbow emoji instead of the polygon logo. If you’re so bold - you could even try an animated SVG 👀 
 
 Just be aware that **contracts have a length limit**! 
 
@@ -369,7 +369,7 @@ Don’t make an incredibly complex SVG that is super duper long. The way ENS doe
   string svgPartTwo = '</text></svg>';
 ```
 
-This looks pretty crazy. Basically, all we’re doing here is creating an SVG based on our domain.
+This looks a bit funny. Basically, all we’re doing here is creating an SVG based on our domain. We split the SVG into two and put our domain in between them.
 
 ```solidity
 string memory _name = string(abi.encodePacked(name, ".", tld));
