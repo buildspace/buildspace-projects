@@ -5,15 +5,15 @@ First off, the UX on our app can be improved a lot. Let’s start by showing the
 ```html
 <div className="header-container">
 	<header>
-    <div className="left">
-      <p className="title">🐱‍👤 Ninja Name Service</p>
-      <p className="subtitle">Your immortal API on the blockchain!</p>
-    </div>
+		<div className="left">
+			<p className="title">🐱‍👤 Ninja Name Service</p>
+			<p className="subtitle">Your immortal API on the blockchain!</p>
+		</div>
 		{/* Display a logo and wallet connection status*/}
-    <div className="right">
-      <img alt="Network logo" className="logo" src={ network.includes("Polygon") ? polygonLogo : ethLogo} />
-      { currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p> }
-    </div>
+		<div className="right">
+			<img alt="Network logo" className="logo" src={ network.includes("Polygon") ? polygonLogo : ethLogo} />
+			{ currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p> }
+		</div>
 	</header>
 </div>
 ```
@@ -32,7 +32,7 @@ import { networks } from './utils/networks';
 
 cconst App = () => {
 	// Create a stateful variable to store the network next to all the others
-  const [network, setNetwork] = useState('');
+  	const [network, setNetwork] = useState('');
 	
 	// Update your checkIfWalletIsConnected function to handle the network
 	const checkIfWalletIsConnected = async () => {
