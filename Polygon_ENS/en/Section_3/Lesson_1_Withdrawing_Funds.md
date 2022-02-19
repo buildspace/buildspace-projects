@@ -56,27 +56,26 @@ Let’s try to rob our own contract 😈. I’ll be the getaway driver, you set 
 
 ```jsx
 const main = async () => {
-	const [owner, superCoder] = await hre.ethers.getSigners();
+  const [owner, superCoder] = await hre.ethers.getSigners();
   const domainContractFactory = await hre.ethers.getContractFactory('Domains');
-	const domainContract = await domainContractFactory.deploy("ninja");
-	await domainContract.deployed();
+  const domainContract = await domainContractFactory.deploy("ninja");
+  await domainContract.deployed();
 
   console.log("Contract owner:", owner.address);
 
   // Let's be extra generous with our payment (we're paying more than required)
-	let txn = await domainContract.register("a16z",  {value: hre.ethers.utils.parseEther('1234')});
-	await txn.wait();
+  let txn = await domainContract.register("a16z",  {value: hre.ethers.utils.parseEther('1234')});
+  await txn.wait();
 
   // How much money is in here?
   const balance = await hre.ethers.provider.getBalance(domainContract.address);
   console.log("Contract balance:", hre.ethers.utils.formatEther(balance));
 
   // Quick! Grab the funds from the contract! (as superCoder)
-  try{
+  try {
     txn = await domainContract.connect(superCoder).withdraw();
     await txn.wait();
-  }
-  catch(error){
+  } catch(error){
     console.log("Could not rob contract");
   }
 

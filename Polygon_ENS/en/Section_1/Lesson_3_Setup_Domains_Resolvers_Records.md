@@ -14,23 +14,23 @@ pragma solidity ^0.8.10;
 import "hardhat/console.sol";
 
 contract Domains {
-		// A "mapping" data type to store their names
-		mapping(string => address) public domains;
+  // A "mapping" data type to store their names
+  mapping(string => address) public domains;
 
-    constructor() {
-        console.log("THIS IS MY DOMAIN CONTRACT. NICE.");
-    }
-	
-		// A register function that adds their names to our mapping
-    function register(string calldata name) public {
-        domains[name] = msg.sender;
-        console.log("%s has registered a domain!", msg.sender);
-    }
+  constructor() {
+      console.log("THIS IS MY DOMAIN CONTRACT. NICE.");
+  }
 
-		// This will give us the domain owners' address
-    function getAddress(string calldata name) public view returns (address) {
-        return domains[name];
-    }
+  // A register function that adds their names to our mapping
+  function register(string calldata name) public {
+      domains[name] = msg.sender;
+      console.log("%s has registered a domain!", msg.sender);
+  }
+
+  // This will give us the domain owners' address
+  function getAddress(string calldata name) public view returns (address) {
+      return domains[name];
+  }
 }
 ```
 
@@ -63,15 +63,15 @@ So now we want to test those functions specifically!
 
 ```jsx
 const main = async () => {
-	const [owner, randomPerson] = await hre.ethers.getSigners();
+  const [owner, randomPerson] = await hre.ethers.getSigners();
   const domainContractFactory = await hre.ethers.getContractFactory('Domains');
-	const domainContract = await domainContractFactory.deploy();
-	await domainContract.deployed();
+  const domainContract = await domainContractFactory.deploy();
+  await domainContract.deployed();
   console.log("Contract deployed to:", domainContract.address);
-	console.log("Contract deployed by:", owner.address);
-	
-	const txn = await domainContract.register("doom");
-	await txn.wait();
+  console.log("Contract deployed by:", owner.address);
+  
+  const txn = await domainContract.register("doom");
+  await txn.wait();
 
   const domainOwner = await domainContract.getAddress("doom");
   console.log("Owner of domain:", domainOwner);
@@ -151,36 +151,36 @@ pragma solidity ^0.8.10;
 import "hardhat/console.sol";
 
 contract Domains {
-    mapping(string => address) public domains;
-		
-		// Checkout our new mapping! This will store values
-    mapping(string => string) public records;
+  mapping(string => address) public domains;
+  
+  // Checkout our new mapping! This will store values
+  mapping(string => string) public records;
 
-    constructor() {
-        console.log("Yo yo, I am a contract and I am smart");
-    }
+  constructor() {
+      console.log("Yo yo, I am a contract and I am smart");
+  }
 
-    function register(string calldata name) public {
-				// Check that the name is unregistered (explained in notes)
-        require(domains[name] == address(0));
-        domains[name] = msg.sender;
-        console.log("%s has registered a domain!", msg.sender);
-    }
+  function register(string calldata name) public {
+      // Check that the name is unregistered (explained in notes)
+      require(domains[name] == address(0));
+      domains[name] = msg.sender;
+      console.log("%s has registered a domain!", msg.sender);
+  }
 
-    function getAddress(string calldata name) public view returns (address) {
-				// Check that the owner is the transaction sender
-        return domains[name];
-    }
+  function getAddress(string calldata name) public view returns (address) {
+      // Check that the owner is the transaction sender
+      return domains[name];
+  }
 
-    function setRecord(string calldata name, string calldata record) public {
-				// Check that the owner is the transaction sender
-        require(domains[name] == msg.sender);
-        records[name] = record;
-    }
+  function setRecord(string calldata name, string calldata record) public {
+      // Check that the owner is the transaction sender
+      require(domains[name] == msg.sender);
+      records[name] = record;
+  }
 
-    function getRecord(string calldata name) public view returns(string memory) {
-        return records[name];
-    }
+  function getRecord(string calldata name) public view returns(string memory) {
+      return records[name];
+  }
 }
 ```
 
@@ -210,21 +210,21 @@ Check this out - I added a few lines at the bottom of the function. I'm not goin
 
 ```jsx
 const main = async () => {
-	// The first return is the deployer, the second is a random account
-	const [owner, randomPerson] = await hre.ethers.getSigners();
+  // The first return is the deployer, the second is a random account
+  const [owner, randomPerson] = await hre.ethers.getSigners();
   const domainContractFactory = await hre.ethers.getContractFactory('Domains');
-	const domainContract = await domainContractFactory.deploy();
-	await domainContract.deployed();
+  const domainContract = await domainContractFactory.deploy();
+  await domainContract.deployed();
   console.log("Contract deployed to:", domainContract.address);
-	console.log("Contract deployed by:", owner.address);
-	
-	let txn = await domainContract.register("doom");
-	await txn.wait();
+  console.log("Contract deployed by:", owner.address);
+
+  let txn = await domainContract.register("doom");
+  await txn.wait();
 
   const domainAddress = await domainContract.getAddress("doom");
   console.log("Owner of domain doom:", domainAddress);
-	
-	// Trying to set a record that doesn't belong to me!
+
+  // Trying to set a record that doesn't belong to me!
   txn = await domainContract.connect(randomPerson).setRecord("doom", "Haha my domain now!");
   await txn.wait();
 }

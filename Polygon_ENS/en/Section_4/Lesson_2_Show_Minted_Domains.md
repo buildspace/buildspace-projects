@@ -7,25 +7,24 @@ const updateDomain = async () => {
 	if (!record || !domain) { return }
 	setLoading(true);
 	console.log("Updating domain", domain, "with record", record);
-  try {
-    const { ethereum } = window;
-    if (ethereum){
-      const provider = new ethers.providers.Web3Provider(ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
+  	try {
+		const { ethereum } = window;
+		if (ethereum) {
+			const provider = new ethers.providers.Web3Provider(ethereum);
+			const signer = provider.getSigner();
+			const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
 
 			let tx = await contract.setRecord(domain, record);
-      await tx.wait();
-      console.log("Record set https://mumbai.polygonscan.com/tx/"+tx.hash);
+			await tx.wait();
+			console.log("Record set https://mumbai.polygonscan.com/tx/"+tx.hash);
 
 			fetchMints();
-      setRecord('');
-      setDomain('');
-    }
-  }
-  catch(error){
-    console.log(error);
-  }
+			setRecord('');
+			setDomain('');
+		}
+  	} catch(error) {
+    	console.log(error);
+  	}
 	setLoading(false);
 }
 ```
@@ -41,53 +40,53 @@ To actually call this, we’ll have to make some more changes to our `renderInpu
 	
 	// Here's the updated renderInputForm function (do not make a new one)
 	const renderInputForm = () =>{
-			if (network !== 'Polygon Mumbai Testnet') {
-				return (
-					<div className="connect-wallet-container">
-						<p>Please connect to Polygon Mumbai Testnet</p>
-					</div>
-				);
-			}
-	
+		if (network !== 'Polygon Mumbai Testnet') {
 			return (
-				<div className="form-container">
-					<div className="first-row">
-						<input
-							type="text"
-							value={domain}
-							placeholder='domain'
-							onChange={e => setDomain(e.target.value)}
-						/>
-						<p className='tld'> {tld} </p>
-					</div>
-	
-					<input
-						type="text"
-						value={record}
-						placeholder='whats ur ninja power?'
-						onChange={e => setRecord(e.target.value)}
-					/>
-						{/* If the editing variable is true, return the "Set record" and "Cancel" button */}
-						{editing ? (
-							<div className="button-container">
-								// This will call the updateDomain function we just made
-								<button className='cta-button mint-button' disabled={loading} onClick={updateDomain}>
-									Set record
-								</button>  
-								// This will let us get out of editing mode by setting editing to false
-								<button className='cta-button mint-button' onClick={() => {setEditing(false)}}>
-									Cancel
-								</button>  
-							</div>
-						) : (
-							// If editing is not true, the mint button will be returned instead
-							<button className='cta-button mint-button' disabled={loading} onClick={mintDomain}>
-								Mint
-							</button>  
-						)}
+				<div className="connect-wallet-container">
+					<p>Please connect to Polygon Mumbai Testnet</p>
 				</div>
 			);
 		}
+
+		return (
+			<div className="form-container">
+				<div className="first-row">
+					<input
+						type="text"
+						value={domain}
+						placeholder='domain'
+						onChange={e => setDomain(e.target.value)}
+					/>
+					<p className='tld'> {tld} </p>
+				</div>
+
+				<input
+					type="text"
+					value={record}
+					placeholder='whats ur ninja power?'
+					onChange={e => setRecord(e.target.value)}
+				/>
+					{/* If the editing variable is true, return the "Set record" and "Cancel" button */}
+					{editing ? (
+						<div className="button-container">
+							// This will call the updateDomain function we just made
+							<button className='cta-button mint-button' disabled={loading} onClick={updateDomain}>
+								Set record
+							</button>  
+							// This will let us get out of editing mode by setting editing to false
+							<button className='cta-button mint-button' onClick={() => {setEditing(false)}}>
+								Cancel
+							</button>  
+						</div>
+					) : (
+						// If editing is not true, the mint button will be returned instead
+						<button className='cta-button mint-button' disabled={loading} onClick={mintDomain}>
+							Mint
+						</button>  
+					)}
+			</div>
+		);
+	}
 ```
 
 All that's happening here is we're rendering two different buttons if the app is in edit mode. The `Set record` button will call the update function we wrote and the cancel button will take us out of editing mode. 
@@ -102,43 +101,42 @@ const [mints, setMints] = useState([]);
 
 // Add this function anywhere in your component (maybe after the mint function)
 const fetchMints = async () => {
-  try{
-    const { ethereum } = window;
-    if (ethereum){
+	try {
+		const { ethereum } = window;
+		if (ethereum) {
 			// You know all this
-      const provider = new ethers.providers.Web3Provider(ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
-			
+			const provider = new ethers.providers.Web3Provider(ethereum);
+			const signer = provider.getSigner();
+			const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
+				
 			// Get all the domain names from our contract
-      const names = await contract.getAllNames();
-			
+			const names = await contract.getAllNames();
+				
 			// For each name, get the record and the address
-      const mintRecords = await Promise.all(names.map(async (name) => {
-        const mintRecord = await contract.records(name);
-        const owner = await contract.domains(name);
-        return {
-					id: names.indexOf(name),
-          name: name,
-          record: mintRecord,
-          owner: owner,
-        };
-      }));
+			const mintRecords = await Promise.all(names.map(async (name) => {
+			const mintRecord = await contract.records(name);
+			const owner = await contract.domains(name);
+			return {
+				id: names.indexOf(name),
+				name: name,
+				record: mintRecord,
+				owner: owner,
+			};
+		}));
 
-      console.log("MINTS FETCHED ", mintRecords);
-      setMints(mintRecords);
-    }
-  }
-  catch(error){
-    console.log(error);
+		console.log("MINTS FETCHED ", mintRecords);
+		setMints(mintRecords);
+		}
+	} catch(error){
+		console.log(error);
 	}
 }
 
 // This will run any time currentAccount or network are changed
 useEffect(() => {
-		if (network === 'Polygon Mumbai Testnet') {
-			fetchMints();
-		}
+	if (network === 'Polygon Mumbai Testnet') {
+		fetchMints();
+	}
 }, [currentAccount, network]);
 ```
 
@@ -152,7 +150,7 @@ It puts these in an array and sets the array as our mints. Let’s get minty.
 
 Btw - I added this to the bottom of my `mintDomain` function as well so our app updates when we mint a domain ourselves. We’re waiting two seconds to make sure the transaction is mined. Now our users can see their mints in real-time!
 
-```solidity
+```jsx
 const mintDomain = async () => {
 	// Don't run if the domain is empty
 	if (!domain) { return }
@@ -165,16 +163,16 @@ const mintDomain = async () => {
 	// 3 chars = 0.5 MATIC, 4 chars = 0.3 MATIC, 5 or more = 0.1 MATIC
 	const price = domain.length === 3 ? '0.5' : domain.length === 4 ? '0.3' : '0.1';
 	console.log("Minting domain", domain, "with price", price);
-  try {
-    const { ethereum } = window;
-    if (ethereum) {
-      const provider = new ethers.providers.Web3Provider(ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
+	try {
+    	const { ethereum } = window;
+    	(ethereum) {
+			const provider = new ethers.providers.Web3Provider(ethereum);
+			const signer = provider.getSigner();
+			const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
 
 			console.log("Going to pop wallet now to pay gas...")
-      let tx = await contract.register(domain, {value: ethers.utils.parseEther(price)});
-      // Wait for the transaction to be mined
+      		let tx = await contract.register(domain, {value: ethers.utils.parseEther(price)});
+      		// Wait for the transaction to be mined
 			const receipt = await tx.wait();
 
 			// Check if the transaction was successfully completed
@@ -194,15 +192,13 @@ const mintDomain = async () => {
 
 				setRecord('');
 				setDomain('');
-			}
-			else {
+			} else {
 				alert("Transaction failed! Please try again");
 			}
-    }
-  }
-  catch(error){
-    console.log(error);
-  }
+    	}
+  	} catch(error) {
+    	console.log(error);
+  	}
 }
 ```
 
@@ -213,14 +209,14 @@ Alright, we’re almost done, hang in there! Now that we have these, we can just
 ```jsx
 // Add this render function next to your other render functions
 const renderMints = () => {
-  if (currentAccount && mints.length > 0) {
-    return (
-      <div className="mint-container">
-        <p className="subtitle"> Recently minted domains!</p>
-        <div className="mint-list">
-          { mints.map((mint, index) => {
-            return (
-              <div className="mint-item" key={index}>
+	if (currentAccount && mints.length > 0) {
+		return (
+			<div className="mint-container">
+				<p className="subtitle"> Recently minted domains!</p>
+				<div className="mint-list">
+					{ mints.map((mint, index) => {
+						return (
+							<div className="mint-item" key={index}>
 								<div className='mint-row'>
 									<a className="link" href={`https://testnets.opensea.io/assets/mumbai/${CONTRACT_ADDRESS}/${mint.id}`} target="_blank" rel="noopener noreferrer">
 										<p className="underlined">{' '}{mint.name}{tld}{' '}</p>
@@ -234,21 +230,19 @@ const renderMints = () => {
 										null
 									}
 								</div>
-                <p> {mint.record} </p>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    );
-  }
+					<p> {mint.record} </p>
+				</div>)
+				})}
+			</div>
+		</div>);
+	}
 };
 
 // This will take us into edit mode and show us the edit buttons!
 const editRecord = (name) => {
-		console.log("Editing record for", name);
-		setEditing(true);
-		setDomain(name);
+	console.log("Editing record for", name);
+	setEditing(true);
+	setDomain(name);
 }
 ```
 
