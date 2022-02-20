@@ -30,7 +30,7 @@ import polygonLogo from './assets/polygonlogo.png';
 import ethLogo from './assets/ethlogo.png';
 import { networks } from './utils/networks';
 
-cconst App = () => {
+const App = () => {
 	// Create a stateful variable to store the network next to all the others
   	const [network, setNetwork] = useState('');
 	
