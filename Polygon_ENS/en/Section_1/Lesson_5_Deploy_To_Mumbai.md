@@ -121,8 +121,8 @@ module.exports = {
   solidity: "0.8.10",
   networks: {
 		mumbai: {
-      url: YOUR_ALCHEMY_MUMBAI_URL,
-      accounts: [YOUR_TEST_WALLET_PRIVATE_KEY],
+      url: "YOUR_ALCHEMY_MUMBAI_URL",
+      accounts: ["YOUR_TEST_WALLET_PRIVATE_KEY"],
 		}
   }
 };
@@ -146,7 +146,7 @@ Run this command from the root directory of `cool-domains`.
 npx hardhat run scripts/deploy.js --network mumbai
 ```
 
-It takes like 20-40 seconds to deploy usually. We're not only deploying! We're also minting NFTs in `deploy.js` so that'll take some time as well. We actually need to wait for the transaction to be mined + picked up by miners. Pretty epic :). That one command does all that! If all goes well - you will see an output that looks a little something like this
+It takes like 20-40 seconds to deploy usually. We're not only deploying! We're also minting NFTs in `deploy.js` so that'll take some time as well. We actually need to wait for the transaction to be "mined" + picked up by nodes. Pretty epic :). That one command does all that! If all goes well - you will see an output that looks a little something like this
 
 ![https://i.imgur.com/OIQo3il.png](https://i.imgur.com/OIQo3il.png)
 

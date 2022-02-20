@@ -276,6 +276,8 @@ contract Domains is ERC721URIStorage {
 }
 ```
 
+*Note: We still need the `price`, `getAddress`, `setRecord` *and* `getRecord` *functions, they’re just unchanged so I removed them to keep this short. MAKE SURE YOU DON'T FORGET THEM!* 
+
 This might seem overwhelming. Worry not, young padawan! I’m the Kenobi to your Skywalker (just pls don't betray me like in the movies, ty). Let’s take it from the top:
 
 ```solidity
