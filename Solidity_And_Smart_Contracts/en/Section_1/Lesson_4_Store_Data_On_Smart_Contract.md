@@ -95,7 +95,7 @@ runMain();
 ```
 **VSCode might auto-import `ethers`. We don't need to import `ethers`. So, make sure you have no imports. Remember, what we talked about last lesson about hre?**
 
-🤔 How's it work?
+🤔 How does it work?
 -----------------
 
 ```javascript
