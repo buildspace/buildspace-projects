@@ -404,9 +404,7 @@ function register(string calldata name) public payable {
   console.log("Registering %s on the contract with tokenID %d", name, newRecordId);
 
   string memory json = Base64.encode(
-    bytes(
-      string(
-        abi.encodePacked(
+      abi.encodePacked(
           '{"name": "',
           _name,
           '", "description": "A domain on the Ninja name service", "image": "data:image/svg+xml;base64,',
@@ -414,9 +412,7 @@ function register(string calldata name) public payable {
           '","length":"',
           strLen,
           '"}'
-        )
       )
-    )
   );
 
   string memory finalTokenUri = string( abi.encodePacked("data:application/json;base64,", json));
