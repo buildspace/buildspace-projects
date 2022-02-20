@@ -348,7 +348,7 @@ To do this, we're going to use an SVG - an image that is built with code. Here's
 </svg>
 ```
 
-Kind of looks like an HTML file, yeah? You don’t need to need to know how to ***write*** SVGs. There are lots of tools that will let you make them for free. I used Figma to make this one. 
+Kind of looks like an HTML file, yeah? You don’t need to know how to ***write*** SVGs. There are lots of tools that will let you make them for free. I used Figma to make this one. 
 
 Head to [this](https://www.svgviewer.dev/) website and paste in the code above to see it. Feel free to mess around with it.
 
