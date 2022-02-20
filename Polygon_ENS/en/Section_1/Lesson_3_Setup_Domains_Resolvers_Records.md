@@ -2,7 +2,7 @@
 
 From here, let's add some fanciness to our contract.
 
-The whole point of a name service is to help direct people to your place on the internet! Just like you type in `[google.com](http://google.com)` to get to Google, people will be able to use your name service to go to where ever they want! This is where we’ll do that. Users are going to send us a name and we’re going to give them a domain for that name! 
+The whole point of a name service is to help direct people to your place on the internet! Just like you type in [google.com](http://google.com) to get to Google, people will be able to use your name service to go to where ever they want! This is where we’ll do that. Users are going to send us a name and we’re going to give them a domain for that name! 
 
 So, first thing we need is a function they can hit to register their domain and a place to store their names:
 
@@ -168,7 +168,6 @@ contract Domains {
   }
 
   function getAddress(string calldata name) public view returns (address) {
-      // Check that the owner is the transaction sender
       return domains[name];
   }
 
