@@ -12,7 +12,7 @@ const updateDomain = async () => {
 		if (ethereum) {
 			const provider = new ethers.providers.Web3Provider(ethereum);
 			const signer = provider.getSigner();
-			const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
+			const contract = new ethers.Contract(CONTRACT_ADDRESS, contractABI.abi, signer);
 
 			let tx = await contract.setRecord(domain, record);
 			await tx.wait();
@@ -107,7 +107,7 @@ const fetchMints = async () => {
 			// You know all this
 			const provider = new ethers.providers.Web3Provider(ethereum);
 			const signer = provider.getSigner();
-			const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
+			const contract = new ethers.Contract(CONTRACT_ADDRESS, contractABI.abi, signer);
 				
 			// Get all the domain names from our contract
 			const names = await contract.getAllNames();
@@ -168,7 +168,7 @@ const mintDomain = async () => {
     	(ethereum) {
 			const provider = new ethers.providers.Web3Provider(ethereum);
 			const signer = provider.getSigner();
-			const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
+			const contract = new ethers.Contract(CONTRACT_ADDRESS, contractABI.abi, signer);
 
 			console.log("Going to pop wallet now to pay gas...")
       		let tx = await contract.register(domain, {value: ethers.utils.parseEther(price)});
