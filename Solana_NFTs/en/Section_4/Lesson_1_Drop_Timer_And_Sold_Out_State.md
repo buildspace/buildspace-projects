@@ -5,19 +5,19 @@ We have have an awesome setup for dropping some fancy NFTs on a certain date. Th
 Right now, our "drop" already happened since we set the date to be in the past. Feel free to change the date to sometime in future in the config.json file and apply it using the `update_candy_machine` command. 
 
 ```plaintext
-ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts update_candy_machine -e devnet  -k ~/.config/solana/devnet.json -cp config.json
+ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts update_candy_machine -e devnet  -k ~/.config/solana/devnet.json -cp config.json
 ```
 
 Remember from a previous lesson: if at any point you run into an error that looks like this:
 ```plaintext
-/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts:53
+/Users/flynn/metaplex/js/packages/cli/src/candy-machine-cli.ts:53
       return fs.readdirSync(`${val}`).map(file => path.join(val, file));
                       ^
 TypeError: Cannot read property 'candyMachineAddress' of undefined
-    at /Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts:649:53
-    at step (/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts:53:23)
-    at Object.next (/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts:34:53)
-    at fulfilled (/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-cli.ts:25:58)
+    at /Users/flynn/metaplex/js/packages/cli/src/candy-machine-cli.ts:649:53
+    at step (/Users/flynn/metaplex/js/packages/cli/src/candy-machine-cli.ts:53:23)
+    at Object.next (/Users/flynn/metaplex/js/packages/cli/src/candy-machine-cli.ts:34:53)
+    at fulfilled (/Users/flynn/metaplex/js/packages/cli/src/candy-machine-cli.ts:25:58)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 ```
 
