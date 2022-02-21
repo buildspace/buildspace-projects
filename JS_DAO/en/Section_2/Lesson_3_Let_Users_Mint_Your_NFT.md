@@ -61,7 +61,7 @@ const App = () => {
 
 We just tell thirdweb that we want to be on Rinkeby using `new ThirdwebSDK("rinkeby")`. Then, we create `bundleDropModule` and all we need is the address of our deployed ERC-1155 contract! When we do this, thirdweb gives us a little object we can easily use to interact with our contract.
 
-From there, we use `bundleDropModule.balanceOf(address, "0")` to check if the user has our NFT. This will actually query our deployed smart contract for the data. Why do we do `"0"`? Well, basically because if you remember `0` is the tokenId of our membership NFT. So, here we're asking our contract, "Hey, does this user own a token with id 0?".
+From there, we use `bundleDropModule.balanceOf(address, "0")` to check if the user has our NFT. This will actually query our deployed smart contract for the data. Why do we do `"0"`? Well, basically because if you remember `"0"` is the `tokenId` of our membership NFT. So, here we're asking our contract, "Hey, does this user own a token with id `"0"`?".
 
 When you refresh this page, you'll see something like this:
 
@@ -170,7 +170,7 @@ const App = () => {
 export default App;
 ```
 
-Okay a lot of stuff happening! The first thing we do is set up our `signer` which is what we need to actually send transactions on behalf of a user. See more [here](https://docs.ethers.io/v5/api/signer/). From there, we call `bundleDropModule.claim("0", 1)` to actually mint the NFT to the users wallet when they click the button. In this case the tokenId of our membership NFT is `0` so we pass 0. Then, we pass `1` because we only want to mint one membership NFT to the user's wallet!
+Okay a lot of stuff happening! The first thing we do is set up our `signer` which is what we need to actually send transactions on behalf of a user. See more [here](https://docs.ethers.io/v5/api/signer/). From there, we call `bundleDropModule.claim("0", 1)` to actually mint the NFT to the users wallet when they click the button. In this case the `tokenId` of our membership NFT is `"0"` so we pass `"0"`. Then, we pass `1` because we only want to mint one membership NFT to the user's wallet!
 
 Once it's all done, we do `setIsClaiming(false)` to stop the loading state. And, then we do `setHasClaimedNFT(true)` so that we can let our react app know that this user has successfully claimed an NFT.
 
