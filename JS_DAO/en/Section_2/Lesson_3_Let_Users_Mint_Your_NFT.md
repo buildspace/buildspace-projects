@@ -32,7 +32,8 @@ const App = () => {
   // State variable for us to know if user has our NFT.
   const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
 
-  useEffect(async () => {
+  useEffect(() => {
+  (async () => {
     // If they don't have an connected wallet, exit!
     if (!address) {
       return;
@@ -52,8 +53,9 @@ const App = () => {
       }
     } catch (error) {
         setHasClaimedNFT(false);
-        console.error("failed to nft balance", error);
+        console.error("failed to get nft balance", error);
     }
+   })();
   }, [address]);
 
   // ... include all your other code that was already there below.
@@ -104,7 +106,8 @@ const App = () => {
     sdk.setProviderOrSigner(signer);
   }, [signer]);
 
-    useEffect(async () => {
+    useEffect(() => {
+    (async () => {
     if(!address) {
       return;
     }
@@ -121,8 +124,9 @@ const App = () => {
       }
     } catch (error) {
         setHasClaimedNFT(false);
-        console.error("failed to nft balance", error);
+        console.error("failed to get nft balance", error);
     }
+   })();
   }, [address]);
 
   if (!address) {
