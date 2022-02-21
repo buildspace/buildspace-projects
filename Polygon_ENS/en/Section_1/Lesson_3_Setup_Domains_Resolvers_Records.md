@@ -98,7 +98,7 @@ runMain();
 const [owner, randomPerson] = await hre.ethers.getSigners();
 ```
 
-In order to deploy something to the blockchain, we need to have a wallet address! Hardhat does this for us magically in the background, but here I grabbed the wallet address of the contract owner and I also a random wallet address and called it `randomPerson`. This will make more sense in a moment.
+In order to deploy something to the blockchain, we need to have a wallet address! Hardhat does this for us magically in the background, but here I grabbed the wallet address of the contract owner and also a random wallet address and called it `randomPerson`. This will make more sense in a moment.
 
 I also added:
 
