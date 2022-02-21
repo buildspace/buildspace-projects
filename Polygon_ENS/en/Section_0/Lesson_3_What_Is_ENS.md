@@ -6,7 +6,7 @@ Okay — this is cool, but what’s the point? Well basically it means you can l
 
 Usually, you would have to go make deals with big ISP providers to have your domain accepted by them. For example, if you wanted to make the domain `.bingbongboopitybop` then all the big internet providers would need to accept it on their end. Else, the domain would just lead to a “Does not exist” error page.
 
-Recently, I wanted to buy a `.af` domain, but it doesn’t exist! In this case, I could take inspiration from ENS and build by own ENS for the `.af` domain.
+Recently, I wanted to buy a `.af` domain, but it doesn’t exist! In this case, I could take inspiration from ENS and build my own ENS for the `.af` domain.
 
 So, now that we know how hype Polygon is and what ENS is - how does this all fit into what we are building?
 
