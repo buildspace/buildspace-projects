@@ -31,6 +31,9 @@ const updateDomain = async () => {
 
 Nothing new here, it’s just a smaller version of our `mintDomain` function. You’re a pro at this stuff now so I expect you to understand this hehe.
 
+also remember to add ```const [loading, setLoading] = useState(false);``` at the top of your App.js so that you are setting the useState and your app knows about calling the setLoading in this function
+
+
 To actually call this, we’ll have to make some more changes to our `renderInputForm` function to show a `Set record` button. We'll also use a stateful variable to detect if we're in "edit" mode. I just called it `editing`. Here's the code:
 
 ```jsx
