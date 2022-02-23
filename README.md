@@ -390,6 +390,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/jhonnyV-V"><img src="https://avatars.githubusercontent.com/u/46012817?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jhonny Varela</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=jhonnyV-V" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ObstinateM"><img src="https://avatars.githubusercontent.com/u/45576315?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mathis Beauville</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ObstinateM" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/holyaustin/"><img src="https://avatars.githubusercontent.com/u/41966983?v=4?s=100" width="100px;" alt=""/><br /><sub><b>holyaustin</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=holyaustin" title="Documentation">📖</a></td>
   </tr>
 </table>
 
