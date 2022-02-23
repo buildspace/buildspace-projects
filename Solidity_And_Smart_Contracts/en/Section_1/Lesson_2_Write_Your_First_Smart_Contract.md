@@ -1,5 +1,4 @@
-👩‍💻 Let's write a contract
-----------------------------
+## 👩‍💻 Let's write a contract
 
 Awesome, we made it.
 
@@ -57,9 +56,8 @@ So, smart contracts sort of look like a `class` in other languages, if you've ev
 
 In the next lesson, we'll run this and see what we get!
 
-🚨 Before you click "Next Lesson"
--------------------------------------------
+## 🚨 Before you click "Next Lesson"
 
-*Note: if you don't do this, Farza will be very sad :(.*
+_Note: if you don't do this, Farza will be very sad :(._
 
 Go to #progress and post a screenshot of your fancy contract in the WavePortal.sol file :).
