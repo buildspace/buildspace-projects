@@ -27,7 +27,7 @@ Next, let's head to the terminal. Go ahead and `cd` to the directory you want to
 mkdir epic-nfts
 cd epic-nfts
 npm init -y
-npm install --save-dev hardhat
+yarn add --dev hardhat
 ```
 You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Google around a bit about these vulnerabilities if you want to know more!
 
@@ -49,8 +49,8 @@ The sample project will ask you to install `hardhat-waffle` and `hardhat-ethers`
 
 Go ahead and install these other dependencies just in case it didn't do it automatically.
 
-```bash
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+```
+yarn add --dev "hardhat@^2.8.4" "@nomiclabs/hardhat-waffle@^2.0.0" "ethereum-waffle@^3.0.0" "chai@^4.2.0" "@nomiclabs/hardhat-ethers@^2.0.0" "ethers@^5.0.0"
 ```
 
 You'll also want to install something called **OpenZeppelin** which is another library that's used a lot to develop secure smart contracts. We'll learn more about it later. For now, just install it :).
