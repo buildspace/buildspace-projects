@@ -55,8 +55,8 @@ yarn add --dev "hardhat@^2.8.4" "@nomiclabs/hardhat-waffle@^2.0.0" "ethereum-waf
 
 You'll also want to install something called **OpenZeppelin** which is another library that's used a lot to develop secure smart contracts. We'll learn more about it later. For now, just install it :).
 
-```bash
-npm install @openzeppelin/contracts
+```
+yarn add @openzeppelin/contracts
 ```
 
 Then run:
