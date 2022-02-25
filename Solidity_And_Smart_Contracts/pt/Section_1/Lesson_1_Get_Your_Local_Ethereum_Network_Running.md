@@ -9,7 +9,7 @@ Portanto, neste caso, queremos que as pessoas nos 👋. O plano aqui é:
 
 1\. **Vamos escrever um contrato inteligente.** Esse contrato tem toda a lógica em torno de como os 👋s serão tratados. É como o código do seu servidor.
 
-2\. **Nosso contrato inteligente será implantado no blockchain.** Dessa forma, qualquer pessoa no mundo poderá acessar e executar nosso contrato inteligente (se dermos permissão para isso). Então, quase como um servidor :).
+2\. **Nosso contrato inteligente será implantado na blockchain.** Dessa forma, qualquer pessoa no mundo poderá acessar e executar nosso contrato inteligente (se dermos permissão para isso). Então, quase como um servidor :).
 
 3\. **Vamos construir um site** que permitirá que as pessoas interajam facilmente com nosso contrato inteligente na blockchain.
 
@@ -22,11 +22,7 @@ Se você tiver qualquer problema aqui, apenas mande uma mensagem no Discord em `
 
 1\. Vamos usar muito uma ferramenta chamada Hardhat. Isso nos permitirá facilmente criar uma rede Ethereum local e nos dar falsos ETH de teste e contas de falsas teste para trabalhar. Lembre-se, é como um servidor local, exceto que o "servidor" é o blockchain.
 
-2\. Compile rapidamente contratos inteligentes e teste-os em nosso blockchain local.
-
-First you'll need to get node/npm. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html).
-
-Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to the directory you want to work in. Once you're there run these commands:
+2\. Compile rapidamente contratos inteligentes e teste-os em nossa blockchain local.
 
 Primeiro você vai precisar obter o node/npm. Se você não o fez, vá até [aqui](https://hardhat.org/tutorial/setting-up-the-environment.html).
 
@@ -56,9 +52,7 @@ Escolha a opção de criar um sample project. Diga sim a tudo.
 
 O projeto de amostra solicitará que você instale o hardhat-waffle e o hardhat-ethers. Estas são outras coisas que usaremos mais tarde :).
 
-Go ahead and install these other dependencies just in case it didn't do it automatically.
-
-Vá em frente e instale essas outras dependências apenas para caso não tenham sido instaladas automaticamente.
+Vá em frente e instale essas outras dependências apenas caso não tenham sido instaladas automaticamente.
 
 ```bash
 npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
@@ -68,7 +62,7 @@ Finalmente, execute `npx hardhat accounts` e isso deve imprimir um monte de stri
 
 `0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`
 
-Esses são os endereços Ethereum que o Hardhat gera para simular usuários reais no blockchain. Isso vai nos ajudar muito no projeto mais tarde, quando quisermos simular usuários se 👋-ndo para nós!
+Esses são os endereços Ethereum que o Hardhat gera para simular usuários reais na blockchain. Isso vai nos ajudar muito no projeto mais tarde, quando quisermos simular usuários se 👋 para nós!
 
 🌟 Execute isso
 ---------
@@ -91,8 +85,6 @@ Você deve ver algo assim:
 Vamos fazer uma pequena limpeza.
 
 Vá em frente e abra o código do projeto agora em seu editor de código favorito. Eu gosto mais do VSCode! Queremos excluir todo o código inicial desenecessário gerado para nós. Não precisamos de nada disso. Somos profissionais;)!
-
-Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `sample-script.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. Don't delete the actual folders!
 
 Vá em frente e exclua o arquivo `sample-test.js` em `test`. Além disso, exclua `sample-script.js` em `scripts`. Em seguida, exclua `Greeter.sol` em `contratos`. Não exclua as pastas!
 
