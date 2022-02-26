@@ -37,6 +37,8 @@ To actually call this, we’ll have to make some more changes to our `renderInpu
 	const App = () => {
 	// Add a new stateful variable at the start of our component next to all the old ones
 	const [editing, setEditing] = useState(false);
+	const [loading, setLoading] = useState(false);
+
 	
 	// Here's the updated renderInputForm function (do not make a new one)
 	const renderInputForm = () =>{
