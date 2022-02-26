@@ -221,6 +221,7 @@ contract Domains is ERC721URIStorage {
   mapping(string => address) public domains;
   mapping(string => string) public records;
 
+  // Update the Constructor to add ERC721
   constructor(string memory _tld) payable ERC721("Ninja Name Service", "NNS") {
     tld = _tld;
     console.log("%s name service deployed", _tld);

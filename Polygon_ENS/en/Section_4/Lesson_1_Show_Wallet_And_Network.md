@@ -20,7 +20,7 @@ First off, the UX on our app can be improved a lot. Let’s start by showing the
 
 What’s happening here is a bit of JavaScript fanciness. If you don't understand the `? :`  syntax, skim [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator), those are ternary operators and they're really cool. One thing worth mentioning here is that I'm just checking if the network name has the word "Polygon" in it. So if you're on the Polygon mainnet, the polygon logo shows!
 
-Ahh more errors... Don’t worry this is expected and we are going to fix them right now!
+Ahh more errors... Don’t worry as this is expected and we are going to fix them right now!
 
 Head back to the top of the component and add the following (do not copy/paste the whole thing, you will break it):
 
