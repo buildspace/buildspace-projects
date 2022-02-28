@@ -359,7 +359,7 @@ Paste the ABI file contents right there in our new file.
 Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file. It's just going to be:
 
 ```jsx
-import contractABI from './utils/contractABI.json';
+import contractAbi from './utils/contractABI.json';
 ```
 
 And we're all done. Shouldn't have errors anymore!
