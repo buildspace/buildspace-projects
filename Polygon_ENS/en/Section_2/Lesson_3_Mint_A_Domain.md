@@ -209,7 +209,7 @@ const mintDomain = async () => {
     if (ethereum) {
       const provider = new ethers.providers.Web3Provider(ethereum);
       const signer = provider.getSigner();
-      const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
+      const contract = new ethers.Contract(CONTRACT_ADDRESS, contractABI.abi, signer);
 
 			console.log("Going to pop wallet now to pay gas...")
       let tx = await contract.register(domain, {value: ethers.utils.parseEther(price)});
@@ -256,7 +256,7 @@ A "provider" is what we use to actually talk to Polygon nodes. Remember how we w
 [Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
 
 ```jsx
-const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
+const contract = new ethers.Contract(CONTRACT_ADDRESS, contractABI.abi, signer);
 ```
 
 We'll cover this in a bit. Just know that this line is what actually **creates the connection to our contract**. It needs: the contract's address, something called an `abi` file, and a `signer`. These are the three things we always need to communicate with contracts on the blockchain.
