@@ -70,9 +70,9 @@ function setRecord(string calldata name, string calldata record) public {
 }
 
 function register(string calldata name) public payable {
-	if (domains[name] != address(0)) revert AlreadyRegistered();
+  if (domains[name] != address(0)) revert AlreadyRegistered();
   if (!valid(name)) revert InvalidName(name);
-	// Rest of register function remains unchanged
+  // Rest of register function remains unchanged
 }
 ```
 

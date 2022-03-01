@@ -165,7 +165,7 @@ const mintDomain = async () => {
 	console.log("Minting domain", domain, "with price", price);
 	try {
     	const { ethereum } = window;
-    	(ethereum) {
+    	if (ethereum) {
 			const provider = new ethers.providers.Web3Provider(ethereum);
 			const signer = provider.getSigner();
 			const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
