@@ -2146,6 +2146,42 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jhonnyV-V",
+      "name": "Jhonny Varela",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46012817?v=4",
+      "profile": "https://github.com/jhonnyV-V",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ObstinateM",
+      "name": "Mathis Beauville",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45576315?v=4",
+      "profile": "https://github.com/ObstinateM",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "holyaustin",
+      "name": "holyaustin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41966983?v=4",
+      "profile": "https://www.linkedin.com/in/holyaustin/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vvronskyFX",
+      "name": "Vladlen Vronsky",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64465297?v=4",
+      "profile": "http://linktr.ee/vladdyv",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
