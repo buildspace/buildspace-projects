@@ -2209,6 +2209,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "samsnedeker",
+      "name": "Sam Snedeker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73915540?v=4",
+      "profile": "https://github.com/samsnedeker",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
