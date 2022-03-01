@@ -8,6 +8,7 @@ To start, we need to get the user’s domain name and what data they’re going 
 import React, { useEffect, useState } from "react";
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
+import {ethers} from "ethers";
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
