@@ -54,7 +54,7 @@ You'll magically clone my repo and full IDE in your browser to work with the cod
 
 Here's a quick video I made for a different project going over some Replit basics:
 
-[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
+[Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)
 
 Just like that, you have a frontend setup for your web3 app 😎.
 
