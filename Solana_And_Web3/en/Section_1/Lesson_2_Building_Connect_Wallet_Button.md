@@ -1,3 +1,5 @@
+### 👛 Installing Phantom Wallet Extension
+
 For this project we are going to be using a wallet called [Phantom](https://phantom.app/).
 
 This is one of the top wallet extensions for Solana and is actually backed by Solana as well (so you know it's legit).
