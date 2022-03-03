@@ -8,6 +8,7 @@ To start, we need to get the user’s domain name and what data they’re going 
 import React, { useEffect, useState } from "react";
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
+import {ethers} from "ethers";
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
@@ -359,7 +360,7 @@ Paste the ABI file contents right there in our new file.
 Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file. It's just going to be:
 
 ```jsx
-import contractABI from './utils/contractABI.json';
+import contractAbi from './utils/contractABI.json';
 ```
 
 And we're all done. Shouldn't have errors anymore!

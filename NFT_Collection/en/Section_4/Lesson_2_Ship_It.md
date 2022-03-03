@@ -14,7 +14,7 @@ require('@nomiclabs/hardhat-waffle');
 require('dotenv').config();
 
 module.exports = {
-  solidity: '0.8.0',
+  solidity: '0.8.1',
   networks: {
     rinkeby: {
       url: process.env.STAGING_ALCHEMY_KEY,
@@ -89,7 +89,7 @@ require("@nomiclabs/hardhat-etherscan");
 ...
 
 module.exports = {
-  solidity: "0.8.0",
+  solidity: "0.8.1",
 
   // Rest of the config
   ...,

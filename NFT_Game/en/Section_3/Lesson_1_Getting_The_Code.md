@@ -21,4 +21,4 @@ You'll magically clone my repo and full IDE in your browser to work with the cod
 **Please Note: As you go through this project, you may notice that we are referencing `.js` files. In Replit, if you are creating any new JavaScript files, you will need to use the `.jsx` extension instead! Replit has some performance fanciness that requires you use the `.jsx` file extension :).**
 
 Here's a quick video I made for a different project going over some Replit basics:
-[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
+[Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)

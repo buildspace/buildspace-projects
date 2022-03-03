@@ -2173,6 +2173,60 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "vvronskyFX",
+      "name": "Vladlen Vronsky",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64465297?v=4",
+      "profile": "http://linktr.ee/vladdyv",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "omniscientHorizon",
+      "name": "Kshitij Agarwal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94373821?v=4",
+      "profile": "https://github.com/omniscientHorizon",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "julie-huang",
+      "name": "Julie Huang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44955073?v=4",
+      "profile": "https://www.linkedin.com/in/julieeh/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Kavian77",
+      "name": "Kavian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5189558?v=4",
+      "profile": "https://github.com/Kavian77",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "samsnedeker",
+      "name": "Sam Snedeker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73915540?v=4",
+      "profile": "https://github.com/samsnedeker",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ANMOLCODES",
+      "name": "Anmol Arora",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53006995?v=4",
+      "profile": "https://anmolarora.netlify.app/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
