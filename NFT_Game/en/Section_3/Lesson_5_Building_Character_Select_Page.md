@@ -176,8 +176,7 @@ This is amazing, but we can take it one step further - **a one button click to m
 
 ```javascript
 // Actions
-   const mintCharacterNFTAction = async (characterId) => {
-
+const mintCharacterNFTAction = async (characterId) => {
   try {
     if (gameContract) {
       console.log('Minting character in progress...');
