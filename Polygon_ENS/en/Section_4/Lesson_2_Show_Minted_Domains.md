@@ -44,6 +44,7 @@ To actually call this, we’ll have to make some more changes to our `renderInpu
 			return (
 				<div className="connect-wallet-container">
 					<p>Please connect to Polygon Mumbai Testnet</p>
+					<button className='cta-button mint-button' onClick={switchNetwork}>Click here to switch</button>
 				</div>
 			);
 		}
