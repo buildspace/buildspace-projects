@@ -6,7 +6,7 @@ But, there's a problem. In order for us to mint NFTs, we need to write + deploy 
 
 What ThirdWeb gives us, is a set of tools to create all our smart contracts without writing any Solidity.
 
-We write no Solidity. All we need to do is write a script using just javascript to create + deploy our contracts. thirdweb will use a set of secure, standard contracts they've created [here](https://github.com/nftlabs/nftlabs-protocols). **The cool part is after you create the contracts, you own them and they're associated with your wallet.** 
+We write no Solidity. All we need to do is write a script using just javascript to create + deploy our contracts. thirdweb will use a set of secure, standard contracts they've created [here](https://github.com/thirdweb-dev/contracts/tree/v1). **The cool part is after you create the contracts, you own them and they're associated with your wallet.** 
 
 Once you deploy the contract, you can interact with those contracts from your frontend easily using their client-side SDK.
 
@@ -220,7 +220,7 @@ Okay, what just happened is pretty freaking epic. Two things happened:
 
 ![Untitled](https://i.imgur.com/suqHbB4.png)
 
-Pretty epic. A deployed, custom contract with just javascript. You can see the actual smart contract code thirdweb uses [here](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/LazyNFT.sol).
+Pretty epic. A deployed, custom contract with just javascript. You can see the actual smart contract code thirdweb uses [here](https://github.com/thirdweb-dev/contracts/blob/v1/contracts/LazyNFT.sol).
 
 **The other thing we did here is thirdweb automatically uploaded and pinned our collection's image to IPFS.** You'll see a link that starts with `https://cloudflare-ipfs.com` printed out. If you paste that into your browser, you'll see your NFT's image being retrieved from IPFS via CloudFlare!
 

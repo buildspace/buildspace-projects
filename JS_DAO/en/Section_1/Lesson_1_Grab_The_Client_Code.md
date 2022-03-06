@@ -14,9 +14,7 @@ You'll magically clone my repo and full IDE in your browser to work with the cod
 
 Here’s a video I made covering Replit in a past project:
 
-[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
-
-*Note: At the end I mention we offer free pro Replit accounts, currently, we’re all out!!*
+[Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)
 
 ### 👩‍💻 Want to work locally? Get the code.
 

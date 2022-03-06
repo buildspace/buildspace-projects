@@ -16,7 +16,7 @@ const tokenModule = sdk.getTokenModule(
 );
 ```
 
-We need this so we can interact with both of our ERC-1155 contract and our ERC-20 contract. From the ERC-1155, we’ll get all our member’s addresses. From the ERC-20, we’ll retrieve the # of tokens each member has.
+We need this so we can interact with both of our ERC-1155 contract and our ERC-20 contract. From the ERC-1155, we’ll get all our members' addresses. From the ERC-20, we’ll retrieve the # of tokens each member has.
 
 Next, add the following code under `const [isClaiming, setIsClaiming] = useState(false)`:
 
@@ -84,9 +84,9 @@ Looks like a lot at first! But just know we’re doing three things:
 
 1) We’re calling `getAllClaimerAddresses` to get all the addresses of our members who hold an NFT from our ERC-1155 contract.
 
-2) We’re calling `getAllHolderBalances` to get the token balances of everyone who hold’s our token on our ERC-20 contract.
+2) We’re calling `getAllHolderBalances` to get the token balances of everyone who holds our token on our ERC-20 contract.
 
-3) We’re combining the data into `memberList` which is one nice array the combines both the member’s address and their token balance. Feel free to check out what `useMemo` does [here](https://reactjs.org/docs/hooks-reference.html#usememo). It’s a fancy way in React to store a computed variable. 
+3) We’re combining the data into `memberList` which is one nice array that combines both the member’s address and their token balance. Feel free to check out what `useMemo` does [here](https://reactjs.org/docs/hooks-reference.html#usememo). It’s a fancy way in React to store a computed variable. 
 
 Now, you may be asking yourself, “Can’t we just do `getAllHolderBalances` to grab everyone that holds our token?”. Well, basically, someone can be in our DAO and hold zero token! *And, that’s okay.* So still want them to show up on the list.
 
@@ -98,7 +98,7 @@ In my console, I get something like this where I am now successfully retrieving 
 
 ### 🤯 Render member data on DAO Dashboard.
 
-Now, that we have all the data held nicely in our React app’s state, let’s render it.
+Now that we have all the data held nicely in our React app’s state, let’s render it.
 
 **Replace** `if (hasClaimedNFT) { }` with the following:
 
