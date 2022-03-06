@@ -91,7 +91,47 @@ module.exports = {
 };
 ```
 
-**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** We'll talk about `.env` variables later and how to keep this stuff secret.
+**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** 
+
+**If uploading to Github or using git version control in general it is good practice to protect yourself from uploading secrect keys to somewhere you don't want them. First of all the best way is to not upload your hardhat config file with your private key to your repo. You will get robbed.**
+
+Another way of protecting yourself and keeping `hardhat.config.js` in version control is to use dotenv.
+
+```bash
+npm install --save dotenv
+```
+
+Your hardhat.config.js file would look something like:
+
+```javascript
+require("@nomiclabs/hardhat-waffle");
+require("dotenv").config();
+
+module.exports = {
+  solidity: "0.8.0",
+  networks: {
+    rinkeby: {
+      url: process.env.STAGING_ALCHEMY_KEY,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    mainnet: {
+      chainId: 1,
+      url: process.env.PROD_ALCHEMY_KEY,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+  },
+};
+```
+
+And your .env file would look something like:
+
+```
+STAGING_ALCHEMY_KEY=BLAHBLAH
+PROD_ALCHEMY_KEY=BLAHBLAH
+PRIVATE_KEY=BLAHBLAH
+```
+
+Be sure to have the .env in your .gitignore.
 
 You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can grab from metamask and paste that in there as well.
 
