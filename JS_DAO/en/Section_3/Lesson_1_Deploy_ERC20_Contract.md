@@ -51,7 +51,7 @@ We call `deployTokenModule` which will deploy a standard [ERC-20](https://docs.o
 
 Here I give my token the symbol HOKAGE. If you don’t know what that is — check [this](https://naruto.fandom.com/wiki/Hokage) out lol. TLDR: If you’re a Hokage you’re one of the best ninja’s of all time.
 
-BTW — you can see the exact contract thirdweb uses [here](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/Coin.sol).
+BTW — you can see the exact contract thirdweb uses [here]https://github.com/thirdweb-dev/contracts/blob/v1/contracts/Coin.sol).
 
 Here’s what I get when I run it:
 

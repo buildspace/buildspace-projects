@@ -89,7 +89,7 @@ Now we're going to use Metaplex's `upload` command to upload our NFTs that live 
 Notice how we do `./assets` in the command below. That means we need to run this command from just one level outside of the `assets` folder.
 
 ```plaintext
-ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
+ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
 ```
 
 *Note: if you get an error like "no such file or directory, scandir './assets'" it means you ran the command from the wrong place. Be sure to run it in the same directory where your `assets` folder is.*
@@ -129,7 +129,7 @@ You will actually need to delete the `.cache` folder and run `upload` again. Thi
 Before moving on, verify your NFTs were actually uploaded by running the `verify` command:
 
 ```plaintext
-ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts verify_upload -e devnet -k ~/.config/solana/devnet.json
+ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts verify_upload -e devnet -k ~/.config/solana/devnet.json
 ```
 
 *Note: You'll notice here we don't tell this command anything about our NFTs. How then does it know what to verify? Well, the `.cache` folder has all the data. If you look inside `devnet-temp.json` you'll see all our data right there.*
@@ -155,7 +155,7 @@ You may be asking yourself — "well, who's paying to host my stuff then!?". Wel
 To update your candy machine config, all you need to do is update the `config.json` file and run this command:
 
 ```plaintext
-ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts update_candy_machine -e devnet -k ~/.config/solana/devnet.json -cp config.json
+ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts update_candy_machine -e devnet -k ~/.config/solana/devnet.json -cp config.json
 ```
 
 ### 😡 **Error to be aware of.**
@@ -163,14 +163,14 @@ ts-node ~/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.
 If at any point you run into an error that looks like this:
 
 ```plaintext
-/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:53
+/Users/flynn/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:53
       return fs.readdirSync(`${val}`).map(file => path.join(val, file));
                       ^
 TypeError: Cannot read property 'candyMachineAddress' of undefined
-    at /Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:649:53
-    at step (/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:53:23)
-    at Object.next (/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:34:53)
-    at fulfilled (/Users/flynn/metaplex-foundation/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:25:58)
+    at /Users/flynn/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:649:53
+    at step (/Users/flynn/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:53:23)
+    at Object.next (/Users/flynn/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:34:53)
+    at fulfilled (/Users/flynn/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts:25:58)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
 ```
 

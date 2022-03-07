@@ -165,7 +165,7 @@ const mintDomain = async () => {
 	console.log("Minting domain", domain, "with price", price);
 	try {
     	const { ethereum } = window;
-    	(ethereum) {
+    	if (ethereum) {
 			const provider = new ethers.providers.Web3Provider(ethereum);
 			const signer = provider.getSigner();
 			const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
@@ -180,7 +180,7 @@ const mintDomain = async () => {
 				console.log("Domain minted! https://mumbai.polygonscan.com/tx/"+tx.hash);
 				
 				// Set the record for the domain
-				tx = contract.setRecord(domain, record);
+				tx = await contract.setRecord(domain, record);
 				await tx.wait();
 
 				console.log("Record set! https://mumbai.polygonscan.com/tx/"+tx.hash);
