@@ -4,7 +4,7 @@ Below I'm going to be going over a few functions. These won't seem really useful
 
 We need a way to check if a user has a character NFT we've given them, and then retrieve the NFT's attributes if the NFT exists. Why?
 
-When users go to play our game and connect their wallet to our web app, **we need to be able to retrieve their NFT so they can play the game  and so we know stuff like their NFT's HP, AD, etc —  else we need to tell them to mint one.**
+When users go to play our game and connect their wallet to our web app, **we need to be able to retrieve their NFT so they can play the game and so we know stuff like their NFT's HP, AD, etc — else we need to tell them to mint one.**
 
 Here's how we're going to setup the function:
 
@@ -74,10 +74,10 @@ When we call `mintCharacterNFT`, how do we know it's **actually** done? When we 
 
 ```javascript
 let txn = await gameContract.mintCharacterNFT(1);
-await txn.wait(); 
+await txn.wait();
 ```
 
-This will basically return when the transaction has been **mined**. But, how do we know if the NFT was actually minted successfully?? *It's possible that our transaction was mined, but failed for some reason* (ex. b/c of an edge case bug in our code). It's also possible that our transaction was **mined**, **but then [later dropped](https://www.reddit.com/r/ethereum/comments/m4mmy9/etherscan_dropped_my_transaction_why/)** (ex. by changes in gas fees).
+This will basically return when the transaction has been **mined**. But, how do we know if the NFT was actually minted successfully?? _It's possible that our transaction was mined, but failed for some reason_ (ex. b/c of an edge case bug in our code). It's also possible that our transaction was **mined**, **but then [later dropped](https://www.reddit.com/r/ethereum/comments/m4mmy9/etherscan_dropped_my_transaction_why/)** (ex. by changes in gas fees).
 
 We only want to tell the user "Hey, your NFT was minted" when we're sure the function actually ran without any errors.
 
@@ -100,9 +100,9 @@ The first event, `CharacterNFTMinted` we're going to fire when we finish minting
 emit CharacterNFTMinted(msg.sender, newItemId, _characterIndex);
 ```
 
-Boom! That's it. Now our web app will be able to "catch" this event (kinda like a web hook we can **listen** to) when the NFT is officially done minting. We'll cover how to catch the event later. 
+Boom! That's it. Now our web app will be able to "catch" this event (kinda like a web hook we can **listen** to) when the NFT is officially done minting. We'll cover how to catch the event later.
 
-Next we have the `AttackComplete` event. This would fire when we've officially attacked our boss. You can see the events return  to us the boss's new hp and the player's new hp! 
+Next we have the `AttackComplete` event. This would fire when we've officially attacked our boss. You can see the events return to us the boss's new hp and the player's new hp (we use `msg.sender` to make sure it's our player).
 
 This is pretty cool because we can catch this event on our client and it's going to allow us to update the player + boss's HP dynamically without them needing to reload the page. It'll feel like a legit game.
 
@@ -111,7 +111,6 @@ All we need to do is add this line to the bottom of the `attackBoss` function:
 ```solidity
 emit AttackComplete(msg.sender, bigBoss.hp, player.hp);
 ```
-Notice how we also passed `msg.sender` as a parameter so that we can check on the front-end later whether the attack has come from our player or someone else's.
 
 ### ➡️ Deploying the changes.
 
@@ -123,14 +122,16 @@ Here's my `deploy.js` file after I've removed the minting and attacks from our l
 
 ```javascript
 const main = async () => {
-  const gameContractFactory = await hre.ethers.getContractFactory('MyEpicGame');
-  
-  const gameContract = await gameContractFactory.deploy(                        
-    ["Leo", "Aang", "Pikachu"],       
-    ["https://i.imgur.com/pKd5Sdk.png", 
-    "https://i.imgur.com/xVu4vFL.png", 
-    "https://i.imgur.com/u7T87A6.png"],
-    [100, 200, 300],                    
+  const gameContractFactory = await hre.ethers.getContractFactory("MyEpicGame");
+
+  const gameContract = await gameContractFactory.deploy(
+    ["Leo", "Aang", "Pikachu"],
+    [
+      "https://i.imgur.com/pKd5Sdk.png",
+      "https://i.imgur.com/xVu4vFL.png",
+      "https://i.imgur.com/u7T87A6.png",
+    ],
+    [100, 200, 300],
     [100, 50, 25],
     "Elon Musk",
     "https://i.imgur.com/AksR0tt.png",
@@ -140,7 +141,6 @@ const main = async () => {
 
   await gameContract.deployed();
   console.log("Contract deployed to:", gameContract.address);
-
 };
 
 const runMain = async () => {
