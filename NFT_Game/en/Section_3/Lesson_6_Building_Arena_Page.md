@@ -1,17 +1,17 @@
 At this point, we have been introduced to pretty much everything we need to know to build our React app. Let's jump right into setting up our `Arena` Component:
 
-Just like with the `SelectCharacter` Component, let's create a new file in the `Components/Arena` folder called `index.js`. Again, you should already see an `Arena.css` file in this folder! Once you setup your base don't forget to get fancy with your styling 💅.
+Just like with the `SelectCharacter` Component, let's create a new file in the `Components/Arena`  folder called `index.js`. Again, you should already see an `Arena.css` file in this folder! Once you setup your base don't forget to get fancy with your styling 💅.
 
 ### ⚔️ Setting up the Arena.
 
 Next, we are going to setup our `Arena` component. Make sure you're working out of `Arena/index.js`. I'm going to add a lot more base code here as we are familiar with everything that is happening:
 
 ```javascript
-import React, { useEffect, useState } from "react";
-import { ethers } from "ethers";
-import { CONTRACT_ADDRESS, transformCharacterData } from "../../constants";
-import myEpicGame from "../../utils/MyEpicGame.json";
-import "./Arena.css";
+import React, { useEffect, useState } from 'react';
+import { ethers } from 'ethers';
+import { CONTRACT_ADDRESS, transformCharacterData } from '../../constants';
+import myEpicGame from '../../utils/MyEpicGame.json';
+import './Arena.css';
 
 /*
  * We pass in our characterNFT metadata so we can show a cool card in our UI
@@ -35,7 +35,7 @@ const Arena = ({ characterNFT }) => {
 
       setGameContract(gameContract);
     } else {
-      console.log("Ethereum object not found");
+      console.log('Ethereum object not found');
     }
   }, []);
 
@@ -82,14 +82,14 @@ const renderContent = () => {
       </div>
     );
   } else if (currentAccount && !characterNFT) {
-    return <SelectCharacter setCharacterNFT={setCharacterNFT} />;
+    return <SelectCharacter setCharacterNFT={setCharacterNFT} />;	
 	/*
 	* If there is a connected wallet and characterNFT, it's time to battle!
 	*/
   } else if (currentAccount && characterNFT) {
     return <Arena characterNFT={characterNFT} />;
   }
-};
+}; 
 ```
 
 **We now have covered all three scenarios!** At this point, if you refresh your app you should be taken directly to the `Arena` component which should look a little something like this:
@@ -122,7 +122,7 @@ useEffect(() => {
    */
   const fetchBoss = async () => {
     const bossTxn = await gameContract.getBigBoss();
-    console.log("Boss:", bossTxn);
+    console.log('Boss:', bossTxn);
     setBoss(transformCharacterData(bossTxn));
   };
 
@@ -143,7 +143,7 @@ Elon has arrived. Let's go ahead and setup our component to display Elon in all 
 
 ### 🙀 Actually rendering the Big Boss.
 
-This is where the fun starts 🤘. Again, building out your UI is something you can be extremely creative with! While I gave you all the styling you needed to get started, explore the CSS and make something that you **_LOVE_** and can show off to your friends.
+This is where the fun starts 🤘. Again, building out your UI is something you can be extremely creative with! While I gave you all the styling you needed to get started, explore the CSS and make something that you ***LOVE*** and can show off to your friends.
 
 Alright, we are going to start by adding some HTML to our component:
 
@@ -245,7 +245,7 @@ return (
 );
 ```
 
-You can see this is pretty much the same sort of layout we have for our character NFT. The main things to notice about both of these sections is that we check to make sure we have the data before rendering. If you don't - our app will crash!
+You can see this is pretty much the same sort of layout we have for our character NFT. The main things to notice about both of these sections is that we check to make sure we have the data before rendering. If you don't - our app will crash! 
 
 Your app should look a little something like this:
 
@@ -261,28 +261,30 @@ The whole point of our game is to defeat the boss in your Metaverse! We take int
 
 If you remember when we were setting up the attack logic on our contract, we tested this all out. Let's just add a little spice here 🌶. It's time to add the logic to `runAttackAction` function we added earlier & another state variable called `attackState` :
 
+ 
+
 ```javascript
 // State
 const [gameContract, setGameContract] = useState(null);
 const [boss, setBoss] = useState(null);
 /*
- * We are going to use this to add a bit of fancy animations during attacks
- */
-const [attackState, setAttackState] = useState("");
+* We are going to use this to add a bit of fancy animations during attacks
+*/
+const [attackState, setAttackState] = useState('');
 
 const runAttackAction = async () => {
   try {
     if (gameContract) {
-      setAttackState("attacking");
-      console.log("Attacking boss...");
+      setAttackState('attacking');
+      console.log('Attacking boss...');
       const attackTxn = await gameContract.attackBoss();
       await attackTxn.wait();
-      console.log("attackTxn:", attackTxn);
-      setAttackState("hit");
+      console.log('attackTxn:', attackTxn);
+      setAttackState('hit');
     }
   } catch (error) {
-    console.error("Error attacking boss:", error);
-    setAttackState("");
+    console.error('Error attacking boss:', error);
+    setAttackState('');
   }
 };
 ```
@@ -352,7 +354,7 @@ We are going to dynamically add this class name to our `div` which in turn will 
 * We are going to need to update our character NFT so pass setCharacterNFT here.
 */
 const Arena = ({ characterNFT, setCharacterNFT }) => {
-
+	
     ...
 
     // UseEffects
@@ -415,7 +417,7 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
 Also, don't forget to head back to `App.js` and add pass the `setCharacterNFT` property to your Arena component:
 
 ```javascript
-<Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />
+  <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />
 ```
 
 This should all look pretty familiar to you! Our contract will return `newBossHp` and `newPlayerHp` which we will then use to update the state of the boss, and also the character NFT (if it's our player). This part may look a bit funky, so let's dive into this a bit:
