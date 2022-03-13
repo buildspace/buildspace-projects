@@ -155,12 +155,6 @@ anchor --version
 
 If you got that working, nice, you have Anchor!!
 
-We'll also use Anchor's npm module and Solana Web3 JS — these both will help us connect our web app to our Solana program! 
-
-```bash
-npm install @project-serum/anchor @solana/web3.js
-```
-
 ### 🏃‍♂️ Create a test project and run it.
 
 Okay, we're *nearly done* haha. The last thing we need to do to finalize installation is to actually run a Solana program locally and make sure it actually works.
@@ -176,6 +170,12 @@ cd myepicproject
 
 If you are running the project locally and don't have yarn installed `anchor init` will fail. To solve this you can install yarn by running `npm install --global yarn
 `.
+
+We'll also use Anchor's npm module and Solana Web3 JS — these both will help us connect our web app to our Solana program! 
+
+```bash
+npm install @project-serum/anchor @solana/web3.js
+```
 
 ### 🔑 Create a local keypair.
 
