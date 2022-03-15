@@ -4,7 +4,7 @@ You've made it — hell yeah! Welcome :). My name is [Farza](https://twitter.com
 
 This project is for devs that want to better understand what the heck a DAO is by just building one themselves. 
 
-All you really need to know going into this is **some terminal skills, some javascript, and some React.js**. You'll pick up the rest along the way. No Solidity needed. We'll be using this fancy tool called [thirdweb](https://thirdweb.com/) which lets us work with smart contracts using just javascript. 
+All you really need to know going into this is **some terminal skills, some javascript, and some React.js**. You'll pick up the rest along the way. No Solidity needed. We'll be using this fancy tool called [thirdweb](https://v1.thirdweb.com/dashboard?utm_source=buildspace) which lets us work with smart contracts using just javascript. 
 
 Few action items for you before moving on:
 
