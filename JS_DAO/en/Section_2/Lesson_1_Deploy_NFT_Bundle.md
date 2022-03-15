@@ -12,7 +12,7 @@ Once you deploy the contract, you can interact with those contracts from your fr
 
 I can't stress how easy it is to create a smart contract with thirdweb compared to writing your own Solidity code, it will feel like interacting with a normal backend library. Lets get into it:
 
-Head over to the thirdweb dashboard [here](https://thirdweb.com/start?utm_source=buildspace). Click "**Let's get started**". Connect your wallet. Select your network (**Rinkeby**).
+Head over to the thirdweb dashboard [here](https://v1.thirdweb.com/dashboard?utm_source=buildspace). Click "**Let's get started**". Connect your wallet. Select your network (**Rinkeby**).
 
 Create your first project and give it a name like "My DAO" or something. When you click "Create" you'll see it prompts Metamask and has you pay a gas fee on Rinkeby. Why? 
 
