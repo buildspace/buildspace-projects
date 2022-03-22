@@ -223,7 +223,7 @@ useEffect(() => {
     // Call Solana Program
 
     // Set state
-    setGifList(TEST_GIFS);
+    set(TEST_GIFS);
   }
 }, [walletAddress]);
 ```
