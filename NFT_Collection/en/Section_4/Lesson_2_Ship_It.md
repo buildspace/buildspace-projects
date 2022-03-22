@@ -41,13 +41,44 @@ PRIVATE_KEY=BLAHBLAH
 
 Remember the change we made to `.gitignore` earlier? You can now revert it by removing the `hardhat.config.js` line, because now that file only contains variables representing your keys, and not your actual key info.
 
-🌎 A note on IPFS
+🌎 Upgrade your immortal NFTs with IPFS
 ----------------
+Think about where your NFT assets are actually stored right now. They're on the Ethereum blockchain! This is awesome for lots of reasons, but it has a few issues. Mainly, it's **very expensive** because of how much storage costs on Ethereum. Contracts also have a length limit, so if you make a really fancy animated SVG that's very long, it won't fit in a contract. 
+
+Luckily we have something called [IPFS](https://en.wikipedia.org/wiki/InterPlanetary_File_System), which is essentially a distributed file system. Today — you might use something like S3 or GCP Storage. But, in this case we can simply trust IPFS which is run by strangers who are using the network. Give [this](https://decrypt.co/resources/how-to-use-ipfs-the-backbone-of-web3) a quick read when you can! Covers a lot of good base knowledge :). Really, all you need to know is that IPFS is the industry standard for storing NFT assets. It's immutable, permanent, and decentralized. 
+
+Using it is pretty simple. All you need to do is upload your NFTs to IPFS and then use the unique content ID hash it gives you back in your contract instead of the Imgur URL or SVG data.
+
+First, you'll need to upload your images to a service that specializes in "[pinning](https://docs.ipfs.io/how-to/pin-files/)" — which means your file will essentially be cached so its easily retrievable. I like using [**Pinata**](https://www.pinata.cloud/?utm_source=buildspace) as my pinning service — they give you 1 GB of storage for free, which is enough for 1000s of assets. Just make an account, upload your character's image files through their UI, and that's it! 
+
+![Untitled](https://i.imgur.com/lTpmIIj.png)
+
+Go ahead and copy the files "CID". This is the files content address on IPFS! What's cool now is we can create this link:
+
+```javascript
+https://cloudflare-ipfs.com/ipfs/INSERT_YOUR_CID_HERE
+```
+
+If you are using **Brave Browser** (which has IPFS built in) you can just type this paste into the URL:
+
+```javascript
+ipfs://INSERT_YOUR_CID_HERE
+```
+
+And that'll actually start an IPFS node on your local machine and retrieve the file! If you try to do it on something like Chrome it just does a Google search lol. Instead you'll have to use the `cloudflare-ipfs` link.
+
+![Untitled](https://i.imgur.com/tWHtVbO.png)
+
+From here, we just need to update our `tokenURI` function to prepend `ipfs://`. Basically, OpenSea likes when our image URI is structured like this: `ipfs://INSERT_YOUR_CID_HERE`. 
+
+Here's what your `_setTokenURI` function should look like:
+```javascript
+_setTokenURI(newItemId, "ipfs://INSERT_YOUR_CID_HERE")
+```
+
+And now you know how to use IPFS! There's a catch in our scenario though - we're dynamically generating the SVG code on-chain. You can't upload assets to IPFS from inside contracts, so you'll have to generate the SVGs in your browser or a dedicated server, upload them to IPFS, and pass the CIDs into your mint function as a string. 
+
 I'm just going to leave this for you to explore, but, sometimes you won't want to store your NFTs on-chain. Perhaps you want to have a video as an NFT. Doing it on-chain would be wildly expensive due to gas fees.
-
-In this case, you could use something called [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/) which is sorta like a decentralized data storage system that no one actually owns. It's run by the people.
-
-It's actually pretty easy to implement with a service called [Pinata](https://www.pinata.cloud/).
 
 Remember, an NFT is just a JSON file at the end of the day that links to some metadata. You can put this JSON file up on IPFS. You can also put the NFT data itself (ex an image, video, etc) up on IPFS. Don't overcomplicate it :).
 
