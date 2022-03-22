@@ -131,23 +131,23 @@ const getCandyMachineState = async () => {
   const itemsAvailable = candyMachine.data.itemsAvailable.toNumber();
   const itemsRedeemed = candyMachine.itemsRedeemed.toNumber();
   const itemsRemaining = itemsAvailable - itemsRedeemed;
-  const goLiveData = candyMachine.data.goLiveDate.toNumber();
+  const goLiveDate = candyMachine.data.goLiveDate.toNumber();
   const presale =
     candyMachine.data.whitelistMintSettings &&
     candyMachine.data.whitelistMintSettings.presale &&
     (!candyMachine.data.goLiveDate ||
-      candyMachine.data.goLiveDate.toNumber() > new Date().getTime() / 1000);
+      goLiveDate > new Date().getTime() / 1000);
   
   // We will be using this later in our UI so let's generate this now
   const goLiveDateTimeString = `${new Date(
-    goLiveData * 1000
-  ).toGMTString()}`
+    goLiveDate * 1000
+  ).toGMTString()}`;
 
   console.log({
     itemsAvailable,
     itemsRedeemed,
     itemsRemaining,
-    goLiveData,
+    goLiveDate,
     goLiveDateTimeString,
     presale,
   });
@@ -170,7 +170,7 @@ You know how you create a `DB` connection in web2? Well — here we're doing som
 
 At the end of the day, our candy machine is just a Solana program that lives on Metaplex! This means we can interact with it exactly like we would with any program that lives on Solana.
 
-Once we create our `Program` object, we fetch it's metadata based on our candy machine id.
+Once we create our `Program` object, we fetch its metadata based on our candy machine id.
 
 This line calls the fetch method on our candy machine program and returns `itemsAvailable` , `itemsRedeemed` , `itemsRemaining` , and `goLiveDate`.
 
@@ -184,7 +184,7 @@ const candyMachine = await program.account.candyMachine.fetch(
 const itemsAvailable = candyMachine.data.itemsAvailable.toNumber();
 const itemsRedeemed = candyMachine.itemsRedeemed.toNumber();
 const itemsRemaining = itemsAvailable - itemsRedeemed;
-const goLiveData = candyMachine.data.goLiveDate.toNumber();
+const goLiveDate = candyMachine.data.goLiveDate.toNumber();
 const presale =
   candyMachine.data.whitelistMintSettings &&
   candyMachine.data.whitelistMintSettings.presale &&
@@ -192,7 +192,7 @@ const presale =
     candyMachine.data.goLiveDate.toNumber() > new Date().getTime() / 1000);
 ```
 
-When we do `fetch` here, we're **actually hitting the Solana Devnet** to retrieve this data. It's looks a lot like we're hitting an API, but, we're actually hitting the blockchain!
+When we do `fetch` here, we're **actually hitting the Solana Devnet** to retrieve this data. It looks a lot like we're hitting an API, but, we're actually hitting the blockchain!
 
 ### 🧠 **Render the CandyMachine component.**
 
@@ -250,9 +250,9 @@ You literally just fetched data from the Solana Devnet. If you haven't celebrate
 
 ```jsx
 const goLiveDateTimeString = `${new Date(
-  goLiveData * 1000
+  goLiveDate * 1000
 ).toLocaleDateString()} @ ${new Date(
-  goLiveData * 1000
+  goLiveDate * 1000
 ).toLocaleTimeString()}`;
 ```
 
@@ -285,10 +285,10 @@ const CandyMachine({walletAddress}) => {
     const itemsAvailable = candyMachine.data.itemsAvailable.toNumber();
     const itemsRedeemed = candyMachine.itemsRedeemed.toNumber();
     const itemsRemaining = itemsAvailable - itemsRedeemed;
-    const goLiveData = candyMachine.data.goLiveDate.toNumber();
+    const goLiveDate = candyMachine.data.goLiveDate.toNumber();
   
     const goLiveDateTimeString = `${new Date(
-      goLiveData * 1000
+      goLiveDate * 1000
     ).toGMTString()}`
   
     // Add this data to your state to render
@@ -299,7 +299,7 @@ const CandyMachine({walletAddress}) => {
         itemsAvailable,
         itemsRedeemed,
         itemsRemaining,
-        goLiveData,
+        goLiveDate,
         goLiveDateTimeString,
         isSoldOut: itemsRemaining === 0,
         isActive:
@@ -326,7 +326,7 @@ const CandyMachine({walletAddress}) => {
       itemsAvailable,
       itemsRedeemed,
       itemsRemaining,
-      goLiveData,
+      goLiveDate,
       goLiveDateTimeString,
     });
   };
