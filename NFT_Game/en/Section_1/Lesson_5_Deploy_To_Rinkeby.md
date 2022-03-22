@@ -2,7 +2,7 @@
 
 When we use `run.js`, it's just us working locally.
 
-The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to to **view our NFT online** and we are a step closer to getting this to **real users.**
+The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to **view our NFT online** and we are a step closer to getting this to **real users.**
 
 ### 🦊 Metamask
 
@@ -51,7 +51,7 @@ This is awesome because we can test our application in a real-world scenario whe
 1. Broadcast our transaction
 2. Wait for it to be picked up by actual miners
 3. Wait for it to be mined
-4. Wait for it be broadcasted back to the blockchain telling all the other miners to update their copies
+4. Wait for it to be broadcasted back to the blockchain telling all the other miners to update their copies
 
 ### **🤑 Getting some fake $**
 
@@ -74,6 +74,8 @@ You have a few faucets to choose from:
 | Chainlink | [https://faucets.chain.link/rinkeby](https://faucets.chain.link/rinkeby)
 
 | Rinkeby | [https://faucet.rinkeby.io/](https://faucet.rinkeby.io/)
+
+| Alchemy | [https://www.rinkebyfaucet.com/](https://www.rinkebyfaucet.com/)
 
 Note: For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link **again** to request funds. The buildspace faucet is pretty reliable as well, just make sure Metamask is on the Rinkeby network :).
 
