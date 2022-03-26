@@ -2,18 +2,17 @@
 
 It would be nice for all the members of our DAO to easily see all the people in the DAO who hold tokens along with how many tokens they hold. To do that, we’ll need to actually call our smart contracts from our client and retrieve that data.
 
-Let’s do it! Head over to `App.jsx`. At the top, import Ethers:
+Let’s do it! Head over to `App.jsx`. At the top, add the `useToken` hook to the list of `@thirdweb-dev/react` imports:
 
 ```jsx
-import { ethers } from "ethers";
+import { useAddress, useMetamask, useEditionDrop, useToken } from '@thirdweb-dev/react';
 ```
 
-Then under `bundleDropModule`, add in your `tokenModule`.
+Then under `editionDrop`, add in your `token`.
 
 ```jsx
-const tokenModule = sdk.getTokenModule(
-  "INSERT_TOKEN_MODULE_ADDRESS"
-);
+// Initialize our token contract
+const token = useToken("INSERT_TOKEN_ADDRESS")
 ```
 
 We need this so we can interact with both of our ERC-1155 contract and our ERC-20 contract. From the ERC-1155, we’ll get all our members' addresses. From the ERC-20, we’ll retrieve the # of tokens each member has.
@@ -22,7 +21,7 @@ Next, add the following code under `const [isClaiming, setIsClaiming] = useState
 
 ```jsx
 // Holds the amount of token each member has in state.
-const [memberTokenAmounts, setMemberTokenAmounts] = useState({});
+const [memberTokenAmounts, setMemberTokenAmounts] = useState([]);
 // The array holding all of our members addresses.
 const [memberAddresses, setMemberAddresses] = useState([]);
 
@@ -32,50 +31,56 @@ const shortenAddress = (str) => {
 };
 
 // This useEffect grabs all the addresses of our members holding our NFT.
-useEffect(async () => {
+useEffect(() => {
   if (!hasClaimedNFT) {
     return;
   }
-  
+
   // Just like we did in the 7-airdrop-token.js file! Grab the users who hold our NFT
   // with tokenId 0.
-  try {
-    const memberAddresses = await bundleDropModule.getAllClaimerAddresses("0");
-    setMemberAddresses(memberAddresses);
-    console.log("🚀 Members addresses", memberAddresses);
-  } catch (error) {
-    console.error("failed to get member list", error);
-  }
-}, [hasClaimedNFT]);
+  const getAllAddresses = async () => {
+    try {
+      const memberAddresses = await editionDrop.history.getAllClaimerAddresses(0);
+      setMemberAddresses(memberAddresses);
+      console.log("🚀 Members addresses", memberAddresses);
+    } catch (error) {
+      console.error("failed to get member list", error);
+    }
+
+  };
+  getAllAddresses();
+}, [hasClaimedNFT, editionDrop.history]);
 
 // This useEffect grabs the # of token each member holds.
-useEffect(async () => {
+useEffect(() => {
   if (!hasClaimedNFT) {
     return;
   }
 
-  // Grab all the balances.
-  try {
-    const amounts = await tokenModule.getAllHolderBalances();
-    setMemberTokenAmounts(amounts);
-    console.log("👜 Amounts", amounts);
-  } catch (error) {
-    console.error("failed to get token amounts", error);
-  }
-}, [hasClaimedNFT]);
+  const getAllBalances = async () => {
+    try {
+      const amounts = await token.history.getAllHolderBalances();
+      setMemberTokenAmounts(amounts);
+      console.log("👜 Amounts", amounts);
+    } catch (error) {
+      console.error("failed to get member balances", error);
+    }
+  };
+  getAllBalances();
+}, [hasClaimedNFT, token.history]);
 
 // Now, we combine the memberAddresses and memberTokenAmounts into a single array
 const memberList = useMemo(() => {
   return memberAddresses.map((address) => {
+    // We're checking if we are finding the address in the memberTokenAmounts array.
+    // If we are, we'll return the amount of token the user has.
+    // Otherwise, return 0.
+    const member = memberTokenAmounts?.find(({ holder }) => holder === address);
+
     return {
       address,
-      tokenAmount: ethers.utils.formatUnits(
-        // If the address isn't in memberTokenAmounts, it means they don't
-        // hold any of our token.
-        memberTokenAmounts[address] || 0,
-        18,
-      ),
-    };
+      tokenAmount: member?.balance.displayValue || "0",
+    }
   });
 }, [memberAddresses, memberTokenAmounts]);
 ```
