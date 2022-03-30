@@ -300,34 +300,34 @@ Finally, we'll want to call this function when someone clicks the "Mint NFT" but
 
 ```jsx
 const renderInputForm = () => {
-	return (
-		<div className="form-container">
-			<div className="first-row">
-				<input
-					type="text"
-					value={domain}
-					placeholder="domain"
-					onChange={e => setDomain(e.target.value)}
-				/>
-				<p className='tld'> {tld} </p>
-			</div>
+  return (
+    <div className="form-container">
+      <div className="first-row">
+        <input
+          type="text"
+          value={domain}
+          placeholder="domain"
+          onChange={e => setDomain(e.target.value)}
+        />
+        <p className='tld'> {tld} </p>
+      </div>
 
-			<input
-				type="text"
-				value={record}
-				placeholder='whats ur ninja power?'
-				onChange={e => setRecord(e.target.value)}
-			/>
+      <input
+        type="text"
+        value={record}
+        placeholder='whats ur ninja power?'
+        onChange={e => setRecord(e.target.value)}
+      />
 
-			<div className="button-container">
-				{/* Call the mintDomain function when the button is clicked*/}
-				<button className='cta-button mint-button' onClick={mintDomain}>
-					Mint
-				</button> 
-			</div>
+      <div className="button-container">
+        {/* Call the mintDomain function when the button is clicked*/}
+        <button className='cta-button mint-button' onClick={mintDomain}>
+          Mint
+        </button> 
+      </div>
 
-		</div>
-	);
+    </div>
+  );
 }
 ```
 
