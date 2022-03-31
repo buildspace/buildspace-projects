@@ -199,7 +199,7 @@ The next chunk of code is kinda massive lol. It deals with actually rendering th
 
 If you’re familiar with React/JS, you can easily look through it and figure out how it works yourself. If you don’t know React/JS super well, don’t worry. Just copy-paste it. No shame there!
 
-Go ahead and replace the contents of `if (hasClaimedNFT) { }` with the code [here](https://github.com/buildspace/buildspace-dao-final/blob/d94cadc73703c09561fda946a338237eee7f9bee/src/App.jsx#L205).
+Go ahead and replace the contents of `if (hasClaimedNFT) { }` with the code [here](https://github.com/buildspace/buildspace-dao-final/blob/main/src/App.jsx#L205).
 
 When you check out your web app, you’ll see something like:
 

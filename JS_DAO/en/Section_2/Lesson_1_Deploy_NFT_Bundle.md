@@ -214,7 +214,7 @@ Okay, what just happened is pretty freaking epic. Two things happened:
 
 ![Untitled](https://i.imgur.com/suqHbB4.png)
 
-Pretty epic. A deployed, custom contract with just javascript. You can see the actual smart contract code thirdweb uses [here](https://github.com/thirdweb-dev/contracts/blob/v1/contracts/LazyNFT.sol).
+Pretty epic. A deployed, custom contract with just javascript. You can see the actual smart contract code thirdweb uses [here](https://github.com/thirdweb-dev/contracts/blob/main/contracts/drop/DropERC1155.sol).
 
 **The other thing we did here is thirdweb automatically uploaded and pinned our collection's image to IPFS.** You'll see a link that starts with `https://gateway.ipfscdn.io` printed out. If you paste that into your browser, you'll see your NFT's image being retrieved from IPFS via CloudFlare!
 
