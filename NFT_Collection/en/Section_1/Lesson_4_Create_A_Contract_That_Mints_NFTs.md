@@ -98,7 +98,7 @@ You can customize this, but, almost every NFT has a name, description, and a lin
 
 This is all part of the `ERC721` standards and it allows people to build websites on top of NFT data. For example, [OpenSea](https://opensea.io/assets) is a marketplace for NFTs. And, every NFT on OpenSea follows the `ERC721` metadata standard which makes it easy for people to buy/sell NFTs. Imagine if everyone followed their own NFT standards and structured their metadata however they wanted, it'd be chaos!
 
-We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [this](https://jsonkeeper.com/) website. This website is just an easy place for people to host JSON data and we'll be using it to keep our NFT data for now. Once you click "Save" you'll get a link to the JSON file. (For example, mines is [`https://jsonkeeper.com/b/RUUS`](https://jsonkeeper.com/b/RUUS)). Be sure to test your link out and be sure it all looks good!
+We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [this](https://jsonkeeper.com/) website. This website is just an easy place for people to host JSON data and we'll be using it to keep our NFT data for now. Once you click "Save" you'll get a link to the JSON file. (For example, mine is [`https://jsonkeeper.com/b/RUUS`](https://jsonkeeper.com/b/RUUS)). Be sure to test your link out and be sure it all looks good!
 
 **Note: I'd love for you to create your own JSON metadata instead of just copying mine. Use your own image, name, and description. Maybe you want your NFT to an image of your fav anime character, fav band, whatever!! Make it custom. Don't worry, we'll be able to change this in the future!**
 
