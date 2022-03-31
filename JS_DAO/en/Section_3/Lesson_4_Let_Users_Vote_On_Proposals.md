@@ -201,6 +201,11 @@ If you’re familiar with React/JS, you can easily look through it and figure ou
 
 Go ahead and replace the contents of `if (hasClaimedNFT) { }` with the code [here](https://github.com/buildspace/buildspace-dao-final/blob/main/src/App.jsx#L205).
 
+Add the zero address import after your exising imports:
+```jsx
+import { AddressZero } from "@ethersproject/constants";
+```
+
 When you check out your web app, you’ll see something like:
 
 ![Untitled](https://i.imgur.com/Q5bzFWb.png)
