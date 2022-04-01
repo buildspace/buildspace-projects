@@ -66,7 +66,7 @@ You'll see I still have the `transfer` role in conjunction with `AddressZero`, `
 First, let's import one last hook `useNetwork` at the top of `App.jsx` to recognize a connection outside of the Rinkeby network. Also, we're importing `ChainId` from the thirdweb SDK to get Rinkeby's chain ID.
 
 ```jsx
-import { useAddress, useMetamask, useEditionDrop, useToken, useNetwork } from '@thirdweb-dev/react';
+import { useAddress, useMetamask, useEditionDrop, useToken, useVote, useNetwork } from '@thirdweb-dev/react';
 import { ChainId } from '@thirdweb-dev/sdk'
 ```
 
