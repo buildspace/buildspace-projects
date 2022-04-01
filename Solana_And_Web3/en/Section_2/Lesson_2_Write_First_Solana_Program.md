@@ -25,7 +25,7 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod myepicproject {
   use super::*;
-  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result<()> {
     Ok(())
   }
 }
@@ -59,13 +59,13 @@ They're called [macros](http://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404
 ```rust
 pub mod myepicproject {
   use super::*;
-  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result<()> {
     Ok(())
   }
 }
 ```
 
-`pub mod` tells us that this is a Rust "[module](https://stevedonovan.github.io/rust-gentle-intro/4-modules.html)" which is an easy way to define a collection of functions and variables — kinda like a class if you know what that is. And we call this module `myepicproject`. Within here we write a function `start_stuff_off` which takes something called a `Context` and outputs a `ProgramResult`. You can see this function doesn't do anything except call `Ok(())` which is just a `Result` type you can read about [here](https://doc.rust-lang.org/std/result/).
+`pub mod` tells us that this is a Rust "[module](https://stevedonovan.github.io/rust-gentle-intro/4-modules.html)" which is an easy way to define a collection of functions and variables — kinda like a class if you know what that is. And we call this module `myepicproject`. Within here we write a function `start_stuff_off` which takes something called a `Context` and outputs a `Result`. You can see this function doesn't do anything except call `Ok(())` which is just a `Result` type you can read about [here](https://doc.rust-lang.org/std/result/).
 
 So really, this thing `start_stuff_off` is just a function that someone else can call now. It doesn't do anything right now, but, we'll change that :).
 
