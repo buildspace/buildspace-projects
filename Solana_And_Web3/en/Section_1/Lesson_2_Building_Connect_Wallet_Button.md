@@ -1,3 +1,5 @@
+### 👛 Installing Phantom Wallet Extension
+
 For this project we are going to be using a wallet called [Phantom](https://phantom.app/).
 
 This is one of the top wallet extensions for Solana and is actually backed by Solana as well (so you know it's legit).
@@ -283,7 +285,7 @@ The biggest thing to understand here are **render methods.**
 
 *Note: if you're already familiar w/ React and render methods feel free to blaze through this section.*
 
-These are ****just functions that return some UI code. We only want our "Connect to Wallet" button to render when someone hasn't actually connected their wallet to our app. 
+These are **just functions that return some UI code.** We only want our "Connect to Wallet" button to render when someone hasn't actually connected their wallet to our app. 
 
 You may be thinking now - "*how does our app control when to render or not render this button?".*
 

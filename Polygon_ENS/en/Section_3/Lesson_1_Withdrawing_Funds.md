@@ -17,10 +17,10 @@ function isOwner() public view returns (bool) {
 }
 
 function withdraw() public onlyOwner {
-	uint amount = address(this).balance;
-	
-	(bool success, ) = msg.sender.call{value: amount}("");
-	require(success, "Failed to withdraw Matic");
+  uint amount = address(this).balance;
+  
+  (bool success, ) = msg.sender.call{value: amount}("");
+  require(success, "Failed to withdraw Matic");
 } 
 ```
 
