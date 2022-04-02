@@ -237,7 +237,7 @@ Once we get a response from our contract, we need to check if there is indeed a 
 
 With that, let's set our `characterNFT` state with this data so we can use it in our app! 
 
-It's now time to address that `transformCharacterData` method we are calling. Since we will be getting character data in other spots in our app, why would we want to write the some code over and over again? Let's get a little fancy with it 😎. 
+It's now time to address that `transformCharacterData` method we are calling. Since we will be getting character data in other spots in our app, why would we want to write the same code over and over again? Let's get a little fancy with it 😎. 
 
 We can get rid of the undefined error by heading to the `constants.js` file that we created to hold our contract address and add the following:
 
