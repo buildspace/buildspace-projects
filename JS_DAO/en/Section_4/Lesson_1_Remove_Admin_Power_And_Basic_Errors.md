@@ -76,10 +76,10 @@ Then, define our `useNetwork` hook under our `useAddress` hook:
 const network = useNetwork();
 ```
 
-Next, add the following in your `App.jsx` file right under the `mintNft` function:
+Next, add the following in your `App.jsx` file right under the `if (!address)` check:
 
 ```jsx
-if (network?.[0].data.chain.id !== ChainId.Rinkeby) {
+if (network?.[0]?.data?.chain?.id !== ChainId.Rinkeby) {
   return (
     <div className="unsupported-network">
       <h2>Please connect to Rinkeby</h2>
