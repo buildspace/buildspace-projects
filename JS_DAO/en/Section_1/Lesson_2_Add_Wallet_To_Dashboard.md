@@ -12,36 +12,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-// Import ThirdWeb
-import { ThirdwebWeb3Provider } from '@3rdweb/hooks';
+// Import thirdweb provider and Rinkeby ChainId
+import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
 
-// Include what chains you wanna support.
-// 4 = Rinkeby.
-const supportedChainIds = [4];
+// This is the chainId your dApp will work on.
+const activeChainId = ChainId.Rinkeby;
 
-// Include what type of wallet you want to support.
-// In this case, we support Metamask which is an "injected wallet".
-const connectors = {
-  injected: {},
-};
-
-// Finally, wrap App with ThirdwebWeb3Provider.
+// Wrap your app with the thirdweb provider
 ReactDOM.render(
   <React.StrictMode>
-    <ThirdwebWeb3Provider
-      connectors={connectors}
-      supportedChainIds={supportedChainIds}
-    >
+    <ThirdwebProvider desiredChainId={activeChainId}>
       <App />
-    </ThirdwebWeb3Provider>
+    </ThirdwebProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 ```
 
-Pretty simple. We're importing thirdweb and then specifying the `chainId` of the chain we're working on, which is Rinkeby! Feel free to check out all the ids [here](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/). Then, under `connectors` we are specifying what type of wallet we are supporting. There are many types of wallets. Mobile wallets, injected wallets, hardware wallets, etc. thirdweb makes it easy to support all of them in a few lines. In this case, we just support `injected` wallets which allows us to support browser extension-based wallets like Metamask.
+Pretty simple. We're importing thirdweb and then specifying the `chainId` of the chain we're working on, which is Rinkeby!.
 
-Finally, we're wrapping everything with `<ThirdwebWeb3Provider>`, this provider holds the user's authenticated wallet data (if they've connected to our website before) and passes it over to `App`.
+Then we're wrapping everything with `<ThirdwebProvider>`, this provider holds the user's authenticated wallet data (if they've connected to our website before) and passes it over to `App`.
 
 *Note: If you've worked on dapps before, make sure you disconnect your wallet from [https://localhost:3000](https://localhost:3000) on Metamask if you have ever connected it before.*
 
@@ -52,15 +42,13 @@ If you head over to your web app, you'll see a blank purple page. Let's add some
 Head over to `App.jsx`. Add the following code.
 
 ```jsx
-import { useEffect, useMemo, useState } from "react";
-
-// import thirdweb
-import { useWeb3 } from "@3rdweb/hooks";
+import { useAddress, useMetamask } from '@thirdweb-dev/react';
 
 const App = () => {
-  // Use the connectWallet hook thirdweb gives us.
-  const { connectWallet, address, error, provider } = useWeb3();
-  console.log("👋 Address:", address)
+  // Use the hooks thirdweb give us.
+  const address = useAddress();
+  const connectWithMetamask = useMetamask();
+  console.log("👋 Address:", address);
 
   // This is the case where the user hasn't connected their wallet
   // to your web app. Let them call connectWallet.
@@ -68,20 +56,20 @@ const App = () => {
     return (
       <div className="landing">
         <h1>Welcome to NarutoDAO</h1>
-        <button onClick={() => connectWallet("injected")} className="btn-hero">
+        <button onClick={connectWithMetamask} className="btn-hero">
           Connect your wallet
         </button>
       </div>
     );
   }
-  
+
   // This is the case where we have the user's address
   // which means they've connected their wallet to our site!
   return (
     <div className="landing">
       <h1>👀 wallet connected, now what!</h1>
     </div>);
-};
+}
 
 export default App;
 ```

@@ -3,7 +3,7 @@
 Now that we got all our scripts good to go and the basics down, we're going to mint some NFTs! Here's what my updated `MyEpicNFT.sol` looks like:
 
 ```solidity
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.1;
 
 // We first import some OpenZeppelin Contracts.
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -293,7 +293,7 @@ We'll need to change our `hardhat.config.js` file. You can find this in the ro
 require('@nomiclabs/hardhat-waffle');
 
 module.exports = {
-  solidity: '0.8.0',
+  solidity: '0.8.1',
   networks: {
     rinkeby: {
       url: 'YOUR_ALCHEMY_API_URL',

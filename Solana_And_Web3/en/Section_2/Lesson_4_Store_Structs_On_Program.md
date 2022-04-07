@@ -16,14 +16,14 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod myepicproject {
   use super::*;
-  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs = 0;
     Ok(())
   }
 
   // The function now accepts a gif_link param from the user. We also reference the user from the Context
-  pub fn add_gif(ctx: Context<AddGif>, gif_link: String) -> ProgramResult {
+  pub fn add_gif(ctx: Context<AddGif>, gif_link: String) -> Result <()> {
     let base_account = &mut ctx.accounts.base_account;
     let user = &mut ctx.accounts.user;
 

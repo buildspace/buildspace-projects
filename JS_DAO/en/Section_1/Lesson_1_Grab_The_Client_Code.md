@@ -8,15 +8,13 @@ We'll be using this thing called [Replit](https://replit.com/~)! It is a browse
 
 Make an account on Replit before moving on.
 
-I've already created a basic react project that you can **fork** on Replit. **Just go [here](https://replit.com/@NachoIacovino/Buildspace-DAO-Starter), and near the right you'll see the "Fork" button.** Be sure you're logged in, then click this.
+I've already created a basic react project that you can **fork** on Replit. **Just go [here](https://replit.com/@NachoIacovino/buildspace-dao-starter-v2), and near the right you'll see the "Fork" button.** Be sure you're logged in, then click this.
 
 You'll magically clone my repo and full IDE in your browser to work with the code. Once it stops loading and shows you some code. Click "run" at the top and you're good to go.
 
 Here’s a video I made covering Replit in a past project:
 
-[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
-
-*Note: At the end I mention we offer free pro Replit accounts, currently, we’re all out!!*
+[Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)
 
 ### 👩‍💻 Want to work locally? Get the code.
 
