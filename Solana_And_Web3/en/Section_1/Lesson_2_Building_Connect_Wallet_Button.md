@@ -432,7 +432,7 @@ I think this is pretty self explanatory. We just connected our Phantom Wallet an
 {!walletAddress && renderNotConnectedContainer()}
 ```
 
-This is a pretty cool piece of code. We are telling React to only call this render method if there is no `walletAddress` set in our state. This is called **conditional rendering** and it will help us keep track of the different states we want to show in our app!
+This is a pretty cool piece of code. We are telling React to only call this render method if there is no `walletAddress` set in our state. This is called [**conditional rendering**](https://reactjs.org/docs/conditional-rendering.html) and it will help us keep track of the different states we want to show in our app!
 
 ```jsx
 {/* This was solely added for some styling fanciness */}
