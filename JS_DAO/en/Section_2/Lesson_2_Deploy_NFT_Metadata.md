@@ -94,7 +94,7 @@ const editionDrop = sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
     }]
 
     await editionDrop.claimConditions.set("0", claimConditions);
-    console.log("✅ Sucessfully set claim condition!");
+    console.log("✅ Successfully set claim condition!");
   } catch (error) {
     console.error("Failed to set claim condition", error);
   }
@@ -113,7 +113,7 @@ After running `node scripts/4-set-claim-condition.js` here's what I get:
 
 ```
 👋 SDK initialized by address: 0xF11D6862e655b5F4e8f62E00471261D2f9c7E380
-✅ Sucessfully set claim condition!
+✅ Successfully set claim condition!
 ```
 
 Boom! We've successfully interacted w/ our deployed smart contract and have given our NFT certain rules it must follow, hell yea! If you copy-paste your bundle drop address printed out there and search it on `https://rinkeby.etherscan.io/`, you'll see proof right there that we interact w/ the contract!
