@@ -25,7 +25,7 @@ From there, below our `console.log("👋 Address:", address);` we're going to ad
   const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
 
   useEffect(() => {
-    // If they don't have an connected wallet, exit!
+    // If they don't have a connected wallet, exit!
     if (!address) {
       return;
     }
