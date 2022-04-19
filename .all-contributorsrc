@@ -2236,6 +2236,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "timmywheels",
+      "name": "Tim Wheeler",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17229444?v=4",
+      "profile": "https://timwheeler.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
