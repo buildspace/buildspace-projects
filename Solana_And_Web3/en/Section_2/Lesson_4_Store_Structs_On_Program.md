@@ -108,7 +108,7 @@ const { SystemProgram } = anchor.web3;
 const main = async() => {
   console.log("🚀 Starting test...")
 
-  const provider = anchor.Provider.env();
+  const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
   const program = anchor.workspace.Myepicproject;

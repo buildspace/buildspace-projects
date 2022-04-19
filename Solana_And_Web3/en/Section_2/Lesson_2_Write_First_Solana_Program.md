@@ -90,7 +90,7 @@ const anchor = require('@project-serum/anchor');
 const main = async() => {
   console.log("🚀 Starting test...")
 
-  anchor.setProvider(anchor.Provider.env());
+  anchor.setProvider(anchor.AnchorProvider.env());
   const program = anchor.workspace.Myepicproject;
   const tx = await program.rpc.startStuffOff();
 
@@ -115,7 +115,7 @@ We can step line by line here. First off, the `runMain` thing is just some javas
 The real magic happens here:
 
 ```javascript
-anchor.setProvider(anchor.Provider.env());
+anchor.setProvider(anchor.AnchorProvider.env());
 const program = anchor.workspace.Myepicproject;
 const tx = await program.rpc.startStuffOff();
 ```
