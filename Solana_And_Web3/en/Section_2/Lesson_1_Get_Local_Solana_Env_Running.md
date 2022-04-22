@@ -67,7 +67,7 @@ Again, the installation steps are pretty straight forward [here](https://docs.so
 
 *Note: Depending on your system — once you install Solana, it may output a message like "Please update your PATH environment variable" and it'll give you a line to copy and run. Go ahead and copy + run that command so your PATH gets setup properly.*
 
-Once you're done installing, run this to make sure stuff is working: 
+Once you're done installing, run this to make sure stuff is working:
 
 ```bash
 solana --version
@@ -115,13 +115,13 @@ dyld: Library not loaded: /usr/local/opt/openssl@1.1/lib/libssl.1.1.dylib
   Reason: image not found
 ```
 
-Now, go ahead and CONTROL + C to stop the validator. **We're never going to actually use `solana-test-validator` manually ourselves again.** The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;). 
+Now, go ahead and CONTROL + C to stop the validator. **We're never going to actually use `solana-test-validator` manually ourselves again.** The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;).
 
 ### ☕️ Install Node, NPM, and Mocha
 
 Pretty solid chance you already have Node and NPM. When I do `node --version` I get `v16.0.0`. The minimum version is `v11.0.0`. If you don't have node and NPM, get it [here](https://nodejs.org/en/download/).
 
-After that, be sure to install this thing called Mocha. It's a nice little testing framework to help us test our Solana programs. 
+After that, be sure to install this thing called Mocha. It's a nice little testing framework to help us test our Solana programs.
 
 ```bash
 npm install -g mocha
@@ -155,7 +155,7 @@ anchor --version
 
 If you got that working, nice, you have Anchor!!
 
-We'll also use Anchor's npm module and Solana Web3 JS — these both will help us connect our web app to our Solana program! 
+We'll also use Anchor's npm module and Solana Web3 JS — these both will help us connect our web app to our Solana program!
 
 ```bash
 npm install @project-serum/anchor @solana/web3.js
@@ -216,6 +216,8 @@ This may take a while the first time you run it! As long as you get the green wo
 ![Untitled](https://i.imgur.com/V35KchA.png)
 
 **Note: If you receive the message `node: --dns-result-order= is not allowed in NODE_OPTIONS` this mean you are on an older version of Node and technically, this didn't pass! Since I tested this all with Node v16.13.0 I would highly suggest you just upgrade to this version. Upgrading node is a pain, learn more here. I like using [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/).**
+
+**Note: If you get this message `Error: Your configured rpc port: 8899 is already in use` and you do not have application which is listenning to port 8899, try to run `solana-test-validator`, and in the next terminal tab `anchor test --skip-local-validator`. It should run fine.**
 
 **Congrats you've successfully set up your Solana environment :).** It's been quite the journey, but, we made it fam.
 
