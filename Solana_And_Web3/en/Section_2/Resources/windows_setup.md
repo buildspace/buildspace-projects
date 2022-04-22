@@ -225,7 +225,7 @@ solana address
 
 ### 🥳 Let's run our program.
 
-When we did `anchor init` it create a basic Solana program for us. What we want to do now is:
+When we did `anchor init` it created a basic Solana program for us. What we want to do now is:
 
 1. Compile our program.
 2. Spin up `solana-test-validator` and deploy the program to our **local** Solana network w/ our wallet. This is kinda like deploying our local server w/ new code.
