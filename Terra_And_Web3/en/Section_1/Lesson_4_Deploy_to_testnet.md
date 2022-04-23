@@ -90,6 +90,8 @@ instantiating contract with code id: 65532... done
           value: terra1xpx88vypkmkvc403slclf7wnlq4h4ch6sjvq68
 ```
 
+**Note:** If you get "insufficient funds", you'll need to swap some LUNA tokens to UST. You can do this within the Terra station wallet. Just click the extension icon and click the swap button on the LUNA token.
+
 Once you do, head over to the [Terra Testnet Explorer](https://finder.terra.money/testnet/) and paste in the contract address. 
 
 ![](https://hackmd.io/_uploads/r1a0geREc.png)
