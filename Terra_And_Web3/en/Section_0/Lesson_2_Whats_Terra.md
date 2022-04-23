@@ -20,7 +20,7 @@ Here's the TL;DR of everything you might care about:
 * There are currently 15 stablecoins available 
 * Anyone can propose to mint new stablecoins 
 
-Here's what a swap page looks like. It's awesome when you don't have to do maths in your head to figure out much you're paying for has.
+Here's what a swap page looks like. It's awesome when you don't have to do maths in your head to figure out how much you're paying for gas.
 ![](https://hackmd.io/_uploads/H1_IyIAE9.png)
 
 

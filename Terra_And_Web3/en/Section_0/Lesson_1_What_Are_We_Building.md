@@ -15,6 +15,9 @@ Few action items for you before moving on:
 3. Be sure to attend the live kick-off. If you miss it, no worries. It's not required to attend! The recording will be posted in Discord under #info-board.
 
 ### 🚀 This is going to be awesome
+Instead of *telling you*, I thought I'd show you. Here's a quick peek into what we'll be making in this project:
+
+[Loom](https://www.loom.com/share/8997d1e9667e4c188df1d2b6fd27dceb)
 
 I’m super excited to show you how to go from zero → shipping your own web3 app on Terra.
 

@@ -24,6 +24,10 @@ Be sure you click "Work in Web3" on the left and fill out your profile if you ha
 We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 1 week pls pls pls drop us a message on whereismynft@buildspace.so
 
 ### 🌈 Before you head out.
+Now that you're all done, wanna see if you can beat my score? I'm trynna get as many players as I can on here :D
+
+https://terra-war.vercel.app/
+
 Go to #showcase in Discord and drop us a link to your final product that we can mess around with :).
 
 Also, you should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Also, when you get your NFT be sure to save the file to your computer and attach it to your tweet directly. Looks better that way ;).
