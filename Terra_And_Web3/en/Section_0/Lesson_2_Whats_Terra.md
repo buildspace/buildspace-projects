@@ -38,8 +38,8 @@ Smart contracts on Terra are a lot like smart contracts on Ethereum. They're jus
 ### 💬 Messages in CosmWasm
 The way you communicate with contracts in CosmWasm is with messages. There are a few different types, but the only ones we care about are the 3 of these:
 
-`instantiate()`: a constructor which is called during contract instantiation to provide initial state
-`execute()`: gets called when a user wants to invoke a method on the smart contract
-`query()`: gets called when a user wants to get data out of a smart contract
+- `instantiate()`: a constructor which is called during contract instantiation to provide initial state
+- `execute()`: gets called when a user wants to invoke a method on the smart contract
+- `query()`: gets called when a user wants to get data out of a smart contract
 
 That's pretty much all the theory we really need to go over right now! If it still doesn't make sense, don't worry! It'll start making sense when we hop into the code.
