@@ -339,7 +339,7 @@ With that, we can easily render some cool pieces of data here. Go ahead and add 
 
 ```jsx
 return (
-  // Only show this if machineStats is available
+  // Only show this if candyMachine is available
   candyMachine && (
     <div className="machine-container">
       <p>{`Drop Date: ${candyMachine.state.goLiveDateTimeString}`}</p>
