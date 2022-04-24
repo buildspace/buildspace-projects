@@ -135,7 +135,8 @@ cd clicker-portal
 npm install
 ```
 
-Note: if you see a warning about vulnerabilities, don't worry about them right now! Running `npm audit fix` can break things, so please don't run it!
+Note: if you see a warning about vulnerabilities, don't worry about them right now! <br>
+**DO NOT** run `npm audit fix` It can break things!
 
 And now to deploy:
 ```
