@@ -17,7 +17,7 @@ Now that MigrateMsg is defined, you will need to update `contract.rs`:
 1. Update the import from crate::msg to include MigrateMsg:
 
 ```rust
-use crate::msg::{CountResponse, ExecuteMsg, InstantiateMsg, QueryMsg, MigrateMsg};
+use crate::msg::{SpeedResponse, InstantiateMsg, ExecuteMsg, QueryMsg, ScoreResponse, MigrateMsg};
 ```
 2. Add the following method above instantiate:
 ```
