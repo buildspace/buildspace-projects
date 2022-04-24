@@ -2263,6 +2263,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "karacsonybarni",
+      "name": "Barna Karacsony",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14146083?v=4",
+      "profile": "https://github.com/karacsonybarni",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
