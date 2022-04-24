@@ -117,7 +117,7 @@ docker-compose up
 You'll see a bunch of stuff printed out on terminal. The network will keep running as long as this terminal is running. You can stop it with `CTRL+C`. I recommend keeping it open and opening a new terminal window for using Terrain. 
 
 **Windows users**
-You might also need to start docker service in WSL2 if it's not started by running `dockerd` or `sudo dockerd`. Once that's done, you can then start running docker-compose up. If you ran `sudo dockerd`, you'll need to run `sudo docker-compose up`. Finally, if you're on the latest version of `docker-compose`, you will may need to delete `pull_policy: always` in `docker-compose.yml`. You got this!
+You might also need to start docker service in WSL2 if it's not started by running `dockerd` or `sudo dockerd`. Once that's done, you can then start running docker-compose up. If you ran `sudo dockerd`, you'll need to run `sudo docker-compose up`. Finally, if you're on the latest version of `docker-compose`, you may need to delete `pull_policy: always` in the `docker-compose.yml` file. You got this!
 
 
 Ta-da! You're ready to start smart contract development for Terra. Let's try it out by deploying a simple contract.
@@ -136,7 +136,7 @@ npm install
 ```
 
 Note: if you see a warning about vulnerabilities, don't worry about them right now! <br>
-**DO NOT** run `npm audit fix` It can break things!
+**DO NOT** run `npm audit fix`. It can break things!
 
 And now to deploy:
 ```
@@ -180,11 +180,7 @@ docker-compose up
 ```
 Your localterra folder should be inside your `Learn-Terra` folder.
 
-3. Set env variables for Terrain if they're unset #TODO Add permanent ENV var guide for all OS
-```
-export PATH=$PATH:$(go env GOPATH)/bin
-```
-4. Open a new terminal window and navigate to your dApp folder to run Terrain commands. I named mine "clicker-portal"
+3. Open a new terminal window and navigate to your dApp folder to run Terrain commands. I named mine "clicker-portal"
 ```
 # Desktop/Learn-Terra/
 cd clicker-portal
