@@ -22,7 +22,7 @@ Head to your terminal and cd into whatever directory your project will live in. 
 ```
 # Desktop/Learn-Terra/clicker-portal
 git clone YOUR_FORKED_LINK
-cd terra_starter
+cd terra-starter
 ```
 
 That's it! From there go ahead and run:
