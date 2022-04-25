@@ -65,7 +65,7 @@ Recap:
 * We installed dotenv
 * We created a `.env` file and put our seed phrase in it
 * We created a `.gitignore` file and added `.env` to it so Git will ignore it
-* We updated our `terrain.config.js` file to use dotenv.
+* We updated our `keys.terrain.js` file to use dotenv.
 
 We are SECURE! Let's launch!
 
