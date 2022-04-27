@@ -11,7 +11,7 @@ Lets's do the random winner first!
 
 So, generating a random number in smart contracts is widely known as a **difficult problem**.
 
-Why? Well, think about how a random number is generated normally. When you generate a random normally in a program, **it will take a bunch of different numbers from your computer as a source of randomness** like: the speed of the fans, the temperature of the CPU, the number of times you've pressed "L" at 3:52PM since you've bought the computer, your internet speed, and tons of other #s that are difficult for you to control. It takes **all** these numbers that are "random" and puts them together into an algorithm that generates a number that it feels is the best attempt at a truly "random" number. Make sense?
+Why? Well, think about how a random number is generated normally. When you generate a random number normally in a program, **it will take a bunch of different numbers from your computer as a source of randomness** like: the speed of the fans, the temperature of the CPU, the number of times you've pressed "L" at 3:52PM since you've bought the computer, your internet speed, and tons of other #s that are difficult for you to control. It takes **all** these numbers that are "random" and puts them together into an algorithm that generates a number that it feels is the best attempt at a truly "random" number. Make sense?
 
 On the blockchain, there is **nearly no source of randomness**. Everything the contract sees, the public sees. Because of that, someone could game the system by just looking at the smart contract, seeing what #s it relies on for randomness, and then the person could give it the exact numbers they need to win.
 
@@ -98,7 +98,7 @@ Here, I take two numbers given to me by Solidity, `block.difficulty` and `block.
 
 These #s are *pretty* random. But, technically, both `block.difficulty` and `block.timestamp` could be controlled by a sophisticated attacker. 
 
-To make this harder, I create a variable `seed` that will essentially change every time a user sends a new wave. So, I combine all three of these variables to generate a new random seed. Then I just do `% 100` which will make sure the number is brought down to a range between 0 - 100.
+To make this harder, I create a variable `seed` that will essentially change every time a user sends a new wave. So, I combine all three of these variables to generate a new random seed. Then I just do `% 100` which will make sure the number is brought down to a range between 0 - 99.
 
 That's it! Then I just write a simple if statement to see if the seed is less than or equal to 50, if it is -- then the waver wins the prize! So, that means the waver has a 50% chance to win since we wrote `seed <= 50`. You can change this to whatever you want :). I just made it 50% because it's easier to test that way!!
 

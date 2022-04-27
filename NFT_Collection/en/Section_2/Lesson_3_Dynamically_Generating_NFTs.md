@@ -211,4 +211,4 @@ So, let's build that :)!
 
 🚨Progress report.
 ------------------------
-If you got one, send a screenshot in #progress of your new dynamically generated NFT on OpenSea/Rarible in #progress :). Also -- if you haven't tweeted an image of your hilarious NFT collection yet now is the time to do so!! Remember to tag @_buildspace!!! We'll RT as many people as we can!
+If you got one, send a screenshot in #progress of your new dynamically generated NFT on OpenSea/Rarible :). Also -- if you haven't tweeted an image of your hilarious NFT collection yet now is the time to do so!! Remember to tag @_buildspace!!! We'll RT as many people as we can!

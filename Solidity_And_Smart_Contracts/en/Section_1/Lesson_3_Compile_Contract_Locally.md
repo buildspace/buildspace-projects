@@ -38,11 +38,12 @@ const main = async () => {
 const runMain = async () => {
   try {
     await main();
-    process.exit(0);
+    process.exit(0); // exit Node process without error
   } catch (error) {
     console.log(error);
-    process.exit(1);
+    process.exit(1); // exit Node process while indicating 'Uncaught Fatal Exception' error
   }
+  // Read more about Node exit ('process.exit(num)') status codes here: https://stackoverflow.com/a/47163396/7974948
 };
 
 runMain();
@@ -95,7 +96,7 @@ You should see your `console.log` run from within the contract and then you shou
 🎩 Hardhat & HRE
 ----------------
 
-In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of sorcery is this? 
+In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of magic trick is this? 
 
 Directly from the Hardhat docs themselves you will notice this:
 

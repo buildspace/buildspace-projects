@@ -20,7 +20,7 @@ If you are interested in doing a bit more custom setup, feel free to checkout [t
 Once this installation is done you **NEED** to restart your computer. Things will definitely not work if you install WSL and don't restart your machine. Take a second to do that and we will meet here in the next section!
 
 ### 📀 Installing Node.js.
-Nice! You now have a Linux subsystem available on your machine. It's actually pretty cool to see how this all works. The one thing you need to realize is this environment is abstracted from your Windows environemnt. So, everything on your Windows machine is not accessible on your Ubuntu instance. This means we don't have Node.js installed which something we will need to setup the rest of our Solana environment!
+Nice! You now have a Linux subsystem available on your machine. It's actually pretty cool to see how this all works. The one thing you need to realize is this environment is abstracted from your Windows environment. So, everything on your Windows machine is not accessible on your Ubuntu instance. This means we don't have Node.js installed which something we will need to setup the rest of our Solana environment!
 
 Start by going to your search menu and typing in `Ubuntu`. You should see a shell Ubuntu shell option pop up - go ahead and click that. Now, some of you may run into an error where you open your terminal and then there says there is an error and it closes the terminal! Make sure you go through these two steps to fix that:
 
@@ -225,7 +225,7 @@ solana address
 
 ### 🥳 Let's run our program.
 
-When we did `anchor init` it create a basic Solana program for us. What we want to do now is:
+When we did `anchor init` it created a basic Solana program for us. What we want to do now is:
 
 1. Compile our program.
 2. Spin up `solana-test-validator` and deploy the program to our **local** Solana network w/ our wallet. This is kinda like deploying our local server w/ new code.
