@@ -173,13 +173,11 @@ cd myepicproject
 ```
 ### Notes for windows users
 
-1. Run the commands using WSl and not powershell.
-2. If `cargo install --git https://github.com/project-serum/anchor avm --locked --force` gives you errors. Refer to the Anchor user documents. You might need to install the Linux (WSL) dependencies. Run `sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev`
-3. If you get further issues such as `error: failed to run custom build command for `openssl-sys v0.9.71`, run `sudo apt install libssl-dev`
+1. Run the commands using WSL2 and not powershell.
+2. If `cargo install --git https://github.com/project-serum/anchor avm --locked --force` gives you errors. Refer to the Anchor user documents. You might need to install the Linux (WSL) dependencies. To do this, run `sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev`
+3. If you get further issues such as `error: failed to run custom build command` for `openssl-sys v0.9.71`, run `sudo apt install libssl-dev`
 4. Once these dependencies have been installed, the command from step 2 should work.
-5. Now set the anchor version with `avm use latest`
-6. 
-
+5. Now set the anchor version with `avm use latest` and you should be good to go!
 
 `anchor init` will create a bunch of files/folders for us. It's sorta like `create-react-app` in a way. We'll check out all the stuff it's created in moment.
 
