@@ -48,7 +48,7 @@ Luckily we have something called [IPFS](https://en.wikipedia.org/wiki/InterPlane
 
 I won't be covering how to get your stuff up on IPFS + connected to your React app step-by-step, but, I will give you some pointers!
 
-First, you'll need to upload your images to a service that specializes in "[pinning](https://docs.ipfs.io/how-to/pin-files/)" — which means your file will essentially be cached so its easily retrievable. I like using [Pinata](https://www.pinata.cloud/) as my pinning service — just make an account, upload your character's image files through their UI, and that's it! 
+First, you'll need to upload your images to a service that specializes in "[pinning](https://docs.ipfs.io/how-to/pin-files/)" — which means your file will essentially be cached so its easily retrievable. I like using [Pinata](https://www.pinata.cloud/?utm_source=buildspace) as my pinning service — just make an account, upload your character's image files through their UI, and that's it! 
 
 ![Untitled](https://i.imgur.com/FAkx9yj.png)
 

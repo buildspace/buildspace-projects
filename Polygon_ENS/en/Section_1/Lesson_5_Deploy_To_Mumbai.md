@@ -78,8 +78,8 @@ const main = async () => {
   console.log("Contract deployed to:", domainContract.address);
 
   // CHANGE THIS DOMAIN TO SOMETHING ELSE! I don't want to see OpenSea full of bananas lol
-	let txn = await domainContract.register("banana",  {value: hre.ethers.utils.parseEther('0.1')});
-	await txn.wait();
+  let txn = await domainContract.register("banana",  {value: hre.ethers.utils.parseEther('0.1')});
+  await txn.wait();
   console.log("Minted domain banana.ninja");
 
   txn = await domainContract.setRecord("banana", "Am I a banana or a ninja??");
@@ -120,10 +120,10 @@ require("@nomiclabs/hardhat-waffle");
 module.exports = {
   solidity: "0.8.10",
   networks: {
-		mumbai: {
-      url: YOUR_ALCHEMY_MUMBAI_URL,
-      accounts: [YOUR_TEST_WALLET_PRIVATE_KEY],
-		}
+    mumbai: {
+      url: "YOUR_ALCHEMY_MUMBAI_URL",
+      accounts: ["YOUR_TEST_WALLET_PRIVATE_KEY"],
+    }
   }
 };
 ```
@@ -146,7 +146,7 @@ Run this command from the root directory of `cool-domains`.
 npx hardhat run scripts/deploy.js --network mumbai
 ```
 
-It takes like 20-40 seconds to deploy usually. We're not only deploying! We're also minting NFTs in `deploy.js` so that'll take some time as well. We actually need to wait for the transaction to be mined + picked up by miners. Pretty epic :). That one command does all that! If all goes well - you will see an output that looks a little something like this
+It takes like 20-40 seconds to deploy usually. We're not only deploying! We're also minting NFTs in `deploy.js` so that'll take some time as well. We actually need to wait for the transaction to be "mined" + picked up by nodes. Pretty epic :). That one command does all that! If all goes well - you will see an output that looks a little something like this
 
 ![https://i.imgur.com/OIQo3il.png](https://i.imgur.com/OIQo3il.png)
 

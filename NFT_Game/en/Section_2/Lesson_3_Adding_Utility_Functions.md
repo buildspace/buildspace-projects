@@ -91,7 +91,7 @@ We create the `CharacterNFTMinted` event under `mapping(address => uint256) publ
 
 ```solidity
 event CharacterNFTMinted(address sender, uint256 tokenId, uint256 characterIndex);
-event AttackComplete(uint newBossHp, uint newPlayerHp);
+event AttackComplete(address sender, uint newBossHp, uint newPlayerHp);
 ```
 
 The first event, `CharacterNFTMinted` we're going to fire when we finish minting an NFT for our user! This will allow us to notify them when we're done minting the NFT! So, we can actually fire this event by adding this line to the very bottom of our `mintCharacterNFT` function (right after the `_tokenIds.increment();` part) :
@@ -102,14 +102,14 @@ emit CharacterNFTMinted(msg.sender, newItemId, _characterIndex);
 
 Boom! That's it. Now our web app will be able to "catch" this event (kinda like a web hook we can **listen** to) when the NFT is officially done minting. We'll cover how to catch the event later. 
 
-Next we have the `AttackComplete` event. This would fire when we've officially attacked our boss. You can see the events return  to us the boss's new hp and the player's new hp!
+Next we have the `AttackComplete` event. This would fire when we've officially attacked our boss. You can see the events return  to us the boss's new hp and the player's new hp (we use `msg.sender` to make sure it's our player)!
 
 This is pretty cool because we can catch this event on our client and it's going to allow us to update the player + boss's HP dynamically without them needing to reload the page. It'll feel like a legit game.
 
 All we need to do is add this line to the bottom of the `attackBoss` function:
 
 ```solidity
-emit AttackComplete(bigBoss.hp, player.hp);
+emit AttackComplete(msg.sender, bigBoss.hp, player.hp);
 ```
 
 ### ➡️ Deploying the changes.
