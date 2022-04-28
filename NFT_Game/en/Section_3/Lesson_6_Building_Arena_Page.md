@@ -295,7 +295,7 @@ const runAttackAction = async () => {
 - The boss will always hit us back with some attack damage level
 - We call `attackTxn.wait()` here to tell our UI to not do anything until our transaction has been mined
 
-In later sections, we will go over out to build out your own RNG into your attacks!
+In later sections, we will go over how to build out your own RNG into your attacks!
 
 Let's talk a little bit about `setAttackState` . As mentioned above, we are using this to add some animations during our attack plays! I got the idea from Pokemon Yellow for Gameboy Color (Shoutout to my Pokemon Yellow friends 🤘).
 
