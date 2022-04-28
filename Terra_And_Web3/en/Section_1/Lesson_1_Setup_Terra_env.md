@@ -6,7 +6,7 @@ Once we're done, we'll write a smart contract from zero(ish) and deploy! Our con
 After we've deployed, we'll hook it up to our React web application so we can interact with it!
 
 #### 🪟 WINDOWS USERS!
-The stuff we need to install currently only runs on MacOS and Linux devices. You're going to need to Windows Subsystem for Linux 2. It's pretty easy, just check out [the official instructions](https://docs.microsoft.com/en-us/windows/wsl/install) and [this guide](https://www.codingwithcalvin.net/installing-docker-and-docker-compose-in-wsl2ubuntu-on-windows/) to install docker-compose in wsl2. Throughout this project, whenever I say "in a terminal", you'll need to open a terminal inside WSL2! I recommend also installing the [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701) app, it's pretty slick.
+The stuff we need to install currently only runs on MacOS and Linux devices. You're going to need to use Windows Subsystem for Linux 2. It's pretty easy, just check out [the official instructions](https://docs.microsoft.com/en-us/windows/wsl/install) and [this guide](https://www.codingwithcalvin.net/installing-docker-and-docker-compose-in-wsl2ubuntu-on-windows/) to install docker-compose in wsl2. Throughout this project, whenever I say "in a terminal", you'll need to open a terminal inside WSL2! I recommend also installing the [Windows Terminal](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701) app, it's pretty slick.
 
 ### 🚢  Install Docker 
 If you already have Docker with Docker compose installed, you can skip this.
