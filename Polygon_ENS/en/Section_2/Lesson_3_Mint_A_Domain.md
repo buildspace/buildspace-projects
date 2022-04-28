@@ -8,6 +8,7 @@ To start, we need to get the user’s domain name and what data they’re going 
 import React, { useEffect, useState } from "react";
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
+import {ethers} from "ethers";
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
@@ -122,7 +123,7 @@ const App = () => {
 					</header>
 				</div>
 				
-				{!currentAccount && renderNotConnectedContainer()}{!currentAccount && renderNotConnectedContainer()}{!currentAccount && renderNotConnectedContainer()}
+				{!currentAccount && renderNotConnectedContainer()}
 				{/* Render the input form if an account is connected */}
 				{currentAccount && renderInputForm()}
 				
@@ -221,7 +222,7 @@ const mintDomain = async () => {
 				console.log("Domain minted! https://mumbai.polygonscan.com/tx/"+tx.hash);
 				
 				// Set the record for the domain
-				tx = contract.setRecord(domain, record);
+				tx = await contract.setRecord(domain, record);
 				await tx.wait();
 
 				console.log("Record set! https://mumbai.polygonscan.com/tx/"+tx.hash);
@@ -278,7 +279,7 @@ if (receipt.status === 1) {
 	console.log("Domain minted! https://mumbai.polygonscan.com/tx/"+tx.hash);
 	
 	// Set the record for the domain
-	tx = contract.setRecord(domain, record);
+	tx = await contract.setRecord(domain, record);
 	await tx.wait();
 
 	console.log("Record set! https://mumbai.polygonscan.com/tx/"+tx.hash);
@@ -299,34 +300,34 @@ Finally, we'll want to call this function when someone clicks the "Mint NFT" but
 
 ```jsx
 const renderInputForm = () => {
-	return (
-		<div className="form-container">
-			<div className="first-row">
-				<input
-					type="text"
-					value={domain}
-					placeholder="domain"
-					onChange={e => setDomain(e.target.value)}
-				/>
-				<p className='tld'> {tld} </p>
-			</div>
+  return (
+    <div className="form-container">
+      <div className="first-row">
+        <input
+          type="text"
+          value={domain}
+          placeholder="domain"
+          onChange={e => setDomain(e.target.value)}
+        />
+        <p className='tld'> {tld} </p>
+      </div>
 
-			<input
-				type="text"
-				value={record}
-				placeholder='whats ur ninja power?'
-				onChange={e => setRecord(e.target.value)}
-			/>
+      <input
+        type="text"
+        value={record}
+        placeholder='whats ur ninja power?'
+        onChange={e => setRecord(e.target.value)}
+      />
 
-			<div className="button-container">
-				{/* Call the mintDomain function when the button is clicked*/}
-				<button className='cta-button mint-button' onClick={mintDomain}>
-					Mint
-				</button> 
-			</div>
+      <div className="button-container">
+        {/* Call the mintDomain function when the button is clicked*/}
+        <button className='cta-button mint-button' onClick={mintDomain}>
+          Mint
+        </button> 
+      </div>
 
-		</div>
-	);
+    </div>
+  );
 }
 ```
 
@@ -359,7 +360,7 @@ Paste the ABI file contents right there in our new file.
 Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file. It's just going to be:
 
 ```jsx
-import contractABI from './utils/contractABI.json';
+import contractAbi from './utils/contractABI.json';
 ```
 
 And we're all done. Shouldn't have errors anymore!

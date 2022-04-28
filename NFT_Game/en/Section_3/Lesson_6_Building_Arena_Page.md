@@ -295,7 +295,7 @@ const runAttackAction = async () => {
 - The boss will always hit us back with some attack damage level
 - We call `attackTxn.wait()` here to tell our UI to not do anything until our transaction has been mined
 
-In later sections, we will go over out to build out your own RNG into your attacks!
+In later sections, we will go over how to build out your own RNG into your attacks!
 
 Let's talk a little bit about `setAttackState` . As mentioned above, we are using this to add some animations during our attack plays! I got the idea from Pokemon Yellow for Gameboy Color (Shoutout to my Pokemon Yellow friends 🤘).
 
@@ -368,23 +368,34 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
         /*
         * Setup logic when this event is fired off
         */
-        const onAttackComplete = (newBossHp, newPlayerHp) => {
+        const onAttackComplete = (from, newBossHp, newPlayerHp) => {
             const bossHp = newBossHp.toNumber();
             const playerHp = newPlayerHp.toNumber();
+            const sender = from.toString();
 
             console.log(`AttackComplete: Boss Hp: ${bossHp} Player Hp: ${playerHp}`);
 
             /*
-            * Update both player and boss Hp
+            * If player is our own, update both player and boss Hp
             */
-            setBoss((prevState) => {
-                return { ...prevState, hp: bossHp };
-            });
+            if (currentAccount === sender.toLowerCase()) {
 
-            setCharacterNFT((prevState) => {
-                return { ...prevState, hp: playerHp };
-            });
-        };
+              setBoss((prevState) => {
+                  return { ...prevState, hp: bossHp };
+              });
+              setCharacterNFT((prevState) => {
+                  return { ...prevState, hp: playerHp };
+              });
+            };
+            /*
+            * If player isn't ours, update boss Hp only
+            */
+            else {
+              setBoss((prevState) => {
+                  return { ...prevState, hp: bossHp };
+              });
+            }
+        }
 
         if (gameContract) {
             fetchBoss();
@@ -409,7 +420,7 @@ Also, don't forget to head back to `App.js` and add pass the `setCharacterNFT` p
   <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />
 ```
 
-This should all look pretty familiar to you! Our contract will return `newBossHp` and `newPlayerHp` which we will then use to update the state of both our boss and character NFT. This part may look a bit funky, so let's dive into this a bit:
+This should all look pretty familiar to you! Our contract will return `newBossHp` and `newPlayerHp` which we will then use to update the state of the boss, and also the character NFT (if it's our player). This part may look a bit funky, so let's dive into this a bit:
 
 ```javascript
 setBoss((prevState) => {

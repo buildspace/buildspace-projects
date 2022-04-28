@@ -67,7 +67,7 @@ Again, the installation steps are pretty straight forward [here](https://docs.so
 
 *Note: Depending on your system — once you install Solana, it may output a message like "Please update your PATH environment variable" and it'll give you a line to copy and run. Go ahead and copy + run that command so your PATH gets setup properly.*
 
-Once you're done installing, run this to make sure stuff is working: 
+Once you're done installing, run this to make sure stuff is working:
 
 ```bash
 solana --version
@@ -75,7 +75,7 @@ solana --version
 
 If that output a version number, you're good to go!
 
-Next thing you'll want to do is run these two commands separately:it;d
+Next thing you'll want to do is run these two commands separately:
 
 ```bash
 solana config set --url localhost
@@ -99,6 +99,13 @@ The last thing to test is we want to make sure we can get a **local Solana node 
 ```bash
 solana-test-validator
 ```
+### Notes for Windows users.
+
+If you are a Windows user and the above command doesn't work, or you get the following error `Unable to connect to validator: Client error: test-ledger/admin.rpc does not exist` make sure you do the following.
+
+1. Open WSL instead of Powershell.
+2. Enter the command `cd ~/` to get out of the starting directory
+3. Now enter `solana-test-validator`
 
 This may take a bit to get started but once it's going you should see something like this:
 
@@ -115,13 +122,13 @@ dyld: Library not loaded: /usr/local/opt/openssl@1.1/lib/libssl.1.1.dylib
   Reason: image not found
 ```
 
-Now, go ahead and CONTROL + C to stop the validator. **We're never going to actually use `solana-test-validator` manually ourselves again.** The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;). 
+Now, go ahead and CONTROL + C to stop the validator. **We're never going to actually use `solana-test-validator` manually ourselves again.** The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;).
 
 ### ☕️ Install Node, NPM, and Mocha
 
 Pretty solid chance you already have Node and NPM. When I do `node --version` I get `v16.0.0`. The minimum version is `v11.0.0`. If you don't have node and NPM, get it [here](https://nodejs.org/en/download/).
 
-After that, be sure to install this thing called Mocha. It's a nice little testing framework to help us test our Solana programs. 
+After that, be sure to install this thing called Mocha. It's a nice little testing framework to help us test our Solana programs.
 
 ```bash
 npm install -g mocha
@@ -155,7 +162,7 @@ anchor --version
 
 If you got that working, nice, you have Anchor!!
 
-We'll also use Anchor's npm module and Solana Web3 JS — these both will help us connect our web app to our Solana program! 
+We'll also use Anchor's npm module and Solana Web3 JS — these both will help us connect our web app to our Solana program!
 
 ```bash
 npm install @project-serum/anchor @solana/web3.js
@@ -171,6 +178,13 @@ Let's start a boilerplate Solana project named `myepicproject`.
 anchor init myepicproject --javascript
 cd myepicproject
 ```
+### Notes for windows users
+
+1. Run the commands using WSL2 and not powershell.
+2. If `cargo install --git https://github.com/project-serum/anchor avm --locked --force` gives you errors. Refer to the Anchor user documents. You might need to install the Linux (WSL) dependencies. To do this, run `sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev`
+3. If you get further issues such as `error: failed to run custom build command` for `openssl-sys v0.9.71`, run `sudo apt install libssl-dev`
+4. Once these dependencies have been installed, the command from step 2 should work.
+5. Now set the anchor version with `avm use latest` and you should be good to go!
 
 `anchor init` will create a bunch of files/folders for us. It's sorta like `create-react-app` in a way. We'll check out all the stuff it's created in moment.
 
@@ -216,6 +230,8 @@ This may take a while the first time you run it! As long as you get the green wo
 ![Untitled](https://i.imgur.com/V35KchA.png)
 
 **Note: If you receive the message `node: --dns-result-order= is not allowed in NODE_OPTIONS` this mean you are on an older version of Node and technically, this didn't pass! Since I tested this all with Node v16.13.0 I would highly suggest you just upgrade to this version. Upgrading node is a pain, learn more here. I like using [nvm](https://heynode.com/tutorial/install-nodejs-locally-nvm/).**
+
+**Note: If you get this message `Error: Your configured rpc port: 8899 is already in use` and you do not have application which is listenning to port 8899, try to run `solana-test-validator`, and in the next terminal tab `anchor test --skip-local-validator`. It should run fine.**
 
 **Congrats you've successfully set up your Solana environment :).** It's been quite the journey, but, we made it fam.
 

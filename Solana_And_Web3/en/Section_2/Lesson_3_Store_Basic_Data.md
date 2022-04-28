@@ -26,7 +26,7 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod myepicproject {
   use super::*;
-  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
     // Get a reference to the account.
     let base_account = &mut ctx.accounts.base_account;
     // Initialize total_gifs.
@@ -104,7 +104,7 @@ Finally, we have `pub system_program: Program` which is actually pretty freaking
 Lastly, we do this thing in our function where we just grab `base_account` from the `StartStuffOff` context by doing `Context<StartStuffOff>`.
 
 ```rust
-pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
 	// Get a reference to the account.
   let base_account = &mut ctx.accounts.base_account;
 	// Initialize total_gifs.
@@ -133,7 +133,7 @@ const main = async() => {
   console.log("🚀 Starting test...")
 
   // Create and set the provider. We set it before but we needed to update it, so that it can communicate with our frontend!
-  const provider = anchor.Provider.env();
+  const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
   const program = anchor.workspace.Myepicproject;
@@ -206,14 +206,14 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod myepicproject {
   use super::*;
-  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs = 0;
     Ok(())
   }
   
 	// Another function woo!
-  pub fn add_gif(ctx: Context<AddGif>) -> ProgramResult {
+  pub fn add_gif(ctx: Context<AddGif>) -> Result <()> {
     // Get a reference to the account and increment total_gifs.
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs += 1;
@@ -261,7 +261,7 @@ Otherwise, I may change data on it within my function but it *wouldn't actually 
 Last, I create a lil `add_gif` function!
 
 ```rust
-pub fn add_gif(ctx: Context<AddGif>) -> ProgramResult {
+pub fn add_gif(ctx: Context<AddGif>) -> Result <()> {
     // Get a reference to the account and increment total_gifs.
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs += 1;
@@ -284,7 +284,7 @@ const { SystemProgram } = anchor.web3;
 const main = async() => {
   console.log("🚀 Starting test...")
 
-  const provider = anchor.Provider.env();
+  const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
   const program = anchor.workspace.Myepicproject;
