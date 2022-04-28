@@ -99,6 +99,13 @@ The last thing to test is we want to make sure we can get a **local Solana node 
 ```bash
 solana-test-validator
 ```
+### Notes for Windows users.
+
+If you are a Windows user and the above command doesn't work, or you get the following error `Unable to connect to validator: Client error: test-ledger/admin.rpc does not exist` make sure you do the following.
+
+1. Open WSL instead of Powershell.
+2. Enter the command `cd ~/` to get out of the starting directory
+3. Now enter `solana-test-validator`
 
 This may take a bit to get started but once it's going you should see something like this:
 
