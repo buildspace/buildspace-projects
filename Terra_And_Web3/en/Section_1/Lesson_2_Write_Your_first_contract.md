@@ -146,7 +146,7 @@ And finally - the meat and potatoes (or rather the french fry) of our very tiny 
 
 The `instantiate` function is called only once - when the contract is first created. It takes in:
 * `deps`: You'll see this for almost everywhere - it has the storage, API and [Querier](https://github.com/terra-money/terra-cosmwasm/blob/main/README.md) functions. This contains dependencies we need to access storage, etc.
-*  `_env`: Blockchain environment variables like block and contract info. The `_` means it you may not use it. Read more [here](https://stackoverflow.com/questions/48361537/why-do-underscore-prefixed-variables-exist).
+*  `_env`: Blockchain environment variables like block and contract info. The `_` means you may not use it. Read more [here](https://stackoverflow.com/questions/48361537/why-do-underscore-prefixed-variables-exist).
 *  `info`:  Message info like the sender, signature, and funds sent in. Tells you who sent the money and what they sent.
 *  `msg`: The message and payload of the call. This is where you'd find function params. Tells you what the caller wants to do. 
 
