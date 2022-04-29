@@ -19,7 +19,7 @@ This seems pretty simple, and that's because of how awesome Terrain is! Behind t
 I won't go into too much detail on these, all you need to know is that they exist and what they're about. You can find all the generated files in the `Learn-Terra/clicker-portal/contracts/counter` folder. 
 
 **Building a contract**
-What does building even mean? We write our smart contracts in Rust. The platform Terra contracts run on, CosmWasm, runs on WASM (WebAssembly) bytecode. When we "build" our smart contract, we're compiling our Rust code into WASM bytecode so the blockchain can run it.
+What does building even mean? We write our smart contracts in Rust but the platform Terra contracts run on, CosmWasm, runs on WASM (WebAssembly) bytecode. So when we "build" our smart contract, we're compiling our Rust code into WASM bytecode so the blockchain can run it.
 
 **Optimizing a contract**
 Once we've got the WASM binary output, we need to make sure it's as small as possible to minimize fees and stay under the size limit for the blockchain. Read more [here](https://docs.terra.money/docs/develop/dapp/smart-contracts/write-smart-contract.html#optimizing-your-build).
