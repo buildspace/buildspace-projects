@@ -73,14 +73,11 @@ if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS === "") {
   console.log("🛑 Wallet Address not found.");
 }
 
-const sdk = new ThirdwebSDK(
-  new ethers.Wallet(
-    // Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
-    process.env.PRIVATE_KEY,
-    // RPC URL, we'll use our Alchemy API URL from our .env file.
-    ethers.getDefaultProvider(process.env.ALCHEMY_API_URL),
-  ),
-);
+// RPC URL, we'll use our Alchemy API URL from our .env file.
+const provider = new ethers.providers.JsonRpcProvider(process.env.ALCHEMY_API_URL);
+// Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+const sdk = new ThirdwebSDK(wallet);
 
 (async () => {
   try {
@@ -122,7 +119,15 @@ node -v
 
 *Note: if you’re on Replit you can actually run scripts from the shell it provides:*
 
-If you have an old version of Node, you can update it [here](https://nodejs.org/en/). (Download the LTS version) Let's execute it! Go to your terminal and paste the following command:
+If you have an old version of Node, you can update it [here](https://nodejs.org/en/). (Download the LTS version) 
+
+*Note: if you’re on Replit you can actually update the node version by running this from the shell:*
+
+```plaintext
+npm init -y && npm i --save-dev node@17 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
+```
+
+Let's execute it! Go to your terminal and paste the following command:
 
 ```plaintext
 node scripts/1-initialize-sdk.js

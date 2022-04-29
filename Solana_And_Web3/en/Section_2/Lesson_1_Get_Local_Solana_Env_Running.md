@@ -99,6 +99,13 @@ The last thing to test is we want to make sure we can get a **local Solana node 
 ```bash
 solana-test-validator
 ```
+### Notes for Windows users.
+
+If you are a Windows user and the above command doesn't work, or you get the following error `Unable to connect to validator: Client error: test-ledger/admin.rpc does not exist` make sure you do the following.
+
+1. Open WSL instead of Powershell.
+2. Enter the command `cd ~/` to get out of the starting directory
+3. Now enter `solana-test-validator`
 
 This may take a bit to get started but once it's going you should see something like this:
 
@@ -171,6 +178,13 @@ Let's start a boilerplate Solana project named `myepicproject`.
 anchor init myepicproject --javascript
 cd myepicproject
 ```
+### Notes for windows users
+
+1. Run the commands using WSL2 and not powershell.
+2. If `cargo install --git https://github.com/project-serum/anchor avm --locked --force` gives you errors. Refer to the Anchor user documents. You might need to install the Linux (WSL) dependencies. To do this, run `sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev`
+3. If you get further issues such as `error: failed to run custom build command` for `openssl-sys v0.9.71`, run `sudo apt install libssl-dev`
+4. Once these dependencies have been installed, the command from step 2 should work.
+5. Now set the anchor version with `avm use latest` and you should be good to go!
 
 `anchor init` will create a bunch of files/folders for us. It's sorta like `create-react-app` in a way. We'll check out all the stuff it's created in moment.
 

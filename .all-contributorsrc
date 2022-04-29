@@ -2272,6 +2272,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "scott-a-m",
+      "name": "Scott Mitchell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83659996?v=4",
+      "profile": "https://github.com/scott-a-m",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Meacho",
+      "name": "Meacho",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15829136?v=4",
+      "profile": "https://github.com/Meacho",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
