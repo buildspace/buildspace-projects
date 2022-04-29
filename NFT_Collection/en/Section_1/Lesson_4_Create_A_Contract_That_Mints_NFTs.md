@@ -291,25 +291,48 @@ We'll need to change our `hardhat.config.js` file. You can find this in the ro
 
 ```javascript
 require('@nomiclabs/hardhat-waffle');
+require("dotenv").config({ path: ".env" });
 
 module.exports = {
   solidity: '0.8.1',
   networks: {
     rinkeby: {
-      url: 'YOUR_ALCHEMY_API_URL',
-      accounts: ['YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY'],
+      url: process.env.ALCHEMY_API_KEY_URL,
+      accounts: [process.env.RINKEBY_PRIVATE_KEY],
     },
   },
 };
 ```
+Here we are basically configuring our `hardhat.config.js` to use our env variables securely which are the **process.env.ALCHEMY_API_KEY_URL** & our **process.env.RINKEBY_PRIVATE_KEY**. You'll now need to open your terminal and type in
+```
+npm install dotenv
+```
+This basically just installs the `dotenv` package which allows us to use env variables.
+
+And now you can create a **.env** file in the root of your project. To be sure, it should be matching with the path that contains the **hardhat.config.js** file.
 
 You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
 
-**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** We'll talk about `.env` variables later and how to keep this stuff secret.
-
-In the meantime - open your `.gitignore` file and add a line for `hardhat.config.js`. You can remove this later when you set up `.env`.
+Open the **.env** file and paste the two we've grabbed as shown below.
 ```
-hardhat.config.js
+ALCHEMY_API_KEY_URL=<YOUR API URL>
+RINKEBY_PRIVATE_KEY=<YOUR PRIVATE KEY>
+```
+
+**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.
+OPEN YOUR `.gitignore` FILE AND ADD A LINE FOR `.env` IF IT IS DOES NOT EXIST**
+
+Your `.gitignore` should look somewhat like this now.
+```
+node_modules
+.env
+coverage
+coverage.json
+typechain
+
+#Hardhat files
+cache
+artifacts
 ```
 
 Why do you need to use your private key? Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain and sign/deploy the contract. And, your username is your public address and your password is your private key. It's kinda like logging into AWS or GCP to deploy.
