@@ -73,14 +73,11 @@ if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS === "") {
   console.log("🛑 Wallet Address not found.");
 }
 
-const sdk = new ThirdwebSDK(
-  new ethers.Wallet(
-    // Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
-    process.env.PRIVATE_KEY,
-    // RPC URL, we'll use our Alchemy API URL from our .env file.
-    ethers.getDefaultProvider(process.env.ALCHEMY_API_URL),
-  ),
-);
+// RPC URL, we'll use our Alchemy API URL from our .env file.
+const provider = new ethers.providers.JsonRpcProvider(process.env.ALCHEMY_API_URL);
+// Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+const sdk = new ThirdwebSDK(wallet);
 
 (async () => {
   try {
