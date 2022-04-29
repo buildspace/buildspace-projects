@@ -15,7 +15,7 @@ Precisamos de uma maneira de manter a rede local ativa. Por quê? Bem, pense em 
 
 Nós vamos fazer a mesma coisa aqui.
 
-Vá para o seu terminal e abra uma **nova** janela ou aba. Nesta janela, entre no diretório do seu `projeto my-wave-portal`. Então, vá em frente e execute
+Vá para o seu terminal e abra uma **nova** janela ou aba. Nesta janela, entre no diretório do seu projeto `meu-portal-tchauzinho`. Então, vá em frente e execute
 
 ```bash
 npx hardhat node
@@ -70,9 +70,9 @@ npx hardhat run scripts/deploy.js --network localhost
 
 **Você precisa se certificar de fazer isso no diretório** `my-wave-portal` **em uma janela de terminal diferente. Não queremos mexer com a janela do terminal que mantém nossa rede local Ethereum ativa.**
 
-Ok, então uma vez que eu executo, isso é o que que eu recebo:
+Ok, então uma vez que executamos, isso é o que a gente recebe:
 
-![](https://i.imgur.com/ZXehYOk.png)
+![](https://i.imgur.com/BzoSlsu.png)
 
 Épico.
 
@@ -82,16 +82,16 @@ Na janela do seu terminal que mantém sua rede local Ethereum ativa, você verá
 
 ![](https://i.imgur.com/DmhZRJN.png)
 
-INTERESSANTE. Mas... o que é **gas**? O que significa bloco nº 1? O que é o código grande ao lado de "Transação"? Eu quero que você tente procurar essas coisas no Google. Faça perguntas no #general-chill-chat :).
+INTERESSANTE. Mas... o que é **gas**? O que significa bloco nº 1? O que é o código grande ao lado de "Transaction"? Queremos que você tente procurar essas coisas no Google. Faça perguntas no #geral-chat :).
 
 
 🚨 Antes de clicar em "Próxima lição"
 --------------------------------------------
 
-Honestamente, apenas dê um tapinha nas costas. Você já fez muito. Em seguida, estaremos construindo um site que interagirá com nossa rede local Ethereum e será incrível. Vá para #progress e deixe-me saber como este projeto está indo até agora para você. Eu adoraria seu feedback.
+Honestamente, você merece um tapinha nas costas. Você já fez muito. Em seguida, estaremos construindo um site que interagirá com nossa rede local Ethereum e será incrível. Vá para #progresso e deixe a comunidade saber como este projeto está indo até agora para você. Mande também seu feedback, a gente ama!
 
 
 🎁 Conclusão da Seção
 ------------------
 
-Ótimo! Você chegou ao final da seção. Confira [este link](https://gist.github.com/adilanchian/9f745fdfa9186047e7a779c02f4bffb7) para ter certeza de que está no caminho certo com seu código!
+Ótimo! Você chegou ao final da seção. Confira [este link](https://gist.github.com/danicuki/4659b861398c9143b86d07752e066ea6) para ter certeza de que está no caminho certo com seu código!

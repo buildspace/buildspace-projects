@@ -20,7 +20,7 @@ import "hardhat/console.sol";
 
 contract WavePortal {
     constructor() {
-        console.log("Yo yo, I am a contract and I am smart");
+        console.log("Ueba, eu sou um contrato e eu sou inteligente");
     }
 }
 ```
@@ -43,23 +43,23 @@ Esta é a versão do compilador Solidity que queremos que nosso contrato use. El
 import "hardhat/console.sol";
 ```
 
-Um pouco da mágica que o Hardhat adiciona ao nosso contrato para logar mensagens no console. Na verdade, é um desafio depurar (debug) contratos inteligentes, mas esse é um dos benefícios que o Hardhat nos oferece e que facilita a vida.
+Um pouco da mágica que o Hardhat adiciona ao nosso contrato para logar mensagens no console. Na verdade, é um desafio debugar contratos inteligentes, mas esse é um dos benefícios que o Hardhat nos oferece e que facilita a vida.
 
 ```solidity
 contract WavePortal {
     constructor() {
-        console.log("Yo yo, I am a contract and I am smart");
+        console.log("Ueba, eu sou um contrato e eu sou inteligente");
     }
 }
 ```
 
-Então, contratos inteligentes parecem uma 'classe' em outros linguagens, caso já tenha visto isso antes! Assim que inicializarmos esse contrato pela primeira vez, esse construtor será executado e imprimirá essa linha. Por favor, altere essa linha para o que quiser :)!
+Então, contratos inteligentes parecem uma 'classe' em outras linguagens, caso já tenha visto isso antes! Assim que inicializarmos esse contrato pela primeira vez, esse construtor será executado e imprimirá essa linha. Por favor, altere essa linha para o que quiser :)!
 
 Na próxima lição, executaremos o contrato e veremos o que conseguimos!
 
 🚨 Antes de clicar em "Próxima lição"
 --------------------------------------------
 
-*Nota: se você não fizer isso, Farza ficará muito triste :(.*
+*Nota: se você não fizer isso, o Daniel ficará muito triste :(.*
 
-Vá para #progress e poste um screenshot (captura de tela) do seu contrato no arquivo WavePortal.sol :).
+Vá para #progresso e poste um screenshot (captura de tela) do seu contrato no arquivo WavePortal.sol :).
