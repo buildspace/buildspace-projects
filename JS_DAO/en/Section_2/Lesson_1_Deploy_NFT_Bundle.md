@@ -119,7 +119,15 @@ node -v
 
 *Note: if you’re on Replit you can actually run scripts from the shell it provides:*
 
-If you have an old version of Node, you can update it [here](https://nodejs.org/en/). (Download the LTS version) Let's execute it! Go to your terminal and paste the following command:
+If you have an old version of Node, you can update it [here](https://nodejs.org/en/). (Download the LTS version) 
+
+*Note: if you’re on Replit you can actually update the node version by running this from the shell:*
+
+```plaintext
+npm init -y && npm i --save-dev node@17 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
+```
+
+Let's execute it! Go to your terminal and paste the following command:
 
 ```plaintext
 node scripts/1-initialize-sdk.js
