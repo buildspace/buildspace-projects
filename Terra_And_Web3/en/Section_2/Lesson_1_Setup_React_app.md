@@ -30,7 +30,7 @@ That's it! From there go ahead and run:
 yarn install
 ```
 
-This may error if you don't have Yarn installed, which you can do with 
+This may give an error if you don't have Yarn installed, which you can do with 
 ```
 npm install --global yarn
 ```
