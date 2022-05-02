@@ -40,7 +40,7 @@ The Terrajs package is smart enough that it will automatically shift which netwo
 ### 📩 Fetch our scores from the contract
 Getting our scores from the contract on the testnet is going to be very similar to how we did it using Terrain locally. We're going to follow the same `QueryMsg` and `ExecuteMsg` structure. Start by creating these three files in the `terra-starter/src/contract` directory: `address.js`, `execute.js`, `query.js`. 
 
-`Address.js` will load the correct contract address based on the network. It's tiny but powerful:
+`address.js` will load the correct contract address based on the network. It's tiny but powerful:
 ```javascript
 import config from "../refs.terrain.json"
 
