@@ -123,7 +123,7 @@ I just added a conditional render statement for the menu and updated the Goblin 
 The syntax here can be a bit confusing  - the logical && acts like an `if` statement. If the condition before it is true, whatever is after gets returned.
 
 ### 🤨 Add a how to play guide
-The process for adding pages is going to be the same every time. Update the main menu options in `Menu.js` (we've just done this), add the corresponding file in the "Pages" folder and add the route in `index.js`.
+The process for adding pages is going to be the same every time. Update the main menu options in `Menu.js` (we've just done this), add the corresponding file in the "pages" folder and add the route in `index.js`.
 
 Here are the menu options we previously set up:
 ```javascript
@@ -134,7 +134,7 @@ const menu_options = [
 ];
 ```
 
-Go ahead and add these files in the pages folder: `play.js`, `leaderboard.js`, and `guide.js`.
+Go ahead and create a folder called "pages" in your terra-starter/src folder and add these files in the pages folder: `play.js`, `leaderboard.js`, and `guide.js`.
 
 Next, lets update the `index.js` routes. I've left comments for the stuff I added:
 ```javascript
