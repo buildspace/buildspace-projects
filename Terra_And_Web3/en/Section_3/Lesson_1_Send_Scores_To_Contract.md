@@ -97,7 +97,7 @@ const Play = () => {
       {/* Button to manually set score for testing */}
       <button className="cta-button connect-wallet-button" onClick={() => setScore(score => score + 1)}>+1 score</button>
 
-      {/* Button to submit score to be removed later don't be cheater >:(  */}
+      {/* Button to submit score to be removed later, don't be a cheater >:(  */}
       <button className="cta-button connect-wallet-button" onClick={submitScore}>Submit score</button>
     </div>
   )
@@ -106,7 +106,7 @@ const Play = () => {
 export default Play;
 ```
 
-Alrighty, we're back in familiar territory. The excute function is identical to the query function except for the additional parameter we're passing in. For new we're just going to fake it. 
+Alrighty, we're back in familiar territory. The execute function is identical to the query function except for the additional parameter we're passing in. For new we're just going to fake it. 
 
 Save you file, refresh, and tap the +1 to increase your score a few times. When you click submit, you should get a transaction confirmation. 
 
