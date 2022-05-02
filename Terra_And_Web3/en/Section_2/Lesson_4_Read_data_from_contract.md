@@ -147,7 +147,7 @@ The render function is going to map through the scores and format them. I love R
 ```
 
 
-Putting it all toghether, (I also added a loading state):
+Putting it all together, (I also added a loading state):
 ```javascript
 import { Link } from 'react-router-dom';
 import * as query from '../contract/query';
