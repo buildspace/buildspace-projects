@@ -21,7 +21,7 @@ Este material é muito novo, há muita propaganda em torno dele, e pode ser supe
 Com este projeto, você aprenderá sobre a tecnologia de Cripto escrevendo código e entrando nas coisas boas. Sem baboseira. Também vamos rever a teoria e os conceitos mais profundos, mas, tudo será estruturado em torno do seu projeto.
 
 Confira abaixo um pequeno vídeo de introdução que fizemos sobre este projeto!
-[Loom](https://www.loom.com/share/8746b43760c74c6791ba17af9940ea8e)
+[Loom](https://www.loom.com/share/40af551800c4425695f47ed08afd931e)
 
 👀 No final, ganhe um NFT da web3dev.
 -------------------

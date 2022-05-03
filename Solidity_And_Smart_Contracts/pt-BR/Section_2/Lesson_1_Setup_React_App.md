@@ -3,18 +3,18 @@
 
 É hora de começar a trabalhar em nosso site! Nosso contrato é bem simples, mas vamos aprender como nosso front-end pode interagir com nosso contrato o mais rápido possível!
 
-Portanto, existem cerca de 100 maneiras diferentes de configurar um projeto básico em React e implantá-lo. Mostrarei como fazer isso aqui em 10 minutos e, no final, você terá um aplicativo React totalmente implantado com seu próprio domínio e tudo mais.
+Portanto, existem cerca de 100 maneiras diferentes de configurar um projeto básico em React e implantá-lo. Mostraremos como fazer isso aqui em 10 minutos e, no final, você terá um aplicativo React totalmente implantado com seu próprio domínio e tudo mais.
 
 🤯 Replique
 ---------
 
-**Observação: você não precisa usar o replit para compilar + implantar seu site. Se você quiser usar create-react-app + Vercel/Heroku/AWS -- também funciona. [Aqui](https://github.com/buildspace/waveportal-starter-project) está um link para o repositório base que você pode clonar e trabalhar localmente.**
+**Observação: você não precisa usar o replit para compilar + implantar seu site. Se você quiser usar create-react-app + Vercel/Heroku/AWS -- também funciona. [Aqui](https://github.com/w3b3d3v/projeto-tchauzinho) está um link para o repositório base que você pode clonar e trabalhar localmente.**
 
 Usaremos [Replit](https://replit.com/~)! É uma IDE baseada em navegador que nos permite criar facilmente aplicativos Web e implantá-los a partir do navegador. É super legal. Em vez de ter que configurar um ambiente local completo e escrever comandos para o deploy, tudo é dado para nós.
 
 Faça uma conta no Replit antes de seguir em frente.
 
-Eu já criei um projeto React básico que você pode fazer o **fork** no Replit. **Basta ir [aqui](https://replit.com/@adilanchian/waveportal-starter-project?v=1) e, à direita, você verá o botão "Fork".** Certifique-se de que esteja logado e clique. Magicamente você clonará meu repositório e a IDE completa em seu navegador para trabalhar com o código. Quando ele parar de carregar e mostrar algum código, clique no botão "Executar" na parte superior. Isso pode levar uns sólidos 2-3 minutos na primeira vez. Basicamente, o Replit estará inicializando seu projeto e implantando-o em um domínio real.
+Eu já criamos um projeto React básico que você pode fazer o **fork** no Replit. **Basta ir [aqui](https://replit.com/@DanielCukier/projeto-tchauzinho?v=1) e, à direita, você verá o botão "Fork".** Certifique-se de que esteja logado e clique. Magicamente você clonará meu repositório e a IDE completa em seu navegador para trabalhar com o código. Quando ele parar de carregar e mostrar algum código, clique no botão "Executar" na parte superior. Isso pode levar uns sólidos 2-3 minutos na primeira vez. Basicamente, o Replit estará inicializando seu projeto e implantando-o em um domínio real.
 
 **Observação: à medida que avança neste projeto, você pode notar que estamos fazendo referência a arquivos `.js`. No Replit, se você estiver criando novos arquivos JavaScript, precisará usar a extensão `.jsx`! Replit tem alguma questão de performance que requer que você use a extensão de arquivo `.jsx` :).**
 
@@ -39,6 +39,6 @@ Então, vá em frente e configure tudo! O fluxo de configuração deles é basta
 🚨 Antes de clicar em "Próxima lição"
 --------------------------------------------
 
-*Nota: se você não fizer isso, Farza ficará muito triste :(.*
+*Nota: se você não fizer isso, Yan ficará muito triste :(.*
 
-Compartilhe um link para seu site e poste-o em #progress. Altere o CSS e o texto para o que você quiser. Talvez você queira que seja mais colorido? Talvez você não se importe com ondas e queira fazer um clone descentralizado do Twitter? Faça o que quiser, este é o seu aplicativo :).
+Compartilhe um link para seu site e poste-o em #progresso. Altere o CSS e o texto para o que você quiser. Talvez você queira que seja mais colorido? Talvez você não se importe com ondas e queira fazer um clone descentralizado do Twitter? Faça o que quiser, este é o seu aplicativo :).

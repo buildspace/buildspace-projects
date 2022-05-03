@@ -1,13 +1,13 @@
 📒 Lendo a blockchain a partir do nosso site
 -----------------------------------------------
 
-Impressionante. Conseguimos. Implantamos nosso site. Implementamos nosso contrato. Conectamos nossa carteira. Agora precisamos chamar nosso contrato a partir do nosso site usando as credenciais da Metamask às quais temos acesso agora!
+Impressionante. Conseguimos. Deployamos nosso site. Deployamos nosso contrato. Conectamos nossa carteira. Agora precisamos chamar nosso contrato a partir do nosso site usando as credenciais da Metamask às quais temos acesso agora!
 
-Então, nosso contrato inteligente tem essa função que recupera o número total de ondas.
+Então, nosso contrato inteligente tem essa função que recupera o número total de tchauzinhos.
 
 ```solidity
   function getTotalWaves() public view returns (uint256) {
-      console.log("Temos %d de acenos!", totalWaves);
+      console.log("Temos um total de %d tchauzinhos!", totalWaves);
       return totalWaves;
   }
 ```
@@ -28,7 +28,7 @@ const wave = async () => {
         const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         let count = await wavePortalContract.getTotalWaves();
-        console.log("Recuperado o número de acenos...", count.toNumber());
+        console.log("Recuperado o número de tchauzinhos...", count.toNumber());
       } else {
         console.log("Objeto Ethereum não encontrado!");
       }
@@ -51,21 +51,21 @@ Um "Provedor" é o que usamos para conversar com os nós Ethereum. Lembra como e
 
 [Aqui está](https://docs.ethers.io/v5/api/signer/#signers) um link explicando o que é um signatário na linha 2.
 
-Conecte esta função ao nosso botão wave atualizando a prop `onClick` de `null` para `wave`:
+Conecte esta função ao nosso botão `Mandar Tchauzinho` atualizando a prop `onClick` de `null` para `wave`:
 
 ```html
 <button className="waveButton" onClick={wave}>
-    Acene para mim
+    Mandar Tchauzinho 🌟
 </button>
 ```
 
 Impressionante.
 
-Então, agora este código **quebra**. Em nosso shell do Replit, aparecerá:
+Então, agora com você clica no botão este código **quebra**. Em nosso console do Replit, aparecerá:
 
-![](https://i.imgur.com/JP2rryE.png)
+![](https://i.imgur.com/LGBalIt.png)
 
-Precisamos dessas duas variáveis!!
+Precisamos dessas duas variáveis: `contractAddress` e `contractABI` !!
 
 Então, o endereço do contrato você tem -- certo? Lembra quando você fez o deploy do seu contrato e eu disse para você salvar o endereço? É isso que está pedindo!
 
@@ -94,13 +94,13 @@ const App = () => {
   /**
    * Cria uma variável para guardar o endereço do contrato após o deploy!
    */
-  const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  const contractAddress = "0xF2482AEDB6bfF7Cc73772fCBCeAA9157ff00c287";
 ```
 
 🛠 Obtendo o conteúdo do arquivo ABI
 ---------------------------
 ** Prefere me ver passar por isso? Confira o vídeo abaixo!**
-[Tear](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)
+[Tear](https://www.loom.com/share/2a5794fca9064a059dca1989cdfa2c37)
 
 Olhe para você, já está no meio do caminho! Vamos voltar para nossa pasta do contrato inteligente.
 
@@ -132,7 +132,7 @@ import abi from "./utils/WavePortal.json";
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
 
-  const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  const contractAddress = "0xF2482AEDB6bfF7Cc73772fCBCeAA9157ff00c287";
   /**
    * Cria uma variável para referenciar o conteúdo ABI!
    */
@@ -155,7 +155,7 @@ const wave = async () => {
         const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         let count = await wavePortalContract.getTotalWaves();
-        console.log("Recuperado o número de acenos...", count.toNumber());
+        console.log("Recuperado o número de tchauzinhos...", count.toNumber());
       } else {
         console.log("Objeto Ethereum não encontrado!");
       }
@@ -165,7 +165,7 @@ const wave = async () => {
   }
   ```
 
-Depois de adicionar esse arquivo e clicar no botão "Acenar" -- **você estará lendo oficialmente os dados do seu contrato na blockchain por meio do seu cliente web**.
+Depois de adicionar esse arquivo e clicar no botão "Mandar Tchauzinho" -- **você estará lendo oficialmente os dados do seu contrato na blockchain por meio do seu cliente web**.
 
 📝 Escrevendo dados
 ---------------
@@ -185,7 +185,7 @@ const wave = async () => {
         const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
         let count = await wavePortalContract.getTotalWaves();
-        console.log("Recuperando o total de acenos...", count.toNumber());
+        console.log("Recuperado o número de tchauzinhos...", count.toNumber());
 
         /*
         * Executar o aceno a partir do contrato inteligente
@@ -225,13 +225,13 @@ As possibilidades são infinitas.
 🚨 Antes de clicar em "Próxima lição"
 --------------------------------------------
 
-*Nota: se você não fizer isso, Farza ficará muito triste :(.*
+*Nota: se você não fizer isso, Daniel ficará muito triste :(.*
 
-Personalize um pouco seu site para mostrar o número total de acenos. Talvez mostrar uma barra de carregamento enquanto a onda está sendo minerada, o que você quiser. Faça algo um pouco diferente!
+Personalize um pouco seu site para mostrar o número total de tchauzinhos. Talvez mostrar uma barra de carregamento enquanto a onda está sendo minerada, o que você quiser. Faça algo um pouco diferente!
 
-Quando sentir que está pronto, compartilhe o link do seu site conosco em #progress para que possamos conectar nossas carteiras e acenar para você :).
+Quando sentir que está pronto, compartilhe o link do seu site conosco em #progress para que possamos conectar nossas carteiras e dar tchauzinho para você :).
 
 🎁 Encerramento
 --------------------
 
-Você está a caminho de conquistar a web descentralizada. IMPRESSIONANTE. Dê uma olhada em todo o código que você escreveu nesta seção visitando [este link](https://gist.github.com/adilanchian/71890bf4fcd8f78e94c77cf694b24659) para ter certeza de que está no caminho certo com seu código!
+Você está a caminho de conquistar a web descentralizada. IMPRESSIONANTE. Dê uma olhada em todo o código que você escreveu nesta seção visitando [este link](https://gist.github.com/danicuki/882259a049077bc8c8d228405b6c8c12) para ter certeza de que está no caminho certo com seu código!

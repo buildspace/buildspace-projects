@@ -5,7 +5,7 @@ Vá em frente e feche o terminal com sua rede local da blockchain em execução,
 
 Agora vamos fazer o negócio real, implantando na blockchain real.
 
-Vá em frente e faça uma conta com Alchemy [aqui](https://alchemy.com/?r=b93d1f12b8828a57).
+Vá em frente e faça uma conta com Alchemy [aqui](https://alchemy.com/?r=a724fda46ee746e0).
 
 Desculpe por ter feito tantas contas, mas esse ecossistema é complexo e queremos aproveitar as ferramentas incríveis que existem. O que a Alchemy faz é nos dar uma maneira simples de implantar na blockchain Ethereum real.
 
@@ -26,7 +26,7 @@ O Alchemy essencialmente nos ajuda a transmitir nossa transação de criação d
 
 Isso é complicado. E, não se preocupe se você não entender completamente. À medida que você escreve mais código e realmente constrói este aplicativo, naturalmente fará mais sentido.
 
-Então, faça uma conta no Alchemy [aqui](https://alchemy.com/?r=b93d1f12b8828a57).
+Então, faça uma conta no Alchemy [aqui](https://alchemy.com/?r=a724fda46ee746e0).
 
 Confira o vídeo abaixo para ver como obter sua chave de API para uma rede de teste!
 [Tear](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283)
@@ -34,7 +34,7 @@ Confira o vídeo abaixo para ver como obter sua chave de API para uma rede de te
 🕸️ Redes de teste (Testnets)
 ------------
 
-Nós não vamos implantar na "mainnet Ethereum" (rede principal produtiva) até o final. Por quê? Porque custa $ real e não vale a pena para estragar tudo! Vamos começar na "testnet" que é um clone da "mainnet", mas usa $ falso para que possamos testar as coisas o quanto quisermos. Mas é importante saber que as redes de teste são executadas por mineradores reais e imitam cenários do mundo real.
+Nós não vamos implantar na "mainnet Ethereum" (rede principal produtiva) até o final. Por quê? Porque custa dinheiro real e não vale a pena para fazer testes e quebrar tudo! Vamos começar na "testnet" que é um clone da "mainnet", mas usa dinheiro falso para que possamos testar as coisas o quanto quisermos. Mas é importante saber que as redes de teste são executadas por mineradores reais e imitam cenários do mundo real.
 
 Isso é incrível porque podemos testar nosso aplicativo em um cenário do mundo real onde iremos:
 
@@ -71,7 +71,7 @@ Para o MyCrypto, você precisará conectar sua carteira, criar uma conta e clica
 🙃 Está com problemas para obter ETH na Testnet?
 -----------------------------------
 
-Se os links acima não funcionarem, use o comando `/faucet` no canal #faucet-request e nosso bot enviará alguns para você! Se você quiser mais, envie seu endereço de carteira pública e solte um gif engraçado. Ou eu ou alguém do projeto enviará ETH falso assim que puder. Quanto mais engraçado o gif, mais rápido você receberá uma ETH falso LOL.
+Se os links acima não funcionarem, entre no (Discord da buildspace)[https://discord.gg/Q2dtTN9prE] e use o comando `/faucet` no canal #faucet-request e que o bot enviará alguns para você! Se você quiser mais, envie seu endereço de carteira pública e solte um gif engraçado. Ou eu ou alguém do projeto enviará ETH falso assim que puder. Quanto mais engraçado o gif, mais rápido você receberá uma ETH falso LOL.
 
 📈 Faça o deploy na rede de teste Rinkeby.
 ----------------------------------
@@ -121,20 +121,20 @@ WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
 
 Copie esse endereço do contrato implantado na última linha e salve-o em algum lugar. Não o perca! Você precisará dele para o frontend mais tarde :). O seu será diferente do meu.
 
-**Você acabou de implantar seu contrato. UAAAAAAAAU.**
+**Você acabou de deployar seu contrato. UAAAAAAAAU.**
 
 Você pode pegar esse endereço e colá-lo no Etherscan [aqui](https://rinkeby.etherscan.io/). Etherscan é um lugar que apenas nos mostra o estado da blockchain e nos ajuda a ver onde está nossa transação. Você deve ver sua transação aqui :). Pode demorar um minuto para aparecer!
 
-Por exemplo, [aqui está](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA808cE84E00E97d940dBD26E) a minha!
+Por exemplo, [aqui está](https://rinkeby.etherscan.io/address/0x56A61F82549fD077E4B9F74C6Ae6a75209F43A8b) a minha!
 
 🚨 Antes de clicar em "Próxima lição"
 ----------------------------------
 
 **VOCÊ FEZ MUITO.**
 
-Você deve **twittar** que acabou de escrever e implantar seu primeiro contrato inteligente e marcar @_buildspace. Se desejar, inclua um screenshot da página do Etherscan que mostre que seu contrato está na blockchain!
+Você deve **twittar** que acabou de escrever e implantar seu primeiro contrato inteligente e marcar @web3dev_. Se desejar, inclua um screenshot da página do Etherscan que mostre que seu contrato está na blockchain!
 
-É um grande negócio você ter chegado até aqui. Você criou e implantou algo na blockchain real. **Puta merda**. **Estou orgulhoso de você.**
+É um grande negócio você ter chegado até aqui. Você criou e implantou algo na blockchain real. **Puta que la merda**. **Estamos muito orgulhosos de você.**
 
 Você agora é alguém que está realmente "fazendo" o que quase todo mundo está apenas "falando".
 
@@ -146,8 +146,8 @@ CONTINUE :).
 
 *Adote as pessoas que já twittaram sobre nós, vocês são lendas <3.*
 
-![](https://i.imgur.com/1lMrpFh.png)
+![](https://i.imgur.com/qXzAAY2.png)
 
-![](https://i.imgur.com/W9Xcn4A.png)
+![](https://i.imgur.com/9OWqnaE.png)
 
 ![](https://i.imgur.com/k3lJlls.png)
