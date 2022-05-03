@@ -41,4 +41,4 @@ Então, vá em frente e configure tudo! O fluxo de configuração deles é basta
 
 *Nota: se você não fizer isso, Yan ficará muito triste :(.*
 
-Compartilhe um link para seu site e poste-o em #progresso. Altere o CSS e o texto para o que você quiser. Talvez você queira que seja mais colorido? Talvez você não se importe com ondas e queira fazer um clone descentralizado do Twitter? Faça o que quiser, este é o seu aplicativo :).
+Compartilhe um link para seu site e poste-o em #progresso. Altere o CSS e o texto para o que você quiser. Talvez você queira que seja mais colorido? Talvez você não se importe com tchauzinhos e queira fazer um clone descentralizado do Twitter? Faça o que quiser, este é o seu aplicativo :).

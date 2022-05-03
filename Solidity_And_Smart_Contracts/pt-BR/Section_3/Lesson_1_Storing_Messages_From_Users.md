@@ -108,11 +108,11 @@ const main = async () => {
   /**
    * Deixe-me enviar alguns tchauzinhos!
    */
-  let waveTxn = await waveContract.wave("A message!");
+  let waveTxn = await waveContract.wave("Uma mensagem!");
   await waveTxn.wait(); // aguarda a transação ser minerada
 
   const [_, randomPerson] = await hre.ethers.getSigners();
-  waveTxn = await waveContract.connect(randomPerson).wave("Another message!");
+  waveTxn = await waveContract.connect(randomPerson).wave("Outra mensagem!");
   await waveTxn.wait(); // aguarda a transação ser minerada
 
   let allWaves = await waveContract.getAllWaves();
@@ -134,11 +134,11 @@ runMain();
 
 Aqui está o que eu recebo no meu terminal quando eu executo `npx hardhat run scripts/run.js`.
 
-![](https://i.imgur.com/oPKy2dP.png)
+![](https://i.imgur.com/VfA0vuK.png)
 
 Muito legal né :)?
 
-O array parece um pouco assustador, mas podemos ver os dados ao lado das palavras `waver`, `message` e `timestamp`!! Ele armazena corretamente nossas mensagens `"A message"` e `"Another message"` :).
+O array parece um pouco assustador, mas podemos ver os dados ao lado das palavras `waver`, `message` e `timestamp`!! Ele armazena corretamente nossas mensagens `"Uma mensagem"` e `"Outra mensagem"` :).
 
 Nota: "timestamp" é devolvido para nós como tipo "BigNumber". Vamos aprender a trabalhar com isso mais tarde, mas saiba que não há nada de errado aqui!
 
@@ -149,7 +149,7 @@ Parece que as coisas estão funcionando, vamos para o nosso **frontend** para qu
 
 Então, agora que atualizamos nosso contrato, precisamos fazer algumas coisas:
 
-1\. Precisamos implantá-lo novamente.
+1\. Precisamos deployar novamente.
 
 2\. Precisamos atualizar o endereço do contrato em nosso front-end.
 
@@ -159,7 +159,7 @@ Então, agora que atualizamos nosso contrato, precisamos fazer algumas coisas:
 
 Por que precisamos fazer tudo isso? Bem, é porque os contratos inteligentes são **imutáveis.** Eles não podem mudar. Eles são permanentes. Isso significa que a alteração de um contrato requer um deploy completo. Isso também **redefinirá** todas as variáveis, pois seria tratado como um novo contrato. **Isso significa que perderíamos todos os nossos dados de tchauzinhos se quiséssemos atualizar o código do contrato.**
 
-**Bônus**: no canal #general-chill-chat, alguém pode me sugerir soluções? Onde mais poderíamos armazenar nossos dados de tchauzinhos de forma a permitir a atualização do código do contrato, mas mantendo os dados originais por perto? Existem algumas soluções aqui, deixe-me saber o que você encontra!
+**Bônus**: no canal #chat-geral, alguém pode me sugerir soluções? Onde mais poderíamos armazenar nossos dados de tchauzinhos de forma a permitir a atualização do código do contrato, mas mantendo os dados originais por perto? Existem algumas soluções aqui, deixe-me saber o que você encontra!
 
 Então o que você precisa fazer agora é:
 
@@ -167,8 +167,8 @@ Então o que você precisa fazer agora é:
 
 2\. Altere `contractAddress` em `App.js` para ser o novo endereço do contrato obtido no terminal na etapa acima, assim como fizemos antes da primeira vez que implantamos.
 
-3\. Obtenha o arquivo ABI atualizado de `artifacts` tal qual fizemos antes e copie e cole no Replit como fizemos antes. Se você esqueceu como fazer isso, certifique-se de rever a lição [aqui](https://app.buildspace.so/courses/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b/lessons/LE52134606-af90-47ed-9441-980479599350 ) e assista o vídeo que fiz sobre os arquivos ABI abaixo:
-[Tear](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48).
+3\. Obtenha o arquivo ABI atualizado de `artifacts` tal qual fizemos antes e copie e cole no Replit como fizemos antes. Se você esqueceu como fazer isso, certifique-se de rever a lição anterior e/ou assista o vídeo que fizemos sobre os arquivos ABI abaixo:
+[Tear](https://www.loom.com/share/2a5794fca9064a059dca1989cdfa2c37).
 
 **Novamente -- você precisa fazer isso toda vez que alterar o código de seus contratos.**
 
@@ -180,14 +180,12 @@ Então, aqui está a nova função que adicionei ao `App.js`.
 So, here's the new function I added to `App.js`.
 
 ```javascript
-const [currentAccount, setCurrentAccount] = useState("");
-  /*
-   * Todas propriedades de estado para armazenar os tchauzinhos
-   */
+  const [currentAccount, setCurrentAccount] = useState("");
   const [allWaves, setAllWaves] = useState([]);
-  const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  const contractAddress = "0xd289A2e424dE94E9dcfFE03Ae050961Df70a4474";
+  const contractABI = abi.abi;
 
-  /*
+    /*
    * Método para consultar todos os tchauzinhos do contrato
    */
   const getAllWaves = async () => {
@@ -238,19 +236,22 @@ A última coisa que fiz foi atualizar nosso código HTML para renderizar os dado
 ```javascript
 return (
     <div className="mainContainer">
+
       <div className="dataContainer">
         <div className="header">
-          👋 Olá!
+        👋 Olá Pessoal!
         </div>
 
         <div className="bio">
-          Eu sou o farza e trabalhei em carros autônomos, bem legal, né? Conecte a sua carteira Ethereum e acene para mim!
+        Eu sou o danicuki e já trabalhei com música, sabia? Legal, né? Conecte sua carteira  Ethereum wallet e me manda um tchauzinho!
         </div>
 
         <button className="waveButton" onClick={wave}>
-          Acene para mim
+          Mandar Tchauzinho 🌟
         </button>
-
+        {/*
+        * Se não existir currentAccount, apresente este botão
+        */}
         {!currentAccount && (
           <button className="waveButton" onClick={connectWallet}>
             Conectar carteira
@@ -266,6 +267,7 @@ return (
             </div>)
         })}
       </div>
+      
     </div>
   );
   ```

@@ -43,7 +43,7 @@ contract WavePortal {
     Wave[] waves;
 
     constructor() payable {
-        console.log("Contrato construído!");
+        console.log("Contrato no ar!");
         /*
          * Define a semente inicial
          */
@@ -61,7 +61,7 @@ contract WavePortal {
          */
         seed = (block.difficulty + block.timestamp + seed) % 100;
 
-        console.log("# randômico gerado: %d", seed);
+        console.log("# randomico gerado: %d", seed);
 
         /*
          * Dá 50%  de chance do usuário ganhar o prêmio.
@@ -98,7 +98,7 @@ Aqui, eu pego dois números dados a mim pelo Solidity, `block.difficulty` e `blo
 
 Esses #s são *bastante* aleatórios. Mas, tecnicamente, tanto o `block.difficulty` quanto o `block.timestamp` podem ser controlados por um invasor sofisticado.
 
-Para tornar isso mais difícil, crio uma variável `seed` que mudará essencialmente toda vez que um usuário enviar uma nova onda. Então, combino todas essas três variáveis para gerar uma nova semente aleatória. Então eu apenas faço `% 100`, o que garantirá que o número seja reduzido para um intervalo entre 0 e 100.
+Para tornar isso mais difícil, crio uma variável `seed` que mudará essencialmente toda vez que um usuário enviar um novo tchauzinho. Então, combino todas essas três variáveis para gerar uma nova semente aleatória. Então eu apenas faço `% 100`, o que garantirá que o número seja reduzido para um intervalo entre 0 e 100.
 
 É isso! Então eu apenas escrevo uma simples declaração IF para ver se a semente é menor ou igual a 50, se for -- então o "acenador" ganha o prêmio! Então, isso significa que o "acenador" tem 50% de chance de ganhar desde que escrevemos `seed <= 50`. Você pode mudar isso para o que quiser :). Acabei de fazer 50% porque é mais fácil testar assim!!
 
@@ -111,7 +111,7 @@ De qualquer forma, ninguém vai atacar nosso pequeno aplicativo, mas quero que v
 Teste!
 -------
 
-Vamos garantir que funcione! Aqui está meu `run.js` atualizado. Neste caso, eu só quero ter certeza de que o saldo do contrato muda no caso em que a pessoa que tchauzinhou ganhou!
+Vamos garantir que funcione! Aqui está meu `run.js` atualizado. Neste caso, eu só quero ter certeza de que o saldo do contrato muda no caso em que a pessoa que deu tchauzinhou ganhou!
 
 ```javascript
 const main = async () => {
@@ -166,9 +166,9 @@ Você nem sempre terá bons tutoriais como este para orientá-lo sobre como test
 
 Então, quando executo o código acima, aqui está o que recebo:
 
-![](https://i.imgur.com/ArXRCsp.png)
+![](https://i.imgur.com/V3k35Dg.png)
 
-Legal! Funciona. Quando "79" foi gerado, o usuário não ganhou o prêmio. Mas, quando 23 foi gerado, o tchauzinho venceu! E o saldo do contrato caiu exatamente 0.0001. Ótimo :).
+Legal! Funciona. Quando "65" foi gerado, o usuário não ganhou o prêmio. Mas, quando 45 foi gerado, o tchauzinho venceu! E o saldo do contrato caiu exatamente 0.0001. Ótimo :).
 
 Cooldowns para evitar spammers
 -----------------------------

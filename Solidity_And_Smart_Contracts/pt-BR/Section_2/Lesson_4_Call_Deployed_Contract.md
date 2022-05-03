@@ -227,7 +227,7 @@ As possibilidades são infinitas.
 
 *Nota: se você não fizer isso, Daniel ficará muito triste :(.*
 
-Personalize um pouco seu site para mostrar o número total de tchauzinhos. Talvez mostrar uma barra de carregamento enquanto a onda está sendo minerada, o que você quiser. Faça algo um pouco diferente!
+Personalize um pouco seu site para mostrar o número total de tchauzinhos. Talvez mostrar uma barra de carregamento enquanto o tchauzinho está sendo minerada, o que você quiser. Faça algo um pouco diferente!
 
 Quando sentir que está pronto, compartilhe o link do seu site conosco em #progress para que possamos conectar nossas carteiras e dar tchauzinho para você :).
 

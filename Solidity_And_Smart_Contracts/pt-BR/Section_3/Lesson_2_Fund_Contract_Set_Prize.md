@@ -7,7 +7,7 @@ Você pode até mesmo enviar ETH manualmente para as pessoas cujas mensagens voc
 
 **Enviar ETH facilmente aos usuários é uma parte essencial dos contratos inteligentes e uma das partes mais legais deles**, então vamos fazer isso!
 
-Para começar, vamos dar a todos que acenarem para nós `0.0001 ETH`. Que era $ 0,31 no momento que escrevemos este artigo :). E tudo isso está acontecendo na testnet, então, é $ falso!
+Para começar, vamos dar a todos que acenarem para nós `0.0001 ETH`. Que era $ 0,28 no momento que escrevemos este artigo :). E tudo isso está acontecendo na testnet, então, é $ falso!
 
 Confira minha função `wave` atualizada em `WavePortal.sol`.
 
@@ -141,7 +141,7 @@ O que isso está dizendo é que nosso contrato não pode pagar as pessoas agora!
 
 ```solidity
 constructor() payable {
-  console.log("Fomos construídos!");
+  console.log("Contrato no ar!");
 }
 ```
 
@@ -155,7 +155,7 @@ npx hardhat run scripts/run.js
 
 Isto é o que eu recebo:
 
-![](https://i.imgur.com/8jZHL6b.png)
+![](https://i.imgur.com/JQyLSe4.png)
 
 **Maravilhoso**.
 
@@ -220,4 +220,4 @@ Teste sua função de tchauzinho e verifique se ela ainda funciona!
 🎁 Encerramento
 ----------
 
-Há algo sobre o uso de ETH real para alimentar seus contratos, certo? Dê uma olhada em [este link](https://gist.github.com/adilanchian/236fe9f3a56b73751060800cae3a780d) para ver todo o código escrito nesta seção!
+Há algo sobre o uso de ETH real para alimentar seus contratos, certo? Dê uma olhada em [este link](https://gist.github.com/danicuki/c9173f6cad19d8684a7411daded71c96) para ver todo o código escrito nesta seção!
