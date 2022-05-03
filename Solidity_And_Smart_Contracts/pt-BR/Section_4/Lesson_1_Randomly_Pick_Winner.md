@@ -1,7 +1,7 @@
 😈 Escolha um vencedor aleatoriamente
 -----------------------
 
-Então, agora, nosso código está configurado para dar 0.0001 ETH a todo aceno! Nosso contrato ficará sem dinheiro muito rápido, e então a diversão acaba e precisaríamos adicionar mais fundos ao nosso contrato. Nesta lição, mostrarei como:
+Então, agora, nosso código está configurado para dar 0.0001 ETH a todo tchauzinho! Nosso contrato ficará sem dinheiro muito rápido, e então a diversão acaba e precisaríamos adicionar mais fundos ao nosso contrato. Nesta lição, mostrarei como:
 
 1\. Escolher **aleatoriamente** um vencedor.
 
@@ -52,7 +52,7 @@ contract WavePortal {
 
     function wave(string memory _message) public {
         totalWaves += 1;
-        console.log("%s acenou!", msg.sender);
+        console.log("%s tchauzinhou!", msg.sender);
 
         waves.push(Wave(msg.sender, _message, block.timestamp));
 
@@ -111,7 +111,7 @@ De qualquer forma, ninguém vai atacar nosso pequeno aplicativo, mas quero que v
 Teste!
 -------
 
-Vamos garantir que funcione! Aqui está meu `run.js` atualizado. Neste caso, eu só quero ter certeza de que o saldo do contrato muda no caso em que a pessoa que acenou ganhou!
+Vamos garantir que funcione! Aqui está meu `run.js` atualizado. Neste caso, eu só quero ter certeza de que o saldo do contrato muda no caso em que a pessoa que tchauzinhou ganhou!
 
 ```javascript
 const main = async () => {
@@ -133,10 +133,10 @@ const main = async () => {
   /*
    * Vamos tentar acenar 2 vezes agora
    */
-  const waveTxn = await waveContract.wave("Aceno #1");
+  const waveTxn = await waveContract.wave("tchauzinho #1");
   await waveTxn.wait();
 
-  const waveTxn2 = await waveContract.wave("Aceno #2");
+  const waveTxn2 = await waveContract.wave("tchauzinho #2");
   await waveTxn2.wait();
 
   contractBalance = await hre.ethers.provider.getBalance(waveContract.address);
@@ -168,7 +168,7 @@ Então, quando executo o código acima, aqui está o que recebo:
 
 ![](https://i.imgur.com/ArXRCsp.png)
 
-Legal! Funciona. Quando "79" foi gerado, o usuário não ganhou o prêmio. Mas, quando 23 foi gerado, o aceno venceu! E o saldo do contrato caiu exatamente 0.0001. Ótimo :).
+Legal! Funciona. Quando "79" foi gerado, o usuário não ganhou o prêmio. Mas, quando 23 foi gerado, o tchauzinho venceu! E o saldo do contrato caiu exatamente 0.0001. Ótimo :).
 
 Cooldowns para evitar spammers
 -----------------------------
@@ -202,7 +202,7 @@ contract WavePortal {
 
     /*
      * Este é um endereço => uint mapping, o que significa que eu posso associar o endereço com um número!
-     * Neste caso, armazenarei o endereço com o últimoo horário que o usuário acenou.
+     * Neste caso, armazenarei o endereço com o últimoo horário que o usuário tchauzinhou.
      */
     mapping(address => uint256) public lastWavedAt;
 
@@ -229,7 +229,7 @@ contract WavePortal {
         lastWavedAt[msg.sender] = block.timestamp;
 
         totalWaves += 1;
-        console.log("%s acenou!", msg.sender);
+        console.log("%s tchauzinhou!", msg.sender);
 
         waves.push(Wave(msg.sender, _message, block.timestamp));
 

@@ -14,7 +14,7 @@ Confira minha função `wave` atualizada em `WavePortal.sol`.
 ```solidity
 function wave(string memory _message) public {
     totalWaves += 1;
-    console.log("%s acenou!", msg.sender);
+    console.log("%s tchauzinhou!", msg.sender);
 
     waves.push(Wave(msg.sender, _message, block.timestamp));
 
@@ -86,7 +86,7 @@ const main = async () => {
   );
 
   /*
-   * Enviar Aceno
+   * Enviar tchauzinho
    */
   let waveTxn = await waveContract.wave("Uma mensagem!");
   await waveTxn.wait();
@@ -215,7 +215,7 @@ Agora, quando você entrar em [Etherscan](https://rinkeby.etherscan.io/) e colar
 
 **Lembre-se de atualizar seu frontend com o novo endereço do contrato *e* o novo arquivo ABI. Caso contrário, ele irá** **quebrar**.
 
-Teste sua função de aceno e verifique se ela ainda funciona!
+Teste sua função de tchauzinho e verifique se ela ainda funciona!
 
 🎁 Encerramento
 ----------

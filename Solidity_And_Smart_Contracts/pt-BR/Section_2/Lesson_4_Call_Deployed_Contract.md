@@ -188,7 +188,7 @@ const wave = async () => {
         console.log("Recuperado o número de tchauzinhos...", count.toNumber());
 
         /*
-        * Executar o aceno a partir do contrato inteligente
+        * Executar o tchauzinho a partir do contrato inteligente
         */
         const waveTxn = await wavePortalContract.wave();
         console.log("Minerando...", waveTxn.hash);
@@ -197,7 +197,7 @@ const wave = async () => {
         console.log("Minerado -- ", waveTxn.hash);
 
         count = await wavePortalContract.getTotalWaves();
-        console.log("Total de acenos recuperado...", count.toNumber());
+        console.log("Total de tchauzinhos recuperado...", count.toNumber());
       } else {
         console.log("Objeto Ethereum não encontrado!");
       }
@@ -211,7 +211,7 @@ Bem simples, né :)?
 
 O que é incrível aqui é que, enquanto a transação está sendo minerada, você pode imprimir o hash da transação, copiar/colar no [Etherscan](https://rinkeby.etherscan.io/) e vê-lo sendo processado em tempo real: ).
 
-Quando executarmos isso, você verá que a contagem total de acenos é aumentada em 1. Você também verá que a Metamask aparece e nos pede para pagar "gas" que pagamos usando nosso $ falso. Há um ótimo artigo sobre isso [aqui](https://ethereum.org/en/developers/docs/gas/). Tente descobrir o que é o **gas** :).
+Quando executarmos isso, você verá que a contagem total de tchauzinhos é aumentada em 1. Você também verá que a Metamask aparece e nos pede para pagar "gas" que pagamos usando nosso $ falso. Há um ótimo artigo sobre isso [aqui](https://ethereum.org/en/developers/docs/gas/). Tente descobrir o que é o **gas** :).
 
 🎉 Sucesso
 ----------

@@ -11,7 +11,7 @@ A blockchain = Pense nela como um provedor de nuvem, como a AWS, mas que não pe
 
 Um contrato inteligente = algo como o código do nosso servidor com diferentes funções e que as pessoas podem acessar.
 
-Então, aqui está nosso contrato atualizado que podemos usar para "armazenar" os acenos.
+Então, aqui está nosso contrato atualizado que podemos usar para "armazenar" os tchauzinhos.
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -45,7 +45,7 @@ Então, é assim que você escreve uma função no Solidity. E também adicionam
 
 Nós também fazemos alguma mágica aqui com `msg.sender`. Este é o endereço da carteira da pessoa que chamou a função. Isso é incrível! É como autenticação embutida. Sabemos exatamente quem chamou a função porque, para chamar uma função de um contrato inteligente você precisa estar conectado com uma carteira válida!
 
-No futuro, podemos escrever funções que apenas determinados endereços de carteira podem acessar. Por exemplo, podemos alterar esta função para que apenas nosso endereço tenha permissão para enviar um aceno. Ou, talvez, tê-lo apenas onde seus amigos podem acenar para você!
+No futuro, podemos escrever funções que apenas determinados endereços de carteira podem acessar. Por exemplo, podemos alterar esta função para que apenas nosso endereço tenha permissão para enviar um tchauzinho. Ou, talvez, tê-lo apenas onde seus amigos podem acenar para você!
 
 ✅ Atualizando run.js para chamar nossas funções
 ---------------------------------------
@@ -124,7 +124,7 @@ await waveTxn.wait();
 waveCount = await waveContract.getTotalWaves();
 ```
 
-Basicamente, precisamos chamar manualmente nossas funções! Assim como faríamos com qualquer API normal. Primeiro chamamos a função para pegar o número total de acenos. Então, fazemos um aceno. Finalmente, pegamos o `waveCount` mais uma vez para ver se mudou.
+Basicamente, precisamos chamar manualmente nossas funções! Assim como faríamos com qualquer API normal. Primeiro chamamos a função para pegar o número total de tchauzinhos. Então, fazemos um tchauzinho. Finalmente, pegamos o `waveCount` mais uma vez para ver se mudou.
 
 Execute o script como faria normalmente:
 
@@ -138,10 +138,10 @@ Aqui está minha saída:
 
 Muito legal, hein :)?
 
-Você também pode ver o endereço da carteira que acenou igual ao endereço que implantou o contrato. Eu acenei para mim mesmo!
+Você também pode ver o endereço da carteira que tchauzinhou igual ao endereço que implantou o contrato. Eu acenei para mim mesmo!
 
 Então nós:\
-1\. Chamamos nossa função de aceno.\
+1\. Chamamos nossa função de tchauzinho.\
 2\. Mudamos a variável de estado.\
 3\. Lemos o novo valor da variável.
 
@@ -153,7 +153,7 @@ Muito em breve, poderemos chamar estas funções a partir de nosso aplicativo de
 🤝 Testar outros usuários
 --------------------
 
-Então, provavelmente queremos que outra pessoa além de nós nos envie um aceno, certo? Seria muito chato se só nós mesmos pudéssemos dar tchauzinhos!! Queremos fazer nosso site **multiplayer***!
+Então, provavelmente queremos que outra pessoa além de nós nos envie um tchauzinho, certo? Seria muito chato se só nós mesmos pudéssemos dar tchauzinhos!! Queremos fazer nosso site **multiplayer***!
 
 Confira. Acrescentamos algumas linhas no final da função. Não vamos explicar muito (mas por favor, faça perguntas no canal #geral-chat). Basicamente, é assim que podemos simular outras pessoas chamando nossas funções :). Fique de olho nos endereços das carteiras em seu terminal uma vez que você mudar e executar o código.
 
@@ -208,6 +208,6 @@ waveCount = await waveContract.getTotalWaves();
 
 *Note: se você não fizer isso, Daniel ficará muito triste :(.*
 
-Personalize um pouco seu código!! Talvez você queira armazenar algo mais? Queremos que você faça bagunça. Talvez você queira armazenar o endereço do remetente em uma matriz? Talvez você queira armazenar um mapa de endereços e contagens de acenos para que você mantenha um registro de quem está acenando mais para você? Mesmo que você apenas mude os nomes das variáveis e funções para ser algo que você ache interessante, isso é um grande negócio. Tente não copiar nosso código exatamente! Pense em seu site final e no tipo de funcionalidade que você deseja. Construa a funcionalidade **que você quer***.
+Personalize um pouco seu código!! Talvez você queira armazenar algo mais? Queremos que você faça bagunça. Talvez você queira armazenar o endereço do remetente em uma matriz? Talvez você queira armazenar um mapa de endereços e contagens de tchauzinhos para que você mantenha um registro de quem está acenando mais para você? Mesmo que você apenas mude os nomes das variáveis e funções para ser algo que você ache interessante, isso é um grande negócio. Tente não copiar nosso código exatamente! Pense em seu site final e no tipo de funcionalidade que você deseja. Construa a funcionalidade **que você quer***.
 
 Uma vez que tudo tenha terminado aqui, não deixe de publicar um _screenshot_ do seu terminal em #progresso.

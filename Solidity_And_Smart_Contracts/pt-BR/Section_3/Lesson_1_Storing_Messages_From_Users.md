@@ -3,11 +3,11 @@
 
 Então, agora temos um aplicativo web completo que pode conversar com a blockchain!
 
-Agora, se você se lembra, queremos que nosso aplicativo final seja um lugar onde as pessoas possam vir acenar para nós e nos enviar uma mensagem. Também queremos mostrar todas os acenos/mensagens anteriores que recebemos. É isso que faremos nesta aula!
+Agora, se você se lembra, queremos que nosso aplicativo final seja um lugar onde as pessoas possam vir acenar para nós e nos enviar uma mensagem. Também queremos mostrar todas os tchauzinhos/mensagens anteriores que recebemos. É isso que faremos nesta aula!
 
 Então, no final das aulas, queremos:
 
-1\. Permitir que os usuários enviem uma mensagem junto com o aceno.
+1\. Permitir que os usuários enviem uma mensagem junto com o tchauzinho.
 
 2\. Ter esses dados salvos de alguma forma na blockchain.
 
@@ -36,14 +36,14 @@ contract WavePortal {
      * Um struct é basicamente um tipo de dados customizado onde nós podemos customizar o que queremos armazenar dentro dele
      */
     struct Wave {
-        address waver; // Endereço do usuário que aceno
+        address waver; // Endereço do usuário que deu tchauzinho
         string message; // Mensagem que o usuário envio
-        uint256 timestamp; // Data/hora de quando o usuário acenou.
+        uint256 timestamp; // Data/hora de quando o usuário tchauzinhou.
     }
 
     /*
      * Declara a variável waves que permite armazenar um array de structs.
-     * Isto que me permite armazenar todos os acenos que qualquer um tenha me enviado!
+     * Isto que me permite armazenar todos os tchauzinhos que qualquer um tenha me enviado!
      */
     Wave[] waves;
 
@@ -52,14 +52,14 @@ contract WavePortal {
     }
 
     /*
-     * Você notará que eu mudei um pouco a função de aceno e agora requer uma string chamada _message. Esta é a mensagem que o nosso usuário enviou pelo frontend!
+     * Você notará que eu mudei um pouco a função de tchauzinho e agora requer uma string chamada _message. Esta é a mensagem que o nosso usuário enviou pelo frontend!
      */
     function wave(string memory _message) public {
         totalWaves += 1;
-        console.log("%s acenou com a mensagem %s", msg.sender, _message);
+        console.log("%s tchauzinhou com a mensagem %s", msg.sender, _message);
 
         /*
-         * Aqui é onde eu efetivamenet armazeno o aceno no array.
+         * Aqui é onde eu efetivamenet armazeno o tchauzinho no array.
          */
         waves.push(Wave(msg.sender, _message, block.timestamp));
 
@@ -70,8 +70,8 @@ contract WavePortal {
     }
 
     /*
-     * Adicionei uma função getAllWaves que retornará os acenos.
-     * Isso permitirá recuperar os acenos a partir do nosso site!
+     * Adicionei uma função getAllWaves que retornará os tchauzinhos.
+     * Isso permitirá recuperar os tchauzinhos a partir do nosso site!
      */
     function getAllWaves() public view returns (Wave[] memory) {
         return waves;
@@ -80,7 +80,7 @@ contract WavePortal {
     function getTotalWaves() public view returns (uint256) {
         // Opcional: Adicione esta linha se você quer ver o contrato imprimir o valor!
         // Também imprimirá em run.js.
-        console.log("Temos %d acenos no total!", totalWaves);
+        console.log("Temos %d tchauzinhos no total!", totalWaves);
         return totalWaves;
     }
 }
@@ -106,7 +106,7 @@ const main = async () => {
   console.log(waveCount.toNumber());
 
   /**
-   * Deixe-me enviar alguns acenos!
+   * Deixe-me enviar alguns tchauzinhos!
    */
   let waveTxn = await waveContract.wave("A message!");
   await waveTxn.wait(); // aguarda a transação ser minerada
@@ -142,7 +142,7 @@ O array parece um pouco assustador, mas podemos ver os dados ao lado das palavra
 
 Nota: "timestamp" é devolvido para nós como tipo "BigNumber". Vamos aprender a trabalhar com isso mais tarde, mas saiba que não há nada de errado aqui!
 
-Parece que as coisas estão funcionando, vamos para o nosso **frontend** para que possamos ver todos os nossos acenos em nosso site!
+Parece que as coisas estão funcionando, vamos para o nosso **frontend** para que possamos ver todos os nossos tchauzinhos em nosso site!
 
 ✈️ Re-deploy
 ------------
@@ -157,9 +157,9 @@ Então, agora que atualizamos nosso contrato, precisamos fazer algumas coisas:
 
 **As pessoas constantemente se esquecem de fazer esses 3 passos quando mudam de contrato. Não esqueça rs.**
 
-Por que precisamos fazer tudo isso? Bem, é porque os contratos inteligentes são **imutáveis.** Eles não podem mudar. Eles são permanentes. Isso significa que a alteração de um contrato requer um deploy completo. Isso também **redefinirá** todas as variáveis, pois seria tratado como um novo contrato. **Isso significa que perderíamos todos os nossos dados de acenos se quiséssemos atualizar o código do contrato.**
+Por que precisamos fazer tudo isso? Bem, é porque os contratos inteligentes são **imutáveis.** Eles não podem mudar. Eles são permanentes. Isso significa que a alteração de um contrato requer um deploy completo. Isso também **redefinirá** todas as variáveis, pois seria tratado como um novo contrato. **Isso significa que perderíamos todos os nossos dados de tchauzinhos se quiséssemos atualizar o código do contrato.**
 
-**Bônus**: no canal #general-chill-chat, alguém pode me sugerir soluções? Onde mais poderíamos armazenar nossos dados de acenos de forma a permitir a atualização do código do contrato, mas mantendo os dados originais por perto? Existem algumas soluções aqui, deixe-me saber o que você encontra!
+**Bônus**: no canal #general-chill-chat, alguém pode me sugerir soluções? Onde mais poderíamos armazenar nossos dados de tchauzinhos de forma a permitir a atualização do código do contrato, mas mantendo os dados originais por perto? Existem algumas soluções aqui, deixe-me saber o que você encontra!
 
 Então o que você precisa fazer agora é:
 
@@ -182,13 +182,13 @@ So, here's the new function I added to `App.js`.
 ```javascript
 const [currentAccount, setCurrentAccount] = useState("");
   /*
-   * Todas propriedades de estado para armazenar os acenos
+   * Todas propriedades de estado para armazenar os tchauzinhos
    */
   const [allWaves, setAllWaves] = useState([]);
   const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
 
   /*
-   * Método para consultar todos os acenos do contrato
+   * Método para consultar todos os tchauzinhos do contrato
    */
   const getAllWaves = async () => {
     try {
@@ -229,7 +229,7 @@ const [currentAccount, setCurrentAccount] = useState("");
   }
   ```
 
-Bastante simples e muito semelhante às coisas em que trabalhamos anteriormente, como estamos nos conectando ao provedor, obtendo o signatário e nos conectando ao contrato! Eu faço um pouco de mágica aqui percorrendo todas os nossos acenos e salvando-os em uma matriz que podemos usar mais tarde. Sinta-se à vontade para realizar console.log na variável `waves` para ver o que você obtém se estiver tendo problemas.
+Bastante simples e muito semelhante às coisas em que trabalhamos anteriormente, como estamos nos conectando ao provedor, obtendo o signatário e nos conectando ao contrato! Eu faço um pouco de mágica aqui percorrendo todas os nossos tchauzinhos e salvando-os em uma matriz que podemos usar mais tarde. Sinta-se à vontade para realizar console.log na variável `waves` para ver o que você obtém se estiver tendo problemas.
 
 Mas onde chamamos essa nova função `getAllWaves()`? Bem -- queremos chamá-la quando tivermos certeza de que o usuário tem uma carteira conectada com uma conta autorizada porque precisamos de uma conta autorizada para chamá-la! Dica: você tem que chamar esta função em algum lugar em `checkIfWalletIsConnected()`. Vou deixar para você descobrir. Lembre-se, queremos chamá-la quando tivermos certeza de que temos uma conta conectada + autorizada!
 
@@ -270,7 +270,7 @@ return (
   );
   ```
 
-Basicamente, eu apenas passo pelo `allWaves` e crio novas divs para cada aceno e mostro esses dados em tela.
+Basicamente, eu apenas passo pelo `allWaves` e crio novas divs para cada tchauzinho e mostro esses dados em tela.
 
 🙀 Ah!! `wave()` está quebrado!
 ---------------------------

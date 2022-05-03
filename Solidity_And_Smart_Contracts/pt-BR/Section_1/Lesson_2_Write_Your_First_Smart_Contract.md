@@ -5,7 +5,7 @@
 
 Vamos pular direto para o nosso projeto.
 
-Vamos construir um contrato inteligente que nos permita enviar um 👋 ao nosso contrato e acompanhar o número total de acenos. Isso será útil porque em seu site você pode querer acompanhar este #! Sinta-se à vontade para alterar isso para se adequar ao seu caso de uso.
+Vamos construir um contrato inteligente que nos permita enviar um 👋 ao nosso contrato e acompanhar o número total de tchauzinhos. Isso será útil porque em seu site você pode querer acompanhar este #! Sinta-se à vontade para alterar isso para se adequar ao seu caso de uso.
 
 Crie um arquivo chamado **`WavePortal.sol`** no diretório **`contracts`**. A estrutura de arquivos é super importante ao usar o Hardhat, então, tenha cuidado!
 

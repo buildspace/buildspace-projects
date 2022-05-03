@@ -26,7 +26,7 @@ Bem, basicamente a Metamask tentará estimar quanto gas a transação usará. Ma
 
 Estimar o gas é um problema difícil e uma solução fácil para ele (para que nossos usuários não fiquem bravos quando uma transação falha) é definir um limite.
 
-No App.js, alterei a linha que envia o aceno para
+No App.js, alterei a linha que envia o tchauzinho para
 
 ```solidity
 wavePortalContract.wave(message, { gasLimit: 300000 })
@@ -43,7 +43,7 @@ Quando seu contrato foi implantado e você o está testando com sua interface do
 
 Para validar, você pode abrir seu endereço de contrato no [Rinkeby Etherscan](https://rinkeby.etherscan.io/) e visualizar as transações que ocorreram. Você encontrará todo tipo de informação útil aqui, incluindo o método que foi chamado, que neste caso é `Wave`. Se você clicar em uma transação `Wave`, você notará que na propriedade `To`, ela identificará que o endereço do contrato foi chamado. Se o usuário ganhou um prêmio, você notará nesse campo que o contrato transferiu 0.0001 ETH do endereço do contrato para o endereço da sua conta.
 
-Observe que o `Value` da transação ainda é 0 ETH, pois o usuário nunca pagou nada para iniciar o aceno. A transferência interna de ETH por um contrato inteligente é chamada de "transação interna".
+Observe que o `Value` da transação ainda é 0 ETH, pois o usuário nunca pagou nada para iniciar o tchauzinho. A transferência interna de ETH por um contrato inteligente é chamada de "transação interna".
 
 🎤 Eventos
 ---------
@@ -56,7 +56,7 @@ emit NewWave(msg.sender, block.timestamp, _message);
 
 Em um nível básico, os eventos são mensagens que nossos contratos inteligentes lançam que podemos capturar em nosso cliente em tempo real.
 
-Vamos dizer que estou relaxando no seu site e acabei de abri-lo. Enquanto estou fazendo isso, seu outro amigo Jeremy acena para você. No momento, a única maneira de ver o aceno de Jeremy é atualizando minha página. Isso parece ruim. Não seria legal se eu pudesse saber que aquele contrato foi atualizado e ter minha UI magicamente atualizada?
+Vamos dizer que estou relaxando no seu site e acabei de abri-lo. Enquanto estou fazendo isso, seu outro amigo Jeremy acena para você. No momento, a única maneira de ver o tchauzinho de Jeremy é atualizando minha página. Isso parece ruim. Não seria legal se eu pudesse saber que aquele contrato foi atualizado e ter minha UI magicamente atualizada?
 
 Mesmo agora, é meio chato quando nós mesmos enviamos uma mensagem, e depois temos que esperar para que ela seja minerada e depois atualizar a página para ver toda a lista atualizada de mensagens, certo? Vamos corrigir isso.
 
