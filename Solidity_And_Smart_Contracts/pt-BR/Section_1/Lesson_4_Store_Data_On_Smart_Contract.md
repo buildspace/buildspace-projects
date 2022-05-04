@@ -3,9 +3,9 @@
 
 A partir daqui, vamos adicionar alguns detalhes ao nosso contrato.
 
-Queremos ser capazes de deixar alguém acenar para nós e depois armazenar esse tchauzinho.
+Queremos ser capazes de deixar alguém mandar um tchauzinho para nós e depois armazenar esse tchauzinho.
 
-Então, a primeira coisa que precisamos é de uma função que eles possam usar para acenar!
+Então, a primeira coisa que precisamos é de uma função que eles possam usar para mandar um tchauzinho!
 
 A blockchain = Pense nela como um provedor de nuvem, como a AWS, mas que não pertence a ninguém. É executada pelo poder computacional de máquinas de mineração em todo o mundo. Normalmente essas pessoas são chamadas de mineradores e nós os pagamos para executar nosso código!
 
@@ -45,7 +45,7 @@ Então, é assim que você escreve uma função no Solidity. E também adicionam
 
 Nós também fazemos alguma mágica aqui com `msg.sender`. Este é o endereço da carteira da pessoa que chamou a função. Isso é incrível! É como autenticação embutida. Sabemos exatamente quem chamou a função porque, para chamar uma função de um contrato inteligente você precisa estar conectado com uma carteira válida!
 
-No futuro, podemos escrever funções que apenas determinados endereços de carteira podem acessar. Por exemplo, podemos alterar esta função para que apenas nosso endereço tenha permissão para enviar um tchauzinho. Ou, talvez, tê-lo apenas onde seus amigos podem acenar para você!
+No futuro, podemos escrever funções que apenas determinados endereços de carteira podem acessar. Por exemplo, podemos alterar esta função para que apenas nosso endereço tenha permissão para enviar um tchauzinho. Ou, talvez, tê-lo apenas onde seus amigos podem mandar um tchauzinho para você!
 
 ✅ Atualizando run.js para chamar nossas funções
 ---------------------------------------

@@ -172,7 +172,7 @@ Depois de adicionar esse arquivo e clicar no botão "Mandar Tchauzinho" -- **voc
 
 O código para gravar dados em nosso contrato não é muito diferente de ler dados. A principal diferença é que quando queremos escrever novos dados em nosso contrato, precisamos notificar os mineradores para que a transação possa ser minerada. Quando lemos dados, não precisamos fazer isso. As leituras são "gratuitas" porque tudo o que estamos fazendo é ler da blockchain, **não a estamos alterando. **
 
-Aqui está o código para acenar:
+Aqui está o código para mandar um tchauzinho:
 
 ```javascript
 const wave = async () => {

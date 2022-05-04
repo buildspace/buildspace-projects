@@ -1,13 +1,13 @@
-💸 Envie ETH para pessoas que acenaram para você
+💸 Envie ETH para pessoas que mandaram um tchauzinho para você
 ----------------------------------------
 
-Agora o que queremos fazer é enviar um pouco de ETH para as pessoas que acenaram para nós! Por exemplo, talvez você queira fazer isso onde há 1% de chance de alguém ganhar $5 acenando para você. Ou talvez você queira fazer com que todos que acenem para você recebam $0,01 em ETH LOL.
+Agora o que queremos fazer é enviar um pouco de ETH para as pessoas que mandaram um tchauzinho para nós! Por exemplo, talvez você queira fazer isso onde há 1% de chance de alguém ganhar $5 acenando para você. Ou talvez você queira fazer com que todos que acenem para você recebam $0,01 em ETH LOL.
 
 Você pode até mesmo enviar ETH manualmente para as pessoas cujas mensagens você mais gostou. Talvez eles te enviaram uma música incrível!!
 
 **Enviar ETH facilmente aos usuários é uma parte essencial dos contratos inteligentes e uma das partes mais legais deles**, então vamos fazer isso!
 
-Para começar, vamos dar a todos que acenarem para nós `0.0001 ETH`. Que era $ 0,28 no momento que escrevemos este artigo :). E tudo isso está acontecendo na testnet, então, é $ falso!
+Para começar, vamos dar a todos que mandarem um tchauzinho para nós `0.0001 ETH`. Que era $ 0,28 no momento que escrevemos este artigo :). E tudo isso está acontecendo na testnet, então, é $ falso!
 
 Confira minha função `wave` atualizada em `WavePortal.sol`.
 

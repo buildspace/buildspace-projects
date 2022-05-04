@@ -3,7 +3,7 @@
 
 Então, agora temos um aplicativo web completo que pode conversar com a blockchain!
 
-Agora, se você se lembra, queremos que nosso aplicativo final seja um lugar onde as pessoas possam vir acenar para nós e nos enviar uma mensagem. Também queremos mostrar todas os tchauzinhos/mensagens anteriores que recebemos. É isso que faremos nesta aula!
+Agora, se você se lembra, queremos que nosso aplicativo final seja um lugar onde as pessoas possam vir mandar um tchauzinho para nós e nos enviar uma mensagem. Também queremos mostrar todas os tchauzinhos/mensagens anteriores que recebemos. É isso que faremos nesta aula!
 
 Então, no final das aulas, queremos:
 
@@ -11,7 +11,7 @@ Então, no final das aulas, queremos:
 
 2\. Ter esses dados salvos de alguma forma na blockchain.
 
-3\. Mostrar esses dados em nosso site para que qualquer pessoa possa ver todas as pessoas que acenaram para nós e suas mensagens.
+3\. Mostrar esses dados em nosso site para que qualquer pessoa possa ver todas as pessoas que mandaram tchau para nós e suas mensagens.
 
 Confira meu código de contrato inteligente atualizado. Eu adicionei muitos comentários aqui para ajudá-lo a ver o que mudou :).
 
@@ -277,7 +277,7 @@ Basicamente, eu apenas passo pelo `allWaves` e crio novas divs para cada tchauzi
 🙀 Ah!! `wave()` está quebrado!
 ---------------------------
 
-Então, em `App.js`, nossa função `wave()` não funciona mais! Se tentarmos acenar, ele nos dará um erro porque está esperando que uma mensagem seja enviada por ele! Por enquanto, você pode corrigir isso codificando uma mensagem como:
+Então, em `App.js`, nossa função `wave()` não funciona mais! Se tentarmos mandar um tchauzinho, ele nos dará um erro porque está esperando que uma mensagem seja enviada por ele! Por enquanto, você pode corrigir isso codificando uma mensagem como:
 
 ```
 const waveTxn = await wavePortalContract.wave("esta é uma mensagem")

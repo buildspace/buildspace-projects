@@ -7,11 +7,11 @@ Você tem todas as funcionalidades principais! Agora, é hora de realmente torna
 
 Aliás, enquanto estamos testando -- você pode querer mudar o tempo de espera do seu contrato para 30 segundos em vez de 15 minutos assim:
 
-```
-require(lastWavedAt[msg.sender] + 30 seconds < block.timestamp, "Deve aguardar 30 segundos antes de acenar novamente.");
+```solidity
+require(lastWavedAt[msg.sender] + 30 seconds < block.timestamp, "Deve aguardar 30 segundos antes de mandar um tchauzinho novamente.");
 ```
 
-Por quê? Bem, pode ser irritante só conseguir acenar a cada 15 minutos enquanto você está testando!
+Por quê? Bem, pode ser irritante só conseguir mandar um tchauzinho a cada 15 minutos enquanto você está testando!
 
 Então, eu mudei o meu para 30 segundos!
 
@@ -20,7 +20,7 @@ Ao implantar seu contrato **final**, você pode definir o que quiser!
 ⛽️ Definindo um limite de gas
 --------------------
 
-Agora, quando você tenta "acenar", pode perceber que às vezes recebe um erro que se parece com "out of gas". Por quê?
+Agora, quando você tenta "mandar um tchauzinho", pode perceber que às vezes recebe um erro que se parece com "out of gas". Por quê?
 
 Bem, basicamente a Metamask tentará estimar quanto gas a transação usará. Mas, às vezes calcula errado! Nesse caso, fica mais difícil pelo fato de termos alguma aleatoriedade envolvida. Portanto, se o contrato enviar um prêmio, o waver precisará pagar mais gas, pois estamos executando mais código.
 

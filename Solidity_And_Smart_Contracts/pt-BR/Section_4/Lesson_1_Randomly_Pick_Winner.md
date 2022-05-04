@@ -57,7 +57,7 @@ contract WavePortal {
         waves.push(Wave(msg.sender, _message, block.timestamp));
 
         /*
-         * Gera uma nova semente para o próximo que acenar
+         * Gera uma nova semente para o próximo que mandar um tchauzinho
          */
         seed = (block.difficulty + block.timestamp + seed) % 100;
 
@@ -131,7 +131,7 @@ const main = async () => {
   );
 
   /*
-   * Vamos tentar acenar 2 vezes agora
+   * Vamos tentar mandar um tchauzinho 2 vezes agora
    */
   const waveTxn = await waveContract.wave("tchauzinho #1");
   await waveTxn.wait();
@@ -207,7 +207,7 @@ contract WavePortal {
     mapping(address => uint256) public lastWavedAt;
 
     constructor() payable {
-        console.log("Contrato construído!");
+        console.log("Contrato construido!");
         /*
          * Define a semente inicial
          */
@@ -234,7 +234,7 @@ contract WavePortal {
         waves.push(Wave(msg.sender, _message, block.timestamp));
 
         /*
-         * Gera uma nova semente para o próximo usuário que acenar
+         * Gera uma nova semente para o próximo usuário que mandar um tchauzinho
          */
         seed = (block.difficulty + block.timestamp + seed) % 100;
 
@@ -262,6 +262,6 @@ contract WavePortal {
     }
 }
 ```
-Tente executar `npx hardhat run scripts/run.js` e veja a mensagem de erro que você recebe se tentar acenar duas vezes seguidas sem esperar 15 minutos :).
+Tente executar `npx hardhat run scripts/run.js` e veja a mensagem de erro que você recebe se tentar mandar um tchauzinho duas vezes seguidas sem esperar 15 minutos :).
 
 Bam! E é assim que você constrói cooldowns!
