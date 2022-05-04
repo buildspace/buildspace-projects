@@ -251,7 +251,7 @@ Também adicionei um botão para que possamos chamar nossa função `connectWall
 -----------
 
 Agora, é hora da mágica! Confira o vídeo abaixo:
-[Tear](https://www.loom.com/share/2a5794fca9064a059dca1989cdfa2c37?t=0)
+[Loom](https://www.loom.com/share/2a5794fca9064a059dca1989cdfa2c37?t=0)
 
 🚨 Obrigatório: Antes de clicar em "Próxima lição"
 --------------------------------------------

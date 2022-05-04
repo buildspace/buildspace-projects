@@ -29,7 +29,7 @@ Isso é complicado. E, não se preocupe se você não entender completamente. À
 Então, faça uma conta no Alchemy [aqui](https://alchemy.com/?r=a724fda46ee746e0).
 
 Confira o vídeo abaixo para ver como obter sua chave de API para uma rede de teste!
-[Tear](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933)
+[Loom](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933)
 
 🕸️ Redes de teste (Testnets)
 ------------

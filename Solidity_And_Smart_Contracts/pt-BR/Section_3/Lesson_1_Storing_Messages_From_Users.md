@@ -168,7 +168,7 @@ Então o que você precisa fazer agora é:
 2\. Altere `contractAddress` em `App.js` para ser o novo endereço do contrato obtido no terminal na etapa acima, assim como fizemos antes da primeira vez que implantamos.
 
 3\. Obtenha o arquivo ABI atualizado de `artifacts` tal qual fizemos antes e copie e cole no Replit como fizemos antes. Se você esqueceu como fazer isso, certifique-se de rever a lição anterior e/ou assista o vídeo que fizemos sobre os arquivos ABI abaixo:
-[Tear](https://www.loom.com/share/2a5794fca9064a059dca1989cdfa2c37).
+[Loom](https://www.loom.com/share/2a5794fca9064a059dca1989cdfa2c37).
 
 **Novamente -- você precisa fazer isso toda vez que alterar o código de seus contratos.**
 
