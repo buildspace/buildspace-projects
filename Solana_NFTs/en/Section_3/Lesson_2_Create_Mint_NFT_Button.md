@@ -143,11 +143,11 @@ In your `CandyMachine` component, have your "Mint" button call the `mintToken` f
 
 ```jsx
 return (
-    // Only show this if machineStats is available
-    machineStats && (
+    // Only show this if candyMachine and candyMachine.state is available
+    candyMachine && candyMachine.state && (
       <div className="machine-container">
-        <p>{`Drop Date: ${machineStats.goLiveDateTimeString}`}</p>
-        <p>{`Items Minted: ${machineStats.itemsRedeemed} / ${machineStats.itemsAvailable}`}</p>
+        <p>{`Drop Date: ${candyMachine.state.goLiveDateTimeString}`}</p>
+        <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
         <button className="cta-button mint-button" onClick={mintToken}>
             Mint NFT
         </button>
