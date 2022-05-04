@@ -185,7 +185,7 @@ Isso é complicado. E, não se preocupe se você não entendeu completamente. En
 Então, crie uma conta com o Alchemy [aqui](https://alchemy.com/?r=b93d1f12b8828a57).
 
 E depois dê uma olhada no meu vídeo abaixo para aprender como pegar sua API key para uma testnet:
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0)
+[Loom](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933?t=0)
 )
 
 ## 🕸 Testnets

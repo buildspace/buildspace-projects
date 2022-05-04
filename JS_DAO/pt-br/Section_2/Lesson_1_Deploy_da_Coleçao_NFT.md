@@ -46,7 +46,7 @@ Então, faça uma conta na Alchemy [aqui](https://alchemy.com/?r=b93d1f12b8828a
 
 Veja esse vídeo abaixo para ver como acessar sua chave API para uma **testnet**! Não se confunda criando uma chave para a mainnet, **nós queremos uma chave para a testnet.**
 
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283)
+[Loom](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933)
 
 Você deve ter por agora os três itens no seu arquivo `.env`!
 
