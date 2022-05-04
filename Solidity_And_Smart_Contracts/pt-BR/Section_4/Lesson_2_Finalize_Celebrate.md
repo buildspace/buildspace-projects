@@ -56,7 +56,7 @@ emit NewWave(msg.sender, block.timestamp, _message);
 
 Em um nível básico, os eventos são mensagens que nossos contratos inteligentes lançam que podemos capturar em nosso cliente em tempo real.
 
-Vamos dizer que estou relaxando no seu site e acabei de abri-lo. Enquanto estou fazendo isso, seu outro amigo Jeremy acena para você. No momento, a única maneira de ver o tchauzinho de Jeremy é atualizando minha página. Isso parece ruim. Não seria legal se eu pudesse saber que aquele contrato foi atualizado e ter minha UI magicamente atualizada?
+Vamos dizer que estamos relaxando no seu site e acabei de abri-lo. Enquanto estamos fazendo isso, seu outro amigo Jeremy manda um tchauzinho para você. No momento, a única maneira de ver o tchauzinho de Jeremy é atualizando minha página. Isso parece ruim. Não seria legal se eu pudesse saber que aquele contrato foi atualizado e ter minha UI magicamente atualizada?
 
 Mesmo agora, é meio chato quando nós mesmos enviamos uma mensagem, e depois temos que esperar para que ela seja minerada e depois atualizar a página para ver toda a lista atualizada de mensagens, certo? Vamos corrigir isso.
 
@@ -181,28 +181,28 @@ Certifique-se de ter o .env em seu .gitignore.
 
 Você já fez isso. Você implantou um contrato inteligente e escreveu um aplicativo Web que fala com ele. Essas são duas habilidades que vão mudar ainda mais o mundo à medida que avançamos para uma realidade em que os aplicativos web descentralizados se tornam mais comuns.
 
-Espero que esta tenha sido uma introdução divertida à web3 e espero que você continue sua jornada.
+Esperamos que esta tenha sido uma introdução divertida à web3 e esperamos que você continue sua jornada.
 
-Manterei todos informados sobre novos projetos no Discord :).
+Manteremos todos informados sobre novos projetos no Discord :).
 
 🤟 Sua NFT!
 -----------
 
-Enviaremos sua NFT por airdrop dentro de uma hora e enviaremos um e-mail assim que ela estiver em sua carteira. Está rodando em um cron job! Se você não receber o e-mail em 24 horas, por favor, envie-nos uma mensagem em #feedback e marque @ **alec#8853**.
+Enviaremos sua NFT por airdrop nos próximos dias e enviaremos um e-mail assim que ela estiver em sua carteira. Está rodando em um cron job! Se você não receber o e-mail em 24 horas, por favor, envie-nos uma mensagem em #feedback e marque @ **danicuki#5520**.
 
 
 🚨 Antes de sair...
 -------------------------
-Acesse #showcase no Discord e nos mostre seu produto final com o qual podemos mexer :).
+Acesse o canal #sites na aba divulgaão no Discord e nos mostre seu produto final com o qual podemos mexer :).
 
 Além disso, twitte seu projeto final e mostre ao mundo sua criação épica! O que você fez não foi nada fácil. Talvez até faça um pequeno vídeo mostrando seu projeto e o adicione ao tweet. Faça seu tweet ficar bonito e mostre :).
 
-E se você quiser, marque @_buildspace :). Vamos dar RT. Além disso, nos dá muita motivação sempre que vemos as pessoas enviarem seus projetos.
+E se você quiser, marque @web3dev_ :). Vamos dar RT. Além disso, nos dá muita motivação sempre que vemos as pessoas enviarem seus projetos.
 
-Por fim, o que também seria incrível é se você nos dissesse em #feedback como gostou deste projeto e da estrutura do projeto. O que você mais gostou no buildspace? O que gostaria que mudássemos para projetos futuros? Seu feedback seria incrível!!
+Por fim, o que também seria incrível é se você nos desse uma #sugestão. Diga se gostou deste projeto e da estrutura do bootcamp. O que você mais gostou na web3dev? O que gostaria que mudássemos para projetos futuros? Seu feedback seria incrível!!
 
 
-Vejo você por aí!!!
+Nos vemos você por aí!!!
 
 
 🎁 Encerramento

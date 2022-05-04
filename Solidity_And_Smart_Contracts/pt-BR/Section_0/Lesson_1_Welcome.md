@@ -42,12 +42,12 @@ Você construirá um site que chamaremos de WavePortal --- será um lugar onde q
 
 Você escreverá e implantará o contrato inteligente e também construirá o website que permitirá que as pessoas realmente conectem suas carteiras e interajam com seu contrato inteligente.
 
-Vamos tornar isto um pouco mais picante: basicamente, quando alguém acena para você, há uma chance aleatória dessa pessoa ganhar uma pequena quantidade de ETH do seu site :).
+Vamos tornar isto um pouco mais picante: basicamente, quando alguém manda um tchauzinho para você, há uma chance aleatória dessa pessoa ganhar uma pequena quantidade de ETH do seu site :).
 
 Você será capaz de personalizar o site tanto quanto quiser. Por exemplo:
 - Talvez, em vez de um 👋, você queira que as pessoas lhe enviem um 💩.
 - Talvez em vez de uma simples mensagem antiga, você queira que elas lhe enviem um link Spotify e criem um lugar onde qualquer pessoa possa enviar uma música fantástica e tê-la guardada.
-- Você pode mudar o contrato inteligente para reconhecer quando um de seus amigos está acenando para você (baseado no endereço da carteira Ethereum deles) e depois levá-los a uma página onde eles receberão algo especial.
+- Você pode mudar o contrato inteligente para reconhecer quando um de seus amigos está mandando um tchauzinho para você (baseado no endereço da carteira Ethereum deles) e depois levá-los a uma página onde eles receberão algo especial.
 
 Você pode fazer o que quiser :).
 

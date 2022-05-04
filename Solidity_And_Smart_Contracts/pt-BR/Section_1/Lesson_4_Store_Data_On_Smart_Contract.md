@@ -208,6 +208,6 @@ waveCount = await waveContract.getTotalWaves();
 
 *Note: se você não fizer isso, Daniel ficará muito triste :(.*
 
-Personalize um pouco seu código!! Talvez você queira armazenar algo mais? Queremos que você faça bagunça. Talvez você queira armazenar o endereço do remetente em uma matriz? Talvez você queira armazenar um mapa de endereços e contagens de tchauzinhos para que você mantenha um registro de quem está acenando mais para você? Mesmo que você apenas mude os nomes das variáveis e funções para ser algo que você ache interessante, isso é um grande negócio. Tente não copiar nosso código exatamente! Pense em seu site final e no tipo de funcionalidade que você deseja. Construa a funcionalidade **que você quer***.
+Personalize um pouco seu código!! Talvez você queira armazenar algo mais? Queremos que você faça bagunça. Talvez você queira armazenar o endereço do remetente em uma matriz? Talvez você queira armazenar um mapa de endereços e contagens de tchauzinhos para que você mantenha um registro de quem está mandando um tchauzinho mais para você? Mesmo que você apenas mude os nomes das variáveis e funções para ser algo que você ache interessante, isso é um grande negócio. Tente não copiar nosso código exatamente! Pense em seu site final e no tipo de funcionalidade que você deseja. Construa a funcionalidade **que você quer***.
 
 Uma vez que tudo tenha terminado aqui, não deixe de publicar um _screenshot_ do seu terminal em #progresso.

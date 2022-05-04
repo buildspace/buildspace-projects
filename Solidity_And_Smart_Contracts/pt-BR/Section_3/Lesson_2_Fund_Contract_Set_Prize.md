@@ -1,7 +1,7 @@
 💸 Envie ETH para pessoas que mandaram um tchauzinho para você
 ----------------------------------------
 
-Agora o que queremos fazer é enviar um pouco de ETH para as pessoas que mandaram um tchauzinho para nós! Por exemplo, talvez você queira fazer isso onde há 1% de chance de alguém ganhar $5 acenando para você. Ou talvez você queira fazer com que todos que acenem para você recebam $0,01 em ETH LOL.
+Agora o que queremos fazer é enviar um pouco de ETH para as pessoas que mandaram um tchauzinho para nós! Por exemplo, talvez você queira fazer isso onde há 1% de chance de alguém ganhar $5 mandando um tchauzinho para você. Ou talvez você queira fazer com que todos que acenem para você recebam $0,01 em ETH LOL.
 
 Você pode até mesmo enviar ETH manualmente para as pessoas cujas mensagens você mais gostou. Talvez eles te enviaram uma música incrível!!
 
@@ -220,4 +220,4 @@ Teste sua função de tchauzinho e verifique se ela ainda funciona!
 🎁 Encerramento
 ----------
 
-Há algo sobre o uso de ETH real para alimentar seus contratos, certo? Dê uma olhada em [este link](https://gist.github.com/danicuki/c9173f6cad19d8684a7411daded71c96) para ver todo o código escrito nesta seção!
+Há algo sobre o uso de ETH real para alimentar seus contratos, certo? Dê uma olhada em [este link](https://gist.github.com/danicuki/4fce48bc881766115370dbe2913b44fc) para ver todo o código escrito nesta seção!
