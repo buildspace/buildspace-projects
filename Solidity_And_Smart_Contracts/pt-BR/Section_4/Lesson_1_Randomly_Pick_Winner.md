@@ -100,7 +100,7 @@ Esses #s são *bastante* aleatórios. Mas, tecnicamente, tanto o `block.difficul
 
 Para tornar isso mais difícil, crio uma variável `seed` que mudará essencialmente toda vez que um usuário enviar um novo tchauzinho. Então, combino todas essas três variáveis para gerar uma nova semente aleatória. Então eu apenas faço `% 100`, o que garantirá que o número seja reduzido para um intervalo entre 0 e 100.
 
-É isso! Então eu apenas escrevo uma simples declaração IF para ver se a semente é menor ou igual a 50, se for -- então o "acenador" ganha o prêmio! Então, isso significa que o "acenador" tem 50% de chance de ganhar desde que escrevemos `seed <= 50`. Você pode mudar isso para o que quiser :). Acabei de fazer 50% porque é mais fácil testar assim!!
+É isso! Então eu apenas escrevo uma simples declaração IF para ver se a semente é menor ou igual a 50, se for -- então a pessoa que "mandou o tchau" ganha o prêmio! Então, isso significa que o "mandador de tchau" tem 50% de chance de ganhar desde que escrevemos `seed <= 50`. Você pode mudar isso para o que quiser :). Acabei de fazer 50% porque é mais fácil testar assim!!
 
 É importante ver que um ataque poderia tecnicamente enganar seu sistema se eles realmente quisessem. Seria muito difícil. Existem outras maneiras de gerar números aleatórios no blockchain, mas o Solidity não nos fornece nada confiável porque não pode! Todos os #s que nosso contrato pode acessar são públicos e *nunca* verdadeiramente aleatórios.
 
@@ -173,7 +173,7 @@ Legal! Funciona. Quando "65" foi gerado, o usuário não ganhou o prêmio. Mas, 
 Cooldowns para evitar spammers
 -----------------------------
 
-Impressionante. Você tem uma maneira de enviar ETH aleatoriamente para as pessoas! Agora, pode ser útil adicionar uma função de cooldown ao seu site para que as pessoas não possam simplesmente enviar spam para você. Por quê? Bem, talvez você simplesmente não queira que eles continuem tentando ganhar o prêmio repetidamente acenando para você. Ou talvez você não queira *apenas* *as* mensagens deles preenchendo seu mural de mensagens.
+Impressionante. Você tem uma maneira de enviar ETH aleatoriamente para as pessoas! Agora, pode ser útil adicionar uma função de cooldown ao seu site para que as pessoas não possam simplesmente enviar spam para você. Por quê? Bem, talvez você simplesmente não queira que eles continuem tentando ganhar o prêmio repetidamente mandando um tchauzinho para você. Ou talvez você não queira *apenas* *as* mensagens deles preenchendo seu mural de mensagens.
 
 Confira o código. Eu adicionei comentários onde adicionei novas linhas.
 

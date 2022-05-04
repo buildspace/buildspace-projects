@@ -48,7 +48,7 @@ Observe que o `Value` da transação ainda é 0 ETH, pois o usuário nunca pagou
 🎤 Eventos
 ---------
 
-Lembre-se de como usamos essa linha mágica abaixo em nosso contrato inteligente? Eu pedi para você buscar no Google como os eventos no Solidity funcionam. Por favor, faça isso agora, se você ainda não fez!
+Lembre-se de como usamos essa linha mágica abaixo em nosso contrato inteligente? Pedimos para você buscar no Google como os eventos no Solidity funcionam. Por favor, faça isso agora, se você ainda não fez!
 
 ```solidity
 emit NewWave(msg.sender, block.timestamp, _message);
