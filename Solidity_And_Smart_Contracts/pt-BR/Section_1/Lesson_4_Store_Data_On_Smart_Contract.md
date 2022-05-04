@@ -155,7 +155,7 @@ Muito em breve, poderemos chamar estas funções a partir de nosso aplicativo de
 
 Então, provavelmente queremos que outra pessoa além de nós nos envie um tchauzinho, certo? Seria muito chato se só nós mesmos pudéssemos dar tchauzinhos!! Queremos fazer nosso site **multiplayer***!
 
-Confira. Acrescentamos algumas linhas no final da função. Não vamos explicar muito (mas por favor, faça perguntas no canal #geral-chat). Basicamente, é assim que podemos simular outras pessoas chamando nossas funções :). Fique de olho nos endereços das carteiras em seu terminal uma vez que você mudar e executar o código.
+Confira. Acrescentamos algumas linhas no final da função. Não vamos explicar muito (mas por favor, faça perguntas no canal #chat-geral). Basicamente, é assim que podemos simular outras pessoas chamando nossas funções :). Fique de olho nos endereços das carteiras em seu terminal uma vez que você mudar e executar o código.
 
 ```javascript
 const main = async () => {

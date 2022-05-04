@@ -14,7 +14,7 @@ Você vai magicamente clonar meu repositório e vai ter uma IDE completa no seu 
 
 Aqui está um vídeo que eu fiz explicando sobre o Replit em um projeto passado:
 
-[Loom](https://www.loom.com/share/735394eb9755443e9c0904e5ebeb812d)
+[Loom](https://www.loom.com/share/4578eb9fba1243499a6913d214b21dc3)
 
 *Nota: no final eu menciono que nós oferecemos contas Replit pro de graça, no momento estamos sem contas disponíveis!!*
 
