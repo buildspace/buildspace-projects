@@ -208,4 +208,4 @@ Nos vemos você por aí!!!
 🎁 Encerramento
 ----------
 
-*VOCÊ CONSEGUIU.* Aplausos para todos 👏! Quer ver todo o código que escrevemos para esta seção? Clique [neste link](https://gist.github.com/adilanchian/93fbd2e06b3b5d3acb99b5723cebd925) para ver tudo!
+*VOCÊ CONSEGUIU.* Aplausos para todos 👏! Quer ver todo o código que escrevemos para esta seção? Clique [neste link](https://gist.github.com/danicuki/4fce48bc881766115370dbe2913b44fc) para ver tudo!

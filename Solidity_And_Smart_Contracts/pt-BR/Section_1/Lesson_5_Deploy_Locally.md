@@ -82,7 +82,7 @@ Na janela do seu terminal que mantém sua rede local Ethereum ativa, você verá
 
 ![](https://i.imgur.com/DmhZRJN.png)
 
-INTERESSANTE. Mas... o que é **gas**? O que significa bloco nº 1? O que é o código grande ao lado de "Transaction"? Queremos que você tente procurar essas coisas no Google. Faça perguntas no #geral-chat :).
+INTERESSANTE. Mas... o que é **gas**? O que significa bloco nº 1? O que é o código grande ao lado de "Transaction"? Queremos que você tente procurar essas coisas no Google. Faça perguntas no #chat-geral :).
 
 
 🚨 Antes de clicar em "Próxima lição"

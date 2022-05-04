@@ -19,7 +19,7 @@ Eu já criamos um projeto React básico que você pode fazer o **fork** no Repli
 **Observação: à medida que avança neste projeto, você pode notar que estamos fazendo referência a arquivos `.js`. No Replit, se você estiver criando novos arquivos JavaScript, precisará usar a extensão `.jsx`! Replit tem alguma questão de performance que requer que você use a extensão de arquivo `.jsx` :).**
 
 Fiz um vídeo rápido explicando como editar código no Replit, fazer deploy, e alterar para o modo noturno. Confira abaixo:
-[Tear](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
+[Tear](https://www.loom.com/share/735394eb9755443e9c0904e5ebeb812d)
 
 🦊 Metamask
 -----------

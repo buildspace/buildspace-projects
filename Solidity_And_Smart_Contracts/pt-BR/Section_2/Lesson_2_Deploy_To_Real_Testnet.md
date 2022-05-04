@@ -149,5 +149,3 @@ CONTINUE :).
 ![](https://i.imgur.com/qXzAAY2.png)
 
 ![](https://i.imgur.com/9OWqnaE.png)
-
-![](https://i.imgur.com/k3lJlls.png)
