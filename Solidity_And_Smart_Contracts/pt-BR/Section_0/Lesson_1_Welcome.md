@@ -28,12 +28,11 @@ Confira abaixo um pequeno vídeo de introdução que fizemos sobre este projeto!
 
 Quando você chegar ao final deste projeto, poderá ganhar um NFT.
 
-**Realizaremos o airdrop de um NFT para a sua carteira conectada se você terminar o projeto dentro de 7 dias após o kick-off.**
+**Realizaremos o airdrop de um NFT surpresa para a sua carteira conectada se você terminar o projeto dentro de 7 dias após o kick-off.**
 
 ![Sem título](https://i.imgur.com/HlRJTTf.png)
 
-Nota: ao invés de "Capella", o seu grupo terá um nome diferente - cada grupo tem o nome de um ! Além disso, o # embaixo à direita será o # cunhado que dependerá de quando você reivindicar o NFT.
-
+A sua turma terá um nome especial que aparecerá no NFT - cada turma tem um nome diferente! Além disso, o # embaixo à direita será o # cunhado que dependerá de quando você conquistar o NFT.
 
 🛠 O que você construirá?
 -----------------------------
