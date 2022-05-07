@@ -87,7 +87,7 @@ Vamos fazer uma pequena limpeza.
 
 Vá em frente e abra o código do projeto em seu editor de código favorito. Eu gosto mais do VSCode! Queremos excluir todo o código inicial inútil gerado para nós. Não precisaremos de nada disso. Somos profissionais ;)!
 
-Vá em frente e exclua o arquivo `sample-test.js` em `test`. Além disso, exclua `sample-script.js` em `scripts`. Em seguida, exclua `Greeter.sol` em `contratos`. Não exclua as pastas!
+Vá em frente e exclua o arquivo `sample-test.js` em `test`. Além disso, exclua `sample-script.js` em `scripts`. Em seguida, exclua `Greeter.sol` em `contracts`. Não exclua as pastas!
 
 🚨 Antes de clicar em "Próxima lição"
 --------------------------------------------
