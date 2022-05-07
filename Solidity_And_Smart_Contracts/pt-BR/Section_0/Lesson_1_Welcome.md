@@ -70,7 +70,7 @@ Este projeto é dividido em 4 seções. Você pode ver em que seção está veri
 🤘 Veja um problema? Deseja melhorar alguma coisa? Conserte-o você ;).
 ---------------------------------------
 
-**[Todo este conteúdo é completamente de código aberto](https://github.com/w3b3d3v/buildspace-projects)**. Nós pegamos o conteúdo original em inglês do Buildspace e traduzimos para português. Se você vir um problema, erro de digitação etc. - você mesmo poderá resolver facilmente e fazer um PR (_pull request_)! Se você precisar de ajuda para fazer isso, mande mensagem pra gente no Discord. 
+**[Todo este conteúdo é completamente de código aberto](https://github.com/w3b3d3v/buildspace-projects/tree/web3dev-version)**. Nós pegamos o conteúdo original em inglês do Buildspace e traduzimos para português. Se você vir um problema, erro de digitação etc. - você mesmo poderá resolver facilmente e fazer um PR (_pull request_)! Se você precisar de ajuda para fazer isso, mande mensagem pra gente no Discord. 
 
 Vamos arranjar um representante open source para você!!!
 
