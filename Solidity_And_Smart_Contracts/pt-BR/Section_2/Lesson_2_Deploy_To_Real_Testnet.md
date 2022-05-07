@@ -71,7 +71,7 @@ Para o MyCrypto, você precisará conectar sua carteira, criar uma conta e clica
 🙃 Está com problemas para obter ETH na Testnet?
 -----------------------------------
 
-Se os links acima não funcionarem, entre no (Discord da buildspace)[https://discord.gg/Q2dtTN9prE] e use o comando `/faucet` no canal #faucet-request e que o bot enviará alguns para você! Se você quiser mais, envie seu endereço de carteira pública e solte um gif engraçado. Ou eu ou alguém do projeto enviará ETH falso assim que puder. Quanto mais engraçado o gif, mais rápido você receberá uma ETH falso LOL.
+Se os links acima não funcionarem, entre no [https://discord.web3dev.com.br/](Discord da web3dev) e use o comando `/faucet` no canal #faucet-request e que o bot enviará alguns para você! Se você quiser mais, envie seu endereço de carteira pública e solte um gif engraçado. Ou eu ou alguém do projeto enviará ETH falso assim que puder. Quanto mais engraçado o gif, mais rápido você receberá uma ETH falso LOL.
 
 📈 Faça o deploy na rede de teste Rinkeby.
 ----------------------------------
