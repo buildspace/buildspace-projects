@@ -62,7 +62,7 @@ const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
 Esse trecho compilará nosso contrato e gerará os arquivos necessários que precisamos para trabalhar com nosso contrato no diretório `artefatos`. Vá dar uma olhada depois que colocar para executar :).
 
 ```javascript
-const waveContract = await waveContractFactory.deploy();
+const waveContract = await waveContractFactory.deployed();
 ```
 
 Isso é bem maneiro :).
