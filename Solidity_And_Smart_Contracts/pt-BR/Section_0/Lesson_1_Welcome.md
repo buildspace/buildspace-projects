@@ -30,8 +30,6 @@ Quando você chegar ao final deste projeto, poderá ganhar um NFT.
 
 **Realizaremos o airdrop de um NFT surpresa para a sua carteira conectada se você terminar o projeto dentro de 7 dias após o kick-off.**
 
-![Sem título](https://i.imgur.com/HlRJTTf.png)
-
 A sua turma terá um nome especial que aparecerá no NFT - cada turma tem um nome diferente! Além disso, o # embaixo à direita será o # cunhado que dependerá de quando você conquistar o NFT.
 
 🛠 O que você construirá?
