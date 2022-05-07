@@ -14,7 +14,7 @@ Usaremos [Replit](https://replit.com/~)! É uma IDE baseada em navegador que nos
 
 Faça uma conta no Replit antes de seguir em frente.
 
-Eu já criamos um projeto React básico que você pode fazer o **fork** no Replit. **Basta ir [aqui](https://replit.com/@DanielCukier/projeto-tchauzinho?v=1) e, à direita, você verá o botão "Fork".** Certifique-se de que esteja logado e clique. Magicamente você clonará meu repositório e a IDE completa em seu navegador para trabalhar com o código. Quando ele parar de carregar e mostrar algum código, clique no botão "Executar" na parte superior. Isso pode levar uns sólidos 2-3 minutos na primeira vez. Basicamente, o Replit estará inicializando seu projeto e implantando-o em um domínio real.
+Eu já criei um projeto React básico que você pode fazer o **fork** no Replit. Fork é o processo de copiar o código para a sua conta.
 
 Certifique-se que esteja autenticado no Replit, [acesse o nosso repositório público](https://replit.com/@DanielCukier/projeto-tchauzinho?v=1) e clique no botão à direita escrito "Fork".
 

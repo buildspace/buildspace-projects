@@ -72,7 +72,11 @@ contract WavePortal {
 }
 ```
 
+<<<<<<< HEAD
 Então, contratos inteligentes parecem uma 'classe' em outras linguagens, caso já tenha visto isso antes! Assim que inicializarmos esse contrato pela primeira vez, esse construtor será executado e imprimirá essa linha. Por favor, altere essa linha para a frase que quiser, use a imaginação! :)
+=======
+Então, contratos inteligentes parecem uma 'classe' em outros linguagens, caso já tenha visto isso antes! Assim que inicializarmos esse contrato pela primeira vez, esse construtor será executado e imprimirá essa linha. Por favor, altere essa linha para a frase que quiser, use a imaginação! :)
+>>>>>>> several updates and fixes
 
 Na próxima lição, executaremos o contrato e veremos o que conseguimos!
 
