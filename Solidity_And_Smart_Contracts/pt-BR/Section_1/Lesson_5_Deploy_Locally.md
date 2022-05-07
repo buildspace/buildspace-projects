@@ -15,21 +15,21 @@ Precisamos de uma maneira de manter a rede local ativa. Por quê? Bem, pense em 
 
 Nós vamos fazer a mesma coisa aqui.
 
-Vá para o seu terminal e abra uma **nova** janela ou aba. Nesta janela, entre no diretório do seu projeto `meu-portal-tchauzinho`. Então, vá em frente e execute
+Vá para o seu terminal e abra uma **nova janela ou aba do terminal**. Nesta janela, entre no diretório do seu projeto `meu-portal-tchauzinho`. Então, vá em frente e execute
 
 ```bash
 npx hardhat node
 ```
 
-BOOM.
+💥 BOOM 💥 
 
-Você acabou de iniciar uma rede local Ethereum que **permanece viva**. E, como você pode ver, a Hardhat nos deu 20 contas para trabalhar e deu a todas elas 10.000 ETH, agora estamos ricos! Uau! Melhor projeto de todos os tempos.
+Você acabou de iniciar uma rede local Ethereum que **permanece viva**. E, como você pode ver, a Hardhat nos deu 20 contas para trabalhar e deu a todas elas 10.000 ETH, agora estamos ricos! Uau! Melhor projeto de todos os tempos. 😃
 
 Então, agora, esta é apenas uma blockchain vazia. Sem blocos!
 
 Queremos criar um novo bloco e colocar nosso contrato inteligente nele! Vamos fazer isso.
 
-Na pasta `scripts`, crie um arquivo chamado `deploy.js`. Aqui está o código. Parece bastante com o `run.js`.
+Na pasta `scripts`, crie um arquivo chamado `deploy.js`. Aqui está o código para salvar neste arquivo:
 
 ```javascript
 const main = async () => {
@@ -59,8 +59,16 @@ const runMain = async () => {
 runMain();
 ```
 
+Esse código é parecido com o `run.js` mas cuidado pra não se confundir.
+
 🎉 DEPLOY
 ---------
+
+Deploy é o ato de enviar o código fonte do seu contrato inteligente, do seu computador para a Blockchain. Toda vez que você fizer uma mudança no código enquanto estiver desenvolvendo, você precisa fazer um deploy.
+
+Quando finalizamos o código e queremos enviar para o mundo usar, nós fazemos o "deploy em produção", ou seja, enviamos o código para a blockchain principal.
+
+Enquanto desenvolvemos, nós fazemos vários deploys locais.
 
 Agora o comando que vamos executar para realizar o deploy local é:
 
@@ -68,7 +76,7 @@ Agora o comando que vamos executar para realizar o deploy local é:
 npx hardhat run scripts/deploy.js --network localhost
 ```
 
-**Você precisa se certificar de fazer isso no diretório** `my-wave-portal` **em uma janela de terminal diferente. Não queremos mexer com a janela do terminal que mantém nossa rede local Ethereum ativa.**
+⚠️ Você precisa se certificar de fazer isso no diretório `meu-portal-tchauzinho` em uma janela de terminal diferente. Não queremos mexer com a janela do terminal que mantém nossa rede local Ethereum ativa.
 
 Ok, então uma vez que executamos, isso é o que a gente recebe:
 
@@ -89,7 +97,6 @@ INTERESSANTE. Mas... o que é **gas**? O que significa bloco nº 1? O que é o c
 --------------------------------------------
 
 Honestamente, você merece um tapinha nas costas. Você já fez muito. Em seguida, estaremos construindo um site que interagirá com nossa rede local Ethereum e será incrível. Vá para #progresso e deixe a comunidade saber como este projeto está indo até agora para você. Mande também seu feedback, a gente ama!
-
 
 🎁 Conclusão da Seção
 ------------------

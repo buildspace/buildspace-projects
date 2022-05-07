@@ -5,7 +5,7 @@ Vá em frente e feche o terminal com sua rede local da blockchain em execução,
 
 Agora vamos fazer o negócio real, implantando na blockchain real.
 
-Vá em frente e faça uma conta com Alchemy [aqui](https://alchemy.com/?r=a724fda46ee746e0).
+Vá em frente e [faça uma conta na Alchemy](https://alchemy.com/?r=a724fda46ee746e0).
 
 Desculpe por ter feito tantas contas, mas esse ecossistema é complexo e queremos aproveitar as ferramentas incríveis que existem. O que a Alchemy faz é nos dar uma maneira simples de implantar na blockchain Ethereum real.
 
@@ -26,7 +26,7 @@ O Alchemy essencialmente nos ajuda a transmitir nossa transação de criação d
 
 Isso é complicado. E, não se preocupe se você não entender completamente. À medida que você escreve mais código e realmente constrói este aplicativo, naturalmente fará mais sentido.
 
-Então, faça uma conta no Alchemy [aqui](https://alchemy.com/?r=a724fda46ee746e0).
+Então, [faça uma conta no Alchemy](https://alchemy.com/?r=a724fda46ee746e0).
 
 Confira o vídeo abaixo para ver como obter sua chave de API para uma rede de teste!
 [Loom](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933)
@@ -57,7 +57,7 @@ Para implantar na Rinkeby, precisamos de **ether** falso. Por quê? Porque se vo
 
 Para obter ETH falso, temos que pedir à alguma rede. **Este ETH falso só funcionará nesta rede de teste específica.** Você pode pegar algum ETH falso para Rinkeby através de um **faucet** (torneira). Certifique-se de que sua carteira MetaMask esteja definida como "Rinkeby Test Network" antes de usar a faucet.
 
-Para o MyCrypto, você precisará conectar sua carteira, criar uma conta e clicar no mesmo link novamente para solicitar fundos. Para a _faucet_ oficial Rinkeby, se ela listar 0 pares, não vale a pena fazer um tweet/post público no Facebook.
+Seguem alguns _faucets_ onde você pode solicitar ETH falso para a rede _Rinkeby_.
 
 | Nome | Link | Quantidade | Tempo |
 | ---------------- | -------------------------- | --------------- | ------------ |
@@ -67,6 +67,7 @@ Para o MyCrypto, você precisará conectar sua carteira, criar uma conta e clica
 | Rinkeby Oficial | https://faucet.rinkeby.io/ | 3 / 7,5 / 18,75 | 8h / 1d / 3d |
 | Chainlink | https://faucets.chain.link/rinkeby | 0,1 | Nenhum |
 
+Para o MyCrypto, você precisará conectar sua carteira, criar uma conta e clicar no mesmo link novamente para solicitar fundos.
 
 🙃 Está com problemas para obter ETH na Testnet?
 -----------------------------------
@@ -92,17 +93,19 @@ module.exports = {
 };
 ```
 
-**Nota: NÃO FAÇA COMMIT DESTE ARQUIVO NO GITHUB. ELE POSSUI A SUA CHAVE PRIVADA. VOCÊ VAI SER HACKEADO + ROUBADO. ESTA CHAVE PRIVADA É A MESMA DA MAINNET.** Falaremos sobre variáveis `.env` mais tarde e como manter essas coisas em segredo.
+🚨 **Atenção:** NÃO FAÇA COMMIT DESTE ARQUIVO NO GITHUB. ELE POSSUI A SUA CHAVE PRIVADA. VOCÊ VAI SER HACKEADO + ROUBADO SE ESSA CHAVE VAZAR. ESTA CHAVE PRIVADA É A MESMA DA MAINNET. NÃO USE UMA 
+
+Falaremos sobre variáveis `.env` mais tarde e como manter essas coisas em segredo.
 
 Você pode pegar a URL da API no painel do Alchemy e colá-lo. Em seguida, você precisará da sua chave **privada** rinkeby (não sua chave pública!), que você pode pegar da Metamask e colá-la lá também.
 
-**Nota: O acesso à sua chave privada pode ser feito abrindo a MetaMask, alterando a rede para "Rinkeby Test Network" e depois clicando nos três pontos e selecionando "Account Details" > "Export Private Key"**
+ℹ️ **Nota:** O acesso à sua chave privada pode ser feito abrindo a MetaMask, alterando a rede para "Rinkeby Test Network" e depois clicando nos três pontos e selecionando "Account Details" > "Export Private Key"
 
 Por que você precisa usar sua chave privada? Porque para realizar uma transação como o deploy de um contrato, você precisa "fazer login" na blockchain. E, seu nome de usuário é seu endereço público e sua senha é sua chave privada. É como fazer login na AWS ou no GCP para fazer o deploy.
 
 Uma vez que você tenha sua configuração, estamos prontos para realizar o deploy com o script que escrevemos anteriormente.
 
-Execute este comando a partir do diretório raiz do `my-wave-portal`. Observe que tudo o que fazemos é alterá-lo de `localhost` para `rinkeby`.
+Execute este comando a partir do diretório raiz do `meu-portal-tchauzinho`. Observe que tudo o que fazemos é alterá-lo de `localhost` para `rinkeby`.
 
 ```bash
 npx hardhat run scripts/deploy.js --network rinkeby
@@ -121,30 +124,30 @@ WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
 
 Copie esse endereço do contrato implantado na última linha e salve-o em algum lugar. Não o perca! Você precisará dele para o frontend mais tarde :). O seu será diferente do meu.
 
-**Você acabou de deployar seu contrato. UAAAAAAAAU.**
+**Você acabou de fazer o deploy do seu contrato. UAAAAAAAAU!** 🤩
 
-Você pode pegar esse endereço e colá-lo no Etherscan [aqui](https://rinkeby.etherscan.io/). Etherscan é um lugar que apenas nos mostra o estado da blockchain e nos ajuda a ver onde está nossa transação. Você deve ver sua transação aqui :). Pode demorar um minuto para aparecer!
+Você pode pegar esse endereço e [colá-lo no Etherscan](https://rinkeby.etherscan.io/). Etherscan é um lugar que apenas nos mostra o estado da blockchain e nos ajuda a ver onde está nossa transação. Você deve ver sua transação aqui. Pode ser que demore um minuto para aparecer!
 
-Por exemplo, [aqui está](https://rinkeby.etherscan.io/address/0x56A61F82549fD077E4B9F74C6Ae6a75209F43A8b) a minha!
+Por exemplo, [aqui está a minha](https://rinkeby.etherscan.io/address/0x56A61F82549fD077E4B9F74C6Ae6a75209F43A8b)!
 
 🚨 Antes de clicar em "Próxima lição"
 ----------------------------------
 
-**VOCÊ FEZ MUITO.**
+**VOCÊ FEZ MUITO.** 👏🏼👏🏼👏🏼
 
-Você deve **twittar** que acabou de escrever e implantar seu primeiro contrato inteligente e marcar @web3dev_. Se desejar, inclua um screenshot da página do Etherscan que mostre que seu contrato está na blockchain!
+Você deve **twittar** que acabou de escrever e implantar seu primeiro contrato inteligente e marcar @web3dev_. Se desejar, inclua uma captura da página do Etherscan que mostre que seu contrato está na blockchain!
 
-É um grande negócio você ter chegado até aqui. Você criou e implantou algo na blockchain real. **Puta que la merda**. **Estamos muito orgulhosos de você.**
+É um grande negócio você ter chegado até aqui. Você criou e implantou algo na blockchain real. **Puta que la merda. Estamos muito orgulhosos de você.** 😃
 
 Você agora é alguém que está realmente "fazendo" o que quase todo mundo está apenas "falando".
 
 Você está um passo mais perto de dominar as artes da web3.
 
-CONTINUE :).
+CONTINUE :)
 
 --
 
-*Adote as pessoas que já twittaram sobre nós, vocês são lendas <3.*
+*Reconheça as pessoas que já twittaram sobre nós, vocês são lendas <3.*
 
 ![](https://i.imgur.com/qXzAAY2.png)
 

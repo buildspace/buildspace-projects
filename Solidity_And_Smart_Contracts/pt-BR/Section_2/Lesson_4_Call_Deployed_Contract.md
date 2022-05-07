@@ -1,7 +1,13 @@
 📒 Lendo a blockchain a partir do nosso site
 -----------------------------------------------
 
-Impressionante. Conseguimos. Deployamos nosso site. Deployamos nosso contrato. Conectamos nossa carteira. Agora precisamos chamar nosso contrato a partir do nosso site usando as credenciais da Metamask às quais temos acesso agora!
+Impressionante. Conseguimos.
+
+✅ Deployamos nosso site.
+✅ Deployamos nosso contrato.
+✅ Conectamos nossa carteira.
+
+⌛️ Agora precisamos chamar nosso contrato a partir do nosso site usando as credenciais da Metamask às quais temos acesso agora!
 
 Então, nosso contrato inteligente tem essa função que recupera o número total de tchauzinhos.
 
@@ -14,8 +20,9 @@ Então, nosso contrato inteligente tem essa função que recupera o número tota
 
 Vamos chamar esta função do nosso site :).
 
-Vá em frente e escreva esta função logo abaixo da nossa função `connectWallet()`.
+A partir de agora não vou mais colocar o código inteiro para você copiar e colar, isso vai exigir que você tenha atenção e entenda onde o pedaço de código deve entrar. Caso você coloque o código no lugar errado, vai receber erro de sintaxe ou erro de execução. Se isso acontecer lembre-se de usar os canais de ajuda no nosso servidor do Discord.
 
+Vá em frente e escreva esta função logo abaixo da nossa função `connectWallet()`. Perceba que caso o código já tenha uma função `wave` declarada, você vai receber um erro `/home/runner/projeto-tchauzinho/src/App.jsx: Identifier 'wave' has already been declared`. E neste caso você precisa substituir a função `wave` definida anteriormente.
 
 ```javascript
 const wave = async () => {
@@ -61,7 +68,7 @@ Conecte esta função ao nosso botão `Mandar Tchauzinho` atualizando a prop `on
 
 Impressionante.
 
-Então, agora com você clica no botão este código **quebra**. Em nosso console do Replit, aparecerá:
+Então, agora quando você clica no botão, o código **quebra** 😟. Em nosso console do Replit, aparecerá a mensagem de erro `ReferenceError: contractAddress is not defined`
 
 ![](https://i.imgur.com/LGBalIt.png)
 
@@ -82,7 +89,7 @@ Account balance: 3198297774605223721
 WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
 ```
 
-Você precisa ter acesso a ele em seu aplicativo React. É tão fácil quanto criar uma nova propriedade em seu arquivo `App.js` chamada `contractAddress` e definir seu valor para o `WavePortal address` que é impresso em seu console:
+Você precisa ter acesso a ele em seu aplicativo React. É tão fácil quanto criar uma nova propriedade em seu arquivo `App.js` chamada `contractAddress` e definir seu valor para o `WavePortal address` que é impresso em seu console. O início do seu código ficará como este aqui:
 
 ```javascript
 import React, { useEffect, useState } from "react";
@@ -97,24 +104,27 @@ const App = () => {
   const contractAddress = "0xF2482AEDB6bfF7Cc73772fCBCeAA9157ff00c287";
 ```
 
+Substitua o conteúdo da constante `contractAddress` pelo valor do seu contrato.
+
 🛠 Obtendo o conteúdo do arquivo ABI
 ---------------------------
-** Prefere me ver passar por isso? Confira o vídeo abaixo!**
-[Loom](https://www.loom.com/share/53de0a270060417e94aae5032764afd1)
+**Prefere me ver passar por isso?**
+
+Confira este [vídeo onde explico como fazer](https://www.loom.com/share/53de0a270060417e94aae5032764afd1)
 
 Olhe para você, já está no meio do caminho! Vamos voltar para nossa pasta do contrato inteligente.
 
 Quando você compila seu contrato inteligente, o compilador gera vários arquivos necessários que permitem que você interaja com o contrato. Você pode encontrar esses arquivos na pasta `artifacts` localizada na raiz do seu projeto Solidity.
 
-O arquivo ABI é algo que nosso aplicativo web precisa para saber como se comunicar com nosso contrato. Leia sobre isso [aqui](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
+O arquivo ABI é algo que nosso aplicativo web precisa para saber como se comunicar com nosso contrato. [Leia mais sobre o arquivo ABI](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
 
 O conteúdo do arquivo ABI pode ser encontrado em um arquivo JSON em seu projeto Hardhat:
 
 `artifacts/contracts/WavePortal.sol/WavePortal.json`
 
-Então, a questão é como colocamos esse arquivo JSON em nosso frontend? Para este projeto vamos fazer o bom e velho "control c, control v"!
+Então, a questão é como colocamos esse arquivo JSON em nosso frontend? Para este projeto vamos fazer o bom e velho copia e cola, "Control + C, Control + V"!
 
-Copie o conteúdo do seu `WavePortal.json` e depois vá para o seu aplicativo web. Você vai criar uma nova pasta chamada `utils` em `src`. Em `utils` crie um arquivo chamado `WavePortal.json`. Assim, o caminho completo ficará assim:
+Copie para a área de trabalho (CRTL + C) o conteúdo do seu `WavePortal.json` e depois vá para o seu aplicativo web no Replit. Você vai criar uma nova pasta chamada `utils` em `src`. Em `utils` crie um arquivo chamado `WavePortal.json`. Assim, o caminho completo ficará assim:
 
 `src/utils/WavePortal.json`
 
@@ -207,16 +217,16 @@ const wave = async () => {
   }
 ```
 
-Bem simples, né :)?
+Bem simples, né?
 
-O que é incrível aqui é que, enquanto a transação está sendo minerada, você pode imprimir o hash da transação, copiar/colar no [Etherscan](https://rinkeby.etherscan.io/) e vê-lo sendo processado em tempo real: ).
+O que é incrível aqui é que, enquanto a transação está sendo minerada, você pode imprimir o hash da transação, copiar/colar no [Etherscan](https://rinkeby.etherscan.io/) e vê-lo sendo processado em tempo real.
 
-Quando executarmos isso, você verá que a contagem total de tchauzinhos é aumentada em 1. Você também verá que a Metamask aparece e nos pede para pagar "gas" que pagamos usando nosso $ falso. Há um ótimo artigo sobre isso [aqui](https://ethereum.org/en/developers/docs/gas/). Tente descobrir o que é o **gas** :).
+Quando executarmos isso, você verá que a contagem total de tchauzinhos é aumentada em 1. Você também verá que a Metamask aparece e nos pede para pagar "gas" que pagamos usando nosso $ falso. Há um ótimo [artigo sobre como funciona o gas](https://ethereum.org/en/developers/docs/gas/). Tente descobrir o que é o **gas** :)
 
 🎉 Sucesso
 ----------
 
-**BOAAA :).**
+**BOAAA :)**
 
 Coisas realmente boas. Agora temos um cliente real que pode ler e gravar dados na blockchain. A partir daqui, você pode fazer o que quiser. Você já sabe o básico. Você pode construir uma versão descentralizada do Twitter. Você pode criar uma maneira para as pessoas postarem seus memes favoritos e permitir que as pessoas "pontuem" as pessoas que postarem os melhores memes com ETH. Você pode construir um sistema de votação descentralizado que um país pode usar para votar em um político onde tudo é aberto e claro.
 
@@ -229,7 +239,7 @@ As possibilidades são infinitas.
 
 Personalize um pouco seu site para mostrar o número total de tchauzinhos. Talvez mostrar uma barra de carregamento enquanto o tchauzinho está sendo minerada, o que você quiser. Faça algo um pouco diferente!
 
-Quando sentir que está pronto, compartilhe o link do seu site conosco em #progress para que possamos conectar nossas carteiras e dar tchauzinho para você :).
+Quando sentir que está pronto, compartilhe o link do seu site conosco no canal #progresso para que possamos conectar nossas carteiras e dar tchauzinho para você :).
 
 🎁 Encerramento
 --------------------

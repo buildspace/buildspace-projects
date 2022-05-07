@@ -17,6 +17,18 @@ Explicaremos algumas coisas em profundidade conforme necessário (por exemplo, c
 
 Se você tiver algum problema aqui, basta enviar uma mensagem no Discord em `#seção-1-ajuda`.
 
+🛠 Preparando o seu ambiente
+-----------------------
+
+Para executar todos os comandos listados aqui neste bootcamp você precisará instalar alguns programas no seu computador.
+
+As dependências que precisam ser instaladas são:
+
+1. [GIT](https://git-scm.com/downloads)
+2. [Node.js](https://nodejs.org/en/download/)
+
+Preparamos um [tutorial de como preparar o seu ambiente do windows](https://www.web3dev.com.br/web3melk/como-preparar-o-seu-windows-para-participar-dos-bootcamps-da-web3dev-1dc3) para te ajudar nas instalações.
+
 ✨ A magia do Hardhat
 -----------------------
 
@@ -24,9 +36,11 @@ Se você tiver algum problema aqui, basta enviar uma mensagem no Discord em `#se
 
 2\. Compile os contratos inteligentes rapidamente e teste-os em nossa blockchain local.
 
-Primeiro você precisará obter o node/npm. Se você não tiver, vá [aqui](https://hardhat.org/tutorial/setting-up-the-environment.html).
+Em seguida, vamos para o terminal.
 
-Em seguida, vamos para o terminal (o Git Bash não funcionará). Vá em frente e execute `cd` para o diretório em que você deseja trabalhar. Quando estiver lá, execute estes comandos:
+🚨 **Atenção:** O Git Bash no Windows *não funciona*. Você deve usar algum outro programa de terminal. Sugerimos o uso do [terminal PoweShell](https://geekblog.com.br/windows-powershell-veja-o-que-e-e-para-o-que-serve/).
+
+Vá em frente e execute `cd` para o diretório em que você deseja trabalhar. Quando estiver lá, execute estes comandos:
 
 ```bash
 mkdir meu-portal-tchauzinho
@@ -96,4 +110,4 @@ Vá em frente e exclua o arquivo `sample-test.js` em `test`. Além disso, exclua
 
 Vá no canal #progresso no Discord e poste uma captura de tela do **seu** terminal mostrando a saída do teste! Você acabou de executar um contrato inteligente, isso é um grande negócio! Mostre-o :).
 
-PS: Se você **não** tiver acesso ao #progresso, certifique-se de vincular seu Discord, junte-se ao Discord [aqui](https://discord.web3dev.com.br), nos chame em #ajuda que te ajudaremos a ter acesso aos canais certos!
+PS: Se você **não** tiver acesso ao canal #progresso, certifique-se de vincular seu Discord, junte-se ao Discord [aqui](https://discord.web3dev.com.br), nos chame em #ajuda que te ajudaremos a ter acesso aos canais certos!

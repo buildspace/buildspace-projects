@@ -8,15 +8,19 @@ Portanto, existem cerca de 100 maneiras diferentes de configurar um projeto bás
 🤯 Replique
 ---------
 
-**Observação: você não precisa usar o replit para compilar + implantar seu site. Se você quiser usar create-react-app + Vercel/Heroku/AWS -- também funciona. [Aqui](https://github.com/w3b3d3v/projeto-tchauzinho) está um link para o repositório base que você pode clonar e trabalhar localmente.**
+ℹ️ **Observação:** você não precisa usar o replit para compilar + implantar seu site. Se você quiser usar create-react-app + Vercel/Heroku/AWS -- também funciona. [Aqui está um link para o repositório base](https://github.com/w3b3d3v/projeto-tchauzinho) que você pode clonar e trabalhar localmente.
 
 Usaremos [Replit](https://replit.com/~)! É uma IDE baseada em navegador que nos permite criar facilmente aplicativos Web e implantá-los a partir do navegador. É super legal. Em vez de ter que configurar um ambiente local completo e escrever comandos para o deploy, tudo é dado para nós.
 
 Faça uma conta no Replit antes de seguir em frente.
 
-Eu já criamos um projeto React básico que você pode fazer o **fork** no Replit. **Basta ir [aqui](https://replit.com/@DanielCukier/projeto-tchauzinho?v=1) e, à direita, você verá o botão "Fork".** Certifique-se de que esteja logado e clique. Magicamente você clonará meu repositório e a IDE completa em seu navegador para trabalhar com o código. Quando ele parar de carregar e mostrar algum código, clique no botão "Executar" na parte superior. Isso pode levar uns sólidos 2-3 minutos na primeira vez. Basicamente, o Replit estará inicializando seu projeto e implantando-o em um domínio real.
+Eu já criei um projeto React básico que você pode fazer o **fork** no Replit. Fork é o processo de copiar o código para a sua conta.
 
-**Observação: à medida que avança neste projeto, você pode notar que estamos fazendo referência a arquivos `.js`. No Replit, se você estiver criando novos arquivos JavaScript, precisará usar a extensão `.jsx`! Replit tem alguma questão de performance que requer que você use a extensão de arquivo `.jsx` :).**
+Certifique-se que esteja autenticado no Replit, [acesse o nosso repositório público](https://replit.com/@DanielCukier/projeto-tchauzinho?v=1) e clique no botão à direita escrito "Fork".
+
+Magicamente você clonará meu repositório e a IDE completa em seu navegador para trabalhar com o código. Quando ele parar de carregar e mostrar algum código, clique no botão "Executar" na parte superior. Isso pode levar uns sólidos 2-3 minutos na primeira vez. Basicamente, o Replit estará inicializando seu projeto e implantando-o em um domínio real.
+
+ℹ️ **Observação:** à medida que avança neste projeto, você pode notar que estamos fazendo referência a arquivos `.js`. No Replit, se você estiver criando novos arquivos JavaScript, precisará usar a extensão `.jsx`! Replit tem alguma questão de performance que requer que você use a extensão de arquivo `.jsx` :).
 
 Fiz um vídeo rápido explicando como editar código no Replit, fazer deploy, e alterar para o modo noturno. Confira abaixo:
 [Loom](https://www.loom.com/share/4578eb9fba1243499a6913d214b21dc3)
@@ -34,11 +38,12 @@ Por que precisamos da Metamask? Bem. Precisamos ser capazes de chamar funções 
 
 É quase como autenticação. Precisamos de algo para "fazer login" na blockchain e usar essas credenciais de login para fazer solicitações de API do nosso site.
 
-Então, vá em frente e configure tudo! O fluxo de configuração deles é bastante autoexplicativo :).
+Você pode fazer usar o Experimento Melk de Learn and Earn (Aprenda e Ganhe) que ensina na missão 1 o passo a passo para instalar a Metamask. Se você ainda não conhece o Melk, acesse o canal 🎓 | Aprenda e Ganhe (Learn-to-Earn) dentro do nosso servidor do Discord.
 
+Então, vá em frente e configure tudo! O fluxo de configuração deles é bastante autoexplicativo :).
 🚨 Antes de clicar em "Próxima lição"
 --------------------------------------------
 
 *Nota: se você não fizer isso, Yan ficará muito triste :(.*
 
-Compartilhe um link para seu site e poste-o em #progresso. Altere o CSS e o texto para o que você quiser. Talvez você queira que seja mais colorido? Talvez você não se importe com tchauzinhos e queira fazer um clone descentralizado do Twitter? Faça o que quiser, este é o seu aplicativo :).
+Compartilhe um link para seu site e poste-o no canal #progresso. Altere o CSS e o texto para o que você quiser. Talvez você queira que seja mais colorido? Talvez você não se importe com tchauzinhos e queira fazer um clone descentralizado do Twitter? Faça o que quiser, este é o seu aplicativo :).

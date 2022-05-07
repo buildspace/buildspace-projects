@@ -177,8 +177,6 @@ Então o que você precisa fazer agora é:
 
 Então, aqui está a nova função que adicionei ao `App.js`.
 
-So, here's the new function I added to `App.js`.
-
 ```javascript
   const [currentAccount, setCurrentAccount] = useState("");
   const [allWaves, setAllWaves] = useState([]);

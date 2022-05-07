@@ -7,11 +7,13 @@ Queremos ser capazes de deixar alguém mandar um tchauzinho para nós e depois a
 
 Então, a primeira coisa que precisamos é de uma função que eles possam usar para mandar um tchauzinho!
 
-A blockchain = Pense nela como um provedor de nuvem, como a AWS, mas que não pertence a ninguém. É executada pelo poder computacional de máquinas de mineração em todo o mundo. Normalmente essas pessoas são chamadas de mineradores e nós os pagamos para executar nosso código!
+Pense na blockchain como um provedor de nuvem, como a AWS, mas que não pertence a ninguém. É executada pelo poder computacional de máquinas de mineração em todo o mundo. Normalmente essas pessoas são chamadas de mineradores e nós os pagamos para executar nosso código!
 
-Um contrato inteligente = algo como o código do nosso servidor com diferentes funções e que as pessoas podem acessar.
+Um contrato inteligente é como o código do nosso servidor com diferentes funções e que as pessoas podem acessar. Todo contrato inteligente é um software público que qualquer pessoa pode executar.
 
 Então, aqui está nosso contrato atualizado que podemos usar para "armazenar" os tchauzinhos.
+
+Altere o arquivo `contracts/WavePortal.sol` com o conteúdo abaixo:
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -50,7 +52,7 @@ No futuro, podemos escrever funções que apenas determinados endereços de cart
 ✅ Atualizando run.js para chamar nossas funções
 ---------------------------------------
 
-Então, `run.js` precisa mudar!
+Então, agora o `run.js` precisa mudar!
 
 Por quê?
 
@@ -61,6 +63,8 @@ Basicamente, quando implantamos nosso contrato na blockchain (o que fazemos quan
 Pense nisso como um endpoint de API pública :).
 
 Então agora queremos testar essas funções especificamente!
+
+Altere o arquivo `scripts/run.js` e coloque o conteúdo abaixo:
 
 ```javascript
 const main = async () => {
@@ -157,6 +161,8 @@ Então, provavelmente queremos que outra pessoa além de nós nos envie um tchau
 
 Confira. Acrescentamos algumas linhas no final da função. Não vamos explicar muito (mas por favor, faça perguntas no canal #chat-geral). Basicamente, é assim que podemos simular outras pessoas chamando nossas funções :). Fique de olho nos endereços das carteiras em seu terminal uma vez que você mudar e executar o código.
 
+Altere o arquivo `scripts/run.js` e coloque o conteúdo abaixo:
+
 ```javascript
 const main = async () => {
   const [owner, randomPerson] = await hre.ethers.getSigners();
@@ -208,6 +214,6 @@ waveCount = await waveContract.getTotalWaves();
 
 *Note: se você não fizer isso, Daniel ficará muito triste :(.*
 
-Personalize um pouco seu código!! Talvez você queira armazenar algo mais? Queremos que você faça bagunça. Talvez você queira armazenar o endereço do remetente em uma matriz? Talvez você queira armazenar um mapa de endereços e contagens de tchauzinhos para que você mantenha um registro de quem está mandando um tchauzinho mais para você? Mesmo que você apenas mude os nomes das variáveis e funções para ser algo que você ache interessante, isso é um grande negócio. Tente não copiar nosso código exatamente! Pense em seu site final e no tipo de funcionalidade que você deseja. Construa a funcionalidade **que você quer***.
+Personalize um pouco seu código!! Talvez você queira armazenar algo mais? Queremos que você faça bagunça. Talvez você queira armazenar o endereço do remetente em uma matriz? Talvez você queira armazenar um mapa de endereços e contagens de tchauzinhos para que você mantenha um registro de quem está mandando um tchauzinho a mais para você? Mesmo que você apenas mude os nomes das variáveis e funções para ser algo que você ache interessante, isso é um grande negócio. Tente não copiar nosso código exatamente! Pense em seu site final e no tipo de funcionalidade que você deseja. Construa a funcionalidade **que você quer***.
 
-Uma vez que tudo tenha terminado aqui, não deixe de publicar um _screenshot_ do seu terminal em #progresso.
+Uma vez que tudo tenha terminado aqui, não deixe de publicar uma captura de tela do seu terminal lá no Discord no canal #progresso.
