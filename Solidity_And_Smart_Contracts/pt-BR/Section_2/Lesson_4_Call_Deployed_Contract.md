@@ -100,7 +100,7 @@ const App = () => {
 🛠 Obtendo o conteúdo do arquivo ABI
 ---------------------------
 ** Prefere me ver passar por isso? Confira o vídeo abaixo!**
-[Loom](https://www.loom.com/share/2a5794fca9064a059dca1989cdfa2c37)
+[Loom](https://www.loom.com/share/53de0a270060417e94aae5032764afd1)
 
 Olhe para você, já está no meio do caminho! Vamos voltar para nossa pasta do contrato inteligente.
 
