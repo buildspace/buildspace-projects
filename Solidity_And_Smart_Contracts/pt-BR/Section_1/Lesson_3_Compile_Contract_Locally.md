@@ -87,7 +87,7 @@ Vamos executá-lo!
 npx hardhat run scripts/run.js
 ```
 
-Você deverá ver seu `console.log` rodando dentro do contrato e então você também deverá ver o endereço do contrato impresso!!! Aqui está o que eu aparece pra mim:
+Você deverá ver seu `console.log` rodando dentro do contrato e então você também deverá ver o endereço do contrato impresso!!! Aqui está o que apareceu pra mim:
 
 ![](https://i.imgur.com/QuQjT5v.png)
 
