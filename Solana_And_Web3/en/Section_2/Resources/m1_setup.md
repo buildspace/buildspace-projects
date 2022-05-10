@@ -188,7 +188,7 @@ After that, be sure to install this thing called Mocha. It's a nice little testi
 npm install -g mocha
 ```
 
-We'll also need Yarn for some stuff. You can install it using
+We'll also need Yarn for some package management. You can install it using
 ```bash
 npm install -g yarn
 ```
