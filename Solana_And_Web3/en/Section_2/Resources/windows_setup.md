@@ -1,6 +1,4 @@
 ## 🪟 Setting up Solana on a Windows machine.
-**First off - I want to give a HUGE shoutout to our TA, Raza! Without Raza, this guide wouldn't have been doable. Once you finish this section make sure to give some love to Raza in Discord (TooManyBags#3359)**
-
 This resource will take you through the flow of setting up the Solana environment on your local, Windows machine. The big gotchya here is **Windows isn't really supported by Anchor at the moment.** This means we need to use a platform that *is* supported.
 Windows allows for you to boot up a Linux environment for scenarios just like this! There will be a few extra steps to get this all sorted before we actually get started with setting up all the Solana dependencies. 
 
