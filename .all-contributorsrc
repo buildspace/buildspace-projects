@@ -2290,6 +2290,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ebCrypto",
+      "name": "ebCrypto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44279886?v=4",
+      "profile": "https://github.com/ebCrypto",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
