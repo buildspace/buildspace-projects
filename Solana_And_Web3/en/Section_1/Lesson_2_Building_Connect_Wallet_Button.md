@@ -16,7 +16,7 @@ In order to use Web3Auth, you'll need to create a project in the [Developer Dash
 ### Installations 
 
 ```
-npm create-react-app my-app
+npx create-react-app my-app
 cd my-app
 npm i @web3auth/web3auth
 npm i @web3auth/solana-provider @web3auth/base
