@@ -43,7 +43,7 @@ Let's copy paste the following into `0.json`:
 ```json
 {
   "name": "NAME_OF_NFT",
-  "symbol": "",
+  "symbol": "SYMBOL_OF_NFT",
   "image": "0.png",
   "properties": {
     "files": [
