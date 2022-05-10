@@ -140,9 +140,11 @@ const App = () => {
           <p className="sub-text">
             View your GIF collection in the metaverse ✨
           </p>
-          <button
-            className="cta-button connect-wallet-button"
-            onClick={connectWeb3Auth}>Connect Web3Auth</button>
+          {
+            walletAddress=="" &&
+            <button className="cta-button connect-wallet-button" onClick={connectWeb3Auth}>Connect Web3Auth</button> || 
+            <button className="cta-button connect-wallet-button" onClick={logout}>Disconnect {walletAddress}</button>
+          }
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
