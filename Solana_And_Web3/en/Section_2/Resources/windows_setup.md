@@ -98,7 +98,19 @@ As long as all those commands output a version and didn't error, you're good to 
 
 Solana has a super nice CLI that's going to be helpful later when we want to test the programs we write.
 
-Again, the installation steps are pretty straight forward [here](https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool). There are clear steps for getting the Solana CLI installed for Linux.
+All you need to download and install the Solana CLI is run this command in your terminal:
+
+```bash
+sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
+```
+
+This will take a minute or two depending on your internet speed. Once it finishes, you should see something like this in your terminal:
+```bash
+downloading stable installer
+  ✨ stable commit 5b413da initialized
+```
+
+Ta-da! Solana just installed!  If you want extra detail, the installation steps are pretty straight forward, check them out [here](https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool). There are clear steps for getting the Solana CLI installed for Linux.
 
 **Don't** worry about upgrading to the latest version of Solana.
 
@@ -145,7 +157,7 @@ Boom!! You're now running a local validator. Pretty cool :).
 
 Now, go ahead and CONTROL + C to stop the validator. **We're never going to actually use `solana-test-validator` manually ourselves again.** The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;). 
 
-### ☕️ Install Mocha.
+### ☕️ Install Mocha and Yarn
 
 Mocha is a nice little testing framework to help us test our Solana programs.
 
@@ -155,32 +167,42 @@ npm install -g mocha
 
 That's it! We are going to be using this later on :).
 
+We'll also need Yarn for some package management. You can install it using
+```bash
+npm install -g yarn
+```
+
 ### ⚓️ The magic of Anchor
 
 We're going to be using this tool called "Anchor" a lot. If you know about Hardhat from the world of Ethereum, it's sorta like that! Except — it's built for Solana. **Basically, it makes it really easy for us to run Solana programs locally and deploy them to the actual Solana chain when we're ready!**
 
-Anchor is a *really early projec*t run by a few core devs. You're bound to run into a few issues. Be sure to join the [Anchor Discord](https://discord.gg/8HwmBtt2ss) and feel free to ask questions or [create an issue](https://github.com/project-serum/anchor/issues) on their Github as you run into issues. The devs are awesome. Maybe even say you're from buildspace in #general on their Discord :).
+Anchor is a *really early project* run by a few core devs. You're bound to run into a few issues. Be sure to join the [Anchor Discord](https://discord.gg/8HwmBtt2ss) and feel free to ask questions or [create an issue](https://github.com/project-serum/anchor/issues) on their Github as you run into issues. The devs are awesome. Maybe even say you're from buildspace in #general on their Discord :).
 
 **BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search the their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you lol.**
 
 *Seriously — join that Discord, the devs are really helpful.*
 
-To install Anchor, go ahead an run:
+To install Anchor, we'll need Anchor Version Manager first. Go ahead and run:
 
 ```bash
-npm install --global yarn
+cargo install --git https://github.com/project-serum/anchor avm --locked --force
 ```
 
-This is going to help us later down the line :)
+The above command may take a while and your computer may get a little toasty 🔥. 
+
+This command *can* fail if you don't have all the necessary dependencies. Run this if cargo install fails:
+```bash
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev
+```
+
+Once this is done, you'll have **Anchor Version Manager** installed. Now we can actually install Anchor:
+
+```bash
+avm install latest
+avm use latest
+```
 
 From here run:
-
-```bash
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev libssl-dev
-cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
-```
-
-That's it! At this point you can run this last command to make sure Anchor is ready to rock 🤘:
 
 ```bash
 anchor --version

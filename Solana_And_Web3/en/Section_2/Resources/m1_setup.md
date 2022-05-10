@@ -4,7 +4,7 @@
 
 We are going to go **from this doesn't work on M1 masOS??** to
 
-![ankin it's working Gif](https://media.giphy.com/media/CuMiNoTRz2bYc/giphy.gif)
+![Anakin it's working Gif](https://media.giphy.com/media/CuMiNoTRz2bYc/giphy.gif)
 
 **real quick.**
 
@@ -46,28 +46,20 @@ As long as all those commands output a version and didn't error, you're good to 
 
 ### 🔥Install Solana - THIS IS WHAT WE CAME FOR!
 
-We are going to build it from it's source. What does this mean? In short, it allows us to build Solana on our computer instead of downloading a pre-built version.
-
-We are to download with this command:
+Solana setup has gotten a whole lot easier! All you need to download and install the Solana CLI is run this command in your terminal:
 
 ```bash
-git clone https://github.com/solana-labs/solana.git/
+sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
 ```
 
-Once it has finished cloning, we are going to enter the Solana directory and checkout the version branch `v1.8.5`:
-
+This will take a minute or two depending on your internet speed. Once it finishes, you should see something like this in your terminal:
 ```bash
-cd solana
-git checkout v1.8.5
+downloading stable installer
+  ✨ stable commit 5b413da initialized
 ```
 
-`git checkout` is just switching to a stable version, so we can send ourselves some `$SOL` later on without receieving this error `Error: RPC response error -32601: Method not found`.
+Ta-da! Solana just installed! If you had issues, check out the sections below. If you didn't, just skip past them!
 
-Next, we are going to run this command:
-
-```bash
-./scripts/cargo-install-all.sh .
-```
 
 <details>
 <summary>Having problems with <code>greadlink</code>?</summary>
@@ -186,9 +178,9 @@ This may take a bit to get started but once it's going you should see something 
 
 Boom!! You're now running a local validator. Pretty cool :).
 
-### ☕️ Install Node, NPM, and Mocha
+### ☕️ Install Node, NPM, and Mocha, Yarn
 
-Pretty solid chance you already have Node and NPM. When I do node --version I get v16.0.0. The minimum version is v11.0.0. If you don't have node and NPM, get it [here](https://nodejs.org/en/download/).
+Pretty solid chance you already have Node and NPM. When I do node --version I get v16.0.0. The minimum version is v11.0.0. If you don't have node and NPM, install it using NVM from [here](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 After that, be sure to install this thing called Mocha. It's a nice little testing framework to help us test our Solana programs.
 
@@ -196,23 +188,40 @@ After that, be sure to install this thing called Mocha. It's a nice little testi
 npm install -g mocha
 ```
 
+We'll also need Yarn for some package management. You can install it using
+```bash
+npm install -g yarn
+```
+
 ### ⚓️ The magic of Anchor
 
 We're going to be using this tool called "Anchor" a lot. If you know about Hardhat from the world of Ethereum, it's sorta like that! Except — it's built for Solana. **Basically, it makes it really easy for us to run Solana programs locally and deploy them to the actual Solana chain when we're ready!**
 
-Anchor is a *really early projec*t run by a few core devs. You're bound to run into a few issues. Be sure to join the [Anchor Discord](https://discord.gg/8HwmBtt2ss) and feel free to ask questions or [create an issue](https://github.com/project-serum/anchor/issues) on their Github as you run into issues. The devs are awesome. Maybe even say you're from buildspace in #general on their Discord :).
+Anchor is a *really early project* run by a few core devs. You're bound to run into a few issues. Be sure to join the [Anchor Discord](https://discord.gg/8HwmBtt2ss) and feel free to ask questions or [create an issue](https://github.com/project-serum/anchor/issues) on their Github as you run into issues. The devs are awesome. Maybe even say you're from buildspace in #general on their Discord :).
 
 **BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search through their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you lol.**
 
 _Seriously — join that Discord, the devs are really helpful._
 
-To install Anchor, go ahead and run:
+To install Anchor, we'll need Anchor Version Manager first. Go ahead and run:
 
 ```bash
-cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
+cargo install --git https://github.com/project-serum/anchor avm --locked --force
 ```
 
-The above command may take a while and your computer may get a little toasty 🔥. Once it's done, it may ask you to update you path, remember to do that.
+The above command may take a while and your computer may get a little toasty 🔥. 
+
+This command *can* fail if you don't have all the necessary dependencies. Run this if cargo install fails:
+```bash
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev
+```
+
+Once this is done, you'll have **Anchor Version Manager** installed. Now we can actually install Anchor:
+
+```bash
+avm install latest
+avm use latest
+```
 
 From here run:
 
