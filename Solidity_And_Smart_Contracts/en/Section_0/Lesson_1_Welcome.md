@@ -9,7 +9,7 @@ A few action items for you before moving on:
 3. **Be sure to attend the kick-off**. If you miss it, no worries. It's not required! You'll get an email with the recording. I'll also post the recording in the Discord.
 
 
-## ## 🚀 This is going to be aweso
+## 🚀 This is going to be awesome
 
 I'm really excited to show you how to go from zero -> shipping your own web3 app + Ethereum smart contract.
 
