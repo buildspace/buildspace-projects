@@ -16,7 +16,7 @@ Why? Because the ENS team wanted early supporters of the networks to be rewarded
 
 I want to make it clear, this is a custom formula! Your DAO can also have a custom formula. Maybe you also want to reward people in your DAO more based on how long they’ve had their membership NFT. It’s all up to you.
 
-### 🥵 Deploy your token.
+### 🥵 Deploy your token
 
 Let’s create and deploy our token smart contract! Head to `scripts/5-deploy-token.js` and add:
 
@@ -80,7 +80,7 @@ Then, head back to your wallet, scroll down, and boom!
 
 You officially have your own token :).
 
-### 💸 Create your token’s supply.
+### 💸 Create your token’s supply
 
 Right now, **there are zero tokens available for people claim.** Our ERC-20 contract doesn’t magically know how many tokens are available. We have to tell it!
 
@@ -134,7 +134,7 @@ Pretty cool. We did this all with a couple of lines of Javascript. That’s wild
 
 ![Untitled](https://i.imgur.com/vmeoTfU.png)
 
-### ✈️ Airdrop it.
+### ✈️ Airdrop it
 
 It’s airdrop time. Right now you’re probably the only member of your DAO and that’s okay!
 

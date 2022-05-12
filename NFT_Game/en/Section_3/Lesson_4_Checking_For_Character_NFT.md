@@ -1,6 +1,6 @@
 The cool part about our game? We mint actual NFTs that are used to play and all the game logic happens on-chain. Earlier in this project, we set up all of our smart contract logic. Now it's time to actually interact with it.
 
-### 🌊 The flow.
+### 🌊 The flow
 
 The first thing we are going to start with is to check whether the wallet address connected to our app has a character NFT already. If it does, we can go ahead and grab the metadata from the wallet's NFT and use it to battle a boss in the metaverse ⚔️.
 
@@ -13,7 +13,7 @@ Here's the flow of getting our web app connected to our deployed smart contract 
 
 Pretty straight forward, right? Let's dive in!
 
-### 🏠 Get the latest Smart Contract Address.
+### 🏠 Get the latest Smart Contract Address
 
 Plain and simple, this is the deployed address of your smart contract. Recall how every time you run your `deploy.js` script, your console prints out the address of where your contract lives? We need that address to connect our UI to our smart contract. The blockchain has millions of contracts on it. Our client needs this address to know which contract to connect to.
 
@@ -31,7 +31,7 @@ Then head back to your `App.js` file and import this at the top of your file to 
 import { CONTRACT_ADDRESS } from './constants';
 ```
 
-### 📁 Get the latest ABI file.
+### 📁 Get the latest ABI file
 
 **I made a little video below explaining ABI stuff.**
 
@@ -89,7 +89,7 @@ So, what you'll need to do is:
 
 **Again -- you need to do this every time you change your contract's code or else you'll get errors :).**
 
-### 📞 Calling the Smart Contract with ethers.js.
+### 📞 Calling the Smart Contract with ethers.js
 
 Now that we have everything we need, we can set up an object in JavaScript to interact with our smart contract. This is where [ethers.js](https://github.com/ethers-io/ethers.js)  comes in handy!
 
@@ -292,7 +292,7 @@ Alright, so what the heck is this `[currentAccount]` thing? It's the user's publ
 
 Do some Googling and [check out this link](https://reactjs.org/docs/hooks-effect.html) from React docs to learn more.
 
-### ⭕️ Bringing it full circle.
+### ⭕️ Bringing it full circle
 
 All the things are in place. You are feeling good and you're an insanely talented engineer. So let's test this, shall we?
 

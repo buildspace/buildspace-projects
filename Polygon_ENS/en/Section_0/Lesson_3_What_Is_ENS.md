@@ -38,10 +38,10 @@ They have a lot of different things set, like usernames for various services,  e
 
 Any website on the internet can access this data. How cool is that? Imagine never needing to upload your profile picture ever again. Everyone will know of my moustache.
 
-### **💪 Let's get to work.**
+### 💪 Let's get to work
 
 We've been doing a lot of talking. Let's actually build our own little version of an ENS. By the end, hopefully all this becomes much more concrete and maybe you'll be on your way toward making the next hit web3 app ;).
 
-### **🚨 Progress report!**
+### 🚨 Progress report!
 
 Post in #progress your fav web app + domain combo! Help get everyone in the building mood 8).

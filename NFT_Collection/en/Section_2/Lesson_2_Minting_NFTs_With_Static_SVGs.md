@@ -1,5 +1,4 @@
-🤘 Create our SVG
---------------------
+## 🤘 Create our SVG
 
 Here's our black box SVG again.
 
@@ -31,8 +30,7 @@ Okay, **epic**. This is a way to keep our NFTs image data permanent and availabl
 
 ![Untitled](https://i.imgur.com/f9mXVSb.png)
 
-☠️ Get rid of the hosted JSON.
---------------------
+## ☠️ Get rid of the hosted JSON
 
 Remember our JSON metadata?
 
@@ -83,8 +81,7 @@ Here's a screenshot of mine:
 Note: It's **very easy** to mess up here when your encoding + copy-pasting stuff. So, be very careful!!! And double-check everything works. If things are breaking, follow all the steps again!
 
 
-🚀 Change up our contract, deploy.
---------------------
+## 🚀 Change up our contract, deploy
 
 Okay awesome, we've got this fancy base64 encoded JSON file. How do we get it on our contract? Simple head to `MyEpicNFT.sol` and — we just copy-paste the whole big string into our contract.
 
@@ -112,6 +109,6 @@ Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_
 
 ![Untitled](https://i.imgur.com/Z2mKTpK.png)
 
-🚨Progress report.
-------------------------
+## 🚨Progress report
+
 If you get a fancy NFT, make sure to send a screenshot of it on OpenSea in the `#progress` channel in Discord!

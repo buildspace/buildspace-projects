@@ -1,5 +1,4 @@
-🤯 Replit
----------------------
+## 🤯 Replit
 
 We'll be using this thing called [Replit](https://replit.com/~)!
 
@@ -15,8 +14,7 @@ You'll magically clone my repo and full IDE in your browser to work with the cod
 
 **Please Note: As you go through this project, you may notice that we are referencing `.js` files. In Replit, if you are creating any new JavaScript files, you will need to use the `.jsx` extension instead! Replit has some performance fanciness that requires you use the `.jsx` file extension :).**
 
-🦊 Setup Metamask
----------------------
+## 🦊 Setup Metamask
 
 Awesome, we have a **deployed** React project we can easily work with. That was simple :).
 
@@ -30,6 +28,6 @@ It's almost like authentication. We need something to "login" to the blockchain 
 
 So, go ahead and set it all up! Their setup flow is pretty self-explanatory :).
 
-🚨Progress report.
-------------------------
+## 🚨Progress report
+
 Post your wallet's public address in #progress along w/ a funny gif. It better be funny ;). 

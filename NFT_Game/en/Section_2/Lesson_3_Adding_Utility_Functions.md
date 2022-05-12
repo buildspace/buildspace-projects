@@ -1,6 +1,6 @@
 Below I'm going to be going over a few functions. These won't seem really useful right now, but, they'll be insanely useful when we start working on our web app.
 
-### ✅ Build function to check if user has a character NFT.
+### ✅ Build function to check if user has a character NFT
 
 We need a way to check if a user has a character NFT we've given them, and then retrieve the NFT's attributes if the NFT exists. Why?
 
@@ -38,7 +38,7 @@ Why do we do `userNftTokenId > 0`? Well, basically there's [no way](https://ethe
 
 This is a problem for user's with NFT tokenId of `0`. That's why earlier, I did `_tokenIds.increment()` in the constructor! That way, **no one is allowed to have tokenId `0`**. This is one of those cases where we need to be smart in how we set up our code because of some of the quirks of Solidity :).
 
-### 🎃 Retrieve all default characters.
+### 🎃 Retrieve all default characters
 
 Our web app is going to have a "character select screen" for new players so they can choose which character NFT they want to mint!
 
@@ -54,7 +54,7 @@ Ezpz!
 
 You may be asking yourself, "Why are we building functions to get single variables? Can't we somehow access these variables directly from the contract?". Yes, you can! But, it's just best practice to create `get` functions :). Makes everything nice and organized.
 
-### 💀 Retrieve the boss.
+### 💀 Retrieve the boss
 
 We need to be able to retrieve the boss. Why? Well — when our player is playing the game our app will need to be able to show them stuff like the boss's HP, name, image, etc!
 
@@ -68,7 +68,7 @@ function getBigBoss() public view returns (BigBoss memory) {
 
 That's it!
 
-### 🧠 Adding in `Event`s to our contract.
+### 🧠 Adding in `Event`s to our contract
 
 When we call `mintCharacterNFT`, how do we know it's **actually** done? When we do:
 
@@ -112,7 +112,7 @@ All we need to do is add this line to the bottom of the `attackBoss` function:
 emit AttackComplete(msg.sender, bigBoss.hp, player.hp);
 ```
 
-### ➡️ Deploying the changes.
+### ➡️ Deploying the changes
 
 Great! Now we've added the functions that our web app will be using in our game! Give yourself a pat on the back, it's shaping up to be an awesome game! Remember that we'll need to deploy the contract again for us to use these functions.
 

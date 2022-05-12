@@ -1,4 +1,4 @@
-### **👋 Welcome**
+### 👋 Welcome
 
 You’ve made it — hell yeah! **Welcome :)**. My name is Raza and I’m going to be your installation wizard to the blockchain. 
 
@@ -28,19 +28,19 @@ This stuff is very new, there's a lot of hype around it, and it can be super dif
 
 With this project, you're going to learn about crypto tech by actually writing code and just hopping into the good stuff. No B.S. We'll also go over theory and more in-depth concepts, but, it will all be structured around your project.
 
-### **💎 Earning an NFT.**
+### 💎 Earning an NFT
 
 When you reach the end of this project, you'll earn an NFT. Here's what it looks like:
 
 [Loom](https://www.loom.com/share/b3a0185f02ac4c63ab411288c2df4a30)
 
-### **🤚 How to get help.**
+### 🤚 How to get help
 
 When you have a question, hit up the proper channel for the project.
 
 This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page in your buildspace dashboard. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord. If you're part of multiple projects, be sure to ask your questions in the right project category!
 
-### **🤘 See an issue? Want to improve something? Fix it yourself ;).**
+### 🤘 See an issue? Want to improve something? Fix it yourself ;)
 
 **[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec` in the Discord :).
 
@@ -48,7 +48,7 @@ At the very least, drop a ⭐ on the repo if you're feeling fancy!
 
 Let's get you some open-source rep!!!
 
-### **👀 Curious about working in web3?**
+### 👀 Curious about working in web3?
 
 **People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
 
@@ -64,7 +64,7 @@ Worst case scenario, you get to talk to some really cool people in web3.
 
 Just do it really quick right now :).
 
-### **🚨 Progress Report**
+### 🚨 Progress Report
 
 *Please do this else Raza will be sad :(*
 

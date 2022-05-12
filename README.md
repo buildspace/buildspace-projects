@@ -46,21 +46,21 @@ Each project aligns with the content on your buildspace dashboard. Find the file
 ## 🤔 Why take this project on buildspace?
 You have access to all of the content right here in GitHub!
 
-   ### **Hack With Others And The buildspace Team**
+   ### Hack With Others And The buildspace Team
    You and thousands of other devs are in this together. When you sign up for a project, you are placed in a group of devs who are there to help you succeed! Check out our [Discord](https://discord.gg/vPmqZqgpsS) to see what all the hype is about!
 
-   ### **Co-Working Sessions**
+   ### Co-Working Sessions
    Get access to multiple sessions of collaborative coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
 
-   ### **Complete A Project. Get an NFT.**
+   ### Complete A Project. Get an NFT
    That's right. Be one of the first 100 people to complete your [buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
 
 ## ❗️FAQ
 
-### **Can't Contribute? No Worries!**
+### Can't Contribute? No Worries!
 Feel free to submit an [issue here](https://github.com/zipeducation/buildspace-projects/issues/new/choose) to help us keep track of things that need to be fixed.
 
-### **How do I make my first contribution?**
+### How do I make my first contribution?
 This is awesome! Your first Open Source contribution is always a great one. If you're not entirely sure on how to "Fork" a repo or make a "PR" take a look at these awesome resources from GitHub:
 
 [Fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)<br>
@@ -68,7 +68,7 @@ This is awesome! Your first Open Source contribution is always a great one. If y
 
 As always make sure to reach out to us on [Discord](https://discord.gg/CFuBU7RJ42) if you have any questions or concerns!
 
-### **Have More Questions?**
+### Have More Questions?
 We use Discord for tons of our communication! [Click here](https://discord.gg/CFuBU7RJ42) to join our server and reach out to the buildspace team members if you have any questions or concerns.
 
 ---

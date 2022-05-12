@@ -5,7 +5,7 @@ We are going to be using **react.js** to build our web app. If you are already f
 
 If you have no experiece w/ React - [checkout this intro series](https://scrimba.com/learn/learnreact) before you get started with this section or at least check out the intro docs [here](https://reactjs.org/docs/getting-started.html). Or don't do anything special, just hop in. Whatever works for you :). You'll be an absolute React Wizard after this project if you aren't already 🧙‍♂!
 
-### ⬇️ Getting the code.
+### ⬇️ Getting the code
 We'll be using this thing called [Replit](https://replit.com/~)!
 
 It is a browser-based IDE that lets us easily build web apps and deploy them all from the browser. It is super legit. Instead of having to set up a full local environment and write commands to deploy, it's all just given to us.

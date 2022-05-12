@@ -4,8 +4,7 @@ An NFT is a "token" that a person can own that links to some piece of "data" (ex
 
 Let's go over an example real quick.
 
-🎨 Picasso Sketches
-------------------------
+## 🎨 Picasso Sketches
 
 Let's say Picasso wanted to create a collection of 100 of his sketches to sell.
 
@@ -17,8 +16,7 @@ You have to trust that the gallery certificate will be respected long-term, but,
 
 ![](https://i.imgur.com/FLBd1l0.png)
 
-👨‍💻 Picasso NFTs
-------------------------
+## 👨‍💻 Picasso NFTs
 
 Let's look at this example in **NFT land** now.
 

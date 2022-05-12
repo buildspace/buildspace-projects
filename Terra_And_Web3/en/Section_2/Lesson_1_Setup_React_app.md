@@ -7,7 +7,7 @@ Don't give up! The more you struggle the more you learn 🧠.
 
 If you have no experience w/ React - [checkout this intro series](https://scrimba.com/learn/learnreact) before you get started with this section or at least check out the intro docs [here](https://reactjs.org/docs/getting-started.html). Or don't do anything special, just hop in. Whatever works for you :). You'll be an absolute React Wizard after this project if you aren't already 🧙‍♂!
 
-### 👩‍💻 Get the code.
+### 👩‍💻 Get the code
 
 Start by heading over [here](https://github.com/buildspace/terra-starter) where you find the starter repo code. From here you're going to want to make sure you press the "Fork" button at the top right of the page:
 

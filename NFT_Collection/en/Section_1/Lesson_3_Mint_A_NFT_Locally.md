@@ -1,6 +1,4 @@
- 📝 Write our starter contract.
--------------------
-
+## 📝 Write our starter contract
 
 *Note: If you already know how to do a lot of the stuff in this section from the "WavePortal" project we ran in the past, awesome! You'll get through this quickly :). Much of it is repeated.*
 
@@ -62,9 +60,7 @@ contract MyEpicNFT {
 
 So, smart contracts kinda look like a `class` in other languages, if you've ever seen those! Once we initialize this contract for the first time, that constructor will run and print out that line. Please make that line say whatever you want. Have a little fun with it.
 
-😲 How do we run it?
--------------------
-
+## 😲 How do we run it?
 
 Awesome — we've got a smart contract! But, we don't know if it works. We need to actually:
 
@@ -99,9 +95,7 @@ const runMain = async () => {
 runMain();
 ```
 
-🤔 How's it work?
--------------------
-
+## 🤔 How's it work?
 
 **Note: VSCode might auto-import ethers. We don't need to import ethers.**
 
@@ -138,8 +132,8 @@ Finally, once it's deployed `nftContract.address` will basically give us the a
 
 But, there are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will come in handy when we deploy to the actual blockchain in a few lessons.
 
-💨 Run it.
--------------------
+## 💨 Run it
+
 Before you run this, be sure to change `solidity: "0.8.4",` to `solidity: "0.8.1",` in your `hardhat.config.js`.
 
 Let's run it! Open up your terminal and run:
@@ -152,8 +146,7 @@ You should see your `console.log` run from within the contract and then you sh
 
 ![Untitled](https://i.imgur.com/CSBimfv.png)
 
-🎩 Hardhat & HRE
--------------------
+## 🎩 Hardhat & HRE
 
 In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of sorcery is this?
 
@@ -167,6 +160,6 @@ So what does this mean? Well, every time you run a terminal command that starts 
 
 **TL;DR - you will be seeing `hre` a lot in our code, but never imported anywhere! Checkout this cool [Hardhat documentation](https://hardhat.org/advanced/hardhat-runtime-environment.html) to learn more about it!**
 
-🚨 Progress report!
------------------
+## 🚨 Progress report!
+
 Post a screenshot in #progress with the output of `npx hardhat run scripts/run.js` :).

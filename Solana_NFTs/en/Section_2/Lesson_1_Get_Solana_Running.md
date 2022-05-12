@@ -1,4 +1,4 @@
-### **🦾 What are we going to do?**
+### 🦾 What are we going to do?
 
 So — the goal is to create a web app that lets users **connect their wallet, click mint, and receive an NFT from our collection in their wallet.** Simple enough!
 
@@ -8,7 +8,7 @@ The Solana CLI will allow us to deploy to devnet, an actual blockchain run by re
 
 The Metaplex CLI will allow us to interact with Metaplex's deployed NFT contracts. Using their smart-contracts-as-a-service we can 1) create our own candy machine 2) upload our NFTs to our candy machine 3) allow users to actually hit our candy machine to mint an NFT.
 
-### **📝 A note on Solana before we hop in.**
+### 📝 A note on Solana before we hop in
 
 Okay, so, to be honest getting Solana running and working is **not easy right now.**
 
@@ -26,7 +26,7 @@ I like this [tweet](https://twitter.com/armaniferrante/status/14345547250939494
 
 **All this being said, I think Solana is insanely fun once you set it up and get a handle on how it works. It's so fast. The low-gas fees are magical. It's just really fun to be part of a community working on a breakthrough technology. It feels like you're part of the team actually building Solana :).**
 
-### **🤖 Install the pre-reqs**
+### 🤖 Install the pre-reqs
 
 To begin interacting with the Candy Machine CLI, we need to make sure you have a few basic dev tools. Go ahead and run these commands and install anything that isn't there!
 
@@ -54,7 +54,7 @@ If any of these commands are not found, please make sure to install it before mo
 Be sure to install `ts-node` globally. I used this command: `npm install -g ts-node`
 > If you run into EACCES permissions errors while installing, please checkout this [link](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)
 
-### **🔥 Install Solana**
+### 🔥 Install Solana
 
 The installation steps are pretty straight forward [here](https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool). There are clear steps for getting the Solana CLI installed for Windows, Linux, and Mac.
 
@@ -91,7 +91,7 @@ During this entire project we will be building directly on Solana's devnet. This
 
 Dang it! Solana can be rough to get working. We're happy to help though!! Post a message in `#section-2-help` so your fellow buildspacers can help you out! Be sure to give us as much info as possible like: your OS, screenshots of the error, etc.
 
-### **🤩 Getting started with the Metaplex CLI**
+### 🤩 Getting started with the Metaplex CLI
 
 Now that we have our Solana CLI installed, we'll need to install the Metaplex CLI which allows us to actually create our candy machine.
 

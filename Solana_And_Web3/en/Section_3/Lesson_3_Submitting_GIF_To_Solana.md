@@ -29,7 +29,7 @@ const sendGif = async () => {
 
 Now, you'll be able to submit a link, approve the transaction via Phantom, and your web app should now show you the GIF you just submitted :).
 
-### 🙈 Solve the issue of the account not persisting.
+### 🙈 Solve the issue of the account not persisting
 
 So, we already went over this problem where our account is getting reset every time we refresh the page. Let's fix it.
 

@@ -333,7 +333,7 @@ const renderInputForm = () => {
 
 Note: You’ll still see errors and the mint button won’t work!
 
-### **📂 ABI files**
+### 📂 ABI files
 
 **Here’s a little video Farza made explaining all this ABI stuff. Please give it a watch as he goes over some important stuff**
 
@@ -369,7 +369,7 @@ All you'll need to do from here is enter a domain name, a record, click "Mint", 
 
 You may be asking yourself wtf gas is. I'm not going to answer that here. But, you can start researching [here](https://ethereum.org/en/developers/docs/gas/) ;).
 
-### **🤩 Test**
+### 🤩 Test
 
 You should be able to go and actually mint a domain NFT right from your website now. 
 
@@ -377,7 +377,7 @@ You should be able to go and actually mint a domain NFT right from your website 
 
 This is basically how all these NFT minting sites work and you just got it done yourself :).
 
-### **✈️ A note on contract redeploys**
+### ✈️ A note on contract redeploys
 
 Let's say you want to change your contract. You'd need to do 3 things:
 
@@ -389,6 +389,6 @@ Let's say you want to change your contract. You'd need to do 3 things:
 
 Why do we need to do all this? Well, it's because smart contracts are **immutable.** They can't change. They're permanent. That means changing a contract requires a full redeploy. This will also **reset** all the variables since it'd be treated as a brand new contract. **That means we'd lose all our domain data if we wanted to update the contract's code.**
 
-### **🚨Progress report.**
+### 🚨Progress report
 
 Post a screenshot of your console after you mint a few NFTs and show off all those `console.log`s!

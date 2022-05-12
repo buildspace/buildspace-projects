@@ -4,7 +4,7 @@ At this point we are going to be calling our Candy Machine to mint a single NFT 
 
 Let's do this.
 
-### 🎩 Going through the `mintToken` function.
+### 🎩 Going through the `mintToken` function
 
 In your `CandyMachine` component you'll see a function named `mintToken`. This is part of Metaplex's front-end library.
 
@@ -137,7 +137,7 @@ This you already know! We use a provider, our wallet, all our instructions, and 
 
 I know I blazed through all this stuff, so, be sure to go through it yourself! Also, it'd be awesome if someone just made this one nice NPM module lol.
 
-### ✨ Mint your NFT.
+### ✨ Mint your NFT
 
 In your `CandyMachine` component, have your "Mint" button call the `mintToken` function:
 
