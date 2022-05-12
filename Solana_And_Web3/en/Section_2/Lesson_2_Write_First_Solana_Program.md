@@ -11,7 +11,7 @@ You'll see all the magic stuff Anchor has generated for us here.
 
 *Note: I **didn't** actually install the Rust extension for VSCode. It already has Rust syntax highlighting for me out of the box.*
 
-### 👶 A basic program.
+### 👶 A basic program
 
 Let's write our first Solana program! This Rust code is going to live in the `lib.rs` file.
 
@@ -78,7 +78,7 @@ Lastly we have this thing at the bottom. It'll be more obvious why this is impor
 
 Let's just get stuff running and see what happens.
 
-### 💎 Write a script to see it working locally.
+### 💎 Write a script to see it working locally
 
 We need to basically tell Anchor how we want our program to run and what functions we want to call. Head over to `tests/myepicproject.js`. This is actually written in javascript :).
 

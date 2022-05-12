@@ -80,6 +80,6 @@ That’s it! If you deploy this contract, you’ll be doing a whole lot more tha
 
 Look at you, saving gas, being efficient, and checking domain validity on the blockchain. What’s next? Are you gonna **upgrade** your smart contracts? LOL 
 
-### **🚨Progress report.**
+### 🚨Progress report
 
 Post a screenshot of your fantastic, gas-efficient, error-handling smart contract in `#progress`!

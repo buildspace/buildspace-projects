@@ -2,7 +2,7 @@ One thing we’re doing that's super important to recognize is we’re actually 
 
 For example, when we do `player.hp = player.hp - bigBoss.attackDamage;` it’s actually changing the `Health Points` attribute that shows up on OpenSea on the NFT itself. Let’s test this out to make sure it's working as expected!
 
-### 👻 Deploy again and see the NFTs changing values.
+### 👻 Deploy again and see the NFTs changing values
 
 Copy all of `run.js` and overwrite whats in `deploy.js`. Here's what my `run.js` looks like right now:
 
@@ -80,7 +80,7 @@ Feel free to see it on Rarible as well. Just know Rarible is much slower in show
 
 **Note 2:** I should mention that the NFT itself is updated immediately on the contract once `attackBoss` is mined, but, these third-party sites like OpenSea and Rarible have their own caching mechanics.
 
-### 👑 You dropped this.
+### 👑 You dropped this
 
 YOU DID IT.
 

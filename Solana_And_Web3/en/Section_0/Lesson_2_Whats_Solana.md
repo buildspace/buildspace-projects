@@ -38,7 +38,7 @@ We just pick the one we are most comfortable with or the one that makes the most
 
 This is pretty much how we should look at different blockchains. Each one has it's own pros and cons and you should just pick the one that fits your use case or comfort level. Solana is known as the super fast, low-gas fee blockchain — and in this project we'll mess with it so you can get a feel for how you like it! **Form your own opinion!!**
 
-### ⛓ Cross chain future.
+### ⛓ Cross chain future
 
 Every blockchain has it's own pros and cons. I don't think any one of the big blockchains are "the best". And, we **don't** **need to** have just one be the best. Competition is good. A world where *just* Apple makes smartphones would suck. A world where only Krispy Kreme made donuts would suck. We need a lot of people pushing the industry forward in their own ways. 
 

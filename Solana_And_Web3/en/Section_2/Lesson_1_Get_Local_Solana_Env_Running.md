@@ -4,7 +4,7 @@ We have all our web app stuff mostly done. But, we're using fake data! We're goi
 
 Once we do this, we'll deploy our Solana program and hook it up to our web app — kinda like you'd deploy an API and then hook it up to your web app!!
 
-### 📝 A note on Solana before we hop in.
+### 📝 A note on Solana before we hop in
 
 Okay, so, to be honest getting Solana running and working is **not easy right now.**
 
@@ -22,7 +22,7 @@ I like this [tweet](https://twitter.com/armaniferrante/status/143455472509394945
 
 **All this being said, I think Solana is insanely fun once you set it up and get a handle on how it works. It's so fast. The low-gas fees are magical. It's just really fun to be part of a community working on a breakthrough technology. It feels like you're part of the team actually building Solana :).**
 
-### 🚦 Choose your path.
+### 🚦 Choose your path
 Getting Solana setup all starts with your machine. There are a bunch of "gotchyas" on different OS's. If you are running an **Intel macOS machine or Linux machine** feel free to move right on through. If you are running a **Windows machine or M1 macOS machine** follow one of the links below:
 
 - [Setup Solana on Windows Machine](https://github.com/buildspace/buildspace-projects/tree/main/Solana_And_Web3/en/Section_2/Resources/windows_setup.md)
@@ -31,7 +31,7 @@ Getting Solana setup all starts with your machine. There are a bunch of "gotchya
 
 Good luck - you got this!
 
-### 🦀 Install Rust.
+### 🦀 Install Rust
 
 In Solana, programs are written in Rust! If you don't know Rust don't worry. As long as you know some other language — you'll pick it up over the course of this project.
 
@@ -99,7 +99,7 @@ The last thing to test is we want to make sure we can get a **local Solana node 
 ```bash
 solana-test-validator
 ```
-### Notes for Windows users.
+### Notes for Windows users
 
 If you are a Windows user and the above command doesn't work, or you get the following error `Unable to connect to validator: Client error: test-ledger/admin.rpc does not exist` make sure you do the following.
 
@@ -168,7 +168,7 @@ We'll also use Anchor's npm module and Solana Web3 JS — these both will help u
 npm install @project-serum/anchor @solana/web3.js
 ```
 
-### 🏃‍♂️ Create a test project and run it.
+### 🏃‍♂️ Create a test project and run it
 
 Okay, we're *nearly done* haha. The last thing we need to do to finalize installation is to actually run a Solana program locally and make sure it actually works.
 
@@ -191,7 +191,7 @@ cd myepicproject
 If you are running the project locally and don't have yarn installed `anchor init` will fail. To solve this you can install yarn by running `npm install --global yarn
 `.
 
-### 🔑 Create a local keypair.
+### 🔑 Create a local keypair
 
 Next thing we need to do is actually generate a local Solana wallet to work with. Don't worry about creating a passphrase for now, just tap "Enter" when it asks.
 
@@ -209,7 +209,7 @@ solana address
 
  You'll see the public address of your local wallet we just created.
 
-### 🥳 Let's run our program.
+### 🥳 Let's run our program
 
 When we did `anchor init` it created a basic Solana program for us. What we want to do now is:
 

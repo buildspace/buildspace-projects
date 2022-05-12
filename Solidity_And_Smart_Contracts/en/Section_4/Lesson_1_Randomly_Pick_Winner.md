@@ -1,5 +1,4 @@
-😈 Randomly pick winner
------------------------
+## 😈 Randomly pick winner-
 
 So right now, our code is set to give the waver 0.0001 ETH every single time! Our contract will run out of money pretty fast, and then the fun is over and we'd need to add more funds to our contract. In this lesson, I'll walk you through how to:
 
@@ -170,8 +169,7 @@ So, when I run the above code here's what I get:
 
 Boom! It works. When "79" was generated, the user didn't win the prize. But, when 23 was generated the waver won! And, the contract balance went down by exactly 0.0001. Nice :).
 
-Cooldowns to prevent spammers
------------------------------
+## Cooldowns to prevent spammers
 
 Awesome. You have a way to randomly send ETH to people now! Now, it might be useful to add a cooldown function to your site so people can't just spam wave at you. Why? Well, maybe you just don't want them to keep on trying to win the prize over and over by waving at you. Or, maybe you don't want *just* *their* messages filling up your wall of messages.
 

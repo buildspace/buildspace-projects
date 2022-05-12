@@ -1,5 +1,4 @@
-👋 Bienvenido
-----------------------------------
+## 👋 Bienvenido
 
 Lo has logrado, ¡Diablos, sí! Bienvenido :). Mi nombre es Farza y seré su instructor. Este proyecto es para desarrolladores que quieran profundizar en la tecnología crypto. Todo lo que realmente necesitas saber al entrar es esto: algunas habilidades del uso de la terminal, algo de javascript, algo de react.js. Aprenderás el resto en el camino.
 
@@ -10,8 +9,7 @@ Algunos pasos a seguir antes de continuar:
 3. **Asegúrese de asistir a la inauguración**. Si te lo pierdes, no te preocupes. ¡No es obligatorio! Recibirás un correo electrónico con la grabación. También publicaré la grabación en Discord.
 
 
-🚀 Esto va a ser asombroso
-----------------------------------
+## 🚀 Esto va a ser asombroso
 
 Estoy muy emocionado de mostrarte cómo pasar de cero -> enviar tu propia aplicación web3 + contrato inteligente de Ethereum.
 
@@ -24,8 +22,7 @@ Con este proyecto, aprenderás sobre tecnología crypto escribiendo código y si
 Aquí hay un pequeño [video de introducción que hice sobre el proyecto](https://www.loom.com/share/8746b43760c74c6791ba17af9940ea8e).
 
 
-🏠 ¿Cómo está todo esto estructurado?
-------------------------------
+## 🏠 ¿Cómo está todo esto estructurado?
 
 Este proyecto suele llevar a las personas entre 5 y 10 horas en total. Algunas personas lo terminan el mismo día en que comienzan, ¡otras toman unos días!
 
@@ -40,8 +37,7 @@ Durante la sesión, también podrás hacer preguntas en #cowork-chat y yo estar�
 ![](https://i.imgur.com/dqbGZae.png)
 
 
-👀 Obten un _buildspace NFT al final
-------------------------------
+## 👀 Obten un _buildspace NFT al final
 
 Cuando llegues al final de este proyecto, podrás ganar un NFT.
 
@@ -60,8 +56,7 @@ Si no sabes cómo hacer esto, no te preocupes por ahora, no es obligatorio.
 *Nota: ¡El proyecto en sí no requiere que tengas dinero real en absoluto! Seguiremos implementando en la cadena de bloques utilizando algo especial que Ethereum nos proporciona llamado "red de prueba".*
 
 
-🛠 ¿Qué estarás construyendo?
------------------------------
+## 🛠 ¿Qué estarás construyendo?
 
 Estarás construyendo un sitio web al que llamaré WavePortal --- será un lugar donde cualquier persona en Internet puede aprender un poco sobre quién eres y enviarte un mensaje 👋 + y guardar esos datos en la cadena de bloques a través de un contrato inteligente de Ethereum. (Un contrato inteligente es básicamente un código que vive en la cadena de bloques desde la que puedes leer y escribir, hablaremos de esto más adelante).
 
@@ -79,21 +74,18 @@ Puedes hacer lo que quieras :).
 Al final, tendrás un sitio del que puedes presumir y que la gente realmente lo use. ¡Tus compañeros de clase serán tus primeros usuarios!
 
 
-📺 ¿Dónde ocurre el Kick-Off en vivo?
----------------------------------------
+## 📺 ¿Dónde ocurre el Kick-Off en vivo?
 
 Estará sucediendo en <https://www.twitch.tv/buildspace>. ¡Asegúrate de crear una cuenta en Twitch con anticipación para que puedas chatear durante la transmisión!
 
 
-🤚 Cómo obtener ayuda.
----------------------------------------
+## 🤚 Cómo obtener ayuda
 
 Cuando tengas una pregunta, selecciona el canal adecuado para el proyecto.
 
 Este proyecto se divide en 4 secciones. Puedes ver en qué sección te encuentras consultando la barra de progreso en la parte superior de la página. Entonces, por ejemplo, si estás atascado en alguna parte de la Sección 3, presionarías `# section-3-help` en Discord. Si formas parte de varios proyectos, ¡seguro que le haremos preguntas en la categoría de proyecto adecuada!
 
-🤘 ¿Ves un problema? ¿Quieres mejorar algo? Arréglelo tu mismo;).
----------------------------------------
+## 🤘 ¿Ves un problema? ¿Quieres mejorar algo? Arréglelo tu mismo;)
 
 **[Todo este contenido es completamente de código abierto] (https://github.com/buildspace/buildspace-projects)**. Si ves un problema, un error tipográfico, etc., ¡puedes solucionarlo tú mismo fácilmente y hacer un PR! Si necesitas ayuda para hacer esto, DM `@alec` en Discord :).
 
@@ -102,8 +94,7 @@ Este proyecto se divide en 4 secciones. Puedes ver en qué sección te encuentra
 ¡Por lo menos, coloca un ⭐ en el repositorio si te sientes elegante!
 
 
-🚨¿Tienes curiosidad por trabajar en web3?
--------------------
+## 🚨¿Tienes curiosidad por trabajar en web3?
 
 Estamos asociados con un montón de empresas web3 increíbles. Te ayudaremos a que te contraten en crypto. ¡¡Incluso si solo tienes curiosidad, completa el formulario !! ¿Qué es lo peor que puede pasar? ¿Te conectas a algunas empresas de crypto de drogas?
 

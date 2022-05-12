@@ -1,4 +1,4 @@
-### 💎 What we're going to do.
+### 💎 What we're going to do
 
 We're going to build a web app for people to: **connect their wallet → mint a membership NFT → receive a token airdrop → and actually vote on proposals.** The web app is what I'll be calling our  "DAO Dashboard". It's where our new members can join and it allows existing members to see what the DAO is up to.
 
@@ -16,7 +16,7 @@ Here’s a video I made covering Replit in a past project:
 
 [Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)
 
-### 👩‍💻 Want to work locally? Get the code.
+### 👩‍💻 Want to work locally? Get the code
 
 If you don’t wanna use Replit, you don’t have to.
 
@@ -47,7 +47,7 @@ And then:
 npm start
 ```
 
-### 🦊 Get Metamask.
+### 🦊 Get Metamask
 
 Next we need an Ethereum wallet. There are a bunch of these, but, for this project we're going to use Metamask. Download the browser extension and set up your wallet [here](https://metamask.io/download.html). Even if you already have another wallet provider, just use Metamask for now.
 
@@ -65,7 +65,7 @@ Once you set up your wallet, be sure to switch the network to "**Rinkeby**" whic
 
 ![Untitled](https://i.imgur.com/Kx3AZDp.png)
 
-### 💸 Make sure you have testnet funds.
+### 💸 Make sure you have testnet funds
 
 We're **not** going to be deploying to the "Ethereum mainnet". Why? Because it costs real $ and it's not worth messing up. We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake $ so we can test stuff out as much as we want. But, it's important to know that testnets are run by actual miners and mimic real-world scenarios.
 

@@ -269,6 +269,6 @@ Looking gooooooooooooooooooooooooooooood! See the tiny pencils? They let you edi
 
 The minting process on our app is kinda bland right now. You press a button. Something happens. Here’s a challenge for you: Display a popup that tells the user their domain has been minted. Check out how we’re sending them to OpenSea in the `renderMints` function for a hint :)
 
-### **🚨Progress report.**
+### 🚨Progress report
 
 Your app should be looking super fancy right now! Post the finished product in #progress. I can’t wait to see all your cool takes on this project :)

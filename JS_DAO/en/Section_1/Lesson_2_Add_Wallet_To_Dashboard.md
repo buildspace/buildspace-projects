@@ -1,4 +1,4 @@
-### ⛓ Specify your chain and wallet type.
+### ⛓ Specify your chain and wallet type
 
 So, in order for our website to talk to the blockchain, we need to somehow connect our wallet to it. Once we connect our wallet to our website, our website will have permission to call smart contracts on our behalf. **Remember, it's just like authenticating into a website.**
 
@@ -35,7 +35,7 @@ Then we're wrapping everything with `<ThirdwebProvider>`, this provider holds th
 
 *Note: If you've worked on dapps before, make sure you disconnect your wallet from [https://localhost:3000](https://localhost:3000) on Metamask if you have ever connected it before.*
 
-### 🌟 Add Connect to Wallet.
+### 🌟 Add Connect to Wallet
 
 If you head over to your web app, you'll see a blank purple page. Let's add some basic copy + a button to let users connect their wallet.
 

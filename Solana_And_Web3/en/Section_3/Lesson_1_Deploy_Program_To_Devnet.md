@@ -10,7 +10,7 @@ Plus, I think it's easier to build the web app once we deploy our Solana program
 
 *Note: Make sure `solana-test-validator` is **not** running anywhere.*
 
-### 🌳 Set up your environment for devnet.
+### 🌳 Set up your environment for devnet
 
 It's actually pretty tricky to deploy to devnet. Stay with me here and make sure not to miss any steps :).
 
@@ -44,7 +44,7 @@ And you should see 4 fake SOL in your wallet! This is actually retrieving your b
 
 *Note: sometimes you'll get an error that says something like "insufficient funds" — whenever that happens just airdrop yourself `2` SOL like above. Note: `2` is the max you can airdrop yourself at a time right now. So, you'll need to refresh your wallet occasionally.*
 
-### ✨ Changing up some variables.
+### ✨ Changing up some variables
 
 Now, we need to change some variables in `Anchor.toml`. This is where it gets a little tricky.
 

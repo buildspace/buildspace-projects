@@ -34,7 +34,7 @@ If you have no experience w/ React - [checkout this intro series](https://scrim
 
 You'll be a React Wizard after this project if you aren't already 🧙‍♂!
 
-### ⬇️ Getting the code.
+### ⬇️ Getting the code
 
 We'll be using this thing called [Replit](https://replit.com/~)!
 

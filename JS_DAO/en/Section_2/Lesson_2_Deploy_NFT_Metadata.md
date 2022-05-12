@@ -1,4 +1,4 @@
-### 👾 Setup NFT Data.
+### 👾 Setup NFT Data
 
 Okay, now we're going to actually deploy metadata associated with our membership NFT. We haven't done that yet. All we did so far was create the ERC-1155 contract and add some basic metadata. We haven't actually set up our membership NFTs, let's do that!
 
@@ -63,7 +63,7 @@ Here's what I get:
 ✅ Successfully created a new NFT in the drop!
 ```
 
-### 😼 Setup claim condition.
+### 😼 Setup claim condition
 
 Now we need to actually set up our "claim conditions". What's the max # of NFTs that can be minted? When can users start minting NFTs? Again, this is usually custom logic you'd need to write into your contract but in this case thirdweb makes it easy. 
 

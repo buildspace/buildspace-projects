@@ -1,4 +1,4 @@
-## 🍎 Setting up Solana on a M1 macOS Machine.
+## 🍎 Setting up Solana on a M1 macOS Machine
 
 **First off - I want to give a HUGE shoutout to our TA, Nick! Without Nick, this guide wouldn't have been doable. Once you finish this section make sure to give some love to Nick in Discord (Nick_G#4818)**
 
@@ -12,7 +12,7 @@ This guide will get you up and running with the Solana enviroment on your local 
 
 Let's kick it off!
 
-### ⚙️ Install Rust.
+### ⚙️ Install Rust
 
 In Solana, programs are written in Rust! If you don't know Rust don't worry. As long as you know some other language — you'll pick it up over the course of this project.
 
@@ -237,7 +237,7 @@ We'll also use Anchor's npm module and Solana Web3 JS — these both will help u
 npm install @project-serum/anchor @solana/web3.js
 ```
 
-### 🏃‍♂️ Create a test project and run it.
+### 🏃‍♂️ Create a test project and run it
 
 Okay, we're _nearly done_ haha. The last thing we need to do to finalize installation is to actually run a Solana program
 locally and make sure it actually works.
@@ -268,7 +268,7 @@ Okay, back to it! Let's open up a new terminal window and run:
 solana-test-validator --no-bpf-jit
 ```
 
-### 🔑 Create a local keypair.
+### 🔑 Create a local keypair
 
 In order for us to talk to our Solana programs we need to generate a keypair. Really all you need to know about this is it allows us to digitally sign for transactions in Solana! Still curious? [Take a look at this page](https://solana-labs.github.io/solana-web3.js/classes/Keypair.html) for more information!
 
