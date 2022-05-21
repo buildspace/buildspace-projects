@@ -74,21 +74,21 @@ import React from "react";
 import useIPFS from "../hooks/useIPFS";
 
 const IPFSDownload = ({ hash, filename }) => {
-	const file = useIPFS(hash, filename);
+  const file = useIPFS(hash, filename);
 
-	return (
-		<div>
-			{file ? (
-				<div className='download-component'>
-					<a className='download-button' href={file} download={filename}>
-						Download
-					</a>
-				</div>
-			) : (
-				<p>Downloading file...</p>
-			)}
-		</div>
-	);
+  return (
+    <div>
+      {file ? (
+        <div className='download-component'>
+          <a className='download-button' href={file} download={filename}>
+            Download
+          </a>
+        </div>
+      ) : (
+        <p>Downloading file...</p>
+      )}
+    </div>
+  );
 };
 
 export default IPFSDownload;
@@ -117,15 +117,15 @@ Here's what mine looks like, you can add or remove fields based on your product:
 
 ```json
 [
-	{
-		"id": 1,
-		"name": "OG Emoji pack",
-		"price": "0.09",
-		"description": "Get this fire emoji pack for only $0.09! Includes 3 hot emojis: Forreal, Flooshed, and Sheesh!",
-		"image_url": "https://i.imgur.com/rVD8bjt.png",
-		"filename": "Emojis.zip",
-		"hash": "QmWWH69mTL66r3H8P4wUn24t1L5pvdTJGUTKBqT11KCHS5"
-	}
+  {
+    "id": 1,
+    "name": "OG Emoji pack",
+    "price": "0.09",
+    "description": "Get this fire emoji pack for only $0.09! Includes 3 hot emojis: Forreal, Flooshed, and Sheesh!",
+    "image_url": "https://i.imgur.com/rVD8bjt.png",
+    "filename": "Emojis.zip",
+    "hash": "QmWWH69mTL66r3H8P4wUn24t1L5pvdTJGUTKBqT11KCHS5"
+  }
 ]
 ```
 
@@ -140,32 +140,32 @@ import styles from "../styles/Product.module.css";
 import IPFSDownload from "./IpfsDownload";
 
 export default function Product({ product }) {
-	const { id, name, price, description, image_url } = product;
+  const { id, name, price, description, image_url } = product;
 
-	return (
-		<div className={styles.product_container}>
-			<div>
-				<img className={styles.product_image} src={image_url} alt={name} />
-			</div>
+  return (
+    <div className={styles.product_container}>
+      <div>
+        <img className={styles.product_image} src={image_url} alt={name} />
+      </div>
 
-			<div className={styles.product_details}>
-				<div className={styles.product_text}>
-					<div className={styles.product_title}>{name}</div>
-					<div className={styles.product_description}>{description}</div>
-				</div>
+      <div className={styles.product_details}>
+        <div className={styles.product_text}>
+          <div className={styles.product_title}>{name}</div>
+          <div className={styles.product_description}>{description}</div>
+        </div>
 
-				<div className={styles.product_action}>
-					<div className={styles.product_price}>{price} USDC</div>
-					{/* I'm hardcoding these for now, we'll fetch the hash from the API later*/}
-					<IPFSDownload
-						filename='emojis.zip'
-						hash='QmWWH69mTL66r3H8P4wUn24t1L5pvdTJGUTKBqT11KCHS5'
-						cta='Download emojis'
-					/>
-				</div>
-			</div>
-		</div>
-	);
+        <div className={styles.product_action}>
+          <div className={styles.product_price}>{price} USDC</div>
+          {/* I'm hardcoding these for now, we'll fetch the hash from the API later*/}
+          <IPFSDownload
+            filename='emojis.zip'
+            hash='QmWWH69mTL66r3H8P4wUn24t1L5pvdTJGUTKBqT11KCHS5'
+            cta='Download emojis'
+          />
+        </div>
+      </div>
+    </div>
+  );
 }
 ```
 
@@ -177,18 +177,18 @@ and add a file called `fetchProducts.js`:
 import products from "./products.json";
 
 export default function handler(req, res) {
-	// If get request
-	if (req.method === "GET") {
-		// Remove hashes from products.json
-		const cleanProducts = products.map((item) => {
-			delete item.hash;
-			return item;
-		});
+  // If get request
+  if (req.method === "GET") {
+    // Remove hashes from products.json
+    const cleanProducts = products.map((item) => {
+      delete item.hash;
+      return item;
+    });
 
-		res.status(200).json(cleanProducts);
-	} else {
-		res.status(405).send(`Method ${req.method} not allowed`);
-	}
+    res.status(200).json(cleanProducts);
+  } else {
+    res.status(405).send(`Method ${req.method} not allowed`);
+  }
 }
 ```
 
@@ -211,63 +211,63 @@ const TWITTER_HANDLE = "_buildspace";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
-	const { publicKey } = useWallet();
-	const [products, setProducts] = useState([]);
+  const { publicKey } = useWallet();
+  const [products, setProducts] = useState([]);
 
-	useEffect(() => {
-		if (publicKey) {
-			fetch(`/api/fetchProducts`)
-				.then((response) => response.json())
-				.then((data) => {
-					setProducts(data);
-					console.log("Products", data);
-				});
-		}
-	}, [publicKey]);
+  useEffect(() => {
+    if (publicKey) {
+      fetch(`/api/fetchProducts`)
+        .then((response) => response.json())
+        .then((data) => {
+          setProducts(data);
+          console.log("Products", data);
+        });
+    }
+  }, [publicKey]);
 
-	const renderNotConnectedContainer = () => (
-		<div className='button-container'>
-			<WalletMultiButton className='cta-button connect-wallet-button' />
-		</div>
-	);
+  const renderNotConnectedContainer = () => (
+    <div className='button-container'>
+      <WalletMultiButton className='cta-button connect-wallet-button' />
+    </div>
+  );
 
-	const renderItemBuyContainer = () => (
-		<div className='products-container'>
-			{products.map((product) => (
-				<Product key={product.id} product={product} />
-			))}
-		</div>
-	);
+  const renderItemBuyContainer = () => (
+    <div className='products-container'>
+      {products.map((product) => (
+        <Product key={product.id} product={product} />
+      ))}
+    </div>
+  );
 
-	return (
-		<div className='App'>
-			<div className='container'>
-				<header className='header-container'>
-					<p className='header'> 😳 Buildspace Emoji Store 😈</p>
-					<p className='sub-text'>
-						The only emoji store that accepts shitcoins
-					</p>
-				</header>
+  return (
+    <div className='App'>
+      <div className='container'>
+        <header className='header-container'>
+          <p className='header'> 😳 Buildspace Emoji Store 😈</p>
+          <p className='sub-text'>
+            The only emoji store that accepts shitcoins
+          </p>
+        </header>
 
-				<main>
-					{publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
-				</main>
+        <main>
+          {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
+        </main>
 
-				<div className='footer-container'>
-					<img
-						alt='Twitter Logo'
-						className='twitter-logo'
-						src='twitter-logo.svg'
-					/>
-					<a
-						className='footer-text'
-						href={TWITTER_LINK}
-						target='_blank'
-						rel='noreferrer'>{`built on @${TWITTER_HANDLE}`}</a>
-				</div>
-			</div>
-		</div>
-	);
+        <div className='footer-container'>
+          <img
+            alt='Twitter Logo'
+            className='twitter-logo'
+            src='twitter-logo.svg'
+          />
+          <a
+            className='footer-text'
+            href={TWITTER_LINK}
+            target='_blank'
+            rel='noreferrer'>{`built on @${TWITTER_HANDLE}`}</a>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default App;
