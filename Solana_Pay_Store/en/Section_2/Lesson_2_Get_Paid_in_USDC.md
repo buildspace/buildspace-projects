@@ -100,6 +100,21 @@ export default function handler(req, res) {
   }
 }
 ```
+Again - this might seem overwhelming but it's relatively simple. 
+
+The first new thing we add is the USDC address:
+```jsx
+const usdcAddress = new PublicKey("Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr");
+```
+
+This is the token address of the USDC token on the devnet that we got from the faucet. We're going to use this address to find the USDC token account addresses.
+
+Here's how token accounts in Solana work. 
+![Untitled](https://i.imgur.com/8T8BFGL.png)
+
+All fungible tokens on Solana are made using the [token program](https://spl.solana.com/token). This means that each token has it's **own account**, which has an address. To be able to send tokens from that account, you need it's address. 
+
+You can think of your Solana account like an infinite hotel and all the token accounts like hotel rooms. As the owner of the hotel, you own the hotel rooms. To be able to look inside a room, you need to know it's number :)
 
 Pretty crazy that the only difference in sending SOL and *any* other token is just this bit:
 ```jsx
