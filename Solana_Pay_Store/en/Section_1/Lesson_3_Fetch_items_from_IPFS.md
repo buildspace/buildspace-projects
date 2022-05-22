@@ -179,25 +179,22 @@ import products from "./products.json";
 export default function handler(req, res) {
   // If get request
   if (req.method === "GET") {
-    // Remove hashes from products.json
-    const cleanProducts = products.map((item) => {
-      delete item.hash;
-      return item;
+    // Create a copy of products without the hashes and filenames
+    const productsNoHashes = products.map((product) => {
+
+      const { hash, filename, ...rest } = product;
+      return rest;
     });
 
-    res.status(200).json(cleanProducts);
-  } else {
+    res.status(200).json(productsNoHashes);  
+  }
+  else {
     res.status(405).send(`Method ${req.method} not allowed`);
   }
 }
 ```
 
-You'll note we're deleting the hashes! This is because we don't want to give
-viewers the hashes before they've paid for the items as they can just download
-them lol
-
-Now to use this endpoint and the Product component, we just need to update our
-`index.js`:
+You'll note we're not taking the hashes! This is because we don't want to give viewers the hashes before they've paid for the items as they can just download them lol
 
 ```jsx
 import React, { useEffect, useState } from "react";
