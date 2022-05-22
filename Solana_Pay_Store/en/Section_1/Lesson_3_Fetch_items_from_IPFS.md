@@ -28,7 +28,7 @@ And now you know how to use IPFS! There's a catch in our scenario though - since
 ### 🎈 Downloading files from IPFS
 Whatever goes up, must come down. Unless it's a rocket to the moon. Or the 21 helium balloons I bought on my fourth birthday without telling my parents. I wonder where they are today. 
 
-Downloading files from IPFS is almost easier than uploading them lol. I've left a file called `useIPFS` in the hooks folder. Take a look at it - all it does it add the hash and filename to an IPFS gateway URL.
+Downloading files from IPFS is almost easier than uploading them lol. I've left a file called `useIPFS` in the hooks folder. Take a look at it - all it does is add the hash and filename to an IPFS gateway URL.
 
 You can find other public IPFS gateways [here](https://luke.lol/ipfs.php).
 
