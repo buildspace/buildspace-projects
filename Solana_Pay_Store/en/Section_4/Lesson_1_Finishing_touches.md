@@ -15,7 +15,7 @@ Basically:
 
 Note: On Vercel, you will need to add 6th environment variable CI=false. This will make sure our build doesn't fail because of warnings.
 
-![Vercel upload][https://i.imgur.com/wn2Uhj4.png]
+![Vercel upload](https://i.imgur.com/wn2Uhj4.png)
 
 
 ### 😍 Hello, Solana Master
