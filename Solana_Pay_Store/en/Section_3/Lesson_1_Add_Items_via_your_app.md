@@ -232,7 +232,7 @@ export default App;
 
 Now when you connect with the same wallet as the owner, you should see a "Create Product" button on the top right. Aaaah this is so pretty.
 
-![](https://hackmd.io/_uploads/SkQiCcUPc.png)\
+![](https://hackmd.io/_uploads/SkQiCcUPc.png)
 
 The last bit we'll need is the API endpoint to add stuff to our "database". Create a `addProduct.js` file in the `pages/api` directory:
 ```jsx
