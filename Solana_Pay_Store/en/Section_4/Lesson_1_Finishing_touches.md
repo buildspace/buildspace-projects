@@ -26,7 +26,7 @@ Thank you for contributing to the future of web3 by learning this stuff. The fac
 ### 🥞 Careers in Web3
 Tons of people have also gotten full-time jobs at top web3 companies via buildspace. I'm constantly seeing people nail their interviews after they do a few buildspace projects.
 
-![Nick being a boss at his job application][https://i.imgur.com/CNzLdQc.png]
+![Nick being a boss at his job application](https://i.imgur.com/CNzLdQc.png)
 
 **People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
 
