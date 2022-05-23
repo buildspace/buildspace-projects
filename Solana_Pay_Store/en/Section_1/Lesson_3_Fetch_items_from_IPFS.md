@@ -117,7 +117,7 @@ export default function Product({ product }) {
 }
 ```
 
-Before we can use it, we'll need to create an API endpoint that can fetch our products from our "database". Create an `api` folder in the `pages` directory and add a file called `fetchProducts`:
+Before we can use it, we'll need to create an API endpoint that can fetch our products from our "database". Create an `api` folder in the `pages` directory and add a file called `fetchProducts.js`:
 ```jsx
 import products from "./products.json"
 
