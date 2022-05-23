@@ -171,7 +171,7 @@ Here's my `orders.js` API endpoint file (inside the `pages/api` directory):
 ```jsx
 // This API endpoint will let users POST data to add records and GET to retrieve
 import orders from "./orders.json";
-import fs from "fs";
+import { writeFile } from "fs/promises";
 
 function get(req, res) {
   const { buyer } = req.query;
@@ -195,7 +195,7 @@ async function post(req, res) {
     // If this address has not purchased this item, add order to orders.json
     if (!orders.find((order) => order.buyer === newOrder.buyer.toString() && order.itemID === newOrder.itemID)) {
       orders.push(newOrder);
-      await fs.writeFileSync("./pages/api/orders.json", JSON.stringify(orders, null, 2));
+      await writeFile("./pages/api/orders.json", JSON.stringify(orders, null, 2));
       res.status(200).json(orders);
     } else {
       res.status(400).send("Order already exists");
@@ -250,7 +250,7 @@ import { findReference, FindReferenceError } from '@solana/pay';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { InfinitySpin } from 'react-loader-spinner';
 import IPFSDownload from './IpfsDownload';
-import { addOrder } from '../Lib/api';
+import { addOrder } from '../lib/api';
 
 const STATUS = {
   Initial: 'Initial',
