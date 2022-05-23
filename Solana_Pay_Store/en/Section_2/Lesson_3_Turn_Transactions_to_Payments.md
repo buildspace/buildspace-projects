@@ -226,7 +226,7 @@ Really, all it does is that it reads data and writes to the orders.json file.
 
 Next, we'll need to interact with this API. We *could* just do it whereever we need to in the individal files, but that's bad practice. Instead, we'll create a dedicated file for it.
 
-Create a "lib" folder in the root directory of your project (same level as components) and add an `api.js` file in it.
+Create a "Lib" folder in the root directory of your project (same level as components) and add an `api.js` file in it.
 
 Here's what it'll look like:
 ```jsx
