@@ -9,7 +9,7 @@ First, create a `.env` file in your projects root folder and add your address in
 NEXT_PUBLIC_OWNER_PUBLIC_KEY=B1aLAAe4vW8nSQCetXnYqJfRxzTjnbooczwkUJAr7yMS
 ```
 
-**Note:** NextJs has dotenv built in but you **need** the start publicly available env vars with `NEXT_PUBLIC`. 
+**Note:** NextJs has dotenv built in but you **need** the start publicly available env vars with `NEXT_PUBLIC`. You can add this .env declaration in your `createTransaction.js` to replace your sellerAddress!
 
 Time for another component! Add `CreateProduct.js` in the components folder.
 
@@ -159,7 +159,7 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
   const { publicKey } = useWallet();
-  const isOwner = ( publicKey ? publicKey.toString() === process.env.NEXT_PUBLIC_OWNER_PUBLIC_KEY : false );
+  const isOwner = ( publicKey ? publicKey.toString() === 'B1aLAAe4vW8nSQCetXnYqJfRxzTjnbooczwkUJAr7yMS' : false );
   const [creating, setCreating] = useState(false);
   const [products, setProducts] = useState([]);
   
