@@ -148,10 +148,25 @@ Here's the new block we added:
   }, [status]);
 ```
 
-This is the magic of Solana Pay. When we created our transaction object, we added an order ID as a reference field. Solana Pay allows us to search for transactions by their reference. This 
-means we can instantly check if a payment has been made without any deep digging. 
+This is the magic of Solana Pay. When we created our transaction object, we added an order ID as a reference field. Solana Pay allows us to search for transactions by their reference. This means we can instantly check if a payment has been made without any deep digging. 
 
-THIS IS A BIG DEAL! The whole reason we use blockchains is so that we don't have to worry about invalid transactions. When Solana Pay tells you a transaction was confirmed, you **know** a transaction was confirmed and that the money is in your wallet.
+```jsx
+const result = await findReference(connection, orderID);
+```
+
+The [`findReference`](https://docs.solanapay.com/api/core/function/findReference) function looks for the oldest transaction signature referencing our orderID. If we find one, we check that the transaction status was either confirmed or finalized. 
+
+```jsx
+  if (e instanceof FindReferenceError) {
+    return null;
+  }
+```
+
+This function will error if the transaction isn't found and that can happen right after the transaction is submitted. So we check if the error was from the [`FindReferenceError`](https://docs.solanapay.com/api/core/class/FindReferenceError) class and ignore it.
+
+If all goes according to plan, our code will start looking for the transaction just as the user clicks "Approve". The first search will probably fail because transactions take about 0.5s. This is why we're using `setInterval` >:D. The second time it checks, it'll find the transaction and will confirm it, updating our app to indicate payment.
+
+THIS IS A BIG DEAL! The whole reason we use blockchains is so that we don't have to worry about invalid transactions. When Solana Pay tells you a transaction was confirmed, you **know** a transaction was confirmed and that the money is in your wallet. No chargebacks :P
 
 ### 🧠 Add to orderbook
 There's a tiny problem right now. If you make a payment and then refresh your page, the download button goes away! 
