@@ -89,7 +89,7 @@ Next, we'll create a `Product.js` file in the components folder. We'll use this 
 ```jsx
 import React from "react";
 import styles from "../styles/Product.module.css";
-import IPFSDownload from './IpfsDownload';
+import IPFSDownload from './IPFSDownload';
 
 export default function Product({ product }) {
   const { id, name, price, description, image_url } = product;
