@@ -1,9 +1,23 @@
 Congrats. You're well on your way to becoming an e-commerce tycoon. Jeff Bezos who? 
 
-### 🚀 Deploy to the world
+### 🚢 Moving to the mainnet
+My favourite part about this project is how there's **no deploy cost.** ANYONE can "deploy" this project for free and start generating income by selling their stuff. To start accepting transactions on the mainnet, you'll just have to update two variables. 
+
+1. The "USDC" token address in `createTransaction.js`. The mainnet USDC SPL token address is `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`, so your statement should look like this:
+```jsx
+const usdcAddress = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
+```
+2. The `network` enum on `WalletAdapterNetwork` on line 20 in `_app.js`:
+```jsx
+const network = WalletAdapterNetwork.mainnet-beta;
+```
+
+Ta-da! Your app is now taking **real money** on the mainnet. Magical.
+
+### 🚀 Deploy to the world (GTFOL)
 Deploying a React app has gotten so easy that there is no reason not to do it at this point lol. Plus, it's free. You've made it this far, deploying is the final step. Plus -- your fellow builders at buildspace must not be deprived of your NFTs!! Please give us the opportunity to mint your rare creations hehe.
 
-I made a really quick video below on deploying via Vercel. If you don't want to use Vercel, all good. Use whatever you want.
+**Note:** Since Vercel is a read-only filesystem, adding orders or products from the web-app **will not work!**. This is cuz your "database" json files will not save. If you don't want to use Vercel, all good. Use whatever you want.
 
 Basically:
 
