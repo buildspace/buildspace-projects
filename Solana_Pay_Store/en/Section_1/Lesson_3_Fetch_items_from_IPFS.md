@@ -211,7 +211,11 @@ const App = () => {
 export default App;
 ```
 
-You should now see a "Download" button on your app after you connect your wallet! Once you click download, our hook will be called and the file will be fetched and downloaded from IPFS. This can take a few seconds the first time, so please be patient!
+You should now see a "Download" button on your app after you connect your wallet! Once you click download, our hook will be called and the file will be fetched and downloaded from IPFS. This can take a bit of time the first time, so please be patient! 
+
+Keep in mind that files on IPFS are cached across multiple nodes, so if you _just_ uploaded something, it will only exist on a few nodes and will take a bit of time to download. The more your files are accessed, the more nodes they will be cached on and the faster they will download! 
+
+If your file won't download, you'll have to switch to a different IPFS gateway. Check out [this great article](https://github.com/maxim-saplin/ipfs_gateway_research/blob/main/README.md) comparing the popular options.
 
 ### 🚨 Progress Report
 Please do this else Raza will be sad :(
