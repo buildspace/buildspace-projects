@@ -7,9 +7,9 @@ My favourite part about this project is how there's **no deploy cost.** ANYONE c
 ```jsx
 const usdcAddress = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
 ```
-2. The `network` enum on `WalletAdapterNetwork` on line 20 in `_app.js`:
+2. The `network` enum on `WalletAdapterNetwork` on `_app.js` and `createTransaction.js`:
 ```jsx
-const network = WalletAdapterNetwork.mainnet-beta;
+const network = WalletAdapterNetwork.Mainnet;
 ```
 
 Ta-da! Your app is now taking **real money** on the mainnet. Magical.
