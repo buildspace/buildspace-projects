@@ -9,7 +9,7 @@ First, create a `.env` file in your projects root folder and add your address in
 NEXT_PUBLIC_OWNER_PUBLIC_KEY=B1aLAAe4vW8nSQCetXnYqJfRxzTjnbooczwkUJAr7yMS
 ```
 
-**Note:** NextJs has dotenv built in but you **need** the start publicly available env vars with `NEXT_PUBLIC`. 
+**Note:** NextJs has dotenv built in but you **need** to start publicly available env vars with `NEXT_PUBLIC`. Also note that you'll need to restart Next to pick up the change to `.env`. 
 
 Time for another component! Add `CreateProduct.js` in the components folder.
 
