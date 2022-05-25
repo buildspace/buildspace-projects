@@ -86,7 +86,7 @@ module.exports = {
 
 **Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** 
 
-**If uploading to Github or using git version control in general it is good practice to protect yourself from uploading secrect keys to somewhere you don't want them. First of all the best way is to not upload your hardhat config file by adding it to .gitignore. **
+**If uploading to Github or using git version control in general it is good practice to protect yourself from uploading secrect keys to somewhere you don't want them. First of all the best way is to not upload your hardhat config file by adding it to .gitignore.**
 
 Another way of protecting yourself and keeping `hardhat.config.js` secure is to use dotenv. Install it with:
 
