@@ -5,7 +5,7 @@ Vá em frente e feche o terminal com sua rede local da blockchain em execução,
 
 Agora vamos fazer o negócio real, implantando na blockchain real.
 
-Vá em frente e [faça uma conta na Alchemy](https://alchemy.com/?r=a724fda46ee746e0).
+Vá em frente e [faça uma conta na Alchemy](https://alchemy.com/?r=jQ3MDMxMzUyMDU3N).
 
 Desculpe por ter feito tantas contas, mas esse ecossistema é complexo e queremos aproveitar as ferramentas incríveis que existem. O que a Alchemy faz é nos dar uma maneira simples de implantar na blockchain Ethereum real.
 
@@ -26,7 +26,7 @@ O Alchemy essencialmente nos ajuda a transmitir nossa transação de criação d
 
 Isso é complicado. E, não se preocupe se você não entender completamente. À medida que você escreve mais código e realmente constrói este aplicativo, naturalmente fará mais sentido.
 
-Então, [faça uma conta no Alchemy](https://alchemy.com/?r=a724fda46ee746e0).
+Então, [faça uma conta no Alchemy](https://alchemy.com/?r=jQ3MDMxMzUyMDU3N).
 
 Confira o vídeo abaixo para ver como obter sua chave de API para uma rede de teste!
 [Loom](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933)
