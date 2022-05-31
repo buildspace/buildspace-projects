@@ -116,6 +116,8 @@ All fungible tokens on Solana are made using the [token program](https://spl.sol
 
 You can think of your Solana account like an infinite hotel and all the token accounts like hotel rooms. As the owner of the hotel, you own the hotel rooms. To be able to look inside a room, you need to know it's number :)
 
+**Note:** Because of the account model, **you need to have USDC in BOTH user accounts**. If a user account does not have USDC, it will also not have a USDC token address, and this function will error. 
+
 Pretty crazy that the only difference in sending SOL and *any* other token is just this bit:
 ```jsx
     // Here we're creating a different type of transfer instruction
@@ -131,6 +133,13 @@ Pretty crazy that the only difference in sending SOL and *any* other token is ju
 
 You can replace this with *any* SPL token and it'll work!
 
+Now if you click the "Buy now" button, you should see a Phantom request for a token "Gh9Zw". This is the address of the fake USDC token. On the mainnet, this will say actual USDC lol
+
+![](https://hackmd.io/_uploads/ryaoth9P9.png)
+
+That's it, you're taking payments in USDC!  
+
+The coolest part about this to me is the "checkout" experience. No sign-ups. No addresses. No emails. There's billion dollar companies out there that are trying to make one-click checkout popular. You just implemented it in 15 minutes **for free.** :)
 
 ### 🚨 Progress Report
 Please do this else Raza will be sad :(

@@ -1,9 +1,23 @@
 Congrats. You're well on your way to becoming an e-commerce tycoon. Jeff Bezos who? 
 
-### 🚀 Deploy to the world
+### 🚢 Moving to the mainnet
+My favourite part about this project is how there's **no deploy cost.** ANYONE can "deploy" this project for free and start generating income by selling their stuff. To start accepting transactions on the mainnet, you'll just have to update two variables. 
+
+1. The "USDC" token address in `createTransaction.js`. The mainnet USDC SPL token address is `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`, so your statement should look like this:
+```jsx
+const usdcAddress = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
+```
+2. The `network` enum on `WalletAdapterNetwork` on `_app.js` and `createTransaction.js`:
+```jsx
+const network = WalletAdapterNetwork.Mainnet;
+```
+
+Ta-da! Your app is now taking **real money** on the mainnet. Magical.
+
+### 🚀 Deploy to the world (GTFOL)
 Deploying a React app has gotten so easy that there is no reason not to do it at this point lol. Plus, it's free. You've made it this far, deploying is the final step. Plus -- your fellow builders at buildspace must not be deprived of your NFTs!! Please give us the opportunity to mint your rare creations hehe.
 
-I made a really quick video below on deploying via Vercel. If you don't want to use Vercel, all good. Use whatever you want.
+**Note:** Since Vercel is a read-only filesystem, adding orders or products from the web-app **will not work!**. This is cuz your "database" json files will not save. If you don't want to use Vercel, all good. Use whatever you want.
 
 Basically:
 
@@ -15,7 +29,7 @@ Basically:
 
 Note: On Vercel, you will need to add 6th environment variable CI=false. This will make sure our build doesn't fail because of warnings.
 
-![Vercel upload][https://i.imgur.com/wn2Uhj4.png]
+![Vercel upload](https://i.imgur.com/wn2Uhj4.png)
 
 
 ### 😍 Hello, Solana Master
@@ -26,7 +40,7 @@ Thank you for contributing to the future of web3 by learning this stuff. The fac
 ### 🥞 Careers in Web3
 Tons of people have also gotten full-time jobs at top web3 companies via buildspace. I'm constantly seeing people nail their interviews after they do a few buildspace projects.
 
-![Nick being a boss at his job application][https://i.imgur.com/CNzLdQc.png]
+![Nick being a boss at his job application](https://i.imgur.com/CNzLdQc.png)
 
 **People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
 

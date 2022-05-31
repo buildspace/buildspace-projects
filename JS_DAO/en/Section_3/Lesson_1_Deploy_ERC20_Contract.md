@@ -97,7 +97,7 @@ const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
     // What's the max supply you want to set? 1,000,000 is a nice number!
     const amount = 0;
     // Interact with your deployed ERC-20 contract and mint the tokens!
-    await token.mint(amount);
+    await token.mintToSelf(amount);
     const totalSupply = await token.totalSupply();
 
     // Print out how many of our token's are out there now!
@@ -224,7 +224,7 @@ You could create your own little airdrop formula just like ENS did for example:
 
 You want to think — “The people who are receiving token will have more power over the DAO. Is this good? Are the biggest token holders going to do the right thing for the DAO?”.  This gets into the very broad topic of tokenomics which you can read about [here](https://www.google.com/search?q=tokenomics).
 
-Okay, so now if I head back to by ERC-20 contract on Etherscan, I can see all my new token holders and how much of`$HOKAGE` they own.
+Okay, so now if I head back to my ERC-20 contract on Etherscan, I can see all my new token holders and how much of`$HOKAGE` they own.
 
 LETS GOOO.
 

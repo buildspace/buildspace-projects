@@ -40,7 +40,7 @@ When your contract has been deployed and you're testing it out with your UI and 
 
 To validate, you can open up your contract address on [Rinkeby Etherscan](https://rinkeby.etherscan.io/) and view the transactions that have taken place. You'll find all sorts of useful information in here, including the method that was called, which in this case is `Wave`. If you click into a `Wave` transaction, you'll notice that in the `To` property, it will identify that the contract address was called. If the user had won a prize, you'll notice in that field, that the contract has transferred 0.0001 ETH from the contract address to your account address.
 
-Note that the `Value` of the transaction is still 0 ETH, because the user never paid anything to initiate the wave. The transfer of ETH internally from a smart contract is called an "internal transaction".
+Note that the `Value` of the transaction is still 0 ETH, because the user never paid anything to initiate the wave. The transfer of ETH internally from a smart contract is called an "internal transaction" and you can view them by switching the tab on Etherscan.
 
 ## 🎤 Events
 

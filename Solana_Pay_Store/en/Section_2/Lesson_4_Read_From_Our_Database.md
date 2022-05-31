@@ -1,7 +1,7 @@
 Now that we're adding items to our orders "database", it would be nice if we used it lol.
 
 ### 👀 Check if they've purchased on load
-The flow for doing this is going to be very similar to `addOrder`. First, head back over to `Lib/api.js` and add this handler:
+The flow for doing this is going to be very similar to `addOrder`. First, head back over to `lib/api.js` and add this handler:
 ```jsx
 // Returns true if a given public key has purchased an item before
 export const hasPurchased = async (publicKey, itemID) => {
@@ -38,7 +38,7 @@ import { findReference, FindReferenceError } from '@solana/pay';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { InfinitySpin } from 'react-loader-spinner';
 import IPFSDownload from './IpfsDownload';
-import { addOrder, hasPurchased } from '../Lib/api';
+import { addOrder, hasPurchased } from '../lib/api';
 
 const STATUS = {
   Initial: 'Initial',
@@ -203,29 +203,24 @@ export default async function handler(req, res) {
     const { itemID } = req.body;
 
     if (!itemID) {
-      res.status(400).send('Missing itemID');
+      return res.status(400).send('Missing itemID');
     }
 
-    for(let i = 0; i < products.length; i++) {
-      let found = false;
-      if (products[i].id === itemID) {
-        const { hash, filename } = products[i];
-        found = true;
-        res.status(200).send({ hash, filename });
-        break;
-      } 
-      if (i === products.length - 1 && !found) {
-        res.status(404).send('Item not found');
-      }
+    const product = products.find((p) => p.id === itemID);
+    
+    if (product) {
+      const { hash, filename } = product;
+      return res.status(200).send({ hash, filename });
+    } else {
+      return res.status(404).send("Item not found");
     }
-  }
-  else {
-    res.status(405).send(`Method ${req.method} not allowed`);
+  } else {
+    return res.status(405).send(`Method ${req.method} not allowed`);
   }
 }
 ```
 
-We can't use `fetchProducts` because we're removing hashes from it. Add this final piece in  `Lib/api.js`:
+We can't use `fetchProducts` because we're removing hashes from it. Add this final piece in  `lib/api.js`:
 ```jsx
 export const fetchItem = async (itemID) => {
   const response = await fetch("../api/fetchItem", {

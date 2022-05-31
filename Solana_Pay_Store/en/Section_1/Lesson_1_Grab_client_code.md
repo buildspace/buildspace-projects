@@ -35,7 +35,7 @@ You'll be a Next Wizard after this project if you aren't already 🧙‍♂!
 I actually wrote this project in React first but migrated it to Next because of the built in server. It makes things soooo easy and you don't have to deal with Express.js. 
 
 ### ⬇️ Getting the code
-Head over to [this link]https://github.com/buildspace/solana-pay-starter and click "fork" on the top right. 
+Head over to [this link](https://github.com/buildspace/solana-pay-starter) and click "fork" on the top right. 
 
 ![](https://i.imgur.com/OnOIO2A.png)
 

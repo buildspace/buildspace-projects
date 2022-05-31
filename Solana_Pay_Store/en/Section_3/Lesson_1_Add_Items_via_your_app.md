@@ -9,7 +9,7 @@ First, create a `.env` file in your projects root folder and add your address in
 NEXT_PUBLIC_OWNER_PUBLIC_KEY=B1aLAAe4vW8nSQCetXnYqJfRxzTjnbooczwkUJAr7yMS
 ```
 
-**Note:** NextJs has dotenv built in but you **need** the start publicly available env vars with `NEXT_PUBLIC`. 
+**Note:** NextJs has dotenv built in but you **need** to start publicly available env vars with `NEXT_PUBLIC`. Also note that you'll need to restart Next to pick up the change to `.env`. 
 
 Time for another component! Add `CreateProduct.js` in the components folder.
 
@@ -232,7 +232,7 @@ export default App;
 
 Now when you connect with the same wallet as the owner, you should see a "Create Product" button on the top right. Aaaah this is so pretty.
 
-![](https://hackmd.io/_uploads/SkQiCcUPc.png)\
+![](https://hackmd.io/_uploads/SkQiCcUPc.png)
 
 The last bit we'll need is the API endpoint to add stuff to our "database". Create a `addProduct.js` file in the `pages/api` directory:
 ```jsx
