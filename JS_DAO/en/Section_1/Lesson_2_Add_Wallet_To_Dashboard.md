@@ -4,7 +4,7 @@ So, in order for our website to talk to the blockchain, we need to somehow conne
 
 You may have built "Connect to Wallet" buttons in the past! This time, we'll be using thirdweb’s front-end SDK which makes it crazy easy.
 
-Head over to `index.js` in your React App and add the following code:
+Head over to `src/index.js` in your React App and add the following code:
 
 ```jsx
 import React from 'react';
