@@ -431,7 +431,7 @@ You actually already know like half of this! The only things we haven’t covere
 
 For `json` -- NFTs use JSON to store details like the name, description, attributes and the media. What we’re doing with `json` is combining strings with `abi.encodePacked` to make a JSON object. We’re then encoding it as a Base64 string before setting it as the token URI.
 
-All you need to know about `_tokenIds` is that it’s an object that lets us access and set our NFT’s unique token number. Each NFT has a unique `id` and this helps us make sure of that. The two lines below are the magical lines that actually create out NFT.
+All you need to know about `_tokenIds` is that it’s an object that lets us access and set our NFT’s unique token number. Each NFT has a unique `id` and this helps us make sure of that. The two lines below are the magical lines that actually create our NFT.
 
 ```jsx
 // Mint the NFT to newRecordId
