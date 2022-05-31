@@ -47,7 +47,7 @@ It'd be crazy to write a HTTP server from scratch without using a library, right
 
 Similarly — it'd be crazy to just write an NFT contract from complete scratch! You can explore the `ERC721` contract we're inheriting from [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol).
 
-First, let's install OpenZeppelin contracts, with npm. Run this command in your terminal:
+First, let's install the OpenZeppelin contracts package with npm. Run this command in your terminal:
 
 ```
 npm install @openzeppelin/contracts
