@@ -1,6 +1,6 @@
 ### ⏳ Building a drop timer
 
-We have have an awesome setup for dropping some fancy NFTs on a certain date. The only thing we are missing now is a cool way to show people that a drop is happening soon! Why don't we go ahead and add a countdown timer.
+We have an awesome setup for dropping some fancy NFTs on a certain date. The only thing we are missing now is a cool way to show people that a drop is happening soon! Why don't we go ahead and add a countdown timer.
 
 Right now, our "drop" already happened since we set the date to be in the past. Feel free to change the date to sometime in future in the config.json file and apply it using the `update_candy_machine` command. 
 
