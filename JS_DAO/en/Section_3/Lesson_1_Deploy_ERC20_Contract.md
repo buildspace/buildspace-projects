@@ -16,7 +16,7 @@ Why? Because the ENS team wanted early supporters of the networks to be rewarded
 
 I want to make it clear, this is a custom formula! Your DAO can also have a custom formula. Maybe you also want to reward people in your DAO more based on how long they’ve had their membership NFT. It’s all up to you.
 
-### 🥵 Deploy your token.
+### 🥵 Deploy your token
 
 Let’s create and deploy our token smart contract! Head to `scripts/5-deploy-token.js` and add:
 
@@ -80,7 +80,7 @@ Then, head back to your wallet, scroll down, and boom!
 
 You officially have your own token :).
 
-### 💸 Create your token’s supply.
+### 💸 Create your token’s supply
 
 Right now, **there are zero tokens available for people claim.** Our ERC-20 contract doesn’t magically know how many tokens are available. We have to tell it!
 
@@ -97,7 +97,7 @@ const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
     // What's the max supply you want to set? 1,000,000 is a nice number!
     const amount = 0;
     // Interact with your deployed ERC-20 contract and mint the tokens!
-    await token.mint(amount);
+    await token.mintToSelf(amount);
     const totalSupply = await token.totalSupply();
 
     // Print out how many of our token's are out there now!
@@ -134,7 +134,7 @@ Pretty cool. We did this all with a couple of lines of Javascript. That’s wild
 
 ![Untitled](https://i.imgur.com/vmeoTfU.png)
 
-### ✈️ Airdrop it.
+### ✈️ Airdrop it
 
 It’s airdrop time. Right now you’re probably the only member of your DAO and that’s okay!
 
@@ -224,7 +224,7 @@ You could create your own little airdrop formula just like ENS did for example:
 
 You want to think — “The people who are receiving token will have more power over the DAO. Is this good? Are the biggest token holders going to do the right thing for the DAO?”.  This gets into the very broad topic of tokenomics which you can read about [here](https://www.google.com/search?q=tokenomics).
 
-Okay, so now if I head back to by ERC-20 contract on Etherscan, I can see all my new token holders and how much of`$HOKAGE` they own.
+Okay, so now if I head back to my ERC-20 contract on Etherscan, I can see all my new token holders and how much of`$HOKAGE` they own.
 
 LETS GOOO.
 

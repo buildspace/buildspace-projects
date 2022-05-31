@@ -24,7 +24,7 @@ This is where we will start - making an account with Alchemy! Just [click here](
 
 [Loom](https://www.loom.com/share/da01870f7d064725a5161811104128a3)
 
-### **🦊 MetaMask**
+### 🦊 MetaMask
 
 Before we can do anything on a public net, we need a wallet!
 
@@ -78,8 +78,8 @@ const main = async () => {
   console.log("Contract deployed to:", domainContract.address);
 
   // CHANGE THIS DOMAIN TO SOMETHING ELSE! I don't want to see OpenSea full of bananas lol
-	let txn = await domainContract.register("banana",  {value: hre.ethers.utils.parseEther('0.1')});
-	await txn.wait();
+  let txn = await domainContract.register("banana",  {value: hre.ethers.utils.parseEther('0.1')});
+  await txn.wait();
   console.log("Minted domain banana.ninja");
 
   txn = await domainContract.setRecord("banana", "Am I a banana or a ninja??");
@@ -106,7 +106,7 @@ const runMain = async () => {
 runMain();
 ```
 
-### **📈 Deploy to the Mumbai testnet.**
+### 📈 Deploy to the Mumbai testnet
 
 **It is time.** 
 
@@ -120,10 +120,10 @@ require("@nomiclabs/hardhat-waffle");
 module.exports = {
   solidity: "0.8.10",
   networks: {
-		mumbai: {
+    mumbai: {
       url: "YOUR_ALCHEMY_MUMBAI_URL",
       accounts: ["YOUR_TEST_WALLET_PRIVATE_KEY"],
-		}
+    }
   }
 };
 ```
@@ -186,7 +186,7 @@ If you don’t want to wait, or OpenSea is just not working, head over to [testn
 
 ![https://i.imgur.com/v8ON9VB.png](https://i.imgur.com/v8ON9VB.png)
 
-### 🚨Progress report.
+### 🚨Progress report
 
 *Please do this else Raza will be sad :(*
 

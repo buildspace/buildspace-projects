@@ -213,8 +213,8 @@ contract Domains is ERC721URIStorage {
   Counters.Counter private _tokenIds;
 
   string public tld;
-	
-	// We'll be storing our NFT images on chain as SVGs
+  
+  // We'll be storing our NFT images on chain as SVGs
   string svgPartOne = '<svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" fill="none"><path fill="url(#B)" d="M0 0h270v270H0z"/><defs><filter id="A" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="270" width="270"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity=".225" width="200%" height="200%"/></filter></defs><path d="M72.863 42.949c-.668-.387-1.426-.59-2.197-.59s-1.529.204-2.197.59l-10.081 6.032-6.85 3.934-10.081 6.032c-.668.387-1.426.59-2.197.59s-1.529-.204-2.197-.59l-8.013-4.721a4.52 4.52 0 0 1-1.589-1.616c-.384-.665-.594-1.418-.608-2.187v-9.31c-.013-.775.185-1.538.572-2.208a4.25 4.25 0 0 1 1.625-1.595l7.884-4.59c.668-.387 1.426-.59 2.197-.59s1.529.204 2.197.59l7.884 4.59a4.52 4.52 0 0 1 1.589 1.616c.384.665.594 1.418.608 2.187v6.032l6.85-4.065v-6.032c.013-.775-.185-1.538-.572-2.208a4.25 4.25 0 0 0-1.625-1.595L41.456 24.59c-.668-.387-1.426-.59-2.197-.59s-1.529.204-2.197.59l-14.864 8.655a4.25 4.25 0 0 0-1.625 1.595c-.387.67-.585 1.434-.572 2.208v17.441c-.013.775.185 1.538.572 2.208a4.25 4.25 0 0 0 1.625 1.595l14.864 8.655c.668.387 1.426.59 2.197.59s1.529-.204 2.197-.59l10.081-5.901 6.85-4.065 10.081-5.901c.668-.387 1.426-.59 2.197-.59s1.529.204 2.197.59l7.884 4.59a4.52 4.52 0 0 1 1.589 1.616c.384.665.594 1.418.608 2.187v9.311c.013.775-.185 1.538-.572 2.208a4.25 4.25 0 0 1-1.625 1.595l-7.884 4.721c-.668.387-1.426.59-2.197.59s-1.529-.204-2.197-.59l-7.884-4.59a4.52 4.52 0 0 1-1.589-1.616c-.385-.665-.594-1.418-.608-2.187v-6.032l-6.85 4.065v6.032c-.013.775.185 1.538.572 2.208a4.25 4.25 0 0 0 1.625 1.595l14.864 8.655c.668.387 1.426.59 2.197.59s1.529-.204 2.197-.59l14.864-8.655c.657-.394 1.204-.95 1.589-1.616s.594-1.418.609-2.187V55.538c.013-.775-.185-1.538-.572-2.208a4.25 4.25 0 0 0-1.625-1.595l-14.993-8.786z" fill="#fff"/><defs><linearGradient id="B" x1="0" y1="0" x2="270" y2="270" gradientUnits="userSpaceOnUse"><stop stop-color="#cb5eee"/><stop offset="1" stop-color="#0cd7e4" stop-opacity=".99"/></linearGradient></defs><text x="32.5" y="231" font-size="27" fill="#fff" filter="url(#A)" font-family="Plus Jakarta Sans,DejaVu Sans,Noto Color Emoji,Apple Color Emoji,sans-serif" font-weight="bold">';
   string svgPartTwo = '</text></svg>';
 
@@ -231,39 +231,35 @@ contract Domains is ERC721URIStorage {
 
     uint256 _price = price(name);
     require(msg.value >= _price, "Not enough Matic paid");
-		
-		// Combine the name passed into the function  with the TLD
+    
+    // Combine the name passed into the function  with the TLD
     string memory _name = string(abi.encodePacked(name, ".", tld));
-		// Create the SVG (image) for the NFT with the name
+    // Create the SVG (image) for the NFT with the name
     string memory finalSvg = string(abi.encodePacked(svgPartOne, _name, svgPartTwo));
     uint256 newRecordId = _tokenIds.current();
-  	uint256 length = StringUtils.strlen(name);
-		string memory strLen = Strings.toString(length);
+    uint256 length = StringUtils.strlen(name);
+    string memory strLen = Strings.toString(length);
 
     console.log("Registering %s.%s on the contract with tokenID %d", name, tld, newRecordId);
 
-		// Create the JSON metadata of our NFT. We do this by combining strings and encoding as base64
+    // Create the JSON metadata of our NFT. We do this by combining strings and encoding as base64
     string memory json = Base64.encode(
-      bytes(
-        string(
-          abi.encodePacked(
-            '{"name": "',
-            _name,
-            '", "description": "A domain on the Ninja name service", "image": "data:image/svg+xml;base64,',
-            Base64.encode(bytes(finalSvg)),
-            '","length":"',
-            strLen,
-            '"}'
-          )
-        )
+      abi.encodePacked(
+        '{"name": "',
+        _name,
+        '", "description": "A domain on the Ninja name service", "image": "data:image/svg+xml;base64,',
+        Base64.encode(bytes(finalSvg)),
+        '","length":"',
+        strLen,
+        '"}'
       )
     );
 
     string memory finalTokenUri = string( abi.encodePacked("data:application/json;base64,", json));
 
-		console.log("\n--------------------------------------------------------");
-	  console.log("Final tokenURI", finalTokenUri);
-	  console.log("--------------------------------------------------------\n");
+    console.log("\n--------------------------------------------------------");
+    console.log("Final tokenURI", finalTokenUri);
+    console.log("--------------------------------------------------------\n");
 
     _safeMint(msg.sender, newRecordId);
     _setTokenURI(newRecordId, finalTokenUri);
@@ -271,8 +267,8 @@ contract Domains is ERC721URIStorage {
 
     _tokenIds.increment();
   }
-	
-	// We still need the price, getAddress, setRecord and getRecord functions, they just don't change
+
+  // We still need the price, getAddress, setRecord and getRecord functions, they just don't change
 }
 ```
 
@@ -348,7 +344,7 @@ To do this, we're going to use an SVG - an image that is built with code. Here's
 </svg>
 ```
 
-Kind of looks like an HTML file, yeah? You don’t need to need to know how to ***write*** SVGs. There are lots of tools that will let you make them for free. I used Figma to make this one. 
+Kind of looks like an HTML file, yeah? You don’t need to know how to ***write*** SVGs. There are lots of tools that will let you make them for free. I used Figma to make this one. 
 
 Head to [this](https://www.svgviewer.dev/) website and paste in the code above to see it. Feel free to mess around with it.
 
@@ -396,34 +392,30 @@ function register(string calldata name) public payable {
 
   uint256 _price = price(name);
   require(msg.value >= _price, "Not enough Matic paid");
-	
+  
   string memory _name = string(abi.encodePacked(name, ".", tld));
   string memory finalSvg = string(abi.encodePacked(svgPartOne, _name, svgPartTwo));
   uint256 newRecordId = _tokenIds.current();
-	uint256 length = StringUtils.strlen(name);
-	string memory strLen = Strings.toString(length);
+  uint256 length = StringUtils.strlen(name);
+  string memory strLen = Strings.toString(length);
 
   console.log("Registering %s on the contract with tokenID %d", name, newRecordId);
 
   string memory json = Base64.encode(
-    bytes(
-      string(
-        abi.encodePacked(
-          '{"name": "',
-          _name,
-          '", "description": "A domain on the Ninja name service", "image": "data:image/svg+xml;base64,',
-          Base64.encode(bytes(finalSvg)),
-          '","length":"',
-          strLen,
-          '"}'
-        )
-      )
+    abi.encodePacked(
+        '{"name": "',
+        _name,
+        '", "description": "A domain on the Ninja name service", "image": "data:image/svg+xml;base64,',
+        Base64.encode(bytes(finalSvg)),
+        '","length":"',
+        strLen,
+        '"}'
     )
   );
 
   string memory finalTokenUri = string( abi.encodePacked("data:application/json;base64,", json));
-		
-	console.log("\n--------------------------------------------------------");
+    
+  console.log("\n--------------------------------------------------------");
   console.log("Final tokenURI", finalTokenUri);
   console.log("--------------------------------------------------------\n");
 
@@ -439,7 +431,7 @@ You actually already know like half of this! The only things we haven’t covere
 
 For `json` -- NFTs use JSON to store details like the name, description, attributes and the media. What we’re doing with `json` is combining strings with `abi.encodePacked` to make a JSON object. We’re then encoding it as a Base64 string before setting it as the token URI.
 
-All you need to know about `_tokenIds` is that it’s an object that lets us access and set our NFT’s unique token number. Each NFT has a unique `id` and this helps us make sure of that. The two lines below are the magical lines that actually create out NFT.
+All you need to know about `_tokenIds` is that it’s an object that lets us access and set our NFT’s unique token number. Each NFT has a unique `id` and this helps us make sure of that. The two lines below are the magical lines that actually create our NFT.
 
 ```jsx
 // Mint the NFT to newRecordId

@@ -1,6 +1,6 @@
 A governance token is cool and all, but it’s kinda useless if people can’t use it to govern anything! What we’re going to do next here is set up a governance contract that lets people vote on proposals using their tokens
 
-### 📝 Deploy a governance contract.
+### 📝 Deploy a governance contract
 
 I don’t want to complicate this too much.
 
@@ -78,13 +78,13 @@ buildspace-dao-starter % node scripts/8-deploy-vote.js
 
 ```
 
-This is pretty cool. Basically, we created and deployed a new smart contract that will let us actually vote on proposals on-chain. This is a standard [governance](https://docs.openzeppelin.com/contracts/4.x/api/governance) contract. You can see the exact contract you deployed [here](https://github.com/thirdweb-dev/contracts/blob/v1/contracts/vote/VotingGovernor.sol).
+This is pretty cool. Basically, we created and deployed a new smart contract that will let us actually vote on proposals on-chain. This is a standard [governance](https://docs.openzeppelin.com/contracts/4.x/api/governance) contract. You can see the exact contract you deployed [here](https://github.com/thirdweb-dev/contracts/blob/main/contracts/vote/VoteERC20.sol).
 
 If you head to `https://rinkeby.etherscan.io/` you’ll see it there!
 
 So, now we have three contracts: our NFT contract, our token contract, and our voting contract! Be sure to save your voting contract address, we’ll be using it again in just a moment.
 
-### 🏦 Setup your treasury.
+### 🏦 Setup your treasury
 
 So now we have our governance contract and we can vote on stuff. Awesome. But there’s an issue.
 

@@ -2,7 +2,7 @@
 
 From here, let's add some fanciness to our contract.
 
-The whole point of a name service is to help direct people to your place on the internet! Just like you type in [google.com](http://google.com) to get to Google, people will be able to use your name service to go to where ever they want! This is where we’ll do that. Users are going to send us a name and we’re going to give them a domain for that name! 
+The whole point of a name service is to help direct people to your place on the internet! Just like you type in [`google.com`](http://google.com) to get to Google, people will be able to use your name service to go to wherever they want! This is where we’ll do that. Users are going to send us a name and we’re going to give them a domain for that name! 
 
 So, first thing we need is a function they can hit to register their domain and a place to store their names:
 
@@ -49,9 +49,9 @@ The `getAddress` function does exactly that - **it gets the wallet address of a 
 - `calldata` - this indicates the “location” of where the `name` argument should be stored. Since it costs real money to process data on the blockchain, Solidity lets you indicate where reference types should be stored. `calldata` is non-persistent and can’t be modified. We like this because it takes the least amount of gas!
 - `public` - this is a visibility modifier. We want our function to be accessible by everyone, including other contracts.
 - `view` -  this just means that the function is only viewing data on the contract, not modifying it.
-- `returns (address)` - the contract returns the domain owner's wallet address as the native Solidity address type.
+- `returns (address)` - the function returns the domain owner's wallet address as the native Solidity address type. ezpz.
 
-### **✅ Updating run.js to call our functions**
+### ✅ Updating run.js to call our functions
 
 It’s time to run again, but `run.js` needs to change before we do that! Now that we have some functions to call,  we can use `run.js` to manually test them out! Remember, `run.js` is our playground :).
 
@@ -92,14 +92,13 @@ runMain();
 
 **VSCode might auto-import `ethers`. We don't need to import `ethers`. So, make sure you have no imports. Remember, what we talked about last lesson about hre?**
 
-### **🤔 How does it work?**
+### 🤔 How does it work?
 
 ```jsx
 const [owner, randomPerson] = await hre.ethers.getSigners();
 ```
 
-In order to deploy something to the blockchain, we need to have a wallet address! Hardhat does this for us magically in the background, but here I grabbed the wallet address of the contract owner and I also get a random wallet address and called it `randomPerson`. This will make more sense in a moment.
-
+In order to deploy something to the blockchain, we need to have a wallet address! Hardhat does this for us magically in the background, but here I grabbed the wallet address of the contract owner and I also grabbed a random wallet address and called it `randomPerson`. This will make more sense in a moment.
 I also added:
 
 ```jsx
@@ -168,7 +167,6 @@ contract Domains {
   }
 
   function getAddress(string calldata name) public view returns (address) {
-      // Check that the owner is the transaction sender
       return domains[name];
   }
 
@@ -202,7 +200,7 @@ require(domains[name] == msg.sender);
 
 This one’s pretty easy - check that the transaction sender is the address that owns the domain. We don’t want to let *anyone* set our domain records.
 
-### **🤝 Test other users**
+### 🤝 Test other users
 
 Alright - it’s time to test this thing out! It would be pretty boring if we could only send and register a domain!! We want everyone to use our domains :).
 
@@ -252,7 +250,7 @@ await txn.wait();
 
 **Running this script will give you an error! WE WANT AN ERROR.** That’s because we’re trying to set a record for a domain that isn’t ours. Now we know our require statements work. Nice. 
 
-### **🚨 Before you click "Next Lesson"**
+### 🚨 Before you click "Next Lesson"
 
 *Note: if you don't do this, Raza will be very sad :(.*
 

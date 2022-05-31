@@ -17,10 +17,10 @@ function isOwner() public view returns (bool) {
 }
 
 function withdraw() public onlyOwner {
-	uint amount = address(this).balance;
-	
-	(bool success, ) = msg.sender.call{value: amount}("");
-	require(success, "Failed to withdraw Matic");
+  uint amount = address(this).balance;
+  
+  (bool success, ) = msg.sender.call{value: amount}("");
+  require(success, "Failed to withdraw Matic");
 } 
 ```
 
@@ -114,7 +114,7 @@ When you run this script with `npx hardhat run scripts/run.js`, you’ll notice 
 
 What’s happening here is when we call the `withdraw()` function as a random person (`superCoder`), the modifier checks that we’re not the owner and reverts the transaction. But when we withdraw as the owner, the tokens come through! If you want, you can log the error in the try catch block to see what the contract says.
 
-### **🚨Progress report.**
+### 🚨Progress report
 
 *Please do this else Raza will be sad :(*
 

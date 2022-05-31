@@ -1,4 +1,4 @@
-### 🍪 Getting started w/ thirdweb.
+### 🍪 Getting started w/ thirdweb
 
 Awesome! We can now connect to a user's wallet, which means we can now check if they're in our DAO! In order to join our DAO, the user will need a membership NFT. If they don't have a membership NFT, we'll prompt them actually mint a membership NFT and join our DAO!
 
@@ -16,7 +16,7 @@ I can't stress how easy it is to create a smart contract with thirdweb compared 
 
 Important! **thirdweb doesn't have a database, all your data is stored on-chain.**
 
-### 📝 Create a place to run thirdweb scripts.
+### 📝 Create a place to run thirdweb scripts
 
 Now we need to actually write some scripts that let us create/deploy our contract to Rinkeby using thirdweb. The first thing we're going to do is create a `.env` file that looks like this in the root of our project.
 
@@ -34,7 +34,7 @@ To get your private key from Metamask, check [this](https://metamask.zendesk.com
 
 To get your wallet address, check [this](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-) out.
 
-### 🚀 Alchemy.
+### 🚀 Alchemy
 
 The last thing you need in your `.env` file is `ALCHEMY_API_URL`.
 
@@ -73,14 +73,11 @@ if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS === "") {
   console.log("🛑 Wallet Address not found.");
 }
 
-const sdk = new ThirdwebSDK(
-  new ethers.Wallet(
-    // Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
-    process.env.PRIVATE_KEY,
-    // RPC URL, we'll use our Alchemy API URL from our .env file.
-    ethers.getDefaultProvider(process.env.ALCHEMY_API_URL),
-  ),
-);
+// RPC URL, we'll use our Alchemy API URL from our .env file.
+const provider = new ethers.providers.JsonRpcProvider(process.env.ALCHEMY_API_URL);
+// Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+const sdk = new ThirdwebSDK(wallet);
 
 (async () => {
   try {
@@ -122,7 +119,15 @@ node -v
 
 *Note: if you’re on Replit you can actually run scripts from the shell it provides:*
 
-If you have an old version of Node, you can update it [here](https://nodejs.org/en/). (Download the LTS version) Let's execute it! Go to your terminal and paste the following command:
+If you have an old version of Node, you can update it [here](https://nodejs.org/en/). (Download the LTS version) 
+
+*Note: if you’re on Replit you can actually update the node version by running this from the shell:*
+
+```plaintext
+npm init -y && npm i --save-dev node@17 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
+```
+
+Let's execute it! Go to your terminal and paste the following command:
 
 ```plaintext
 node scripts/1-initialize-sdk.js
@@ -139,7 +144,7 @@ buildspace-dao-starter % node scripts/1-initialize-sdk.js
 
 Epic. If you see it print out your wallet address then that means everything is initialized!
 
-### 🧨 Create an ERC-1155 collection.
+### 🧨 Create an ERC-1155 collection
 
 What we're going to do now is create + deploy an ERC-1155 contract to Rinkeby. This is basically the base module we'll need to create our NFTs. **We're not creating our NFT here, yet. We're just setting up metadata around the collection itself.** This is stuff like the name of the collection (ex. CryptoPunks) and an image associated with the collection that shows up on OpenSea as the header.
 
@@ -214,7 +219,7 @@ Okay, what just happened is pretty freaking epic. Two things happened:
 
 ![Untitled](https://i.imgur.com/suqHbB4.png)
 
-Pretty epic. A deployed, custom contract with just javascript. You can see the actual smart contract code thirdweb uses [here](https://github.com/thirdweb-dev/contracts/blob/v1/contracts/LazyNFT.sol).
+Pretty epic. A deployed, custom contract with just javascript. You can see the actual smart contract code thirdweb uses [here](https://github.com/thirdweb-dev/contracts/blob/main/contracts/drop/DropERC1155.sol).
 
 **The other thing we did here is thirdweb automatically uploaded and pinned our collection's image to IPFS.** You'll see a link that starts with `https://gateway.ipfscdn.io` printed out. If you paste that into your browser, you'll see your NFT's image being retrieved from IPFS via CloudFlare!
 

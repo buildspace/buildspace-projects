@@ -1,5 +1,4 @@
-🎨 Finalize your UI, make it your own.
---------------------------------------
+## 🎨 Finalize your UI, make it your own
 
 You've got all the core functionality down! Now, it's time for you to really make this your own if you haven't already. Change up the CSS, the text, add some funny YouTube embeds, add your own bio, whatever. Make stuff look cool :).
 
@@ -17,8 +16,7 @@ So, I changed mine to 30-seconds!
 
 When you deploy your **final** contract, can set this to whatever you want!
 
-⛽️ Setting gas limit
---------------------
+## ⛽️ Setting gas limit
 
 When you try to "wave" now, you may notice you sometimes get an error that looks something like "out of gas". Why?
 
@@ -36,17 +34,15 @@ What this does is make the user pay a set amount of gas of 300,000. And, if they
 
 So, if a transaction costs 250,000 gas then *after* that transaction is finalized that 50,000 gas left over that the user didn't use will be refunded :).
 
-🔍 Validating the transaction
----------------------------
+## 🔍 Validating the transaction
 
 When your contract has been deployed and you're testing it out with your UI and your wallet, it may be confusing at first to determine whether your wallet's account was successfully rewarded with the prize. Your account will have used up some amount of gas and potentially have been rewarded with ETH. So how can you validate whether your contract is working as expected?
 
 To validate, you can open up your contract address on [Rinkeby Etherscan](https://rinkeby.etherscan.io/) and view the transactions that have taken place. You'll find all sorts of useful information in here, including the method that was called, which in this case is `Wave`. If you click into a `Wave` transaction, you'll notice that in the `To` property, it will identify that the contract address was called. If the user had won a prize, you'll notice in that field, that the contract has transferred 0.0001 ETH from the contract address to your account address.
 
-Note that the `Value` of the transaction is still 0 ETH, because the user never paid anything to initiate the wave. The transfer of ETH internally from a smart contract is called an "internal transaction".
+Note that the `Value` of the transaction is still 0 ETH, because the user never paid anything to initiate the wave. The transfer of ETH internally from a smart contract is called an "internal transaction" and you can view them by switching the tab on Etherscan.
 
-🎤 Events
----------
+## 🎤 Events
 
 Remember how we used that magic line below in our smart contract? I told you to Google how events in Solidity work. Please do that now if you didn't already!
 
@@ -133,8 +129,7 @@ This is super powerful. It lets us create web apps that update in real-time :). 
 I want you to hack around with this and build whatever you want :).
 
 
-🙉 A note on github
-----------------
+## 🙉 A note on github
 
 **If uploading to Github, don't upload your hardhat config file with your private key to your repo. You will get robbed.**
 
@@ -176,8 +171,7 @@ PRIVATE_KEY=BLAHBLAH
 
  Be sure to have the .env in your .gitignore.
 
-🎉 That's a wrap
-----------------
+## 🎉 That's a wrap
 
 You've done it. You've deployed a smart contract and you've written a web app that talks to it. These are two skills that are going to change the world even more as we move towards a reality where decentralized web apps become more commonplace. 
 
@@ -185,14 +179,13 @@ I hope this was a fun introduction to web3 and I hope you continue your journey.
 
 I'll keep you all posted on new projects in the Discord :).
 
-🤟 Your NFT!
------------
+## 🤟 Your NFT!
 
 We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
 
 
-🚨 Before you head out...
--------------------------
+## 🚨 Before you head out
+
 Go to #showcase in Discord and show us your final product that we can mess around with :).
 
 Also, should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Maybe even make a little video showing off your project and attach that to the tweet. Make your tweet look pretty and show off :).
@@ -205,7 +198,6 @@ Lastly, what would also be awesome is if you told us in #feedback how you liked 
 See yah around!!!
 
 
-🎁 Wrap Up
-----------
+## 🎁 Wrap Up
 
 *YOU DID IT.* Claps all around 👏! Want to see all the code we wrote for this section? Click on [this link](https://gist.github.com/adilanchian/93fbd2e06b3b5d3acb99b5723cebd925) to see it all!

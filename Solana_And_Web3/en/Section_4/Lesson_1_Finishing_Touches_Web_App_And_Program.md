@@ -1,4 +1,4 @@
-### ✈️ Making updates to your program.
+### ✈️ Making updates to your program
 
 Let's say you want to add some new functionality to your Solana program.
 
@@ -12,11 +12,11 @@ Then, when I'm ready to test the updates to my program on my web app — I just 
 
 **Whenever you re-deploy, you need to update the IDL file on your web app**
 
-Just like before, you'd copy the contents of the the updated IDL from your Solana project at `target/idl/myepicproject.json` and then paste the contents of it to `app/src/idl.json` in your web app.=
+Just like before, you'd copy the contents of the the updated IDL from your Solana project at `target/idl/myepicproject.json` and then paste the contents of it to `app/src/idl.json` in your web app.
 
 Now, I want to go over a couple of **optional** features you could add in that I think would be fun. Again, these are optional. I also won't be guiding you on how to build them. Will leave it to you to figure out.
 
-### 🏠 Show off a user's public address on the web app.
+### 🏠 Show off a user's public address on the web app
 
 We're currently not using the user's public address for anything right now in:
 
@@ -29,7 +29,7 @@ pub struct ItemStruct {
 
 It might be cool to show off the user's public address under the GIF they submitted!! Doing something like `item.userAddress.toString()` on your web app should work. I'll let you figure out how to implement it if you want to.
 
-### **🙉 Let users upvote GIFs.**
+### 🙉 Let users upvote GIFs
 
 It'd be cool if each GIF started at 0 votes, and people could come in an "upvote" their favorite GIFs on your web app.
 
@@ -37,7 +37,7 @@ Not going to tell you how to make it though ;). Figure it out if you want to! Hi
 
 See if you can figure it out!!
 
-### 💰 Send a Solana "tip" to submitters of the best GIFs.
+### 💰 Send a Solana "tip" to submitters of the best GIFs
 
 One thing we didn't cover at all here is how to send money to other users!
 
@@ -57,6 +57,6 @@ Shoutout to cqfd#6977 btw, absolute legend!! He even got on a call w/ me to scre
 
 Being nice goes a long way.
 
-### 👍 A bunch of example programs.
+### 👍 A bunch of example programs
 
 There are tons of example programs you can find in the Anchor repo [here](https://github.com/project-serum/anchor/tree/master/tests). You can look through different examples to figure out how to implement it yourself.

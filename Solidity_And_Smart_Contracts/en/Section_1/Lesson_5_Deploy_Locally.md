@@ -1,5 +1,4 @@
-👀 Writing a script to deploy locally
--------------------------------------
+## 👀 Writing a script to deploy locally
 
 *"Wait, didn't I already deploy to my local network??"*
 
@@ -59,8 +58,7 @@ const runMain = async () => {
 runMain();
 ```
 
-🎉 DEPLOY
----------
+## 🎉 DEPLOY
 
 Now the command we're going to run to deploy locally is:
 
@@ -85,13 +83,11 @@ In your terminal window that's keeping your local Ethereum network alive, you'll
 INTERESTING. But...what's gas? What does it mean by block #1? What's the big code next to "Transaction"? I want you to try and Google this stuff. Ask questions in #general-chill-chat :).
 
 
-🚨 Before you click "Next Lesson"
--------------------------------------------
+## 🚨 Before you click "Next Lesson"
 
 Honestly, just give yourself a pat on the back. You've done a lot. Next we'll be actually building a website that will interact with our local Ethereum network and it's going to be awesome. Head to #progress and let me know how this project is going so far for you. I'd love your feedback.
 
 
-🎁 Section Wrap Up
-------------------
+## 🎁 Section Wrap Up
 
 Nice! You made it to the end of the section. Checkout [this link](https://gist.github.com/adilanchian/9f745fdfa9186047e7a779c02f4bffb7) to make sure you are on track with your code!

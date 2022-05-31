@@ -8,7 +8,7 @@ This section is going to help you understand how we will be rendering each state
 
 Nice. So it looks like we have three different views we need to create! We are going to be getting into some pretty cool React.js that may be new to you. If you don't fully understand it - **don't worry**! Make sure to reach out to others in Discord and do some research! Remember, Google is your friend :).
 
-### 🧱 Setting up the SelectCharacter Component.
+### 🧱 Setting up the SelectCharacter Component
 
 Let's start off with creating our `SelectCharacter` Component! Head to the `src/Components/SelectCharacter` folder and create a new file named `index.js` . This directory will hold the core logic for our `SelectCharacter` component as well as it's styling! You should already see a `SelectCharacter.css` file in there with a bunch of styling! 
 
@@ -36,7 +36,7 @@ export default SelectCharacter;
 
 Very nice 😎. See how easy that was? You already have a component ready to go! Let's go ahead and get our conditional rendering setup so we can see this thing.
 
-### 👁 Showing the SelectCharacter Component.
+### 👁 Showing the SelectCharacter Component
 
 We are going to need to go back to the `App.js` file and import our newly created component. Right under where you import your `App.css` file add this line:
 
@@ -168,6 +168,6 @@ In the next section we are going to start interacting with our contract to see i
 2. Setup our `Arena` component so we can take down any boss in our way 😈
 
 
-🚨 Progress update
-------------------------
+## 🚨 Progress update
+
 In #progress, post a screenshot of the output of your console showing off your "Connected" Ethereum wallet message! Big deal you got this working. Basic connect wallet stuff is core to the magic of web3!

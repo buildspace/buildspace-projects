@@ -4,17 +4,17 @@ First off, the UX on our app can be improved a lot. Let’s start by showing the
 
 ```html
 <div className="header-container">
-	<header>
-		<div className="left">
-			<p className="title">🐱‍👤 Ninja Name Service</p>
-			<p className="subtitle">Your immortal API on the blockchain!</p>
-		</div>
-		{/* Display a logo and wallet connection status*/}
-		<div className="right">
-			<img alt="Network logo" className="logo" src={ network.includes("Polygon") ? polygonLogo : ethLogo} />
-			{ currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p> }
-		</div>
-	</header>
+  <header>
+    <div className="left">
+      <p className="title">🐱‍👤 Ninja Name Service</p>
+      <p className="subtitle">Your immortal API on the blockchain!</p>
+    </div>
+    {/* Display a logo and wallet connection status*/}
+    <div className="right">
+      <img alt="Network logo" className="logo" src={ network.includes("Polygon") ? polygonLogo : ethLogo} />
+      { currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p> }
+    </div>
+  </header>
 </div>
 ```
 
@@ -31,41 +31,41 @@ import ethLogo from './assets/ethlogo.png';
 import { networks } from './utils/networks';
 
 const App = () => {
-	// Create a stateful variable to store the network next to all the others
-  	const [network, setNetwork] = useState('');
-	
-	// Update your checkIfWalletIsConnected function to handle the network
-	const checkIfWalletIsConnected = async () => {
-		const { ethereum } = window;
+  // Create a stateful variable to store the network next to all the others
+    const [network, setNetwork] = useState('');
+  
+  // Update your checkIfWalletIsConnected function to handle the network
+  const checkIfWalletIsConnected = async () => {
+    const { ethereum } = window;
 
-		if (!ethereum) {
-			console.log('Make sure you have metamask!');
-			return;
-		} else {
-			console.log('We have the ethereum object', ethereum);
-		}
-		
-		const accounts = await ethereum.request({ method: 'eth_accounts' });
+    if (!ethereum) {
+      console.log('Make sure you have metamask!');
+      return;
+    } else {
+      console.log('We have the ethereum object', ethereum);
+    }
+    
+    const accounts = await ethereum.request({ method: 'eth_accounts' });
 
-		if (accounts.length !== 0) {
-			const account = accounts[0];
-			console.log('Found an authorized account:', account);
-			setCurrentAccount(account);
-		} else {
-			console.log('No authorized account found');
-		}
-		
-		// This is the new part, we check the user's network chain ID
-		const chainId = await ethereum.request({ method: 'eth_chainId' });
-		setNetwork(networks[chainId]);
+    if (accounts.length !== 0) {
+      const account = accounts[0];
+      console.log('Found an authorized account:', account);
+      setCurrentAccount(account);
+    } else {
+      console.log('No authorized account found');
+    }
+    
+    // This is the new part, we check the user's network chain ID
+    const chainId = await ethereum.request({ method: 'eth_chainId' });
+    setNetwork(networks[chainId]);
 
-		ethereum.on('chainChanged', handleChainChanged);
-		
-		// Reload the page when they change networks
-		function handleChainChanged(_chainId) {
-			window.location.reload();
-		}
-	};
+    ethereum.on('chainChanged', handleChainChanged);
+    
+    // Reload the page when they change networks
+    function handleChainChanged(_chainId) {
+      window.location.reload();
+    }
+  };
 
 // The rest of the file stays the same
 ```
@@ -78,18 +78,18 @@ Now that we are checking their network, we should disable the minting form if th
 
 ```jsx
 const renderInputForm = () =>{
-	// If not on Polygon Mumbai Testnet, render "Please connect to Polygon Mumbai Testnet"
-	if (network !== 'Polygon Mumbai Testnet') {
-		return (
-			<div className="connect-wallet-container">
-				<p>Please connect to the Polygon Mumbai Testnet</p>
-			</div>
-		);
-	}
+  // If not on Polygon Mumbai Testnet, render "Please connect to Polygon Mumbai Testnet"
+  if (network !== 'Polygon Mumbai Testnet') {
+    return (
+      <div className="connect-wallet-container">
+        <p>Please connect to the Polygon Mumbai Testnet</p>
+      </div>
+    );
+  }
 
 // The rest of the function remains the same
 return (	
-	...
+  ...
 ```
 
 All it does is renders a text message instead of the input fields and mint button. Looking pretty fancy, eh?
@@ -102,44 +102,44 @@ Right now, all we're doing is telling them to connect to Mumbai. It would be a l
 
 ```jsx
 const switchNetwork = async () => {
-	if (window.ethereum) {
-		try {
-			// Try to switch to the Mumbai testnet
-			await window.ethereum.request({
-				method: 'wallet_switchEthereumChain',
-				params: [{ chainId: '0x13881' }], // Check networks.js for hexadecimal network ids
-			});
-		} catch (error) {
-			// This error code means that the chain we want has not been added to MetaMask
-			// In this case we ask the user to add it to their MetaMask
-			if (error.code === 4902) {
-				try {
-					await window.ethereum.request({
-						method: 'wallet_addEthereumChain',
-						params: [
-							{	
-								chainId: '0x13881',
-								chainName: 'Polygon Mumbai Testnet',
-								rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
-								nativeCurrency: {
-										name: "Mumbai Matic",
-										symbol: "MATIC",
-										decimals: 18
-								},
-								blockExplorerUrls: ["https://mumbai.polygonscan.com/"]
-							},
-						],
-					});
-				} catch (error) {
-					console.log(error);
-				}
-			}
-			console.log(error);
-		}
-	} else {
-		// If window.ethereum is not found then MetaMask is not installed
-		alert('MetaMask is not installed. Please install it to use this app: https://metamask.io/download.html');
-	} 
+  if (window.ethereum) {
+    try {
+      // Try to switch to the Mumbai testnet
+      await window.ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: '0x13881' }], // Check networks.js for hexadecimal network ids
+      });
+    } catch (error) {
+      // This error code means that the chain we want has not been added to MetaMask
+      // In this case we ask the user to add it to their MetaMask
+      if (error.code === 4902) {
+        try {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [
+              {	
+                chainId: '0x13881',
+                chainName: 'Polygon Mumbai Testnet',
+                rpcUrls: ['https://rpc-mumbai.maticvigil.com/'],
+                nativeCurrency: {
+                    name: "Mumbai Matic",
+                    symbol: "MATIC",
+                    decimals: 18
+                },
+                blockExplorerUrls: ["https://mumbai.polygonscan.com/"]
+              },
+            ],
+          });
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      console.log(error);
+    }
+  } else {
+    // If window.ethereum is not found then MetaMask is not installed
+    alert('MetaMask is not installed. Please install it to use this app: https://metamask.io/download.html');
+  } 
 }
 ```
 
@@ -147,8 +147,8 @@ The first thing this function does is try to change their network like this:
 
 ```jsx
 await window.ethereum.request({
-	method: 'wallet_switchEthereumChain',
-	params: [{ chainId: '0x13881' }], // Check networks.js for hexadecimal network ids
+  method: 'wallet_switchEthereumChain',
+  params: [{ chainId: '0x13881' }], // Check networks.js for hexadecimal network ids
 });
 ```
 
@@ -158,22 +158,22 @@ The last part of all this is just adding a button that calls this function into 
 
 ```jsx
 const renderInputForm = () =>{
-	// If not on Polygon Mumbai Testnet, render the switch button
-	if (network !== 'Polygon Mumbai Testnet') {
-		return (
-			<div className="connect-wallet-container">
-				<h2>Please switch to Polygon Mumbai Testnet</h2>
-				{/* This button will call our switch network function */}
-				<button className='cta-button mint-button' onClick={switchNetwork}>Click here to switch</button>
-			</div>
-		);
-	}
+  // If not on Polygon Mumbai Testnet, render the switch button
+  if (network !== 'Polygon Mumbai Testnet') {
+    return (
+      <div className="connect-wallet-container">
+        <h2>Please switch to Polygon Mumbai Testnet</h2>
+        {/* This button will call our switch network function */}
+        <button className='cta-button mint-button' onClick={switchNetwork}>Click here to switch</button>
+      </div>
+    );
+  }
 
-	// The rest of the function remains the same
-	return (
+  // The rest of the function remains the same
+  return (
 ```
 
-### **🚨Progress report.**
+### 🚨Progress report
 
 Jump into the CSS and chuck a fancy gradient on the address container or the switch button. Maybe bring back the corners?  
 

@@ -1,5 +1,4 @@
-🔤 Randomly generate words on an image.
-------------------
+## 🔤 Randomly generate words on an image
 
 Cool — we created a contract that's now minting NFTs all on-chain. But, it's still always the same NFT argh!!! Let's make it dynamic.
 
@@ -11,8 +10,7 @@ I also wrote a comment above most of the lines I added/changed! When you look at
 
 I do want to make a few notes on some of these lines.
 
-📝 Pick your own words!
-------------------
+## 📝 Pick your own words!
 
 ```solidity
 string[] firstWords = ["YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD"];
@@ -34,8 +32,7 @@ Perhaps you wanna generate random band name. Perhaps you wanna generate random c
 
 Note: I recommend like 15-20 words per array. I've noticed around 10 it's usually not random enough. 
 
-🥴 Random numbers.
-------------------
+## 🥴 Random numbers
 
 ```solidity
 function pickRandomFirstWord
@@ -62,8 +59,7 @@ There are other ways to generate random numbers on the blockchain (check out [Ch
 
 This can be a bit annoying for some application like ours here! In any case, no one is going to be attacking our tiny app but I want you to know all this when you're building a dApp that has millions of users!
 
-✨  Creating the SVG dynamically.
-------------------
+## ✨  Creating the SVG dynamically
 
 Check out the variable `string baseSvg` on the contract. This looks wild lol. Basically, the only piece of our SVG that ever changes is the three-word combo, right? So what we do is we create a `baseSvg` variable we can reuse over and over as we create new NFTs.
 
@@ -75,8 +71,7 @@ string memory finalSvg = string(abi.encodePacked(baseSvg, first, second, third, 
 
 `</text></svg>` are the closing tags! So for `finalSvg` we're saying, "Hey — go combine my baseSVG, my three-word combo I just generated, and then my closing tags. That's it :)! It looks scary but all we're doing is working with the SVG code.
 
-😎 Run it!
-------------------------
+## 😎 Run it!
 
 Once you write it all out, go ahead and run it using `npx hardhat run scripts/run.js`. Check out what's output by `console.log(finalSvg);`.
 
@@ -159,8 +154,8 @@ abi.encodePacked("data:application/json;base64,", json)
 
 All that's happening here is we're putting it all together and adding that same old `data:application/json;base64,` we did before and then we append the base64 encoded json!!
 
-🛠 Debugging the `finalTokenUri` content
-------------------------
+## 🛠 Debugging the `finalTokenUri` content
+
 Now that you have your tokenURI setup, how do we know if it's actually correct? After all, this holds all our data for our NFT! You can use a cool tool like - [NFT Preview](https://nftpreview.0xdev.codes/) to see a quick preview of the image and the contents of the json without deploying it again and again on the opensea testnet. 
 
 To make it easier, you can pass the `tokenURI` code as a query parameter like this,
@@ -183,8 +178,7 @@ console.log("--------------------\n");
 ```
 ![image](https://i.imgur.com/CsBxROj.png)
 
-🚀 Deploy to Rinkeby
-------------------
+## 🚀 Deploy to Rinkeby
 
 The coolest part is we can just re-deploy without changing our script using:
 
@@ -200,8 +194,7 @@ Contracts are **permanent**. So, whenever we re-deploy our contract we're actual
 
 You should be able to see the new collection on OpenSea or Rarible :)!
 
-🤖 Allowing users to mint.
-------------------
+## 🤖 Allowing users to mint
 
 Epic — we're now able to mint NFTs dynamically and we have this function `makeAnEpicNFT` that users can call. Lots of progress has been made!! Buuuuuut there's no way for random people to actually mint NFTs rn :(. 
 
@@ -209,6 +202,6 @@ All we need is a website that lets users mint an NFT themselves.
 
 So, let's build that :)!
 
-🚨Progress report.
-------------------------
+## 🚨Progress report
+
 If you got one, send a screenshot in #progress of your new dynamically generated NFT on OpenSea/Rarible :). Also -- if you haven't tweeted an image of your hilarious NFT collection yet now is the time to do so!! Remember to tag @_buildspace!!! We'll RT as many people as we can!

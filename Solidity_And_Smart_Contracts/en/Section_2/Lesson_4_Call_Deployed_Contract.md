@@ -1,5 +1,4 @@
-📒 Read from the blockchain through our website
------------------------------------------------
+## 📒 Read from the blockchain through our website
 
 Awesome. We made it. We've deployed our website. We've deployed our contract. We've connected our wallet. Now we need to actually call our contract from our website using the credentials we have access to now from Metamask!
 
@@ -70,8 +69,7 @@ So, contract address you have -- right? Remember when you deployed your contract
 
 But, what's an ABI? Much earlier I mentioned how when you compile a contract, it creates a bunch of files for you under `artifacts`. An ABI is one of those files.
 
-🏠 Setting Your Contract Address
------------------------------
+## 🏠 Setting Your Contract Address
 
 Remember when you deployed your contract to the Rinkeby Testnet (epic btw)? The output from that deployment included your smart contract address which should look something like this:
 
@@ -96,8 +94,7 @@ const App = () => {
   const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
 ```
 
-🛠 Getting ABI File Content
----------------------------
+## 🛠 Getting ABI File Content
 Look at you, already half way down here! Let's move back to our smart contract folder.
 
 When you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
@@ -165,10 +162,9 @@ const wave = async () => {
 
 Once you add that file and click the "Wave" button -- **you'll be officially reading data from your contract on the blockchain through your web client**.
 
-📝 Writing data
----------------
+## 📝 Writing data
 
-The code for writing data to our contract isn't super different from reading data. The main difference is that when we want to write new data to our contract, we need to notify the miners so that the transaction can be mined. When we read data, we don't need to do this. Reads are "free" because all we're doing is reading from the blockchain, **we're not changing it. **
+The code for writing data to our contract isn't super different from reading data. The main difference is that when we want to write new data to our contract, we need to notify the miners so that the transaction can be mined. When we read data, we don't need to do this. Reads are "free" because all we're doing is reading from the blockchain, **we're not changing it.**
 
 Here's the code to wave:
 
@@ -211,8 +207,7 @@ What's awesome here is while the transaction is being mined you can actually pri
 
 When we run this, you'll see that total wave count is increased by 1. You'll also see that Metamask pops us and asks us to pay "gas" which we pay for using our fake $. There is a great article on it [here](https://ethereum.org/en/developers/docs/gas/). Try and figure out what gas is :).
 
-🎉 Success
-----------
+## 🎉 Success
 
 **NICEEEEEEE :).**
 
@@ -220,8 +215,7 @@ Really good stuff. We now have an actual client that can read and write data to 
 
 The possibilities are truly endless.
 
-🚨 Before you click "Next Lesson"
--------------------------------------------
+## 🚨 Before you click "Next Lesson"
 
 *Note: if you don't do this, Farza will be very sad :(.*
 
@@ -229,7 +223,6 @@ Customize your site a little to show the total number of waves. Maybe show a loa
 
 Once you feel like you're ready, share the link to your website with us in #progress so we can connect our wallets and wave at you :).
 
-🎁 Wrap Up
---------------------
+## 🎁 Wrap Up
 
 You are on your way to conquering the decentralized web. IMPRESSIVE. Take a look at all the code you wrote in this section by visiting [this link](https://gist.github.com/adilanchian/71890bf4fcd8f78e94c77cf694b24659) to make sure you are on track with your code!

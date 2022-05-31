@@ -2227,6 +2227,87 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Luisetelo",
+      "name": "Luis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8354589?v=4",
+      "profile": "https://github.com/Luisetelo",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "timmywheels",
+      "name": "Tim Wheeler",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17229444?v=4",
+      "profile": "https://timwheeler.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vpatsenko",
+      "name": "Vladimir Patsenko",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32834980?v=4",
+      "profile": "http://patsenko.ru",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "caaatisgood",
+      "name": "Hao-Ping",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12913401?v=4",
+      "profile": "http://startwith.dev",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "karacsonybarni",
+      "name": "Barna Karacsony",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14146083?v=4",
+      "profile": "https://github.com/karacsonybarni",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "scott-a-m",
+      "name": "Scott Mitchell",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83659996?v=4",
+      "profile": "https://github.com/scott-a-m",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Meacho",
+      "name": "Meacho",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15829136?v=4",
+      "profile": "https://github.com/Meacho",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ebCrypto",
+      "name": "ebCrypto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44279886?v=4",
+      "profile": "https://github.com/ebCrypto",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "0xcen",
+      "name": "Carlos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75177443?v=4",
+      "profile": "https://github.com/0xcen",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

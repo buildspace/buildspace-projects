@@ -1,4 +1,4 @@
-### **🙉 A note on github**
+### 🙉 A note on github
 
 **If uploading to Github, don't upload your hardhat config file with your private key to your repo. You will get robbed.**
 
@@ -41,7 +41,7 @@ PRIVATE_KEY=BLAHBLAH
 Remember the change we made to `.gitignore` earlier? You can now revert it by removing the `hardhat.config.js` line, because now that file only contains variables representing your keys, and not your actual key info.
 
 ### 🌎 Upgrade your immortal domain NFTs with IPFS
-----------------
+
 Think about where your NFT assets are actually stored right now. They're on the Ethereum blockchain! This is awesome for lots of reasons, but it has a few issues. Mainly, it's **very expensive** because of how much storage costs on Ethereum. Contracts also have a length limit, so if you make a really fancy animated SVG that's very long, it won't fit in a contract. 
 
 Luckily we have something called [IPFS](https://en.wikipedia.org/wiki/InterPlanetary_File_System), which is essentially a distributed file system. Today — you might use something like S3 or GCP Storage. But, in this case we can simply trust IPFS which is run by strangers who are using the network. Give [this](https://decrypt.co/resources/how-to-use-ipfs-the-backbone-of-web3) a quick read when you can! Covers a lot of good base knowledge :). Really, all you need to know is that IPFS is the industry standard for storing NFT assets. It's immutable, permanent, and decentralized. 
@@ -106,7 +106,7 @@ Note: On Vercel, you will need to add an extra environment variable `CI=false`.
 
 ![https://i.imgur.com/wn2Uhj4.png](https://i.imgur.com/wn2Uhj4.png)
 
-### **🥞 Careers in Web3**
+### 🥞 Careers in Web3
 
 We’re constantly seeing people nail their interviews at web3 companies after they do a few buildspace projects.
 
@@ -124,11 +124,11 @@ I just wanna inspire you to work in web3 lol. This shit is awesome. And it'd be 
 
 Be sure you click "Work in Web3" on the left and fill out your profile if you haven't done so already!!! **We're partnered w/ some of the best web3 companies in the world (ex. OpenSea, Chainlink, Edge and Node, and more) and they want to hire devs from the buildspace network :).** You've already picked up a skill that is actually extremely valuable and companies are paying top dollar for awesome web3 engineers.
 
-### **🤟 Your NFT!**
+### 🤟 Your NFT!
 
 We'll airdrop you your NFT within a day and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**. Make sure you've submitted a link to your deployed project!
 
-### **🌈 Before you head out.**
+### 🌈 Before you head out
 
 Go to **#showcase** in Discord and drop us a link to your final product that we can mess around with :).
 
