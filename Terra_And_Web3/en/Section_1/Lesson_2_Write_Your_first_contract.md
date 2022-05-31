@@ -16,7 +16,7 @@ This seems pretty simple, and that's because of how awesome Terrain is! Behind t
 4. Uploads the contract to LocalTerra
 5. Instantiates the contract
 
-I won't go into too much detail on these, all you need to know is that they exist and what they're about. You can find all the generated files in the `Learn-Terra/clicker-portal/contracts/counter` folder. 
+I won't go into too much detail on these, I'll just run through each one briefly. You can find all the generated files in the `Learn-Terra/clicker-portal/contracts/counter` folder. 
 
 **Building a contract**
 What does building even mean? We write our smart contracts in Rust but the platform Terra contracts run on, CosmWasm, runs on WASM (WebAssembly) bytecode. So when we "build" our smart contract, we're compiling our Rust code into WASM bytecode so the blockchain can run it.
