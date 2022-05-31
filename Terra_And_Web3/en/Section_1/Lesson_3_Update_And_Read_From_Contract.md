@@ -83,6 +83,7 @@ use cosmwasm_std::{to_binary, Binary, Deps, DepsMut, Env, MessageInfo, Response,
 use cw2::set_contract_version;
 
 use crate::error::ContractError;
+//  I added ScoreResponse to our imports
 use crate::msg::{SpeedResponse, InstantiateMsg, QueryMsg, ScoreResponse};
 // I updated the import since we renamed STATE to STORAGE, STATE has also been renamed to STORAGE everywhere it appeared previously
 use crate::state::{State, STORAGE};
