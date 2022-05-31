@@ -36,13 +36,13 @@ const createTransaction = async (req, res) => {
 
     // If we don't have something we need, stop!
     if (!buyer) {
-      res.status(400).json({
+      return res.status(400).json({
         message: "Missing buyer address",
       });
     }
 
     if (!orderID) {
-      res.status(400).json({
+      return res.status(400).json({
         message: "Missing order ID",
       });
     }
@@ -51,7 +51,7 @@ const createTransaction = async (req, res) => {
     const itemPrice = products.find((item) => item.id === itemID).price;
 
     if (!itemPrice) {
-      res.status(404).json({
+      return res.status(404).json({
         message: "Item not found. please check item ID",
       });
     }
