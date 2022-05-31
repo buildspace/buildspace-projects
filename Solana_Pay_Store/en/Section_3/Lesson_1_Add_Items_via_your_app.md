@@ -4,9 +4,10 @@ You have a fully functional store that can sell anything you want! Let's finish 
 
 We're going to add functionality that will let you, the store owner, add items to the store **from the front-end!**.
 
-First, create a `.env` file in your projects root folder and add your address in there. Here's what my `.env` file looks like:
+First, create a `.env` file in your projects root folder and add your address in there along with your WEB3.Storage token (make sure you change these values to your key/token). Here's what my `.env` file looks like:
 ```
 NEXT_PUBLIC_OWNER_PUBLIC_KEY=B1aLAAe4vW8nSQCetXnYqJfRxzTjnbooczwkUJAr7yMS
+WEB3STORAGE_TOKEN=YOUR_TOKEN_HERE
 ```
 
 **Note:** NextJs has dotenv built in but you **need** to start publicly available env vars with `NEXT_PUBLIC`. Also note that you'll need to restart Next to pick up the change to `.env`. 
@@ -15,12 +16,21 @@ Time for another component! Add `CreateProduct.js` in the components folder.
 
 ```jsx
 import React, { useState } from "react";
-import { create } from "ipfs-http-client";
+import { Web3Storage } from 'web3.storage'
 import styles from "../styles/CreateProduct.module.css";
-
-const client = create("https://ipfs.infura.io:5001/api/v0");
+require('dotenv').config();
 
 const CreateProduct = () => {
+
+  function getAccessToken () {
+    return process.env.WEB3STORAGE_TOKEN
+  }
+  
+  function makeStorageClient () {
+    return new Web3Storage({ token: getAccessToken() })
+  }
+
+  const client = makeStorageClient();
 
   const [newProduct, setNewProduct] = useState({
     name: "",
@@ -34,10 +44,11 @@ const CreateProduct = () => {
   async function onChange(e) {
     setUploading(true);
     const files = e.target.files;
+    const cid = await client.put(files);
     try {
       console.log(files[0]);
       const added = await client.add(files[0]);
-      setFile({ filename: files[0].name, hash: added.path });
+      setFile({ filename: files[0].name, hash: cid });
     } catch (error) {
       console.log("Error uploading file: ", error);
     }
