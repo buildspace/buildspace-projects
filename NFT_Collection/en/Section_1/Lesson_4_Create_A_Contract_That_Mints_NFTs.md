@@ -233,7 +233,6 @@ You have a few faucets to choose from:
 | MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
 | Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
 | Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
-| Buildspace       | https://buildspace-faucet.vercel.app/ | 0.025           | None         |
 
 ## 🙃 Having trouble getting Testnet ETH?
 
