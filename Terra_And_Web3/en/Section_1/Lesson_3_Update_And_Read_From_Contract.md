@@ -34,6 +34,7 @@ Here's what each is:
 
 Next, let's tell the world all about our scores. Here's our updated `msg.rs`:
 ```rust
+// I've updated our imports
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 use cosmwasm_std:: Addr;
