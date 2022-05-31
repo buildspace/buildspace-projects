@@ -2299,6 +2299,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "0xcen",
+      "name": "Carlos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75177443?v=4",
+      "profile": "https://github.com/0xcen",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
