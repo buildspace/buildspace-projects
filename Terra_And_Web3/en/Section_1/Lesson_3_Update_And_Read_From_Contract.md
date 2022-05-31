@@ -83,7 +83,7 @@ use cw2::set_contract_version;
 
 use crate::error::ContractError;
 use crate::msg::{SpeedResponse, InstantiateMsg, QueryMsg, ScoreResponse};
-// I updated the import since we renamed STATE to STORAGE
+// I updated the import since we renamed STATE to STORAGE, STATE has also been renamed to STORAGE everywhere it appeared previously
 use crate::state::{State, STORAGE};
 
 const CONTRACT_NAME: &str = "crates.io:clicker";
