@@ -24,7 +24,7 @@ You might say “That’s okay, I’ll just register it for 10 years to save gas
 
 The bigger issue is that any time you want to update a record or change wallets, you need to pay $30-$60 for gas. That adds up. How many happy meals are you missing out on??
 
-These gas fees aren’t going away any time soon. You need to pay to store data on the blockchain and as long as people find it economical to do so, they’ll pay more than you. How cool would it be if we could build our dApps on a more scalable network that offers cheaper fees with the same amount of security? That’s what this project is going all about!
+These gas fees aren’t going away any time soon. You need to pay to store data on the blockchain and as long as people find it economical to do so, they’ll pay more than you. How cool would it be if we could build our dApps on a more scalable network that offers cheaper fees with the same amount of security? That’s what this project is going to be all about!
 
 ### 🤖 What can we do with a “name” service?
 
