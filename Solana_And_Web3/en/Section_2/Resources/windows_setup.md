@@ -27,7 +27,6 @@ Start by going to your search menu and typing in `Ubuntu`. You should see a shel
 For this, we want to make sure your machine is actually enabled to use WSL. In your search bar go aheaad and type in "Windows Features". You should see an option that says something along the lines of enabling and disabling Windows features. Go ahead and choose that. You will now need to make sure that the following options are checked:
 
 - Windows Subsystem for Linux
-- Windows Subsystem for Linux
 - Virtual Machine Platform
 
 After you have this all ready to go, restart your machine once again and see if you can open Ubuntu terminal! If you are still running into problems with it, this may mean your CPU does not have Virtualization enabled.
