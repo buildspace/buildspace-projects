@@ -11,14 +11,14 @@ import "hardhat/console.sol";
 // Nós herdamos o contrato que importamos. Isso significa que
 // teremos acesso aos métodos do contrato herdado.
 contract MyEpicNFT is ERC721URIStorage {
-    // Mágica dada pelo OpenZeppeling para nos ajudar a observar os tokenIds.
+    // Mágica dada pelo OpenZeppelin para nos ajudar a observar os tokenIds.
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
     // Nós precisamos passar o nome do nosso token NFT e o símbolo dele.
     constructor() ERC721 ("SquareNFT", "SQUARE"){
         console.log("Esse é meu contrato NFT! Uau!");
     }
-    // Uma função que o nosso usuário irá encontrar para pegar sua NFT.
+    // Uma função que o nosso usuário irá chamar para pegar sua NFT.
     function makeAnEpicNFT() public {
         // Pega o tokenId atual, que começa por 0.
         uint 256 newItemId = _tokenIds.current();
@@ -32,13 +32,13 @@ contract MyEpicNFT is ERC721URIStorage {
 }
 ```
 
-Várias coisas estão acontecendo aqui. Primeiro você vai ver que eu "herdei" um contrato do OpenZeppelin usando `is ERC721URIStorage` quando eu declaro o contrato. Você pode ler mais sobre hereditariedade [aqui](https://solidity-by-example.org/inheritance/), mas basicamente, significa que podemos chamar outros contratos a partir do nosso. É quase como importar funções para usarmos!
+Várias coisas estão acontecendo aqui. Primeiro você vai ver que eu "herdei" um contrato do OpenZeppelin usando `is ERC721URIStorage` quando eu declaro o contrato. Você pode ler mais sobre hereditariedade [aqui](https://solidity-by-example.org/inheritance/) e [aqui](https://www.web3dev.com.br/fatimalima/heranca-em-smart-contracts-com-uso-da-metodologia-orientada-a-objetos-28fa), mas basicamente, significa que podemos chamar outros contratos a partir do nosso. É quase como importar funções para usarmos!
 
-O padrão NFT é conhecido como `ERC721`, o qual você pode ler um pouco sobre [aqui](https://eips.ethereum.org/EIPS/eip-721). O OpenZeppelin essencialmente implementa o padrão NFT para nós e deixa escrevermos nossa própria lógica e customizá-la em cima disso. Isso significa que não precisamos escrever código repetido.
+O padrão NFT é conhecido como `ERC721`, o qual você pode ler um pouco sobre [aqui](https://eips.ethereum.org/EIPS/eip-721) e [aqui](https://www.web3dev.com.br/lorenzobattistela/erc20-vs-erc721-vs-erc-1155-36la). O OpenZeppelin essencialmente implementa o padrão NFT para nós e deixa escrevermos nossa própria lógica e customizá-la em cima disso. Isso significa que não precisamos escrever código repetido.
 
 Eu seria louco de escrever um servidor HTTP do zero sem usar uma library, certo? Claro, a não ser que você quisesse explorar. Mas nós só queremos levantar e correr aqui.
 
-De maneira semelhante - seria loucura escrever um contrato NFT totalmente do zero. Você pode explorar o contrato `ERC721` que estamos herdado [daqui](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol).
+De maneira semelhante - seria loucura escrever um contrato NFT totalmente do zero. Você pode explorar o contrato `ERC721` que estamos herdando [daqui](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol).
 
 Vamos olhar passo a passo a função `makeAnEpicNFT`.
 
@@ -89,7 +89,7 @@ Você pode customizar isso, mas quase toda NFT tem um nome, uma descrição e um
 
 Isso faz parte dos padrões `ERC721` e permite que as pessoas construam site em cima dos dados das NFTs. Por exemplo, o [OpenSea](https://opensea.io/assets) é um marketplace de NFTs. E, toda NFT no OpenSea segue o padrão de metadata `ERC721` que deixa mais fácil para as pessoas comprarem e venderem NFTs. Imagine se todo mundo seguisse os próprios padrões e estruturassem suas metadatas como quisessem, seria um caos!
 
-Nós podemos copiar o `Spongebob Cowboy Pants` metadata acima e colar dentro [desse](https://jsonkeeper.com/) site. Esse site é um lugar fácil para hostear dados JSON e nós vamos usá-lo para manter os dados da nossa NFT por agora. Uma vez que você clicar em "Salvar" você vai ter um link para o arquivo JSON. (Por exemplo, o meu é [`https://jsonkeeper.com/b/RUUS`](https://jsonkeeper.com/b/RUUS)). Lembre-se de testar o seu link e tenha certeza que tudo esteja bem!
+Nós podemos copiar o metadado `Spongebob Cowboy Pants` acima e colar dentro [desse](https://jsonkeeper.com/) site. Esse site é um lugar fácil para hostear dados JSON e nós vamos usá-lo para manter os dados da nossa NFT por agora. Uma vez que você clicar em "Salvar" você vai ter um link para o arquivo JSON. (Por exemplo, o meu é [`https://jsonkeeper.com/b/RUUS`](https://jsonkeeper.com/b/RUUS)). Lembre-se de testar o seu link e tenha certeza que tudo esteja bem!
 
 **Nota: Eu amaria que você criasse o metadata JSON ao invés de só copiar o meu. Use sua própria imagem, nome e descrição. Talvez você queira sua NFT com a imagem de seu personagem favorito de anime, banda favorita, qualquer coisa!! Faça-o customizado. Não se preocupe, vamos poder mudar isso no futuro!**
 
@@ -104,7 +104,7 @@ _setTokenURI(newItemId, "blah")
 Nós vamos setar o URI para o link do nosso arquivo JSON.
 
 ```solidity
-_setTokenURI(newItemId, "INSERT_YOUR_JSON_URL_HERE");
+_setTokenURI(newItemId, "INSIRA A URL DO SEU JSON AQUI");
 ```
 
 Embaixo dessa linha, também podemos adicionar um `console.log` para nos ajudar a ver qual NFT foi mintada e para quem!
@@ -174,15 +174,15 @@ Então, quando nós quisermos performar uma ação que mude a blockchain, nós c
 
 Lembre-se, a blockchain não tem dono. É só um monte de computadores ao redor do mundo rodando através de **mineradores** que tem a cópia da blockchain.
 
-Quando implementarmos nosso contrato,  nós precisamos falar  **para todos esses** mineradores, "ei, esse é um contrato inteligente novo, por favor adicione meu contrato inteligente à blockchain e diga para todo mundo sobre ele também".
+Quando implementarmos nosso contrato,  nós precisamos falar **para todos esses** mineradores, "ei, esse é um contrato inteligente novo, por favor adicione meu contrato inteligente à blockchain e diga para todo mundo sobre ele também".
 
-Aqui é onde o [Alchemy](https://alchemy.com/?r=b93d1f12b8828a57) entra.
+Aqui é onde o [Alchemy](https://alchemy.com/) entra.
 
 Alchemy essencialmente nos ajuda a transmitir a criação do nosso contrato para que ele possa ser pego pelos mineradores o mais rápido possível. Uma vez que a transação for minerada (validada), será então transmitida para a blockchain como uma transação legítima. A partir daí, todo mundo atualiza suas cópias da blockchain.
 
 Isso é complicado. E, não se preocupe se você não entendeu completamente. Enquanto você escrever mais código e construir esse app, vai fazer mais sentido naturalmente.
 
-Então, crie uma conta com o Alchemy [aqui](https://alchemy.com/?r=b93d1f12b8828a57).
+Então, se você não tiver, crie uma conta com o Alchemy [aqui](https://alchemy.com/).
 
 E depois dê uma olhada no meu vídeo abaixo para aprender como pegar sua API key para uma testnet:
 [Loom](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933?t=0)
@@ -190,7 +190,7 @@ E depois dê uma olhada no meu vídeo abaixo para aprender como pegar sua API ke
 
 ## 🕸 Testnets
 
-Nós não vamos estar implantando (deploying) diretamente na rede principal do Ethereum (Ethereum mainnet) por enquanto. Por quê? Porque custa dinheiro real e não vale a pena bagunçar as coisas. Nós estamos apenas aprendendo nesse momento. Nós vamos começar com uma "tesnet" (rede de teste) que é um clone da mainnet, mas usa dinheiro falso para que possamos testar coisas o quanto quisermos. Mas, é importante saber que testnets são mantidas por minerados e cenários mímicos de mundo real.
+Nós não vamos estar implantando (deploying) diretamente na rede principal do Ethereum (Ethereum mainnet) por enquanto. Por quê? Porque custa dinheiro real e não vale a pena bagunçar as coisas. Nós estamos apenas aprendendo nesse momento. Nós vamos começar com uma "tesnet" (rede de teste) que é um clone da mainnet, mas usa dinheiro falso para que possamos testar coisas o quanto quisermos. Mas, é importante saber que testnets são mantidas por mineradores e cenários mímicos de mundo real.
 
 Isso é incrível porque podemos testar nossa aplicação num cenário de mundo real, onde vamos fazer algumas coisas:
 
@@ -200,7 +200,7 @@ Isso é incrível porque podemos testar nossa aplicação num cenário de mundo 
 
 3. Esperar ela ser minerada
 
-4. Esperar ela ser transmitida de volta para a blockchain dizendo para todos os outros minerados para atualizarem suas cópias.
+4. Esperar ela ser transmitida de volta para a blockchain dizendo para todos os outros mineradores para atualizarem suas cópias.
 
 ## 🤑 Pegando um pouco de dinheiro falso
 
@@ -309,7 +309,7 @@ Aqui, você clica "SquareNFT" embaixo de "Collections" e boom, você vai ver as 
 
 ![Untitled](https://i.imgur.com/Q96NYK4.png)
 
-É ISSO! VAMOS NESSA! ESTOU HYPADO **POR** VOCÊ.
+É ISSO! VAMOS NESSA! ESTOU MUITO HYPADO **POR** VOCÊ.
 
 Muito épico, acabamos de criar nosso contrato NFT _e_ mintamos duas NFTs. Épico. ENQUANTO ISSO É ÉPICO, também é _meio chato —_ certo? É a mesma foto do Spongebob toda a vez! Como podemos adicionar alguma aleatoriedade para isso e gerar coisas no caminho? Isso é o que vamos ver depois :).
 
@@ -322,12 +322,12 @@ Muito épico, acabamos de criar nosso contrato NFT _e_ mintamos duas NFTs. Épic
 **Use o Rarible ao invés do OpenSea.** Rarible é outro marketplace NFT como o OpenSea. Aqui está como configurá-lo:
 
 1. Vá para `rinkeby.rarible.com`.
-2. Crie esse URL: `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE.`
+2. Crie esse URL: `https://rinkeby.rarible.com/token/INSIRA_O_CONTRACT_ADDRESS_AQUI:INSIRA_O_TOKEN_ID_AQUI.`
 
 Por exemplo, esse é meu link: https://rinkeby.rarible.com/token/0xb6be7bd567e737c878be478ae1ab33fcf6f716e0:0 para o NFT do Spongebob!! Meu `tokenId` é `0` porque foi o primeiro mint daquele contrato.
 
-**Basicamente, se você não ver sua NFT no OpenSea dentro de alguns minutos, tente o Rarible e Rarible URLs para o resto do projeto.**
+**Basicamente, se você não vIr sua NFT no OpenSea dentro de alguns minutos, tente o Rarible e Rarible URLs para o resto do projeto.**
 
 ## 💻 O código
 
-[Aqui](https://gist.github.com/farzaa/483c04bd5929b92d6c4a194bd3c515a5) está um link para como o nosso código se parece até esse ponto.
+[Rever este link](https://gist.github.com/farzaa/483c04bd5929b92d6c4a194bd3c515a5) está um link para como o nosso código se parece até esse ponto. 

@@ -4,17 +4,17 @@
 
 ---
 
-_Nota: Se você já sabe como fazer muitas coisas dessa sessão pelo projeto "WavePortal" que fizemos no passado, incrível! Você vai passar por isso rápido :). Muito disso é repetido. _
+_Nota: Se você já sabe como fazer muitas coisas dessa sessão pelo projeto "WavePortal" que fizemos no passado, incrível! Você vai passar por isso rápido :). Muito disso é repetido._
 
 Vamos fazer uma pequena faxina.
 
 Nós queremos deletar todo o código inicial que foi gerado para nós. Vamos começar a escrever coisas nós mesmos! Vá em frente e delete o arquivo  `sample-test.js` dentro de `test`.  Também delete `sample-script.js` dentro de  `scripts`. Então, delete `Greeter.sol` dentro de  `contracts`.
-**Don't delete the actual folders!**
+**Não delete as pastas, somente os arquivos!**
 
 Agora, abra o projeto no VSCode e vamos começar a escrever nosso contrato NFT. Se você nunca escreveu um contrato inteligente, não se preocupe.
 **Só siga o que faremos. Procure no Google coisas que você não entender, ou pergunte no Discord.**
 
-CRie um arquivo com o nome `MyEpicNFT.sol` dentro do diretório `contracts`. A estrutura de arquivos é super importante quando usamos Hardhat, então tenha cuidado com isso!
+Crie um arquivo com o nome `MyEpicNFT.sol` dentro do diretório `contracts`. A estrutura de arquivos é super importante quando usamos Hardhat, então tenha cuidado com isso!
 
 Nota: eu recomendo fazer o download da [extensão Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) para VSCode, que providencia marcador de sintaxe.
 
@@ -31,7 +31,7 @@ contract MyEpicNFT {
 }
 ```
 
-Nota: Algumas vezes o VSCode por si só mostrará erros que não são reais, por exemplo, pode sublinhar o import do hardhat e falar que ele não existe. Isso acontece porque o compilador global de Solidity não está configurado localmente. Se você não sabe como consertar isso, não se preocupe. Ignore esses avisos por enquanto. EU também recomendo que você não use o terminal do VSCode, use o seu terminal separado! As vezes o VSCode traz problemas se o compilador não estiver configurado.
+Nota: Algumas vezes o VSCode por si só mostrará erros que não são reais, por exemplo, pode sublinhar o import do hardhat e falar que ele não existe. Isso acontece porque o compilador global de Solidity não está configurado localmente. Se você não souber como consertar isso, não se preocupe. Ignore esses avisos por enquanto. EU também recomendo que você não use o terminal do VSCode, use o seu terminal separado! As vezes o VSCode traz problemas se o compilador não estiver configurado.
 
 Vamos ver linha por linha aqui.
 
@@ -71,7 +71,7 @@ Incrível - temos nosso contrato inteligente! Mas não sabemos se ele funciona. 
 
 2. Implantá-lo (deploy) na nossa blockchain local.
 
-3. UMa vez que estiver lá, o console.log vai rodar.
+3. Uma vez que estiver lá, o console.log vai rodar.
 
 Nós vamos escrever um script customizado que cuide desses 3 passos para nós.
 
@@ -115,13 +115,13 @@ const nftContract = await nftContractFactory.deploy();
 
 Isso é bem chique :).
 
-O que está acontecendo aqui é que o Hardhat cria uma rede Ethereum local para a gente, mas só para esse contrato. Depois que o script for completo, ele vai destruir essa rede local. Então, cada vez que você rodar o contrato, será uma blockchain nova. E qual é o objetivo? É como refazer o seu server local toda vez de maneira que você sempre parta de um ponto limpo, o que deixa mais fácil o debug de erros.
+O que está acontecendo aqui é que o Hardhat cria uma rede Ethereum local para a gente, mas só para esse contrato. Depois que o script for completo, ele vai destruir essa rede local. Então, cada vez que você rodar o contrato, será uma blockchain nova. E qual é o objetivo? É como refazer o seu server local toda vez, de maneira que você sempre parta de um ponto limpo, o que deixa mais fácil o debug de erros.
 
 ```javascript
 await nftContract.deployed();
 ```
 
-Nós vamos esperar até que o nosso contrato esteja oficialmente minerado e implementado na nossa blockchain local! Exatamente, hardhat cria "mineradores" falsos na nossa máquina para tentar imitar da melhor forma a blockchain.
+Nós vamos esperar até que o nosso contrato esteja oficialmente minerado e implantado na nossa blockchain local! Exatamente, hardhat cria "mineradores" falsos na nossa máquina para tentar imitar da melhor forma a blockchain.
 
 Nosso `constructor` roda quando nós estamos completamente implantados (deployed)!
 

@@ -14,7 +14,7 @@ O quadro maior aqui é:
 
 3 -- Nós vamos construir um site que permitirá que as pessoas "mintem" NFT's facilmente da nossa coleção.
 
-Eu também recomendo ler [esses](https://ethereum.org/en/developers/docs/intro-to-ethereum/) documentos quando você quiser, por diversão. Esses são os melhores guias na internet para entender como o Ethereum funciona, na minha opinião.
+Eu também recomendo ler [esses](https://ethereum.org/pt-br/developers/docs/intro-to-ethereum/) documentos quando você quiser, por diversão. Esses são os melhores guias na internet para entender como o Ethereum funciona, na minha opinião.
 
 ## ⚙️ Ferramentas para o ambiente local.
 
@@ -22,7 +22,7 @@ Nós vamos usar muito uma ferramente chamada **Hardhat**, a qual vai nos deixar 
 
 _Nota: eu estou no Node 16. Eu sei que algumas pessoas tiveram "erros de falta de memória" em versões mais velhas do node, então se isso acontecer, pegue o Node 16!_
 
-Depois, vamos para o terminal. Vá em frente e `cd` (change directory) para o diretório que você quer trabalhar. Uma vez que você estiver lá, rode os seguintes comandos:
+Depois, vamos para o terminal. Vá em frente e `cd` (comando para mudar de pasta) para o diretório que você quer trabalhar. Uma vez que você estiver lá, rode os seguintes comandos:
 
 ```bash
 mkdir epic-nfts
@@ -47,7 +47,7 @@ Escolha a opção de criar um projeto básico de teste. Diga sim para tudo.
 
 O projeto vai pedir para instalar `hardhat-waffle` e `hardhat-ethers`. Essas são coisinhas que vamos usar depois.
 
-Vá em frente e instale essas outras dependências no caso delas não terem sido instaladas automaticamente.
+Vá em frente e instale essas outras dependências no caso delas não tiverem sido instaladas automaticamente.
 
 ```bash
 npm install --save-dev @nomiclabs/hardhat-waffle
@@ -70,12 +70,12 @@ Você deve ver algo parecido com isso:
 
 ![Untitled](https://i.imgur.com/LIYT9tf.png)
 
-Boom! Se você ver isso, significa que seu ambiente local está configurado **e** você também rodou/implantou uma contrato inteligente para uma blockchain local.
+Boom! Se você estiver vendo isso, significa que seu ambiente local está configurado **e** você também rodou/implantou uma contrato inteligente para uma blockchain local.
 
 Isso é bastante épico. Vamos entrar em mais detalhes, mas basicamente o que está acontecendo aqui passo a passo é:
 
 1. Hardhat compila o seu código inteligente de solidity para bytecode.
-2. Hardhat vai rodar uma "blockchain local" no seu computador. É como uma versão de testes mini do Ethereum rodando no seu computador para deixar você testar coisas rapidamente!
+2. Hardhat vai rodar uma "blockchain local" no seu computador. É como uma mini versão de testes do Ethereum rodando no seu computador para deixar você testar coisas rapidamente!
 3. Hardhat vai então "implantar" (deploy) seu contrato compilado para a blockchain local. Isso é o endereço que você vê no final ali. É o nosso contrato implantado (deployed), na nossa mini versão do Ethereum.
 
 Se você estiver curioso, sinta-se a vontade para olhar o código dentro do projeto e ver como ele funciona. Especificamente, olhe o arquivo `Greeter.sol` que é o contrato inteligente e `sample-script.js` que roda o contrato.
