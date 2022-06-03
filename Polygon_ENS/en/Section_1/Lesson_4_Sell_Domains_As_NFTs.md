@@ -154,7 +154,7 @@ I want the end of all registered domains to be `.ninja`. This means we need to p
 - The domain you want to register
 - **The price of the domain (including gas) in Matic**
 
-We use a special `parseEther` function because units [work differently in Solidity](https://docs.soliditylang.org/en/v0.8.11/units-and-global-variables.html#units-and-globally-available-variables). This will send 0.1 Matic from my wallet to the contract as payment. Once that happens, the domain will be minted to my wallet address.
+We use a special `parseEther` function because units [work differently in Solidity](https://docs.soliditylang.org/en/v0.8.14/units-and-global-variables.html#units-and-globally-available-variables). This will send 0.1 Matic from my wallet to the contract as payment. Once that happens, the domain will be minted to my wallet address.
 
 **BOOM. That’s it.** That’s how easy it is taking payments with smart contracts! No silly payment processors, signups, random credit card fees. One line of code. EZPZ.
 

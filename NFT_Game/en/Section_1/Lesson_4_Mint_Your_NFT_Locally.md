@@ -134,7 +134,7 @@ _tokenIds.increment();
 
 So, `_tokenIds` starts at `0`. It's just a counter. `increment()` just adds 1 - see [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/fa64a1ced0b70ab89073d5d0b6e01b0778f7e7d6/contracts/utils/Counters.sol#L32).
 
-**In the constructor** I increment it to `1`.  Why?  Basically because I don't like dealing w/ `0`s in my code. In Solidity, `0` is a [default value](https://docs.soliditylang.org/en/v0.5.11/control-structures.html#scoping-and-declarations) and I try to stay away from default values. Just trust me on it for now ;).
+**In the constructor** I increment it to `1`.  Why?  Basically because I don't like dealing w/ `0`s in my code. In Solidity, `0` is a [default value](https://docs.soliditylang.org/en/v0.8.14/control-structures.html#scoping-and-declarations) and I try to stay away from default values. Just trust me on it for now ;).
 
 I also have `increment()` in `mintCharacterNFT` but don't forget to add it in the `constructor` as well ;).
 

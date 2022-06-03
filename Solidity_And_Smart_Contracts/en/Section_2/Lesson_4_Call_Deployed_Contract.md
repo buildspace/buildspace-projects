@@ -99,7 +99,7 @@ Look at you, already half way down here! Let's move back to our smart contract f
 
 When you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
 
-The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
+The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.8.14/abi-spec.html).
 
 The contents of the ABI file can be found in a fancy JSON file in your hardhat project:
 
