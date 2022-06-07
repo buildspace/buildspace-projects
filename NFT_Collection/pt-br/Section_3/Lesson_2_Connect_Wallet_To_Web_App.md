@@ -4,14 +4,14 @@ Então, para o nosso site conseguir falar com a blockchain, precisamos de alguma
 
 Vá para o Replit e vá para  `App.js` dentro de `src`, aqui é onde vamos estar fazendo todo trabalho.
 
-Se estivermos logados no Metamask, um objeto especial chamado  `ethereum`  será injetado dentro da nossa aba, que tem alguns métodos mágicos. Vamos checar se temos isso primeiro.
+Se estivermos logados na Metamask, um objeto especial chamado  `ethereum`  será injetado dentro da nossa aba, que tem alguns métodos mágicos. Vamos checar se temos isso primeiro.
 
 ```javascript
 import React, { useEffect } from "react";
 import "./styles/App.css";
 import twitterLogo from "./assets/twitter-logo.svg";
 // Constants
-const TWITTER_HANDLE = "_buildspace";
+const TWITTER_HANDLE = "Web3dev_";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = "";
 const TOTAL_MINT_COUNT = 50;
@@ -44,9 +44,9 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header gradient-text">My NFT Collection</p>
+          <p className="header gradient-text">Minha Coleção NFT</p>
           <p className="sub-text">
-            Each unique. Each beautiful. Discover your NFT today.
+            Únicas. Lindas. Descubra a sua NFT hoje.
           </p>
           {/* adicione o seu render method aqui */}
           {renderNotConnectedContainer()}
@@ -69,13 +69,13 @@ export default App;
 
 ## 🔒 Ver se conseguimos acessar a conta do usuário
 
-Então quando você rodar isso, você deve ver aquela linha "We have the Ethereum object" escrita no console do site quando você for inspecioná-lo. Se você estiver usando o Replit, tenha certeza que você está olhando para o console do site do projeto, e não o do Replit! Você pode acessar o console do seu site abrindo ele na sua própria aba e carregando as ferramentas de desenvolvedor. O URL deve se parecer com isso - `https://nft-starter-project.yourUsername.repl.co/`
+Então quando você rodar isso, você deve ver aquela linha "We have the Ethereum object" escrita no console do site quando você for inspecioná-lo. Se você estiver usando o Replit, tenha certeza que você está olhando para o console do site do projeto, e não o do Replit! Você pode acessar o console do seu site abrindo ele na sua própria aba e carregando as ferramentas de desenvolvedor. O URL deve se parecer com isso - `https://nft-starter-project.seuUsuario.repl.co/`
 
 **BOA.**
 
 Depois, nós precisamos checar se estamos autorizados mesmo a acessar a carteira do usuário. Uma vez que tivermos acesso a isso, podemos chamar nosso contrato inteligente.
 
-Basicamente, o Metamask não dá as credenciais da carteira para todo website que vamos. Ele apenas dá para sites que foram autorizados. De novo, é como fazer login! Mas, o que estamos fazendo aqui é  **checando se estamos logados.**
+Basicamente, a Metamask não dá as credenciais da carteira para todo website que vamos. Ele apenas dá para sites que foram autorizados. De novo, é como fazer login! Mas, o que estamos fazendo aqui é  **checando se estamos logados.**
 
 Cheque o código abaixo.
 
@@ -84,7 +84,7 @@ import React, { useEffect, useState } from "react";
 import "./styles/App.css";
 import twitterLogo from "./assets/twitter-logo.svg";
 // Constantes
-const TWITTER_HANDLE = "_buildspace";
+const TWITTER_HANDLE = "Web3dev_";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = "";
 const TOTAL_MINT_COUNT = 50;
@@ -132,9 +132,9 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header gradient-text">My NFT Collection</p>
+          <p className="header gradient-text">Minha Coleção NFT</p>
           <p className="sub-text">
-            Each unique. Each beautiful. Discover your NFT today.
+            Únicas. Lindas. Descubra a sua NFT hoje.
           </p>
           {renderNotConnectedContainer()}
         </div>
@@ -167,7 +167,7 @@ Cheque:
 import React, { useEffect, useState } from "react";
 import "./styles/App.css";
 import twitterLogo from "./assets/twitter-logo.svg";
-const TWITTER_HANDLE = "_buildspace";
+const TWITTER_HANDLE = "Web3dev_";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = "";
 const TOTAL_MINT_COUNT = 50;
@@ -234,9 +234,9 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header gradient-text">My NFT Collection</p>
+          <p className="header gradient-text">Minha Coleção NFT</p>
           <p className="sub-text">
-            Each unique. Each beautiful. Discover your NFT today.
+            Únicas. Lindas. Descubra a sua NFT hoje.
           </p>
           {currentAccount === "" ? (
             renderNotConnectedContainer()

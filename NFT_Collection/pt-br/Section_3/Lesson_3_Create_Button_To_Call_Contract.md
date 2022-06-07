@@ -1,12 +1,12 @@
 ## 💚 Mintar NFT pelo nosso site
 
-Incrível. Nós conseguimos. Fizemos deploy do nosso site. Fizemos deploy do nosso contrato. Conectamos nossa carteira. **Agora nós precisamos chamar o nosso contrato através do web app** usando as credenciais que temos acesso com o Metamask!
+Incrível. Nós conseguimos. Fizemos deploy do nosso site. Fizemos deploy do nosso contrato. Conectamos nossa carteira. **Agora nós precisamos chamar o nosso contrato através do web app** usando as credenciais que temos acesso com a Metamask!
 
 Então, lembre-se, nosso contrato tem a função `makeAnEpicNFT` o qual vai mintar a NFT. Nós precisamos chamar essa função através do web app. Vá em frente e adicione a função a seguir dentro da função `connectWallet`.
 
 ```javascript
 const askContractToMintNft = async () => {
-  const CONTRACT_ADDRESS = "INSERT_YOUR_DEPLOYED_RINKEBY_CONTRACT_ADDRESS";
+  const CONTRACT_ADDRESS = "INSIRA_O_ENDEREÇO_DO_CONTRATO_NA_REDE_RINKEBY";
   try {
     const { ethereum } = window;
     if (ethereum) {
@@ -42,7 +42,7 @@ const signer = provider.getSigner();
 
 `ethers` é uma library que ajuda o nosso frontend a falar com o nosso contrato. Lembre-se de importar a lib no início usando `import { ethers } from "ethers";`.
 
-Um "Provider" (provedor) é o que usamos para falar com os nodes do Ethereum. Lembra como nós estávamos usando o Alchemy para fazer **deploy**? Bom, nesse caso nós usamos os nodes que o Metamask provém no background para mandar/receber dados do nosso contrato já implantado.
+Um "Provider" (provedor) é o que usamos para falar com os nodes do Ethereum. Lembra como nós estávamos usando o Alchemy para fazer **deploy**? Bom, nesse caso nós usamos os nodes que A Metamask provém no background para mandar/receber dados do nosso contrato já implantado.
 
 [Aqui está](https://docs.ethers.io/v5/api/signer/#signers) um link explicando o que um signer é (linha 2).
 
@@ -89,7 +89,7 @@ return (
 ## 📂 Arquivos ABI
 
 **Fiz um pequeno vídeo aqui explicando tudo sobre ABI. Dê uma chance e assista, vou falar algumas coisas importantes.!**
-[Loom](https://www.loom.com/share/2d493d687e5e4172ba9d47eeede64a37)
+[Rever este link](https://www.loom.com/share/2d493d687e5e4172ba9d47eeede64a37)
 
 Então - quando você compilar seu contrato inteligente, o compilador cuspirá vários arquivos necessários que permitem interagir com o contrato. Você pode achar esses arquivos no diretório `artifacts` na raíz do repositório do seu projeto Solidity.
 
@@ -117,7 +117,7 @@ E estamos prontos. Não deverá ter mais erros. Você está pronto para mintar a
 
 Tudo que você precisa fazer aqui é clicar em "Mint NFT", pagar a gas (usando seu fake ETH), esperar a transação ser minerada e bam! Seu NFT deve aparecer no OpenSea ou imediatamente ou dentro de 5 - 15 minutos no máximo.
 
-Você deve estar se perguntando o que é gas. Eu não vou responder isso aqui. Mas você pode começar a pesquisar [aqui](https://ethereum.org/en/developers/docs/gas/) ;).
+Você deve estar se perguntando o que é gas. Eu não vou responder isso aqui. Mas você pode começar a pesquisar [aqui](https://ethereum.org/pt-br/developers/docs/gas/) ;).
 
 ## 🤩 Teste
 
