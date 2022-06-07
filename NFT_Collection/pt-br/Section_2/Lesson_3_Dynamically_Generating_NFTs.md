@@ -3,7 +3,7 @@
 
 Bacana — nós criamos um contrato que agora cria NFTs dentro da rede (on-chain). Mas ainda é sempre o mesmo NFT argh !!! Vamos torná-lo dinâmico. 
 
-**Eu escrevi esse código [aqui](https://gist.github.com/farzaa/b788ba3a8dbaf6f1ef9af57eefa63c27) que irá gerar um SVG com uma combinação de três palavras aleatórias.**
+**Eu escrevi esse código [Rever este link](https://gist.github.com/farzaa/b788ba3a8dbaf6f1ef9af57eefa63c27) que irá gerar um SVG com uma combinação de três palavras aleatórias.**
 
 Eu acho que essa seria a melhor maneira para as pessoas olharem todo o código de uma vez e entender como ele está funcionando.
 
@@ -15,9 +15,9 @@ Eu quero fazer algumas observações sobre algumas dessas linhas.
 ------------------
 
 ```solidity
-string[] firstWords = ["YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD"];
-string[] secondWords = ["YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD"];
-string[] thirdWords = ["YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD", "YOUR_WORD"];
+string[] firstWords = ["SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA"];
+string[] secondWords = ["SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA"];
+string[] thirdWords = ["SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA"];
 ```
 
 Estas são nossas palavras aleatórias!! Por favor, divirta-se com isso. Certifique-se de que cada palavra seja única e sem espaços!
@@ -30,7 +30,7 @@ Aqui estão alguns dos meus. Eu gosto que a primeira linha tenha palavras que pa
 
 Talvez você queira gerar um nome de banda aleatório. Talvez você queira gerar nomes de personagens aleatórios para suas sessões de Dungeons and Dragons. Faça o que você quiser. Talvez você não dê a mínima para combinações de três palavras e só queira fazer SVGs de pinguins de pixel art. Vá em frente. Faça o que você quiser :).
 
-Observação: Eu comendo entre 15-20 palavras por array. Notei que cerca de 10 geralmente não é aleatório o suficiente.
+Observação: Eu REcomendo entre 15-20 palavras por array. Notei que cerca de 10 geralmente não é aleatório o suficiente.
 
 🥴 Números aleatórios.
 ------------------
@@ -51,7 +51,7 @@ No blockchain, não há **quase nenhuma fonte de aleatoriedade**. É determinist
 random(string(abi.encodePacked("FIRST_WORD", Strings.toString(tokenId))));
 ```
 
-O que isso está fazendo é pegar duas coisas: a string atual `FIRST_WORD` e uma versão stringificada do` tokenId`. Eu combino essas duas strings usando `abi.encodePacked` e então essa string combinada é o que eu uso como fonte de aleatoriedade.
+O que isso está fazendo é pegar duas coisas: a string atual `FIRST_WORD` e uma versão stringificada do `tokenId`. Eu combino essas duas strings usando `abi.encodePacked` e então essa string combinada é o que eu uso como fonte de aleatoriedade.
 
 **Isso não é aleatoriedade verdadeira.** Mas é o melhor que temos por agora!
 
@@ -75,7 +75,7 @@ string memory finalSvg = string(abi.encodePacked(baseSvg, first, second, third, 
 😎 Executando!
 ------------------------
 
-Depois de escrever tudo, vá em frente e execute-o usando `npx hardhat run scripts0/run.js`. Verifique a saida produzido por `console.log(finalSvg);`.
+Depois de escrever tudo, vá em frente e execute-o usando `npx hardhat run scripts/run.js`. Verifique a saída produzido por `console.log(finalSvg);`.
 
 Isto é oque aparece no meu terminal.
 
@@ -103,11 +103,11 @@ Você poderá ver o SVG que foi gerado! Aqui está o meu:
 👩‍💻 Gerando os metadados dinamicamente.
 ------------------
 
-Agora, precisamos definir os metadados JSON! Primeiro, precisamos de algumas funções auxiliares. Crie uma pasta chamada `libraries` em `contracts`. Em `libraries`, crie um arquivo chamado` Base64.sol` e copie e cole o código [aqui](https://gist.github.com/farzaa/f13f5d9bda13af68cc96b54851345832) nele. Este arquivo tem algumas funções auxiliares criadas por outra pessoa para nos ajudar a converter nosso SVG e JSON para Base64 no Solidity.
+Agora, precisamos definir os metadados JSON! Primeiro, precisamos de algumas funções auxiliares. Crie uma pasta chamada `libraries` em `contracts`. Em `libraries`, crie um arquivo chamado` Base64.sol` e copie e cole o código [Rever este link](https://gist.github.com/farzaa/f13f5d9bda13af68cc96b54851345832) nele. Este arquivo tem algumas funções auxiliares criadas por outra pessoa para nos ajudar a converter nosso SVG e JSON para Base64 no Solidity.
 
 Okay, agora atualize o nosso contrato.
 
-**Mesma coisa, escrevi todo o código e adicionei comentários [aqui](https://gist.github.com/farzaa/dc45da3eb91a41913767f3eb4d7830f1).**
+**Mesma coisa, escrevi todo o código e adicionei comentários [Rever este link](https://gist.github.com/farzaa/dc45da3eb91a41913767f3eb4d7830f1).**
 
 Sinta-se à vontade para copiar e colar algumas dessas partes e entender como funciona depois de executá-lo :). Às vezes eu gosto de fazer isso porque posso ver o código sendo executado e entender como funciona depois!!
 
@@ -152,7 +152,7 @@ Tudo o que está acontecendo aqui é que estamos juntando tudo e adicionando o n
 🛠 Debugando o conteudo de `finalTokenUri`
 ------------------------
 
-Agora que você configurou o tokenURI, como sabemos se ele está realmente correto? Afinal, ele contém todos os nossos dados para nosso NFT! Você pode usar uma ferramenta legal como - [NFT Preview](https://nftpreview.0xdev.codes/) para ver uma visualização rápida da imagem e o conteúdo do json sem deplpoar de novo e e de novo na testnet do opensea.
+Agora que você configurou o tokenURI, como sabemos se ele está realmente correto? Afinal, ele contém todos os nossos dados para nosso NFT! Você pode usar uma ferramenta legal como - [NFT Preview](https://nftpreview.0xdev.codes/) para ver uma visualização rápida da imagem e o conteúdo do json sem deployar de novo e e de novo na testnet do opensea.
 
 Para facilitar, você pode passar o código `tokenURI` como um parâmetro de consulta como este,
 
@@ -202,4 +202,4 @@ Então, vamos construir isso :)!
 🚨 Relatório de progresso.
 ------------------------
 
-Se você tiver um, envie uma captura de tela em #progress de seu novo NFT gerado dinamicamente no OpenSea/Rarible em #progress :). Além disso - se você ainda não tweetou uma imagem de sua coleção maravilhosa de NFT, agora é a hora de fazê-lo!! Lembre-se de marcar @_buildspace !!! Traremos o máximo de pessoas possível!
+Se você tiver um, envie uma captura de tela de seu novo NFT gerado dinamicamente no OpenSea/Rarible em #progress :). Além disso - se você ainda não tweetou uma imagem de sua coleção maravilhosa de NFT, agora é a hora de fazê-lo!! Lembre-se de marcar @Web3dev_ !!! Traremos o máximo de pessoas possível!

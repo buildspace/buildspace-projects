@@ -31,7 +31,7 @@ Aqui está nosso SVG caixa preta novamente.
 Depois, precisamos de algum jeito pegar os dados das nossas NFT sem hospedar em algum lugar como o imgur (que pode cair ou morrer a qualquer momento!). Vá até [esse](https://www.utilities-online.info/base64) site. Cole todo o código SVG acima e clique em "encode" para pegar seu SVG base 64 encoded. Agora, está pronto para alguma mágica? Abra uma nova guia. E no URL, digite isso:
 
 ```plaintext
-data:image/svg+xml;base64,INSERT_YOUR_BASE64_ENCODED_SVG_HERE
+data:image/svg+xml;base64,INSIRA_SEU_SVG_ENCODADO_EM_BASE64_AQUI
 ```
 
 Então por exemplo, o meu se parece com isso:
@@ -42,7 +42,7 @@ data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIH
 
 Nós tornamos nosso código SVG em uma string :). Base64 é basicamente um padrão aceito para encodificar dados em uma string. Então quando falamos `data:image/svg+xml;base64`, estamos basicamente dizendo: "Ei, estou prestes a ter dar dados codificados com base64, por favor processe como um SVG, obrigado!".
 
-Pegue toda essa string, `data:image/svg+xml;base64,INSERT_YOUR_BASE64_ENCODED_SVG_HERE` e cole na barra de pesquisa do seu browser e BOOM! Você verá o SVG! Nota: se você tiver um erro, cheque duas vezes se seguiu todos os passos corretamente. É fácil se confundir :).
+Pegue toda essa string, `data:image/svg+xml;base64,INSIRA_SEU_SVG_ENCODADO_EM_BASE64_AQUI` e cole na barra de pesquisa do seu browser e BOOM! Você verá o SVG! Nota: se você tiver um erro, cheque duas vezes se seguiu todos os passos corretamente. É fácil se confundir :).
 
 Ok, **épico**. Essa é uma maneira de manter os dados da nossa imagem NFT permanentes e disponíveis para sempre. Todos os centros de dados do mundo podem queimar, e porque nós temos a string codificada com base64, nós sempre vamos poder ver o SVG enquanto tivermos um computador e um browser.
 
@@ -58,11 +58,11 @@ Então, eu mudei um pouco para nossas NFTs de três palavras :). Mesma coisa! Um
 {
   "name": "EpicLordHamburger",
   "description": "An NFT from the highly acclaimed square collection",
-  "image": "data:image/svg+xml;base64,INSERT_YOUR_BASE64_ENCODED_SVG_HERE"
+  "image": "data:image/svg+xml;base64,INSIRA_SEU_SVG_ENCODADO_EM_BASE64_AQUI"
 }
 ```
 
-Nota: não esqueça as aspas ao redor de `data:image/svg+xml;base64,INSERT_YOUR_BASE64_ENCODED_SVG_HERE`.
+Nota: não esqueça as aspas ao redor de `data:image/svg+xml;base64,INSIRA_SEU_SVG_ENCODADO_EM_BASE64_AQUI`.
 
 Por exemplo, o meu parece com isso:
 
@@ -81,7 +81,7 @@ Vá para [esse](https://www.utilities-online.info/base64) site de novo. Cole tod
 Abra uma nova aba. E no URL cole isso:
 
 ```plaintext
-data:application/json;base64,INSERT_YOUR_BASE64_ENCODED_JSON_HERE
+data:application/json;base64,INSIRA_SEU_JSON_ENCODADO_EM_BASE64_AQUI
 ```
 
 Por exemplo, o meu parece com isso:
@@ -105,7 +105,7 @@ Ok, incrível, nós conseguimos esse chique arquivo JSON codificado com base64. 
 Só precisamos mudar uma linha.
 
 ```solidity
-_setTokenURI(newItemId, "data:application/json;base64,INSERT_BASE_64_ENCODED_JSON_HERE")
+_setTokenURI(newItemId, "data:application/json;base64,INSIRA_SEU_JSON_ENCODADO_EM_BASE64_AQUI")
 ```
 
 Por exemplo, o meu se parece com:
@@ -122,6 +122,6 @@ npx hardhat run scripts/deploy.js --network rinkeby
 
 Depois, a mesma coisa de antes, espere um minuto ou dois, pegue o endereço do contrato, procure no [https://testnets.opensea.io/](https://testnets.opensea.io/) e você deve ver sua NFT ali :). De novo, não clique "Enter" quando estiver procurando -- você deve clicar na coleção quando aparecer na barra de pesquisa.
 
-Nota: lembre de usar `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE` se o OpenSea estiver muito lento.
+Nota: lembre de usar `https://rinkeby.rarible.com/token/INSIRA_O_ENDEREÇO_DO_CONTRATO_AQUI:INSIRA_O_TOKEN_ID_AQUI` se o OpenSea estiver muito lento.
 
 ![Untitled](https://i.imgur.com/Z2mKTpK.png)
