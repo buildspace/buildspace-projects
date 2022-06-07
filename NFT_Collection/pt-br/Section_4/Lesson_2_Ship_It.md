@@ -43,7 +43,7 @@ Lembra da mudança que fizemos no `.gitignore` anteriormente? Agora você pode r
 🌎 Uma observação sobre IPFS
 ----------------
 
-Vou apenas deixar isso para você explorar, mas, às vezes, você não vai querer armazenar todos os dados seus NFTs dentro da blockchain (on-chaibn). Talvez você queira ter um vídeo como NFT. Fazer isso (on-chain) seria extremamente caro devido às taxas de gas.
+Vou apenas deixar isso para você explorar, mas, às vezes, você não vai querer armazenar todos os dados seus NFTs dentro da blockchain (on-chain). Talvez você queira ter um vídeo como NFT. Fazer isso (on-chain) seria extremamente caro devido às taxas de gas.
 
 Nesse caso, você poderia usar algo chamado [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/), que é quase como um sistema de armazenamento de dados descentralizado que ninguém realmente possui. É administrado pelo povo.
 
@@ -66,7 +66,7 @@ Se você selecionar a aba **Contract** no Etherscan, notará uma longa lista de 
 
 Acontece que esse grupo de coisa escrita grande e confusa é, na verdade, os bytecodes do contrato que você lançou! Bytecodes representam uma série de opcodes no EVM que irão executar as instruções para nós on-chain.
 
-São muitas informações novas para entender, então não se preocupe se não fizer muito sentido agora. Reserve um momento para verificar o que significam os bytecodes e o EVM! Use o Google ou entre em contato com o `#general-chill-chat` no Discord :). [Este aqui também é um artigo legal](https://ethervm.io/) sobre opcodes EVM, a propósito 🤘.
+São muitas informações novas para entender, então não se preocupe se não fizer muito sentido agora. Reserve um momento para verificar o que significam os bytecodes e o EVM! Use o Google ou entre em contato com o `#chat-geral` no Discord :). [Este aqui também é um artigo legal](https://ethervm.io/) sobre opcodes EVM, a propósito 🤘.
 
 Portanto, sabemos que os bytecodes não podem ser lidos por nós. Mas queremos ser capazes de ver o código que escrevemos certo no Etherscan. Felizmente, Etherscan tem a magia para nos ajudar a fazer isso!
 
@@ -75,6 +75,7 @@ Observe que há um botão que nos permite **Verify and Publish** (Verificar e Pu
 Felizmente para nós, o hardhat oferece uma maneira mais inteligente de fazer isso.. 
 
 Volte para o projeto do hardhat e instale `@nomiclabs/hardhat-etherscan` executando o comando:
+
 ```
 npm i -D @nomiclabs/hardhat-etherscan
 ```
@@ -90,8 +91,8 @@ module.exports = {
   // Rest of the config
   ...,
   etherscan: {
-    // Your API key for Etherscan
-    // Obtain one at https://etherscan.io/
+    // Sua chave API key do Etherscan
+    // Obtenha a sua em https://etherscan.io/
     apiKey: "",
   }
 };
@@ -101,7 +102,7 @@ Estamos quase lá! Você deve ter notado que o objeto `etherscan` em nossa confi
 
 Se você ainda não tem uma conta, vá para [https://etherscan.io/register](https://etherscan.io/register) para criar uma conta de usuário gratuita. Depois disso, vá para as configurações do seu perfil e em `API-KEYs` crie um novo apikey
 
-![image](https://user-images.githubusercontent.com/60590919/139610459-b590bbc1-0d4e-4e78-920b-c45e61bf2d7e.png)
+![Rever este link](https://user-images.githubusercontent.com/60590919/139610459-b590bbc1-0d4e-4e78-920b-c45e61bf2d7e.png)
 
 Legal, você conseguiu sua chave de API. É hora de voltar ao arquivo `hardhat.config.js` e alterar a propriedade `apiKey` para ser a chave recém-gerada.
 
@@ -132,7 +133,7 @@ Espere e tem mais. Existem agora duas novas sub-abas `Read Contract` & `Write Co
 
 Super emocionante que você chegou ao fim. Um grande feito!
 
-Antes de sair, certifique-se de adicionar alguns daqueles pequenos retoques finais da lição anterior, se desejar. Isso realmente faz a diferença. Quando estiver pronto, poste um link para seu projeto em #showcase. Seus colegas de classe serão os primeiros a cunhar alguns de seus incríveis NFTs!
+Antes de sair, certifique-se de adicionar alguns daqueles pequenos retoques finais da lição anterior, se desejar. Isso realmente faz a diferença. Quando estiver pronto, poste um link para seu projeto em #progresso. Seus colegas de classe serão os primeiros a cunhar alguns de seus incríveis NFTs!
 
 Obrigado por contribuir para o futuro da web3 ao aprender essas coisas. O fato de você saber como isso funciona e como codificá-lo é um superpoder. Use seu poder com sabedoria ;).
 
@@ -149,16 +150,16 @@ O que você aprendeu neste projeto é apenas o começo! Há muito mais que você
 
 🤟 Seu NFT!
 ---------
-Enviaremos seu NFT dentro de uma hora e enviaremos um e-mail assim que estiver em sua carteira. Ele está sendo executado em um cron job! Se você não receber o e-mail em 24 horas, por favor, envie-nos uma mensagem em #feedback e tag @ **alec#8853**.
+Enviaremos seu NFT dentro de uma hora e enviaremos um e-mail assim que estiver em sua carteira. Ele está sendo executado em um cron job! Se você não receber o e-mail em 24 horas, por favor, envie-nos uma mensagem em #chat-geral e tag @ **danicuki#5520**.
 
 🌈 Antes de sair...
 ---------
-Vá para #showcase no Discord e nos mostre seu produto final com o qual podemos mexer :).
+Vá para #progresso no Discord e nos mostre seu produto final com o qual podemos mexer :).
 
 Além disso, você deve twittar o seu projeto final e mostrar ao mundo a sua criação incrível! O que você fez não foi fácil de forma alguma. Talvez até faça um pequeno vídeo mostrando seu projeto e anexe no tweet. Faça seu tweet parecer bonito e se exiba um pouco :).
 
-E se você quiser, marque @_buildspace :). Vamos fazer o RT. Além disso, isso nos dá muita motivação sempre que vemos pessoas enviando seus projetos.
+E se você quiser, marque @Web3dev_ :). Vamos fazer o RT. Além disso, isso nos dá muita motivação sempre que vemos pessoas enviando seus projetos.
 
-Por último, o que também seria incrível é se você nos dissesse em #feedback como gostou deste projeto e da estrutura do projeto. O que você mais ama no buildspace? O que gostaria que mudássemos para projetos futuros? Seu feedback seria incrível!!
+Por último, o que também seria incrível é se você nos dissesse em #feedback como gostou deste projeto e da estrutura do projeto. O que você mais ama na WEB3DEV ? O que gostaria que mudássemos para projetos futuros? Seu feedback seria incrível!!
 
 Te vejo por aí!!!

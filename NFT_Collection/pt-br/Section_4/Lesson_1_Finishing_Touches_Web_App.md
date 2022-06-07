@@ -7,7 +7,7 @@ O link para um NFT no OpenSea se parece com este:
 
 `https://testnets.opensea.io/assets/0x88a3a1dd73f982e32764eadbf182c3126e69a5cb/9`
 
-Basicamente, são duas variaveis.
+Basicamente, são duas variáveis.
 
 `https://testnets.opensea.io/assets/INSIRA_O_ENDEREÇO_DE_CONTRATO_AQUI/INSIRA_O_TOKEN_ID_AQUI`
 
@@ -36,7 +36,7 @@ Então, adicione esta linha no final da função `makeAnEpicNFT`, então, esta �
 
 `emit NewEpicNFTMinted(msg.sender, newItemId);`
 
-Em um nível básico, os `Events` são mensagens que nossos contratos emitem para que podemos capturar em nosso cliente em tempo real. No caso o nossa NFT, só porque nossa transação é minerada **não significa que a transação resultou na cunhagem de NFT**. Pode ter sido apenas um erro!! Mesmo se houvesse um erro, ainda teria sido extraído no processo.
+Em um nível básico, os `Events` são mensagens que nossos contratos emitem e que podemos capturar em nosso cliente em tempo real. No caso a nossa NFT, só porque nossa transação é minerada **não significa que a transação resultou na cunhagem de NFT**. Pode ter sido apenas um erro!! Mesmo se houvesse um erro, ainda teria sido extraído no processo.
 
 É por isso que uso os `Events` aqui. Sou capaz de emitir `(emit)` um evento no contrato e, em seguida, capturar esse evento no front-end. Observe que no meu `event` envio o `newItemId` que precisamos no frontend, certo :)?
 
@@ -63,12 +63,12 @@ connectedContract.on("NewEpicNFTMinted", (from, tokenId) => {
 
 Ok, isso é muito incrível. Em tempo real, capturaremos o evento de mintagem, obteremos o tokenId e forneceremos ao usuário seu link OpenSea para seu NFT recém-criado.
 
-O código para `App.js` e do contrato esta [aqui](https://gist.github.com/farzaa/5015532446dfdb267711592107a285a9). Não é nada sofisticado. Apenas configurando um event listener! Fiz questão de inserir comentários nas linhas que adicionei para facilitar a visualização do que alterei. Certifique-se de adicionar uma chamada para `setupEventListener()` em dois lugares como eu faço no código! Não se confunda :).
+O código para `App.js` e do contrato esta [Rever este link](https://gist.github.com/farzaa/5015532446dfdb267711592107a285a9). Não é nada sofisticado. Apenas configurando um event listener! Fiz questão de inserir comentários nas linhas que adicionei para facilitar a visualização do que alterei. Certifique-se de adicionar uma chamada para `setupEventListener()` em dois lugares como eu faço no código! Não se confunda :).
 
 🖼 Fundos coloridos!
 --------------
 
-Apenas por diversão, mudei o contrato para escolher aleatoriamente um fundo colorido. Não vou revisar o código aqui porque foi apenas para diversão, mas fique à vontade para ver os comentários [aqui](https://gist.github.com/farzaa/b3b8ec8aded7e5876b8a1ab786347cc9). Lembre-se de que, se alterar o contrato, você precisará redeployar, atualizar o arquivo ABI e atualizar o endereço do contrato.
+Apenas por diversão, mudei o contrato para escolher aleatoriamente um fundo colorido. Não vou revisar o código aqui porque foi apenas para diversão, mas fique à vontade para ver os comentários [Rever este link](https://gist.github.com/farzaa/b3b8ec8aded7e5876b8a1ab786347cc9). Lembre-se de que, se alterar o contrato, você precisará redeployar, atualizar o arquivo ABI e atualizar o endereço do contrato.
 
 
 😎 Defina um limite para o número de NFTs cunhados
@@ -117,7 +117,7 @@ Adicione seu Twitter na parte inferior :)! Já lhe dei um pequeno modelo para is
 
 Talvez a parte mais importante!
 
-Normalmente, quando as pessoas querem ver uma coleção NFT, elas olham para ela no OpenSea!! É uma maneira super fácil das pessoas admirarem a sua coleção. Portanto, se você vincular seu site ao seu amigo, eles saberão que é legítimo!!
+Normalmente, quando as pessoas querem ver uma coleção NFT, elas olham para ela no OpenSea!! É uma maneira super fácil das pessoas admirarem a sua coleção. Portanto, se você der o link do seu site ao seu amigo, eles saberão que é legítimo!!
 
 Adicione um pequeno botão que diz "🌊 Exibir coleção no OpenSea" e quando seus usuários clicarem nele, ele será vinculado à sua coleção! Lembre-se de que o link de suas coleções muda toda vez que você altera o contrato. Portanto, certifique-se de vincular sua coleção mais recente e final. Por exemplo, [essa](https://testnets.opensea.io/collection/squarenft-vu901lkj40) é a minha coleção.
 
