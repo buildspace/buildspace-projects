@@ -237,6 +237,16 @@ export default function Product({ product }) {
 ```
 All we did here was replace the IPFS component with the Buy component lol.
 
+### 🧪 Setting up Devnet 
+
+One last step before you get paid! You need to make sure your wallet is in Devnet, otherwise you won't be able to make any transaction. To do this open up your Phantom wallet, go to settings:
+
+[...]
+
+Then to Change Network and select the Devnet Network. Now you're all set! All transactions will be in Devnet!
+
+If you are broke and you have no SOL in your wallet, you can use a facutet to get some! Checkout Sol Facuet to make free bank! https://solfaucet.com/
+
 And now if you click the shiny new buy button, you should see a transaction request!
 ![](https://hackmd.io/_uploads/ByAeaFIPc.png)
 
