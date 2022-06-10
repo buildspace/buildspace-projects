@@ -163,9 +163,7 @@ useEffect(() => {
     .then((hasVoted) => {
       setHasVoted(hasVoted);
       if (hasVoted) {
-        console.log("🥵 User has already voted");
-      } else {
-        console.log("🙂 User has not voted yet");
+        console.log("🥵 User has already voted")
       }
     })
     .catch((err) => {

@@ -57,7 +57,7 @@ const App = () => {
       });
   }, [address]);
 
-  // ... include all your other code that was already there below.
+  // ... include all your other code that was alread there below.
 ```
 
 We just tell thirdweb that we want to be on Rinkeby using `new ThirdwebSDK("rinkeby")`. Then, we create `bundleDropModule` and all we need is the address of our deployed ERC-1155 contract! When we do this, thirdweb gives us a little object we can easily use to interact with our contract.
@@ -136,7 +136,7 @@ const App = () => {
       </div>
     );
   }
-  
+
   const mintNft = () => {
     setIsClaiming(true);
     // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
@@ -147,7 +147,7 @@ const App = () => {
       setHasClaimedNFT(true);
       // Show user their fancy new NFT!
       console.log(
-        `🌊 Successfully Minted! Check it our on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
+        `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
       );
     })
     .catch((err) => {
@@ -158,7 +158,7 @@ const App = () => {
       setIsClaiming(false);
     });
   }
-  
+
   // Render mint nft screen.
   return (
     <div className="mint-nft">
@@ -184,7 +184,7 @@ When you actually go to mint the NFT, Metamask will pop so you can pay gas. Once
 
 ![Untitled](https://i.imgur.com/PjjDSxd.png)
 
-Nice! Here you'll see my NFT has "6 owners". You’ll also see it says “You own 1” which you’d see on your end as well as long as you minted one!
+Nice! Here you'll see my NFT here has "6 owners". You’ll also see it says “You own 1” which you’d see on your end as well as long as you minted on!
 
 ![Untitled](https://i.imgur.com/fdn9Qs4.png)
 
@@ -198,7 +198,7 @@ Okay, so if you remember we need to handle two cases:
 
 2) if we detect that the user doesn't have our NFT, we'll give them a button to mint one.
 
-This is pretty easy. All we need to add is the following to `App.jsx` before rendering mint nft screen.
+This is pretty easy. All we need to add is the following to `App.jsx`
 
 ```jsx
 if (!address) {

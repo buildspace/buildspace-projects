@@ -26,8 +26,6 @@ If you have any issues throughout here, just drop a message on Discord in  `#se
 
 First you'll need to get node/npm. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html).
 
-We recommend you install at least node v15 or you may run into some issues!
-
 Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to the directory you want to work in. Once you're there run these commands:
 
 ```bash

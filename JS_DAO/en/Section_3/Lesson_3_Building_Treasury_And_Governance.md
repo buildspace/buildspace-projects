@@ -137,7 +137,6 @@ const tokenModule = sdk.getTokenModule(
   try {
     // Grab our wallet's token balance, remember -- we hold basically the entire supply right now!
     const ownedTokenBalance = await tokenModule.balanceOf(
-      // The wallet address stored in your env file or Secrets section of Repl
       process.env.WALLET_ADDRESS
     );
 
