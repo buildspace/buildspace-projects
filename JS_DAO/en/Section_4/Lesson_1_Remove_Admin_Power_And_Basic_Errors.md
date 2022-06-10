@@ -1,4 +1,4 @@
-### 😡 Revoke roles.
+### 😡 Revoke roles
 
 If you remember, you actually still hold “minting” rights on the ERC-20 contract. That means you can go and create more tokens if you wanted which may freak out members of your DAO lol. You could go and mint like a billion tokens to yourself lol.
 
@@ -9,28 +9,25 @@ That way, only the voting contract is able to mint new tokens. We can do this by
 ```jsx
 import sdk from "./1-initialize-sdk.js";
 
-const tokenModule = sdk.getTokenModule(
-  "INSERT_TOKEN_MODULE_ADDRESS",
-);
+const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
 
 (async () => {
   try {
     // Log the current roles.
-    console.log(
-      "👀 Roles that exist right now:",
-      await tokenModule.getAllRoleMembers()
-    );
+    const allRoles = await token.roles.getAll();
+
+    console.log("👀 Roles that exist right now:", allRoles);
 
     // Revoke all the superpowers your wallet had over the ERC-20 contract.
-    await tokenModule.revokeAllRolesFromAddress(process.env.WALLET_ADDRESS);
+    await token.roles.setAll({ admin: [], minter: [] });
     console.log(
       "🎉 Roles after revoking ourselves",
-      await tokenModule.getAllRoleMembers()
+      await token.roles.getAll()
     );
     console.log("✅ Successfully revoked our superpowers from the ERC-20 contract");
 
   } catch (error) {
-    console.error("Failed to revoke ourselves from the DAO treasury", error);
+    console.error("Failed to revoke ourselves from the DAO trasury", error);
   }
 })();
 ```
@@ -40,39 +37,49 @@ When I run this using `node scripts/11-revoke-roles.js` I get:
 ```plaintext
 buildspace-dao-starter % node scripts/11-revoke-roles.js
 👀 Roles that exist right now: {
-  admin: [ '0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D' ],
-  minter: [
-    '0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D',
-    '0xFE667920172882D0695E199b361E94325F0641B6'
-  ],
-  pauser: [ '0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D' ],
-  transfer: [ '0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D' ]
+  admin: [ '0xF11D6862e655b5F4e8f62E00471261D2f9c7E380' ],
+  minter: [ '0xF11D6862e655b5F4e8f62E00471261D2f9c7E380' ],
+  transfer: [
+    '0xF11D6862e655b5F4e8f62E00471261D2f9c7E380',
+    '0x0000000000000000000000000000000000000000'
+  ]
 }
 🎉 Roles after revoking ourselves {
   admin: [],
-  minter: [ '0xFE667920172882D0695E199b361E94325F0641B6' ],
-  pauser: [],
-  transfer: []
+  minter: [],
+  transfer: [
+    '0xF11D6862e655b5F4e8f62E00471261D2f9c7E380',
+    '0x0000000000000000000000000000000000000000'
+  ]
 }
 ✅ Successfully revoked our superpowers from the ERC-20 contract
 ```
 
-At the beginning you can see my address `0xF79A3bb8` had a bunch of privileges over the ERC-20. So, after we run `tokenModule.revokeAllRolesFromAddress` you’ll see the only person who has the minter role is my voting contract!
+At the beginning you can see my address `0xF79A3bb8` had a bunch of privileges over the ERC-20. So, after we run `token.roles.setAll({ admin: [], minter: [] })` you’ll see the only person who has the minter role is my voting contract!
 
 We are now safe from an admin takeover :).
 
-### 👍 Handle basic unsupported network error.
+You'll see I still have the `transfer` role in conjunction with `AddressZero`, `AddressZero` in the roles array means that everybody can transfer tokens (which is what we want). It doesn't matter that our address is also there.
 
-First, you'll need to import the type `UnsupportedChainIdError` at the top of `App.jsx` to recognize a connection outside of the Rinkeby network. Just add the line below to your other imports.
+### 👍 Handle basic unsupported network error
+
+First, let's import one last hook `useNetwork` at the top of `App.jsx` to recognize a connection outside of the Rinkeby network. Also, we're importing `ChainId` from the thirdweb SDK to get Rinkeby's chain ID.
 
 ```jsx
-import { UnsupportedChainIdError } from "@web3-react/core";
+import { useAddress, useMetamask, useEditionDrop, useToken, useVote, useNetwork } from '@thirdweb-dev/react';
+import { ChainId } from '@thirdweb-dev/sdk'
 ```
 
-Next, add the following in your `App.jsx` file right under your last `useEffect`.
+Then, define our `useNetwork` hook under our `useAddress` hook:
 
 ```jsx
-if (error instanceof UnsupportedChainIdError ) {
+const network = useNetwork();
+```
+
+Next, add the following in your `App.jsx` file right under the `mintNft` function:
+
+```jsx
+if (address && (network?.[0].data.chain.id !== ChainId.Rinkeby)) {
   return (
     <div className="unsupported-network">
       <h2>Please connect to Rinkeby</h2>
@@ -85,9 +92,11 @@ if (error instanceof UnsupportedChainIdError ) {
 }
 ```
 
+We're checking if we're finding a chain on our preferred network, in our case Rinkeby, if we are not, we're prompting users to switch network.
+
 Pretty simple! But, very useful. It’ll pop a message if the user isn’t on Rinkeby!
 
-### 🤑 See your token on Uniswap.
+### 🤑 See your token on Uniswap
 
 You may ask yourself how tokens like [ENS DAO](https://coinmarketcap.com/currencies/ethereum-name-service/) or the more recent [Constitution DAO](https://coinmarketcap.com/currencies/constitutiondao/) have governance token worth real money. Well basically, it’s because other people can actually just buy their governance tokens directly on decentralized exchanges like Uniswap.
 

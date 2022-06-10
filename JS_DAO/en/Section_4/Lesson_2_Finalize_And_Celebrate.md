@@ -1,4 +1,4 @@
-### **😍 Hello, DAO Master.**
+### 😍 Hello, DAO Master
 
 You’ve done it. You made it to the end. I’m proud af. This is you rn:
 
@@ -16,9 +16,9 @@ A quick review here you just:
 
 ✅ built a dapp that lets people connect their wallet, get an NFT, see a DAO Dashboard where they can see other members + actually vote on proposals that are executed directly by your governance contract.
 
-I know it’s hard to believe, but you created a full-fledged DAO. I hope at the very least this project gave you a grasp on what a DAO is and how one works. There is of course more to a DAO then what we covered in this project here, stuff like tokenomics, running an actual community, planning your DAOs roadmap, etc — these are all things we haven't covered by hey I’m sure you’ll figure it out ;).
+I know it’s hard to believe, but you created a full-fledged DAO. I hope at the very least this project gave you a grasp on what a DAO is and how one works. There is of course more to a DAO than what we covered in this project here, stuff like tokenomics, running an actual community, planning your DAOs roadmap, etc — these are all things we haven't covered by hey I’m sure you’ll figure it out ;).
 
-### **🤟 Your NFT!**
+### 🤟 Your NFT!
 
 **Be sure to click the button at the bottom of this page and submit your final link. Otherwise, our system won't mark you as "complete".**
 
@@ -26,7 +26,7 @@ We'll airdrop you your NFT within an hour and will email you once it's in your w
 
 [Loom](https://www.loom.com/share/99c4d4bddd624661b84e551c1257027e)
 
-### **🌈 Before you head out.**
+### 🌈 Before you head out
 
 Go to **#showcase** in Discord and drop us a link to your final product that we can mess around with. If you didn’t use Replit, be sure to deploy with something like Vercel or Netlify. **You made it this far, you better deploy your site lol.**
 

@@ -69,7 +69,7 @@ contract MyEpicGame is ERC721 {
       console.log("Done initializing %s w/ HP %s, img %s", c.name, c.hp, c.imageURI);
     }
 
-    // I increment tokenIds here so that my first NFT has an ID of 1.
+    // I increment _tokenIds here so that my first NFT has an ID of 1.
     // More on this in the lesson!
     _tokenIds.increment();
   }
@@ -168,7 +168,7 @@ This is the magic line! When we do `_safeMint(msg.sender, newItemId)` it's pre
 
 What's awesome here is this is a **super-secure way to get the user's public address**. Keeping the public address itself a secret isn't an issue, it's already public!! Everyone sees it. But, by using `msg.sender` you can't "fake" someone else's public address unless you had their wallet credentials and called the contract on their behalf!
 
-### 🎨 Holding dynamic data on an NFT.
+### 🎨 Holding dynamic data on an NFT
 
 So, as players play the game, certain values on their character will change, right? For example, If I have my character attack the boss, the boss will hit back! **In that case, my NFT's HP would need to go down.** We need a way to store this data per player:
 
@@ -233,9 +233,9 @@ Map the user's public wallet address to the NFTs tokenId. What this lets me do l
 _tokenIds.increment();
 ```
 
-After the NFT is minted, we increment `tokenIds` using `_tokenIds.increment()` (which is a function OpenZeppelin gives us). This makes sure that next time an NFT is minted, it'll have a different `tokenIds` identifier. No one can have a `tokenIds` that's already been minted.
+After the NFT is minted, we increment `_tokenIds` using `_tokenIds.increment()` (which is a function OpenZeppelin gives us). This makes sure that next time an NFT is minted, it'll have a different `_tokenIds` identifier. No one can have a `_tokenIds` that's already been minted.
 
-### 😳 Running it locally.
+### 😳 Running it locally
 
 In `run.js` what we need to do is actually call `mintCharacterNFT`. I added the following lines to `run.js` right under where we print out the contract address.
 
@@ -409,6 +409,6 @@ Why are we doing all this Base64 stuff? Well, basically this is how popular NFT 
 
 **We're ready to deploy our NFT to OpenSea :).**
 
-### **🚨 Progress report!**
+### 🚨 Progress report!
 
 Post a screenshot of your JSON output when you paste in the `tokenURI` into your browser's address bar :)!

@@ -10,7 +10,7 @@ Why are people losing their minds over things like this?
 
 The buildspace philosophy is to understand by just building it yourself and messing with the tech. But, I would like to go through a quick, informal example ;)!
 
-### 🎮 A quick example w/ Nintendo.
+### 🎮 A quick example w/ Nintendo
 
 **Let's say you're Nintendo** and you made Super Mario Bros. Mario is now **your** IP. **You're** the creator. No one is allowed to create more games with Mario except **you**. You also want to control who makes % from your characters/universe.
 
@@ -32,7 +32,7 @@ Coolest part? **Players retain a ton of the value.** Players can always hold/sel
 
 **This may sounds crazy but this is pretty much exactly how Axie Infinity works.** I**t's doing billions of dollars in revenue every year.** You can buy some Axie NFTs [here](https://marketplace.axieinfinity.com/?__cf_chl_jschl_tk__=pmd_ybIeMQm0TAMzOvPj1DcoPlIZeWIcL5r4nwefM60mDTM-1634675045-0-gqNtZGzNAjujcnBszQoR) and start playing. As the Axie universe grows more popular, the NFTs increase in value as well!
 
-### 😢 An issue: inflation.
+### 😢 An issue: inflation
 
 You'll notice the Axies cost like [$300+](https://marketplace.axieinfinity.com/?__cf_chl_jschl_tk__=pmd_ybIeMQm0TAMzOvPj1DcoPlIZeWIcL5r4nwefM60mDTM-1634675045-0-gqNtZGzNAjujcnBszQoR)!!! That's insane and a major turn off for new players. You need three of them to even start playing, so, thats $1K right there.
 
@@ -40,7 +40,7 @@ This is basically caused by inflation in the marketplace. Only a certain # of Ax
 
 "*Axie population growth is a major factor within the Axie ecosystem. At any given moment, there exists some ideal inflation rate that allows us to grow to our maximum potential. Too slow and Axie prices are too high for everyday people to join; especially competitive Axies. Too fast and you get unhealthy inflation."*
 
-### 🛠 Building open games.
+### 🛠 Building open games
 
 I want to go over another benefit. Easily making games and universes that anyone else can build on via NFTs.
 
@@ -56,10 +56,10 @@ $5 would go right to Nintendo's wallet. $5 would go right to the dev's wallet.
 
 The possibilities are literally endless because we can program the royalty system to work however we want. 
 
-### 💪 Lets get to work.
+### 💪 Lets get to work
 
 We've been doing a lot of talking. Let's actually build our own little version of an NFT game. By the end, hopefully all this becomes much more concrete and maybe you'll be on your way toward making the next hit NFT game ;).
 
-### **🚨 Progress report!**
+### 🚨 Progress report!
 
 Post in #progress with the name of your fav video game! Help get everyone in the gaming mood 8).

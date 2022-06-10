@@ -1,4 +1,4 @@
-### ✅ Running a test on devnet.
+### ✅ Running a test on devnet
 
 I actually like to run an `anchor test` at this point before I start integrating my web app. This could potentially save us from some random, annoying errors.
 
@@ -41,7 +41,7 @@ You may be asking yourself, "Why did it re-deploy? Why isn't it just talking to 
 
 *Note: this is **very very** different from Ethereum where you can never change a smart contract once it's deployed!*
 
-### 🤟 Hooking up our IDL file to the web app.
+### 🤟 Hooking up our IDL file to the web app
 
 So, we now have a deployed Solana program. Let's connect it up to our web app :).
 
@@ -69,13 +69,13 @@ import idl from './idl.json';
 
 Nice!! 
 
-### 🌐 Change the network Phantom connects to.
+### 🌐 Change the network Phantom connects to
 
 Right now, Phantom is probably connected to the Solana Mainnet. We need it to connect to the Solana Devnet. You can change this by going to the settings (click the little gear on the bottom right) , click "Change Network", and then click "Devnet". That's it!
 
 ![Untitled](https://i.imgur.com/JWHwPJX.png)
 
-### 👻 Fund Phantom wallet.
+### 👻 Fund Phantom wallet
 
 We also need to fund our Phantom wallet w/ some fake SOL. **Reading** **data** on accounts on Solana is free. But doing things like creating accounts and adding data to accounts costs SOL.
 
@@ -89,9 +89,9 @@ Now, go ahead and run this from your terminal.
 solana airdrop 2 INSERT_YOUR_PHANTOM_PUBLIC_ADDRESS_HERE  --url devnet
 ```
 
-Now, when you go back to your Phantom wallet you should have 5 SOL associated w/ your devnet wallet. Nice :).
+Now, when you go back to your Phantom wallet you should have 2 SOL associated w/ your devnet wallet. Nice :).
 
-### 🍔 Setup a Solana `provider` on our web app.
+### 🍔 Setup a Solana `provider` on our web app
 
 In your web app, we'll need to install two packages. You may remember installing these for your Anchor project, we'll also be using them in our web app :).
 
@@ -106,6 +106,38 @@ Before we can interact with the packages that we installed earlier, we need to i
 ```javascript
 import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
 import { Program, Provider, web3 } from '@project-serum/anchor';
+```
+
+*Note (only for Replit users):*  
+*1. If you get an error `global is not defined`, change the vite.config.js into:*
+```javascript
+import reactRefresh from '@vitejs/plugin-react-refresh';
+import { defineConfig } from "vite";
+/**
+ * https://vitejs.dev/config/
+ * @type { import('vite').UserConfig }
+ */
+export default defineConfig({
+  define: {
+    global: {},
+    process: {
+      'env': {}
+    } 
+  },
+  plugins: [reactRefresh()],
+  server: {
+    host: '0.0.0.0',
+    hmr: {
+      port: 443,
+    }
+  }
+})
+```
+
+*2. If you get an error related to `buffer`, add it to `App.jsx`:*
+```javascript
+import { Buffer } from 'buffer';
+window.Buffer = Buffer;
 ```
 
 Let's create a function called `getProvider`. Add this right below `onInputChange` . Here's the code below.
@@ -179,7 +211,7 @@ This `preflightCommitment: "processed"` thing is interesting. You can read on it
 
 In this case, we simply wait for our transaction to be confirmed by the *node we're connected to*. This is generally okay — but if you wanna be super super sure you may use something like `"finalized"` instead. For now, let's roll with `"processed"`.
 
-### 🏈 Retrieve GIFs from our program's account.
+### 🏈 Retrieve GIFs from our program's account
 
 It's actually super simple now to call our program now that we have everything set up. It's a simple `fetch` to get the account — similar to how you'd call an API. Remember this chunk of code?
 
@@ -238,7 +270,7 @@ But, what this error actually means is our program's `BaseAccount` does not exis
 
 Which makes sense, we haven't yet initialized the account via `startStuffOff`!! Our account doesn't just magically get created. Let's do that.
 
-### 🔥 Call `startStuffOff` to initialize program.
+### 🔥 Call `startStuffOff` to initialize program
 
 Let's build a simple function to call `startStuffOff`. You are going to want to add this under your `getProvider` function! 
 
@@ -318,7 +350,7 @@ const renderConnectedContainer = () => {
 }
 ```
 
-Pretty straightforward! I made some changes in `[gifList.map](http://gifList.map)`. Watch out for those!
+Pretty straightforward! I made some changes in `gifList.map`. Watch out for those!
 
 ### 🥳 Let's test!
 

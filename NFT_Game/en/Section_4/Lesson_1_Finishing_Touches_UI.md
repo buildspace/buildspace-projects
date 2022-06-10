@@ -1,6 +1,6 @@
-## 🔥 Finishing touches on the UI.
+## 🔥 Finishing touches on the UI
 
-You've probably noticed quite a few spots where nothing was indicated that something was happening to the user when you did things like minted a character NFT or fetched big boss data. I wanted to go through and show you the loading indicators I thought could be cool to add!
+You've probably noticed quite a few spots where it wasn't indicated to the user that something was happening - when you did things like minted a character NFT or fetched big boss data. I wanted to go through and show you the loading indicators I thought could be cool to add!
 
 We are going to setup a few loading indicators:
 
@@ -10,7 +10,7 @@ We are going to setup a few loading indicators:
 
 Remember that one `LoadingIndicator` component that was given to you? We are finally going to be able to use it!
 
-### 🔁 Adding loading indicators to App.js.
+### 🔁 Adding loading indicators to App.js
 
 We want to ensure the user can see something is happening as we are waiting for our app to figure out which scenario we are in. For this it's pretty simple - just show a loading indicator until all our data comes back.
 
@@ -149,7 +149,7 @@ If you disconnect your wallet you should see a circular loading indicator. We sh
 };
 ```
 
-### 🔁 Adding loading indicators to the Select Character page.
+### 🔁 Adding loading indicators to the Select Character page
 
 In our `SelectCharacter` Component we are going to be minting a character NFT. This is definitely a cool time to add some cool loading indicator. I have the perfect one in mine 👀
 
@@ -222,6 +222,12 @@ return (
 );
 ```
 
+Make sure to import `LoadingIndicator` at the top of your file like so:
+
+```javascript
+import LoadingIndicator from "../../Components/LoadingIndicator";
+```
+
 Don't forget to add some CSS to your `SelectedCharacter.css` as well:
 
 ```css
@@ -254,7 +260,7 @@ With this HTML and CSS, you should have something that looks like this:
 
 Gandalf is now preparing you for battle as you get ready to defeat the boss in Arena 🧙‍♂️.
 
-### 🔁 Adding loading indicators to the Arena page.
+### 🔁 Adding loading indicators to the Arena page
 
 The last spot we want to add some sort of loading indicator is in our `Arena` Component. While we do already have some shaking animations happening during an attack, why don't we add a bit more to really get the point across!
 
@@ -294,6 +300,12 @@ For this all we will need to do is add some conditional rendering in our HTML. G
 </div>;
 ```
 
+Don't forget to import `LoadingIndicator` at the top of your file like so:
+
+```javascript
+import LoadingIndicator from "../../Components/LoadingIndicator";
+```
+
 Make sure to also add this CSS to your `Arena.css` file:
 
 ```css
@@ -316,7 +328,7 @@ With this code you should have something that looks like this:
 
 Not too bad right? All of these loading indicators all work the same way and live in their own components. In the next section we are going to add one more piece of fanciness that will give your `Arena` Component even more fanciness when an attack lands!
 
-### 🚨 Adding attack alerts in the Arena page.
+### 🚨 Adding attack alerts in the Arena page
 
 Another real cool addition you can add to your project is a little toast message showing how much damage you dealt to the boss! This make your game feel even more interactive. We are actually going to use a cool codepen to setup our UI for this. [Shoutout to this codepen](https://codepen.io/jrsmiffy/pen/eYYwrap) for the code! If you want to get even more fancy with this, you can create your own React Component so you can use this toast anywhere 👀. For now, we are just going to add the code in our `Arena` Component!
 

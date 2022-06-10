@@ -1,5 +1,4 @@
-🌅 Using window.ethereum()
---------------------------
+## 🌅 Using window.ethereum()
 
 So, in order for our website to talk to the blockchain, we need to somehow connect our wallet to it. Once we connect our wallet to our website, our website will have permissions to call smart contracts on our behalf. Remember, it's just like authenticating in to a website.
 
@@ -55,8 +54,7 @@ const App = () => {
 export default App
 ```
 
-🔒 See if we can access the users account
------------------------------------------
+## 🔒 See if we can access the users account
 
 So when you run this, you should see that line "We have the ethereum object" printed in the console of the website when you go to inspect it. If you are using Replit, make sure you're looking at the console of your project website, not the Replit workspace! You can access the console of your website by opening it in its own window/tab and launching the developer tools. The URL should look something like this - `https://waveportal-starter-project.yourUsername.repl.co/`
 
@@ -133,8 +131,7 @@ export default App
 
 So, we use that special method `eth_accounts` to see if we're authorized to access any of the accounts in the user's wallet. One thing to keep in mind is that the user could have multiple accounts in their wallet. In this case, we just grab the first one.
 
-💰 Build a connect wallet button
---------------------------------
+## 💰 Build a connect wallet button
 
 When you run the above code, the console.log that prints should be `No authorized account found`. Why? Well because we never explicitly told Metamask, "hey Metamask, please give this website access to my wallet". 
 
@@ -232,13 +229,11 @@ Our code is getting a little long here, but you can see how short our `connectWa
 
 On line 67, I also added a button so we can call our `connectWallet` function. You'll notice I only show this button if we don't have `currentAccount`. If we already have currentAccount, then that means we already have access to an authorized account in the user's wallet.
 
-🌐 Connect!
------------
+## 🌐 Connect!
 
 Now, it's time for the magic! Check out the video below:
 [Loom](https://www.loom.com/share/1d30b147047141ce8fde590c7673128d?t=0)
 
-🚨 Required: Before you click "Next Lesson"
--------------------------------------------
+## 🚨 Required: Before you click "Next Lesson"
 
 We just did a lot in the last two lessons. Any questions? Be sure to ask in #section-2-help!

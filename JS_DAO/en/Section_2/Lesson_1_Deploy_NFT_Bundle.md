@@ -1,24 +1,22 @@
-### 🍪 Getting started w/ thirdweb.
+### 🍪 Getting started w/ thirdweb
 
 Awesome! We can now connect to a user's wallet, which means we can now check if they're in our DAO! In order to join our DAO, the user will need a membership NFT. If they don't have a membership NFT, we'll prompt them actually mint a membership NFT and join our DAO!
 
-But, there's a problem. In order for us to mint NFTs, we need to write + deploy our own NFT smart contract. **This is actually where ThirdWeb comes in clutch.**
+But, there's a problem. In order for us to mint NFTs, we need to write + deploy our own NFT smart contract. **This is actually where thirdWeb comes in clutch.**
 
-What ThirdWeb gives us, is a set of tools to create all our smart contracts without writing any Solidity.
+What thirdWeb gives us, is a set of tools to create all our smart contracts without writing any Solidity.
 
-We write no Solidity. All we need to do is write a script using just javascript to create + deploy our contracts. thirdweb will use a set of secure, standard contracts they've created [here](https://github.com/nftlabs/nftlabs-protocols). **The cool part is after you create the contracts, you own them and they're associated with your wallet.** 
+We write no Solidity. All we need to do is write a script using just JavaScript to create + deploy our contracts. thirdweb will use a set of secure, standard contracts they've created [here](https://github.com/thirdweb-dev/contracts). **The cool part is after you create the contracts, you own them and they're associated with your wallet.** 
 
 Once you deploy the contract, you can interact with those contracts from your frontend easily using their client-side SDK.
 
 I can't stress how easy it is to create a smart contract with thirdweb compared to writing your own Solidity code, it will feel like interacting with a normal backend library. Lets get into it:
 
-Head over to the thirdweb dashboard [here](https://thirdweb.com/start?utm_source=buildspace). Click "**Let's get started**". Connect your wallet. Select your network (**Rinkeby**).
+[thirdweb dashboard](https://thirdweb.com/dashboard?utm_source=buildspace) allow us to create contracts without writing any code, but for this tutorial, we will be creating them with JavaScript. 
 
-Create your first project and give it a name like "My DAO" or something. When you click "Create" you'll see it prompts Metamask and has you pay a gas fee on Rinkeby. Why? 
+Important! **thirdweb doesn't have a database, all your data is stored on-chain.**
 
-This creates the container for the contracts we'll be deploying, on-chain. **thirdweb doesn't have a database, all your data is stored on-chain.**
-
-### 📝 Create a place to run thirdweb scripts.
+### 📝 Create a place to run thirdweb scripts
 
 Now we need to actually write some scripts that let us create/deploy our contract to Rinkeby using thirdweb. The first thing we're going to do is create a `.env` file that looks like this in the root of our project.
 
@@ -36,7 +34,7 @@ To get your private key from Metamask, check [this](https://metamask.zendesk.com
 
 To get your wallet address, check [this](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-) out.
 
-### 🚀 Alchemy.
+### 🚀 Alchemy
 
 The last thing you need in your `.env` file is `ALCHEMY_API_URL`.
 
@@ -55,44 +53,41 @@ You should now have all three items in your `.env` file!
 Head over to `scripts/1-initialize-sdk.js`.
 
 ```jsx
-import { ThirdwebSDK } from "@3rdweb/sdk";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import ethers from "ethers";
 
-//Importing and configuring our .env file that we use to securely store our environment variables
+// Importing and configuring our .env file that we use to securely store our environment variables
 import dotenv from "dotenv";
 dotenv.config();
 
 // Some quick checks to make sure our .env is working.
-if (!process.env.PRIVATE_KEY || process.env.PRIVATE_KEY == "") {
-  console.log("🛑 Private key not found.")
+if (!process.env.PRIVATE_KEY || process.env.PRIVATE_KEY === "") {
+  console.log("🛑 Private key not found.");
 }
 
-if (!process.env.ALCHEMY_API_URL || process.env.ALCHEMY_API_URL == "") {
-  console.log("🛑 Alchemy API URL not found.")
+if (!process.env.ALCHEMY_API_URL || process.env.ALCHEMY_API_URL === "") {
+  console.log("🛑 Alchemy API URL not found.");
 }
 
-if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS == "") {
-  console.log("🛑 Wallet Address not found.")
+if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS === "") {
+  console.log("🛑 Wallet Address not found.");
 }
 
-const sdk = new ThirdwebSDK(
-  new ethers.Wallet(
-    // Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
-    process.env.PRIVATE_KEY,
-    // RPC URL, we'll use our Alchemy API URL from our .env file.
-    ethers.getDefaultProvider(process.env.ALCHEMY_API_URL),
-  ),
-);
+// RPC URL, we'll use our Alchemy API URL from our .env file.
+const provider = new ethers.providers.JsonRpcProvider(process.env.ALCHEMY_API_URL);
+// Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+const sdk = new ThirdwebSDK(wallet);
 
 (async () => {
   try {
-    const apps = await sdk.getApps();
-    console.log("Your app address is:", apps[0].address);
+    const address = await sdk.getSigner().getAddress();
+    console.log("SDK initialized by address:", address)
   } catch (err) {
     console.error("Failed to get apps from the sdk", err);
     process.exit(1);
   }
-})()
+})();
 
 // We are exporting the initialized thirdweb SDK so that we can use it in our other scripts
 export default sdk;
@@ -105,18 +100,18 @@ We're also running this:
 ```jsx
 (async () => {
   try {
-    const apps = await sdk.getApps();
-    console.log("Your app address is:", apps[0].address);
+    const address = await sdk.getSigner().getAddress();
+    console.log("👋 SDK initialized by address:", address)
   } catch (err) {
     console.error("Failed to get apps from the sdk", err);
     process.exit(1);
   }
-})()
+})();
 ```
 
-To make sure we can retrieve the project we made using thirdweb's web app!
+To make sure that we sdk initialized correctly!
 
-Before executing the function, make sure you have Node 12+ installed, you can check your version with:
+Before executing the function, make sure you have Node 16+ installed, you can check your version with:
 
 ```plaintext
 node -v
@@ -124,7 +119,15 @@ node -v
 
 *Note: if you’re on Replit you can actually run scripts from the shell it provides:*
 
-If you have an old version of Node, you can update it [here](https://nodejs.org/en/). (Download the LTS version) Let's execute it! Go to your terminal and paste the following command:
+If you have an old version of Node, you can update it [here](https://nodejs.org/en/). (Download the LTS version) 
+
+*Note: if you’re on Replit you can actually update the node version by running this from the shell:*
+
+```plaintext
+npm init -y && npm i --save-dev node@17 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
+```
+
+Let's execute it! Go to your terminal and paste the following command:
 
 ```plaintext
 node scripts/1-initialize-sdk.js
@@ -134,16 +137,14 @@ Here's what I get when I run the script.
 
 ```plaintext
 buildspace-dao-starter % node scripts/1-initialize-sdk.js
-👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
+👋 SDK initialized by address: 0xF11D6862e655b5F4e8f62E00471261D2f9c7E380
 ```
 
 *Note: You might also see some random warnings like `ExperimentalWarning`, just be sure your app address is printed out!*
 
-Make sure to copy the address of your app! You'll need it in a second!
+Epic. If you see it print out your wallet address then that means everything is initialized!
 
-Epic. If you see it print out your app address then that means everything is initialized!
-
-### 🧨 Create an ERC-1155 collection.
+### 🧨 Create an ERC-1155 collection
 
 What we're going to do now is create + deploy an ERC-1155 contract to Rinkeby. This is basically the base module we'll need to create our NFTs. **We're not creating our NFT here, yet. We're just setting up metadata around the collection itself.** This is stuff like the name of the collection (ex. CryptoPunks) and an image associated with the collection that shows up on OpenSea as the header.
 
@@ -152,77 +153,75 @@ What we're going to do now is create + deploy an ERC-1155 contract to Rinkeby. T
 Head to `scripts/2-deploy-drop.js` and add the following code:
 
 ```jsx
-import { ethers } from "ethers";
+import { AddressZero } from "@ethersproject/constants";
 import sdk from "./1-initialize-sdk.js";
 import { readFileSync } from "fs";
 
-const app = sdk.getAppModule("INSERT_YOUR_APP_ADDRESS_HERE");
-
 (async () => {
   try {
-    const bundleDropModule = await app.deployBundleDropModule({
+    const editionDropAddress = await sdk.deployer.deployEditionDrop({
       // The collection's name, ex. CryptoPunks
       name: "NarutoDAO Membership",
       // A description for the collection.
       description: "A DAO for fans of Naruto.",
-      // The image for the collection that will show up on OpenSea.
+      // The image that will be held on our NFT! The fun part :).
       image: readFileSync("scripts/assets/naruto.png"),
-      // We need to pass in the address of the person who will be receiving the proceeds from sales of nfts in the module.
+      // We need to pass in the address of the person who will be receiving the proceeds from sales of nfts in the contract.
       // We're planning on not charging people for the drop, so we'll pass in the 0x0 address
       // you can set this to your own wallet address if you want to charge for the drop.
-      primarySaleRecipientAddress: ethers.constants.AddressZero,
+      primary_sale_recipient: AddressZero,
     });
-    
-    console.log(
-      "✅ Successfully deployed bundleDrop module, address:",
-      bundleDropModule.address,
-    );
-    console.log(
-      "✅ bundleDrop metadata:",
-      await bundleDropModule.getMetadata(),
-    );
-  } catch (error) {
-    console.log("failed to deploy bundleDrop module", error);
-  }
-})()
-```
 
-*Note: be sure to replace `INSERT_YOUR_APP_ADDRESS_HERE` with the address printed out from `1-initialize-sdk.js`.*
+    // this initialization returns the address of our contract
+    // we use this to initialize the contract on the thirdweb sdk
+    const editionDrop = sdk.getEditionDrop(editionDropAddress);
+
+    // with this, we can get the metadata of our contract
+    const metadata = await editionDrop.metadata.get();
+
+    console.log(
+      "✅ Successfully deployed editionDrop contract, address:",
+      editionDropAddress,
+    );
+    console.log("✅ editionDrop metadata:", metadata);
+  } catch (error) {
+    console.log("failed to deploy editionDrop contract", error);
+  }
+})();
+```
 
 A pretty simple script!
 
-We give our collection a `name`, `description` and `primarySaleRecipientAddress`, and `image`. The `image` we're loading from our local file so be sure to include that image under `scripts/assets`. Be sure it's a PNG, JPG, or GIF for now and be sure it's a local image — this won't work if you use an internet link!
+We give our collection a `name`, `description` and `primary_sale_recipient`, and `image`. The `image` we're loading from our local file so be sure to include that image under `scripts/assets`. Be sure it's a PNG, JPG, or GIF for now and be sure it's a local image — this won't work if you use an internet link!
 
 When I run this using `node scripts/2-deploy-drop.js`, I get.
 
 ```plaintext
 buildspace-dao-starter % node scripts/2-deploy-drop.js
-👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
-✅ Successfully deployed bundleDrop module, address: 0x31c70F45060AE0870624Dd9D79A1d8dafC095A5d
-✅ bundleDrop metadata: {
-  metadata: {
-    name: 'NarutoDAO Membership',
-    description: 'A DAO for fans of Naruto.',
-    image: 'https://cloudflare-ipfs.com/ipfs/bafybeicuuhilocc2tskhnvbwjqarsc5k7flfqdr4ifvwxct32vzjmb3sam',
-    primary_sale_recipient_address: '0x0000000000000000000000000000000000000000',
-    uri: 'ipfs://bafkreieti3mpdd3pytt3v6vxbc3rki2ja6qpbblfznmup2tnw5mghrihnu'
-  },
-  address: '0x31c70F45060AE0870624Dd9D79A1d8dafC095A5d',
-  type: 11
+👋 SDK initialized by address: 0xF11D6862e655b5F4e8f62E00471261D2f9c7E380
+✅ Successfully deployed editionDrop contract, address: 0xE56fb4F83A9a99E40Af1C7eF08643e7bf1259A95
+✅ editionDrop metadata: {
+  name: 'NarutoDAO Membership',
+  description: 'A DAO for fans of Naruto.',
+  image: 'https://gateway.ipfscdn.io/ipfs/QmYTQFY2W1K7ucd9GgidKkLL37yJB9sqPGmUqfJiURETxQ/0',
+  seller_fee_basis_points: 0,
+  fee_recipient: '0x0000000000000000000000000000000000000000',
+  merkle: {},
+  symbol: ''
 }
 ```
 
 Okay, what just happened is pretty freaking epic. Two things happened:
 
-**One, we just deployed an [ERC-1155](https://docs.openzeppelin.com/contracts/3.x/erc1155) contract to Rinkeby.** That's right! If you head over to `https://rinkeby.etherscan.io/` and paste in the address of the `bundleDrop` module, you'll see you just deployed a smart contract! The coolest part is you **own** this contract and it's deployed from **your** wallet. The “From” address will be **your** public address. 
+**One, we just deployed an [ERC-1155](https://docs.openzeppelin.com/contracts/3.x/erc1155) contract to Rinkeby.** That's right! If you head over to `https://rinkeby.etherscan.io/` and paste in the address of the `editionDrop` contract, you'll see you just deployed a smart contract! The coolest part is you **own** this contract and it's deployed from **your** wallet. The “From” address will be **your** public address. 
 
-*Note: Keep the address of your `bundleDrop` around, we'll need it later!*
+*Note: Keep the address of your `editionDrop` around, we'll need it later!*, if you ever lose it, you can always retrieve from the [thirdweb dashboard](https://thirdweb.com/dashboard?utm_source=buildspace)
 
 ![Untitled](https://i.imgur.com/suqHbB4.png)
 
-Pretty epic. A deployed, custom contract with just javascript. You can see the actual smart contract code thirdweb uses [here](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/LazyNFT.sol).
+Pretty epic. A deployed, custom contract with just javascript. You can see the actual smart contract code thirdweb uses [here](https://github.com/thirdweb-dev/contracts/blob/main/contracts/drop/DropERC1155.sol).
 
-**The other thing we did here is thirdweb automatically uploaded and pinned our collection's image to IPFS.** You'll see a link that starts with `https://cloudflare-ipfs.com` printed out. If you paste that into your browser, you'll see your NFT's image being retrieved from IPFS via CloudFlare!
+**The other thing we did here is thirdweb automatically uploaded and pinned our collection's image to IPFS.** You'll see a link that starts with `https://gateway.ipfscdn.io` printed out. If you paste that into your browser, you'll see your NFT's image being retrieved from IPFS via CloudFlare!
 
 You can even hit IPFS directly using the `ipfs://` URI (note — wont work on Chrome since you need to be running an IPFS node, but works on Brave which does that for you!)
 

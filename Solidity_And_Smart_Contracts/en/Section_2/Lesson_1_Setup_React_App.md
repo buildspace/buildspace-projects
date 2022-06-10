@@ -1,12 +1,10 @@
-💻 Set up a client
-------------------
+## 💻 Set up a client
 
 It's time to start working on our website! Our contract is pretty simple, but, let's learn how our front end can interact with our contract ASAP!
 
 So, there are like 100 different ways to set up a basic react project and deploy it. I'm going to show you how to do it here in 10 minutes and by the end you'll actually have a react app fully deployed with its own domain and everything.
 
-🤯 Replit
----------
+## 🤯 Replit
 
 **Note: You don't have to use replit to build + deploy your site. If you want to use create-react-app + Vercel/Heroku/AWS -- that's totally cool. [Here](https://github.com/buildspace/waveportal-starter-project) is a link to the base repo you can clone and work on locally.**
 
@@ -19,10 +17,9 @@ I've already created a basic react project that you can **fork** on Replit. **Ju
 **Please Note: As you go through this project, you may notice that we are referencing `.js` files. In Replit, if you are creating any new JavaScript files, you will need to use the `.jsx` extension instead! Replit has some performance fanciness that requires you use the `.jsx` file extension :).**
 
 I made a quick video going over how to edit code on Replit, deploy, get dark mode. Check it out below: 
-[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
+[Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)
 
-🦊 Metamask
------------
+## 🦊 Metamask
 
 Awesome, we have a **deployed** React project we can easily work with. That was simple :).
 
@@ -36,8 +33,7 @@ It's almost like authentication. We need something to "login" to the blockchain 
 
 So, go ahead and set it all up! Their setup flow is pretty self-explanatory :).
 
-🚨 Before you click "Next Lesson"
--------------------------------------------
+## 🚨 Before you click "Next Lesson"
 
 *Note: if you don't do this, Farza will be very sad :(.*
 

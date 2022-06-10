@@ -1,5 +1,4 @@
-🔥 Imitating the blockchain environment to test
------------------------------------------------
+## 🔥 Imitating the blockchain environment to test
 
 You've done it. You've written a smart contract. You're a champ!
 
@@ -16,8 +15,7 @@ We're just going to write a custom script that handles those 3 steps for us.
 
 Let's do it!
 
-📝 Build a script to run our contract
--------------------------------------
+## 📝 Build a script to run our contract
 
 Go into the **`scripts`** directory and make a file named **`run.js`.** 
 
@@ -38,11 +36,12 @@ const main = async () => {
 const runMain = async () => {
   try {
     await main();
-    process.exit(0);
+    process.exit(0); // exit Node process without error
   } catch (error) {
     console.log(error);
-    process.exit(1);
+    process.exit(1); // exit Node process while indicating 'Uncaught Fatal Exception' error
   }
+  // Read more about Node exit ('process.exit(num)') status codes here: https://stackoverflow.com/a/47163396/7974948
 };
 
 runMain();
@@ -50,8 +49,7 @@ runMain();
 
 Awesome.
 
-🤔 How's it work?
------------------
+## 🤔 How's it work?
 
 Again going line by line here.
 
@@ -92,10 +90,9 @@ You should see your `console.log` run from within the contract and then you shou
 ![](https://i.imgur.com/ug79rOM.png)
 
 
-🎩 Hardhat & HRE
-----------------
+## 🎩 Hardhat & HRE
 
-In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of sorcery is this? 
+In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of magic trick is this? 
 
 Directly from the Hardhat docs themselves you will notice this:
 
@@ -107,11 +104,10 @@ So what does this mean? Well, every time you run a terminal command that starts 
 
 **TL;DR - you will be seeing `hre` a lot in our code, but never imported anywhere! Checkout this cool [Hardhat documentation](https://hardhat.org/advanced/hardhat-runtime-environment.html) to learn more about it!**
 
-🚨 Before you click "Next Lesson"
--------------------------------------------
+## 🚨 Before you click "Next Lesson"
 
 *Note: if you don't do this, Farza will be very sad :(.*
 
 Go to #progress and post a screenshot of your terminal with the output.
 
-Be sure to make that console.log whatever you want! You've now written your own contract and ran it by deploying to a local blockchain WOOOOOOOOOO LETS GOOO.
+Be sure to make that console.log whatever you want! You've now written your own contract and ran it by deploying to a local blockchain WOOOOOOOOOO LETS GO.

@@ -1,28 +1,28 @@
-### 🥺 Retrieve token holders on web app.
+### 🥺 Retrieve token holders on web app
 
 It would be nice for all the members of our DAO to easily see all the people in the DAO who hold tokens along with how many tokens they hold. To do that, we’ll need to actually call our smart contracts from our client and retrieve that data.
 
-Let’s do it! Head over to `App.jsx`. At the top, import Ethers:
+Let’s do it! Head over to `App.jsx`. At the top, add the `useToken` hook to the list of `@thirdweb-dev/react` imports. Also, make sure to import `useMemo`:
 
 ```jsx
-import { ethers } from "ethers";
+import { useAddress, useMetamask, useEditionDrop, useToken } from '@thirdweb-dev/react';
+import { useState, useEffect, useMemo } from 'react';
 ```
 
-Then under `bundleDropModule`, add in your `tokenModule`.
+Then under `editionDrop`, add in your `token`.
 
 ```jsx
-const tokenModule = sdk.getTokenModule(
-  "INSERT_TOKEN_MODULE_ADDRESS"
-);
+// Initialize our token contract
+const token = useToken("INSERT_TOKEN_ADDRESS")
 ```
 
-We need this so we can interact with both of our ERC-1155 contract and our ERC-20 contract. From the ERC-1155, we’ll get all our member’s addresses. From the ERC-20, we’ll retrieve the # of tokens each member has.
+We need this so we can interact with both of our ERC-1155 contract and our ERC-20 contract. From the ERC-1155, we’ll get all our members' addresses. From the ERC-20, we’ll retrieve the # of tokens each member has.
 
 Next, add the following code under `const [isClaiming, setIsClaiming] = useState(false)`:
 
 ```jsx
 // Holds the amount of token each member has in state.
-const [memberTokenAmounts, setMemberTokenAmounts] = useState({});
+const [memberTokenAmounts, setMemberTokenAmounts] = useState([]);
 // The array holding all of our members addresses.
 const [memberAddresses, setMemberAddresses] = useState([]);
 
@@ -36,19 +36,21 @@ useEffect(() => {
   if (!hasClaimedNFT) {
     return;
   }
-  
+
   // Just like we did in the 7-airdrop-token.js file! Grab the users who hold our NFT
   // with tokenId 0.
-  bundleDropModule
-    .getAllClaimerAddresses("0")
-    .then((addresess) => {
-      console.log("🚀 Members addresses", addresess)
-      setMemberAddresses(addresess);
-    })
-    .catch((err) => {
-      console.error("failed to get member list", err);
-    });
-}, [hasClaimedNFT]);
+  const getAllAddresses = async () => {
+    try {
+      const memberAddresses = await editionDrop.history.getAllClaimerAddresses(0);
+      setMemberAddresses(memberAddresses);
+      console.log("🚀 Members addresses", memberAddresses);
+    } catch (error) {
+      console.error("failed to get member list", error);
+    }
+
+  };
+  getAllAddresses();
+}, [hasClaimedNFT, editionDrop.history]);
 
 // This useEffect grabs the # of token each member holds.
 useEffect(() => {
@@ -56,30 +58,30 @@ useEffect(() => {
     return;
   }
 
-  // Grab all the balances.
-  tokenModule
-    .getAllHolderBalances()
-    .then((amounts) => {
-      console.log("👜 Amounts", amounts)
+  const getAllBalances = async () => {
+    try {
+      const amounts = await token.history.getAllHolderBalances();
       setMemberTokenAmounts(amounts);
-    })
-    .catch((err) => {
-      console.error("failed to get token amounts", err);
-    });
-}, [hasClaimedNFT]);
+      console.log("👜 Amounts", amounts);
+    } catch (error) {
+      console.error("failed to get member balances", error);
+    }
+  };
+  getAllBalances();
+}, [hasClaimedNFT, token.history]);
 
 // Now, we combine the memberAddresses and memberTokenAmounts into a single array
 const memberList = useMemo(() => {
   return memberAddresses.map((address) => {
+    // We're checking if we are finding the address in the memberTokenAmounts array.
+    // If we are, we'll return the amount of token the user has.
+    // Otherwise, return 0.
+    const member = memberTokenAmounts?.find(({ holder }) => holder === address);
+
     return {
       address,
-      tokenAmount: ethers.utils.formatUnits(
-        // If the address isn't in memberTokenAmounts, it means they don't
-        // hold any of our token.
-        memberTokenAmounts[address] || 0,
-        18,
-      ),
-    };
+      tokenAmount: member?.balance.displayValue || "0",
+    }
   });
 }, [memberAddresses, memberTokenAmounts]);
 ```
@@ -88,9 +90,9 @@ Looks like a lot at first! But just know we’re doing three things:
 
 1) We’re calling `getAllClaimerAddresses` to get all the addresses of our members who hold an NFT from our ERC-1155 contract.
 
-2) We’re calling `getAllHolderBalances` to get the token balances of everyone who hold’s our token on our ERC-20 contract.
+2) We’re calling `getAllHolderBalances` to get the token balances of everyone who holds our token on our ERC-20 contract.
 
-3) We’re combining the data into `memberList` which is one nice array the combines both the member’s address and their token balance. Feel free to check out what `useMemo` does [here](https://reactjs.org/docs/hooks-reference.html#usememo). It’s a fancy way in React to store a computed variable. 
+3) We’re combining the data into `memberList` which is one nice array that combines both the member’s address and their token balance. Feel free to check out what `useMemo` does [here](https://reactjs.org/docs/hooks-reference.html#usememo). It’s a fancy way in React to store a computed variable. 
 
 Now, you may be asking yourself, “Can’t we just do `getAllHolderBalances` to grab everyone that holds our token?”. Well, basically, someone can be in our DAO and hold zero token! *And, that’s okay.* So still want them to show up on the list.
 
@@ -100,9 +102,9 @@ In my console, I get something like this where I am now successfully retrieving 
 
 *Note: you may also see the message “Request-Rate Exceeded” from Ethers in your console. This is fine for now!*
 
-### 🤯 Render member data on DAO Dashboard.
+### 🤯 Render member data on DAO Dashboard
 
-Now, that we have all the data held nicely in our React app’s state, let’s render it.
+Now that we have all the data held nicely in our React app’s state, let’s render it.
 
 **Replace** `if (hasClaimedNFT) { }` with the following:
 

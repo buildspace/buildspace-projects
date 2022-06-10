@@ -1,5 +1,4 @@
-🔥 Imitando el entorno blockchain para probar
------------------------------------------------
+## 🔥 Imitando el entorno blockchain para probar
 
 Lo has hecho. Has escrito un contrato inteligente. ¡Eres un campeón!
 
@@ -16,8 +15,7 @@ Vamos a escribir un "script" personalizado para que pueda manejar estos 3 pasos 
 
 ¡Vamos a hacerlo!
 
-📝 Crea un script para ejecutar nuestro contrato
--------------------------------------
+## 📝 Crea un script para ejecutar nuestro contrato
 
 Dirígete al directorio **`scripts`** y crea un archivo llamado **`run.js`**
 
@@ -50,8 +48,7 @@ runMain();
 
 Increíble.
 
-🤔 ¿Cómo funciona?
------------------
+## 🤔 ¿Cómo funciona?
 
 Una vez más, línea por línea.
 
@@ -92,8 +89,7 @@ Deberías ver como el `console.log` se ejecuta desde el contrato y también debe
 ![](https://i.imgur.com/ug79rOM.png)
 
 
-🎩 Hardhat y HRE
-----------------
+## 🎩 Hardhat y HRE
 
 En estos bloques de código deberás notar constantemente que usamos `hre.ethers`, pero ¿`hre` nunca fue importado en ningún lado? ¿Qué clase de brujería es esta?
 
@@ -107,8 +103,7 @@ Entonces, ¿qué significa esto? Bueno, cada vez que se ejecuta un comando en la
 
 **TL;DR - Vas a ver muchas veces `hre` en nuestro código, ¡pero nunca importado en ningún lado!! Puedes revisar la documentación [Documentación Hardhat](https://hardhat.org/advanced/hardhat-runtime-environment.html) ¡para aprender más sobre esto!**
 
-🚨 Antes de hacer click en "Siguiente Lección"
--------------------------------------------
+## 🚨 Antes de hacer click en "Siguiente Lección"
 
 *Nota: Si no haces esto, Farza se pondrá triste :(.*
 

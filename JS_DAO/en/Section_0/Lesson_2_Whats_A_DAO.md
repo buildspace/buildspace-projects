@@ -1,5 +1,4 @@
-👻 How does a DAO work?
-----------------------
+## 👻 How does a DAO work?
 
 What's a DAO? Hmmm.
 
@@ -7,8 +6,7 @@ There are so many different definitions and explanations of what a DAO is. I jus
 
 I feel like even after reading this, I still don’t understand what the heck a DAO is. Simply put, a DAO is a community of people with a shared bank account. Decisions around how that bank account is used are made by voting on different proposals that members create. When a proposal gets enough votes, it is executed on-chain!
 
-💰 Y-Combinator
-----------------------
+## 💰 Y-Combinator
 
 [Y-Combinator (YC)](https://www.ycombinator.com/) is a famous startup accelerator. They have a massive bank account funded by various people + profits from startups that have exited. The "YC Partners" are a group of people that decide what companies to accept into the program and invest in. The partners have invested in various companies that have exploded in value:
 
@@ -16,8 +14,7 @@ I feel like even after reading this, I still don’t understand what the heck a 
 
 YC has an extremely centralized approach where a small # of key people decide who to invest in — which isn't a bad thing! I want to stress that just because something is centralized **doesn't mean it's bad lol.**
 
-🤠 Y-Combinator as a DAO.
-----------------------
+## 🤠 Y-Combinator as a DAO
 
 Let's imagine YC as a DAO, We'll call it YCDAO.
 
@@ -59,4 +56,4 @@ Hey! In `#progress` let us all know what kinda DAO you’ll be building for this
 
 **PakistanDAO** — a DAO for members of the Pakistani startup community to support each other. Members earn $PAKISTAN whenever they provide value to other founders, for example by giving them advice, beta-testing their products, or supporting them on social media. 
 
-Please don’t copy my exact examples heh. Get creative. **I really want you think hard about something that makes you smile or something your friends would find funny lol.**
+Please don’t copy my exact examples heh. Get creative. **I really want you to think hard about something that makes you smile or something your friends would find funny lol.**
