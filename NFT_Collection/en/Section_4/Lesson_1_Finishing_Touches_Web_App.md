@@ -78,7 +78,7 @@ Hint, you'll need something in solidity called `require`. And, you'll like also 
 
 Your website is **only** going to work on Rinkeby (since that's where your contract lives).
 
-We're going to to add a nice message telling users about this! 
+We're going to add a nice message telling users about this! 
 
 For that, we make a RPC request to the blockchain to see the ID of the chain our wallet connects to. (Why a chain and not a network? [Good question!](https://ethereum.stackexchange.com/questions/37533/what-is-a-chainid-in-ethereum-how-is-it-different-than-networkid-and-how-is-it))
 
