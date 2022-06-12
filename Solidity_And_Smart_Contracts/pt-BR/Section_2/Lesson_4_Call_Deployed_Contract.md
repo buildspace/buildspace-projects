@@ -138,7 +138,7 @@ const App = () => {
    */
   const contractABI = abi.abi;
 ```
-Vammos dar uma olhada onde você está usando o conteúdo ABI:
+Vamos dar uma olhada onde você está usando o conteúdo ABI:
 
 ```javascript
 const wave = async () => {
