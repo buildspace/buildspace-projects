@@ -1,35 +1,55 @@
-## 🌅 Using window.ethereum()
+## 🌅 Using thirdweb's React library
 
-So, in order for our website to talk to the blockchain, we need to somehow connect our wallet to it. Once we connect our wallet to our website, our website will have permissions to call smart contracts on our behalf. Remember, it's just like authenticating in to a website.
+So, for our website to talk to the blockchain, we need to somehow connect our wallet to it. Once we connect our wallet to our website, our website will have permission to call smart contracts on our behalf. Remember, it’s just like authenticating into a website.
 
-Head over to Replit and go to `App.jsx` under `src`, this is where we'll be doing all our work.
+Head over to Replit and go to `index.jsx` under `src`, this is where we’ll start.
 
-If we're logged in to Metamask, it will automatically inject a special object named `ethereum` into our window. Let's check if we have that first.
+To connect our wallet, we’re going to use thirdweb’s React library. Start by importing the `ChainID` and the `ThirdwebProvider`.
+
+Blockchains have an `id` and by passing an id we’ll tell our app to which blockchain we want to connect. Luckily for us, we don’t need to pass an id manually, instead the `ChainId` method allows us to pick. In this case we’re choosing the polygon testnet `Mumbai`.
+
+The second thing we’ll do is **wrap** our app in the `ThirdwebProvider` tags. 
+
+This enables our app to make use of the thirdweb library in App.jsx, where we will be building out our connect wallet button.
 
 ```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
+
+// This is the chainId your dApp will work on.
+const activeChainId = ChainId.Mumbai;
+
+ReactDOM.render(
+  <React.StrictMode>
+    <ThirdwebProvider desiredChainId={activeChainId}>
+      <App />
+    </ThirdwebProvider>
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
+```
+
+Now go to your `App.jsx` file and let’s build a button to connect to our MetaMask wallet.
+
+First, we’ll import all the hooks that we need.
+
+Hooks are just pre-built functions that we can import and use.
+
+We are grabbing the useDisconnect and useMetamask hooks to show whether or not our MetaMask wallet is connected. The useAddress hook grabs the address from the connected wallet.
+
+Your `App.jsx` should look something like this.
+
+```jsx
 import React, { useEffect } from "react";
 import "./App.css";
+import { useAddress, useDisconnect, useMetamask } from '@thirdweb-dev/react';
 
 const App = () => {
-  const checkIfWalletIsConnected = () => {
-    /*
-    * First make sure we have access to window.ethereum
-    */
-    const { ethereum } = window;
-
-    if (!ethereum) {
-      console.log("Make sure you have metamask!");
-    } else {
-      console.log("We have the ethereum object", ethereum);
-    }
-  }
-
-  /*
-  * This runs our function when the page loads.
-  */
-  useEffect(() => {
-    checkIfWalletIsConnected();
-  }, [])
+  const address = useAddress();
+  const connectWithMetamask = useMetamask();
+  const disconnectWallet = useDisconnect();
 
   return (
     <div className="mainContainer">
@@ -49,69 +69,25 @@ const App = () => {
     </div>
   );
 }
-
-export default App
 ```
 
-## 🔒 See if we can access the users account
+Cool.
 
-So when you run this, you should see that line "We have the ethereum object" printed in the console of the website when you go to inspect it. If you are using Replit, make sure you're looking at the console of your project website, not the Replit workspace! You can access the console of your website by opening it in its own window/tab and launching the developer tools. The URL should look something like this - `https://waveportal-starter-project.yourUsername.repl.co/`
+Now that we have the functionality to connect and disconnect the wallet, we need to link it to some buttons to do this. 
 
-**NICE.**
+While we’re at it, let’s build a check in our app to see if we have a connected wallet.
+If we have one, we show the `disconnect` button. If we don’t, we will display a `connect` wallet button.
 
-Next, we need to actually check if we're authorized to actually access the user's wallet. Once we have access to this, we can call our smart contract!
+We do this because Metamask doesn't just give our wallet credentials to every website we go to. It only gives it to websites we authorize and **connect to**. Think of this like logging in!
 
-Basically, Metamask doesn't just give our wallet credentials to every website we go to. It only gives it to websites we authorize. Again, it's just like logging in! But, what we're doing here is **checking if we're "logged in".**
-
-Check out the code below.
-
-```javascript
-import React, { useEffect, useState } from "react";
-import "./App.css";
-
-const App = () => {
-  /*
-  * Just a state variable we use to store our user's public wallet.
-  */
-  const [currentAccount, setCurrentAccount] = useState("");
-
-  const checkIfWalletIsConnected = async () => {
-    try {
-      const { ethereum } = window;
-
-      if (!ethereum) {
-        console.log("Make sure you have metamask!");
-        return;
-      } else {
-        console.log("We have the ethereum object", ethereum);
-      }
-
-      /*
-      * Check if we're authorized to access the user's wallet
-      */
-      const accounts = await ethereum.request({ method: "eth_accounts" });
-
-      if (accounts.length !== 0) {
-        const account = accounts[0];
-        console.log("Found an authorized account:", account);
-        setCurrentAccount(account)
-      } else {
-        console.log("No authorized account found")
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    checkIfWalletIsConnected();
-  }, [])
-
-  return (
+```jsx
+return (
+  //if there is an address show the page and a disconnect button
+  {address ? (
     <div className="mainContainer">
       <div className="dataContainer">
         <div className="header">
-          👋 Hey there!
+        👋 Hey there!
         </div>
 
         <div className="bio">
@@ -123,18 +99,22 @@ const App = () => {
         </button>
       </div>
     </div>
-    );
-  }
-export default App
+  ) : (
+    //else show a connect button and ask to connect your wallet
+      <button onClick={connectWithMetamask}>Connect with Metamask</button>
+  )}
+  );
 ```
 
-So, we use that special method `eth_accounts` to see if we're authorized to access any of the accounts in the user's wallet. One thing to keep in mind is that the user could have multiple accounts in their wallet. In this case, we just grab the first one.
+Boom.
 
-## 💰 Build a connect wallet button
+Like that we intergrated a functionality in our app that connects our wallet.
 
-When you run the above code, the console.log that prints should be `No authorized account found`. Why? Well because we never explicitly told Metamask, "hey Metamask, please give this website access to my wallet". 
+Now we can use our wallet to approve transactions!
 
-We need to create a `connectWallet` button. In the world of Web3, connecting your wallet is literally a "Login" button for your user :). Check it out:
+ps, this is what the code looks like if you don't use thirdweb. 
+Yikes!
+
 
 ```javascript
 import React, { useEffect, useState } from "react";
@@ -224,14 +204,10 @@ const App = () => {
 export default App
 ```
 
-Our code is getting a little long here, but you can see how short our `connectWallet` function is. In this case, I use the `eth_requestAccounts` function because I'm literally asking Metamask to give me access to the user's wallet.
-
-On line 67, I also added a button so we can call our `connectWallet` function. You'll notice I only show this button if we don't have `currentAccount`. If we already have currentAccount, then that means we already have access to an authorized account in the user's wallet.
-
 ## 🌐 Connect!
 
 Now, it's time for the magic! Check out the video below:
-[Loom](https://www.loom.com/share/1d30b147047141ce8fde590c7673128d?t=0)
+
 
 ## 🚨 Required: Before you click "Next Lesson"
 

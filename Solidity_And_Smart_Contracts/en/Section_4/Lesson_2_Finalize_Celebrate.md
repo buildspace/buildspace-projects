@@ -59,16 +59,13 @@ Even now, it's kinda annoying when we ourselves submit a message, and then we ha
 Check out my code here where I updated `getAllWaves` in `App.js.` 
 
 ```javascript
+let { contract } = useContract("new_smart_contract_address");
 const getAllWaves = async () => {
   const { ethereum } = window;
 
   try {
     if (ethereum) {
-      const provider = new ethers.providers.Web3Provider(ethereum);
-      const signer = provider.getSigner();
-      const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
-      const waves = await wavePortalContract.getAllWaves();
-
+      const waves = await contract?.getAllWaves();
       const wavesCleaned = waves.map(wave => {
         return {
           address: wave.waver,
@@ -90,8 +87,7 @@ const getAllWaves = async () => {
  * Listen in for emitter events!
  */
 useEffect(() => {
-  let wavePortalContract;
-
+  let contract;
   const onNewWave = (from, timestamp, message) => {
     console.log("NewWave", from, timestamp, message);
     setAllWaves(prevState => [
@@ -105,16 +101,12 @@ useEffect(() => {
   };
 
   if (window.ethereum) {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const signer = provider.getSigner();
-
-    wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
-    wavePortalContract.on("NewWave", onNewWave);
+    contract?.on("NewWave", onNewWave);
   }
 
   return () => {
-    if (wavePortalContract) {
-      wavePortalContract.off("NewWave", onNewWave);
+    if (contract) {
+      contract.off("NewWave", onNewWave);
     }
   };
 }, []);

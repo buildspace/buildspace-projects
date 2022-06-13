@@ -115,12 +115,15 @@ Lets make sure it works! Here's my updated `run.js`. In this case, I just want t
 ```javascript
 const main = async () => {
   const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
-  const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther("0.1"),
-  });
+  const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
   console.log("Contract addy:", waveContract.address);
 
+  let walletSigner = await hre.ethers.getSigners()[0]
+  let sendTransaction = await walletSigner.sendTransaction({
+  to: waveContract.address,
+  value: ethers.utils.parseEther("0.1") // 0.1 ether
+  })
   let contractBalance = await hre.ethers.provider.getBalance(
     waveContract.address
   );
@@ -265,3 +268,4 @@ contract WavePortal {
 Try and run `npx hardhat run scripts/run.js` and see the error message you get if you try to wave twice in a row now without waiting 15-minutes :).
 
 Bam! And that's how you build cooldowns!
+ps. dont forget to use `thirdweb deploy` to deploy your updated smart contract!

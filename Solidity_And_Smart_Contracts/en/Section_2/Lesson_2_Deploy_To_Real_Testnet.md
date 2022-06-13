@@ -4,30 +4,19 @@ Go ahead and close the terminal with your local blockchain network running which
 
 Now we're going to be doing the real deal, deploying to the actual blockchain.
 
-Go ahead and make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+For this, we are going to use a tool called thirdweb deploy. Thirdweb deploy is a feature that allows you to deploy contracts without writing scripts or managing configurations such as dotenv.
 
-Sorry for having you make so many accounts, but, this ecosystem is complex and we want to take advantage of the awesome tools out there. What Alchemy does is it gives us a simple way to deploy to the real Ethereum blockchain.
+@ando: For this, we are going to use a tool called thirdweb deploy. Thirdweb deploy is an all encompassing tool that manages your contracts. What is cool here for us is that it takes care of the node end of things for ya and it can deploy your smart contracts without dealing with private keys or scripts.
 
 ## 💳 Transactions
 
-So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone ETH is a transaction. Doing something that updates a variable in our contract is also considered a transaction.
+So, when we want to perform an action on the Ethereum blockchain we call it a **transaction**. For example, sending someone ETH is a transaction. Doing something that updates a variable in our contract is also considered a transaction.
 
-So when we call `wave` and it does `totalWaves += 1`, that's a transaction! **Deploying a smart contract is also a transaction.**
+So when we call `wave` and it does `totalWaves += 1`, that's a transaction! ****Deploying a smart contract is also a transaction.****
 
-Remember, the blockchain has no owner. It's just a bunch of computers around the world run by **miners** that have a copy of the blockchain.
+Remember, the blockchain has no owner. It's just a bunch of computers around the world run by ****miners**** that have a copy of the blockchain.
 
-When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
-
-This is where Alchemy comes in.
-
-Alchemy essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
-
-This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
-
-So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
-
-Checkout the video below to see how to get your API key for a testnet!
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283)
+When we deploy our contract, we need to tell ****all those**** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
 
 ## 🕸️ Testnets
 
@@ -51,16 +40,19 @@ There are a few testnets out there and the one we'll be using is called "Rinkeby
 
 In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copy how mainnet works, only difference is no real money is involved.
 
-In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. Make sure that your MetaMask wallet is set to the "Rinkeby Test Network" before using faucet.
+In order to get fake ETH, we have to ask the network for some. ****This fake ETH will only work on this specific testnet.**** You can grab some fake ETH for Rinkeby through a faucet. Make sure that your MetaMask wallet is set to the "Rinkeby Test Network" before using faucet.
 
 For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
 
 | Name             | Link                                  | Amount          | Time         |
-| ---------------- | ------------------------------------- | --------------- | ------------ |
-| MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
-| Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
-| Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
 
+| ---------------- | ------------------------------------- | --------------- | ------------ |
+
+| MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
+
+| Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
+
+| Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
 
 ## 🙃 Having trouble getting Testnet ETH?
 
@@ -68,92 +60,67 @@ If the above doesn't work, use the `/faucet` command in the #faucet-request chan
 
 ## 📈 Deploy to Rinkeby testnet
 
-We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
+We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project. We no longer need lines 7-18 so you can comment them out or delete them.
 
-```javascript
+javascript
+
 require("@nomiclabs/hardhat-waffle");
 
 module.exports = {
-  solidity: "0.8.0",
-  networks: {
-    rinkeby: {
-      url: "YOUR_ALCHEMY_API_URL",
-      accounts: ["YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY"]
-    },
-  },
+
+solidity: "0.8.0",
+
 };
+
+Next, we need to install thirdweb deploy SDK in our terminal. We can do this by running
+
+```jsx
+npm install @thirdweb-dev/contracts
 ```
 
-**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** 
+We are going to need to modify our WavePortal.sol file to import this package and also extend the contract to be a thirdweb contract.
 
-**If uploading to Github or using git version control in general it is good practice to protect yourself from uploading secrect keys to somewhere you don't want them. First of all the best way is to not upload your hardhat config file by adding it to .gitignore. **
+```jsx
+// SPDX-License-Identifier: UNLICENSED
 
-Another way of protecting yourself and keeping `hardhat.config.js` secure is to use dotenv. Install it with:
+ pragma solidity ^0.8.0;
 
-```bash
-npm install --save dotenv
+ import "@thirdweb-dev/contracts/ThirdwebContract.sol";
+
+ contract WavePortal is ThirdwebContract {
+     // rest of your contract 
+ }
 ```
 
-Now we can update hardhat.config.js to use dotenv:
+Once we make these changes and save our modified WavePortal.sol file, we can run `npx thirdweb deploy` in our terminal to compile our contract. The output should look something like this.
 
-```javascript
-require("@nomiclabs/hardhat-waffle");
-// Import and configure dotenv
-require("dotenv").config();
+![Untitled](Section%202-%20Lesson%202%20f5a2b90876e24f229144ccfefad7822e/Untitled.png)
 
-module.exports = {
-  solidity: "0.8.0",
-  networks: {
-    rinkeby: {
-      // This value will be replaced on runtime
-      url: process.env.STAGING_ALCHEMY_KEY,
-      accounts: [process.env.PRIVATE_KEY],
-    },
-    mainnet: {
-      chainId: 1,
-      url: process.env.PROD_ALCHEMY_KEY,
-      accounts: [process.env.PRIVATE_KEY],
-    },
-  },
-};
-```
+When we run this command a link will also open up in our default browser with the thirdweb dashboard and our contract ready to deploy. @ando: The thirdweb dashboard provides a nice UI for you manage all of your smart contract in ONE PLACE! ✨
 
-In the root project folder, create a `.env` file and add your secrets. It should look like this:
+![Untitled](Section%202-%20Lesson%202%20f5a2b90876e24f229144ccfefad7822e/Untitled%201.png)
 
-```
-STAGING_ALCHEMY_KEY=REPLACE_WITH_ACTUAL_ALCHEMY_URL
-PROD_ALCHEMY_KEY=BLAHBLAH
-PRIVATE_KEY=BLAHBLAH
-```
-Finally, add `.env` to your `.gitignore` file so Git ignores it and your secrets don't leave your machine! If you're confused by any of this, just watch a YouTube video on it, it's easy stuff!
+Go ahead and connect your wallet to the thirdweb dashboard so we can deploy. 
 
-Next, grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can grab from metamask and paste that in there as well.
+Side note: what’s really cool about this is we can also share this link and others are able to deploy the same contract with their wallet.
 
-**Note: Accessing your private key can be done by opening MetaMask, change the network to "Rinkeby Test Network" and then click the three dots and select "Account Details" > "Export Private Key"**
+Alright, once we are connected we can go ahead and click `Deploy Now`
 
-Why do you need to use your private key? Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain. And, your username is your public address and your password is your private key. It's kinda like logging into AWS or GCP to deploy.
+on our dashboard. 
 
-Once you've got your config setup we're set to deploy with the deploy script we wrote earlier.
+![Untitled](Section%202-%20Lesson%202%20f5a2b90876e24f229144ccfefad7822e/Untitled%202.png)
 
-Run this command from the root directory of `my-wave-portal`. Notice all we do is change it from `localhost` to `rinkeby`.
+Almost there! Now we just have to name our contract and add an optional name and description to go with it. Select our chain as Rinkeby (ETH) and now we can hit the big blue button that says `Deploy Now`
 
-```bash
-npx hardhat run scripts/deploy.js --network rinkeby
-```
+Our wallet will pop up with a prompt to confirm a transaction. After we confirm we are now live on testnet! On our dashboard we can manage our contract and view some of our contract’s functions we will use later in our frontend.
 
-## ❤️ Deployed! 
+![Untitled](Section%202-%20Lesson%202%20f5a2b90876e24f229144ccfefad7822e/Untitled%203.png)
 
-Here's my output:
+## ❤️ Deployed!
 
-```bash
-Deploying contracts with the account: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
-Account balance: 3198297774605223721
-WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
-```
+Copy that address of the deployed contract from the thirdweb dashboard GUI. Don't lose it! You'll need it for the frontend later :). Yours will be different from mine.
 
-Copy that address of the deployed contract in the last line and save it somewhere. Don't lose it! You'll need it for the frontend later :). Yours will be different from mine.
-
-**You just deployed your contract. WOOOOOOOOO.**
+- ***You just deployed your contract. WOOOOOOOOO.****
 
 You can actually take that address and then paste it into Etherscan [here](https://rinkeby.etherscan.io/). Etherscan is a place that just shows us the state of the blockchain and helps us see where our transaction is at. You should see your transaction here :). It may take a minute to show up!
 
@@ -161,11 +128,11 @@ For example, [here's](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA80
 
 ## 🚨 Before you click "Next Lesson"
 
-**YOU JUST DID A LOT.**
+- ***YOU JUST DID A LOT.****
 
-You should totally **tweet** out that you just wrote and deployed your first smart contract and tag @_buildspace. If you want, include a screenshot of the Etherscan page that shows that your contract is on the blockchain!
+You should totally ****tweet**** out that you just wrote and deployed your first smart contract and tag @_buildspace. If you want, include a screenshot of the Etherscan page that shows that your contract is on the blockchain!
 
-It's a big deal that you got this far. You created and deployed something to the actual blockchain. **Holy shit**. **I'm proud of you.**
+It's a big deal that you got this far. You created and deployed something to the actual blockchain. ****Holy shit****. ****I'm proud of you.****
 
 You're now someone who is actually "doing" the thing that mostly everyone else is just "talking" about.
 
@@ -173,9 +140,8 @@ You're a step closer to mastering the arts of web3.
 
 KEEP GOING :).
 
---
-
-*Ty to the people who have already been tweeting about us, y'all are legends <3.*
+- -
+- *Ty to the people who have already been tweeting about us, y'all are legends <3.**
 
 ![](https://i.imgur.com/1lMrpFh.png)
 
