@@ -2,6 +2,8 @@
 
 Before anything, we'll need to get our local Ethereum network working. This is how we can compile and test our smart contract code! You know how you need to spin up a local environment to work on it? Same deal here!
 
+Sebelum apa pun, kita harus membuat jaringan Ethereum lokal kita berfungsi. Ini adalah bagaimana kami dapat mengkompilasi dan menguji kode kontrak pintar kami! Anda tahu bagaimana Anda perlu menghidupkan lingkungan lokal untuk mengerjakannya? Kesepakatan yang sama di sini!
+
 For now, all you need to know is that a smart contract is a piece of code that lives on the blockchain. The blockchain is a public place where anyone can securely read and write data for a fee. Think of it sorta like AWS or Heroku, except no one actually owns it!
 
 So in this case, we want people to 👋 at us. The bigger picture here is:
