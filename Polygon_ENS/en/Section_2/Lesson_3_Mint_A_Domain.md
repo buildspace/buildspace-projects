@@ -185,7 +185,7 @@ If you take a look at your app, you’ll see the input fields:
 
 **Note:** the mint button doesn’t do anything right now, this is expected! 
 
-Very cool 😎. We can now easily collect inputs from our user and call our contract! In the next session you are going to see how magical this is by calling the functions we made earlier on our smart contract!
+Very cool 😎. We can now easily collect inputs from our user and call our contract! In the next session, you are going to see how magical this is by calling the functions we made earlier on our smart contract!
 
 ### 🧞 Interacting with the contract
 
