@@ -47,7 +47,9 @@ npx hardhat
 
 *Note: if you have yarn installed along with npm, you may get errors such as `npm ERR! could not determine executable to run`. In this case, you can do `yarn add hardhat`.*
 
-Choose the option to create a sample project. Say yes to everything.
+Choose the option _**Create a basic sample project**_. Say yes to everything.
+
+<img width="571" alt="Screen Shot 2022-06-10 at 22 51 21" src="https://user-images.githubusercontent.com/5970751/173140637-8693bab8-f610-4f1b-83ed-c6abaacf91c2.png">
 
 The sample project will ask you to install hardhat-waffle and hardhat-ethers. These are other goodies we'll use later :).
 
