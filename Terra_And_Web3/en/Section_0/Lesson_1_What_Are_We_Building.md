@@ -28,7 +28,13 @@ This stuff is very new, there's a lot of hype around it, and it can be super dif
 With this project, you're going to learn about crypto tech by actually writing code and just hopping into the good stuff. No B.S. We'll also go over theory and more in-depth concepts, but, it will all be structured around your project.
 
 ### 💎 Earning an NFT
-When you reach the end of this project, you'll earn an NFT. Here's what it looks like:
+When you reach the end of this project, you'll earn an NFT. 
+
+You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+
+**Once you finish the project, you'll get the NFT airdropped within 7 days**
+
+Here's what it looks like:
 
 [Loom](https://www.loom.com/share/e890863a83a84ed18abdaccd52a64d6f)
 
