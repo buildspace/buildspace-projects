@@ -86,7 +86,7 @@ Mari kita lakukan sedikit pembersihan.
 
 Silakan dan buka kode untuk proyek sekarang di editor kode favorit Anda. Saya paling suka VSCode! Kami ingin menghapus semua kode starter membosankan yang dibuat untuk kami. Kami tidak membutuhkan semua itu. Kami pro ;)!
 
-Lanjutkan dan hapus file `sample-test.js` di bawah `test`. Juga, hapus `sample-script.js` di bawah `scripts`. Kemudian, hapus `Greeter.sol` di bawah `kontrak`. Jangan hapus folder yang sebenarnya!
+Lanjutkan dan hapus file `sample-test.js` di bawah `test`. Juga, hapus `sample-script.js` di bawah `scripts`. Kemudian, hapus `Greeter.sol` di bawah `contracts`. Jangan hapus folder yang sebenarnya!
 
 ## 🚨 Sebelum Anda mengklik "Pelajaran Berikutnya"
 
