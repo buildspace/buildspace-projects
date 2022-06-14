@@ -178,7 +178,7 @@ function attackBoss() public {
   // Make sure the boss has more than 0 HP.
   require (
     bigBoss.hp > 0,
-    "Error: boss must have HP to attack boss."
+    "Error: boss must have HP to attack character."
   );
 }
 ```
@@ -219,7 +219,7 @@ function attackBoss() public {
   // Make sure the boss has more than 0 HP.
   require (
     bigBoss.hp > 0,
-    "Error: boss must have HP to attack boss."
+    "Error: boss must have HP to attack character."
   );
   
   // Allow player to attack boss.
@@ -255,7 +255,7 @@ function attackBoss() public {
   // Make sure the boss has more than 0 HP.
   require (
     bigBoss.hp > 0,
-    "Error: boss must have HP to attack boss."
+    "Error: boss must have HP to attack character."
   );
   
   // Allow player to attack boss.
