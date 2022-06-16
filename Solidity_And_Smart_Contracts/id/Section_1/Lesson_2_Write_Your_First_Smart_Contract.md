@@ -36,7 +36,7 @@ Hanya komentar mewah. Ini disebut "SPDX license identifier", jangan ragu untuk G
 pragma solidity ^0.8.0;
 ```
 
-Ini adalah versi kompiler Solidity yang kita ingin kontrak kita gunakan. Pada dasarnya tertulis "saat menjalankan ini, saya hanya ingin menggunakan kompiler Solidity versi 0.8.0, tidak ada yang lebih rendah. Catatan, pastikan bahwa versi kompiler sama di `hardhat.config.js`.
+Ini adalah versi kompiler Solidity yang kita ingin kontrak kita gunakan. Pada dasarnya tertulis "saat menjalankan ini, aku hanya ingin menggunakan kompiler Solidity versi 0.8.0, tidak ada yang lebih rendah. Catatan, pastikan bahwa versi kompiler sama di `hardhat.config.js`.
 
 ```solidity
 import "hardhat/console.sol";

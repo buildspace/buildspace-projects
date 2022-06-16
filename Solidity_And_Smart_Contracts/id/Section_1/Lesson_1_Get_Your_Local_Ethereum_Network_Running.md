@@ -12,7 +12,7 @@ Jadi dalam hal ini, kita ingin orang-orang 👋 pada kita. Gambaran yang lebih b
 
 3\. **Kita akan membangun situs web klien** yang memungkinkan orang berinteraksi dengan mudah dengan kontrak pintar kita di blockchain.
 
-Saya akan menjelaskan hal-hal tertentu secara mendalam sesuai kebutuhan (cth. cara kerja penambangan, cara kontrak cerdas dikompilasi dan dijalankan, dll) *tetapi untuk saat ini mari kita fokus untuk menjalankannya*.
+Aku akan menjelaskan hal-hal tertentu secara mendalam sesuai kebutuhan (cth. cara kerja penambangan, cara kontrak cerdas dikompilasi dan dijalankan, dll) *tetapi untuk saat ini mari kita fokus untuk menjalankannya*.
 
 Jika kamu memiliki masalah apa pun di sini, cukup kirimkan pesan di Discord di  `#section-1-help`.
 
@@ -84,7 +84,7 @@ Kamu akan melihat sesuatu seperti ini:
 
 Mari kita lakukan sedikit pembersihan.
 
-Silakan dan buka kode untuk proyek sekarang di editor kode favorit kamu. Saya paling suka VSCode! Kita ingin menghapus semua kode starter membosankan yang dibuat untuk kita. Kita tidak membutuhkan semua itu. Kita pro ;)!
+Silakan dan buka kode untuk proyek sekarang di editor kode favorit kamu. Aku paling suka VSCode! Kita ingin menghapus semua kode starter membosankan yang dibuat untuk kita. Kita tidak membutuhkan semua itu. Kita pro ;)!
 
 Lanjutkan dan hapus file `sample-test.js` di bawah `test`. Juga, hapus `sample-script.js` di bawah `scripts`. Kemudian, hapus `Greeter.sol` di bawah `contracts`. Jangan hapus folder yang sebenarnya!
 
