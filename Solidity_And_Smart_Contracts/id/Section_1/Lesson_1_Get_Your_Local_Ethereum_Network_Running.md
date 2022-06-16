@@ -1,6 +1,6 @@
 ## ✅ Siapkan env kamu untuk mulai bekerja dengan blockchain
 
-Sebelum memulai, kita harus membuat jaringan Ethereum lokal kita berfungsi. Dengan ini kita dapat mengkompilasi dan menguji kode kontrak pintar kita! kamu tahu bagaimana kamu perlu menghidupkan lingkungan lokal untuk mengerjakannya? Situasi yang sama di sini!
+Sebelum memulai, kita harus membuat jaringan Ethereum lokal kita berfungsi. Dengan ini kita dapat mengkompilasi dan menguji kode kontrak pintar kita! Kamu tahu bagaimana kamu perlu menghidupkan lingkungan lokal untuk mengerjakannya? Situasi yang sama di sini!
 
 Untuk saat ini, yang perlu kamu ketahui adalah bahwa kontrak pintar adalah bagian dari kode yang hidup di blockchain. Blockchain adalah tempat umum di mana siapa pun dapat dengan aman membaca dan menulis data dengan biaya tertentu. Anggap saja seperti AWS atau Heroku, kecuali benar-benar tidak ada yang memilikinya!
 
@@ -61,9 +61,7 @@ Terakhir, jalankan `npx hardhat accounts` dan perintah ini akan mencetak sekumpu
 
 `0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`
 
-These are Ethereum addresses that Hardhat generates for us to simulate real users on the blockchain. This is going to help us a ton later in the project when we want to simulate users 👋-ing at us!
-
-Ini adalah alamat Ethereum yang dihasilkan Hardhat untuk kita dalam mensimulasikan pengguna nyata di blockchain. Ini akan sangat membantu kita nanti dalam proyek ketika kita ingin mensimulasikan pengguna yang sedang 👋 kita!
+Ini adalah alamat Ethereum yang dihasilkan Hardhat untuk kita dalam mensimulasikan pengguna nyata di blockchain. Ini akan sangat membantu kita nanti dalam proyek ketika kita ingin mensimulasikan pengguna yang sedang 👋 kepada kita!
 
 ## 🌟 Menjalankannya
 
@@ -72,7 +70,7 @@ Untuk memastikan semuanya berfungsi, jalankan:
 ```bash
  npx hardhat compile
 ```
-Then jalankan:
+Setelah itu jalankan:
 
 ```bash
 npx hardhat test
