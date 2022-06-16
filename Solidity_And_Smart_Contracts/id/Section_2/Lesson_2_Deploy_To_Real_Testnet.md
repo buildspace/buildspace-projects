@@ -64,8 +64,6 @@ Untuk MyCrypto, kamu harus menghubungkan dompetmu, membuat akun, lalu mengklik t
 
 ## 🙃 Kesulitan mendapatkan Testnet ETH?
 
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
-
 Jika cara di atas tidak berhasil, gunakan perintah `/faucet` di saluran #faucet-request dan bot kami akan mengirimkan kamu beberapa! Jika kamu menginginkan lebih, kirim alamat dompet publik kamu dan berikan gif lucu. Entah aku, atau seseorang dari proyek akan mengirimkan kamu beberapa ETH palsu sesegera mungkin. Semakin lucu gif, semakin cepat kamu dikirimi ETH palsu Haha.
 
 ## 📈 Terapkan ke Rinkeby testnet
@@ -80,7 +78,7 @@ module.exports = {
   networks: {
     rinkeby: {
       url: "YOUR_ALCHEMY_API_URL",
-      accounts: ["YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY"]
+      accounts: ["PRIVATE_KEY_AKUN_RINKEBY_ANDA"]
     },
   },
 };
@@ -100,14 +98,14 @@ Sekarang kita dapat memperbarui hardhat.config.js untuk menggunakan dotenv:
 
 ```javascript
 require("@nomiclabs/hardhat-waffle");
-// Import and configure dotenv
+// Impor dan konfigurasikan dotenv
 require("dotenv").config();
 
 module.exports = {
   solidity: "0.8.0",
   networks: {
     rinkeby: {
-      // This value will be replaced on runtime
+      // Nilai ini akan diganti saat runtime
       url: process.env.STAGING_ALCHEMY_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
@@ -129,7 +127,7 @@ PRIVATE_KEY=BLAHBLAH
 ```
 Terakhir, tambahkan `.env` ke file `.gitignore` kamu sehingga Git mengabaikannya dan rahasia kamu tidak meninggalkan mesin kamu! Jika kamu bingung dengan semua ini, tonton saja video YouTube di dalamnya, itu mudah!
 
-Selanjutnya, ambil URL API kamu dari dasbor Alchemy dan tempel di dalamnya. Kemudian, kamu memerlukan **private** rinkeby key (bukan alamat publik kamu!) yang dapat kamu ambil dari metamask dan tempelkan juga di sana.
+Selanjutnya, ambil URL API kamu dari dasbor Alchemy dan tempel di dalamnya. Kemudian, kamu memerlukan **private** key rinkeby (bukan alamat publik kamu!) yang dapat kamu ambil dari metamask dan tempelkan juga di sana.
 
 **Catatan: Mengakses kunci pribadi kamu dapat dilakukan dengan membuka MetaMask, ubah jaringan menjadi "Rinkeby Test Network" lalu klik tiga titik dan pilih "Account Details" > "Export Private Key"**
 
