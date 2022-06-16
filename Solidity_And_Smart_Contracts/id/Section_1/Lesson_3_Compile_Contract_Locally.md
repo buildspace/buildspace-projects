@@ -3,8 +3,8 @@
 Kamu sudah melakukannya. Kamu sudah menulis kontrak cerdas. Kamu seorang juara!
 
 Sekarang kita harus benar-benar\
-1\. Kompilasi.\
-2\. Terapkan ke blockchain lokal kita.\
+1\. Mengkompilasi.\
+2\. Menerapkan ke blockchain lokal kita.\
 3\. Setelah itu ada, console.log itu akan berjalan :).
 
 Kita perlu melakukan ini karena di dunia nyata, kontrak pintar hidup di blockchain. Dan, kita ingin situs web dan kontrak pintar kita digunakan oleh orang-orang nyata sehingga mereka dapat 👋 pada kita atau melakukan apa pun yang kamu ingin mereka lakukan!
@@ -36,12 +36,12 @@ const main = async () => {
 const runMain = async () => {
   try {
     await main();
-    process.exit(0); // exit Node process without error
+    process.exit(0); // keluar dari proses Node tanpa kesalahan
   } catch (error) {
     console.log(error);
-    process.exit(1); // exit Node process while indicating 'Uncaught Fatal Exception' error
+    process.exit(1); // keluar dari proses Node sambil menunjukkan kesalahan 'Uncaught Fatal Exception'
   }
-  // Read more about Node exit ('process.exit(num)') status codes here: https://stackoverflow.com/a/47163396/7974948
+  // Baca lebih lanjut tentang kode status Node exit ('process.exit(num)') di sini: https://stackoverflow.com/a/47163396/7974948
 };
 
 runMain();
