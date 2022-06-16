@@ -4,7 +4,7 @@ Luar biasa, kita berhasil.
 
 Kita hanya akan langsung masuk ke proyek kita.
 
-Mari buat kontrak cerdas yang memungkinkan kita mengirim 👋 ke kontrak kita dan melacak total # gelombang. Ini akan berguna karena di situs kamu, kamu mungkin ingin melacak # ini! Jangan ragu untuk mengubah kontrak cerdas ini agar sesuai dengan kasus penggunaan kamu.
+Mari buat kontrak cerdas yang memungkinkan kita mengirim 👋 ke kontrak kita dan melacak total # lambaian. Ini akan berguna karena di situs kamu, kamu mungkin ingin melacak # ini! Jangan ragu untuk mengubah kontrak cerdas ini agar sesuai dengan kasus penggunaan kamu.
 
 Buat file bernama **`WavePortal.sol`** di bawah direktori **`contracts`**. Struktur file sangat penting saat menggunakan Hardhat, jadi berhati-hatilah di sini!
 
