@@ -44,7 +44,7 @@ Jadi, begitulah cara kamu menulis fungsi di Solidity. Dan, kita juga menambahkan
 
 Kita juga menggunakan beberapa keajaiban di sini dengan `msg.sender`. Ini adalah alamat dompet orang yang memanggil fungsi tersebut. Ini luar biasa! Ini seperti otentikasi bawaan. Kita tahu persis siapa yang memanggil fungsi tersebut karena bahkan untuk memanggil fungsi kontrak pintar, kamu harus terhubung dengan dompet yang valid!
 
-Di masa depan, kita dapat menulis fungsi yang hanya dapat dilakukan oleh alamat dompet tertentu. Misalnya, kita dapat mengubah fungsi ini sehingga hanya alamat kita yang diizinkan untuk mengirim lambaian. Atau, mungkin memilikinya di mana hanya teman kamu yang bisa melambai pada kamu!
+Di masa depan, kita dapat menulis fungsi yang hanya dapat dilakukan oleh alamat dompet tertentu. Misalnya, kita dapat mengubah fungsi ini sehingga hanya alamat kita yang diizinkan untuk mengirim lambaian. Atau, mungkin memilikinya di mana hanya teman kamu yang bisa melambai padamu!
 
 ## ✅ Memperbarui run.js untuk memanggil fungsi kita
 
