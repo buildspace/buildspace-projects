@@ -1,4 +1,4 @@
-### **👋 Welcome.**
+### 👋 Welcome
 
 You've made it — hell yeah! Welcome :). My name is [Farza](https://twitter.com/FarzaTV) and I’m just the guy who will be chatting with yah here. BTW -- massive shoutout to [Nacho lacovino](https://twitter.com/nachoiacovino) and [Jonas](https://twitter.com/jnsdls) for helping us write these docs. 
 
@@ -12,19 +12,25 @@ Few action items for you before moving on:
 2. **Connect your Ethereum wallet in the project dashboard.** We'll airdrop you an NFT once you finish this, and if you don't have a wallet connected we won't be able to airdrop it to you! By the way - you won't need to pay any gas fees, we'll cover that for you!
 3. **Be sure to attend the live kick-off**. If you miss it, no worries. It's not required to attend!
 
-### **🤔 What are we building?**
+### 🤔 What are we building?
 Check out a quick video I made covering the project here:
 [Loom](https://www.loom.com/share/e9b6c6fe11fa41f3bf3bdf6ee0683335)
 
-### **💎 Earning an NFT.**
+### 💎 Earning an NFT
 
-When you reach the end of this project, you'll earn an NFT. Here's what it looks like:
+When you reach the end of this project, you'll earn an NFT. 
+
+You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+
+**Once you finish the project, you'll get the NFT airdropped within 7 days**
+
+Here's what it looks like:
 
 [Loom](https://www.loom.com/share/b315bcdd07cf4e78b9b29806ef931ad2)
 
 **Note: Each cohort is named after a star (ex. [Alkes](https://www.star-facts.com/alkes/), [Beid](https://www.universeguide.com/star/19587/beid), etc)! Also, the # on the back will be the # minted which depends on when you finish! Each NFT is unique.** 
 
-### **🤚 How to get help.**
+### 🤚 How to get help
 
 When you have a question, hit up the proper channel for the project.
 
@@ -34,7 +40,7 @@ This project is broken up into 4 sections. You can see what section you're on by
 
 ![Untitled](https://i.imgur.com/mmOargI.png)
 
-### **🤘 See an issue? Want to improve something? Fix it yourself ;).**
+### 🤘 See an issue? Want to improve something? Fix it yourself ;)
 
 **[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec` in the Discord :).
 

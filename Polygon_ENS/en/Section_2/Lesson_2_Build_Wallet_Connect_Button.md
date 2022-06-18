@@ -1,6 +1,6 @@
 *Note: if you’ve done projects with us in the past, feel free to speed through this!*
 
-### ****🌅**** Using the Ethereum object
+### 🌅 Using the Ethereum object
 
 **NOW** it’s go time 😎. As part of any proper web3 app, we need a way to get access to a person’s public address - **but why is that?**
 
@@ -91,7 +91,7 @@ Take time here to customize the page to your liking. Go to [https://giphy.com/](
 
 ![https://i.imgur.com/lyR6lsj.png](https://i.imgur.com/lyR6lsj.png)
 
-### ****🔒 See if we can access**** the user’s account
+### 🔒 See if we can access the user’s account
 
 **NICE.** Next, we need to actually check if we're authorized to actually access the user's wallet. Once we have access to this, we can call our smart contract!
 
@@ -184,7 +184,7 @@ The connect button will not do anything and you should see `No authorized accoun
 
 Let’s work on getting permission from the user to access their wallet next!
 
-### **🛍 Connect to the user’s wallet**
+### 🛍 Connect to the user’s wallet
 
 In the world of Web3, connecting your wallet is literally a "Login" button for your user. We send a request to MetaMask to give us read-only access to the users’ wallet.
 
@@ -302,7 +302,7 @@ Nice! Go ahead and test that fancy button out! MetaMask should prompt you to “
 
 ![https://i.imgur.com/wzMPQH8.png](https://i.imgur.com/wzMPQH8.png)
 
-### **🚨Progress report.**
+### 🚨Progress report
 
 *Please do this else Raza will be sad :(*
 

@@ -1,4 +1,4 @@
-### 😡 Revoke roles.
+### 😡 Revoke roles
 
 If you remember, you actually still hold “minting” rights on the ERC-20 contract. That means you can go and create more tokens if you wanted which may freak out members of your DAO lol. You could go and mint like a billion tokens to yourself lol.
 
@@ -61,12 +61,12 @@ We are now safe from an admin takeover :).
 
 You'll see I still have the `transfer` role in conjunction with `AddressZero`, `AddressZero` in the roles array means that everybody can transfer tokens (which is what we want). It doesn't matter that our address is also there.
 
-### 👍 Handle basic unsupported network error.
+### 👍 Handle basic unsupported network error
 
 First, let's import one last hook `useNetwork` at the top of `App.jsx` to recognize a connection outside of the Rinkeby network. Also, we're importing `ChainId` from the thirdweb SDK to get Rinkeby's chain ID.
 
 ```jsx
-import { useAddress, useMetamask, useEditionDrop, useToken, useNetwork } from '@thirdweb-dev/react';
+import { useAddress, useMetamask, useEditionDrop, useToken, useVote, useNetwork } from '@thirdweb-dev/react';
 import { ChainId } from '@thirdweb-dev/sdk'
 ```
 
@@ -79,7 +79,7 @@ const network = useNetwork();
 Next, add the following in your `App.jsx` file right under the `mintNft` function:
 
 ```jsx
-if (network?.[0].data.chain.id !== ChainId.Rinkeby) {
+if (address && (network?.[0].data.chain.id !== ChainId.Rinkeby)) {
   return (
     <div className="unsupported-network">
       <h2>Please connect to Rinkeby</h2>
@@ -96,7 +96,7 @@ We're checking if we're finding a chain on our preferred network, in our case Ri
 
 Pretty simple! But, very useful. It’ll pop a message if the user isn’t on Rinkeby!
 
-### 🤑 See your token on Uniswap.
+### 🤑 See your token on Uniswap
 
 You may ask yourself how tokens like [ENS DAO](https://coinmarketcap.com/currencies/ethereum-name-service/) or the more recent [Constitution DAO](https://coinmarketcap.com/currencies/constitutiondao/) have governance token worth real money. Well basically, it’s because other people can actually just buy their governance tokens directly on decentralized exchanges like Uniswap.
 

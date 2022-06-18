@@ -1,4 +1,4 @@
-### **🌅 Using the Ethereum object.**
+### 🌅 Using the Ethereum object
 
 So, in order for our website to talk to the blockchain, we need to somehow connect our wallet to it. Once we connect our wallet to our website, our website will have permission to call smart contracts on our behalf. **Remember, it's just like authenticating into a website.**
 
@@ -71,7 +71,7 @@ const App = () => {
 export default App;
 ```
 
-### **🔒 Accessing the user's account.**
+### 🔒 Accessing the user's account
 
 So when you run this, you should see that line "*We have the Ethereum object*" printed in the console of the website when you go to inspect it.
 
@@ -169,7 +169,7 @@ const App = () => {
 export default App;
 ```
 
-### **🛍 Render connect to wallet button.**
+### 🛍 Render connect to wallet button
 
 When you run the above code, the `console.log` that prints should be `No authorized account found`. Why? Well because we never explicitly told Metamask, *"hey Metamask, please give this website access to my wallet".*
 
@@ -294,6 +294,6 @@ Click your fancy new button and you should see your MetaMask Chrome extension po
 ![Untitled](https://i.imgur.com/0HsWMpg.png)
 
 
-🚨 Progress update
-------------------------
+## 🚨 Progress update
+
 In #progress, post a screenshot of your fancy new site and be sure to change up the GIFs and titles to be more something you vibe with. Make it your own!

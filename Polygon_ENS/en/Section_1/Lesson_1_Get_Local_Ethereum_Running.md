@@ -1,6 +1,6 @@
 *Note: If you've taken previous projects at buildspace, many of the initial setup items in the next two lessons are repeated from previous projects. If you already understand it, awesome! You're a pro. Feel free to blaze through it really fast.*
 
-### **📚 A little blockchain primer.**
+### 📚 A little blockchain primer
 
 Before anything, we'll need to get our local Ethereum network working. This is how we can compile and test our smart contract code! You know how you need to spin up a local environment to work on web apps? Same deal here!
 
@@ -16,7 +16,7 @@ The bigger picture here is:
 
 I recommend also reading over [these](https://ethereum.org/en/developers/docs/intro-to-ethereum/) docs when you can for fun. These are the best guides on the internet for understanding how Ethereum works in my opinion!
 
-### **⚙️** Setup local tooling
+### ⚙️ Setup local tooling
 
 We're going to be using a tool called **Hardhat,** a lot, which will let us quickly compile smart contracts and test them locally. First, you'll need to get node/npm. We recommend running Hardhat using the current LTS Node.js version or you may run into some issues! You can find the current releases [here](https://nodejs.org/en/about/releases/). To download Node, head over [here](https://nodejs.org/en/download/).
 
@@ -63,7 +63,7 @@ Finally, run `npx hardhat accounts` and this should print out a bunch of strin
 
 These are Ethereum addresses that Hardhat generates for us to simulate real users on the blockchain. This is going to help us a ton later in the project when we want to simulate users minting domains!
 
-### **🌟 Run it**
+### 🌟 Run it
 
 To make sure everything is working, run:
 
@@ -87,7 +87,7 @@ Go ahead and open the code for the project now in your favorite code editor. I l
 
 Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `sample-script.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. Don't delete the actual folders!
 
-### **🚨 Before you click "Next Lesson"**
+### 🚨 Before you click "Next Lesson"
 
 *Note: if you don't do this, Raza will be very sad :(.*
 

@@ -1,4 +1,4 @@
-### ✨ Create the NFTs of your dreams.
+### ✨ Create the NFTs of your dreams
 
 The Metaplex CLI offers a really simple way to tell your candy machine what NFTs you have available, for what price, and much, much more. At the end of the day, an NFT is a JSON payload that has some asset attached to it. Thats exactly what we are going to be making here. 
 
@@ -43,7 +43,7 @@ Let's copy paste the following into `0.json`:
 ```json
 {
   "name": "NAME_OF_NFT",
-  "symbol": "",
+  "symbol": "SYMBOL_OF_NFT",
   "image": "0.png",
   "properties": {
     "files": [

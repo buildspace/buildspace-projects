@@ -7,13 +7,13 @@ Inside these folders, go to the `home` folder and then `username` folder. This i
 
 You'll see all the magic stuff Anchor has generated for us here.
 
-**Delete** the contents of `programs/myepicproject/src/lib.rs` and  `tests/myepicproject.js`. Don't actually delete the files, just what's in them.
+**Delete** the contents of `programs/myepicproject/programs/myepicproject/src/lib.rs` and  `tests/myepicproject.js`. Don't actually delete the files, just what's in them.
 
 *Note: I **didn't** actually install the Rust extension for VSCode. It already has Rust syntax highlighting for me out of the box.*
 
-### 👶 A basic program.
+### 👶 A basic program
 
-Let's write our first Solana program! This Rust code is going to live in the `lib.rs` file. 
+Let's write our first Solana program! This Rust code is going to live in the `lib.rs` file.
 
 Here's what it looks like:
 
@@ -54,7 +54,7 @@ We'll cover this thing a little later. Basically, this is the "program id" and h
 
 This is how we tell our program, "Hey — everything in this little module below is our program that we want to create handlers for that other people can call". You'll see how this comes into play. But, essentially this lets us actually call our Solana program from our frontend via a fetch request. We'll be seeing this `#[blah]` syntax a few places.
 
-They're called [macros](http://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/macros.html) — and they basically attach code to our module. It's sorta like "inheriting" a class. 
+They're called [macros](http://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/macros.html) — and they basically attach code to our module. It's sorta like "inheriting" a class.
 
 ```rust
 pub mod myepicproject {
@@ -78,7 +78,7 @@ Lastly we have this thing at the bottom. It'll be more obvious why this is impor
 
 Let's just get stuff running and see what happens.
 
-### 💎 Write a script to see it working locally.
+### 💎 Write a script to see it working locally
 
 We need to basically tell Anchor how we want our program to run and what functions we want to call. Head over to `tests/myepicproject.js`. This is actually written in javascript :).
 
@@ -90,7 +90,7 @@ const anchor = require('@project-serum/anchor');
 const main = async() => {
   console.log("🚀 Starting test...")
 
-  anchor.setProvider(anchor.Provider.env());
+  anchor.setProvider(anchor.AnchorProvider.env());
   const program = anchor.workspace.Myepicproject;
   const tx = await program.rpc.startStuffOff();
 
@@ -115,7 +115,7 @@ We can step line by line here. First off, the `runMain` thing is just some javas
 The real magic happens here:
 
 ```javascript
-anchor.setProvider(anchor.Provider.env());
+anchor.setProvider(anchor.AnchorProvider.env());
 const program = anchor.workspace.Myepicproject;
 const tx = await program.rpc.startStuffOff();
 ```
@@ -134,7 +134,7 @@ In `Anchor.toml` we want to change the `[scripts]` tags a little:
 
 ```
 [scripts]
-test = "node tests/myepicproject.js" 
+test = "node tests/myepicproject.js"
 ```
 
 **Keep everything else in `Anchor.toml` the same!**
@@ -153,6 +153,8 @@ Here's what I get near the bottom:
 ```
 
 *Note: If you are using VSCode, don't forget to **save** all the files you're changing before running `anchor test`! I personally ran into so many issues because I thought I saved the file, but in reality I didn't :(.*
+
+*Note: If you see this error `Attempt to load a program that does not exist`, you can do `solana address -k target/deploy/myepicproject-keypair.json` and replace with this address every occurency in `lib.rs`, `Anchor.toml`, and  `myepicproject.js`.*
 
 **BOOOOM. YOU DID IT.**
 

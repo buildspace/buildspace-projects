@@ -1,4 +1,4 @@
-### 📜 Create your DAO’s first two proposals.
+### 📜 Create your DAO’s first two proposals
 
 Cool. Everything is set up, now, we just need to create our first proposal! Head to `10-create-vote-proposals.js` and add the following:
 
@@ -102,7 +102,7 @@ buildspace-dao-starter % node scripts/10-create-vote-proposals.js
 
 BOOM. There are our proposals. The last thing we’re going to do is actually let users vote on proposals from our DAO dashboard now!
 
-### ✍️ Let users vote on proposals from the dashboard.
+### ✍️ Let users vote on proposals from the dashboard
 
 Finally, let’s bring it all home. Right now, our proposals live on our smart contract. But, we want our users to easily be able to see them and vote! Let’s do that. Head to `App.jsx`. Add the `useVote` hook to our imports:
 
@@ -136,6 +136,7 @@ useEffect(() => {
     try {
       const proposals = await vote.getAll();
       setProposals(proposals);
+      console.log("🌈 Proposals:", proposals);
     } catch (error) {
       console.log("failed to get proposals", error);
     }
@@ -198,6 +199,11 @@ The next chunk of code is kinda massive lol. It deals with actually rendering th
 3) Abstain
 
 If you’re familiar with React/JS, you can easily look through it and figure out how it works yourself. If you don’t know React/JS super well, don’t worry. Just copy-paste it. No shame there!
+
+Add the zero address import after your exising imports:
+```jsx
+import { AddressZero } from "@ethersproject/constants";
+```
 
 Go ahead and replace the contents of `if (hasClaimedNFT) { }` with the code [here](https://github.com/buildspace/buildspace-dao-final/blob/main/src/App.jsx#L205).
 

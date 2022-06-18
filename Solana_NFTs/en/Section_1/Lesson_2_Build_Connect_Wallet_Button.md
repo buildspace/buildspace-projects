@@ -1,4 +1,4 @@
-### **🛍 Render connect to wallet button.**
+### 🛍 Render connect to wallet button
 
 Alright, we are already checking to see if a user is already connected to our app or not. What if they aren't connected? We have no way in our app to prompt Phantom Wallet to connect to our app!
 
