@@ -3,7 +3,7 @@
 
 Bacana — nós criamos um contrato que agora cria NFTs dentro da rede (on-chain). Mas ainda é sempre o mesmo NFT argh !!! Vamos torná-lo dinâmico. 
 
-**Eu escrevi esse código [Rever este link](https://gist.github.com/farzaa/b788ba3a8dbaf6f1ef9af57eefa63c27) que irá gerar um SVG com uma combinação de três palavras aleatórias.**
+**Eu escrevi [esse código](https://gist.github.com/danicuki/f72e714a00800c24b23d3c5004f6557e) que irá gerar um SVG com uma combinação de três palavras aleatórias.**
 
 Eu acho que essa seria a melhor maneira para as pessoas olharem todo o código de uma vez e entender como ele está funcionando.
 
@@ -22,15 +22,15 @@ string[] thirdWords = ["SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA", "SUA_PALAVRA
 
 Estas são nossas palavras aleatórias!! Por favor, divirta-se com isso. Certifique-se de que cada palavra seja única e sem espaços!
 
-Quanto mais engraçadas as palavras, melhor será rs. Eu gostei de fazer de cada array um determinado tema. Por exemplo, `firstWords` pode ser o primeiro nome de seus personagens favoritos de anime. Então, `secondWords` pode ser um alimento de que você goste. E `thirdWords` podem ser nomes de animais aleatórios. Divirta-se com isso!!! Deixe com a sua cara
+Quanto mais engraçadas as palavras, melhor será rs. Eu gostei de fazer de cada array um determinado tema. Por exemplo, `firstWords` pode ser um nome de refrigerante. Então, `secondWords` pode ser uma comida. E `thirdWords` podem ser nomes de frutas aleatórios. Sei lá... Divirta-se com isso!!! Deixe com a sua cara
 
 Aqui estão alguns dos meus. Eu gosto que a primeira linha tenha palavras que parecem "descrever" algo!
 
-![](https://i.imgur.com/ADawgrB.png)
+![](https://i.imgur.com/vyEdTtx.png)
 
 Talvez você queira gerar um nome de banda aleatório. Talvez você queira gerar nomes de personagens aleatórios para suas sessões de Dungeons and Dragons. Faça o que você quiser. Talvez você não dê a mínima para combinações de três palavras e só queira fazer SVGs de pinguins de pixel art. Vá em frente. Faça o que você quiser :).
 
-Observação: Eu REcomendo entre 15-20 palavras por array. Notei que cerca de 10 geralmente não é aleatório o suficiente.
+Observação: Eu Recomendo entre 15-20 palavras por array. Notei que cerca de 10 geralmente não é aleatório o suficiente.
 
 🥴 Números aleatórios.
 ------------------
@@ -48,10 +48,10 @@ Por quê? Bem, pense em como um número aleatório é gerado normalmente. Quando
 No blockchain, não há **quase nenhuma fonte de aleatoriedade**. É determinista e tudo o que o contrato vê, o público vê. Por causa disso, alguém poderia enganar o sistema apenas olhando para o smart contract, vendo em que variável ele se baseia para aleatoriedade, e então a pessoa poderia manipulá-lo, se quisesse.
 
 ```solidity
-random(string(abi.encodePacked("FIRST_WORD", Strings.toString(tokenId))));
+random(string(abi.encodePacked("PRIMEIRA_PALAVRA", Strings.toString(tokenId))));
 ```
 
-O que isso está fazendo é pegar duas coisas: a string atual `FIRST_WORD` e uma versão stringificada do `tokenId`. Eu combino essas duas strings usando `abi.encodePacked` e então essa string combinada é o que eu uso como fonte de aleatoriedade.
+O que isso está fazendo é pegar duas coisas: a string atual `PRIMEIRA_PALAVRA` e uma versão stringificada do `tokenId`. Eu combino essas duas strings usando `abi.encodePacked` e então essa string combinada é o que eu uso como fonte de aleatoriedade.
 
 **Isso não é aleatoriedade verdadeira.** Mas é o melhor que temos por agora!
 
@@ -80,51 +80,59 @@ Depois de escrever tudo, vá em frente e execute-o usando `npx hardhat run scrip
 Isto é oque aparece no meu terminal.
 
 ```plaintext
-This is my NFT contract. Woah!
-Contract deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+Meu contrato de NFT! Tchu-hu
+Contrato implantado em: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+
 --------------------
-<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'><style>.base { fill: white; font-family: serif; font-size: 24px; }</style><rect width='100%' height='100%' fill='black' /><text x='50%' y='50%' class='base' dominant-baseline='middle' text-anchor='middle'>SandwichSakuraNinja</text></svg>
+<svg  xmlns='http://www.w3.org/2000/svg'  preserveAspectRatio='xMinYMin meet'  viewBox='0 0 350 350'>  <defs>    <linearGradient id='Gradient1'>      <stop class='stop1' offset='0%'/>      <stop class='stop2' offset='50%'/>      <stop class='stop3' offset='100%'/>    </linearGradient>  </defs>  <style>    .base {      fill: blue;      font-family: serif;      font-size: 20px;      color: #FFF;    }    .stop1 { stop-color: green; }    .stop2 { stop-color: white; stop-opacity: 0; }    .stop3 { stop-color: yellow; }      </style>  <rect width='100%' height='100%' fill='url(#Gradient1)' />  <text    x='50%'    y='50%'    class='base'    dominant-baseline='middle'    text-anchor='middle'  >FantaAcarajeAmora</text></svg>
 --------------------
-An NFT w/ ID 0 has been minted to 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+Um NFT com ID 0 foi cunhado para 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
 --------------------
-<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'><style>.base { fill: white; font-family: serif; font-size: 24px; }</style><rect width='100%' height='100%' fill='black' /><text x='50%' y='50%' class='base' dominant-baseline='middle' text-anchor='middle'>GoatSasukeNinja</text></svg>
+<svg  xmlns='http://www.w3.org/2000/svg'  preserveAspectRatio='xMinYMin meet'  viewBox='0 0 350 350'>  <defs>    <linearGradient id='Gradient1'>      <stop class='stop1' offset='0%'/>      <stop class='stop2' offset='50%'/>      <stop class='stop3' offset='100%'/>    </linearGradient>  </defs>  <style>    .base {      fill: blue;      font-family: serif;      font-size: 20px;      color: #FFF;    }    .stop1 { stop-color: green; }    .stop2 { stop-color: white; stop-opacity: 0; }    .stop3 { stop-color: yellow; }      </style>  <rect width='100%' height='100%' fill='url(#Gradient1)' />  <text    x='50%'    y='50%'    class='base'    dominant-baseline='middle'    text-anchor='middle'  >GrapeteMoquecaAcai</text></svg>
 --------------------
-An NFT w/ ID 1 has been minted to 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+Um NFT com ID 1 foi cunhado para 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
 ```
 
 Haha, isso é um monte de coisas. Vá em frente e copie um dos SVGs que foi gerado em seu terminal e cole-o [aqui](https://www.svgviewer.dev/) para ver o que você obtém.
 
 Você poderá ver o SVG que foi gerado! Aqui está o meu:
 
-![Untitled](https://i.imgur.com/uS8SXYu.png)
+![Untitled](https://i.imgur.com/2pX1cen.png)
 
 **TACALE PAU NESSE CARRINHO!!!!** Geramos isso aleatoriamente em nosso contrato! Se você pegar o outro SVG gerado perceberá que ele é diferente. Tudo está sendo gerado instantaneamente. YAY.
 
 👩‍💻 Gerando os metadados dinamicamente.
 ------------------
 
-Agora, precisamos definir os metadados JSON! Primeiro, precisamos de algumas funções auxiliares. Crie uma pasta chamada `libraries` em `contracts`. Em `libraries`, crie um arquivo chamado` Base64.sol` e copie e cole o código [Rever este link](https://gist.github.com/farzaa/f13f5d9bda13af68cc96b54851345832) nele. Este arquivo tem algumas funções auxiliares criadas por outra pessoa para nos ajudar a converter nosso SVG e JSON para Base64 no Solidity.
+Agora, precisamos definir os metadados JSON! Primeiro, precisamos de algumas funções auxiliares. Crie uma pasta chamada `libraries` em `contracts`. Em `libraries`, crie um arquivo chamado` Base64.sol` e copie e cole o código [desse link](https://gist.github.com/danicuki/4157b854d6dc83021674c5b08bd5f2df) nele. Este arquivo tem algumas funções auxiliares criadas por outra pessoa para nos ajudar a converter nosso SVG e JSON para Base64 no Solidity.
 
 Okay, agora atualize o nosso contrato.
 
-**Mesma coisa, escrevi todo o código e adicionei comentários [Rever este link](https://gist.github.com/farzaa/dc45da3eb91a41913767f3eb4d7830f1).**
+**Mesma coisa, escrevi todo o código e adicionei comentários [nesse link](https://gist.github.com/danicuki/0d93584e94042de12b4722fa10faa0dc).**
 
 Sinta-se à vontade para copiar e colar algumas dessas partes e entender como funciona depois de executá-lo :). Às vezes eu gosto de fazer isso porque posso ver o código sendo executado e entender como funciona depois!!
 
 Depois de executar o contrato, aqui está o que recebo do terminal:
 
 ```plaintext
-Compilation finished successfully
-This is my NFT contract. Woah!
-Contract deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+Compiled 2 Solidity files successfully
+Meu contrato de NFT! Tchu-hu
+Contrato implantado em: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+
 --------------------
-data:application/json;base64,eyJuYW1lIjogIlNhbmR3aWNoU2FrdXJhTmluamEiLCAiZGVzY3JpcHRpb24iOiAiQSBoaWdobHkgYWNjbGFpbWVkIGNvbGxlY3Rpb24gb2Ygc3F1YXJlcy4iLCAiaW1hZ2UiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBuYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNuSUhCeVpYTmxjblpsUVhOd1pXTjBVbUYwYVc4OUozaE5hVzVaVFdsdUlHMWxaWFFuSUhacFpYZENiM2c5SnpBZ01DQXpOVEFnTXpVd0p6NDhjM1I1YkdVK0xtSmhjMlVnZXlCbWFXeHNPaUIzYUdsMFpUc2dabTl1ZEMxbVlXMXBiSGs2SUhObGNtbG1PeUJtYjI1MExYTnBlbVU2SURJMGNIZzdJSDA4TDNOMGVXeGxQanh5WldOMElIZHBaSFJvUFNjeE1EQWxKeUJvWldsbmFIUTlKekV3TUNVbklHWnBiR3c5SjJKc1lXTnJKeUF2UGp4MFpYaDBJSGc5SnpVd0pTY2dlVDBuTlRBbEp5QmpiR0Z6Y3owblltRnpaU2NnWkc5dGFXNWhiblF0WW1GelpXeHBibVU5SjIxcFpHUnNaU2NnZEdWNGRDMWhibU5vYjNJOUoyMXBaR1JzWlNjK1UyRnVaSGRwWTJoVFlXdDFjbUZPYVc1cVlUd3ZkR1Y0ZEQ0OEwzTjJaejQ9In0=
+data:application/json;base64,eyJuYW1lIjogIkZhbnRhQWNhcmFqZUFtb3JhIiwgImRlc2NyaXB0aW9uIjogIlVtYSBjb2xlY2FvIGFjbGFtYWRhIGUgZmFtb3NhIGRlIE5GVHMgbWFyYXZpbGhvc29zLiIsICJpbWFnZSI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUFnZUcxc2JuTTlKMmgwZEhBNkx5OTNkM2N1ZHpNdWIzSm5Mekl3TURBdmMzWm5KeUFnY0hKbGMyVnlkbVZCYzNCbFkzUlNZWFJwYnowbmVFMXBibGxOYVc0Z2JXVmxkQ2NnSUhacFpYZENiM2c5SnpBZ01DQXpOVEFnTXpVd0p6NGdJRHhrWldaelBpQWdJQ0E4YkdsdVpXRnlSM0poWkdsbGJuUWdhV1E5SjBkeVlXUnBaVzUwTVNjK0lDQWdJQ0FnUEhOMGIzQWdZMnhoYzNNOUozTjBiM0F4SnlCdlptWnpaWFE5SnpBbEp5OCtJQ0FnSUNBZ1BITjBiM0FnWTJ4aGMzTTlKM04wYjNBeUp5QnZabVp6WlhROUp6VXdKU2N2UGlBZ0lDQWdJRHh6ZEc5d0lHTnNZWE56UFNkemRHOXdNeWNnYjJabWMyVjBQU2N4TURBbEp5OCtJQ0FnSUR3dmJHbHVaV0Z5UjNKaFpHbGxiblErSUNBOEwyUmxabk0rSUNBOGMzUjViR1UrSUNBZ0lDNWlZWE5sSUhzZ0lDQWdJQ0JtYVd4c09pQmliSFZsT3lBZ0lDQWdJR1p2Ym5RdFptRnRhV3g1T2lCelpYSnBaanNnSUNBZ0lDQm1iMjUwTFhOcGVtVTZJREl3Y0hnN0lDQWdJQ0FnWTI5c2IzSTZJQ05HUmtZN0lDQWdJSDBnSUNBZ0xuTjBiM0F4SUhzZ2MzUnZjQzFqYjJ4dmNqb2daM0psWlc0N0lIMGdJQ0FnTG5OMGIzQXlJSHNnYzNSdmNDMWpiMnh2Y2pvZ2QyaHBkR1U3SUhOMGIzQXRiM0JoWTJsMGVUb2dNRHNnZlNBZ0lDQXVjM1J2Y0RNZ2V5QnpkRzl3TFdOdmJHOXlPaUI1Wld4c2IzYzdJSDBnSUNBZ0lDQThMM04wZVd4bFBpQWdQSEpsWTNRZ2QybGtkR2c5SnpFd01DVW5JR2hsYVdkb2REMG5NVEF3SlNjZ1ptbHNiRDBuZFhKc0tDTkhjbUZrYVdWdWRERXBKeUF2UGlBZ1BIUmxlSFFnSUNBZ2VEMG5OVEFsSnlBZ0lDQjVQU2MxTUNVbklDQWdJR05zWVhOelBTZGlZWE5sSnlBZ0lDQmtiMjFwYm1GdWRDMWlZWE5sYkdsdVpUMG5iV2xrWkd4bEp5QWdJQ0IwWlhoMExXRnVZMmh2Y2owbmJXbGtaR3hsSnlBZ1BrWmhiblJoUVdOaGNtRnFaVUZ0YjNKaFBDOTBaWGgwUGp3dmMzWm5QZz09In0=
 --------------------
-An NFT w/ ID 0 has been minted to 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+Um NFT com ID 0 foi cunhado para 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
 --------------------
-data:application/json;base64,eyJuYW1lIjogIkdvYXRTYXN1a2VOaW5qYSIsICJkZXNjcmlwdGlvbiI6ICJBIGhpZ2hseSBhY2NsYWltZWQgY29sbGVjdGlvbiBvZiBzcXVhcmVzLiIsICJpbWFnZSI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MG5hSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY25JSEJ5WlhObGNuWmxRWE53WldOMFVtRjBhVzg5SjNoTmFXNVpUV2x1SUcxbFpYUW5JSFpwWlhkQ2IzZzlKekFnTUNBek5UQWdNelV3Sno0OGMzUjViR1UrTG1KaGMyVWdleUJtYVd4c09pQjNhR2wwWlRzZ1ptOXVkQzFtWVcxcGJIazZJSE5sY21sbU95Qm1iMjUwTFhOcGVtVTZJREkwY0hnN0lIMDhMM04wZVd4bFBqeHlaV04wSUhkcFpIUm9QU2N4TURBbEp5Qm9aV2xuYUhROUp6RXdNQ1VuSUdacGJHdzlKMkpzWVdOckp5QXZQangwWlhoMElIZzlKelV3SlNjZ2VUMG5OVEFsSnlCamJHRnpjejBuWW1GelpTY2daRzl0YVc1aGJuUXRZbUZ6Wld4cGJtVTlKMjFwWkdSc1pTY2dkR1Y0ZEMxaGJtTm9iM0k5SjIxcFpHUnNaU2MrUjI5aGRGTmhjM1ZyWlU1cGJtcGhQQzkwWlhoMFBqd3ZjM1puUGc9PSJ9
+data:application/json;base64,eyJuYW1lIjogIkdyYXBldGVNb3F1ZWNhQWNhaSIsICJkZXNjcmlwdGlvbiI6ICJVbWEgY29sZWNhbyBhY2xhbWFkYSBlIGZhbW9zYSBkZSBORlRzIG1hcmF2aWxob3Nvcy4iLCAiaW1hZ2UiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlBZ2VHMXNibk05SjJoMGRIQTZMeTkzZDNjdWR6TXViM0puTHpJd01EQXZjM1puSnlBZ2NISmxjMlZ5ZG1WQmMzQmxZM1JTWVhScGJ6MG5lRTFwYmxsTmFXNGdiV1ZsZENjZ0lIWnBaWGRDYjNnOUp6QWdNQ0F6TlRBZ016VXdKejRnSUR4a1pXWnpQaUFnSUNBOGJHbHVaV0Z5UjNKaFpHbGxiblFnYVdROUowZHlZV1JwWlc1ME1TYytJQ0FnSUNBZ1BITjBiM0FnWTJ4aGMzTTlKM04wYjNBeEp5QnZabVp6WlhROUp6QWxKeTgrSUNBZ0lDQWdQSE4wYjNBZ1kyeGhjM005SjNOMGIzQXlKeUJ2Wm1aelpYUTlKelV3SlNjdlBpQWdJQ0FnSUR4emRHOXdJR05zWVhOelBTZHpkRzl3TXljZ2IyWm1jMlYwUFNjeE1EQWxKeTgrSUNBZ0lEd3ZiR2x1WldGeVIzSmhaR2xsYm5RK0lDQThMMlJsWm5NK0lDQThjM1I1YkdVK0lDQWdJQzVpWVhObElIc2dJQ0FnSUNCbWFXeHNPaUJpYkhWbE95QWdJQ0FnSUdadmJuUXRabUZ0YVd4NU9pQnpaWEpwWmpzZ0lDQWdJQ0JtYjI1MExYTnBlbVU2SURJd2NIZzdJQ0FnSUNBZ1kyOXNiM0k2SUNOR1JrWTdJQ0FnSUgwZ0lDQWdMbk4wYjNBeElIc2djM1J2Y0MxamIyeHZjam9nWjNKbFpXNDdJSDBnSUNBZ0xuTjBiM0F5SUhzZ2MzUnZjQzFqYjJ4dmNqb2dkMmhwZEdVN0lITjBiM0F0YjNCaFkybDBlVG9nTURzZ2ZTQWdJQ0F1YzNSdmNETWdleUJ6ZEc5d0xXTnZiRzl5T2lCNVpXeHNiM2M3SUgwZ0lDQWdJQ0E4TDNOMGVXeGxQaUFnUEhKbFkzUWdkMmxrZEdnOUp6RXdNQ1VuSUdobGFXZG9kRDBuTVRBd0pTY2dabWxzYkQwbmRYSnNLQ05IY21Ga2FXVnVkREVwSnlBdlBpQWdQSFJsZUhRZ0lDQWdlRDBuTlRBbEp5QWdJQ0I1UFNjMU1DVW5JQ0FnSUdOc1lYTnpQU2RpWVhObEp5QWdJQ0JrYjIxcGJtRnVkQzFpWVhObGJHbHVaVDBuYldsa1pHeGxKeUFnSUNCMFpYaDBMV0Z1WTJodmNqMG5iV2xrWkd4bEp5QWdQa2R5WVhCbGRHVk5iM0YxWldOaFFXTmhhVHd2ZEdWNGRENDhMM04yWno0PSJ9
 --------------------
-An NFT w/ ID 1 has been minted to 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+Um NFT com ID 1 foi cunhado para 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
 ```
 
 ISSO É ÉPICO. 
@@ -171,7 +179,7 @@ console.log(
 );
 console.log("--------------------\n");
 ```
-![image](https://i.imgur.com/CsBxROj.png)
+![image](https://i.imgur.com/rDuu89V.png)
 
 🚀 Deployando na Rinkeby
 ------------------
@@ -202,4 +210,4 @@ Então, vamos construir isso :)!
 🚨 Relatório de progresso.
 ------------------------
 
-Se você tiver um, envie uma captura de tela de seu novo NFT gerado dinamicamente no OpenSea/Rarible em #progress :). Além disso - se você ainda não tweetou uma imagem de sua coleção maravilhosa de NFT, agora é a hora de fazê-lo!! Lembre-se de marcar @Web3dev_ !!! Traremos o máximo de pessoas possível!
+Se você tiver um, envie uma captura de tela de seu novo NFT gerado dinamicamente no OpenSea/Rarible em #progress :). Além disso - se você ainda não tweetou uma imagem de sua coleção maravilhosa de NFT, agora é a hora de fazê-lo!! Lembre-se de marcar @web3dev_ !!! Vamos trazer o máximo de pessoas possível para esse bootcamp!
