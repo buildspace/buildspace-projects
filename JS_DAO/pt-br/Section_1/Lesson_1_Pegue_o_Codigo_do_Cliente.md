@@ -71,7 +71,7 @@ Uma vez que sua carteira estiver configurada, certifique-se de mudar para a rede
 
 Nós **não** vamos fazer o deploy na rede mainnet do Ethereum. Por que? Porque custa dinheiro de verdade e não vale a pena quando se está testando. Nós vamos começar com uma "testnet" que é um clone da "mainnet" mas que usa dinheiro de mentira para que possamos testar o tanto que quisermos. Mas é importante saber que que testnets são rodadas por miners que imitam os cenários do mundo real.
 
-Nós usaremos a rede "Rinkeby" que é rodada pela Ethereum Foundation. Para conseguir alguns ETH fake, vá no discord do buildspace, e vá em `#faucet-request` dentro da sessão "Resources". Nesse canal rode:
+Nós usaremos a rede "Rinkeby" que é rodada pela Ethereum Foundation. Para conseguir alguns ETH fake, vá no discord do buildspace, e vá em `#faucet-request` dentro da seção "Resources". Nesse canal rode:
 
 ```plaintext
 /faucet INSIRA_SEU_ENDEREÇO_PUBLICO_AQUI

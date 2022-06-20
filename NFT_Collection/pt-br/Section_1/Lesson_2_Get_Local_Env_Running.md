@@ -14,11 +14,11 @@ O quadro maior aqui é:
 
 3 -- Nós vamos construir um site que permitirá que as pessoas "mintem" NFT's facilmente da nossa coleção.
 
-Eu também recomendo ler [esses](https://ethereum.org/pt-br/developers/docs/intro-to-ethereum/) documentos quando você quiser, por diversão. Esses são os melhores guias na internet para entender como o Ethereum funciona, na minha opinião.
+Eu também recomendo ler [esses](https://solidity.web3dev.com.br/) documentos quando você quiser, por diversão. Esse é um dos melhores guias na internet para entender como o Ethereum funciona, na minha opinião.
 
 ## ⚙️ Ferramentas para o ambiente local.
 
-Nós vamos usar muito uma ferramente chamada **Hardhat**, a qual vai nos deixar compilar e testar rapidamente os contratos inteligentes localmente. Primeiro, você precisa ter instalado o node/npm. Se você não tiver, dê uma olhada [aqui](https://hardhat.org/tutorial/setting-up-the-environment.html).
+Nós vamos usar muito uma ferramente chamada **Hardhat**, a qual vai nos deixar compilar e testar rapidamente os contratos inteligentes localmente. Primeiro, você precisa ter instalado o node/npm. Se você não tiver, dê uma olhada [aqui](https://hardhat.org/tutorial/setting-up-the-environment.html). Se estiver usando Windows, pode também usar [essa página](https://www.web3dev.com.br/web3melk/como-preparar-o-seu-windows-para-participar-dos-bootcamps-da-web3dev-1dc3)
 
 _Nota: eu estou no Node 16. Eu sei que algumas pessoas tiveram "erros de falta de memória" em versões mais velhas do node, então se isso acontecer, pegue o Node 16!_
 
@@ -43,15 +43,14 @@ npx hardhat
 
 _Nota: Se você está no Windows usando Git Bash para instalar hardhat, você pode encontrar um erro nesse passo (HH1). Você pode tentar usar a CMD do Windows para instalar o HardHat se tiver muitos problemas. Informações adicionais podem ser encontradas [aqui](https://github.com/nomiclabs/hardhat/issues/1400#issuecomment-824097242)._
 
-Escolha a opção de criar um projeto básico de teste. Diga sim para tudo.
+Escolha a opção de criar um projeto básico de teste (*Create a basic sample project*). Diga "sim" para tudo.
 
 O projeto vai pedir para instalar `hardhat-waffle` e `hardhat-ethers`. Essas são coisinhas que vamos usar depois.
 
 Vá em frente e instale essas outras dependências no caso delas não tiverem sido instaladas automaticamente.
 
 ```bash
-npm install --save-dev @nomiclabs/hardhat-waffle
-ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 ```
 
 Você também vai querer instalar algo chamado **OpenZeppelin**, que é uma outra library muito usada para desenvolver contratos inteligentes seguros. Nós vamos aprender mais sobre isso depois. Por agora, só instale-o.
@@ -80,4 +79,4 @@ Isso é bastante épico. Vamos entrar em mais detalhes, mas basicamente o que es
 
 Se você estiver curioso, sinta-se a vontade para olhar o código dentro do projeto e ver como ele funciona. Especificamente, olhe o arquivo `Greeter.sol` que é o contrato inteligente e `sample-script.js` que roda o contrato.
 
-Uma vez que tiver acabado de explorar, vamos para a próxima sessão e começar nosso próprio contrato NFT.
+Uma vez que tiver acabado de explorar, vamos para a próxima seção e começar nosso próprio contrato NFT.

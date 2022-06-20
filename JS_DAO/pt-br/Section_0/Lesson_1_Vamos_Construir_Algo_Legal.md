@@ -28,7 +28,7 @@ Quando você chegar no fim desse projeto, você receberá um NFT. Ele é assim:
 
 Quando você tiver uma dúvida, mande-a no canal do projeto.
 
-Esse projeto é dividido em 4 sessões. Você pode ver em que sessão você está pela barra de progresso no topo da página no seu dashboard. Por exemplo, se você está preso em alguma parte da Sessão 3, você deve pedir ajuda em `#section-3-help` no Discord. Se você faz parte de vários projetos, cheque se está fazendo a pergunta na categoria correta do projeto!
+Esse projeto é dividido em 4 sessões. Você pode ver em que seção você está pela barra de progresso no topo da página no seu dashboard. Por exemplo, se você está preso em alguma parte da seção 3, você deve pedir ajuda em `#section-3-help` no Discord. Se você faz parte de vários projetos, cheque se está fazendo a pergunta na categoria correta do projeto!
 
 **Se precisar de ajuda com alguma coisa sinta-se a vontade para marcar o time do thirdweb diretamente.**
 

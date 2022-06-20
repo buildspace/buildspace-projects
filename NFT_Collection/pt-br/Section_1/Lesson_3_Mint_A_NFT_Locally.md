@@ -4,7 +4,7 @@
 
 ---
 
-_Nota: Se você já sabe como fazer muitas coisas dessa sessão pelo projeto "WavePortal" que fizemos no passado, incrível! Você vai passar por isso rápido :). Muito disso é repetido._
+_Nota: Se você já sabe como fazer muitas coisas dessa seção pelo projeto "Portal Tchauzinho" que fizemos no nosso outro bootcamp, incrível! Você vai passar por isso rápido :). Muito disso é repetido._
 
 Vamos fazer uma pequena faxina.
 
@@ -26,12 +26,13 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 contract MyEpicNFT {
    constructor() {
-       console.log("This is my NFT contract. Whoa!");
+      console.log("Esse eh meu contrato de NFT! Tchu-hu");
    }
 }
 ```
+Nota 1: Não use acentos no código do seu contrato, pois o Solidity não aceita esses caracteres; 
 
-Nota: Algumas vezes o VSCode por si só mostrará erros que não são reais, por exemplo, pode sublinhar o import do hardhat e falar que ele não existe. Isso acontece porque o compilador global de Solidity não está configurado localmente. Se você não souber como consertar isso, não se preocupe. Ignore esses avisos por enquanto. EU também recomendo que você não use o terminal do VSCode, use o seu terminal separado! As vezes o VSCode traz problemas se o compilador não estiver configurado.
+Nota 2: Algumas vezes o VSCode por si só mostrará erros que não são reais, por exemplo, pode sublinhar o import do hardhat e falar que ele não existe. Isso acontece porque o compilador global de Solidity não está configurado localmente. Se você não souber como consertar isso, não se preocupe. Ignore esses avisos por enquanto. EU também recomendo que você não use o terminal do VSCode, use o seu terminal separado! As vezes o VSCode traz problemas se o compilador não estiver configurado.
 
 Vamos ver linha por linha aqui.
 
@@ -56,7 +57,7 @@ Uma mágica é dada para nós pelo Hardhat para poder fazer alguns logs no conso
 ```solidity
 contract MyEpicNFT {
     constructor() {
-        console.log("This is my NFT contract. Whoa!");
+        console.log("Esse eh meu contrato de NFT! Tchu-hu");
     }
 }
 ```
@@ -83,7 +84,7 @@ const main = async () => {
   const nftContractFactory = await hre.ethers.getContractFactory("MyEpicNFT");
   const nftContract = await nftContractFactory.deploy();
   await nftContract.deployed();
-  console.log("Contract deployed to:", nftContract.address);
+  console.log("Contrato implantado em:", nftContract.address);
 };
 const runMain = async () => {
   try {
@@ -126,7 +127,7 @@ Nós vamos esperar até que o nosso contrato esteja oficialmente minerado e impl
 Nosso `constructor` roda quando nós estamos completamente implantados (deployed)!
 
 ```javascript
-console.log("Contract deployed to:", nftContract.address);
+console.log("Contrato implantado em:", nftContract.address)
 ```
 
 Finalmente, uma vez que estiver implantado,  `nftContract.address`  vai basicamente nos dar o endereço do contrato implementado. Esse endereço é como nós vamos achar o nosso contrato na blockchain. Nesse momento nossa blockchain local só tem nós. Então, isso não é tão legal.
@@ -145,7 +146,7 @@ npx hardhat run scripts/run.js
 
 Você deve ver o seu  `console.log`  rodar dentro do contrato e depois você deve ver o endereço do contrato escrito!!! Aqui está o que eu consegui:
 
-![Untitled](https://i.imgur.com/CSBimfv.png)
+![Untitled](https://i.imgur.com/AzJXG7c.png)
 
 ## 🎩 Hardhat & HRE
 

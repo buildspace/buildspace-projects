@@ -20,11 +20,13 @@ Isso é tudo muito novo, há muita empolgação em torno disso, e pode ser muito
 
 Com este projeto, você irá aprender sobre tecnologia das crypto, escrevendo o código e apenas entendendo as coisas boas. Sem enrolação. Também iremos abordar a teoria e conceitos mais aprofundados, mas tudo estruturado em torno do projeto.
 
-👀 No final, ganhe um NFT da web3dev.
+👀 No final, ganhe um NFT da WEB3DEV.
 -------------------
 
 Quando você chegar no fim deste projeto, poderá ganhar um NFT. 
-**Realizaremos o airdrop de um NFT surpresa para a sua carteira conectada se você terminar o projeto dentro de 7 dias após o kick-off.**
+**Realizaremos o airdrop de um NFT para a sua carteira conectada se você terminar o projeto dentro de 9 dias após o kick-off.**
+
+![Imagem do NFT](https://i.imgur.com/ds17Jc4.png)
 
 A sua turma terá um nome especial que aparecerá no NFT - cada turma tem um nome diferente! Além disso, o # embaixo à direita será o # cunhado que dependerá de quando você conquistar o NFT.
 
@@ -34,7 +36,7 @@ Você conhece aqueles sites onde as pessoas estão ganhando milhões de dólares
 
 Seu projeto permitirá que os usuários conectem suas carteiras Ethereum e cunhem (minting) um NFT em suas carteiras para que eles realmente as possuem. Eles poderão até revender o NFT no OpenSea. E o próprio NFT pode ser personalizado para o que você quiser. 
 
-![Rever este link](https://i.imgur.com/n2gtgFC.png)
+![Imagem Site](https://i.imgur.com/heRm01t.png)
 
 Eles vão até aparecer no OpenSea :).
 
@@ -64,14 +66,14 @@ Elas estarão acontecendo no [Twitch](https://www.twitch.tv/web3dev). Certifique
 
 **[Todo o conteúdo é completamente open-source](https://github.com/w3b3d3v/buildspace-projects/tree/web3dev-version/NFT_Collection/pt-br)**. Se você ver algum problema, erro de digitação, etc — você poderá consertar você mesmo facilmente e depois criando um PR! Se você precisar de ajuda nisso, mande uma mensagem privada para mim no Discord `@danicuki` :).
 
-Vamos deixar alguns repositórios open-source!!
+Vamos deixar nosso repositório open-source!!
 
-E por último, deixe uma ⭐ no repositorio se você estiver se sentindo uma diva! 
+E por último, deixe uma ⭐ no repositório se você estiver se sentindo brisado! 
 
 
 🚨 Curioso para trabalhar na web3?
 -------------------
 
-Estamos em parceria com um grupo incrível de empresas web3 que querem contratar pessoas. **Se você estiver apenas curiosidade**, clique em "Perfil" no menu, preencha o formulário com seus dados que vamos te ajudar com oportunidades!!
+Estamos em parceria com um grupo incrível de empresas web3 que querem contratar pessoas. **Se você tiver apenas curiosidade**, clique em "Perfil" no menu, preencha o formulário com seus dados que vamos te ajudar com oportunidades!
 
 Na pior das hipóteses, você poderá falar com algumas pessoas muito legais na Web3 :).

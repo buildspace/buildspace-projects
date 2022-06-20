@@ -14,7 +14,7 @@ Sabemos que cada esboço é único, porque podemos ver um lápis físico desenha
 
 Também sabemos que Picasso que desenhou os esboços. Como? Bem - porque Picasso disse que desenhou e assinou-os! Você pode comprar esse esboço original de Picasso agora e ter a certificação de que você tem um "Original Picasso", da galeria que Picasso os vendeu.
 
-Você precisa confiar que o certificado da galeria será respeitado a longo termo, mas, no geral, isso é fácil!
+Você precisa confiar que o certificado da galeria será respeitado a longo prazo, mas, no geral, isso é fácil!
 
 ![](https://i.imgur.com/FLBd1l0.png)
 
