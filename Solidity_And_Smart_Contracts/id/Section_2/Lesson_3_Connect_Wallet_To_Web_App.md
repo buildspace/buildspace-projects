@@ -235,4 +235,4 @@ Sekarang, saatnya untuk keajaiban! Lihat video di bawah ini:
 
 ## 🚨 Diperlukan: Sebelum kamu mengklik "Pelajaran Berikutnya"
 
-Kita baru saja melakukan banyak hal dalam dua pelajaran terakhir. Ada pertanyaan? Pastikan untuk bertanya di #bagian-2-bantuan!
+Kita baru saja melakukan banyak hal dalam dua pelajaran terakhir. Ada pertanyaan? Pastikan untuk bertanya di #section-2-help!

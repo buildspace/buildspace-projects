@@ -182,7 +182,7 @@ const wave = async () => {
         console.log("Retrieved total wave count...", count.toNumber());
 
         /*
-        * Jalankan melambai aktual dari kontrak pintar Anda
+        * Jalankan melambai aktual dari kontrak pintar kamu
         */
         const waveTxn = await wavePortalContract.wave();
         console.log("Mining...", waveTxn.hash);
@@ -219,7 +219,7 @@ Kemungkinannya benar-benar tidak terbatas.
 
 *Catatan: jika kamu tidak melakukan ini, Farza akan sangat sedih :(.*
 
-Sesuaikan situs kamu sedikit untuk menunjukkan jumlah total lambaian. Mungkin menunjukkan bilah pemuatan saat gelombang sedang ditambang, apa pun yang kamu inginkan. Lakukan sesuatu yang sedikit berbeda!
+Sesuaikan situs kamu sedikit untuk menunjukkan jumlah total lambaian. Mungkin menunjukkan bilah pemuatan saat lambaian sedang ditambang, apa pun yang kamu inginkan. Lakukan sesuatu yang sedikit berbeda!
 
 Setelah kamu merasa siap, bagikan tautan ke situs web kamu dengan kami di #progress sehingga kami dapat menghubungkan dompet kami dan melambaikan tangan kepada kamu :).
 
