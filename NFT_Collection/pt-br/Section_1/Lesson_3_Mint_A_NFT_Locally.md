@@ -1,5 +1,3 @@
-# Lesson_3_Mint_A_NFT_Locally
-
 📝 Escrever nosso contrato inicial.
 
 ---

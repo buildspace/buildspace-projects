@@ -1,5 +1,3 @@
-# Lesson_2_Get_Local_Env_Running
-
 ## 📚 Uma pequena introdução sobre blockchain
 
 Antes de qualquer coisa, vamos precisar colocar nossa rede local de Ethereum para funcionar. É dessa maneira que vamos poder compilar e testar nosso código de contratos inteligentes! Você sabe como é necessário criar um ambiente local para trabalhar? Mesma coisa aqui!

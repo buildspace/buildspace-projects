@@ -1,4 +1,4 @@
-# Lesson_1_What_Is_A_NFT
+# O que é um NFT
 
 Eu vi tantos tutoriais complicarem isso. Então, vou tentar manter a explicação simples :).
 
