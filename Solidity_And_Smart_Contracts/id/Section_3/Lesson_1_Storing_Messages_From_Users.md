@@ -135,7 +135,7 @@ Inilah yang aku dapatkan di terminalku ketika aku menjalankan ini menggunakan `n
 
 ![](https://i.imgur.com/oPKy2dP.png)
 
-Dor! Cukup mengagumkan, kan :)?
+Duar! Cukup mengagumkan, kan :)?
 
 Array terlihat sedikit menakutkan tetapi kita dapat melihat data di sebelah kata `waver`, `message`, dan `timestamp`!! Ini dengan benar menyimpan pesan kita `"A message"` dan `"Another message"` :).
 

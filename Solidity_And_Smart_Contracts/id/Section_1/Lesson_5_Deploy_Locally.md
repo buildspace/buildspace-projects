@@ -20,7 +20,7 @@ Buka terminal kamu dan buat jendela **baru**. Di jendela ini, cd kembali ke proy
 npx hardhat node
 ```
 
-DOR.
+DUAR.
 
 Kamu baru saja memulai jaringan Ethereum lokal yang **tetap hidup**. Dan, seperti yang kamu lihat, Hardhat memberi kita 20 akun untuk digunakan dan memberi mereka semua 10.000 ETH, kita sekarang kaya! Wow! Proyek terbaik yang pernah ada.
 

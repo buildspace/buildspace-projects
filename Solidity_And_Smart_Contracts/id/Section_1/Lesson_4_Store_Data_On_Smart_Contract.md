@@ -38,7 +38,7 @@ contract WavePortal {
 }
 ```
 
-Dor!
+Duar!
 
 Jadi, begitulah cara kamu menulis fungsi di Solidity. Dan, kita juga menambahkan variabel `totalWaves` yang secara otomatis diinisialisasi ke 0. Tapi, variabel ini istimewa karena disebut "state variable" dan keren karena disimpan secara permanen di penyimpanan kontrak.
 
