@@ -52,7 +52,7 @@ emit NewWave(msg.sender, block.timestamp, _message);
 
 Pada tingkat dasar, event adalah pesan yang dikeluarkan oleh kontrak pintar kita yang dapat kita tangkap pada klien kita secara real-time.
 
-Katakanlah aku sedang bersantai di situs webmu dan aku baru saja membukanya. Saat aku melakukan ini, temanmu yang lain Jeremy melambai padamu. Saat ini, satu-satunya caraku melihat gelombang Jeremy adalah jika aku menyegarkan halamanku. Ini sepertinya buruk. Bukankah lebih keren jika aku tahu bahwa kontrak itu telah diperbarui dan UIku diperbarui secara ajaib?
+Katakanlah aku sedang bersantai di situs webmu dan aku baru saja membukanya. Saat aku melakukan ini, temanmu yang lain Jeremy melambai padamu. Saat ini, satu-satunya caraku melihat lambaian Jeremy adalah jika aku menyegarkan halamanku. Ini sepertinya buruk. Bukankah lebih keren jika aku tahu bahwa kontrak itu telah diperbarui dan UIku diperbarui secara ajaib?
 
 Bahkan sekarang, agak menjengkelkan ketika kita sendiri yang mengirimkan pesan, dan kemudian kita harus menunggu untuk ditambang dan kemudian menyegarkan halaman untuk melihat semua daftar pesan yang diperbarui, bukan? Mari kita perbaiki itu.
 
@@ -126,7 +126,7 @@ Aku juga dapat mengakses data tersebut pada event tersebut seperti `message` dan
 
 Ini sangat kuat. Ini memungkinkan kita membuat aplikasi web yang diperbarui secara real-time :). Pikirkan jika kamu membuat sesuatu seperti Uber atau Twitter di blockchain, aplikasi web yang diperbarui secara real-time menjadi sangat penting.
 
-Aku ingin Anda meretas ini dan membangun apa pun yang kamu inginkan :).
+Aku ingin kamu meretas ini dan membangun apa pun yang kamu inginkan :).
 
 
 ## 🙉 Catatan di github
