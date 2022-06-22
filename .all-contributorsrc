@@ -2317,6 +2317,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ducksblock",
+      "name": "ducksblock",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105146670?v=4",
+      "profile": "https://github.com/ducksblock",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
