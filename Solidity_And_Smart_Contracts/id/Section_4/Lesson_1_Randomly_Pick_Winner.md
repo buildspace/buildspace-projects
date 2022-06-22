@@ -1,6 +1,6 @@
 ## 😈 Pilih pemenang secara acak-
 
-Jadi sekarang, kode kita diatur untuk memberikan 0,0001 ETH setiap saat! Kontrak kita akan kehabisan uang cukup cepat, dan kemudian kesenangan berakhir dan kita perlu menambahkan lebih banyak dana ke kontrak kita. Dalam pelajaran ini, saya akan memandu kamu melalui cara:
+Jadi sekarang, kode kita diatur untuk memberikan 0,0001 ETH setiap saat! Kontrak kita akan kehabisan uang cukup cepat, dan kemudian kesenangan berakhir dan kita perlu menambahkan lebih banyak dana ke kontrak kita. Dalam pelajaran ini, aku akan memandu kamu melalui cara:
 
 1\. Pilih pemenang **secara acak**.
 
@@ -8,9 +8,7 @@ Jadi sekarang, kode kita diatur untuk memberikan 0,0001 ETH setiap saat! Kontrak
 
 Mari kita lakukan pemenang acak terlebih dahulu!
 
-So, generating a random number in smart contracts is widely known as a **difficult problem**.
-
-Jadi, menghasilkan angka acak dalam kontrak pintar dikenal luas sebagai **masalah sulit**.
+adi, menghasilkan angka acak dalam kontrak pintar dikenal luas sebagai **masalah sulit**.
 
 Mengapa? Nah, pikirkan bagaimana angka acak dihasilkan secara normal. Saat kamu membuat angka acak secara normal dalam sebuah program, **ini akan mengambil sekumpulan angka berbeda dari komputermu sebagai sumber keacakan** seperti: kecepatan kipas, suhu CPU, berapa kali kamu telah menekan "L" pada 15:52 karena kamu telah membeli komputer, kecepatan internet kamu, dan banyak # lain yang sulit untuk kamu kendalikan. Dibutuhkan **semua** angka yang "acak" ini dan menggabungkannya ke dalam algoritma yang menghasilkan angka yang dianggap sebagai upaya terbaik pada angka yang benar-benar "acak". Masuk akal?
 
@@ -29,7 +27,7 @@ contract WavePortal {
     uint256 totalWaves;
 
     /*
-     * We will be using this below to help generate a random number
+     * Kita akan menggunakan ini di bawah ini untuk membantu menghasilkan nomor acak
      */
     uint256 private seed;
 
@@ -46,7 +44,7 @@ contract WavePortal {
     constructor() payable {
         console.log("We have been constructed!");
         /*
-         * Set the initial seed
+         * Setel seed awal
          */
         seed = (block.timestamp + block.difficulty) % 100;
     }
@@ -58,20 +56,20 @@ contract WavePortal {
         waves.push(Wave(msg.sender, _message, block.timestamp));
 
         /*
-         * Generate a new seed for the next user that sends a wave
+         * Hasilkan seed baru untuk pengguna berikutnya yang mengirimkan lambaian
          */
         seed = (block.difficulty + block.timestamp + seed) % 100;
 
         console.log("Random # generated: %d", seed);
 
         /*
-         * Give a 50% chance that the user wins the prize.
+         * Berikan kesempatan 50% bahwa pengguna memenangkan hadiah.
          */
         if (seed <= 50) {
             console.log("%s won!", msg.sender);
 
             /*
-             * The same code we had before to send the prize.
+             * Kode yang sama yang kita miliki sebelumnya untuk mengirim hadiah.
              */
             uint256 prizeAmount = 0.0001 ether;
             require(
@@ -95,9 +93,7 @@ contract WavePortal {
 }
 ```
 
-Here, I take two numbers given to me by Solidity, `block.difficulty` and `block.timestamp` and combine them to create a random number. `block.difficulty` tells miners how hard the block will be to mine based on the transactions in the block. Blocks get harder for a # of reasons, but, mainly they get harder when there are more transactions in the block (some miners prefer easier blocks, but, these payout less). `block.timestamp` is just the Unix timestamp that the block is being processed.
-
-Di sini, saya mengambil dua angka yang diberikan kepada saya oleh Solidity, `block.difficulty` dan `block.timestamp` dan menggabungkannya untuk membuat angka acak. `block.difficulty` memberi tahu penambang seberapa sulit blok itu akan ditambang berdasarkan transaksi di blok tersebut. Blok menjadi lebih sulit karena # alasan, tetapi, terutama semakin sulit saat ada lebih banyak transaksi di blok tersebut (beberapa penambang lebih menyukai blok yang lebih mudah, tetapi pembayarannya lebih sedikit). `block.timestamp` hanyalah stempel waktu Unix saat blok sedang diproses.
+Di sini, aku mengambil dua angka yang diberikan kepada ku oleh Solidity, `block.difficulty` dan `block.timestamp` dan menggabungkannya untuk membuat angka acak. `block.difficulty` memberi tahu penambang seberapa sulit blok itu akan ditambang berdasarkan transaksi di blok tersebut. Blok menjadi lebih sulit karena # alasan, tetapi, terutama semakin sulit saat ada lebih banyak transaksi di blok tersebut (beberapa penambang lebih menyukai blok yang lebih mudah, tetapi pembayarannya lebih sedikit). `block.timestamp` hanyalah stempel waktu Unix saat blok sedang diproses.
 
 #s ini *cukup* acak. Namun, secara teknis, `block.difficulty` dan `block.timestamp` dapat dikendalikan oleh penyerang yang canggih. 
 
@@ -175,8 +171,6 @@ Duar! Berhasil. Saat "79" dibuat, pengguna tidak memenangkan hadiah. Tapi, ketik
 
 ## Cooldown untuk mencegah spammer
 
-Awesome. You have a way to randomly send ETH to people now! Now, it might be useful to add a cooldown function to your site so people can't just spam wave at you. Why? Well, maybe you just don't want them to keep on trying to win the prize over and over by waving at you. Or, maybe you don't want *just* *their* messages filling up your wall of messages.
-
 Luar biasa. Aku memiliki cara untuk mengirim ETH secara acak kepada orang-orang sekarang! Sekarang, mungkin berguna untuk menambahkan fungsi cooldown ke situsmu sehingga orang tidak bisa hanya mengirim spam ke kamu. Mengapa? Yah, mungkin kamu hanya tidak ingin mereka terus mencoba memenangkan hadiah berulang kali dengan melambai padamu. Atau, mungkin kamu tidak ingin *hanya* pesan *mereka* memenuhi dinding pesanmu.
 
 Lihat kodenya. Aku menambahkan komentar di mana aku menambahkan baris baru.
@@ -206,7 +200,7 @@ contract WavePortal {
 
     /*
      * Ini adalah address => pemetaan uint, artinya aku dapat mengaitkan alamat dengan angka!
-     * Dalam hal ini, aku akan menyimpan alamat dengan terakhir kali pengguna melambai pada kami.
+     * Dalam hal ini, aku akan menyimpan alamat dengan terakhir kali pengguna melambai pada kita.
      */
     mapping(address => uint256) public lastWavedAt;
 
