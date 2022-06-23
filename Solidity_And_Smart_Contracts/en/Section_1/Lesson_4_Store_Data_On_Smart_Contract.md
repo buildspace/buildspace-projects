@@ -1,5 +1,4 @@
-📦 Store the data!
-------------------
+## 📦 Store the data!
 
 From here, let's add some fanciness to our contract.
 
@@ -47,8 +46,7 @@ We also use some magic here with `msg.sender`. This is the wallet address of the
 
 In the future, we can write functions that only certain wallet addresses can hit. For example, we can change this function so that only our address is allowed to send a wave. Or, maybe have it where only your friends can wave at you!
 
-✅ Updating run.js to call our functions
----------------------------------------
+## ✅ Updating run.js to call our functions
 
 So, `run.js` needs to change!
 
@@ -65,7 +63,7 @@ So now we want to test those functions specifically!
 ```javascript
 const main = async () => {
   const [owner, randomPerson] = await hre.ethers.getSigners();
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
 
@@ -74,7 +72,7 @@ const main = async () => {
 
   let waveCount;
   waveCount = await waveContract.getTotalWaves();
-  
+
   let waveTxn = await waveContract.wave();
   await waveTxn.wait();
 
@@ -95,8 +93,7 @@ runMain();
 ```
 **VSCode might auto-import `ethers`. We don't need to import `ethers`. So, make sure you have no imports. Remember, what we talked about last lesson about hre?**
 
-🤔 How's it work?
------------------
+## 🤔 How does it work?
 
 ```javascript
 const [owner, randomPerson] = await hre.ethers.getSigners();
@@ -150,8 +147,7 @@ This is pretty much the basis of most smart contracts. Read functions. Write fun
 Pretty soon, we'll be able to call these functions from our react app that we'll be working on :).
 
 
-🤝 Test other users 
---------------------
+## 🤝 Test other users 
 
 So, we probably want someone other than us to send us a wave right? It'd be pretty boring if only we could send a wave!! We want to make our website **multiplayer**!
 
@@ -160,12 +156,12 @@ Check this out. I added a few lines at the bottom of the function. I'm not going
 ```javascript
 const main = async () => {
   const [owner, randomPerson] = await hre.ethers.getSigners();
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
 
-  console.log('Contract deployed to:', waveContract.address);
-  console.log('Contract deployed by:', owner.address);
+  console.log("Contract deployed to:", waveContract.address);
+  console.log("Contract deployed by:", owner.address);
 
   let waveCount;
   waveCount = await waveContract.getTotalWaves();
@@ -203,8 +199,7 @@ await waveTxn.wait();
 waveCount = await waveContract.getTotalWaves();
 ```
 
-🚨 Before you click "Next Lesson"
--------------------------------------------
+## 🚨 Before you click "Next Lesson"
 
 *Note: if you don't do this, Farza will be very sad :(.*
 

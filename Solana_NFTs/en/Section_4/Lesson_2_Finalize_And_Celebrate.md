@@ -1,4 +1,50 @@
-### **🚀 Deploy to the world.**
+### 🌍 Upgrade your NFTs with IPFS
+When deploying on the devnet, you don't have to worry about storing your NFTs cause Metaplex let's you upload up to 10 assets for free. This is super helpful, but you can't rely on them for going to the mainnet lol. 
+
+What happens for the mainnet? You could go the standard route and upload them to Arweave, but that'll cost you quite a bit. Instead, we can use something called [IPFS](https://en.wikipedia.org/wiki/InterPlanetary_File_System). In a nutshell, it's a decentralized file storage system, similar to Arweave, but **a lot** cheaper (sometimes even free). I've found it easiest to use [**Pinata**](https://www.pinata.cloud/?utm_source=buildspace) to upload to IPFS. Plus they give you 1 GB of storage for free, which is enough for 1000s of assets. I didn't actually deploy to the mainnet but I used Pinata anyway cuz it let's you upload way bigger files.
+
+Using it is pretty simple, once you've signed up for an account, select "API Keys" from the dropdown menu in the top right. 
+
+![API KEY](https://i.imgur.com/3Cp92wu.png)
+
+Create a new key and make sure `pinFileToIPFS` access is enabled. 
+
+![Pinata config](https://i.imgur.com/QBCmGSv.png)
+
+Once you create the key, you'll see a popup with all the secrets. Copy the JWT token and keep it handy. Now we just update our `config.json` file with 2 new properties:
+
+```json
+{
+    "price": 0.1,
+    "number": 3,
+    "gatekeeper": null,
+    "solTreasuryAccount": "<YOUR WALLET ADDRESS>",
+    "splTokenAccount": null,
+    "splToken": null,
+    "goLiveDate": "05 Jan 2022 00:00:00 GMT",
+    "endSettings": null,
+    "whitelistMintSettings": null,
+    "hiddenSettings": null,
+    "storage": "pinata",
+    "pinataJwt": "YOUR PINATA JWT TOKEN",
+    "pinataGateway": "null",
+    "ipfsInfuraProjectId": null,
+    "ipfsInfuraSecret": null,
+    "awsS3Bucket": null,
+    "noRetainAuthority": false,
+    "noMutable": false
+}
+```
+
+I added `pinataJwt` and `pinataGateway`. I also set `storage` to `pinata`. Paste your JWT token in the `pinataJwt` property and you're good to go! Delete your `.cache` folder and run the upload command again:
+
+```
+ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
+```
+
+And you're done! You now have really high quality NFTs on the devnet. If you wanna learn more about IPFS, [check this out](https://decrypt.co/resources/how-to-use-ipfs-the-backbone-of-web3).
+
+### 🚀 Deploy to the world
 
 Deploying a React app has gotten so easy that there is no reason not to do it at this point lol. Plus, it's **free**. You've made it this far, deploying is the final step. Plus -- your fellow builders at buildspace must not be deprived of your NFTs!! Please give us the opportunity to mint your rare creations hehe.
 
@@ -18,13 +64,13 @@ Note: On Vercel, you will need to add 6th environment variable `CI=false`. This 
 ![Untitled](https://i.imgur.com/wn2Uhj4.png).
 
 
-### **😍 Hello, Solana Master.**
+### 😍 Hello, Solana Master
 
 Super exciting that you made it to the end. Pretty big deal!! Solana is **super early** and very powerful and you've now gotten your hands dirty w/ the core tech. Hell yes. You have all the skills you need now to build your own NFT drops on Solana.
 
 Thank you for contributing to the future of web3 by learning this stuff. The fact that you know how this works and how to code it up is a superpower. Use your power wisely ;).
 
-### **🥞 Careers in Web3**
+### 🥞 Careers in Web3
 
 Tons of people have also gotten full-time jobs at top web3 companies via buildspace. I'm constantly seeing people nail their interviews after they do a few buildspace projects.
 ![Untitled](https://i.imgur.com/CNzLdQc.png)
@@ -41,13 +87,13 @@ I just wanna inspire you to work in web3 lol. This shit is awesome. And it'd be 
 
 Be sure you click "Work in Web3" on the left and fill out your profile if you haven't done so already!!! **We're partnered w/ some of the best web3 companies in the world (ex. Uniswap, OpenSea, Chainlink, Edge and Node, and more) and they want to hire devs from the buildspace network :).** You've already picked up a skill that is actually extremely valuable and companies are paying top dollar for awesome web3 engineers.
 
-### **🤟 Your NFT!**
+### 🤟 Your NFT!
 
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 1-hour pls pls pls drop us a message in #feedback and tag @ **davbarrick#0001**.
+We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
 
 **Be sure to click the button at the bottom of this page and submit your final link. Otherwise, our system won't mark you as "complete".**
 
-### **🌈 Before you head out.**
+### 🌈 Before you head out
 
 Go to **#showcase** in Discord and drop us a link to your final product that we can mess around with :).
 

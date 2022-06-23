@@ -1,4 +1,4 @@
-### **🙉 A note on github**
+### 🙉 A note on github
 
 **If uploading to Github, don't upload your hardhat config file with your private key to your repo. You will get robbed.**
 
@@ -38,7 +38,7 @@ PRIVATE_KEY=BLAHBLAH
 
 (don't commit your .env after this lol).
 
-### 🌎 Get your image assets up in IPFS.
+### 🌎 Get your image assets up in IPFS
 
 Right now — our boss and character images are on Imgur.
 
@@ -48,7 +48,7 @@ Luckily we have something called [IPFS](https://en.wikipedia.org/wiki/InterPlane
 
 I won't be covering how to get your stuff up on IPFS + connected to your React app step-by-step, but, I will give you some pointers!
 
-First, you'll need to upload your images to a service that specializes in "[pinning](https://docs.ipfs.io/how-to/pin-files/)" — which means your file will essentially be cached so its easily retrievable. I like using [Pinata](https://www.pinata.cloud/) as my pinning service — just make an account, upload your character's image files through their UI, and that's it! 
+First, you'll need to upload your images to a service that specializes in "[pinning](https://docs.ipfs.io/how-to/pin-files/)" — which means your file will essentially be cached so its easily retrievable. I like using [Pinata](https://www.pinata.cloud/?utm_source=buildspace) as my pinning service — just make an account, upload your character's image files through their UI, and that's it! 
 
 ![Untitled](https://i.imgur.com/FAkx9yj.png)
 
@@ -141,8 +141,8 @@ Now, you may be asking yourself — what is Cloudflare doing here? Basically —
 **Bam — you're now using IPFS :). Wasn't that hard, right!? Tell all your friends. Tell your parents. Tell the world.**
 
 
-🐸 Show all the other players in the game!
-----------------
+## 🐸 Show all the other players in the game!
+
 Right now, all you see is yourself and the boss -- what if you could see a list of all the other players? Perhaps you could show their wallet address, their character's image, and how much damage they've dealt to the boss!
 
 **Would make it feel a lot more "multiplayer" :).**
@@ -151,8 +151,8 @@ Give it a try. Not going to explain it here but I think you have all the info yo
 
 
 
-⚡️ Add in critical hit chance
---------------------
+## ⚡️ Add in critical hit chance
+
 Many games have a cool concept of a "critical hit", like Pokemon! Introducing RNG to games is really fun since it brings in "chance" to the game. It'd be cool if you implemented critical hits -- for example maybe there's a 5% chance that some of your characters hit for double the damage. Or maybe there's a 20% chance the boss's attack "misses" and the player gets away lucky!
 
 It'd be cool if specific characters also had a higher chance of a critical hit than others! 

@@ -1,4 +1,4 @@
-### 🤖 Let's grab the starter code.
+### 🤖 Let's grab the starter code
 
 Start by heading over to [this GitHub link](https://github.com/buildspace/nft-drop-starter-project) where you find the starter repo code. From here you are going to want to make sure you press the "Fork" button in the top right of the page
 
@@ -25,7 +25,7 @@ For this project we are going to be using a wallet called [Phantom](https://pha
 
 Before we dive into any code - make sure you have downloaded the extension and setup a Solana wallet! Currently, Phantom Wallet supports **Chrome**, **Brave**, **Firefox**, and **Edge.** But, as a note: we only tested this code on Brave and Chrome.
 
-### **👻 Using the Solana object.**
+### 👻 Using the Solana object
 
 In order for our website to talk to our Solana program, we need to somehow connect our wallet (which is the Phantom Wallet extension) to it.
 
@@ -56,10 +56,8 @@ const App = () => {
     try {
       const { solana } = window;
 
-      if (solana) {
-        if (solana.isPhantom) {
+      if (solana && solana.isPhantom) {
           console.log('Phantom wallet found!');
-        }
       } else {
         alert('Solana object not found! Get a Phantom Wallet 👻');
       }
@@ -111,10 +109,8 @@ const checkIfWalletIsConnected = async () => {
   try {
     const { solana } = window;
 
-    if (solana) {
-      if (solana.isPhantom) {
+    if (solana && solana.isPhantom) {
         console.log('Phantom wallet found!');
-      }
     } else {
       alert('Solana object not found! Get a Phantom Wallet 👻');
     }
@@ -144,7 +140,7 @@ In React, the `useEffect` hook gets called once on component mount when that s
 
 Currently, the Phantom Wallet team suggests to wait for the window to fully finish loading before checking for the `solana` object. Once this event gets called, we can guarantee that this object is available if the user has the Phantom Wallet extension installed.
 
-### **🔒 Accessing the user's account.**
+### 🔒 Accessing the user's account
 
 So when you run this, you should see that line *"Phantom wallet found!"* printed in the console of the website when you go to inspect it.
 
@@ -165,8 +161,7 @@ const checkIfWalletIsConnected = async () => {
   try {
     const { solana } = window;
 
-    if (solana) {
-      if (solana.isPhantom) {
+    if (solana && solana.isPhantom) {
         console.log('Phantom wallet found!');
 
         /*
@@ -178,7 +173,6 @@ const checkIfWalletIsConnected = async () => {
           'Connected with Public Key:',
           response.publicKey.toString()
         );
-      }
     } else {
       alert('Solana object not found! Get a Phantom Wallet 👻');
     }

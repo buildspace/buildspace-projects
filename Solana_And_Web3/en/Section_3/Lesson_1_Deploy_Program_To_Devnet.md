@@ -10,7 +10,7 @@ Plus, I think it's easier to build the web app once we deploy our Solana program
 
 *Note: Make sure `solana-test-validator` is **not** running anywhere.*
 
-### 🌳 Set up your environment for devnet.
+### 🌳 Set up your environment for devnet
 
 It's actually pretty tricky to deploy to devnet. Stay with me here and make sure not to miss any steps :).
 
@@ -28,10 +28,10 @@ solana config get
 
 And you'll see that you're now pointing to [`https://api.devnet.solana.com`](https://api.devnet.solana.com/). This is how Anchor will know where to deploy to!
 
-From here, we'll need to airdrop ourselves some SOL on the devnet. It's actually pretty easy, we just run:
+From here, we'll need to airdrop ourselves some SOL on the devnet. It's actually pretty easy, we just run twice:
 
 ```bash
-solana airdrop 5
+solana airdrop 2
 ```
 
 Now, run:
@@ -40,11 +40,11 @@ Now, run:
 solana balance
 ```
 
-And you should see some fake SOL in your wallet! This is actually retrieving your balance on devnet!
+And you should see 4 fake SOL in your wallet! This is actually retrieving your balance on devnet!
 
-*Note: sometimes you'll get an error that says something like "insufficient funds" — whenever that happens just airdrop yourself `5` SOL like above. Note: `5` is the max you can airdrop yourself at a time right now. So, you'll need to refresh your wallet occasionally.*
+*Note: sometimes you'll get an error that says something like "insufficient funds" — whenever that happens just airdrop yourself `2` SOL like above. Note: `2` is the max you can airdrop yourself at a time right now. So, you'll need to refresh your wallet occasionally.*
 
-### ✨ Changing up some variables.
+### ✨ Changing up some variables
 
 Now, we need to change some variables in `Anchor.toml`. This is where it gets a little tricky.
 

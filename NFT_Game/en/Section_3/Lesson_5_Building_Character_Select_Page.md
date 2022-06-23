@@ -2,12 +2,12 @@ We are looking great right now. We have setup two scenarios and got the basics d
 
 Now that we are able to interact with our Smart Contract from our UI and we have created our `SelectCharacter` Component, we can easily grab all mint-able characters from our Smart Contract and display them in our UI. Let's jump right in.
 
-### 👀 Just one more thing.
+### 👀 Just one more thing
 Before you begin, be sure to remove any function calls to mint a character or attack a boss in your `scripts/deploy.js` file! This will help prevent some React state errors in your UI.
 
-### ♻️ Setting up a reusable contract object.
+### ♻️ Setting up a reusable contract object
 
-Since we know we are going to use our Smart Contract let's start by setting up or `ethers` object to interact with it. It's going to be the same flow as before, with a little twist. Let's start by importing all the things in `Components/SelectCharacter/index.js` :
+Since we know we are going to use our Smart Contract let's start by setting up an `ethers` object to interact with it. It's going to be the same flow as before, with a little twist. Let's start by importing all the things in `Components/SelectCharacter/index.js` :
 
 ```javascript
 import React, { useEffect, useState } from 'react';
@@ -66,7 +66,7 @@ useEffect(() => {
 }, []);
 ```
 
-### 😎 Fetching all the characters.
+### 😎 Fetching all the characters
 
 There isn't much different here other than setting our `gameContract` in state. We are going to use a bit more `useEffect` fanciness! Since we need to get our data ASAP, we want to know as soon as our `gameContract` is ready to use. So, why don't we just setup another `useEffect` to listen for any changes with `gameContract` ? Right under the `useEffect` you wrote above, add this:
 
@@ -120,9 +120,9 @@ Before we move on, let's give this a quick test! We should be able to see some c
 
 **🦄 LOOK AT THAT. You just pulled some data from your smart contract 🦄**
 
-Always a site to see thats for sure. This is cool and all, but it would be even cooler if it showed up in our app right?
+Always a sight to see, that's for sure. This is cool and all, but it would be even cooler if it showed up in our app, right?
 
-### 👓 Actually rendering the characters UI.
+### 👓 Actually rendering the characters UI
 
 We are going to take the same render method approach here by creating function that will map through all of our characters and create some UI to render them on the page. Let's start by creating the render method in the `SelectCharacter` component:
 
@@ -138,7 +138,7 @@ const renderCharacters = () =>
       <button
         type="button"
         className="character-mint-button"
-        onClick={mintCharacterNFTAction(index)}
+        onClick={()=> mintCharacterNFTAction(index)}
       >{`Mint ${character.name}`}</button>
     </div>
   ));
@@ -170,13 +170,13 @@ It's that easy! Go ahead and give your page a quick refresh and you should see s
 
 *Note: the characters may be arranged vertically instead of horizontally!*
 
-### ✨ Minting your Character NFT from the UI.
+### ✨ Minting your Character NFT from the UI
 
 This is amazing, but we can take it one step further - **a one button click to mint our NFT.** We are going to start by adding in our minting function `mintCharacterNFTAction` . Go ahead and add this right under where you declared your state in `SelectCharacter`:
 
 ```javascript
 // Actions
-const mintCharacterNFTAction = (characterId) => async () => {
+const mintCharacterNFTAction = async (characterId) => {
   try {
     if (gameContract) {
       console.log('Minting character in progress...');
@@ -190,7 +190,7 @@ const mintCharacterNFTAction = (characterId) => async () => {
 };
 ```
 
-*Note: Remember to uncomment out `onClick={mintCharacterNFTAction(index)}` in `renderCharacters`.*
+*Note: Remember to uncomment out `onClick={()=> mintCharacterNFTAction(index)}` in `renderCharacters`.*
 
 I hope you are starting to see the common trend of interacting with a smart contract! If you have the `onClick` attribute commented out in your render method code, make sure to uncomment it now.
 
@@ -278,7 +278,7 @@ const onCharacterMint = async (sender, tokenId, characterIndex) => {
 
 This method is called anytime a new character NFT is minted. Simply print out the data to make sure things are looking good and then we need to get the actual metadata of our newly minted character NFT! If you are experienced in React, you may see some routes where we can get the character metadata without having to call our contract again! Definitely make this change if you know how :). If not, no worries! We already setup this logic on our contract (thank your past self at this moment).
 
-All we are doing is called the `checkIfUserHasNFT` function which will return all of our metadata! at that point, we can transform the data and set in our state. Once our state is set, we will be transported to our `Arena` Component (as soon as we set it up of course).
+All we are doing is calling the `checkIfUserHasNFT` function which will return all of our metadata! At that point, we can transform the data and set it in our state. Once our state is set, we will be transported to our `Arena` Component (as soon as we set it up of course).
 
 ```javascript
 gameContract.on('CharacterNFTMinted', onCharacterMint);
@@ -296,7 +296,7 @@ return () => {
 
 Finally, we want to make sure to stop listening to this event when the component is not being used anymore! This is good practice in React and helps with future improvements down the road :). 
 
-### 🌌 Seeing your Character NFT in the Metaverse.
+### 🌌 Seeing your Character NFT in the Metaverse
 
 ![Untitled](https://media.giphy.com/media/rHR8qP1mC5V3G/giphy.gif)
 
@@ -316,15 +316,15 @@ Here's what mines looks like:
 
 AHH YES. There is my Leo. One thing to note here - make sure to look for your NFT on the [https://testnets.opensea.io/](https://testnets.opensea.io/) since we are using Rinkeby!
 
-You freaking did it! Now that we have our character NFT we can finally go out and protect the Metaverse from rouge beings ⚔️.
+You freaking did it! Now that we have our character NFT we can finally go out and protect the Metaverse from rogue beings ⚔️.
 
 Feel free to also set up an `alert` that automatically gives your player the OpenSea link when it's done minting. For example something like:
 
 ```javascript
-alert(`Your NFT is all done -- see it here: https://testnets.opensea.io/assets/${gameContract}/${tokenId.toNumber()}`)
+alert(`Your NFT is all done -- see it here: https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
 ```
 
-### **🚨 Progress report.**
+### 🚨 Progress report
 
 Post a screenshot of your character select screen in #progress -- it's always fun to see everyone's characters!! It's also a perfect thing to tweet out :). Tell the world about your NFT characters and what your game is all about :).
 

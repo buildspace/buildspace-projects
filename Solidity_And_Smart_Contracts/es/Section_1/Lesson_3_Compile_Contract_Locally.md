@@ -1,7 +1,6 @@
-🔥 Imitando el entorno blockchain para probar
------------------------------------------------
+## 🔥 Imitando el entorno blockchain para hacer pruebas
 
-Lo has hecho. Has escrito un contrato inteligente. ¡Eres un campeón!
+Lo hiciste. Has escrito un contrato inteligente. ¡Eres un campeón!
 
 Ahora lo que necesitamos es\
 1\. Compilarlo.\
@@ -16,8 +15,7 @@ Vamos a escribir un "script" personalizado para que pueda manejar estos 3 pasos 
 
 ¡Vamos a hacerlo!
 
-📝 Crea un script para ejecutar nuestro contrato
--------------------------------------
+## 📝 Crea un script para ejecutar nuestro contrato
 
 Dirígete al directorio **`scripts`** y crea un archivo llamado **`run.js`**
 
@@ -29,7 +27,7 @@ Entonces, esto es lo que **`run.js`** va a tener:
 
 ```javascript
 const main = async () => {
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
   console.log("Contract deployed to:", waveContract.address);
@@ -50,8 +48,7 @@ runMain();
 
 Increíble.
 
-🤔 ¿Cómo funciona?
------------------
+## 🤔 ¿Cómo funciona?
 
 Una vez más, línea por línea.
 
@@ -65,7 +62,7 @@ Esto va a compilar nuestro contrato y generar los archivos que necesitamos para 
 const waveContract = await waveContractFactory.deploy();
 ```
 
-Esto es bastante elegante :). 
+Esto es bastante elegante :). 
 
 Lo que está pasando aquí es que Hardhat va a crear una red local de Ethereum para nosotros, pero solo para este contrato. Entonces, después que se complete el script, se va a destruir esa red local. Entonces, cada vez que ejecutes el contrato, esto va a crear una blockchain nueva. ¿Entonces cuál es el punto? Es como si se actualizara tu servidor local cada vez, para siempre empezar una versión limpia, lo que lo hace fácil de depurar errores.
 
@@ -92,8 +89,7 @@ Deberías ver como el `console.log` se ejecuta desde el contrato y también debe
 ![](https://i.imgur.com/ug79rOM.png)
 
 
-🎩 Hardhat y HRE
-----------------
+## 🎩 Hardhat y HRE
 
 En estos bloques de código deberás notar constantemente que usamos `hre.ethers`, pero ¿`hre` nunca fue importado en ningún lado? ¿Qué clase de brujería es esta?
 
@@ -107,8 +103,7 @@ Entonces, ¿qué significa esto? Bueno, cada vez que se ejecuta un comando en la
 
 **TL;DR - Vas a ver muchas veces `hre` en nuestro código, ¡pero nunca importado en ningún lado!! Puedes revisar la documentación [Documentación Hardhat](https://hardhat.org/advanced/hardhat-runtime-environment.html) ¡para aprender más sobre esto!**
 
-🚨 Antes de hacer click en "Siguiente Lección"
--------------------------------------------
+## 🚨 Antes de hacer click en "Siguiente Lección"
 
 *Nota: Si no haces esto, Farza se pondrá triste :(.*
 

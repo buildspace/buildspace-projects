@@ -2,7 +2,7 @@
 
 Haha, this is a big question. Be sure to read through [this](https://github.com/buildspace/buildspace-projects/blob/main/NFT_Collection/en/Section_1/Lesson_1_What_Is_A_NFT.md) real quick to give you a little primer before moving on. As long as you have a *general idea* about what an NFT is, that's all you really need here!
 
-### 😮 How we're going to use playable NFTs.
+### 😮 How we're going to use playable NFTs
 
 Cool. We've got all our basic environment stuff set up! Let's take a step back to kinda explain this game we're making at a higher level again:
 
@@ -59,7 +59,7 @@ contract MyEpicGame {
   CharacterAttributes[] defaultCharacters;
 
   // Data passed in to the contract when it's first created initializing the characters.
-  // We're going to actually pass these values in from from run.js.
+  // We're going to actually pass these values in from run.js.
   constructor(
     string[] memory characterNames,
     string[] memory characterImageURIs,

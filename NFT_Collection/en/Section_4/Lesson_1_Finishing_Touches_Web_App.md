@@ -1,5 +1,4 @@
-🌊 Give user their OpenSea link
---------------
+## 🌊 Give user their OpenSea link
 
 One thing that’d be awesome is after the NFT is minted we actually give a link to their NFT on OpenSea that they’d be able to share on Twitter or with their friends!!
 
@@ -12,8 +11,6 @@ Basically, these are the variables.
 `https://testnets.opensea.io/assets/INSERT_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`
 
 
-
---------------------
 **Note: if you're using Rarible b/c OpenSea is being slow to show your NFT's metadata -- check out the link setup below, it's very similar! I actually like using Rarible instead of OpenSea, it's usually way faster to show the metadata. Which is nice b/c your users can instantly see their NFT!**
 
 The link for an NFT on Rarible looks like this:
@@ -23,9 +20,6 @@ The link for an NFT on Rarible looks like this:
 Basically, these are the variables.
 
 `https://rinkeby.rarible.com/token/INSERT_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE`
-
---------------------
-
 
 So, our web app has the contract address, but not the token id! So, we’ll need to change up our contract to retrieve that. Let’s do it.
 
@@ -69,22 +63,22 @@ Okay this is fkin epic. In real-time, we’ll capture the mint event, get the to
 
 The code for `App.js` and the contract is [here](https://gist.github.com/farzaa/5015532446dfdb267711592107a285a9). It’s really nothing fancy. Just setting up an event listener! I made sure to drop comments on lines I added to make it easy to see what I changed. Be sure to add a call to `setupEventListener()` in two places like I do in the code! Don't miss that :).
 
-🖼 Colorful backgrounds!
---------------
+## 🖼 Colorful backgrounds!
+
 Just for fun, I changed the contract to randomly pick a colorful background. I'm not going to go over the code here because it was just for fun but feel free to see the comments [here](https://gist.github.com/farzaa/b3b8ec8aded7e5876b8a1ab786347cc9). Remember if you change the contract you'll need to re-deploy, update the abi, and update the contract address.
 
-😎 Set a limit on the # of minted NFTs
---------------
+## 😎 Set a limit on the # of minted NFTs
+
 So, I challenge you to change your contract to only allow a set # of NFTs to be minted (for example, maybe you want only 50 NFTs to be minted max!!). It'd be even more epic if on your website it said something like `4/50 NFTs minted so far` or something like that to make your user feel super special when they get an NFT!!!
 
 Hint, you'll need something in solidity called `require`. And, you'll like also need to create a function like `getTotalNFTsMintedSoFar` for your web app to call.
 
 
-❌ Alert user when they’re on the wrong network.
---------------
+## ❌ Alert user when they’re on the wrong network
+
 Your website is **only** going to work on Rinkeby (since that's where your contract lives).
 
-We're going to to add a nice message telling users about this! 
+We're going to add a nice message telling users about this! 
 
 For that, we make a RPC request to the blockchain to see the ID of the chain our wallet connects to. (Why a chain and not a network? [Good question!](https://ethereum.stackexchange.com/questions/37533/what-is-a-chainid-in-ethereum-how-is-it-different-than-networkid-and-how-is-it))
 
@@ -105,17 +99,17 @@ The request conforms to [EIP-695](https://github.com/ethereum/EIPs/blob/master/E
 You can find the IDs of other networks [here](https://docs.metamask.io/guide/ethereum-provider.html#chain-ids). 
 
 
-🙉 Mining animation
---------------
+## 🙉 Mining animation
+
 Some of your users might be super confused when they click mint and nothing happens for like 15 seconds lol! Maybe add a loading animation? Make it happen! Not covering it here :).
 
 
-🐦 Add your Twitter
------------------
+## 🐦 Add your Twitter
+
 Add your Twitter at the bottom :)! Already gave you a little template for it.
 
-👀 Add a button to let people see the collection!
------------------
+## 👀 Add a button to let people see the collection!
+
 Perhaps the most important part!
 
 Usually, when people want to see an NFT collection, they look at it on OpenSea!! It's a super-easy way for people to get a feel for your collection. So if you link your friend your site, they'll know it's legit!!
@@ -125,6 +119,6 @@ Add a little button that says "🌊 View Collection on OpenSea" and then when yo
 Note: This link you'll need to hardcode. I left a variable at the top for you to fill in. It can't be dynamically generated unless you use the OpenSea API (which is overkill for now lol).
 
 
-🚨 Progress report!
------------------
+## 🚨 Progress report!
+
 You're nearly at the end :). Post a screenshot in #progress with that little pop up that that gives your user the direct OpenSea link!

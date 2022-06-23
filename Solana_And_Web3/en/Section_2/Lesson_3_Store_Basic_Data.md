@@ -2,7 +2,7 @@ Right now, our program does literally nothing haha. Let's change it up to store 
 
 Our website will allow people to submit GIFs. So, storing something like a `total_gifs` number would be pretty helpful too.
 
-### 🥞 Create an integer to store GIF count.
+### 🥞 Create an integer to store GIF count
 
 Cool so we just want to store a basic integer with the number of `total_gifs` people have submitted. So, every time someone adds a new gif we'd just do `total_gifs += 1`.
 
@@ -26,7 +26,7 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod myepicproject {
   use super::*;
-  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
     // Get a reference to the account.
     let base_account = &mut ctx.accounts.base_account;
     // Initialize total_gifs.
@@ -54,7 +54,7 @@ pub struct BaseAccount {
 
 **A lot happening here.** Let's step through it.
 
-### 🤠 Initializing an account.
+### 🤠 Initializing an account
 
 Lets check out this line at the bottom:
 
@@ -104,7 +104,7 @@ Finally, we have `pub system_program: Program` which is actually pretty freaking
 Lastly, we do this thing in our function where we just grab `base_account` from the `StartStuffOff` context by doing `Context<StartStuffOff>`.
 
 ```rust
-pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
 	// Get a reference to the account.
   let base_account = &mut ctx.accounts.base_account;
 	// Initialize total_gifs.
@@ -117,7 +117,7 @@ Boom! Again — a lot of this stuff may seem confusing especially if you're new 
 
 *Note: We do `&mut` to get a "mutable reference" to `base_account`. When we do this it actually gives us the power to make **changes** to `base_account`. Otherwise, we'd simply be working w/ a "local copy" of `base_account`.*
 
-### 👋  Retrieve account data.
+### 👋  Retrieve account data
 
 Let's put it all together.
 
@@ -133,7 +133,7 @@ const main = async() => {
   console.log("🚀 Starting test...")
 
   // Create and set the provider. We set it before but we needed to update it, so that it can communicate with our frontend!
-  const provider = anchor.Provider.env();
+  const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
   const program = anchor.workspace.Myepicproject;
@@ -175,7 +175,7 @@ runMain();
 
 Most of the script is the same but you'll see I pass `startStuffOff` some important params that we specified in the struct `pub struct StartStuffOff`.
 
-*Note: notice also that in `lib.rs` the function is called `start_stuff_off` since in Rust we use `_` vs camel case. But, over in our javascript file we use camel case and actually call `startStuffOff`. This is something nice Anchor does for us so we can follow best practices regardless of what language we're using. You can use underscores in Rust-land and camel case in JS-land.*
+*Note: notice also that in `lib.rs` the function is called `start_stuff_off` since in Rust we use snake case (`snake_case`) instead of camel case. But, over in our javascript file we use camel case and actually call `startStuffOff`. This is something nice Anchor does for us so we can follow best practices regardless of what language we're using. You can use snake case in Rust-land and camel case in JS-land.*
 
 And perhaps the coolest part about all this is where we call:
 
@@ -194,7 +194,7 @@ Here we actually retrieve the account we created and then access `totalGifs`. Wh
 
 Yay! It's `0`! This is pretty freaking epic. We now are actually calling a program *and* storing data in a permissionless manner on the Solana chain. NICE.
 
-### 👷‍♀️ Build a function to update GIF counter.
+### 👷‍♀️ Build a function to update GIF counter
 
 Let's actually create a new function named `add_gif` that lets us actually increment the GIF counter. Check out some of my changes below.
 
@@ -206,14 +206,14 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod myepicproject {
   use super::*;
-  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs = 0;
     Ok(())
   }
   
 	// Another function woo!
-  pub fn add_gif(ctx: Context<AddGif>) -> ProgramResult {
+  pub fn add_gif(ctx: Context<AddGif>) -> Result <()> {
     // Get a reference to the account and increment total_gifs.
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs += 1;
@@ -261,7 +261,7 @@ Otherwise, I may change data on it within my function but it *wouldn't actually 
 Last, I create a lil `add_gif` function!
 
 ```rust
-pub fn add_gif(ctx: Context<AddGif>) -> ProgramResult {
+pub fn add_gif(ctx: Context<AddGif>) -> Result <()> {
     // Get a reference to the account and increment total_gifs.
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs += 1;
@@ -284,7 +284,7 @@ const { SystemProgram } = anchor.web3;
 const main = async() => {
   console.log("🚀 Starting test...")
 
-  const provider = anchor.Provider.env();
+  const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
   const program = anchor.workspace.Myepicproject;

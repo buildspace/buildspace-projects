@@ -29,7 +29,7 @@ const sendGif = async () => {
 
 Now, you'll be able to submit a link, approve the transaction via Phantom, and your web app should now show you the GIF you just submitted :).
 
-### 🙈 Solve the issue of the account not persisting.
+### 🙈 Solve the issue of the account not persisting
 
 So, we already went over this problem where our account is getting reset every time we refresh the page. Let's fix it.
 
@@ -92,4 +92,4 @@ You can also run `createKeyPair.js` as many times as you want and this will let 
 
 *Please do this else Farza will be sad :(*
 
-You got GIFs submissions working!! Post a screenshot in `#progress` with your GIFs being retrieved form your Solana program :).
+You got GIFs submissions working!! Post a screenshot in `#progress` with your GIFs being retrieved from your Solana program :).

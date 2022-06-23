@@ -1,5 +1,4 @@
-🌅 Using window.ethereum()
-----------------------
+## 🌅 Using window.ethereum()
 
 So, in order for our website to talk to the blockchain, we need to somehow connect our wallet to it. Once we connect our wallet to our website, our website will have permission to call smart contracts on our behalf. **Remember, it's just like authenticating into a website.**
 
@@ -76,8 +75,7 @@ const App = () => {
 export default App;
 ```
 
-🔒 See if we can access the user's account
-----------------------
+## 🔒 See if we can access the user's account
 
 So when you run this, you should see that line "We have the Ethereum object" printed in the console of the website when you go to inspect it. If you are using Replit, make sure you're looking at the console of your project website, not the Replit workspace! You can access the console of your website by opening it in its own window/tab and launching the developer tools. The URL should look something like this - `https://nft-starter-project.yourUsername.repl.co/`
 
@@ -131,9 +129,9 @@ const App = () => {
     if (accounts.length !== 0) {
       const account = accounts[0];
       console.log("Found an authorized account:", account);
-      setCurrentAccount(account)
+      setCurrentAccount(account);
     } else {
-      console.log("No authorized account found")
+      console.log("No authorized account found");
     }
   }
 
@@ -175,8 +173,7 @@ const App = () => {
 export default App;
 ```
 
-🛍 Build a connect wallet button
-----------------------
+## 🛍 Build a connect wallet button
 
 When you run the above code, the console.log that prints should be `No authorized account found`. Why? Well because we never explicitly told Metamask, *"hey Metamask, please give this website access to my wallet".*
 
@@ -212,9 +209,9 @@ const App = () => {
     if (accounts.length !== 0) {
       const account = accounts[0];
       console.log("Found an authorized account:", account);
-      setCurrentAccount(account)
+      setCurrentAccount(account);
     } else {
-      console.log("No authorized account found")
+      console.log("No authorized account found");
     }
   }
 
@@ -241,7 +238,7 @@ const App = () => {
       console.log("Connected", accounts[0]);
       setCurrentAccount(accounts[0]); 
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 
@@ -257,7 +254,7 @@ const App = () => {
   }, [])
 
   /*
-  * Added a conditional render! We don't want to show Connect to Wallet if we're already conencted :).
+  * Added a conditional render! We don't want to show Connect to Wallet if we're already connected :).
   */
   return (
     <div className="App">
@@ -293,6 +290,6 @@ export default App;
 ```
 
 
-🚨Progress report.
-------------------------
+## 🚨Progress report
+
 Post a screenshot of your website in #progress!

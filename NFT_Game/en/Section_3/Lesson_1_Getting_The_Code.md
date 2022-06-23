@@ -5,7 +5,7 @@ We are going to be using **react.js** to build our web app. If you are already f
 
 If you have no experiece w/ React - [checkout this intro series](https://scrimba.com/learn/learnreact) before you get started with this section or at least check out the intro docs [here](https://reactjs.org/docs/getting-started.html). Or don't do anything special, just hop in. Whatever works for you :). You'll be an absolute React Wizard after this project if you aren't already 🧙‍♂!
 
-### ⬇️ Getting the code.
+### ⬇️ Getting the code
 We'll be using this thing called [Replit](https://replit.com/~)!
 
 It is a browser-based IDE that lets us easily build web apps and deploy them all from the browser. It is super legit. Instead of having to set up a full local environment and write commands to deploy, it's all just given to us.
@@ -21,4 +21,4 @@ You'll magically clone my repo and full IDE in your browser to work with the cod
 **Please Note: As you go through this project, you may notice that we are referencing `.js` files. In Replit, if you are creating any new JavaScript files, you will need to use the `.jsx` extension instead! Replit has some performance fanciness that requires you use the `.jsx` file extension :).**
 
 Here's a quick video I made for a different project going over some Replit basics:
-[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
+[Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)

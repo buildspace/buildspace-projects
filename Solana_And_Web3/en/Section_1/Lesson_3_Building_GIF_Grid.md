@@ -4,7 +4,7 @@ In our GIF Portal we want to be able to show GIFs that people submit to our app!
 
 We just need to build the UI to handle this. Since we haven't written our Solana program just yet, we are going to use test data to make sure things are working as expected. Then all we will have to do is call the program later from our app (more on this soon).
 
-### 🧪 Displaying test data.
+### 🧪 Displaying test data
 
 To start us off, we should talk about when we want our grid of GIFs to be rendered. If you think about it, the only time our GIF grid will be rendered is **when the user has connected + authorized their wallet to our app.**
 
@@ -105,7 +105,7 @@ At this point, you should make some changes to this file! This is where all your
 
 For example, if your web app is a place where people submit GIFs of cute animals, then maybe the dark mode feel of the website right now won't really fly! Up to you. Change it as you please.
 
-### 🔤 Creating a GIF input box.
+### 🔤 Creating a GIF input box
 
 **Our app is taking form — and we're about 10-minutes away from getting into writing our first Solana program that will power our web app here w/ real data instead of hardcoded test data.**
 
@@ -213,7 +213,7 @@ That's because we still need to call this method in the `onSubmit` attribute on 
 
 Give it one more go and you should now see your link printed out in the console! 
 
-### 🌈 Set GIF data in the state.
+### 🌈 Set GIF data in the state
 
 Before we move on to the Solana portion of this, we need to setup just one more thing... actually fetching our data on load! Right now, we just blindly render `TEST_GIFS`.
 

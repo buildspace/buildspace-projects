@@ -1,5 +1,4 @@
-📚 A little blockchain primer.
----------------------------
+## 📚 A little blockchain primer
 Before anything, we'll need to get our local Ethereum network working. This is how we can compile and test our smart contract code! You know how you need to spin up a local environment to work on? Same deal here!
 
 For now, all you need to know is that a smart contract is a piece of code that lives on the blockchain. The blockchain is a public place where anyone can securely read and write data for a fee. Think of it sorta like AWS or Heroku, except no one actually owns it! It's run by thousands of random people known as "miners".
@@ -14,8 +13,7 @@ The bigger picture here is:
 
 I recommend also reading over [these](https://ethereum.org/en/developers/docs/intro-to-ethereum/) docs when you can for fun. These are the best guides on the internet for understanding how Ethereum works in my opinion!
 
-⚙️ Setup local tooling.
----------------------------
+## ⚙️ Setup local tooling
 
 We're going to be using a tool called **Hardhat** a lot which let us quickly compile smart contracts and test them locally. First you'll need to get node/npm. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html).
 
@@ -32,8 +30,7 @@ npm install --save-dev hardhat
 You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Google around a bit about these vulnerabilities if you want to know more!
 
 
-🔨 Get sample project working
----------------------------
+## 🔨 Get sample project working
 
 Cool, now we should have hardhat. Let's get a sample project going.
 
@@ -69,7 +66,7 @@ You should see something like this:
 
 ![Untitled](https://i.imgur.com/LIYT9tf.png)
 
-Boom! If you see this means your local environment is set up **and** you also ran/deployed a smart contract to a local blockchain.
+Boom! If you see this it means your local environment is set up **and** you also ran/deployed a smart contract to a local blockchain.
 
 This is pretty epic. We'll get into this more but basically what's happening here step-by-step is:
 
@@ -81,6 +78,6 @@ If you're curious, feel free to look at the code inside the project to see how i
 
 Once you're done exploring, let's head to the next section and start our own NFT contract.
 
-🚨 Progress report!
--------------------
+## 🚨 Progress report!
+
 Post a screenshot of your terminal with the output of `sample-script.js` in #progress :).
