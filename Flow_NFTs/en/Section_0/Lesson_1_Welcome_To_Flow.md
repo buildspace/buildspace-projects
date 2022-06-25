@@ -16,9 +16,13 @@ So what will we be building here :)? Here's a little video:
 [Loom](https://www.loom.com/share/1daad5e20b244531bd0da630e657aedc)
 
 ### 💎 Earning an NFT
-When you reach the end of this project, you'll be able to earn an NFT.
+When you reach the end of this project, you'll earn an NFT. 
 
-We'll airdrop an NFT to your connected wallet if you finish the project within 7-days of the kick-off.
+You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+
+**Once you finish the project, you'll get the NFT airdropped within 7 days**
+
+Here's what it looks like:
 
 [Loom](https://www.loom.com/share/95236c2fd5f44107a7ee31f02c6a5dab)
 

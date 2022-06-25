@@ -7,7 +7,7 @@ MacOS/Linux users can install the extension from the marketplace:
 ![](https://hackmd.io/_uploads/HyJKJIdK5.png)
 
 **WINDOWS USERS!**
-Due to issues with the latest version (0.7.0) of the extension on Windows, you'll have to install Windows Subsystem for Linux and do this entire project inside WSL. This is pretty easy! Check out [the official instructions](https://docs.microsoft.com/en-us/windows/wsl/install) and follow complete installation. Throughout this project, whenever I say "in a terminal", you'll need to open a terminal inside WSL2! This is easier if you install the [Remove WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) extension which will let you remotely work in Linux.
+Due to issues with the latest version (0.7.0) of the extension on Windows, you'll have to install Windows Subsystem for Linux and do this entire project inside WSL. This is pretty easy! Check out [the official instructions](https://docs.microsoft.com/en-us/windows/wsl/install) and follow complete installation. Throughout this project, whenever I say "in a terminal", you'll need to open a terminal inside WSL2! This is easier if you install the Remote WSL `https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl` extension which will let you remotely work in Linux.
 
 Here's a video I made explaining this process:
 
@@ -137,11 +137,11 @@ self.account.save<@NFT>(<-create NFT(initID: 1), to: /storage/BottomShot1)
 This is where we create an NFT. We're not checking IDs so it's possible to create multiple NFTs with the same ID, which is okay for now. We're not setting the metadata string so this is a very useless NFT haha
 
 Syntax breakdown:
-`self.account.save`: Call the save function on the account that deployed this contract
-`<@NFT>`: We're saving a resource of type NFT
-`<-`: Moving a resource (can't use "=")
-`create NFT(initID: 1)`: Creating an NFT, passing in the id argument 1
-`to: /storage/BottomShot1`: The second argument the save function takes - where we want to save it
+- `self.account.save`: Call the save function on the account that deployed this contract
+- `<@NFT>`: We're saving a resource of type NFT
+- `<-`: Moving a resource (can't use "=")
+- `create NFT(initID: 1)`: Creating an NFT, passing in the id argument 1
+- `to: /storage/BottomShot1`: The second argument the save function takes - where we want to save it
 
 Next we're gonna do something pretty magical: we're going to create a blockchain!
 

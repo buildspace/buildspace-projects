@@ -201,7 +201,12 @@ Head back over to your contract, we're going to add an interface that'll solve t
 
 Seems kinda weird, doesn't it? How does adding this interface for a function that we already had solve anything? AHA! You've fallen into my trap. By making you do something seemingly useless, I've gotten you invested into what comes next.
 
-Cadence has this long-named "[Capability-based Access Control](https://docs.onflow.org/cadence/language/capability-based-access-control/)" thing. What it lets us do is create a **capability** that gives specific users access to certain fields or functions of a stored object. Think of it like a key that unlocks a specific part of your safety deposit box. 
+Cadence has this long-named "[Capability-based Access Control](https://docs.onflow.org/cadence/language/capability-based-access-control/)" thing. What it lets us do is create a **capability** that gives specific users access to certain fields or functions of a stored object. 
+
+Think of it like a key that unlocks a specific part of your safety deposit box. You can put this key somewhere (under your doormat for instance) and anyone who knows about the key has the capability to access the object. They can fetch the key and then open the safety deposit box.
+
+**Note**
+Make sure you remember to redeploy your contract here! You can do this by clicking deploy at the top of the file.
 
 Now that we have an interface that exposes the only function we want people to have, we're going to give everyone the *capability* to call this function.
 

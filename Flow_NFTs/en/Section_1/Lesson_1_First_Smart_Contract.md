@@ -15,7 +15,7 @@ Flow has an awesome development environment that's perfect for playing around wi
 
 Here's a handy video that goes over how you can use the Flow Playground
 
-[Loom](https://www.loom.com/share/eda11732043e4da78fd9663ce9d8fe63)
+[Loom](https://www.loom.com/share/34b1c0f40c7a4a51bcf322ef33c27bec)
 
 ### 👋 gm world 
 Let's say gm on the Flow playground! On account 0x01, add this code
@@ -204,13 +204,20 @@ The code almost just *tells* you what it's doing. This is why I love Cadence, it
 
 Whatever the load function returns is treated as a resource and assigned to the `helloResource` variable. 
 
-The next line is pretty self-explanatory if you know what optionals are. If you don't, check out [this awesome blog post](https://joshuahannan.medium.com/optionals-in-cadence-not-optional-fb39bb4b0081#:~:text=you%E2%80%99re%20done%20reading.-,What%20are%20Optionals%3F,-Optionals%20in%20Cadence).
+The next line is pretty self-explanatory if you know what optionals are. Check out [this awesome blog post](https://joshuahannan.medium.com/optionals-in-cadence-not-optional-fb39bb4b0081#:~:text=you%E2%80%99re%20done%20reading.-,What%20are%20Optionals%3F,-Optionals%20in%20Cadence) for more detail.
 
 
 ```js
 acct.save(<-helloResource!, to: /storage/Hello)
 ```
 Finally, we need to put the resource back! Remember, if we leave the resource in a variable, our transaction won't work! The syntax to save is the same, you should be getting used to this :)
+
+Before clicking "Send" on the transaction, make sure you change the transaction signer to 0x02:
+![](https://hackmd.io/_uploads/H1g37dE99.png)
+
+You can do this by clicking 0x01 in the square box and then clicking 0x02. 
+
+We need to change signers because the contract is deployed on 0x02. If we try to access a resource stored on 0x02 from 0x01, we'll just get an error.
 
 ### 🚨 Progress report
 **wow**. That was a lot. Good job.
