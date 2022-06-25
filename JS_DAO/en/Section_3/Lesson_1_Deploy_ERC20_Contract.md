@@ -95,7 +95,7 @@ const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
 (async () => {
   try {
     // What's the max supply you want to set? 1,000,000 is a nice number!
-    const amount = 0;
+    const amount = 1_000_000;
     // Interact with your deployed ERC-20 contract and mint the tokens!
     await token.mintToSelf(amount);
     const totalSupply = await token.totalSupply();
@@ -189,7 +189,7 @@ const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
 
 This is a lot. But you’re a thirdweb pro now ezpz.
 
-First, you’ll see we need both `editionDrop` and `token` contractsbecause we will be interacting with both contracts.
+First, you’ll see we need both `editionDrop` and `token` contracts because we will be interacting with both contracts.
 
 We need to first grab holders of our NFT from the `editionDrop` and then mint them their token using functions on the `token`.
 
