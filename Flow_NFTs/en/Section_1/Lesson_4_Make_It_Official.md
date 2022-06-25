@@ -7,7 +7,7 @@ This is where you get to decide what your NFT collection is actually going to be
 
 Create a folder called "assets" and add your files in it. Make sure they're named sequentially from 0 to 5 (or more). We're going to store these on [IPFS](https://en.wikipedia.org/wiki/InterPlanetary_File_System?utm_source=buildspace.so&utm_medium=buildspace_project), which is essentially a distributed file system. Today — you might use something like S3, GCP Storage, or Dropbox. But, in this case we can simply trust IPFS which is run by strangers who are using the network. Give [this](https://decrypt.co/resources/how-to-use-ipfs-the-backbone-of-web3?utm_source=buildspace.so&utm_medium=buildspace_project) a quick read when you can! Covers a lot of good base knowledge :).
 
-We'll use a dope free service called [NFT.Storage](https://nft.storage/?utm_source=buildspace.so&utm_medium=buildspace_project) to upload our assets to IPFS. Make an account and log in. We'll use their NFTUp desktop application to upload files. Setup is gonna take about 60 seconds, just [follow the instructions here](https://nft.storage/docs/how-to/nftup/?utm_source=buildspace.so&utm_medium=buildspace_project). 
+We'll use a dope free service called [NFT.Storage](https://nft.storage/) to upload our assets to IPFS. Make an account and log in. We'll use their NFTUp desktop application to upload files. Setup is gonna take about 60 seconds, just [follow the instructions here](https://nft.storage/docs/how-to/nftup/). 
 
 Drag + drop your files or click the upload button and select them. 
 ![](https://hackmd.io/_uploads/r1dkjF-cc.png)
@@ -367,7 +367,7 @@ transaction(
 ```
 This is a heftier transaction, go over the comments! It does two things: creates an empty collection if necessary *and* it mints the NFT. You should be familiar with most of the syntax here. If something confuses you, just tag @Raza in #section-1-help on Discord and I'll come to your rescue :sunglasses: 
 
-We won't be able to run this with the extension. Enter this in your terminal (make sure you update the arugments!):
+We won't be able to run this with the extension. Enter this in your terminal (make sure you update the arguments!):
 ```
 flow transactions send ./transactions/mintNFT.cdc "0xf8d6e0586b0a20c7" "CatMoji #1" "Cat emojis on the blockchain" "ipfs://bafybeigmeykxsur4ya2p3nw6r7hz2kp3r2clhvzwiqaashhz5efhewkkgu/0.png"
 ```

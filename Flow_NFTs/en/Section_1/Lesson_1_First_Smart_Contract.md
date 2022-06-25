@@ -204,8 +204,7 @@ The code almost just *tells* you what it's doing. This is why I love Cadence, it
 
 Whatever the load function returns is treated as a resource and assigned to the `helloResource` variable. 
 
-The next line is pretty self-explanatory if you know what optionals are. Check out [this awesome blog post](https://joshuahannan.medium.com/optionals-in-cadence-not-optional-fb39bb4b0081#:~:text=you%E2%80%99re%20done%20reading.-,What%20are%20Optionals%3F,-Optionals%20in%20Cadence) for more detail.
-
+`log()` is just like `console.log` in Javascript and `print()` in Python. The weird thing here is the `?`. This is used to indicate an [optional](https://docs.onflow.org/cadence/language/values-and-types/#optionals) type. Optionals are values that can represent the absence of a value. i.e. instead of saying a value is undefined, it explicitly states that a value is missing. If booleans can be true or false, optionals can be absent or have a value. Check out [this awesome blog post](https://joshuahannan.medium.com/optionals-in-cadence-not-optional-fb39bb4b0081#:~:text=you%E2%80%99re%20done%20reading.-,What%20are%20Optionals%3F,-Optionals%20in%20Cadence) for more detail.
 
 ```js
 acct.save(<-helloResource!, to: /storage/Hello)
