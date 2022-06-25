@@ -1,4 +1,4 @@
-## 👋 Welcome
+## 👋 Bem vindo(a)
 
 Você conseguiu! Bem vindo(a) :). Meu nome é Farza e eu vou ser o seu instrutor. Esse projeto é para devs que querem se aprofundar na tecnologia crypto. Tudo o que você precisa saber para começar: algumas habilidades de terminal, um pouco de javascript, um pouco de react.js. Você vai aprender o restante no caminho.
 
