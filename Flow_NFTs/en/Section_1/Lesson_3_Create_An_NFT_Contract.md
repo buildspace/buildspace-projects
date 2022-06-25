@@ -1,7 +1,7 @@
 You've learned what Flow is. You're familiar with Cadence and understand what a resource is. Your environment is ready to get you off localhost.
 
 ### 👁 A real NFT contract
-Time to make an proper NFT contract. As you noticed, our current NFT contract just makes blank NFTs. There's also no mint function so no one else can get NFTs lol
+Time to make a proper NFT contract. As you noticed, our current NFT contract just makes blank NFTs. There's also no mint function so no one else can get NFTs lol
 
 Here's what an NFT contract with basic features like:
 ```js
@@ -117,7 +117,7 @@ self.ownedNFTs[token.id] <-! token
 [Force assignment operator](https://docs.onflow.org/cadence/language/values-and-types/#force-assignment-operator--): This assigns a resource to a variable if the variable is nil. If the variable is not nil, the execution aborts lol
 
 ### 🏃‍♂️ Run and interact with our contract
-We're just going to use the extension to deploy our contracts locally from now on. You can use the [CLI commands](https://docs.onflow.org/flow-cli/account-update-contract/) if you want, but I'm gonna stick with the extension to keeps things consistent.
+We're just going to use the extension to deploy our contracts locally from now on. You can use the [CLI commands](https://docs.onflow.org/flow-cli/account-update-contract/) if you want, but I'm gonna stick with the extension to keep things consistent.
 
 Just click the "Deploy contract" link/button at the top of the file:
 ![](https://hackmd.io/_uploads/S12BICKtq.png)

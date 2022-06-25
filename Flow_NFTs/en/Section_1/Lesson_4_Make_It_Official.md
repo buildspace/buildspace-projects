@@ -28,10 +28,10 @@ If you decide to use your own image, make sure the URL goes directly to the actu
 
 Our contract is pretty good right now. It's good enough that we could deploy it to the testnet. But it's just another contract right now. It has nothing in it that tells all the apps running on Flow that it's an NFT contract. 
 
-If OpenSea decided BottomShot was the next big thing and that they want to list the NFTs, they'd have to go over the contract and look at all the functions and build around it. This is kinda lame, we should be following the same standard as other projects out there! Our contract does not explicity declare that it meets any NFT standards. Let's fix this!
+If OpenSea decided BottomShot was the next big thing and that they want to list the NFTs, they'd have to go over the contract and look at all the functions and build around it. This is kinda lame, we should be following the same standard as other projects out there! Our contract does not explicitly declare that it meets any NFT standards. Let's fix this!
 
 ### 🎟 The NonFungibleToken standard
-The Flow ecosystem has a standard for NFTs that everyone has agreed to. The Flow team deployed it on the [testnet and the mainnet](https://docs.onflow.org/core-contracts/non-fungible-token/), so when you get to those networks, you can just import from the existing address. For now we're going to deploy it on our emulator ourselves.
+The Flow ecosystem has a standard for NFTs that everyone has agreed to. The Flow team deployed it on the [testnet and the mainnet](https://docs.onflow.org/core-contracts/non-fungible-token/), so when you get to those networks, you can just import from the existing address. For now, we're going to deploy it on our emulator ourselves.
 
 We're going to import an *interface* for Nonfungible tokens that implements the standard for all NFTs on Flow. If you're coming from Ethereum, this is like the ERC721 of Flow. 
 
@@ -189,9 +189,9 @@ pub contract BottomShot: NonFungibleToken {
 ```
 As previously mentioned, we're importing the NonFungibleToken interface from the account it's deployed to. We use it when declaring our contract, telling the compiler that our contract meets the requirements of the interface.
 
-What's an interface? It's an abstract type that defines the the behaviour of things that implement it. Still confused? Me too lol. 
+What's an interface? It's an abstract type that defines the behaviour of things that implement it. Still confused? Me too lol. 
 
-You can think of an interface like a set of rules or a description. Imagine the interface for a sedan: 4 doors, enclosed body (no open roof), separate section for the driver and passengers. If I showed you a fancy 2 door BMW without a roof, you'd tell me that isn't a sedan! Similarly, contract interfaces help us define and set standards. If I declare that my contract is meets the NFT interface but don't implement all the requirements, it won't run.
+You can think of an interface like a set of rules or a description. Imagine the interface for a sedan: 4 doors, an enclosed body (no open roof), and a separate section for the driver and passengers. If I showed you a fancy 2-door BMW without a roof, you'd tell me that isn't a sedan! Similarly, contract interfaces help us define and set standards. If I declare that my contract meets the NFT interface but then I don't implement all the requirements, it won't run.
 
 ```
   pub var totalSupply: UInt64
@@ -276,7 +276,7 @@ Finally, we see something new:
     }
 ```
 
-As the name suggests, this function allows anyone to borrow an NFT from a collection. Using it we fetch a reference to an object in storage without removing it from storage. This means we can access all public data the resource has such as the description and the thumbnail easily!
+As the name suggests, this function allows anyone to borrow an NFT from a collection. Using it we fetch a reference to an object in storage without removing it from storage. This means we can easily access all public data the resource has, such as the description and thumbnail!
 
 Syntax breakdown:
 - `pub fun borrowNFT(id: UInt64)`: A public function called borrowNFT that takes in an argument "id" of type `UInt64`

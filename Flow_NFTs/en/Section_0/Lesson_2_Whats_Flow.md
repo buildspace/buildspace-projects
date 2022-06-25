@@ -31,7 +31,7 @@ If you're not familiar with smart contracts, think of them like vending machines
 
 ![](https://hackmd.io/_uploads/r1id5d4tc.png)
 
-The attendant (react app) asks you what you want and gives you a cheque (transaction), you sign it with your pen (wallet app like Blocto, Lilico or Metamask) and you submit it to the vending machine (smart contract). The vending machine is **on** the blockchain and it does what your transaction tells it to if the transaction follows the blockchains rules. In our example, the transaction could be taking some tokens from you and giving you a diet coke!
+The attendant (react app) asks you what you want and gives you a cheque (transaction), you sign it with your pen (wallet app like Blocto, Lilico or Metamask) and you submit it to the vending machine (smart contract). The vending machine is **on** the blockchain and it does what your transaction tells it to if the transaction follows the rules of the blockchain. In our example, the transaction could be taking some tokens from you and giving you a diet coke!
 
 ### 🏦 Accounts
 Flow also uses a new kind of data structure called "Accounts" to store things. You can think of a Flow account just like an email account or Dropbox/Google Drive/Baidu Cloud account. They have access credentials (login/password) and store things inside them like files and text.
@@ -60,9 +60,9 @@ Flow comes with an awesome new programming language called Cadence. The syntax w
 
 But why? Why did they have to make a new language? Weren't Solidity/Rust enough? 
 
-No. Blockchain programing is a completely new space. When software moves into new spaces, you need new paradigms. Existing programming languages were made to program computers as we knew them - private and stateless. Blockchains are inherently different (distributed, stateful and public) so the same language primitives do not apply anymore. It's like trying to use a 1,000 year old stone oven to cook 60-second microwave ramen/noodles!
+No. Blockchain programming is a completely new space. When software moves into new spaces, you need new paradigms. Existing programming languages were made to program computers as we knew them - private and stateless. Blockchains are inherently different (distributed, stateful and public) so the same language primitives do not apply anymore. It's like trying to use a 1,000 year old stone oven to cook 60-second microwave ramen/noodles!
 
-When computers were becoming commodity hardware, we needed **portable** code. C was born. From supercomputers CPUs to microcontrollers, it ran on all hardware!
+When computers were becoming commodity hardware, we needed **portable** code. C was born. From supercomputer CPUs to microcontrollers, it ran on all hardware!
 
 When graphical UIs were becoming a thing in the 90s, we saw that Java with its Object Oriented Programming was a great fit.
 
@@ -88,7 +88,7 @@ To meet these requirements, Cadence uses "resources". When we make something a r
 
 These rules are enforced both at compile-time *and* at runtime. So if you write bad Cadence code that doesn't check if you're allowed to transfer an NFT, the transfer **will not happen!** The blockchain will  essentially say "Hey you're trying to do something you're not allowed to, get outta here" and cancel your transaction.
 
-The unique thing about resources is that because of Cadences strong static type system, they can only exist in one location at a time and cannot be copied or lost because of a coding mistake. Instead of a ledger-style approach to record ownership, resources directly tie an asset’s ownership to the account that owns it by saving the resources in the account’s storage. 
+The unique thing about resources is that because of Cadence's strong static type system, they can only exist in one location at a time and cannot be copied or lost because of a coding mistake. Instead of a ledger-style approach to record ownership, resources directly tie an asset’s ownership to the account that owns it by saving the resources in the account’s storage. 
 
 Even cooler, since resources are just data types, they can own another resource. So if you're 
 making an on-chain version of Pokemon, your Pikachu can **own** items like an evolution stone or powerups!

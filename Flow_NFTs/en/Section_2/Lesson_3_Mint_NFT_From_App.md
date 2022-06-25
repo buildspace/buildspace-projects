@@ -3,7 +3,7 @@ Time to make the most magical part of our app - the mint button!
 This is where you realise how convenient the Flow architecture is. Remember your transactions & scripts? You can use them on the front-end too! I've included common transactions and scripts inside the Cadence folder. For now we'll just need two of them, one of which you've used before 🤯
 
 🚨**UPDATE NOTICE**🚨
-You'll need to go into the script files and update the account address + contract name in all places! I've left the name as "BottomShot" in case you were being lazy and didn't actually change your contracts name. If you don't change the address or the name, your mint function will probably just error lol
+You'll need to go into the script files and update the account address + contract name in all places! I've left the name as "BottomShot" in case you were lazy and didn't actually change your contracts name. If you don't change the address or the name, your mint function will probably just error lol
 
 Head back to your `App.js` and let's get started building a `mint` function.
 
@@ -81,16 +81,16 @@ const transactionId = await fcl.mutate({
   limit: 99
 })
 ```
-Some of this may not make sense to you right now, and thats OKAY. Lemme give you a quick explanation of whats up here. We've used this transaction before, just in a different place!
+Some of this may not make sense to you right now, and that's OKAY. Lemme give you a quick explanation of what's up here. We've used this transaction before, just in a different place!
 
-This block creates a `mutate` request using FCL. "Mutate" means to change, this is just a write request! We have 5 arugments being passed in here:
+This block creates a `mutate` request using FCL. "Mutate" means to change, this is just a write request! We have 5 arguments being passed in here:
 - `cadence`: this is the mint transaction we wrote to mint an NFT locally. It tells the blockchain what to change.
 - `args`: these are just the arguments for the transaction. This is where we pass in details like the name of the NFT and the link of the media. I'm using the `_id` field to step through the uploaded NFTs!
 - `proposer`: the account sending the transaction
 - `payer`: the account paying the gas fees (computation fees) for this transaction
 - `limit`: the computation limit for this transaction. 
 
-Remember, the library we imported called `@onflow/types`? Here we use it to tell FCL what the expected Flow datatype is so it can do the conversion (from string to address, for insance). The syntax for the `args` value is weird. For our Cadence transaction to work - it requires a very specific format. We convert our JS types inside the actual value for `args` to format our data in a way where Flow won't get mad at us :) 
+Remember, the library we imported called `@onflow/types`? Here we use it to tell FCL what the expected Flow datatype is so it can do the conversion (from string to address, for instance). The syntax for the `args` value is weird. For our Cadence transaction to work - it requires a very specific format. We convert our JS types inside the actual value for `args` to format our data in a way where Flow won't get mad at us :) 
 
 `arg` in `(arg, t)` is a function, and it takes in two variables - the first being the value of the argument that needs to be passed in the flow transaction, and the second is the datatype.
 

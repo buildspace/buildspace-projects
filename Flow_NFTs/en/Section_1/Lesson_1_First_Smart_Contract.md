@@ -48,7 +48,7 @@ One thing to note here - `let` variables are **not** mutable/changeable. That me
 
 The `hello()` function just returns the contract variable greeting. `self` refers to the current contract. Nothing too new here. 
 
-The playground isn't connected to the actual blockchain, it's just a "local" blockchain  running in your browser. You can deploy the contract to the browser blockchain by hitting the deploy button. On the bottom of your screen you should see a `Deployed Contract To: 0x01` log. Nice!
+The playground isn't connected to the actual blockchain, it's just a "local" blockchain running in your browser. You can deploy the contract to the browser blockchain by hitting the deploy button. On the bottom of your screen you should see a `Deployed Contract To: 0x01` log. Nice!
 
 Let's interact with it!
 
@@ -76,9 +76,9 @@ transaction {
 }
 ```
 
-First we import the HelloWorld contract from the address it was deployed to. On the testnet this address would look something like `0x4aa1a46d5b95f4bb`.
+First, we import the HelloWorld contract from the address it was deployed to. On the testnet this address would look something like `0x4aa1a46d5b95f4bb`.
 
-Next in the transaction body we can make variable declarations (just like a contract or a JS file) that will be available for the entire transaction. 
+Next, in the transaction body, we can make variable declarations (just like a contract or a JS file) that will be available for the entire transaction. 
 
 Transactions have four main phases, two of which we're seeing here:
 - `prepare`: This is where you pass in signers and the only place you can access their stuff.
@@ -128,7 +128,7 @@ pub contract HelloWorld {
 
 This is pretty cool. When we make something a resource, we have to follow some extra rules. The main thing to keep in mind is that resources can only exist in one place at one time. 
 
-What's a "place"? In Cadence, a place is an account. If you try to create a new resource but don't store it on an account, the blockchain will stop you. Contracts won't deploy, transactions will be reverted. 
+What's a "place"? In Cadence, a place is an account. If you try to create a new resource but don't store it on an account, the blockchain will stop you. Contracts won't deploy and transactions will be reverted. 
 
 ```js
 pub resource HelloAsset {
@@ -150,12 +150,12 @@ This is where we actually do the creation of the resource. Arrows `<-` in Cadenc
 self.account.save(<-newHello, to: /storage/Hello)
 ```
 
-`self` refers to the current contract. `account` refers to the account that is deploying the contract (your account). We call the save function to store the `newHello` resource in the `/storage/` path on the custom `Hello` domain for our account. Think of it like a directory path your on your computers hard-drive!
+`self` refers to the current contract. `account` refers to the account that is deploying the contract (your account). We call the save function to store the `newHello` resource in the `/storage/` path on our account's custom `Hello` domain. Think of it like a directory path on your computer's hard drive!
 
 Recap: We defined a resource, we created it, and then we stored it in our accounts' storage.
 
 These three things are sort of comparable to a bank account vault.
-1. The bank - Everything is happening *on our contract*, which is in a Flow accocunt. This is the bank.
+1. The bank - Everything is happening *on our contract*, which is in a Flow account. This is the bank.
 2. The bank account owner - This is you - your credentials are the Flow account you're using to sign the deploy transaction.
 3. The bank account vault - This is *your storage* in a vault at this bank.
 
@@ -198,7 +198,7 @@ First thing you didn't notice: we don't have an execute block here. That's cause
 let helloResource <- acct.load<@HelloWorld.HelloAsset>(from: /storage/Hello)
 ```
 
-This line is a doing a bunch of things. We start with `acct`, this is the account which has the resource. We call the `load` function. We specify the type with `<@HelloWorld.HelloAsset>` (this is why we imported the contract). We pass in the location at `from: /storage/hello`.
+This line is doing a bunch of things. We start with `acct`, this is the account which has the resource. We call the `load` function. We specify the type with `<@HelloWorld.HelloAsset>` (this is why we imported the contract). We pass in the location at `from: /storage/hello`.
 
 The code almost just *tells* you what it's doing. This is why I love Cadence, it's so explanatory if you understand the syntax. 
 

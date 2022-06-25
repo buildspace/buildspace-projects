@@ -65,9 +65,9 @@ Here's what I see on Windows:
 And on MacOS:
 ![](https://hackmd.io/_uploads/SyhyiK_K5.png)
 
-Your version might different, that's okay! 
+Your version might be different, that's okay! 
 
-The Flow CLI let's us do a bunch of cool stuff. We can use it to talk to the Flow network, deploy contracts and even send transactions. Let's use it to set up a Flow project!
+The Flow CLI lets us do a bunch of cool stuff. We can use it to talk to the Flow network, deploy contracts and even send transactions. Let's use it to set up a Flow project!
 
 ### 🐣 Set up a Flow project
 Alrighty, we're ready to get started. Create a `Learn-Flow` folder somewhere on your machine. This folder will contain all of our project files. I'm gonna keep mine on the desktop.
@@ -157,7 +157,7 @@ The Cadence extension sometimes doesn't detect that you've started your emulator
 
 ![](https://hackmd.io/_uploads/SyllhDjdFc.png)
 
-This will start the terminal in it's own window and will attach it to the extension. 
+This will start the terminal in its own window and will attach it to the extension. 
 ![](https://hackmd.io/_uploads/S15uOodYc.png)
 
 Let's deploy a contract on this local blockchain. Create a new terminal window and run this:

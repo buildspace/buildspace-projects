@@ -2,7 +2,7 @@ Since we're using FCL, we can use *any* Flow wallet we want! I'm going to go wit
 
 You can also try out [Lilico](https://lilico.app/) - it's a custodial wallet that works as a browser extension, just like other popular wallets. If you decide to use this, download it and set it up now.
 
-Head back to VS Code and open the `App.js` file in the `src` directory. You should see a bunch of code already there. Apart from the Cadence folder, this is a plain React app, just like one you'd generate with Create React App. I've just added styling to save you some time :D
+Head back to VS Code and open the `App.js` file in the `src` directory. You should see a bunch of code already there. Apart from the Cadence folder, this is a plain React app, just like the one you'd generate with Create React App. I've just added styling to save you some time :D
 
 ### ⚡ Using the FCL (Flow Client Library)
 Remember what I mentioned about FCL at the start? It standardises wallet connections so you only need to write wallet connection code *once*. Let's set it up!

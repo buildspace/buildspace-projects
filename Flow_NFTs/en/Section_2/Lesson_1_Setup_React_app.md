@@ -5,7 +5,7 @@ Start by heading over to this [GitHub Link](https://github.com/buildspace/flow-n
 
 ![fork](https://i.imgur.com/qHS38tH.png)
 
-Sweet! When you fork this repo, you are actually creating an identical copy of it that lives under your Github profile. So now you have your own version of this code that you can edit to your hearts content :). This will also come in handy when we are ready to deploy our app to Vercel 🤘.
+Sweet! When you fork this repo, you are actually creating an identical copy of it that lives under your Github profile. So now you have your own version of this code that you can edit to your heart's content :). This will also come in handy when we are ready to deploy our app to Vercel 🤘.
 
 The final step here is to actually get your newly forked repo on your local machine. Click the "Code" button and copy that link!
 
@@ -32,7 +32,7 @@ If you run
 npm run start
 ```
 
-A local server will start and launch your app in the browser on http://localhost:3000/. Play around with the styling, maybe use a different Gif!
+A local server will start and launch your app in the browser on http://localhost:3000/. Play around with the styling, and maybe use a different Gif!
 
 ### 🚨 Progress report 🚨 
 Post a screenshot of your React app running in #progress.

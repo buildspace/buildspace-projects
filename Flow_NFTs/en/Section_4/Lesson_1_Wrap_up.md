@@ -5,9 +5,9 @@ The way our mint function has been set up is a bit unusual. We're doing two thin
 
 The more secure way of doing NFT mints is by using an [NFTMinter resource](https://github.com/onflow/flow-nft/blob/master/contracts/ExampleNFT.cdc#L228). This resource gives accounts the capability to mint NFTs. Think of it like admin powers for a contract. 
 
-Right now if someone wanted to mint a DogMoji NFT on our contract, they totally could! They'd just need to change the arugments being passed into the mint transaction. This can be done by just writing a custom transaction and running it using the Flow CLI tool lol. A better way to do NFT metadata is to store the IPFS hash on the contract and increment the file number using Cadence. This way people can't mint NFTs with all sorts of arbitrary values via your contract. 
+Right now if someone wanted to mint a DogMoji NFT on our contract, they totally could! They'd just need to change the arguments being passed into the mint transaction. This can be done by just writing a custom transaction and running it using the Flow CLI tool lol. A better way to do NFT metadata is to store the IPFS hash on the contract and increment the file number using Cadence. This way people can't mint NFTs with all sorts of arbitrary values via your contract. 
 
-I want you to explore the [docs](https://docs.onflow.org/), there's lots of tutorials and documentation out there. You should be able to implement these changes yourself. 
+I want you to explore the [docs](https://docs.onflow.org/), there are lots of tutorials and documentation out there. You should be able to implement these changes yourself now :)
 
 ### 🚀 Deploy to the world (GTFOL)
 Deploying a React app has gotten so easy that there is no reason not to do it at this point lol. Plus, it's free. You've made it this far, deploying is the final step. Plus -- your fellow builders at buildspace must not be deprived of your NFTs!! Please give us the opportunity to mint your rare creations hehe.

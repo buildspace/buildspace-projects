@@ -1,7 +1,7 @@
 Our contract is now ready! Let's take it for a spin on a real network :)
 
 ### 🔐 Create new Testnet Account
-The first thing we need to do is create a new testnet account. There's two parts to this, we'll use the flow CLI for the first, run this command:
+The first thing we need to do is create a new testnet account. There are two parts to this, we'll use the flow CLI for the first, run this command:
 
 ```
 flow keys generate
@@ -38,7 +38,7 @@ If we go back to the bank vault example:
 
 ![](https://hackmd.io/_uploads/H1GjxwOY9.png)
 
-One tiny inaccruacy in this image is that the public key (the text on the key) and the account address (the vault number) are not the same. Also we can have more than two keys per account lol
+One tiny inaccuracy in this image is that the public key (the text on the key) and the account address (the vault number) are not the same. Also, we can have more than two keys per account lol
 
 Because of this decoupling, we can use control multiple accounts with one key and one account with several keys, sort of like a multi-sig. 
 
@@ -83,7 +83,7 @@ You've got two things here - `address` and `key`. **Replace these with the ones 
 You now have everything you need to deploy contracts and interact with the Flow testnet!
 
 ### 🔥 Deploy our contract
-So quick recap: we have our Flow CLI installed, we initialized our Flow project and we set up our testnet account. Cool beans. Let's now set up the contract we're going to deploy.
+So quick recap: we have our Flow CLI installed, initialised our Flow project, and set up our testnet account. Cool beans. Let's now set up the contract we're going to deploy.
 
 In `flow.json` you should see a section for contracts that currently looks like:
 ```
@@ -145,7 +145,7 @@ Put in your account address and you'll see your sick NFT contract!
 **Quick recap**
 In this section:
 1. We created Flow keys and a testnet account
-2. We configured our enviroment with our keys and the contract
+2. We configured our environment with our keys and the contract
 3. We deployed our contract to a real network!
 
 Nicely done! Next we're going to make an app that will let *anyone* mint NFTs from this contract :D
