@@ -242,7 +242,7 @@ This does 3 things:
 
 This is all just Javascript with two query functions using FCL. Nothing new here!
 
-All we need to do now is render our images and call the `fetchNFTs` function. I've just put my fetch call in a useEffect next to the other userEffect:
+All we need to do now is render our images and call the `fetchNFTs` function. I've just put my fetch call in a useEffect next to the other useEffect:
 
 ```
   useEffect(() => {
