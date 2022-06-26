@@ -28,7 +28,7 @@ Here are some of mine. I like the first row to be words that feel like they "des
 
 ![](https://i.imgur.com/ADawgrB.png)
 
-Perhaps you wanna generate random band name. Perhaps you wanna generate random character names for your Dungeons and Dragons games. Do whatever you want. Maybe you don't give a shit about three word combinations and just want to make SVGs of pixel art penguins. Go for it. Do whatever you want :).
+Perhaps you wanna generate a random band name. Perhaps you wanna generate random character names for your Dungeons and Dragons games. Do whatever you want. Maybe you don't give a shit about three word combinations and just want to make SVGs of pixel art penguins. Go for it. Do whatever you want :).
 
 Note: I recommend like 15-20 words per array. I've noticed around 10 it's usually not random enough. 
 
