@@ -109,7 +109,7 @@ Now that we have all the data held nicely in our React app’s state, let’s re
 **Replace** `if (hasClaimedNFT) { }` with the following:
 
 ```jsx
-// If the user has already claimed their NFT we want to display the interal DAO page to them
+// If the user has already claimed their NFT we want to display the internal DAO page to them
 // only DAO members will see this. Render all the members + token amounts.
 if (hasClaimedNFT) {
   return (
