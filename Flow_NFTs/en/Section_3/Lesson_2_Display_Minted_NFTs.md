@@ -528,4 +528,4 @@ You can use the network value to warn the user if they're on the wrong network :
 ### 🚨 Progress report 🚨
 You've come the entire way! WELL DONE!
 
-Post a screenshot of your finished app in #progress.
+Post a screenshot of your finished app in #progress. 
