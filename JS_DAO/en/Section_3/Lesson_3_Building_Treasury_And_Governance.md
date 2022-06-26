@@ -10,7 +10,7 @@ For example, maybe you want to create a proposal like, *“Transfer 1000 token 
 
 All these questions are answered in the initial voting contract we create
 
-It’s almost like your setting up a little country and you need to set up your initial government + voting system!
+It’s almost like you're setting up a little country and you need to set up your initial government + voting system!
 
 Head over to `8-deploy-vote.js` and add the following:
 
