@@ -186,7 +186,7 @@ The coolest part is we can just re-deploy without changing our script using:
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
 
-Once we redeploy, you'll be able to see your NFTs on [https://testnets.opensea.io/](https://testnets.opensea.io/) once you search the newly deployed contract address. Again, **don't click enter**. OpenSea is weird so you'll need click the collection itself when it comes up.
+Once we redeploy, you'll be able to see your NFTs on [https://testnets.opensea.io/](https://testnets.opensea.io/) once you search the newly deployed contract address. Again, **don't click enter**. OpenSea is weird so you'll need to click the collection itself when it comes up.
 
 Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE` if you're using Rarible.
 
