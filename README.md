@@ -51,6 +51,8 @@ We want to bring buildspace projects to everyone around the world but **we need 
 
 **If you are interested in becoming part of the buildspace translator crew send a DM to `alec#8853` on Discord to get access!**
 
+Before doing any translation work, **please make sure someone hasn't already done it!** We have a number of projects that are being actively translated and are not visible on the app. Please check [here](https://github.com/buildspace/buildspace-projects/pulls?q=is%3Aopen+is%3Apr+label%3Atranslation) to make sure you don't duplicate work :)
+
 ## 🤔 Why take this project on buildspace?
 You have access to all of the content right here in GitHub!
 
