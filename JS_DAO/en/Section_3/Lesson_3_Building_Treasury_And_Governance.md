@@ -75,7 +75,6 @@ Go ahead and run this using `node scripts/8-deploy-vote.js`. Here’s what I en
 buildspace-dao-starter % node scripts/8-deploy-vote.js
 👋 SDK initialized by address: 0xF11D6862e655b5F4e8f62E00471261D2f9c7E380
 ✅ Successfully deployed vote contract, address: 0xE079991f3c26b832C3E8171F512694899E831eDB
-
 ```
 
 This is pretty cool. Basically, we created and deployed a new smart contract that will let us actually vote on proposals on-chain. This is a standard [governance](https://docs.openzeppelin.com/contracts/4.x/api/governance) contract. You can see the exact contract you deployed [here](https://github.com/thirdweb-dev/contracts/blob/main/contracts/vote/VoteERC20.sol).
