@@ -124,4 +124,4 @@ Boom! We've successfully interacted w/ our deployed smart contract and have give
 
 *Please do this or Farza will be sad :(.*
 
-Hey! Go ahead and share the membership NFT you chose in `#progress` and tell us why you chose this epic NFT for your DAO.
+Hey! Go ahead and share the membership NFT you chose in `#progress` and tell us why you chose this epic NFT for your DAO. 
