@@ -86,4 +86,4 @@ Once you're done exploring, let's head to the next section and start our own NFT
 
 ## 🚨 Progress report!
 
-Post a screenshot of your terminal with the output of `sample-script.js` in #progress :).
+Post a screenshot of your terminal with the output of `sample-script.js` in #progress :)
