@@ -386,8 +386,6 @@ export default function Buy({ itemID }) {
 ```
 
 ### 🚨 Progress Report
-Please do this else Raza will be sad :(
-
 You have a full-stack application now! Front-end, back-end, server, blockchain, woohoo! 
 
 Post a screenshot of your editor in #progress showing off the "Adding order" console statement.
