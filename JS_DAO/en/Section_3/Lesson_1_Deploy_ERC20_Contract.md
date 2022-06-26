@@ -236,4 +236,4 @@ LETS GOOO.
 
 Go ahead and share a screenshot in `#progress` of your token contract on Etherscan where it shows off your token’s name, supply, etc!
 
-**BTW, if you made it this far and are having a good time -- maybe tweet out that you're building your own DAO and tag [@_buildspace](https://twitter.com/_buildspace) :)?**
+**BTW, if you made it this far and are having a good time -- maybe tweet out that you're building your own DAO and tag [@_buildspace](https://twitter.com/_buildspace) :)?** 
