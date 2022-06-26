@@ -57,7 +57,7 @@ Wtf is `_tokenIds`? Well, remember the Picasso example? He had 100 NFT sketches 
 
 Same thing here, we're using `_tokenIds` to keep track of the NFTs unique identifier, and it's just a number! It's automatically initialized to 0 when we declare `private _tokenIds`. So, when we first call `makeAnEpicNFT`, `newItemId` is 0. When we run it again, `newItemId` will be 1, and so on!
 
-`_tokenIds` is **state variable** which means if we change it, the value is stored on the contract directly.
+`_tokenIds` is a **state variable** which means if we change it, the value is stored on the contract directly.
 
 ```solidity
 _safeMint(msg.sender, newItemId);
@@ -99,7 +99,7 @@ This is all part of the `ERC721` standards and it allows people to build website
 
 We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [this](https://jsonkeeper.com/) website. This website is just an easy place for people to host JSON data and we'll be using it to keep our NFT data for now. Once you click "Save" you'll get a link to the JSON file. (For example, mine is [`https://jsonkeeper.com/b/RUUS`](https://jsonkeeper.com/b/RUUS)). Be sure to test your link out and be sure it all looks good!
 
-**Note: I'd love for you to create your own JSON metadata instead of just copying mine. Use your own image, name, and description. Maybe you want your NFT to an image of your fav anime character, fav band, whatever!! Make it custom. Don't worry, we'll be able to change this in the future!**
+**Note: I'd love for you to create your own JSON metadata instead of just copying mine. Use your own image, name, and description. Maybe you want your NFT to be an image of your fav anime character, fav band, whatever!! Make it custom. Don't worry, we'll be able to change this in the future!**
 
 If you decide to use your own image, make sure the URL goes directly to the actual image, not the website that hosts the image! Direct Imgur links look like this - `https://i.imgur.com/123123.png` NOT `https://imgur.com/gallery/123123`. The easiest way to tell is to check if the URL ends in an image extension like `.png` or `.jpg`. You can right click the imgur image and "copy image address". This will give you the correct URL.
 
