@@ -1,6 +1,6 @@
 ### 🙀 Building our boss
 
-So, in our game our character NFT will be able to attack a boss.
+So, in our game our character NFT will be able to attack a boss. 
 
 The whole goal of the game is to attack the boss and bring its HP to 0! But, the catch is that the boss has a lot of HP and every time we hit the boss it will hit us back and bring our HP down. If our character's HP falls below 0, then our character will no longer be able to hit the boss and it'll be “dead”.
 
