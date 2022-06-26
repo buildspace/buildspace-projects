@@ -52,13 +52,13 @@ First, you'll need to upload your images to a service that specializes in "[pinn
 
 ![Untitled](https://i.imgur.com/lTpmIIj.png)
 
-Go ahead and copy the files "CID". This is the files content address on IPFS! What's cool now is we can create this link:
+Go ahead and copy the files "CID". This is the file's content address on IPFS! What's cool now is we can create this link:
 
 ```javascript
 https://cloudflare-ipfs.com/ipfs/INSERT_YOUR_CID_HERE
 ```
 
-If you are using **Brave Browser** (which has IPFS built in) you can just type this paste into the URL:
+If you are using **Brave Browser** (which has IPFS built-in) you can just type this paste into the URL:
 
 ```javascript
 ipfs://INSERT_YOUR_CID_HERE
@@ -152,7 +152,7 @@ If everything runs smoothly, you should see some outputs in the terminal. Mine l
 
 ![image](https://user-images.githubusercontent.com/60590919/139611432-16d8c3fc-04b1-44c8-b58a-27f49e94d492.png)
 
-Head back to contract page in Rinkeby Etherscan by following the link returned in the terminal and you will notice that Etherscan has magically (with your help) turned the bytecodes into a much readible Solidity code.
+Head back to the contract page in Rinkeby Etherscan by following the link returned in the terminal and you will notice that Etherscan has magically (with your help) turned the bytecodes into a much readable Solidity code.
 
 ![image](https://user-images.githubusercontent.com/60590919/139611635-3d1d7aae-8bb8-47f5-9396-6a4544badebf.png)
 
