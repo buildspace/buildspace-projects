@@ -177,7 +177,9 @@ Now, let's move to the next step — deploying to a testnet :).
 
 When we use `run.js`, it's just us working locally.
 
-The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to to **view our NFT online** and we are a step closer to getting this to **real users.** 
+The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to **view our NFT online** and we are a step closer to getting this to **real users.** 
+
+You are a badass look at you! 
 
 ##  💳 Transactions
 
