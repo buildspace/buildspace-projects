@@ -215,7 +215,7 @@ This is awesome because we can test our application in a real-world scenario whe
 
 3. Wait for it to be mined
 
-4. Wait for it be broadcasted back to the blockchain telling all the other miners to update their copies
+4. Wait for it to be broadcasted back to the blockchain telling all the other miners to update their copies
 
 
 ## 🤑 Getting some fake $
