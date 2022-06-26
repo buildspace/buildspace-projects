@@ -2,7 +2,7 @@
 
 It would be nice for all the members of our DAO to easily see all the people in the DAO who hold tokens along with how many tokens they hold. To do that, we’ll need to actually call our smart contracts from our client and retrieve that data.
 
-Let’s do it! Head over to `App.jsx`. At the top, add the `useToken` hook to the list of `@thirdweb-dev/react` imports. Also, make sure to import `useMemo`:
+Let’s do it! Head over to `App.jsx`. At the top, add the `useToken` hook to the list of `@thirdweb-dev/react` imports. Also, make sure to import `useMemo`: 
 
 ```jsx
 import { useAddress, useMetamask, useEditionDrop, useToken } from '@thirdweb-dev/react';
