@@ -27,7 +27,7 @@ const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
     console.log("✅ Successfully revoked our superpowers from the ERC-20 contract");
 
   } catch (error) {
-    console.error("Failed to revoke ourselves from the DAO trasury", error);
+    console.error("Failed to revoke ourselves from the DAO treasury", error);
   }
 })();
 ```
