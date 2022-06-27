@@ -58,7 +58,7 @@ For example, mine looks like this:
 
 But wait — where will our fancy new JSON file go? Right now, we host it on [this](https://jsonkeeper.com/) random website. If that website goes down, our beautiful NFT is gone forever! Here's what we're going to do. **We're going to base64 encode our entire JSON file.** Just like we encoded our SVG.
 
-Head to [this](https://www.utilities-online.info/base64) website again. Paste in your full JSON metadata with the base64 encoded SVG (should look sorta like what I have above) and then click "encode" to get you encoded JSON. 
+Head to [this](https://www.utilities-online.info/base64) website again. Paste in your full JSON metadata with the base64 encoded SVG (should look sorta like what I have above) and then click "encode" to get your encoded JSON. 
 
 Open a new tab. And in the URL bar paste this:
 
