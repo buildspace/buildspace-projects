@@ -39,7 +39,7 @@ Thats why I use events here. I’m able to `emit` an event on the contract and t
 
 Again, it’s sorta like a web hook. Except this is going to be the easiest webhook ever to setup lol.
 
-Be sure to read more on events [here](https://docs.soliditylang.org/en/v0.4.21/contracts.html#events).
+Be sure to read more on events [here](https://docs.soliditylang.org/en/v0.8.14/contracts.html#events).
 
 As always when we change our contract.
 
