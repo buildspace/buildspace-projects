@@ -309,6 +309,7 @@ Open the **.env** file and paste the two we've grabbed as shown below.
 ALCHEMY_API_KEY_URL=<YOUR API URL>
 RINKEBY_PRIVATE_KEY=<YOUR PRIVATE KEY>
 ```
+Dont forget to remove those < > after adding your API URL and your PRIVATE KEY! 🔑
 
 **Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.
 OPEN YOUR `.gitignore` FILE AND ADD A LINE FOR `.env` IF IT DOES NOT EXIST**
