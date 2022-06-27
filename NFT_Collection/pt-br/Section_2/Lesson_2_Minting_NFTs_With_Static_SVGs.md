@@ -88,7 +88,7 @@ Por exemplo, o meu parece com isso:
 
 Mas espere - onde o nosso chique arquivo JSON vai? Nesse momento, estamos hospedando [nesse](https://jsonkeeper.com/) site. Se ele cair, nossa linda NFT se foi pra sempre! Aqui o que vamos fazer: **nós vamos codificar nosso arquivo JSON com base64 também.** Do mesmo jeito que nosso SVG.
 
-Vá para [esse](https://www.utilities-online.info/base64) site de novo. Cole todos os metadados JSON com o SVG codificado com base64 (deve se parecer com o que eu tenho abaixo) e clique "Q".
+Vá para [esse](https://www.utilities-online.info/base64) site de novo. Cole todos os metadados JSON com o SVG codificado com base64 (deve se parecer com o que eu tenho abaixo) e clique em "encode".
 
 Abra uma nova aba. E no URL cole isso:
 
