@@ -4,11 +4,11 @@ Nós vamos usar essa coisa chamada  [Replit](https://replit.com/~)!
 
 É uma IDE no navegador que nos permite construir web apps facilmente e fazer deploy de todos eles pelo navegador. É legítimo. Ao invés de ter que configurar todo um ambiente local e escrever comandos para fazer o deploy, tudo isso é dado para nós.
 
-Nota: **Você não precisa usar o replit para construir + fazer deploy do seu site. Se você quer trabalhar localmente no VSCode e usar Vercel/Heroku/AWS para fazer o deploy, se está confiante nas suas habilidades com web dev -- está tudo certo. [Rever este link](https://github.com/buildspace/buildspace-nft-course-starter) está um link para o repositório base, você pode cloná-lo e trabalhar localmente.**
+Nota: **Você não precisa usar o replit para construir e fazer deploy do seu site. Se você quer trabalhar localmente no VSCode e usar Vercel/Heroku/AWS para fazer o deploy, se está confiante nas suas habilidades com web dev -- está tudo certo. [Aqui está um link](https://github.com/danicuki/nft-bootcamp-front) para o repositório base, você pode cloná-lo e trabalhar localmente.**
 
 Crie uma conta no Replit antes de seguir em frente.
 
-Eu já criei um projeto básico em react que você pode fazer o **fork** no Replit.  **Apenas vá [Rever este link](https://replit.com/@adilanchian/nft-starter-project?v=1), e perto da direita você verá o botão de Fork.** Tenha certeza que você está logado, e clique nisso.
+Eu já criei um projeto básico em react que você pode fazer o **fork** no Replit.  **Apenas vá [nesse link](https://replit.com/@DanielCukier/nft-bootcamp-front?v=1), e perto da direita você verá o botão de Fork.** Tenha certeza que você está logado, e clique nisso.
 
 Você irá magicamente clonar meu repositório e a IDE inteira no seu navegador para trabalhar com o código. Uma vez que parar de carregar e mostrar algum código, clique em "run" em cima e você está pronto. Pode levar 2 a 4 minutos na primeira vez.
 

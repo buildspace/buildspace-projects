@@ -80,3 +80,7 @@ Isso é bastante épico. Vamos entrar em mais detalhes, mas basicamente o que es
 Se você estiver curioso, sinta-se a vontade para olhar o código dentro do projeto e ver como ele funciona. Especificamente, olhe o arquivo `Greeter.sol` que é o contrato inteligente e `sample-script.js` que roda o contrato.
 
 Uma vez que tiver acabado de explorar, vamos para a próxima seção e começar nosso próprio contrato NFT.
+
+🚨 Reporte seu progresso!
+-------------------
+Poste um print do seu terminal com a saída do `sample-script.js` no canal #progress do Discord :).

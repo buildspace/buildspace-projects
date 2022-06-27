@@ -22,13 +22,13 @@ const App = () => {
      */
     const { ethereum } = window;
     if (!ethereum) {
-      console.log("Make sure you have metamask!");
+      console.log("Certifique-se que você tem metamask instalado!");
       return;
     } else {
-      console.log("We have the ethereum object", ethereum);
+      console.log("Temos o objeto ethereum!", ethereum);
     }
   };
-  // Render Methods
+  // Métodos para Renderizar
   const renderNotConnectedContainer = () => (
     <button className="cta-button connect-wallet-button">
       Connect to Wallet
@@ -45,9 +45,7 @@ const App = () => {
       <div className="container">
         <div className="header-container">
           <p className="header gradient-text">Minha Coleção NFT</p>
-          <p className="sub-text">
-            Únicas. Lindas. Descubra a sua NFT hoje.
-          </p>
+          <p className="sub-text">Exclusivos! Maravilhosos! Únicos! Descubra seu NFT hoje.</p>
           {/* adicione o seu render method aqui */}
           {renderNotConnectedContainer()}
         </div>
@@ -58,7 +56,7 @@ const App = () => {
             href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
+          >{`feito com ❤️ pela @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
     </div>
@@ -69,7 +67,7 @@ export default App;
 
 ## 🔒 Ver se conseguimos acessar a conta do usuário
 
-Então quando você rodar isso, você deve ver aquela linha "We have the Ethereum object" escrita no console do site quando você for inspecioná-lo. Se você estiver usando o Replit, tenha certeza que você está olhando para o console do site do projeto, e não o do Replit! Você pode acessar o console do seu site abrindo ele na sua própria aba e carregando as ferramentas de desenvolvedor. O URL deve se parecer com isso - `https://nft-starter-project.seuUsuario.repl.co/`
+Então quando você rodar isso, você deve ver aquela linha "Temos o objeto ethereum" escrita no console do site quando você for inspecioná-lo. Se você estiver usando o Replit, tenha certeza que você está olhando para o console do site do projeto, e não o do Replit! Você pode acessar o console do seu site abrindo ele na sua própria aba e carregando as ferramentas de desenvolvedor. O URL deve se parecer com isso - `https://nft-starter-project.seuUsuario.repl.co/`
 
 **BOA.**
 
@@ -99,10 +97,10 @@ const App = () => {
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
     if (!ethereum) {
-      console.log("Make sure you have metamask!");
+      console.log("Certifique-se que você tem metamask instalado!")
       return;
     } else {
-      console.log("We have the ethereum object", ethereum);
+      console.log("Temos o objeto ethereum!", ethereum)
     }
     /*
      * Checa se estamos autorizados a carteira do usuário.
@@ -113,10 +111,10 @@ const App = () => {
      */
     if (accounts.length !== 0) {
       const account = accounts[0];
-      console.log("Found an authorized account:", account);
+      console.log("Encontrou uma conta autorizada:", account);
       setCurrentAccount(account);
     } else {
-      console.log("No authorized account found");
+      console.log("Nenhuma conta autorizada foi encontrada");
     }
   };
   // Render Methods
@@ -156,7 +154,7 @@ export default App;
 
 ## 🛍 Construir um botão de conecte sua carteira
 
-Quando você rodar o código acima, o console.log deve escrever   `Nenhuma conta autorizada foi encontrada. (No authorized account found")`. Por quê? Porque nós nunca dissemos explicitamente para o Metamask, _"hey metamask, por favor dê acesso à minha carteira para esse site_.
+Quando você rodar o código acima, o console.log deve escrever   `Nenhuma conta autorizada foi encontrada.`. Por quê? Porque nós nunca dissemos explicitamente para o Metamask, _"Ei metamask, por favor dê acesso à minha carteira para esse site_.
 
 Precisamos criar um botão  `connectWallet` . No mundo da Web3, conectar a sua carteira é literalmente um botão de Login para o usuário.
 
@@ -171,15 +169,16 @@ const TWITTER_HANDLE = "Web3dev_";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = "";
 const TOTAL_MINT_COUNT = 50;
+
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
     if (!ethereum) {
-      console.log("Make sure you have metamask!");
+      console.log("Certifique-se que você tem metamask instalado!")
       return;
     } else {
-      console.log("We have the ethereum object", ethereum);
+      console.log("Temos o objeto ethereum!", ethereum)
     }
     const accounts = await ethereum.request({ method: "eth_accounts" });
     if (accounts.length !== 0) {
@@ -197,7 +196,7 @@ const App = () => {
     try {
       const { ethereum } = window;
       if (!ethereum) {
-        alert("Get MetaMask!");
+        alert("Baixe o Metamask!");
         return;
       }
       /*
@@ -209,21 +208,20 @@ const App = () => {
       /*
        * Boom! Isso deve escrever o endereço público uma vez que autorizar o Metamask.
        */
-      console.log("Connected", accounts[0]);
+      console.log("Conectado", accounts[0]);
       setCurrentAccount(accounts[0]);
     } catch (error) {
       console.log(error);
     }
   };
-  // Render Methods
+
+  // Métodos para Renderizar
   const renderNotConnectedContainer = () => (
-    <button
-      onClick={connectWallet}
-      className="cta-button connect-wallet-button"
-    >
-      Connect to Wallet
+    <button onClick={connectWallet} className="cta-button connect-wallet-button">
+      Conectar Carteira
     </button>
-  );
+  )
+  
   useEffect(() => {
     checkIfWalletIsConnected();
   }, []);
@@ -242,7 +240,7 @@ const App = () => {
             renderNotConnectedContainer()
           ) : (
             <button onClick={null} className="cta-button connect-wallet-button">
-              Mint NFT
+              Cunhar NFT
             </button>
           )}
         </div>
@@ -253,7 +251,7 @@ const App = () => {
             href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
+          >{`feito com ❤️ pela @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
     </div>

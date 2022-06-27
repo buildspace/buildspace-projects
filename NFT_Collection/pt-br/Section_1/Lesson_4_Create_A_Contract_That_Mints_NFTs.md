@@ -332,4 +332,22 @@ Por exemplo, esse é meu link: https://rinkeby.rarible.com/token/0x5794653132ed3
 
 ## 💻 O código
 
-[Rever este link](https://gist.github.com/danicuki/6f023edfd76e52e4c558abd3d75b871d) está um link para como o nosso código se parece até esse ponto. 
+[Aqui](https://gist.github.com/danicuki/6f023edfd76e52e4c558abd3d75b871d) está um link para como o nosso código se parece até esse ponto. 
+
+🚨 Reporte seu progresso!
+------------------------
+TCHU-HUUUU. PODE SE DAR UM TAPINHA NAS COSTAS. VOCÊ FEZ DEPLOY DE UM SMART CONTRACT QUE FAZ MINT DE NFTS. 
+
+Isso é coisa boa demais :).
+
+Você deveria parar tudo agora e mandar um **tweet** contanto que você acabou de escrever e deployar seu smart contract que cria NFTs na blockchain e marcar @web3dev_. Pra ficar mais chique, inclua também uma foto da tela do OpenSea/Rarible mostrando seu NFT :)!
+
+Você tem que se sentir incrível por ter construído de verdade algo que todo mundo só fica falando. Você tem super-poderes :-)
+
+*Obrigado a todas as pessoas que estão twitando sobre nós, vocês são lendas <3.*
+
+![](https://i.imgur.com/BazDcs3.png)
+
+![](https://i.imgur.com/M5Y7God.png)
+
+![](https://i.imgur.com/w3RNVce.png)

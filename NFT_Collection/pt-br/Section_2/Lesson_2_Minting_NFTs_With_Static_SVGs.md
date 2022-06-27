@@ -137,3 +137,7 @@ Depois, a mesma coisa de antes, espere um minuto ou dois, pegue o endereço do c
 Nota: lembre de usar `https://rinkeby.rarible.com/token/INSIRA_O_ENDEREÇO_DO_CONTRATO_AQUI:INSIRA_O_TOKEN_ID_AQUI` se o OpenSea estiver muito lento.
 
 ![Untitled](https://i.imgur.com/lYCAzph.png)
+
+🚨 Reporte seu Progresso.
+------------------------
+Se você tem um NFT chique, não esquece de mandar um print dele na OpenSea no canal `#progresso` da sua turma no Discord!

@@ -204,10 +204,8 @@ Você deve conseguir ver a nova coleção no OpenSea ou no Rarible :)!
 
 Tudo o que precisamos é um site que permita que os usuários criem um NFT por conta própria.
 
-
 Então, vamos construir isso :)!
 
 🚨 Relatório de progresso.
 ------------------------
-
-Se você tiver um, envie uma captura de tela de seu novo NFT gerado dinamicamente no OpenSea/Rarible em #progress :). Além disso - se você ainda não tweetou uma imagem de sua coleção maravilhosa de NFT, agora é a hora de fazê-lo!! Lembre-se de marcar @web3dev_ !!! Vamos trazer o máximo de pessoas possível para esse bootcamp!
+Se você tiver um, envie uma captura de tela de seu novo NFT gerado dinamicamente no OpenSea/Rarible em #progresso :). Além disso - se você ainda não tweetou uma imagem de sua coleção maravilhosa de NFT, agora é a hora de fazê-lo!! Lembre-se de marcar @web3dev_ !!! Vamos trazer o máximo de pessoas possível para esse bootcamp!

@@ -6,7 +6,7 @@ O que acontece se o imgur cair? Então - nosso link da imagem seria absolutament
 
 Uma maneira de consertar esse problema é armazenar os dados da nossa NFT "on-chain", significando que os dados vivem no contrado ao invés de nas mãos de um terceiro (third-party). Isso significa que nossa NFT será verdadeiramente permanente :). Nesse caso, a única situação onde perdemos nossos dados da NFT seria se a blockchain caísse. E se isso acontecer - bom, aí temos problemas maiores.
 
-Mas, assumindo que a blockchain não caia, nossa NFT vai estar ali para sempre! Isso é bem atraente, porque também significa que se você vender uma NFT, o comprador pode estar confiante que ela não vai quebrar. Muitos projetos populares usam dados "On-chain", [Rever este link](https://techcrunch.com/2021/09/03/loot-games-the-crypto-world/) é um exemplo muito popular!
+Mas, assumindo que a blockchain não caia, nossa NFT vai estar ali para sempre! Isso é bem atraente, porque também significa que se você vender uma NFT, o comprador pode estar confiante que ela não vai quebrar. Muitos projetos populares usam dados "On-chain", [Este aqui](https://techcrunch.com/2021/09/03/loot-games-the-crypto-world/) é um exemplo muito popular!
 
 🖼 O que são SVGs?
 
