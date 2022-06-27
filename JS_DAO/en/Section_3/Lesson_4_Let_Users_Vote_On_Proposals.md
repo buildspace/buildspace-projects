@@ -82,7 +82,7 @@ It looks like a lot. Go ahead and read through it step by step! We’re actually
 
 **1) We’re creating a proposal that allows the treasury to mint 420,000 new token.** You can see we do a `"mint"` in the code.
 
-Maybe the treasury is running low and we want more tokens to award members. Remember, earlier we gave our voting contract the ability to mint new token — so this works! It’s a democratic treasury. If you members think this is proposal is stupid and vote “NO”, this simply won’t pass!
+Maybe the treasury is running low and we want more tokens to award members. Remember, earlier we gave our voting contract the ability to mint new token — so this works! It’s a democratic treasury. If your members think this proposal is stupid and vote “NO”, this simply won’t pass!
 
 **2) We’re creating a proposal that transfer 6,900 token to our wallet from the treasury.** You can see we do a `"transfer"` in the code.
 
