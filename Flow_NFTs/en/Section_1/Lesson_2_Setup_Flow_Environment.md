@@ -95,7 +95,7 @@ We'll work with this file a bunch so you'll learn all about it soon!
 🚨**RESTART EDITOR HERE**🚨
 It's a good idea to restart your VSCode editor here so the installed Cadence extension detects that you're about to write flow and kicks in!
 
-You can open the `flowNFTs` folder in VS Code by entering `code .` in the terminal. If this doesn't do anything, you haven't installed the shell command on your machine. You can install it by launching the command palette (`CMD/CTRL`+`SHIFT`+`P`) and typing "shell command".
+You can open the `FlowNFTs` folder in VS Code by entering `code .` in the terminal. If this doesn't do anything, you haven't installed the shell command on your machine. You can install it by launching the command palette (`CMD/CTRL`+`SHIFT`+`P`) and typing "shell command".
 
 ![](https://hackmd.io/_uploads/ByLsN8dYq.png)
 
