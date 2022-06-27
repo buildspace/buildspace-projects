@@ -70,10 +70,10 @@ Lastly, what would also be awesome is if you told us in #feedback how you liked 
 ### ♥ Acknowledgements
 Despite what it may seem like, I did **not** pump all of this content out by myself. I had **a lot** of help making this project build as amazing as it was.
 
-Shoutouts to our AMAZING TAs (you should definitely follow them on Twitter):
-[Rohit](https://twitter.com/rohithandique_) - Contract, front-end, template and a lot more
-[Matt](https://twitter.com/TopShotTurtles) - Ideas, parts of the guide, Flow maxi vibes
-[Sean](https://twitter.com/helloitsme_sl) - Front-end styling
+Shoutouts to our AMAZING TAs (you should definitely follow them on Twitter): 
+- [Rohit](https://twitter.com/rohithandique_) - Contract, front-end, template and a lot more
+- [Matt](https://twitter.com/TopShotTurtles) - Ideas, parts of the guide, Flow maxi vibes
+- [Sean](https://twitter.com/helloitsme_sl) - Front-end styling
 
 A huge thanks to the entire Flow Devrel and education team for all their feedback:
 Andrea, Alex, Srinjoy, Kim, Tyllen + everyone I've forgotten.
