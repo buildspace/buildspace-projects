@@ -121,4 +121,4 @@ Note: This link you'll need to hardcode. I left a variable at the top for you to
 
 ## 🚨 Progress report!
 
-You're nearly at the end :). Post a screenshot in #progress with that little pop up that that gives your user the direct OpenSea link!
+You're nearly at the end :). Post a screenshot in #progress with that little pop-up that gives your user the direct OpenSea link!
