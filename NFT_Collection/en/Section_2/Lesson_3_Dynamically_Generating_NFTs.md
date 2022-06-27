@@ -38,7 +38,7 @@ Note: I recommend like 15-20 words per array. I've noticed around 10 it's usuall
 function pickRandomFirstWord
 ```
 
-This function looks kinda funky. Right? Lets talk about how we're randomly picking stuff from the arrays.
+This function looks kinda funky. Right? Let's talk about how we're randomly picking stuff from the arrays.
 
 So, generating a random number in smart contracts is widely known as a **difficult problem**.
 
