@@ -161,6 +161,6 @@ Mas o que isso significa? Então, toda vez que você roda um comando de terminal
 
 **Você vai ver `hre` várias vezes no seu código, mas nunca importado em lugar nenhum! Dê uma olhada na [documentação Hardhat](https://hardhat.org/advanced/hardhat-runtime-environment.html) para aprender mais sobre!**
 
-🚨 Reporte seu progresso!
+🚨 Relatório de progresso.
 -------------------
 Poste um print no canal #progress do Discord com a saída do comando `npx hardhat run scripts/run.js`  :).

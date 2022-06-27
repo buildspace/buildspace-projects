@@ -81,6 +81,6 @@ Se você estiver curioso, sinta-se a vontade para olhar o código dentro do proj
 
 Uma vez que tiver acabado de explorar, vamos para a próxima seção e começar nosso próprio contrato NFT.
 
-🚨 Reporte seu progresso!
+🚨 Relatório de progresso.
 -------------------
 Poste um print do seu terminal com a saída do `sample-script.js` no canal #progress do Discord :).

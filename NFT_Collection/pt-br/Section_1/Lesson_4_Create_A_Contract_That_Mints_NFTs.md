@@ -334,7 +334,7 @@ Por exemplo, esse é meu link: https://rinkeby.rarible.com/token/0x5794653132ed3
 
 [Aqui](https://gist.github.com/danicuki/6f023edfd76e52e4c558abd3d75b871d) está um link para como o nosso código se parece até esse ponto. 
 
-🚨 Reporte seu progresso!
+🚨 Relatório de progresso.
 ------------------------
 TCHU-HUUUU. PODE SE DAR UM TAPINHA NAS COSTAS. VOCÊ FEZ DEPLOY DE UM SMART CONTRACT QUE FAZ MINT DE NFTS. 
 

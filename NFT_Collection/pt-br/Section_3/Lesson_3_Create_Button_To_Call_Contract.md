@@ -134,3 +134,7 @@ Digamos que você quer mudar seu contrato. Você precisa de 3 coisas:
 **As pessoas esquecem constantemente de fazer esses 3 passos quando mudam o contrato. Não esqueçam.**
 
 Por que precisamos fazer tudo isso? Bom, é porque contratos inteligentes são  **imutáveis**. Eles não podem mudar. São permanentes. Isso significa que mudar um contrato requer fazer o deploy inteiro de novo. Isso também vai **resetar** todas as variáveis visto que será tratado como um contrato novo. **Isso significa que perderíamos os dados das NFTs se quiséssemos atualizar o código do contrato.**
+
+🚨 Relatório de progresso!
+------------------------
+Poste um print do seu console depois que você faz o mint de alguns NFTs e todos aparecem no `console.log`s!

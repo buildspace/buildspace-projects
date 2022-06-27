@@ -259,3 +259,7 @@ const App = () => {
 };
 export default App;
 ```
+
+🚨 Relatório de progresso!
+------------------------
+Poste um print do seu site em #progresso!

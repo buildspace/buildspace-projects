@@ -138,6 +138,6 @@ Nota: lembre de usar `https://rinkeby.rarible.com/token/INSIRA_O_ENDEREÇO_DO_CO
 
 ![Untitled](https://i.imgur.com/lYCAzph.png)
 
-🚨 Reporte seu Progresso.
+🚨 Relatório de progresso.
 ------------------------
 Se você tem um NFT chique, não esquece de mandar um print dele na OpenSea no canal `#progresso` da sua turma no Discord!

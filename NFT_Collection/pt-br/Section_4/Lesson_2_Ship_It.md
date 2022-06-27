@@ -58,7 +58,7 @@ Vou deixar para você explorar!! ;)
 📝 Verifique o contrato no Etherscan.
 ------------------
 
-Você sabe que pode mostrar o código-fonte do seu contrato inteligente para o mundo? Isso permitirá que sua lógica seja realmente transparente. Fiel ao conceito de blockchain público. Todos que desejam interagir com seu smart contract na blockchain são capazes de examinar a lógica do contrato primeiro! Para isso, o Etherscan possui a função **Verify Contract**. [Aqui](https://rinkeby.etherscan.io/address/0x902ebbecafc54f7a8013a9d7954e7355309b50e6#code) é um exemplo de como será um contrato verificado. Sinta-se à vontade para examinar o contrato você mesmo.
+Você sabe que pode mostrar o código-fonte do seu contrato inteligente para o mundo? Isso permitirá que sua lógica seja realmente transparente. Fiel ao conceito de blockchain público. Todos que desejam interagir com seu smart contract na blockchain são capazes de examinar a lógica do contrato primeiro! Para isso, o Etherscan possui a função **Verify Contract**. [Aqui](https://rinkeby.etherscan.io/address/0x86bf1a9ced43ec2ed7791c42d309ea22627429ef#code) é um exemplo de como será um contrato verificado. Sinta-se à vontade para examinar o contrato você mesmo.
 
 Se você selecionar a aba **Contract** no Etherscan, notará uma longa lista de caracteres de texto que começa em `0x608060405234801 ...` Hmm .. o que poderia ser 🤔?
 
@@ -84,11 +84,11 @@ Então no seu `hardhat.config.js` adicione o seguinte:
 
 ```javascript
 require("@nomiclabs/hardhat-etherscan");
-// Rest of code
+// Resto do código
 ...
 module.exports = {
   solidity: "0.8.0",
-  // Rest of the config
+  // Resto do  config
   ...,
   etherscan: {
     // Sua chave API key do Etherscan
@@ -102,7 +102,7 @@ Estamos quase lá! Você deve ter notado que o objeto `etherscan` em nossa confi
 
 Se você ainda não tem uma conta, vá para [https://etherscan.io/register](https://etherscan.io/register) para criar uma conta de usuário gratuita. Depois disso, vá para as configurações do seu perfil e em `API-KEYs` crie um novo apikey
 
-![Rever este link](https://user-images.githubusercontent.com/60590919/139610459-b590bbc1-0d4e-4e78-920b-c45e61bf2d7e.png)
+![imagem API KEY](https://i.imgur.com/yzj9d0n.png)
 
 Legal, você conseguiu sua chave de API. É hora de voltar ao arquivo `hardhat.config.js` e alterar a propriedade `apiKey` para ser a chave recém-gerada.
 
@@ -115,11 +115,11 @@ npx hardhat verify YOUR_CONTRACT_ADDRESS --network rinkeby
 ```
 Se tudo correr bem, você deverá ver algumas saídas no terminal. O meu é assim:
 
-![image](https://user-images.githubusercontent.com/60590919/139611432-16d8c3fc-04b1-44c8-b58a-27f49e94d492.png)
+![image](https://i.imgur.com/lrV9g9V.png)
 
 Volte para a página do contrato no Rinkeby Etherscan seguindo o link retornado no terminal e você notará que o Etherscan magicamente (com a sua ajuda) transformou os bytecodes em um código Solidity muito legível.
 
-![image](https://user-images.githubusercontent.com/60590919/139611635-3d1d7aae-8bb8-47f5-9396-6a4544badebf.png)
+![image](https://i.imgur.com/SqavSrG.png)
 
 Todos podem ver o quão incrível é o seu smart contract agora!
 
@@ -133,7 +133,7 @@ Espere e tem mais. Existem agora duas novas sub-abas `Read Contract` & `Write Co
 
 Super emocionante que você chegou ao fim. Um grande feito!
 
-Antes de sair, certifique-se de adicionar alguns daqueles pequenos retoques finais da lição anterior, se desejar. Isso realmente faz a diferença. Quando estiver pronto, poste um link para seu projeto em #progresso. Seus colegas de classe serão os primeiros a cunhar alguns de seus incríveis NFTs!
+Antes de sair, certifique-se de adicionar alguns daqueles pequenos retoques finais da lição anterior, se desejar. Isso realmente faz a diferença. Quando estiver pronto, poste um link para seu projeto em #progresso. Seus colegas de turma serão os primeiros a cunhar alguns de seus incríveis NFTs!
 
 Obrigado por contribuir para o futuro da web3 ao aprender essas coisas. O fato de você saber como isso funciona e como codificá-lo é um superpoder. Use seu poder com sabedoria ;).
 
@@ -142,7 +142,7 @@ Obrigado por contribuir para o futuro da web3 ao aprender essas coisas. O fato d
 
 O que você aprendeu neste projeto é apenas o começo! Há muito mais que você pode fazer com NFTs e smart contracts. Aqui estão alguns exemplos que você pode pesquisar mais ✨
 
-- **Venda seus NFTs** - No momento, seus usuários só precisam pagar taxas de gás para cunhar seus incríveis NFTs e você não receberá nenhum dinheiro! Existem várias maneiras de alterar seu contrato inteligente que faz o usuário pagar para cunhar suas transações, como adicionar ```payable``` ao seu contrato e usar ``` require``` para definir um valor mínimo. Já que você está lidando com dinheiro real aqui, é melhor fazer sua pesquisa com cuidado e perguntar aos especialistas se seu código está seguro. O OpenZeppelin tem um fórum onde você pode fazer perguntas como esta [aqui!](https://forum.openzeppelin.com/t/implementation-of-sellable-nft/5517/)
+- **Venda seus NFTs** - No momento, seus usuários só precisam pagar taxas de gás para cunhar seus incríveis NFTs e você não receberá nenhum dinheiro! Existem várias maneiras de alterar seu contrato inteligente que faz o usuário pagar para cunhar suas transações, como adicionar `payable` ao seu contrato e usar `require` para definir um valor mínimo. Já que você está lidando com dinheiro real aqui, é melhor fazer sua pesquisa com cuidado e perguntar aos especialistas se seu código está seguro. O OpenZeppelin tem um fórum onde você pode fazer perguntas como esta [aqui!](https://forum.openzeppelin.com/t/implementation-of-sellable-nft/5517/)
 
 - **Adicionar Royalties** - Você também pode adicionar royalties ao seu contrato que lhe daria uma porcentagem de cada venda futura de seu NFT! Leia mais sobre isso aqui: [EIP-2981: NFT Royaly Standard](https://eips.ethereum.org/EIPS/eip-2981/)
 
@@ -150,7 +150,7 @@ O que você aprendeu neste projeto é apenas o começo! Há muito mais que você
 
 🤟 Seu NFT!
 ---------
-Enviaremos seu NFT dentro de uma hora e enviaremos um e-mail assim que estiver em sua carteira. Ele está sendo executado em um cron job! Se você não receber o e-mail em 24 horas, por favor, envie-nos uma mensagem em #chat-geral e tag @ **danicuki#5520**.
+Enviaremos seu NFT em até uma hora e enviaremos um e-mail assim que estiver em sua carteira. Ele está sendo executado em um cron job! Se você não receber o e-mail em 24 horas, por favor, envie-nos uma mensagem em #chat-geral e tag @ **danicuki#5520**.
 
 🌈 Antes de sair...
 ---------
@@ -158,8 +158,8 @@ Vá para #progresso no Discord e nos mostre seu produto final com o qual podemos
 
 Além disso, você deve twittar o seu projeto final e mostrar ao mundo a sua criação incrível! O que você fez não foi fácil de forma alguma. Talvez até faça um pequeno vídeo mostrando seu projeto e anexe no tweet. Faça seu tweet parecer bonito e se exiba um pouco :).
 
-E se você quiser, marque @Web3dev_ :). Vamos fazer o RT. Além disso, isso nos dá muita motivação sempre que vemos pessoas enviando seus projetos.
+E se você quiser, marque a @web3dev_ :). Vamos fazer o RT. Além disso, isso nos dá muita motivação sempre que vemos pessoas enviando seus projetos.
 
-Por último, o que também seria incrível é se você nos dissesse em #feedback como gostou deste projeto e da estrutura do projeto. O que você mais ama na WEB3DEV ? O que gostaria que mudássemos para projetos futuros? Seu feedback seria incrível!!
+Por último, o que também seria incrível é se você nos dissesse no canal #💡・sugestões como podemos melhorar o bootcamp, ou simplesmente uma mensagem de amor no canal #⭐・elogios. O que você mais ama na WEB3DEV? O que gostaria que mudássemos para projetos futuros? Seu feedback seria incrível!!
 
 Te vejo por aí!!!

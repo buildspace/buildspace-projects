@@ -27,3 +27,7 @@ Porque precisamos da Metamask? Bom. Precisamos estar habilitados a chamar funç�
 É quase como uma autenticação. Nós precisamos de algo para "logar" na blockchain e depois usar essas credenciais para fazer requests na API pelo nosso site.
 
 Então, vá em frente e configure tudo! O flow de configuração da Metamask é bem auto-explicativo :).
+
+🚨 Reporte seu progresso.
+------------------------
+Poste o endereço público da sua carteira no canal #progresso junto com um gif engraçado. É bom que seja engraçado, hein ;). 
