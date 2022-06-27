@@ -6,7 +6,7 @@ So right now, our code is set to give the waver 0.0001 ETH every single time! Ou
 
 2\. Create a **cooldown** mechanism to prevent people from spam-waving you in an attempt to win the prize or annoy you. 
 
-Lets's do the random winner first!
+Let's do the random winner first!
 
 So, generating a random number in smart contracts is widely known as a **difficult problem**.
 
