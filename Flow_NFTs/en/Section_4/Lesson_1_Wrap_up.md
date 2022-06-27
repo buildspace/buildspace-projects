@@ -12,11 +12,9 @@ I want you to explore the [docs](https://docs.onflow.org/), there are lots of tu
 ### 🚀 Deploy to the world (GTFOL)
 Deploying a React app has gotten so easy that there is no reason not to do it at this point lol. Plus, it's free. You've made it this far, deploying is the final step. Plus -- your fellow builders at buildspace must not be deprived of your NFTs!! Please give us the opportunity to mint your rare creations hehe.
 
-Note: Since Vercel is a read-only filesystem, adding orders or products from the web-app will not work!. This is cuz your "database" json files will not save. If you don't want to use Vercel, all good. Use whatever you want.
-
 Basically:
 
-- Push your latest code up to Github.
+- Push your latest front-end code up to Github.
 - Connect Vercel to your repo.
 - Make sure you add your .env variables
 - Deploy.
