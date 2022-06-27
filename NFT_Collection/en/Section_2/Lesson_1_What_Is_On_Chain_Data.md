@@ -2,7 +2,7 @@
 
 We have a big problem right now with our NFTs.
 
-What happens if imgur goes down? Well — then our `image` link is absolutely useless and our NFT is lost and our Spongebob is lost! Even worse, what happens if that website that hosts the JSON file goes down? Well — then our NFT is completely broken because the metadata wouldn't be accesible.
+What happens if imgur goes down? Well — then our `image` link is absolutely useless and our NFT is lost and our Spongebob is lost! Even worse, what happens if that website that hosts the JSON file goes down? Well — then our NFT is completely broken because the metadata wouldn't be accessible.
 
 One way to fix this problem is to store all our NFT data "on-chain" meaning the data lives on the contract itself vs in the hands of a third-party. This means our NFT will truly be permanent :). In this case, the only situation where we lose our NFT data is if the blockchain itself goes down. And if that happens — well then we have bigger problems!
 
