@@ -2,7 +2,7 @@
 
 Para que nosso site possa se comunicar com a blockchain, nós precisamos de alguma forma conectar nossa carteira com ele. Uma vez que nossa carteira esteja conectada, nosso website terá permissão para chamar smart contracts em nosso favor. **Lembre-se, é como se autenticar em um website.**
 
-Talvez você já tenha criado botões de "Connect to Wallet" antes! Desta vez, nós usaremos o SDK front-end do thirdweb que faz isso ser muito mais fácil.
+Talvez você já tenha criado botões de "Connectar Wallet" antes! Desta vez, nós usaremos o SDK front-end do thirdweb que faz isso ser muito mais fácil.
 
 Vá para `index.js` no seu React App e adicione o código abaixo:
 
@@ -102,6 +102,6 @@ A propósito - Aqui eu faço `<h1>Welcome to NarutoDAO</h1>`, por favor faça is
 
 ### 🚨 Relatório de Progresso
 
-*Por favor faça isso ou Farza vai ficar triste :(*
+*Por favor faça isso ou Danicuki vai ficar triste :(*
 
-Poste uma captura de tela em `#progress` mostrando a página de boas vindas da sua DAO com o botão de conectar na carteira. É melhor que não esteja escito NarutoDAO!
+Poste uma captura de tela em `#progresso` mostrando a página de boas vindas da sua DAO com o botão de conectar na carteira. É melhor que não esteja escito NarutoDAO!
