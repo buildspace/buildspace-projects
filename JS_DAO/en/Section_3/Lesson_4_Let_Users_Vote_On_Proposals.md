@@ -86,9 +86,9 @@ Maybe the treasury is running low and we want more tokens to award members. Reme
 
 **2) We’re creating a proposal that transfer 6,900 token to our wallet from the treasury.** You can see we do a `"transfer"` in the code.
 
-Maybe we did something good and want to be rewarded for it! In the real world, you’d usually create proposals to send other people token. For example, maybe someone helped code up a new website for the DAO and wants to be rewarded for it. We can transfer them token!
+Maybe we did something good and want to be rewarded for it! In the real world, you’d usually create proposals to send other people tokens. For example, maybe someone helped code up a new website for the DAO and wants to be rewarded for it. We can transfer them tokens!
 
-BTW, I want to make a note on `nativeTokenValue`. Lets say we wanted to have our proposal say, “We’d like to reward NarutoFangirl27 for helping us with marketing with 2500 governance token and 0.1 ETH”. This is really cool! It means you can reward people with both ETH and governance token — best of both worlds. *Note: That 0.1 ETH would need to be in our treasury if we wanted to send it!*
+BTW, I want to make a note on `nativeTokenValue`. Lets say we wanted to have our proposal say, “We’d like to reward NarutoFangirl27 for helping us with marketing with 2500 governance token and 0.1 ETH”. This is really cool! It means you can reward people with both ETH and governance tokens — best of both worlds. *Note: That 0.1 ETH would need to be in our treasury if we wanted to send it!*
 
 When I run `node scripts/10-create-vote-proposals.js` I get:
 
@@ -178,7 +178,7 @@ So, we’re doing two things here!
 
 In the first `useEffect` we’re doing `vote.getAll()` to grab all the proposals that exist on our governance contract and then doing `setProposals` so we can render them later.
 
-In the second useEffect, we’re doing `vote.hasVoted(proposals[0].proposalId, address)` which check if this address has voted on the first proposal. If it has, then we do `setHasVoted` so the user can’t vote again! Even if we didn’t have this, our contract would reject the transaction if a user tried to double vote!
+In the second useEffect, we’re doing `vote.hasVoted(proposals[0].proposalId, address)` which checks if this address has voted on the first proposal. If it has, then we do `setHasVoted` so the user can’t vote again! Even if we didn’t have this, our contract would reject the transaction if a user tried to double vote!
 
 The magic of thirdweb is that it not only makes it really easy to deploy smart contracts, it also makes it crazy easy to interact with them from our client with simple functions like `vote.getAll()`!
 
@@ -220,7 +220,7 @@ votes "for" proposal > votes "against" proposal
 
 Then any member would be able to execute the proposal via our governance contract. Proposals can’t be executed automatically. But, once a proposal passes, **any member** of the DAO can trigger the accepted proposal.
 
-For example. Let’s say we’re dealing with the proposal where we’re minting an additional 420,000 token. If `votes "for" proposal > votes "against" proposal`  — then anyone can trigger the proposal and bam our contract will mint the token. Kinda wild, right? We have to trust no one except the blockchain.
+For example. Let’s say we’re dealing with the proposal where we’re minting an additional 420,000 tokens. If `votes "for" proposal > votes "against" proposal`  — then anyone can trigger the proposal and bam our contract will mint the tokens. Kinda wild, right? We have to trust no one except the blockchain.
 
 Imagine being in a corrupt country, voting for something, and then your government lies to you and says “Hey actually we didn’t get enough votes jk” when you really did lol. Or, imagine they say, “Okay, we got enough votes we’ll do this we promise” and never do!
 
