@@ -103,7 +103,7 @@ We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [
 
 If you decide to use your own image, make sure the URL goes directly to the actual image, not the website that hosts the image! Direct Imgur links look like this - `https://i.imgur.com/123123.png` NOT `https://imgur.com/gallery/123123`. The easiest way to tell is to check if the URL ends in an image extension like `.png` or `.jpg`. You can right click the imgur image and "copy image address". This will give you the correct URL.
 
-Now, lets head to our smart contract and change one line. Instead of:
+Now, let's head to our smart contract and change one line. Instead of:
 
 ```solidity
 _setTokenURI(newItemId, "blah")
@@ -309,10 +309,10 @@ Open the **.env** file and paste the two we've grabbed as shown below.
 ALCHEMY_API_KEY_URL=<YOUR API URL>
 RINKEBY_PRIVATE_KEY=<YOUR PRIVATE KEY>
 ```
-Dont forget to remove those < > after adding your API URL and your PRIVATE KEY! 🔑
+Don't forget to remove those `<` `>` after adding your API URL and your PRIVATE KEY! 🔑
 
 **Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.
-OPEN YOUR `.gitignore` FILE AND ADD A LINE FOR `.env` IF IT DOES NOT EXIST**
+OPEN YOUR `.gitignore` FILE AND ADD A LINE FOR `.env` IF IT DOES NOT EXIST.**
 
 Your `.gitignore` should look somewhat like this now.
 ```
@@ -361,7 +361,7 @@ So here, you'd click "SquareNFT" under "Collections", and boom you'll see the NF
 
 ![Untitled](https://i.imgur.com/Q96NYK4.png)
 
-HOOOOLY SHIT LETS GO. IM HYPE **FOR** YOU.
+HOOOOLY SHIT LET'S GO. IM HYPE **FOR** YOU.
 
 Pretty epic, we've created our own NFT contract *and* minted two NFTs. Epic. WHILE THIS IS EPIC, it is *kinda lame —* right? It's just the same Spongebob picture every time! How can we add some randomness to this and generate stuff on the fly? That's what we'll be getting into next :).
 
