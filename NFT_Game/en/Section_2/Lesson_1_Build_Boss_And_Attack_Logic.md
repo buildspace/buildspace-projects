@@ -1,6 +1,6 @@
-### 🙀 Building our boss.
+### 🙀 Building our boss
 
-So, in our game our character NFT will be able to attack a boss.
+So, in our game our character NFT will be able to attack a boss. 
 
 The whole goal of the game is to attack the boss and bring its HP to 0! But, the catch is that the boss has a lot of HP and every time we hit the boss it will hit us back and bring our HP down. If our character's HP falls below 0, then our character will no longer be able to hit the boss and it'll be “dead”.
 
@@ -82,7 +82,7 @@ It would actually be funny if the boss was your pet dog, and, instead of trying 
 
 Anyways, be creative. This is your project :).
 
-### 👾 Retrieve player's NFT attributes.
+### 👾 Retrieve player's NFT attributes
 
 We're going to create a function `attackBoss`. Here's a little outline:
 
@@ -151,7 +151,7 @@ Boss Elon Musk has 10000 HP and 50 AD
 
 Looks good! `Pikachu` is about to attack our boss `Elon Musk` lol. Everything worked perfectly and we're now properly retrieving the NFT's state :).
 
-### 🔍 Do some checks before attacking.
+### 🔍 Do some checks before attacking
 
 Next, we just need to check that the **character has HP**, if the character is dead then they can't attack! We'll also need to make sure that the **boss has HP**. Can't attack a boss if it's already been destroyed.
 
@@ -178,7 +178,7 @@ function attackBoss() public {
   // Make sure the boss has more than 0 HP.
   require (
     bigBoss.hp > 0,
-    "Error: boss must have HP to attack boss."
+    "Error: boss must have HP to attack character."
   );
 }
 ```
@@ -219,7 +219,7 @@ function attackBoss() public {
   // Make sure the boss has more than 0 HP.
   require (
     bigBoss.hp > 0,
-    "Error: boss must have HP to attack boss."
+    "Error: boss must have HP to attack character."
   );
   
   // Allow player to attack boss.
@@ -233,7 +233,7 @@ function attackBoss() public {
 
 `bigBoss.hp < player.attackDamage` is just checking if the boss will have its HP reduced to below 0 based on the players attack damage. For example, if `bigBoss.hp` was 10 and `player.attackDamage` was 30, then we know the boss will have its HP reduced below 0 which would cause an error! So, we just check that case, and then set the boss hp to 0 manually. Otherwise, we just do `bigBoss.hp = bigBoss.hp - player.attackDamage` which will reduce the boss's HP based on how much damage the player does!
 
-### 🔪 Add logic for the boss to attack the player.
+### 🔪 Add logic for the boss to attack the player
 
 We also need to make sure the player's HP doesn't turn into a negative number as well because the player's HP is a `uint` as well! So we do:
 
@@ -255,7 +255,7 @@ function attackBoss() public {
   // Make sure the boss has more than 0 HP.
   require (
     bigBoss.hp > 0,
-    "Error: boss must have HP to attack boss."
+    "Error: boss must have HP to attack character."
   );
   
   // Allow player to attack boss.

@@ -1,5 +1,4 @@
-🙉 A note on github
-----------------
+## 🙉 A note on github
 
 **If uploading to Github, don't upload your hardhat config file with your private key to your repo. You will get robbed.**
 
@@ -41,8 +40,8 @@ PRIVATE_KEY=BLAHBLAH
 
 Remember the change we made to `.gitignore` earlier? You can now revert it by removing the `hardhat.config.js` line, because now that file only contains variables representing your keys, and not your actual key info.
 
-🌎 Upgrade your immortal NFTs with IPFS
-----------------
+## 🌎 Upgrade your immortal NFTs with IPFS
+
 Think about where your NFT assets are actually stored right now. They're on the Ethereum blockchain! This is awesome for lots of reasons, but it has a few issues. Mainly, it's **very expensive** because of how much storage costs on Ethereum. Contracts also have a length limit, so if you make a really fancy animated SVG that's very long, it won't fit in a contract. 
 
 Luckily we have something called [IPFS](https://en.wikipedia.org/wiki/InterPlanetary_File_System), which is essentially a distributed file system. Today — you might use something like S3 or GCP Storage. But, in this case we can simply trust IPFS which is run by strangers who are using the network. Give [this](https://decrypt.co/resources/how-to-use-ipfs-the-backbone-of-web3) a quick read when you can! Covers a lot of good base knowledge :). Really, all you need to know is that IPFS is the industry standard for storing NFT assets. It's immutable, permanent, and decentralized. 
@@ -53,13 +52,13 @@ First, you'll need to upload your images to a service that specializes in "[pinn
 
 ![Untitled](https://i.imgur.com/lTpmIIj.png)
 
-Go ahead and copy the files "CID". This is the files content address on IPFS! What's cool now is we can create this link:
+Go ahead and copy the files "CID". This is the file's content address on IPFS! What's cool now is we can create this link:
 
 ```javascript
 https://cloudflare-ipfs.com/ipfs/INSERT_YOUR_CID_HERE
 ```
 
-If you are using **Brave Browser** (which has IPFS built in) you can just type this paste into the URL:
+If you are using **Brave Browser** (which has IPFS built-in) you can just type this paste into the URL:
 
 ```javascript
 ipfs://INSERT_YOUR_CID_HERE
@@ -88,8 +87,8 @@ I'll leave it to you to explore!! ;)
 
 
 
-📝 Verify contract on Etherscan.
-------------------
+## 📝 Verify contract on Etherscan
+
 Do you know that you are able to show your smart contract source code to the world? Doing so will enable your logic to be really transparent. True to the spirit of a public blockchain. Everyone who wishes to interact with your smart contract on the blockchain is able to peer into the contract logic first! For that, Etherscan has the **Verify Contract** function. [Here](https://rinkeby.etherscan.io/address/0x902ebbecafc54f7a8013a9d7954e7355309b50e6#code) is an example of how a verified contract will look like. Feel free to examine the smart contract yourself.
 
 If you select the **Contract** tab in Etherscan, you will notice a long list of text characters that starts from `0x608060405234801...` Hmm.. what could that be 🤔 ?
@@ -153,7 +152,7 @@ If everything runs smoothly, you should see some outputs in the terminal. Mine l
 
 ![image](https://user-images.githubusercontent.com/60590919/139611432-16d8c3fc-04b1-44c8-b58a-27f49e94d492.png)
 
-Head back to contract page in Rinkeby Etherscan by following the link returned in the terminal and you will notice that Etherscan has magically (with your help) turned the bytecodes into a much readible Solidity code.
+Head back to the contract page in Rinkeby Etherscan by following the link returned in the terminal and you will notice that Etherscan has magically (with your help) turned the bytecodes into a much readable Solidity code.
 
 ![image](https://user-images.githubusercontent.com/60590919/139611635-3d1d7aae-8bb8-47f5-9396-6a4544badebf.png)
 
@@ -164,29 +163,29 @@ Wait and there is more. There are now two new sub tabs `Read Contract` & `Write 
 ![image](https://user-images.githubusercontent.com/60590919/139611805-b2a41039-ec79-402d-b198-4936d25ff277.png)
 
 
-😍 You've done it.
----------------
+## 😍 You've done it
+
 Super exciting that you made it to the end. Pretty big deal!
 
 Before you head out, be sure to add a few of those little final touches from the previous lesson if you feel like it. Those really make the difference. When you're ready, post a link to your project in #showcase. Your fellow classmates will be the first to mint some of your awesome NFTs!
 
 Thank you for contributing to the future of web3 by learning this stuff. The fact that you know how this works and how to code it up is a superpower. Use your power wisely ;).
 
-🔮 Taking your project further!
----------
+## 🔮 Taking your project further!
+
 What you learned in this project is just the beginning! There is so much more you can do with NFTs and smart contracts, here's a few examples you can research further ✨
 
 - **Sell your NFTs** - Right now your users only have to pay gas fees to mint your awesome nfts and you're not getting any of that money! There are several ways to alter your smart contract that make the user pay you to mint your transactions, such as adding ```payable``` to your contract and using ```require``` to set a minimum amount. Since you're dealing with real money here it's best to do your research carefully and ask the experts that your code is safe. OpenZeppelin has a forum where you can ask questions like this one [here!](https://forum.openzeppelin.com/t/implementation-of-sellable-nft/5517/) 
 - **Add Royalties** - You can also add royalties to your smart contract that would give you a percentage of every future sale of your NFT! Read more about it here: [EIP-2981: NFT Royalty Standard](https://eips.ethereum.org/EIPS/eip-2981)
 - **Test your contracts locally** - If you want to test your contracts more extensively without deploying to a test net like Rinkeby, Hardhat of course will let you do that! Best way to achieve that is to open up a separate terminal window, navigate to your project directory, then run ```npx hardhat node``` and keep that window open! Just like in the beginning of the project you'll see a bunch of accounts with lots of ether. In your other terminal window you can run your test scripts and watch it affect your node window!
 
-🤟 Your NFT!
----------
+## 🤟 Your NFT!
+
 We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
 
 
-🌈 Before you head out...
----------
+## 🌈 Before you head out
+
 Go to #showcase in Discord and show us your final product that we can mess around with :).
 
 Also, should totally tweet out your final project and show the world your epic creation! What you did wasn't easy by any means. Maybe even make a little video showing off your project and attach that to the tweet. Make your tweet look pretty and show off :).

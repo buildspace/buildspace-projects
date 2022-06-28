@@ -83,7 +83,7 @@ Next, we set up a React [context provider](https://reactjs.org/docs/context.html
 
 The route stuff is something extra we're doing to easily support different app paths. You *could* do this with plain React components but I wanna give you the tools to make this a real product! It's pretty easy to use, all you need is a `<Route/>` for each path and just point it to the right element. Check out the docs [here](https://v5.reactrouter.com/web/guides/quick-start) if you wanna learn more.
 
-Now that we have the Wallet Provider set up, we can use it to connect the wallet. 
+Now that we have the Wallet Provider set up, we can use it to connect the wallet. In `terra-starter/src/app.js`:
 
 ```javascript
 import './App.css';

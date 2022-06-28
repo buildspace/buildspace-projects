@@ -1,4 +1,4 @@
-### 🍪 Getting started w/ thirdweb.
+### 🍪 Getting started w/ thirdweb
 
 Awesome! We can now connect to a user's wallet, which means we can now check if they're in our DAO! In order to join our DAO, the user will need a membership NFT. If they don't have a membership NFT, we'll prompt them actually mint a membership NFT and join our DAO!
 
@@ -16,7 +16,7 @@ I can't stress how easy it is to create a smart contract with thirdweb compared 
 
 Important! **thirdweb doesn't have a database, all your data is stored on-chain.**
 
-### 📝 Create a place to run thirdweb scripts.
+### 📝 Create a place to run thirdweb scripts
 
 Now we need to actually write some scripts that let us create/deploy our contract to Rinkeby using thirdweb. The first thing we're going to do is create a `.env` file that looks like this in the root of our project.
 
@@ -34,7 +34,7 @@ To get your private key from Metamask, check [this](https://metamask.zendesk.com
 
 To get your wallet address, check [this](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-) out.
 
-### 🚀 Alchemy.
+### 🚀 Alchemy
 
 The last thing you need in your `.env` file is `ALCHEMY_API_URL`.
 
@@ -144,7 +144,7 @@ buildspace-dao-starter % node scripts/1-initialize-sdk.js
 
 Epic. If you see it print out your wallet address then that means everything is initialized!
 
-### 🧨 Create an ERC-1155 collection.
+### 🧨 Create an ERC-1155 collection
 
 What we're going to do now is create + deploy an ERC-1155 contract to Rinkeby. This is basically the base module we'll need to create our NFTs. **We're not creating our NFT here, yet. We're just setting up metadata around the collection itself.** This is stuff like the name of the collection (ex. CryptoPunks) and an image associated with the collection that shows up on OpenSea as the header.
 

@@ -4,8 +4,7 @@ An NFT is a "token" that a person can own that links to some piece of "data" (ex
 
 Let's go over an example real quick.
 
-🎨 Picasso Sketches
-------------------------
+## 🎨 Picasso Sketches
 
 Let's say Picasso wanted to create a collection of 100 of his sketches to sell.
 
@@ -17,8 +16,7 @@ You have to trust that the gallery certificate will be respected long-term, but,
 
 ![](https://i.imgur.com/FLBd1l0.png)
 
-👨‍💻 Picasso NFTs
-------------------------
+## 👨‍💻 Picasso NFTs
 
 Let's look at this example in **NFT land** now.
 
@@ -26,7 +24,7 @@ Let's say Picasso wanted to create a collection of 100 of his sketches where eac
 
 Picasso would create his NFT collection by coding up his own "smart contract" (the code that runs all the logic for his NFT collection).
 
-He'd give each piece of artwork a unique identifier (ex. Sketch #1, Sketch #2, Sketch #3, etc). Then, when Picasso is ready to "launch" his NFT collection he would launch it using his own Ethereum wallet to "sign" the NFT collection. When he's ready, he'll put it on the public blockchain — where everyone can publicly see Picassos NFT collection.
+He'd give each piece of artwork a unique identifier (ex. Sketch #1, Sketch #2, Sketch #3, etc). Then, when Picasso is ready to "launch" his NFT collection he would launch it using his own Ethereum wallet to "sign" the NFT collection. When he's ready, he'll put it on the public blockchain — where everyone can publicly see Picasso's NFT collection.
 
 Then, when Picasso wants to sell one of the NFTs all he needs to do is "transfer" the NFT over to the person who bought it using the buyer's public wallet address.
 

@@ -2290,6 +2290,42 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ebCrypto",
+      "name": "ebCrypto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44279886?v=4",
+      "profile": "https://github.com/ebCrypto",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "0xcen",
+      "name": "Carlos",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75177443?v=4",
+      "profile": "https://github.com/0xcen",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "cesargatica",
+      "name": "Cesar G. Gatica Rosales",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90020224?v=4",
+      "profile": "https://github.com/cesargatica",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ducksblock",
+      "name": "ducksblock",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105146670?v=4",
+      "profile": "https://github.com/ducksblock",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

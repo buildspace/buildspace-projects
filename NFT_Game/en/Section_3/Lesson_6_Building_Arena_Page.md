@@ -2,7 +2,7 @@ At this point, we have been introduced to pretty much everything we need to know
 
 Just like with the `SelectCharacter` Component, let's create a new file in the `Components/Arena`  folder called `index.js`. Again, you should already see an `Arena.css` file in this folder! Once you setup your base don't forget to get fancy with your styling 💅.
 
-### ⚔️ Setting up the Arena.
+### ⚔️ Setting up the Arena
 
 Next, we are going to setup our `Arena` component. Make sure you're working out of `Arena/index.js`. I'm going to add a lot more base code here as we are familiar with everything that is happening:
 
@@ -101,7 +101,7 @@ So to recap, at this point you:
 - Minted a character NFT to this wallet
 - Are now ready to take on your **🔥 Boss 🔥**
 
-### 😈 Fetching the Big Boss from the Smart Contract.
+### 😈 Fetching the Big Boss from the Smart Contract
 
 In the `SelectCharacter` component we setup a way to fetch all mint-able characters from your contract. Well, in the `Arena` component we are going to be doing the same thing, but with fetching our boss!
 
@@ -141,7 +141,7 @@ Nice! To make sure everything is working, quickly refresh your app and check you
 
 Elon has arrived. Let's go ahead and setup our component to display Elon in all his glory.
 
-### 🙀 Actually rendering the Big Boss.
+### 🙀 Actually rendering the Big Boss
 
 This is where the fun starts 🤘. Again, building out your UI is something you can be extremely creative with! While I gave you all the styling you needed to get started, explore the CSS and make something that you ***LOVE*** and can show off to your friends.
 
@@ -189,7 +189,7 @@ Go ahead and give your app a refresh and you should see Elon, his health, and a 
 This is some pretty simple UI with a solid amount of styling. The cool part is we are pulling all the data from our smart contract:
 ![Untitled](https://i.imgur.com/o8AJpfw.png)
 
-### 🛡 Actually rendering the Character NFT.
+### 🛡 Actually rendering the Character NFT
 
 Now that we can see a boss, it only makes sense to see our character NFT as well right? This is going to be pretty much the same setup as our boss, just with some different styling! EZPZ let's do it:
 
@@ -255,7 +255,7 @@ The great Elon & Leo are ready for an epic battle 🔥. Now that we have our bos
 
 ![Untitled](https://media.giphy.com/media/26wkP6n7c8fQJbhVS/giphy.gif)
 
-### 💥 Attacking the Big Boss.
+### 💥 Attacking the Big Boss
 
 The whole point of our game is to defeat the boss in your Metaverse! We take into account all the attack damage your character NFT has and the health for each player. The goal of this section is to land an attack on Elon and see if he lands an attack on us.
 

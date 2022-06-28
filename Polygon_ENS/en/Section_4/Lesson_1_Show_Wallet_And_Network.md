@@ -173,7 +173,7 @@ const renderInputForm = () =>{
   return (
 ```
 
-### **🚨Progress report.**
+### 🚨Progress report
 
 Jump into the CSS and chuck a fancy gradient on the address container or the switch button. Maybe bring back the corners?  
 

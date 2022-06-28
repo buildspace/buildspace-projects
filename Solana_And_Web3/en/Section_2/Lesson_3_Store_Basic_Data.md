@@ -2,7 +2,7 @@ Right now, our program does literally nothing haha. Let's change it up to store 
 
 Our website will allow people to submit GIFs. So, storing something like a `total_gifs` number would be pretty helpful too.
 
-### 🥞 Create an integer to store GIF count.
+### 🥞 Create an integer to store GIF count
 
 Cool so we just want to store a basic integer with the number of `total_gifs` people have submitted. So, every time someone adds a new gif we'd just do `total_gifs += 1`.
 
@@ -54,7 +54,7 @@ pub struct BaseAccount {
 
 **A lot happening here.** Let's step through it.
 
-### 🤠 Initializing an account.
+### 🤠 Initializing an account
 
 Lets check out this line at the bottom:
 
@@ -117,7 +117,7 @@ Boom! Again — a lot of this stuff may seem confusing especially if you're new 
 
 *Note: We do `&mut` to get a "mutable reference" to `base_account`. When we do this it actually gives us the power to make **changes** to `base_account`. Otherwise, we'd simply be working w/ a "local copy" of `base_account`.*
 
-### 👋  Retrieve account data.
+### 👋  Retrieve account data
 
 Let's put it all together.
 
@@ -194,7 +194,7 @@ Here we actually retrieve the account we created and then access `totalGifs`. Wh
 
 Yay! It's `0`! This is pretty freaking epic. We now are actually calling a program *and* storing data in a permissionless manner on the Solana chain. NICE.
 
-### 👷‍♀️ Build a function to update GIF counter.
+### 👷‍♀️ Build a function to update GIF counter
 
 Let's actually create a new function named `add_gif` that lets us actually increment the GIF counter. Check out some of my changes below.
 

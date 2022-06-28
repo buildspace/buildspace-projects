@@ -40,7 +40,7 @@ The Terrajs package is smart enough that it will automatically shift which netwo
 ### 📩 Fetch our scores from the contract
 Getting our scores from the contract on the testnet is going to be very similar to how we did it using Terrain locally. We're going to follow the same `QueryMsg` and `ExecuteMsg` structure. Start by creating these three files in the `terra-starter/src/contract` directory: `address.js`, `execute.js`, `query.js`. 
 
-`Address.js` will load the correct contract address based on the network. It's tiny but powerful:
+`address.js` will load the correct contract address based on the network. It's tiny but powerful:
 ```javascript
 import config from "../refs.terrain.json"
 
@@ -95,7 +95,7 @@ const Leaderboard = () => {
 export default Leaderboard;
 ```
 
-If you save your document and refresh `localhost:3000/leaderboard`, you should see the scores logged in your console!
+If you save your document and refresh `localhost:3000/leaderboard`, you should see the scores logged in your console! **This might be empty if you haven't added any scores lol.** Use the Terrain console to add one!
 
 ![](https://hackmd.io/_uploads/rklnvI-Sq.png)
 
@@ -147,7 +147,7 @@ The render function is going to map through the scores and format them. I love R
 ```
 
 
-Putting it all toghether, (I also added a loading state):
+Putting it all together, (I also added a loading state):
 ```javascript
 import { Link } from 'react-router-dom';
 import * as query from '../contract/query';

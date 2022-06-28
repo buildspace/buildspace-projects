@@ -34,6 +34,7 @@ Here's what each is:
 
 Next, let's tell the world all about our scores. Here's our updated `msg.rs`:
 ```rust
+// I've updated our imports
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 use cosmwasm_std:: Addr;
@@ -82,8 +83,9 @@ use cosmwasm_std::{to_binary, Binary, Deps, DepsMut, Env, MessageInfo, Response,
 use cw2::set_contract_version;
 
 use crate::error::ContractError;
+//  I added ScoreResponse to our imports
 use crate::msg::{SpeedResponse, InstantiateMsg, QueryMsg, ScoreResponse};
-// I updated the import since we renamed STATE to STORAGE
+// I updated the import since we renamed STATE to STORAGE, STATE has also been renamed to STORAGE everywhere it appeared previously
 use crate::state::{State, STORAGE};
 
 const CONTRACT_NAME: &str = "crates.io:clicker";
@@ -279,7 +281,7 @@ module.exports = ({ wallets, refs, config, client }) => ({
     client.execute(signer, "clicker", { upsert_score: { score } }),
 });
 ```
-One weird thing here is the function names. In `msg.rs`, we declare the enum as `GetSpeed` but here we use `getSpeed` and `get_speed`. Wtf? The first one is the JS function that is run via the Terrain console. You can call it whatever. The second one is the actual Rust function. You'll notice `#[serde(rename_all = "snake_case")]` in our `msg.rs` file. This renames our functions from `GetSpeed` to `get_speed` at build time. I couldn't find out why though, if you figure it out, be sure to share in the ``#general-chill-chat`!
+One weird thing here is the function names. In `msg.rs`, we declare the enum as `GetSpeed` but here we use `getSpeed` and `get_speed`. Wtf? The first one is the JS function that is run via the Terrain console. You can call it whatever. The second one is the actual Rust function. You'll notice `#[serde(rename_all = "snake_case")]` in our `msg.rs` file. This renames our functions from `GetSpeed` to `get_speed` at build time. I couldn't find out why though, if you figure it out, be sure to share in the #general-chill-chat!
 
 Moment of truth, let's see if this works 💀
 

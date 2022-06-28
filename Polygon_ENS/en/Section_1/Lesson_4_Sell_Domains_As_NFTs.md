@@ -154,7 +154,7 @@ I want the end of all registered domains to be `.ninja`. This means we need to p
 - The domain you want to register
 - **The price of the domain (including gas) in Matic**
 
-We use a special `parseEther` function because units [work differently in Solidity](https://docs.soliditylang.org/en/v0.8.11/units-and-global-variables.html#units-and-globally-available-variables). This will send 0.1 Matic from my wallet to the contract as payment. Once that happens, the domain will be minted to my wallet address.
+We use a special `parseEther` function because units [work differently in Solidity](https://docs.soliditylang.org/en/v0.8.14/units-and-global-variables.html#units-and-globally-available-variables). This will send 0.1 Matic from my wallet to the contract as payment. Once that happens, the domain will be minted to my wallet address.
 
 **BOOM. That’s it.** That’s how easy it is taking payments with smart contracts! No silly payment processors, signups, random credit card fees. One line of code. EZPZ.
 
@@ -431,7 +431,7 @@ You actually already know like half of this! The only things we haven’t covere
 
 For `json` -- NFTs use JSON to store details like the name, description, attributes and the media. What we’re doing with `json` is combining strings with `abi.encodePacked` to make a JSON object. We’re then encoding it as a Base64 string before setting it as the token URI.
 
-All you need to know about `_tokenIds` is that it’s an object that lets us access and set our NFT’s unique token number. Each NFT has a unique `id` and this helps us make sure of that. The two lines below are the magical lines that actually create out NFT.
+All you need to know about `_tokenIds` is that it’s an object that lets us access and set our NFT’s unique token number. Each NFT has a unique `id` and this helps us make sure of that. The two lines below are the magical lines that actually create our NFT.
 
 ```jsx
 // Mint the NFT to newRecordId

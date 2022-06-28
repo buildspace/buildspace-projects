@@ -1,5 +1,4 @@
-📤 Setting up to deploy to the blockchain
------------------------------------------
+## 📤 Setting up to deploy to the blockchain
 
 Go ahead and close the terminal with your local blockchain network running which is where you ran `npx hardhat node`. We won't need it anymore ;). I mainly just wanted to show you how deploying works locally.
 
@@ -9,8 +8,7 @@ Go ahead and make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12
 
 Sorry for having you make so many accounts, but, this ecosystem is complex and we want to take advantage of the awesome tools out there. What Alchemy does is it gives us a simple way to deploy to the real Ethereum blockchain.
 
-💳 Transactions
----------------
+## 💳 Transactions
 
 So, when we want to perform an action on the Ethereum blockchain we call it a *transaction*. For example, sending someone ETH is a transaction. Doing something that updates a variable in our contract is also considered a transaction.
 
@@ -31,8 +29,7 @@ So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57)
 Checkout the video below to see how to get your API key for a testnet!
 [Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283)
 
-🕸️ Testnets
-------------
+## 🕸️ Testnets
 
 We're not going to be deploying to the "Ethereum mainnet" until the very end. Why? Because it costs real $ and it's not worth messing up! We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake $ so we can test stuff out as much as we want. But, it's important to know that testnets are run by actual miners and mimic real-world scenarios.
 
@@ -48,8 +45,7 @@ This is awesome because we can test our application in a real-world scenario whe
 
 So, you'll be doing all this within the next few lessons :).
 
-🤑 Getting some fake $
-------------------------
+## 🤑 Getting some fake $
 
 There are a few testnets out there and the one we'll be using is called "Rinkeby" which is run by the Ethereum foundation.
 
@@ -66,13 +62,11 @@ For MyCrypto, you'll need to connect your wallet, make an account, and then clic
 | Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
 
 
-🙃 Having trouble getting Testnet ETH?
------------------------------------
+## 🙃 Having trouble getting Testnet ETH?
 
 If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
 
-📈 Deploy to Rinkeby testnet.
----------------------------------
+## 📈 Deploy to Rinkeby testnet
 
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
 
@@ -92,7 +86,7 @@ module.exports = {
 
 **Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** 
 
-**If uploading to Github or using git version control in general it is good practice to protect yourself from uploading secrect keys to somewhere you don't want them. First of all the best way is to not upload your hardhat config file by adding it to .gitignore. **
+**If uploading to Github or using git version control in general it is good practice to protect yourself from uploading secrect keys to somewhere you don't want them. First of all the best way is to not upload your hardhat config file by adding it to .gitignore.**
 
 Another way of protecting yourself and keeping `hardhat.config.js` secure is to use dotenv. Install it with:
 
@@ -147,8 +141,7 @@ Run this command from the root directory of `my-wave-portal`. Notice all we do i
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
 
-❤️ Deployed! 
--------------
+## ❤️ Deployed! 
 
 Here's my output:
 
@@ -166,8 +159,7 @@ You can actually take that address and then paste it into Etherscan [here](https
 
 For example, [here's](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA808cE84E00E97d940dBD26E) mine!
 
-🚨 Before you click "Next Lesson"
----------------------------------
+## 🚨 Before you click "Next Lesson"
 
 **YOU JUST DID A LOT.**
 

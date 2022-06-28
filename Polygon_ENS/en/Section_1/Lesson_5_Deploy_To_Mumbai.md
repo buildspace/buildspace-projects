@@ -24,7 +24,7 @@ This is where we will start - making an account with Alchemy! Just [click here](
 
 [Loom](https://www.loom.com/share/da01870f7d064725a5161811104128a3)
 
-### **🦊 MetaMask**
+### 🦊 MetaMask
 
 Before we can do anything on a public net, we need a wallet!
 
@@ -106,7 +106,7 @@ const runMain = async () => {
 runMain();
 ```
 
-### **📈 Deploy to the Mumbai testnet.**
+### 📈 Deploy to the Mumbai testnet
 
 **It is time.** 
 
@@ -186,7 +186,7 @@ If you don’t want to wait, or OpenSea is just not working, head over to [testn
 
 ![https://i.imgur.com/v8ON9VB.png](https://i.imgur.com/v8ON9VB.png)
 
-### 🚨Progress report.
+### 🚨Progress report
 
 *Please do this else Raza will be sad :(*
 

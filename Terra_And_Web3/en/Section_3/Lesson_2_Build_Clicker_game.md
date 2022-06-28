@@ -150,5 +150,5 @@ There's soooo much you can do with a simple clicker game like this. You can add 
 
 Most importantly, HAVE FUN!
 
-### 🚨 Progress report.
+### 🚨 Progress report
 Post a screenshot of your fancy game! I want to see all your awesome twists lol

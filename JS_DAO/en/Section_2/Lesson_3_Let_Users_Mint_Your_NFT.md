@@ -6,7 +6,7 @@ Let's head over to `App.jsx`. What we'll be doing now is
 
 Let's do it! We'll attack case #1 first, we need to detect if the user has our NFT.
 
-### 🤔 Check if user owns a membership NFT.
+### 🤔 Check if user owns a membership NFT
 
 Head over to `App.jsx`. Update our imports to:
 
@@ -61,7 +61,7 @@ When you refresh this page, you'll see something like this:
 
 Perfect! We get "this user doesn't have a membership NFT". Let's create a button to let the user mint one.
 
-### ✨ Build a "Mint NFT" button.
+### ✨ Build a "Mint NFT" button
 
 Let's do it! Head back to `App.jsx`. I added some comments on the lines I added:
 
@@ -164,7 +164,7 @@ Nice! Here you'll see my NFT has "6 owners". You’ll also see it says “You ow
 
 This is because I actually had a few friends mint this NFT for me to test it out. Also, because it's an ERC-1155 **everyone is an owner of the same NFT**. This is pretty cool and it's also more gas efficient. Minting an ERC721 costs 96,073 gas. Minting an ERC1155 costs 51,935 gas. Why? Because everyone is sharing the same NFT data. We don't have to copy new data for each user.
 
-### 🛑 Show DAO Dashboard only if user owns the NFT.
+### 🛑 Show DAO Dashboard only if user owns the NFT
 
 Okay, so if you remember we need to handle two cases:
 

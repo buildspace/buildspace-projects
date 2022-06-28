@@ -1,4 +1,4 @@
-### 📜 Create your DAO’s first two proposals.
+### 📜 Create your DAO’s first two proposals
 
 Cool. Everything is set up, now, we just need to create our first proposal! Head to `10-create-vote-proposals.js` and add the following:
 
@@ -82,7 +82,7 @@ It looks like a lot. Go ahead and read through it step by step! We’re actually
 
 **1) We’re creating a proposal that allows the treasury to mint 420,000 new token.** You can see we do a `"mint"` in the code.
 
-Maybe the treasury is running low and we want more tokens to award members. Remember, earlier we gave our voting contract the ability to mint new token — so this works! It’s a democratic treasury. If you members think this is proposal is stupid and vote “NO”, this simply won’t pass!
+Maybe the treasury is running low and we want more tokens to award members. Remember, earlier we gave our voting contract the ability to mint new token — so this works! It’s a democratic treasury. If your members think this proposal is stupid and vote “NO”, this simply won’t pass!
 
 **2) We’re creating a proposal that transfer 6,900 token to our wallet from the treasury.** You can see we do a `"transfer"` in the code.
 
@@ -102,7 +102,7 @@ buildspace-dao-starter % node scripts/10-create-vote-proposals.js
 
 BOOM. There are our proposals. The last thing we’re going to do is actually let users vote on proposals from our DAO dashboard now!
 
-### ✍️ Let users vote on proposals from the dashboard.
+### ✍️ Let users vote on proposals from the dashboard
 
 Finally, let’s bring it all home. Right now, our proposals live on our smart contract. But, we want our users to easily be able to see them and vote! Let’s do that. Head to `App.jsx`. Add the `useVote` hook to our imports:
 
@@ -136,6 +136,7 @@ useEffect(() => {
     try {
       const proposals = await vote.getAll();
       setProposals(proposals);
+      console.log("🌈 Proposals:", proposals);
     } catch (error) {
       console.log("failed to get proposals", error);
     }

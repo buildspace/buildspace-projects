@@ -1,4 +1,4 @@
-### 👾 Setup NFT Data.
+### 👾 Setup NFT Data
 
 Okay, now we're going to actually deploy metadata associated with our membership NFT. We haven't done that yet. All we did so far was create the ERC-1155 contract and add some basic metadata. We haven't actually set up our membership NFTs, let's do that!
 
@@ -44,7 +44,7 @@ Then, we're setting up our actual NFT on our ERC-1155 using `createBatch`. We ne
 
 Be sure to replace `image: readFileSync("scripts/assets/headband.png")` with your own image. Same as before, be sure it's a local image as this won't work if you use an internet link.
 
-I'm building NarutoDAO, so, my members will need a Lead Village Headband to join hehe:
+I'm building NarutoDAO, so, my members will need a Leaf Village Headband to join hehe:
 
 ![headband.png](https://i.imgur.com/1F5I12o.png)
 
@@ -63,7 +63,7 @@ Here's what I get:
 ✅ Successfully created a new NFT in the drop!
 ```
 
-### 😼 Setup claim condition.
+### 😼 Setup claim condition
 
 Now we need to actually set up our "claim conditions". What's the max # of NFTs that can be minted? When can users start minting NFTs? Again, this is usually custom logic you'd need to write into your contract but in this case thirdweb makes it easy. 
 
@@ -116,7 +116,7 @@ After running `node scripts/4-set-claim-condition.js` here's what I get:
 ✅ Successfully set claim condition!
 ```
 
-Boom! We've successfully interacted w/ our deployed smart contract and have given our NFT certain rules it must follow, hell yea! If you copy-paste your bundle drop address printed out there and search it on `https://rinkeby.etherscan.io/`, you'll see proof right there that we interact w/ the contract!
+Boom! We've successfully interacted w/ our deployed smart contract and have given our NFT certain rules it must follow, hell yea! If you copy-paste your bundle drop address printed out there and search it on `https://rinkeby.etherscan.io/`, you'll see proof right there that we interacted w/ the contract!
 
 ![Untitled](https://i.imgur.com/6sRMQpA.png)
 
@@ -124,4 +124,4 @@ Boom! We've successfully interacted w/ our deployed smart contract and have give
 
 *Please do this or Farza will be sad :(.*
 
-Hey! Go ahead and share the membership NFT you chose in `#progress` and tell us why you chose this epic NFT for your DAO.
+Hey! Go ahead and share the membership NFT you chose in `#progress` and tell us why you chose this epic NFT for your DAO. 

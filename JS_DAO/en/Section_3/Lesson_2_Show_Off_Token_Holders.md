@@ -1,8 +1,8 @@
-### 🥺 Retrieve token holders on web app.
+### 🥺 Retrieve token holders on web app
 
 It would be nice for all the members of our DAO to easily see all the people in the DAO who hold tokens along with how many tokens they hold. To do that, we’ll need to actually call our smart contracts from our client and retrieve that data.
 
-Let’s do it! Head over to `App.jsx`. At the top, add the `useToken` hook to the list of `@thirdweb-dev/react` imports. Also, make sure to import `useMemo`:
+Let’s do it! Head over to `App.jsx`. At the top, add the `useToken` hook to the list of `@thirdweb-dev/react` imports. Also, make sure to import `useMemo`: 
 
 ```jsx
 import { useAddress, useMetamask, useEditionDrop, useToken } from '@thirdweb-dev/react';
@@ -102,14 +102,14 @@ In my console, I get something like this where I am now successfully retrieving 
 
 *Note: you may also see the message “Request-Rate Exceeded” from Ethers in your console. This is fine for now!*
 
-### 🤯 Render member data on DAO Dashboard.
+### 🤯 Render member data on DAO Dashboard
 
 Now that we have all the data held nicely in our React app’s state, let’s render it.
 
 **Replace** `if (hasClaimedNFT) { }` with the following:
 
 ```jsx
-// If the user has already claimed their NFT we want to display the interal DAO page to them
+// If the user has already claimed their NFT we want to display the internal DAO page to them
 // only DAO members will see this. Render all the members + token amounts.
 if (hasClaimedNFT) {
   return (
