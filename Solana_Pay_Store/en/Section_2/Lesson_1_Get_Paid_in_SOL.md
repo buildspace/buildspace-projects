@@ -241,11 +241,11 @@ All we did here was replace the IPFS component with the Buy component lol.
 
 One last step before you get paid! You need to make sure your wallet is in Devnet, otherwise you won't be able to make any transaction. To do this open up your Phantom wallet, go to settings:
 
-<img src=https://github.com/faceyacc/buildspace-projects/blob/445000fa246e453a390de739f1ad4503cfb26bb1/Solana_Pay_Store/settings.png alt="drawing" width="200"/>
+<img src=https://i.imgur.com/U5moHfW.png alt="drawing" width="200"/>
 
-Then to Change Network and select the Devnet Network. Now you're all set! All transactions will be in Devnet!
+Then to **Change Network** and select the **Devnet**. Now you're all set! All transactions will be in Devnet!
 
-<img src=https://github.com/faceyacc/buildspace-projects/blob/445000fa246e453a390de739f1ad4503cfb26bb1/Solana_Pay_Store/devnet.png alt="drawing" width="200"/>
+<img src=https://i.imgur.com/WkPUkcu.png alt="drawing" width="200"/>
 
 If you are broke and you have no SOL in your wallet, you can use a facutet to get some! Checkout Sol Facuet to make free bank! https://solfaucet.com/
 
