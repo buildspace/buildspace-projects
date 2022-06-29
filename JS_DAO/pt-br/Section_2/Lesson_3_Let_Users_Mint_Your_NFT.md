@@ -101,7 +101,7 @@ const App = () => {
   // Outro useEffect!
   useEffect(() => {
     // Nós passamos o assinante para o sdk, que nos permite interagir
-    // como nosso contrato!
+    // com o nosso contrato!
     sdk.setProviderOrSigner(signer);
   }, [signer]);
 
@@ -176,9 +176,9 @@ const App = () => {
 export default App;
 ```
 
-Okay, um monte de coisas acontecendo! A primeira coisa que fazemos é configurar nosso `signer` que é o que precisamos para de fato mandar transações em favor de um usuário. Veja mais [aqui](https://docs.ethers.io/v5/api/signer/). A partir daí, nós chamamos `bundleDropModule.claim("0", 1)` para de fato cunhar o NFT na carteira do usuário quando ele clicar no botão. Nesse caso o tokenId do nosso NFT de filiação é `0` então nós passamos 0. Depois, passamos `1` porque só queremos cunhar um NFT de filiação para a carteira do usuário!
+Okay, um monte de coisas acontecendo! A primeira coisa que fazemos é configurar nosso `signer` que é o que precisamos para de fato mandar transações em favor de um usuário. Veja mais [aqui](https://docs.ethers.io/v5/api/signer/) e se quiser entender melhor sobre assinaturas na blockchain, [veja aqui](https://www.web3dev.com.br/felipegueller/the-magic-of-digital-signatures-on-ethereum-5hmd). A partir daí, nós chamamos `bundleDropModule.claim("0", 1)` para de fato cunhar o NFT na carteira do usuário quando ele clicar no botão. Nesse caso o tokenId do nosso NFT de filiação é `0` então nós passamos 0. Depois, passamos `1` porque só queremos cunhar um NFT de filiação para a carteira do usuário!
 
-Quando tudo está pronto, nós fazemos `setIsClaiming(false)` para parar o estado de carregamento. E depois fazemos `setHasClaimedNFT(true)` para que o nosso app react possa saber que essa usuário reivindicou seu NFT com sucesso.
+Quando tudo está pronto, nós fazemos `setIsClaiming(false)` para parar o estado de carregamento. E depois fazemos `setHasClaimedNFT(true)` para que o nosso app react possa saber que esse usuário reivindicou seu NFT com sucesso.
 
 Quando você de fato vai cunhar o NFT, a Metamask vai mostrar um pop-up para que você pague a taxa de transação. Uma vez que a cunhagem foi feita, você deve ver `Successfully Minted!` no seu console junto com o link para o Opensea Testnet. Em [`testnets.opensea.io`](http://testnets.opensea.io/) nós podemos de fato ver os NFTs cunhados na testnet, o que é bem legal! Quando você for para o seu link, você verá algo tipo assim:
 
@@ -249,6 +249,6 @@ Certifique-se de testar todos os casos!
 
 ### 🚨 Relatório de Progresso
 
-*Por favor faça isso ou Farza vai ficar triste :(.*
+*Por favor faça isso ou Yan vai ficar triste :(.*
 
-Vá em frente e compartilhe uma screenshot do seu NFT de filiação no OpenSea em `#progress`.
+Vá em frente e compartilhe uma screenshot do seu NFT de filiação no OpenSea em `#progresso`.
