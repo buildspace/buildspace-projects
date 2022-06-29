@@ -21,7 +21,7 @@ Nós precisamos disso para interagir tanto com o nosso contrato ERC-1155 quanto 
 Depois, adicione o código abaixo após `const [isClaiming, setIsClaiming] = useState(false)`:
 
 ```jsx
-// Guarda a quantidade de tokens que cada membro tem no estado.
+// Guarda a quantidade de tokens que cada membro tem nessa variável de estado.
 const [memberTokenAmounts, setMemberTokenAmounts] = useState({});
 // O array guardando todos os endereços dos nosso membros.
 const [memberAddresses, setMemberAddresses] = useState([]);
@@ -94,7 +94,7 @@ Parece muita coisa à primeira vista! Mas saiba que estamos fazendo três coisas
 
 Agora, você deve estar se perguntando, “Nós não podemos simplesmente fazer `getAllHolderBalances` para pegar todo mundo que tem nosso token?”. Bem, basicamente, alguém pode estar na sua DAO e ter zero tokens! *E está tudo bem.* Então ainda queremos que eles aparecam na lista.
 
-No meu console, eu recebeo algo tipo isso agora que eu estou recebendo com sucesso os dados dos meus dois contratos — o ERC-20 e o ERC-1155. Aí sim!! Sinta-se à vontade para bagunçar aqui e entender todos os dados.
+No meu console, eu recebo algo tipo isso agora que eu estou recebendo com sucesso os dados dos meus dois contratos — o ERC-20 e o ERC-1155. Aí sim!! Sinta-se à vontade para bagunçar aqui e entender todos os dados.
 
 ![Untitled](https://i.imgur.com/qx8rfRZ.png)
 
@@ -142,7 +142,7 @@ if (hasClaimedNFT) {
 };
 ```
 
-Bem direto! Nós estamos apenas renderizando uma linda tabela que vai mostrar os dados da nossa `memberList`. Uma vez que você ver nossa página, você vai ver algo tipo o screenshot abaixo! *Nota: a lista está descentralizada, isso foi feito de propósito. Nós vamos adicionar algo depois!*
+Bem direto! Nós estamos apenas renderizando uma linda tabela que vai mostrar os dados da nossa `memberList`. Uma vez que você vir nossa página, você vai ver algo tipo o screenshot abaixo! *Nota: a lista está descentralizada, isso foi feito de propósito. Nós vamos adicionar algo depois!*
 
 ![Untitled](https://i.imgur.com/HZCHFak.png)
 
@@ -150,6 +150,6 @@ Bem direto! Nós estamos apenas renderizando uma linda tabela que vai mostrar os
 
 ### 🚨 Relatório de Progresso
 
-*Por favor faça isso ou Farza vai ficar triste :(.*
+*Por favor faça isso ou Yan vai ficar triste :(.*
 
-Vá em frenet e compartilhe uma captura de tela em `#progress` do seu DAO dashboard interno mostrando seus membros atuais + suas quantidades de token!
+Vá em frente e compartilhe uma captura de tela em `#progresso` do seu dashboard interno da DAO mostrando seus membros atuais + suas quantidades de token!
