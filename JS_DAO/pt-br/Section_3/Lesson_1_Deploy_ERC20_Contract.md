@@ -6,7 +6,7 @@ Basicamente, um token de goverança permite que usuários votem nas propostas. P
 
 Usuários com mais tokens de governança são mais poderosos. Geralmente, tokens são dados para membros da comunidade que mais trouxeram valor.
 
-Por exemplo, para o airdrop do ENS, as pessoas que mais receberam tokens foram as do time central de desenvolvimento e os usuários ativos no Discord deles. Mas você também poderia receber tokens da ENS DAO baseado em quanto tempo você teve seu domínio ENS (ex. `farza.eth`). A propósito, se você não sabe, um nome ENS é um NFT.
+Por exemplo, para o airdrop do ENS, as pessoas que mais receberam tokens foram as do time central de desenvolvimento e os usuários ativos no Discord deles. Mas você também poderia receber tokens da ENS DAO baseado em quanto tempo você teve seu domínio ENS (ex. `yanluiz.eth`). A propósito, se você não sabe, um nome ENS é um NFT.
 
 Então, quanto mais tempo você tivesse com o NFT, mais tokens você recebia.
 
@@ -56,7 +56,7 @@ A propósito — você pode ver o contrato exato que o thirdweb usa [aqui](https
 Aqui está o que eu recebo quando eu rodo:
 
 ```plaintext
-buildspace-dao-starter % node scripts/5-deploy-token.js
+web3dev-dao-starter % node scripts/5-deploy-token.js
 👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
 ✅ Successfully deployed token module, address: 0xae0E627f7495C5dbdc9adE4D4C9Af50C8858438F
 ```
@@ -134,7 +134,7 @@ Então, aqui nós estamos de fato cunhando o fornecimento do token e configurand
 Aqui está o que eu recebo quando rodo o script:
 
 ```plaintext
-buildspace-dao-starter % node scripts/6-print-money.js
+web3dev-dao-starter % node scripts/6-print-money.js
 👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
 ✅ There now is 1000000.0 $HOKAGE in circulation
 ```
@@ -208,7 +208,7 @@ const tokenModule = sdk.getTokenModule(
 })();
 ```
 
-Isso é muita coisa. Mas você é um pro do thirdweb agora então GG.
+Isso é muita coisa. Mas você é um pro do thirdweb agora então GG!
 
 Primeiro, você vai ver que precisamos tanto do `bundleDropModule` como do `tokenModule` porque vamos estar interagindo com ambos os contratos.
 
@@ -223,7 +223,7 @@ Finalmente, rodamos `transferBatch` em todos os `airdropTargets`. E é isto! `tr
 quando eu rodo o script eu recebo:
 
 ```plaintext
-buildspace-dao-starter % node scripts/7-airdrop-token.js
+web3dev-dao-starter % node scripts/7-airdrop-token.js
 ✅ Going to airdrop 7376 tokens to 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
 ✅ Going to airdrop 9418 tokens to 0xc33817A8e3DD0687FB830666c2658eBBf4696245
 ✅ Going to airdrop 8311 tokens to 0xe50b229DC4D053b95fA586EBd1874423D9Be5145
@@ -243,7 +243,7 @@ Você poderia criar a sua própria fórmula como o ENS fez por exemplo:
 
 ![Untitled](https://i.imgur.com/IqboZsX.png)
 
-Você quer pensar — “As pessoas que estão recebendo o token vão ter mais poder sobre a DAO. Isso é bom? Os maiores detentores de tokens vão fazer o que é certo pra DAO?”. Isso entra num tópico chamado tokenomics o qual você pode ler sobre [aqui](https://www.google.com/search?q=tokenomics).
+Você pode pensar — “As pessoas que estão recebendo o token vão ter mais poder sobre a DAO. Isso é bom? Os maiores detentores de tokens vão fazer o que é certo pra DAO?”. Isso entra num tópico chamado tokenomics o qual você pode ler sobre [aqui](https://www.google.com/search?q=tokenomics).
 
 Okay, então agora se eu for ver meu contrato ERC-20 na Etherscan, eu posso ver todos os meus novos detentores de tokens e quantos `$HOKAGE` eles tem.
 
@@ -253,8 +253,8 @@ Okay, então agora se eu for ver meu contrato ERC-20 na Etherscan, eu posso ver 
 
 ### 🚨 Relatório de Progresso
 
-*Por favor faça isso ou Farza vai ficar triste :(.*
+*Por favor faça isso ou danicuki vai ficar triste :(.*
 
-Vá em frente e compartilhe uma captura de tela em `#progress` do contrato do seu token na Etherscan que mostre o nome do token, fornecimento, etc!
+Vá em frente e compartilhe uma captura de tela em `#progresso` do contrato do seu token na Etherscan que mostre o nome do token, fornecimento, etc!
 
-**A propósito, se você chegou até aqui e está se divertindo -- talvez você queira tweetar que está construindo sua própria DAO e marcar [@_buildspace](https://twitter.com/_buildspace) :)?**
+**A propósito, se você chegou até aqui e está se divertindo -- talvez você queira tweetar que está construindo sua própria DAO e marcar [@Web3dev_](https://twitter.com/Web3dev_) :)?**
