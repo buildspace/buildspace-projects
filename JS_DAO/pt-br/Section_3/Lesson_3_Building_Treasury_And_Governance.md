@@ -1,14 +1,14 @@
-Um token de governança é legal e tal, mas é meio inútil se as pessoas não puderem usar para goevrnar alguma coisa! O que nós vamos fazer aqui é configurar um contrato de governança que permite pssoas votarem em propostas usando seus tokens
+Um token de governança é legal e tal, mas é meio inútil se as pessoas não puderem usar para goevrnar alguma coisa! O que nós vamos fazer aqui é configurar um contrato de governança que permite pessoas votarem em propostas usando seus tokens.
 
 ### 📝 Faça deploy de um contrato de governança.
 
 Eu não quero complicar demais isso.
 
-No fim do dia, o contrato de votação é literalmente uma maneira de permitir pessoas votarem em coisas, automaticamente contando seus votos, e então qualquer membro seria apto a excetur a proposta on-chain. Tudo sem uma parte central.
+No fim do dia, o contrato de votação é literalmente uma maneira de permitir pessoas votarem em coisas, automaticamente contando seus votos, e então qualquer membro seria apto a executar a proposta on-chain. Tudo sem uma parte central.
 
-Por exemplo, talvez você quer criar uma proposta tipo, *“Transferir 1000 tokens para EpicDesign5222 por refazer o design da nossa landing page”.* Quem é permitido votar? Por quanto tempo pessoas podem votar? Qual a # mínima de tokens que alguém precisa para criar uma proposta?
+Por exemplo, talvez você queira criar uma proposta tipo, *“Transferir 1000 tokens para EpicDesign5222 por refazer o design da nossa landing page”.* Quem é permitido votar? Por quanto tempo pessoas podem votar? Qual a # mínima de tokens que alguém precisa para criar uma proposta?
 
-Todas essas questões são respondidas no contrato de votação inicial que nós criamos
+Todas essas questões serão respondidas no contrato de votação inicial que nós criaremos
 
 É quase como configurar um pequeno país e você precisa configurar o seu governo inicial + sistema de votação!
 
@@ -65,7 +65,7 @@ Perceba como nós damos um `votingTokenAddress`. Isso é o nosso contrato que s
 
 Nós temos `proposalStartWaitTimeInSeconds`, que pode ser útil se você quer dar para as pessoas algum tempo para entender a proposta antes deles poderem votar nela. Similarmente, nós temos `proposalVotingTimeInSeconds` que especifica quanto tempo alguém tem para votar uma vez que a proposta está online.
 
-`votingQuorumFraction` é realmente interessante. Vamos dizer que um membro cria uma proposta e os outros **199** membros da DAO estão de férias na Disney World e não estão online. Bem, nesse caso, se um membro da DAO cria a proposta e vota "SIM" na sua própria proposta — isso signifca que 100% dos votos foram "SIM" (dado que só foi feito um voto) e a proposta **passaria dado** `proposalVotingTimeInSeconds` está rodando! Para evitar isso, nós usamos um quorum que diz “Para uma proposta passar, um x mínimo da porcentagem dos tokens deve ser usado nos votos”.
+`votingQuorumFraction` é realmente interessante. Vamos dizer que um membro cria uma proposta e os outros **199** membros da DAO estão de férias na Disney World e não estão online. Bem, nesse caso, se um membro da DAO cria a proposta e vota "SIM" na sua própria proposta — isso signifca que 100% dos votos foram "SIM" (dado que só foi feito um voto) e a proposta **seria aprovada quando** `proposalVotingTimeInSeconds` terminasse! Para evitar isso, nós usamos um quorum que diz “Para uma proposta passar, um x mínimo da porcentagem dos tokens deve ser usado nos votos”.
 
 Por exemplo, vamos fazer `votingQuorumFraction: 0` o que significa que a proposta vai passar independentemente de qual % dos tokens foi usado nos votos. Isso significa que uma pessoa poderia tecnicamente passar uma proposta sozinho se todos os outros membros estivessem de férias lol. Por enquanto está tudo bem. O quorum que você configurar no mundo real depende do seu fornecimento e de quanto você fez de airdrop no início.
 
@@ -74,13 +74,13 @@ Finalmente, nós temos `minimumNumberOfTokensNeededToPropose: "0"` que permite 
 Vá em frente e rode isso usando `node scripts/8-deploy-vote.js`. Aqui está o que eu recebo:
 
 ```plaintext
-buildspace-dao-starter % node scripts/8-deploy-vote.js
+web3dev-dao-starter % node scripts/8-deploy-vote.js
 ✅ Successfully deployed vote module, address: 0xFE667920172882D0695E199b361E94325F0641B6
 👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
 
 ```
 
-Isso é bem legal. Basicamente, nós criamos e fizemos o deploy de um novo smart contract que vai nos permitir de fato votar em propostas on-chain. Esse é um contrato de [governança](https://docs.openzeppelin.com/contracts/4.x/api/governance) padrão. Você pode ver o contrato exato que você fez o deploy [aqui](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/vote/VotingGovernor.sol).
+Isso é bem legal. Basicamente, nós criamos e fizemos o deploy de um novo smart contract que vai nos permitir de fato votar em propostas on-chain. Esse é um contrato de [governança](https://docs.openzeppelin.com/contracts/4.x/api/governance) padrão. Você pode ver o contrato exato que você fez o deploy [REVIEW](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/vote/VotingGovernor.sol).
 
 Se você for para `https://rinkeby.etherscan.io/` você vai ver ele lá!
 
@@ -166,7 +166,7 @@ Um contrato bem simples aqui! Nós fazemos duas coisas:
 Uma vez que você terminar, nós podemos rodar isso usando `node scripts/9-setup-vote.js`. Aqui está o que eu recebo na minha saída:
 
 ```plaintext
-buildspace-dao-starter % node scripts/9-setup-vote.js
+web3dev-dao-starter % node scripts/9-setup-vote.js
 👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
 ✅ Successfully gave vote module permissions to act on token module
 ✅ Successfully transferred tokens to vote module
@@ -183,6 +183,6 @@ Isso meio que explodiu minha mente quando eu vi pela primeira vez. *Nós literal
 
 ### 🚨 Relatório de Progresso
 
-*Por favor faça isso ou Farza vai ficar triste :(.*
+*Por favor faça isso ou danicuki vai ficar triste :(.*
 
-Vá em frente e compartilhe uma captura de tela do Etherscam em `#progress` do seu fornecimento de tokens no seu contrato de votação. Vamos ver sua tesouraria épica!
+Vá em frente e compartilhe uma captura de tela do Etherscan em `#progresso` do seu fornecimento de tokens no seu contrato de votação. Vamos ver sua tesouraria épica!
