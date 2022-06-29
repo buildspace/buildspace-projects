@@ -51,7 +51,7 @@ Nós chamamos o `deployTokenModule` que vai fazer o deploy de um contrato [ERC-2
 
 Aqui eu dou o símbolo HOKAGE para o meu token. Se você não sabe o que é isso — veja [aqui](https://naruto.fandom.com/wiki/Hokage) lol. TLDR: se você é um Hokage você é um dos melhores ninjas de todos os tempos.
 
-A propósito — você pode ver o contrato exato que o thirdweb usa [aqui](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/Coin.sol).
+A propósito — você pode ver o contrato exato que o thirdweb usa [REVIEW](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/Coin.sol).
 
 Aqui está o que eu recebo quando eu rodo:
 
