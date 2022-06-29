@@ -94,12 +94,12 @@ Talvez a tesouraria está na baixa e queremos mais tokens para premiar membros. 
 
 Talvez tenhamos feito algo legal e queremos ser recompensados por isso! No mundo real você criaria propostas para mandar tokens pra outras pessoas. Por exemplo, talvez alguém ajudou a codar um novo website para a DAO e quer ser recompensado por isso. Nós podemos mandar tokens para ele!
 
-A propósito, eu quero fazer um comentário sobre `nativeTokenValue`. Digamos que queremos que nossa proposta faça algo como, "Nós queremos recompensar NarutoFangir127 por nos ajudar com marketing com 2500 tokens de governança e 0.1 ETH". Isso é bem legal! Quer dizer que você pode recompensar pessoas com ETH e tokens de governança — o melhor dos dois mundos. *Nota: Esses 0.1 ETH tem que estar na sua tesouraria se queremos enviá-lo!*
+A propósito, eu quero fazer um comentário sobre `nativeTokenValue`. Digamos que queremos que nossa proposta faça algo como, "Nós queremos recompensar NarutoFangir127 por nos ajudar com marketing com 2500 tokens de governança e 0.1 ETH". Isso é bem legal! Quer dizer que você pode recompensar pessoas com ETH e tokens de governança — o melhor dos dois mundos. *Nota: Esses 0.1 ETH tem que estar na sua tesouraria se quisermos enviá-lo!*
 
 Quando eu rodo `node scripts/10-create-vote-proposals.js` eu recebo:
 
 ```plaintext
-buildspace-dao-starter % node scripts/10-create-vote-proposals.js
+web3dev-dao-starter % node scripts/10-create-vote-proposals.js
 👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
 ✅ Successfully created proposal to mint tokens
 ✅ Successfully created proposal to reward ourselves from the treasury, let's hope people vote for it!
@@ -198,17 +198,17 @@ O próximo pedaço de código é massivo lol. Ele lida com de fato renderizar as
 
 Se você tem familiaridade com React/JS, você pode facilmente dar uma olhada e entender como funciona sozinho. Se você não sabe React/JS muito bem, não se preocupe. Só copie e cole. Sem vergonha mesmo!
 
-Vá em frente e substitua o conteúdo de `if (hasClaimedNFT) { }` com código [esse](https://github.com/buildspace/buildspace-dao-final/blob/d94cadc73703c09561fda946a338237eee7f9bee/src/App.jsx#L194) código.
+Vá em frente e substitua o conteúdo de `if (hasClaimedNFT) { }` com este código [aqui](https://github.com/buildspace/buildspace-dao-final/blob/d94cadc73703c09561fda946a338237eee7f9bee/src/App.jsx#L194).
 
 Quando você checar seu web app, você verá algo como:
 
 ![Untitled](https://i.imgur.com/Q5bzFWb.png)
 
-Muito legal. Agora você pode usar esses butões para votar.
+Muito legal. Agora você pode usar esses botões para votar.
 
 Nós configuramos nosso contrato de governança para terminar a votação depois de 24 horas. Isso significa que depois de 24 horas se:
 ```plaintext
-votos "para" a propsta > votos "contra" a proposta
+votos "para" a proposta > votos "contra" a proposta
 ```
 
 Então qualquer membro deve ser apto a executar a proposta através do nosso contrato de governança. Propostas não podem ser executadas automaticamente. Mas, uma vez que uma proposta passa, **qualquer membro** da DAO pode acionar a proposta aceita.
@@ -219,10 +219,10 @@ Imagine estar num país corrupto, votando por algo, e então o seu governo mente
 
 Nesse caso, tudo está codificado e código não mente.
 
-De qualquer forma, agora não é a hora de discutir como DAOs podem potencialmente melhorar nossos governos ;). Precisamos terminar nossa DAO meme aqui e agora! Estamos tão perto.
+De qualquer forma, agora não é a hora de discutir como DAOs podem potencialmente melhorar nossos governos ;). Precisamos terminar nossa DAO meme, aqui e agora! Estamos tão perto.
 
 ### 🚨 Relatório de Progresso
 
-*Por favor faça isso ou Farza vai ficar triste :(.*
+*Por favor faça isso ou Yan vai ficar triste :(.*
 
-Vá em frente e compartilhe uma captura de tela do seu DAO dashboard mostrando sua lista de membros + sistema de votação em `#progress`!
+Vá em frente e compartilhe uma captura de tela do seu DAO dashboard mostrando sua lista de membros + sistema de votação em `#progresso`!
