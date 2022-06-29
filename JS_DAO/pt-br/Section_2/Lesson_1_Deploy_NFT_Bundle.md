@@ -6,13 +6,13 @@ Mas existe um problema. Para que possamos cunhar NFTs, precisamos escrever + dar
 
 O que o Thirdweb nos dá, é um conjunto de ferramentas para criar todos os nossos smart contrats sem escrever nada de Solidity.
 
-Nós não escrevos nada em Solidity. Tudo o que precisamos fazer é escrever um script usando apenas Javascript para criar + dar deploy nos nossos contratos. O thridweb vai usar um conjunto de contratos seguros que eles criaram [aqui](https://github.com/nftlabs/nftlabs-protocols). **A parte boa é que depois de você criar os contratos, você é o dono deles e os contratos ficam associados com a sua carteira.**
+Nós não escrevemos nada em Solidity. Tudo o que precisamos fazer é escrever um script usando apenas Javascript para criar + dar deploy nos nossos contratos. O thridweb vai usar um conjunto de contratos seguros que eles criaram [aqui](https://github.com/nftlabs/nftlabs-protocols). **A parte boa é que depois de você criar os contratos, você é o dono deles e os contratos ficam associados com a sua carteira.**
 
 Uma vez que você dá deploy no contrato, você pode interagir com ele diretamente do frontend facilmente usando o SDK para o cliente deles.
 
 Eu não posso ser mais claro sobre como é fácil de criar um smart contract usando o thirdweb comparado com escrever seu próprio código em Solidity, vai ser como interagir com uma biblioteca backend normal. Vamos lá:
 
-Vá para o dashboard do thirdweb [aqui](https://thirdweb.com/start?utm_source=buildspace). Clique em "**Let's get started**". Conecte sua carteira. Selecione sua rede (**Rinkeby**).
+Vá para o dashboard do thirdweb [aqui](https://thirdweb.com/start?utm_source=web3dev). Clique em "**Let's get started**". Conecte sua carteira. Selecione sua rede (**Rinkeby**).
 
 Crie o seu primeiro projeto e dê um nome como "My DAO" ou algo do tipo. Quando você clicar em "Criar" você vai ver que um pop-up da Metamask é aberto e você tem que pagar uma taxa de transação na rede Rinkeby. Por que?
 
@@ -28,7 +28,7 @@ WALLET_ADDRESS=ENDEREÇO_DA_SUA_CARTEIRA
 ALCHEMY_API_URL=SUA_URL_DE_API_ALCHEMY
 ```
 
-*Nota: está no Replit? Você vai precisar usar [isto](https://docs.replit.com/programming-ide/storing-sensitive-information-environment-variables). Basicamente arquivos .env não funcionam no Replit. Você precisa usar esse método para adicionar suas variáveis uma por uma com os mesmos nomes. Quando você terminar você precisará reiniciar o Replit parando e rodando o repositóro de novo, para que ele possa ter acesso as novas variáveis de ambniente!*
+*Nota: está no Replit? Você vai precisar usar [isto](https://docs.replit.com/programming-ide/storing-sensitive-information-environment-variables). Basicamente arquivos .env não funcionam no Replit. Você precisa usar esse método para adicionar suas variáveis uma por uma com os mesmos nomes. Quando você terminar você precisará reiniciar o Replit parando e rodando o repositóro de novo, para que ele possa ter acesso as novas variáveis de ambiente!*
 
 O thirdweb precisa dessas variáveis para fazer o deploy desses contratos em nosso favor. Nada é guardado do lado delees, tudo fica localmente no seu arquivo `.env`. **Não faça commit do seu arquivo `env` para o Github. Você será roubado. Tenha cuidado.**
 
@@ -36,17 +36,19 @@ Para acessar sua chave privada na Metamask, veja [isto aqui](https://metamask.ze
 
 Para acessar o endereço da sua carteira, veja [isto aqui](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-).
 
+E se você quiser aprender um pouco mais sobre assinaturas digitais com chaves privadas e públicas, veja [isto aqui](https://www.web3dev.com.br/bernardojaymovic/porque-as-assinaturas-digitais-sao-essenciais-nas-blockchains-11i1)
+
 ### 🚀 Alchemy.
 
 A última coisa que você precisa no seu arquivo `.env` é a `ALCHEMY_API_URL`.
 
 Alchemy essencialmente nos ajuda a transmitir a criação do nosso smart contract para que ele possa ser pego pelos miners na testnet o mais rápido o possível. Uma vez que a transação é minerada, ela é então transmitida para a blockchain como uma transação legítima. A partir dai, todo mundo atualiza a sua cópia da blockchain.
 
-Então, faça uma conta na Alchemy [aqui](https://alchemy.com/?r=b93d1f12b8828a57).
+Então, faça uma conta na Alchemy [REVIEW](https://alchemy.com/?r=b93d1f12b8828a57).
 
 Veja esse vídeo abaixo para ver como acessar sua chave API para uma **testnet**! Não se confunda criando uma chave para a mainnet, **nós queremos uma chave para a testnet.**
 
-[Loom](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933)
+[REVIEW](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933)
 
 Você deve ter por agora os três itens no seu arquivo `.env`!
 
@@ -133,7 +135,7 @@ node scripts/1-initialize-sdk.js
 Aqui está o que eu recebo quando rodo o script.
 
 ```plaintext
-buildspace-dao-starter % node scripts/1-initialize-sdk.js
+web3dev-dao-starter % node scripts/1-initialize-sdk.js
 👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
 ```
 
@@ -147,7 +149,7 @@ Certifique-se de copiar o endereço do seu app! Você vai precisar dele em um se
 
 O que nós vamos fazer agora é criar + fazer deploy de um contrato ERC-1155 para a Rinkeby. Isso é basicamente o módulo base que nós vamos precisar para criar nossos NFTs. **Nós não estamos criando nossos NFT aqui ainda, nós estamos apenas configurado os metadados ao redor da coleção em si.** Coisas como o nome da coleção (ex. CryptoPunks) e uma imagem associada com a coleção que aparece no cabeçalho do OpenSea.
 
-*Nota: Você deve conhecer ERC-721 onde todo NFT é único, mesmo se eles tiverem a mesma imagem, nome e propriedades. Com um ERC-1155, múltiplas pessoas podem ser holders do mesmo NFT. Nesse caso, nosso NFT de filiação é o mesmo para todo mundo, então invés de fazer um novo NFT todas as vezes, nós podemos simplesmente atribuir o mesmo NFT para todos os nossos membros. Isso também é mais eficiente em relação a taxas! Essa é uma abordagem bem comum para casos em que o NFT é o mesmo para todos os holders.*
+*Nota: Você deve conhecer ERC-721 onde todo NFT é único, mesmo se eles tiverem a mesma imagem, nome e propriedades. Com um ERC-1155, múltiplas pessoas podem ser holders do mesmo NFT. Nesse caso, nosso NFT de filiação é o mesmo para todo mundo, então ao invés de fazer um novo NFT todas as vezes, nós podemos simplesmente atribuir o mesmo NFT para todos os nossos membros. Isso também é mais eficiente em relação a taxas! Essa é uma abordagem bem comum para casos em que o NFT é o mesmo para todos os holders.*
 
 Vá para `scripts/2-deploy-drop.js` e adicione o código abaixo: 
 
@@ -169,7 +171,7 @@ const app = sdk.getAppModule("INSIRA_SEU_ENDEREÇO_AQUI");
       image: readFileSync("scripts/assets/naruto.png"),
       // Nós precisamos passar o endereço da pessoa que vai estar recebendo os rendimentos das vendas dos nfts do módulo.
       // Nós estamos planejando não cobrar as pessoas pelo drop, então passaremos o endereço 0x0
-      // você pode configurar isso para sua própria carteira se você quer cobrar pelo drop.
+      // você pode configurar isso para sua própria carteira se você quiser cobrar pelo drop.
       primarySaleRecipientAddress: ethers.constants.AddressZero,
     });
     
@@ -196,7 +198,7 @@ Nós damos para nossa coleção um `name`,  `description` e `primarySaleRecipien
 Quando eu rodo isso usando `node scripts/2-deploy-drop.js`, eu recebo.
 
 ```plaintext
-buildspace-dao-starter % node scripts/2-deploy-drop.js
+web3dev-dao-starter % node scripts/2-deploy-drop.js
 👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
 ✅ Successfully deployed bundleDrop module, address: 0x31c70F45060AE0870624Dd9D79A1d8dafC095A5d
 ✅ bundleDrop metadata: {
@@ -220,18 +222,18 @@ Okay, o que acabou de acontecer é muito épico. Duas coisas aconteceram:
 
 ![Untitled](https://i.imgur.com/suqHbB4.png)
 
-Bem Épico. Um contrato customizado e lançado usando apenas javascript. Você pode ser o código do smart contract que o thridweb usa [aqui](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/LazyNFT.sol).
+Bem Épico. Um contrato customizado e lançado usando apenas javascript. Você pode ver o código do smart contract que o thridweb usa [aqui](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/LazyNFT.sol).
 
-**A outra coisa que nós fizemos aqui foi usar o thirdweb para automaticamento fazer o upload e fixar a imagem da nossa coleção no IFPS.** Você vai ver um link que inicia com `https://cloudflare-ipfs.com` impresso. Se você copiar esse link no navegador, você vai ver a imagem do seu NFT sendo recuperada do IFPS via CloudFare!
+**A outra coisa que nós fizemos aqui foi usar o thirdweb para automaticamento fazer o upload e fixar a imagem da nossa coleção no IPFS.** Você vai ver um link que inicia com `https://cloudflare-ipfs.com` impresso. Se você copiar esse link no navegador, você vai ver a imagem do seu NFT sendo recuperada do IFPS via CloudFare!
 
-Você pode até ir para o IFPS diretamente usando a URI `ipfs://` (nota - não vai funcionar no Chrome porque você precisa está rodando um nó IFPS, mas funciona no Brave que faz isso por você!)
+Você pode até ir para o IFPS diretamente usando a URI `ipfs://` (nota - não vai funcionar no Chrome porque você precisa está rodando um nó IPFS, mas funciona no Brave que faz isso por você!)
 
-*Nota: IFPS é basicamente um sistema de armazenamento descentralizado, leia mais [aqui](https://docs.ipfs.io/concepts/what-is-ipfs/)! (em inglês)*
+*Nota: IPFS é basicamente um sistema de armazenamento descentralizado, leia mais [aqui](https://docs.ipfs.io/concepts/what-is-ipfs/)! (em inglês)*
 
-Se você desenvolveu um smart contract personalizado em Solidity antes, isso é um pouco de explodir cabeças. Nós já temos um contrato lançado na Rinkeby + dados hospedados no IFPS. Louco. Seguindo, nós precisamos de fato criar nossos NFTs!
+Se você desenvolveu um smart contract personalizado em Solidity antes, isso é um pouco de explodir cabeças. Nós já temos um contrato lançado na Rinkeby + dados hospedados no IPFS. Louco. Seguindo, nós precisamos de fato criar nossos NFTs!
 
 ### 🚨 Relatório de Progresso
 
-*Por favor faça isso ou Farza vai ficar triste :(.*
+*Por favor faça isso ou Yan vai ficar triste :(.*
 
-Vá lá e compartilhe uma screenshot do Etherscan em `#progress` mostrando o seu contrato lançado.
+Vá lá e compartilhe uma screenshot do Etherscan em `#progresso` mostrando o seu contrato lançado.
