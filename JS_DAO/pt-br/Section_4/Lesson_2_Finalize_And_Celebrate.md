@@ -4,7 +4,7 @@ Você conseguiu. Você chegou ao final. eu estou MUITO orgulhoso. esse é você 
 
 ![](https://media0.giphy.com/media/3oKIPf3C7HqqYBVcCk/giphy.gif?cid=ecf05e4799o6581fbwkeycd5jexb17jhhhvkk0pnca3ddcwu&rid=giphy.gif&ct=g)
 
-DAOs são essa coisa realmente nova e mística que muitas pessoas estão falando sobre. Mas você fez mais do que simplesmente falar sobre elas — você na verdade fez uma!! No estilo clássico do buildspace, você se jogou fundo nesse tópico realmente complexo simplesmente pulando no código. Parabéns meu amigo!
+DAOs são essa coisa realmente nova e mística que muitas pessoas estão falando sobre. Mas você fez mais do que simplesmente falar sobre elas — você na verdade fez uma!! No estilo clássico da web3dev, você se jogou fundo nesse tópico realmente complexo simplesmente pulando no código. Parabéns meu amigo!
 
 Uma revisão rápida aqui, você:
 
@@ -22,20 +22,20 @@ Eu sei que isso é difícil de acreditar, mas você criou uma DAO completa. Eu e
 
 **Certifique-se de clicar no botão na parte de baixo dessa página e envie o seu link final. Do contrário, nosso sistema não vai te marcar como "completo".**
 
-Nós vamos fazer o airdrop do seu NFT em até uma hora e vamos te enviar uma vez que estiver na sua carteira. Está rodando em um cron job! Se você não receber o email em 24h pf pf pf nos envie uma mensagem em #feedback e mencione @ **alec#8853**.
+Nós vamos fazer o airdrop do seu NFT em até uma hora e vamos te enviar uma vez que estiver na sua carteira. Está rodando em um cron job! Se você não receber o email em 24h pf pf pf nos envie uma mensagem em #feedback e mencione @ **danicuki#5520**.
 
-[Loom](https://www.loom.com/share/99c4d4bddd624661b84e551c1257027e)
+[REVIEW](https://www.loom.com/share/99c4d4bddd624661b84e551c1257027e)
 
 ### **🌈 Antes de você ir embora.**
 
-Vá para **#showcase** no Discord e nos mande o link do seu produto final para que a gente possa brincar com ele. Se você não usa Replit, certifique-se de fazer o deploy com algo tipo Vercel ou Netlify. **Você chegou até aqui, é melhor você fazer o deploy do seu site lol.**
+Vá para **#progresso** no Discord e nos mande o link do seu produto final para que a gente possa brincar com ele. Se você não usa Replit, certifique-se de fazer o deploy com algo tipo Vercel ou Netlify. **Você chegou até aqui, é melhor você fazer o deploy do seu site lol.**
 
 E também, você deveria fazer um tweet sobre o seu projeto final e mostrar para o mundo sua criação épica! O que você fez não foi fácil de jeito nenhum. Talvez até fazer um pequeno vídeo mostrando seu projeto e anexá-lo ao tweet. Faça o seu tweet ficar bonito e se amostre!!
 
-E se você quiser, mencione o [@_buildspace](https://twitter.com/_buildspace) :). **Isso nos dá muita motivação quando vemos pessoas terminando seus projetos.** E também você pode inspirar alguém a entrar na web3.
+E se você quiser, mencione o [@Web3dev_](https://twitter.com/Web3dev_) :). **Isso nos dá muita motivação quando vemos pessoas terminando seus projetos.** E também você pode inspirar alguém a entrar na web3.
 
 Nos dê essa injeção de dopamina pf.
 
-E por fim, também seria legal se você nos dissesse em #feedback o que você gostou nesse projeto e na estrutura do projeto. O que você mais amou sobre o buildspace? O que foi uma merda? O que você quer que nós mudemos para projetos futuros? Seu feedback seria perfeito!
+E por fim, também seria legal se você nos dissesse em #chat-geral o que você gostou nesse projeto e na estrutura do projeto. O que você mais amou sobre a web3dev? O que foi uma merda? O que você quer que nós mudemos para projetos futuros? Seu feedback seria perfeito!
 
 Você você por ai!!!
