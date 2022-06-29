@@ -52,7 +52,7 @@ Eu estou criando a NarutoDAO, então, meus membros vão precisar de uma bandana 
 
 Seja criativo com a sua, não me copie!
 
-quando você estiver pronto, rode:
+Quando você estiver pronto, rode:
 
 ```plaintext
 node scripts/3-config-nft.js
@@ -103,7 +103,7 @@ A mesma coisa que antes aqui, certifique-se de substituir `INSIRA_O_ENDEREÇO_DO
 
 `maxQuantity` é o # máximo do nosso NFT de filiação que pode ser cunhado. `maxQuantityPerTransaction` especifica quantos tokens alguém pode reivindicar numa única transação, nós colocamos apenas um porque queremos que os usuários cunhem um NFT por vez! Em alguns casos você vai querer cunhar vários NFTs para o seu usuário de uma vez (ex. quando ele abrir uma caixa de recompensas com múltiplos NFTs) mas nesse caso só queremos um.
 
-Finalmente, nós fazemos `bundleDrop.setClaimCondition(0, claimConditionFactory)` e isso vai na verdade **interagir com o nosso contrato que está on-chain** e ajustar as condições, muito massa! Por que passamos um `0`? Bem, basicamente nosso NFT de filiação tem um `tokenId` de `0` visto que é o primeiro token no nosso contrato ERC-1155. Lembre-se — com o ERC-1155 nós podemos ter várias pessoas cunhando o mesmo NFT. Nesse caso, todo mundo cunha um NFT com o id `0`. Mas poderíamos ter um NFT diferente com o id `1`, talvez você poderíamos dar esse NFT para os membros da DAO que estão se destacando! Tudo depende da gente.
+Finalmente, nós fazemos `bundleDrop.setClaimCondition(0, claimConditionFactory)` e isso vai na verdade **interagir com o nosso contrato que está on-chain** e ajustar as condições, muito massa! Por que passamos um `0`? Bem, basicamente nosso NFT de filiação tem um `tokenId` de `0` visto que é o primeiro token no nosso contrato ERC-1155. Lembre-se — com o ERC-1155 nós podemos ter várias pessoas cunhando o mesmo NFT. Nesse caso, todo mundo cunha um NFT com o id `0`. Mas poderíamos ter um NFT diferente com o id `1`, talvez poderíamos dar esse NFT para os membros da DAO que estão se destacando! Tudo depende da gente.
 
 Depois de rodar `node scripts/4-set-claim-condition.js` aqui está o que eu recebo:
 
@@ -118,6 +118,6 @@ Boom! Nós interagimos com o nosso smart contract com sucesso e demos ao nosso N
 
 ### 🚨 Relatório de Progresso
 
-*Por favor faça isso ou Farza vai ficar triste :(.*
+*Por favor faça isso ou o danicuki vai ficar triste :(.*
 
-Ei! Vá em frente e compartilhe o NFT de filiação que você escolheu em `#progress` e diga para nós por que você escolheu esse NFT épico para sua DAO
+Ei! Vá em frente e compartilhe o NFT de filiação que você escolheu em `#progresso` e diga para nós por que você escolheu esse NFT épico para sua DAO
