@@ -3,6 +3,8 @@
 Now that we got all our scripts good to go and the basics down, we're going to mint some NFTs! Here's what my updated `MyEpicNFT.sol` looks like:
 
 ```solidity
+// SPDX-License-Identifier: UNLICENSED
+
 pragma solidity ^0.8.1;
 
 // We first import some OpenZeppelin Contracts.
