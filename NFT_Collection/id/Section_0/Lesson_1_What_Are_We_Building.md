@@ -43,7 +43,7 @@ Mereka bahkan akan muncul di OpenSea :).
 
 Kamu akan dapat menyesuaikan NFT itu sendiri sebanyak yang kamu inginkan di akhir dan melakukan apa pun yang kamu inginkan.
 
-Namun, NFT yang akan aku bahas dalam panduan ini adalah NFT yang pada dasarnya adalah kotak persegi dengan kombinasi tiga kata yang dibuat secara acak di tengahnya. Mengapa? Karena menurut saya itu lucu haha. Beberapa kombo tiga kata ini benar-benar lucu.
+Namun, NFT yang akan aku bahas dalam panduan ini adalah NFT yang pada dasarnya adalah kotak persegi dengan kombinasi tiga kata yang dibuat secara acak di tengahnya. Mengapa? Karena menurutku itu lucu haha. Beberapa kombo tiga kata ini benar-benar lucu.
 
 Bagian paling keren? Semuanya akan terjadi *on-chain*. Ini berarti semua data NFT akan hidup di blockchain itu sendiri. Jika itu tidak masuk akal, jangan khawatir dulu — itu akan :)!
 
