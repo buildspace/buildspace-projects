@@ -74,7 +74,7 @@ Feel free to submit an [issue here](https://github.com/zipeducation/buildspace-p
 This is awesome! Your first Open Source contribution is always a great one. If you're not entirely sure on how to "Fork" a repo or make a "PR" take a look at these awesome resources from GitHub:
 
 [Fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)<br>
-[Create a pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+[Create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 
 As always make sure to reach out to us on [Discord](https://discord.gg/CFuBU7RJ42) if you have any questions or concerns!
 

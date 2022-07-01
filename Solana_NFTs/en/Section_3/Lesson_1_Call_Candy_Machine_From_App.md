@@ -281,7 +281,7 @@ const CandyMachine({walletAddress}) => {
     const candyMachine = await program.account.candyMachine.fetch(
       process.env.REACT_APP_CANDY_MACHINE_ID
     );
-    
+
     const itemsAvailable = candyMachine.data.itemsAvailable.toNumber();
     const itemsRedeemed = candyMachine.itemsRedeemed.toNumber();
     const itemsRemaining = itemsAvailable - itemsRedeemed;
@@ -292,6 +292,12 @@ const CandyMachine({walletAddress}) => {
       (!candyMachine.data.goLiveDate ||
         candyMachine.data.goLiveDate.toNumber() > new Date().getTime() / 1000);
   
+    const presale =
+      candyMachine.data.whitelistMintSettings &&
+      candyMachine.data.whitelistMintSettings.presale &&
+      (!candyMachine.data.goLiveDate ||
+        candyMachine.data.goLiveDate.toNumber() > new Date().getTime() / 1000);
+
     const goLiveDateTimeString = `${new Date(
       goLiveData * 1000
     ).toGMTString()}`
@@ -326,13 +332,14 @@ const CandyMachine({walletAddress}) => {
         price: candyMachine.data.price,
       },
     });
-  
+
     console.log({
       itemsAvailable,
       itemsRedeemed,
       itemsRemaining,
       goLiveData,
       goLiveDateTimeString,
+      presale,
     });
   };
 }
