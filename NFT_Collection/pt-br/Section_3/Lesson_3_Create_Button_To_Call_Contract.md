@@ -137,4 +137,4 @@ Por que precisamos fazer tudo isso? Bom, é porque contratos inteligentes são  
 
 🚨 Relatório de progresso!
 ------------------------
-Poste um print do seu console depois que você faz o mint de alguns NFTs e todos aparecem no `console.log`s!
+Poste um print do seu console em #progresso depois que você faz o mint de alguns NFTs e todos aparecem no `console.log`s!
