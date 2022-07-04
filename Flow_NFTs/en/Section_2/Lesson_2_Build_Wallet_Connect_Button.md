@@ -64,6 +64,24 @@ Next let's make the authentication (wallet connection) functions and use the `se
   }, [])
 ```
 
+**Lilico!**
+Btw if you're building for Lilico, you should check the user's network. With Blocto we set the network in the fcl config. On Lilico users can change the network themselves. Here's how you can track which network Lilico users switch to:
+```js
+const [network, setNetwork] = useState("");
+
+useEffect(()=>{
+    // This is an event listener for all messages that are sent to the window
+    window.addEventListener("message", d => {
+    // This only works for Lilico testnet to mainnet changes
+      if(d.data.type==='LILICO:NETWORK') setNetwork(d.data.network)
+    })
+  }, [])
+```
+You can use the network value to warn the user if they're on the wrong network :D
+
+**Note**
+When you change `Lilico` networks your account address changes. So when network is switched, authentication needs to be done again to get the updated account address. 
+
 Right after, make render components for both our buttons: 
 ```js
   const RenderLogin = () => {
