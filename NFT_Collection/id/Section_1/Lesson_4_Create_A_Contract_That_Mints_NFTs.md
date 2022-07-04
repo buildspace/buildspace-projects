@@ -117,7 +117,7 @@ _setTokenURI(newItemId, "blah")
 Kita akan benar-benar mengatur URI sebagai tautan ke file JSON kita.
 
 ```solidity
-_setTokenURI(newItemId, "INSERT_YOUR_JSON_URL_HERE");
+_setTokenURI(newItemId, "MASUKKAN_URL_JSON_ANDA_DI_SINI");
 ```
 
 Di bawah baris itu, kita juga dapat menambahkan `console.log` untuk membantu kita melihat kapan NFT dicetak dan kepada siapa!
@@ -309,8 +309,8 @@ Kamu dapat mengambil URL APImu dari dasbor Alchemy dan menempelkannya. Kemudian,
 
 Buka file **.env** dan rekatkan dua yang telah kita ambil seperti yang ditunjukkan di bawah ini.
 ```
-ALCHEMY_API_KEY_URL=<YOUR API URL>
-RINKEBY_PRIVATE_KEY=<YOUR PRIVATE KEY>
+ALCHEMY_API_KEY_URL=<URL API KAMU>
+RINKEBY_PRIVATE_KEY=<KUNCI PRIBADI KAMU>
 ```
 
 **Catatan: JANGAN COMMIT FILE INI KE GITHUB. INI MEMILIKI KUNCI PRIBADIMU. KAMU AKAN DIRETAS + DIRAMPOK. PRIVATE KEY INI SAMA DENGAN PRIVATE KEY MAINNETMU.

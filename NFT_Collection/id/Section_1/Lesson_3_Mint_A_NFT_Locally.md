@@ -64,9 +64,9 @@ Jadi, kontrak pintar terlihat seperti `class` dalam bahasa lain, jika kamu per
 
 Luar biasa — kita memiliki kontrak cerdas! Tapi, kita tidak tahu apakah itu berhasil. Kita perlu benar-benar:
 
-1. Kompilasi.
+1. Mengkompilasi.
 
-2. Terapkan ke blockchain lokal kita.
+2. Menerapkan ke blockchain lokal kita.
 
 3. Setelah itu ada, console.log tersebut akan berjalan.
 
