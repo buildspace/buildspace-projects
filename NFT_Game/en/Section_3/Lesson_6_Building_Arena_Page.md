@@ -1,10 +1,10 @@
 At this point, we have been introduced to pretty much everything we need to know to build our React app. Let's jump right into setting up our `Arena` Component:
 
-Just like with the `SelectCharacter` Component, let's create a new file in the `Components/Arena`  folder called `index.js`. Again, you should already see an `Arena.css` file in this folder! Once you setup your base don't forget to get fancy with your styling 💅.
+Just like with the `SelectCharacter` Component, let's create a new file in the `Components/Arena`  folder called `index.jsx`. Again, you should already see an `Arena.css` file in this folder! Once you setup your base don't forget to get fancy with your styling 💅.
 
 ### ⚔️ Setting up the Arena
 
-Next, we are going to setup our `Arena` component. Make sure you're working out of `Arena/index.js`. I'm going to add a lot more base code here as we are familiar with everything that is happening:
+Next, we are going to setup our `Arena` component. Make sure you're working out of `Arena/index.jsx`. I'm going to add a lot more base code here as we are familiar with everything that is happening:
 
 ```javascript
 import React, { useEffect, useState } from 'react';
