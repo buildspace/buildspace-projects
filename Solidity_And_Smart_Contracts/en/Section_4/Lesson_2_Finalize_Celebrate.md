@@ -170,6 +170,13 @@ PRIVATE_KEY=BLAHBLAH
 ```
 
  Be sure to have the .env in your .gitignore.
+ 
+**Did you know that you can deploy a smart contract and push it to Github without the hassle of managing private keys?**
+
+It's super simple using [thirdweb](https://thirdweb.com)!
+You need not use your private keys anywhere and you still have the complete ownership of the smart contract you deploy. 
+
+Here's a video for better understanding. [Watch the video](https://youtu.be/CaODHRnFgBw)
 
 ## 🎉 That's a wrap
 
