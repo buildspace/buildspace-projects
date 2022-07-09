@@ -31,7 +31,7 @@ What happens here is, you run:
 1. `mkdir epic-nfts` to create a directory named "epic-nfts".
 2. `cd epic-nfts` to enter the newly created directory.
 3. `npm init -y` to generate an empty npm project without going through an interactive process. The -y stands for yes.
-4. `npm install --save-dev hardhat` to install Hardhat.
+4. `npm install --save-dev hardhat@2.9.9` to install Hardhat.
 
 You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Google around a bit about these vulnerabilities if you want to know more!
 

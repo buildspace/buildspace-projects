@@ -28,7 +28,7 @@ Next, let's head to the terminal. Go ahead and `cd` to the directory you want 
 mkdir epic-game
 cd epic-game
 npm init -y
-npm install --save-dev hardhat
+npm install --save-dev hardhat@2.9.9
 ```
 
 You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Google around a bit about these vulnerabilities if you want to know more!

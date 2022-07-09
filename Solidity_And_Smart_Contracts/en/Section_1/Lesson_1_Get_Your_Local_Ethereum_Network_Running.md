@@ -32,7 +32,7 @@ Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to th
 mkdir my-wave-portal
 cd my-wave-portal
 npm init -y
-npm install --save-dev hardhat
+npm install --save-dev hardhat@2.9.9
 ```
 
 ## 👏 Get sample project going
