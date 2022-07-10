@@ -68,6 +68,12 @@ Then run:
 npx hardhat run scripts/sample-script.js
 ```
 
+If you're on the latest version of Hardhat (2.10.1), run this instead:
+
+```bash
+npx hardhat run scripts/deploy.js
+```
+
 You should see something like this:
 
 ![Untitled](https://i.imgur.com/LIYT9tf.png)
