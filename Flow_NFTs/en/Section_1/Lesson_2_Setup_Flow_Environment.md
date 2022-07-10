@@ -134,7 +134,7 @@ pub contract BottomShot {
     }
 }
 ```
-This contract is pretty straightforward. It lets you create individual NFTs which have just two attributes: the ID and the metadata string. We
+This contract is pretty straightforward. It lets you create individual NFTs which have just two attributes: the ID and the metadata string. 
 
 ```
 self.account.save<@NFT>(<-create NFT(initID: 1), to: /storage/BottomShot1)
