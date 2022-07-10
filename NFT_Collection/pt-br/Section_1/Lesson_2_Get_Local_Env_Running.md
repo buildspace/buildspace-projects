@@ -26,7 +26,7 @@ Depois, vamos para o terminal. Vá em frente e `cd` (comando para mudar de pasta
 mkdir epic-nfts
 cd epic-nfts
 npm init -y
-npm install --save-dev hardhat
+npm install --save-dev hardhat@2.9.9
 ```
 
 Você pode ver uma mensagem sobre vulnerabilidades depois de rodar o último comando e instalar o Hardhat. Toda vez que você instalar algo do NPM, existe uma checagem de segurança que é feita para ver se algum dos pacotes da livraria que você está instalando tem alguma vulnerabilidade reportada. Isso é mais um aviso para que você esteja ciente! Pesquise um pouco mais sobre as vulnerabilidades no Google se quiser saber mais!
