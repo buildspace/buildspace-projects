@@ -327,7 +327,7 @@ Muito épico, acabamos de criar nosso contrato NFT _e_ mintamos dois NFTs. Épic
 
 Por exemplo, esse é meu link: https://rinkeby.rarible.com/token/0x5794653132ed3cb5c1758c2908bf283f4fe57f45:0 para o NFT do Chaves!! Meu `tokenId` é `0` porque foi o primeiro mint daquele contrato.
 
-**Basicamente, se você não ver seu NFT no OpenSea dentro de alguns minutos, tente o Rarible e Rarible URLs para o resto do projeto.**
+**Basicamente, se você não vir seu NFT no OpenSea dentro de alguns minutos, tente o Rarible e Rarible URLs para o resto do projeto.**
 
 ## 💻 O código
 
