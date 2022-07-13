@@ -33,7 +33,7 @@ Vá para o seu terminal e `cd` na pasta em que seu projeto vai ficar. Por exempl
 
 ```plaintext
 git clone SEU_LINK_DO_FORK
-REVIEW cd dao-app-web3dev 
+cd dao-app-web3dev 
 ```
 
 É isto! A partir daí você pode rodar:

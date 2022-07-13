@@ -80,7 +80,7 @@ web3dev-dao-starter % node scripts/8-deploy-vote.js
 
 ```
 
-Isso é bem legal. Basicamente, nós criamos e fizemos o deploy de um novo smart contract que vai nos permitir de fato votar em propostas on-chain. Esse é um contrato de [governança](https://docs.openzeppelin.com/contracts/4.x/api/governance) padrão. Você pode ver o contrato exato que você fez o deploy [REVIEW](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/vote/VotingGovernor.sol).
+Isso é bem legal. Basicamente, nós criamos e fizemos o deploy de um novo smart contract que vai nos permitir de fato votar em propostas on-chain. Esse é um contrato de [governança](https://docs.openzeppelin.com/contracts/4.x/api/governance) padrão. Você pode ver o contrato exato que você fez o deploy [aqui](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/vote/VotingGovernor.sol).
 
 Se você for para `https://rinkeby.etherscan.io/` você vai ver ele lá!
 

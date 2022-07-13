@@ -44,11 +44,11 @@ A última coisa que você precisa no seu arquivo `.env` é a `ALCHEMY_API_URL`.
 
 Alchemy essencialmente nos ajuda a transmitir a criação do nosso smart contract para que ele possa ser pego pelos miners na testnet o mais rápido o possível. Uma vez que a transação é minerada, ela é então transmitida para a blockchain como uma transação legítima. A partir dai, todo mundo atualiza a sua cópia da blockchain.
 
-Então, faça uma conta na Alchemy [REVIEW](https://alchemy.com/?r=b93d1f12b8828a57).
+Então, [faça uma conta na Alchemy](https://alchemy.com/?r=jQ3MDMxMzUyMDU3N).
 
 Veja esse vídeo abaixo para ver como acessar sua chave API para uma **testnet**! Não se confunda criando uma chave para a mainnet, **nós queremos uma chave para a testnet.**
 
-[REVIEW](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933)
+[Loom](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933)
 
 Você deve ter por agora os três itens no seu arquivo `.env`!
 
