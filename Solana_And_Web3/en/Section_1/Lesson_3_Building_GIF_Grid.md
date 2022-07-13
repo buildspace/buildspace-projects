@@ -47,7 +47,8 @@ NICE. We have some spicy GIFs to test out our app with now. So, how are we going
 Let's start by creating a new function called `renderConnectedContainer`  right under the `renderNotConnectedContainer`. This will have some simple UI code that will map through all our GIF links and render them:
 
 ```jsx
-const renderConnectedContainer = () => (
+const renderConnectedContainer = () => {
+return (
   <div className="connected-container">
     <div className="gif-grid">
       {TEST_GIFS.map(gif => (
@@ -57,14 +58,15 @@ const renderConnectedContainer = () => (
       ))}
     </div>
   </div>
-);
+  )
+};
 ```
 
 We are almost there! You probably saved your file and still haven't seen anything show up on your app! Remember - these render methods need to be **called** in order to be executed! Let's head down to where we added `{!walletAddress && renderNotConnectedContainer()}`. 
 
 If we only want this to display when the user is connected to our app, what property can we use to decide this? Probably the `walletAddress` right? If we have a  `walletAddress` that must mean we have a connected wallet! Nice.
 
-So, right under where you are called `renderNotConnectedContainer` let's go ahead and add this:
+So, right under where you called `renderNotConnectedContainer` let's go ahead and add this:
 
 ```javascript
 return (
@@ -118,7 +120,8 @@ It's time for us to think about how other people can add their own GIFs to our a
 Let's get started with the input. We only want this input box to be shown when the user has connected their wallet to our app. So, that means we will want to add this code to our `renderConnectedContainer` render method:
 
 ```jsx
-const renderConnectedContainer = () => (
+const renderConnectedContainer = () => {
+return (
   <div className="connected-container">
     {/* Go ahead and add this input and button to start */}
     <form
@@ -137,7 +140,8 @@ const renderConnectedContainer = () => (
       ))}
     </div>
   </div>
-);
+  )
+};
 ```
 
 The main things we added here are an `input` box and a submit `button` .
@@ -268,7 +272,8 @@ All we are saying here is if we have a `walletAddress` go ahead and run our fetc
 So, once our test data is set, we want to use it! For this we are going to head back to the `renderConnectedContainer` function and make a one line change:
 
 ```jsx
-const renderConnectedContainer = () => (
+const renderConnectedContainer = () => {
+return (
     <div className="connected-container">
       <form
         onSubmit={(event) => {
@@ -295,7 +300,8 @@ const renderConnectedContainer = () => (
         ))}
       </div>
     </div>
-  );
+    )
+  };
 ```
 
 Now let's add a few lines to sendGif() so that when you submit the form, it adds the GIF to gifList and clears the text field :
