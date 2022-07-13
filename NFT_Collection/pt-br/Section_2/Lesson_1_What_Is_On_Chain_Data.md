@@ -2,11 +2,11 @@
 
 Nesse momento, nós temos um grande problema com nossas NFTs.
 
-O que acontece se o imgur cair? Então - nosso link da imagem seria absolutamente inútil, e nosso NFT e o Chaves estarão perdidos! E pior, o que acontece se o site que hospeda o arquivo JSON cair? Então - nossa NFT estaria completamente quebrada pois os metdadados não seriam acessíveis.
+O que acontece se o Imgur cair? Então - nosso link da imagem seria absolutamente inútil, e nosso NFT e o Chaves estariam perdidos! E pior, o que acontece se o site que hospeda o arquivo JSON cair? Então - nosso NFT estaria completamente quebrado pois os metadados não estariam acessíveis.
 
-Uma maneira de consertar esse problema é armazenar os dados da nossa NFT "on-chain", significando que os dados vivem no contrado ao invés de nas mãos de um terceiro (third-party). Isso significa que nossa NFT será verdadeiramente permanente :). Nesse caso, a única situação onde perdemos nossos dados da NFT seria se a blockchain caísse. E se isso acontecer - bom, aí temos problemas maiores.
+Uma maneira de consertar esse problema é armazenar os dados do nosso NFT "on-chain", significando que os dados vivem no contrato ao invés de nas mãos de um terceiro (third-party). Isso significa que nosso NFT será verdadeiramente permanente :). Nesse caso, a única situação onde perdemos nossos dados do NFT seria se a blockchain caísse. E se isso acontecer - bom, aí temos problemas maiores.
 
-Mas, assumindo que a blockchain não caia, nossa NFT vai estar ali para sempre! Isso é bem atraente, porque também significa que se você vender uma NFT, o comprador pode estar confiante que ela não vai quebrar. Muitos projetos populares usam dados "On-chain", [Este aqui](https://techcrunch.com/2021/09/03/loot-games-the-crypto-world/) é um exemplo muito popular!
+Mas, assumindo que a blockchain não caia, nosso NFT vai estar ali para sempre! Isso é bem atraente, porque também significa que se você vender um NFT, o comprador pode estar confiante que ele não vai quebrar. Muitos projetos populares usam dados "on-chain", [este aqui](https://techcrunch.com/2021/09/03/loot-games-the-crypto-world/) é um exemplo muito popular!
 
 🖼 O que são SVGs?
 
@@ -62,9 +62,9 @@ SVGs podem ser **muito** customizados. Você pode até animá-los. Sinta-se livr
 
 ## 🤘 O que nós vamos fazer.
 
-Primeiro, nós vamos aprender sobre como colocar todos os dados das nossas NFTs "on-chain". Nossa NFT vai ser simplesmente uma caixa com **três palavras engraçadas no centro**. Como o SVG acima. Nós vamos hardcodar o SVG acima no nosso contrato que falam "TubainaMoquecaMaracuja".
+Primeiro, nós vamos aprender sobre como colocar todos os dados dos nossos NFTs "on-chain". Nossa NFT vai ser simplesmente uma caixa com **três palavras engraçadas no centro**. Como o SVG acima. Nós vamos hardcodar o SVG acima no nosso contrato que fala "TubainaMoquecaMaracuja".
 
-Depois disso, nós vamos aprender como **gerar dinamicamente** nossas NFTs no contrato. Assim, **toda vez que alguém mintar uma NFT, vão conseguir um diferente e hilário combo de três palavras**. Por exemplo:
+Depois disso, nós vamos aprender como **gerar dinamicamente** nossos NFTs no contrato. Assim, **toda vez que alguém mintar um NFT, vão conseguir um diferente e hilário combo de três palavras**. Por exemplo:
 
 - TubainaMoquecaMaracuja
 - GuaranaFeijoadaPitanga

@@ -30,7 +30,7 @@ Aqui estão alguns dos meus. Eu gosto que a primeira linha tenha palavras que pa
 
 Talvez você queira gerar um nome de banda aleatório. Talvez você queira gerar nomes de personagens aleatórios para suas sessões de Dungeons and Dragons. Faça o que você quiser. Talvez você não dê a mínima para combinações de três palavras e só queira fazer SVGs de pinguins de pixel art. Vá em frente. Faça o que você quiser :).
 
-Observação: Eu Recomendo entre 15-20 palavras por array. Notei que cerca de 10 geralmente não é aleatório o suficiente.
+Observação: Eu recomendo entre 15-20 palavras por array. Notei que cerca de 10 geralmente não é aleatório o suficiente.
 
 🥴 Números aleatórios.
 ------------------
@@ -55,7 +55,7 @@ O que isso está fazendo é pegar duas coisas: a string atual `PRIMEIRA_PALAVRA`
 
 **Isso não é aleatoriedade verdadeira.** Mas é o melhor que temos por agora!
 
-Existem outras maneiras de gerar números aleatórios no blockchain (verifique o [Chainlink](https://docs.chain.link/docs/chainlink-vrf/)), mas o Solidity nativamente não nos dá nada confiável porque não pode! Todos as varaiveis que nosso contrato pode acessar são públicas e nunca verdadeiramente aleatórios.
+Existem outras maneiras de gerar números aleatórios no blockchain (verifique o [Chainlink](https://docs.chain.link/docs/chainlink-vrf/)), mas o Solidity nativamente não nos dá nada confiável porque não pode! Todos as variáveis que nosso contrato pode acessar são públicas e nunca verdadeiramente aleatórias.
 
 Isso pode ser um pouco irritante para alguns aplicativos como o nosso aqui! Em qualquer caso, ninguém vai atacar nosso pequeno aplicativo, mas quero que você saiba de tudo isso quando estiver construindo um dApp que tem milhões de usuários!
 
@@ -75,9 +75,9 @@ string memory finalSvg = string(abi.encodePacked(baseSvg, first, second, third, 
 😎 Executando!
 ------------------------
 
-Depois de escrever tudo, vá em frente e execute-o usando `npx hardhat run scripts/run.js`. Verifique a saída produzido por `console.log(finalSvg);`.
+Depois de escrever tudo, vá em frente e execute-o usando `npx hardhat run scripts/run.js`. Verifique a saída produzida por `console.log(finalSvg);`.
 
-Isto é oque aparece no meu terminal.
+Isto é o que aparece no meu terminal.
 
 ```plaintext
 Meu contrato de NFT! Tchu-hu

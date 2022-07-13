@@ -36,7 +36,7 @@ Então, adicione esta linha no final da função `makeAnEpicNFT`, então, esta �
 
 `emit NewEpicNFTMinted(msg.sender, newItemId);`
 
-Em um nível básico, os `Events` são mensagens que nossos contratos emitem e que podemos capturar em nosso cliente em tempo real. No caso a nossa NFT, só porque nossa transação é minerada **não significa que a transação resultou na cunhagem de NFT**. Pode ter sido apenas um erro!! Mesmo se houvesse um erro, ainda teria sido extraído no processo.
+Em um nível básico, os `Events` são mensagens que nossos contratos emitem e que podemos capturar em nosso cliente em tempo real. No caso, o nosso NFT, só porque nossa transação é minerada **não significa que a transação resultou na cunhagem de NFT**. Pode ter sido apenas um erro!! Mesmo se houvesse um erro, ainda teria sido extraído no processo.
 
 É por isso que uso os `Events` aqui. Sou capaz de emitir `(emit)` um evento no contrato e, em seguida, capturar esse evento no front-end. Observe que no meu `event` envio o `newItemId` que precisamos no frontend, certo :)?
 

@@ -1,8 +1,8 @@
 ## 💚 Mintar NFT pelo nosso site
 
-Incrível. Nós conseguimos. Fizemos deploy do nosso site. Fizemos deploy do nosso contrato. Conectamos nossa carteira. **Agora nós precisamos chamar o nosso contrato através do web app** usando as credenciais que temos acesso com a Metamask!
+Incrível. Nós conseguimos. Fizemos deploy do nosso site. Fizemos deploy do nosso contrato. Conectamos nossa carteira. **Agora nós precisamos chamar o nosso contrato através do web app** usando as credenciais que temos acesso com a MetaMask!
 
-Então, lembre-se, nosso contrato tem a função `makeAnEpicNFT` o qual vai cunhar (mint) a NFT. Nós precisamos chamar essa função através do web app. Vá em frente e adicione a função a seguir abaixo da função `connectWallet`.
+Então, lembre-se, nosso contrato tem a função `makeAnEpicNFT` o qual vai cunhar (mint) o NFT. Nós precisamos chamar essa função através do web app. Vá em frente e adicione a função a seguir abaixo da função `connectWallet`.
 
 ```javascript
 const askContractToMintNft = async () => {
@@ -42,7 +42,7 @@ const signer = provider.getSigner();
 
 `ethers` é uma library que ajuda o nosso frontend a falar com o nosso contrato. Lembre-se de importar a lib no início usando `import { ethers } from "ethers";`.
 
-Um "Provider" (provedor) é o que usamos para falar com os nodes do Ethereum. Lembra como nós estávamos usando o Alchemy para fazer **deploy**? Bom, nesse caso nós usamos os nodes que A Metamask provém no background para mandar/receber dados do nosso contrato já implantado.
+Um "Provider" (provedor) é o que usamos para falar com os nodes do Ethereum. Lembra como nós estávamos usando o Alchemy para fazer **deploy**? Bom, nesse caso nós usamos os nodes que a Metamask provém no background para mandar/receber dados do nosso contrato já implantado.
 
 [Aqui está](https://docs.ethers.io/v5/api/signer/#signers) um link explicando o que um signer é (linha 2).
 
@@ -109,15 +109,15 @@ Agora que você tem o seu arquivo com todo o conteúdo ABI pronto, é hora de im
 import myEpicNft from "./utils/MyEpicNFT.json";
 ```
 
-E estamos prontos. Não deverá ter mais erros. Você está pronto para mintar algumas NFTs!
+E estamos prontos. Não deverá ter mais erros. Você está pronto para mintar alguns NFTs!
 
-Tudo que você precisa fazer aqui é clicar em "Mint NFT", pagar a gás (usando seu fake ETH), esperar a transação ser minerada e bam! Seu NFT deve aparecer no OpenSea ou imediatamente ou dentro de 5 - 15 minutos no máximo.
+Tudo que você precisa fazer aqui é clicar em "Cunhar NFT", pagar o gás (usando seu fake ETH), esperar a transação ser minerada e bam! Seu NFT deve aparecer no OpenSea ou imediatamente ou dentro de 5 - 15 minutos no máximo.
 
 Você deve estar se perguntando o que é gás. Eu não vou responder isso aqui. Mas você pode começar a pesquisar [aqui](https://solidity.web3dev.com.br/exemplos/linguagem-v0.8.3/gas/) ;).
 
 ## 🤩 Teste
 
-Você deve estar pronto para mintar uma NFT direto do seu site agora. **Isso é épico!!** Isso é basicamente como todos esses sites de mintar NFT funcionam, e você acabou de fazer você mesmo :). Corre lá e posta em todas as redes sociais esse seu feito!!!
+Você deve estar pronto para mintar um NFT direto do seu site agora. **Isso é épico!!** Isso é basicamente como todos esses sites de mintar NFT funcionam, e você acabou de fazer você mesmo :). Corre lá e posta em todas as redes sociais esse seu feito!!!
 
 Eu testei todo o código no vídeo ABI que linkei acima. Tenha certeza de assisti-lo. No vídeo eu apresento coisas super importantes sobre o que fazer quando você **muda** o contrato. Porque o seu contrato é permanente, mudanças requerem fazer outro deploy, atualizar o endereço no frontend, e finalmente atualizar o arquivo ABI no frontend
 

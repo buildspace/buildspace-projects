@@ -6,7 +6,7 @@ Você conseguiu — isso aê! Seja bem vindo :). Meu nome é danicuki e eu serei
 Algumas coisas para voce fazer antes de prosseguir:
 
 1. **Conecte o seu Discord na dashboard do projeto.** Todas as coisas boas estão acontecendo em uma sala secreta do projeto no Discord, que você só terá acesso se conectar o seu Discord.
-2. **Conecte a sua carteira Ethereum na dashboard do projeto.** Se você não tem uma carteira para interagir com o dApps, você pode instalar a Metamask de graça agora mesmo. Sem uma carteira, você não conseguirá fazer o projeto!
+2. **Conecte a sua carteira Ethereum na dashboard do projeto.** Se você não tem uma carteira para interagir com o dApps, você pode instalar a MetaMask de graça agora mesmo. Sem uma carteira, você não conseguirá fazer o projeto!
 3. **Não deixe de assistir ao kick-off (pontapé) do projeto**. Se você faltar, não se preocupe, não é necessário! Ficará gravado e você poderá assistir pelo nosso canal no Twitch ou YouTube. O link do vídeo ficará no Discord também.
 
 🚀 Isso vai ser incrível

@@ -40,7 +40,7 @@ Aqui está nosso SVG novamente.
 </svg>
 ```
 
-Depois, precisamos de algum jeito pegar os dados das nossas NFT sem hospedar em algum lugar como o imgur (que pode cair ou morrer a qualquer momento!). Vá até [esse](https://www.utilities-online.info/base64) site. Cole todo o código SVG acima e clique em "encode" para pegar seu SVG base 64 encoded. Agora, está pronto para alguma mágica? Abra uma nova guia. E no URL, digite isso:
+Depois, precisamos de algum jeito pegar os dados dos nossos NFT sem hospedar em algum lugar como o Imgur (que pode cair ou morrer a qualquer momento!). Vá até [esse](https://www.utilities-online.info/base64) site. Cole todo o código SVG acima e clique em "encode" para pegar seu SVG base 64 encoded. Agora, está pronto para alguma mágica? Abra uma nova guia. E no URL, digite isso:
 
 ```plaintext
 data:image/svg+xml;base64,INSIRA_SEU_SVG_ENCODADO_EM_BASE64_AQUI
@@ -64,7 +64,7 @@ Ok, **épico**. Essa é uma maneira de manter os dados da nossa imagem NFT perma
 
 Lembra dos metadados JSON?
 
-Então, eu mudei um pouco para nossas NFTs de três palavras :). Mesma coisa! Um nome, descrição e imagem. Mas agora, ao invés de apontar para um link imgur, vamos apontar para a nossa string codificada com base64.
+Então, eu mudei um pouco para nossos NFTs de três palavras :). Mesma coisa! Um nome, descrição e imagem. Mas agora, ao invés de apontar para um link imgur, vamos apontar para a nossa string codificada com base64.
 
 ```json
 {
@@ -126,13 +126,13 @@ Por exemplo, o meu se parece com:
 _setTokenURI(newItemId, "data:application/json;base64,ewogICJuYW1lIjogIlR1YmFpbmFNb3F1ZWNhTWFyYWN1amEiLAogICJkZXNjcmlwdGlvbiI6ICJVbSBORlQgc3VwZXIgZmFtb3NvIGRlIHVtYSBjb2xlw6fDo28gZGUgcXVhZHJhZG9zIiwKICAiaW1hZ2UiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWndvZ0lIaHRiRzV6UFNKb2RIUndPaTh2ZDNkM0xuY3pMbTl5Wnk4eU1EQXdMM04yWnlJS0lDQndjbVZ6WlhKMlpVRnpjR1ZqZEZKaGRHbHZQU0o0VFdsdVdVMXBiaUJ0WldWMElnb2dJSFpwWlhkQ2IzZzlJakFnTUNBek5UQWdNelV3SWdvK0NpQWdQR1JsWm5NK0NpQWdJQ0E4YkdsdVpXRnlSM0poWkdsbGJuUWdhV1E5SWtkeVlXUnBaVzUwTVNJK0NpQWdJQ0FnSUR4emRHOXdJR05zWVhOelBTSnpkRzl3TVNJZ2IyWm1jMlYwUFNJd0pTSXZQZ29nSUNBZ0lDQThjM1J2Y0NCamJHRnpjejBpYzNSdmNESWlJRzltWm5ObGREMGlOVEFsSWk4K0NpQWdJQ0FnSUR4emRHOXdJR05zWVhOelBTSnpkRzl3TXlJZ2IyWm1jMlYwUFNJeE1EQWxJaTgrQ2lBZ0lDQThMMnhwYm1WaGNrZHlZV1JwWlc1MFBnb2dJRHd2WkdWbWN6NEtJQ0E4YzNSNWJHVStDaUFnSUNBdVltRnpaU0I3Q2lBZ0lDQWdJR1pwYkd3NklHSnNkV1U3Q2lBZ0lDQWdJR1p2Ym5RdFptRnRhV3g1T2lCelpYSnBaanNLSUNBZ0lDQWdabTl1ZEMxemFYcGxPaUF5TUhCNE93b2dJQ0FnSUNCamIyeHZjam9nSTBaR1Jqc0tJQ0FnSUgwS0lDQWdJQzV6ZEc5d01TQjdJSE4wYjNBdFkyOXNiM0k2SUdkeVpXVnVPeUI5Q2lBZ0lDQXVjM1J2Y0RJZ2V5QnpkRzl3TFdOdmJHOXlPaUIzYUdsMFpUc2djM1J2Y0MxdmNHRmphWFI1T2lBd095QjlDaUFnSUNBdWMzUnZjRE1nZXlCemRHOXdMV052Ykc5eU9pQjVaV3hzYjNjN0lIMEtJQ0FnSUFvZ0lEd3ZjM1I1YkdVK0NpQWdQSEpsWTNRZ2QybGtkR2c5SWpFd01DVWlJR2hsYVdkb2REMGlNVEF3SlNJZ1ptbHNiRDBpZFhKc0tDTkhjbUZrYVdWdWRERXBJaUF2UGdvZ0lEeDBaWGgwQ2lBZ0lDQjRQU0kxTUNVaUNpQWdJQ0I1UFNJMU1DVWlDaUFnSUNCamJHRnpjejBpWW1GelpTSUtJQ0FnSUdSdmJXbHVZVzUwTFdKaGMyVnNhVzVsUFNKdGFXUmtiR1VpQ2lBZ0lDQjBaWGgwTFdGdVkyaHZjajBpYldsa1pHeGxJZ29nSUQ0S0lDQWdJRlIxWW1GcGJtRk5iM0YxWldOaFRXRnlZV04xYW1FS0lDQThMM1JsZUhRK0Nqd3ZjM1puUGc9PSIKfQo=")
 ```
 
-Finalmente, vamos fazer deploy do nosso contrato atualizado, mintar a NFT, e ter certeza que funciona corretamente no OpenSea! Faça o deploy usando o mesmo comando. Eu mudei o meu script de deploy para mintar uma NFT ao invés de duas, sinta-se livre para fazer o mesmo!
+Finalmente, vamos fazer deploy do nosso contrato atualizado, mintar o NFT, e ter certeza que funciona corretamente no OpenSea! Faça o deploy usando o mesmo comando. Eu mudei o meu script de deploy para mintar um NFT ao invés de dois, sinta-se livre para fazer o mesmo!
 
 ```bash
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
 
-Depois, a mesma coisa de antes, espere um minuto ou dois, pegue o endereço do contrato, procure no [https://testnets.opensea.io/](https://testnets.opensea.io/) e você deve ver sua NFT ali :). De novo, não clique "Enter" quando estiver procurando -- você deve clicar na coleção quando aparecer na barra de pesquisa.
+Depois, a mesma coisa de antes, espere um minuto ou dois, pegue o endereço do contrato, procure no [https://testnets.opensea.io/](https://testnets.opensea.io/) e você deve ver seu NFT ali :). De novo, não clique "Enter" quando estiver procurando -- você deve clicar na coleção quando aparecer na barra de pesquisa.
 
 Nota: lembre de usar `https://rinkeby.rarible.com/token/INSIRA_O_ENDEREÇO_DO_CONTRATO_AQUI:INSIRA_O_TOKEN_ID_AQUI` se o OpenSea estiver muito lento.
 

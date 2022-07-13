@@ -4,7 +4,7 @@ Então, para o nosso site conseguir falar com a blockchain, precisamos de alguma
 
 Vá para o Replit e vá para  `App.js` dentro de `src`, aqui é onde vamos estar fazendo todo trabalho.
 
-Se estivermos logados na Metamask, um objeto especial chamado  `ethereum`  será injetado dentro da nossa aba, que tem alguns métodos mágicos. Vamos checar se temos isso primeiro.
+Se estivermos logados na MetaMask, um objeto especial chamado  `ethereum`  será injetado dentro da nossa aba, que tem alguns métodos mágicos. Vamos checar se temos isso primeiro.
 
 ```javascript
 import React, { useEffect } from "react";
@@ -73,7 +73,7 @@ Então quando você rodar isso, você deve ver aquela linha "Temos o objeto ethe
 
 Depois, nós precisamos checar se estamos autorizados mesmo a acessar a carteira do usuário. Uma vez que tivermos acesso a isso, podemos chamar nosso contrato inteligente.
 
-Basicamente, a Metamask não dá as credenciais da carteira para todo website que vamos. Ele apenas dá para sites que foram autorizados. De novo, é como fazer login! Mas, o que estamos fazendo aqui é  **checando se estamos logados.**
+Basicamente, a MetaMask não dá as credenciais da carteira para todo website que vamos. Ele apenas dá para sites que foram autorizados. De novo, é como fazer login! Mas, o que estamos fazendo aqui é  **checando se estamos logados.**
 
 Cheque o código abaixo.
 
@@ -154,7 +154,7 @@ export default App;
 
 ## 🛍 Construir um botão de conecte sua carteira
 
-Quando você rodar o código acima, o console.log deve escrever   `Nenhuma conta autorizada foi encontrada.`. Por quê? Porque nós nunca dissemos explicitamente para o Metamask, _"Ei metamask, por favor dê acesso à minha carteira para esse site_.
+Quando você rodar o código acima, o console.log deve escrever   `Nenhuma conta autorizada foi encontrada.`. Por quê? Porque nós nunca dissemos explicitamente para o MetaMask, _"Ei metamask, por favor dê acesso à minha carteira para esse site_.
 
 Precisamos criar um botão  `connectWallet` . No mundo da Web3, conectar a sua carteira é literalmente um botão de Login para o usuário.
 
@@ -196,7 +196,7 @@ const App = () => {
     try {
       const { ethereum } = window;
       if (!ethereum) {
-        alert("Baixe o Metamask!");
+        alert("Baixe a Metamask!");
         return;
       }
       /*
@@ -206,7 +206,7 @@ const App = () => {
         method: "eth_requestAccounts",
       });
       /*
-       * Boom! Isso deve escrever o endereço público uma vez que autorizar o Metamask.
+       * Boom! Isso deve escrever o endereço público uma vez que autorizar a MetaMask.
        */
       console.log("Conectado", accounts[0]);
       setCurrentAccount(accounts[0]);
