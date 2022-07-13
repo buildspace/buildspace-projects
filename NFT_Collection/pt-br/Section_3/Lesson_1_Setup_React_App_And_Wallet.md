@@ -14,7 +14,7 @@ Você irá magicamente clonar meu repositório e a IDE inteira no seu navegador 
 
 **Nota: Ao longo desse projeto, você pode perceber que nós estamos referenciando arquivos `.js`. No Replit, se você estiver criando novos arquivos JavaScript, você vai precisar usar a extensão `.jsx`! Replit tem algumas performances chiques que impedem que você use `.jsx` na extensão de arquivo :).**
 
-## 🦊 Configurar o MetaMask
+## 🦊 Configurar a MetaMask
 
 Incrível, nós temos um projeto em React **já feito o deploy** que podemos trabalhar facilmente. Isso foi simples :).
 

@@ -22,7 +22,7 @@ const App = () => {
      */
     const { ethereum } = window;
     if (!ethereum) {
-      console.log("Certifique-se que você tem metamask instalado!");
+      console.log("Certifique-se que você tem a MetaMask instalada!");
       return;
     } else {
       console.log("Temos o objeto ethereum!", ethereum);
@@ -97,7 +97,7 @@ const App = () => {
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
     if (!ethereum) {
-      console.log("Certifique-se que você tem metamask instalado!")
+      console.log("Certifique-se que você tem a MetaMask instalada!")
       return;
     } else {
       console.log("Temos o objeto ethereum!", ethereum)
@@ -154,7 +154,7 @@ export default App;
 
 ## 🛍 Construir um botão de conecte sua carteira
 
-Quando você rodar o código acima, o console.log deve escrever   `Nenhuma conta autorizada foi encontrada.`. Por quê? Porque nós nunca dissemos explicitamente para o MetaMask, _"Ei metamask, por favor dê acesso à minha carteira para esse site_.
+Quando você rodar o código acima, o console.log deve escrever   `Nenhuma conta autorizada foi encontrada.`. Por quê? Porque nós nunca dissemos explicitamente para a MetaMask, _"Ei metamask, por favor dê acesso à minha carteira para esse site_.
 
 Precisamos criar um botão  `connectWallet` . No mundo da Web3, conectar a sua carteira é literalmente um botão de Login para o usuário.
 
@@ -175,7 +175,7 @@ const App = () => {
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
     if (!ethereum) {
-      console.log("Certifique-se que você tem metamask instalado!")
+      console.log("Certifique-se que você tem a MetaMask instalada!")
       return;
     } else {
       console.log("Temos o objeto ethereum!", ethereum)
@@ -196,7 +196,7 @@ const App = () => {
     try {
       const { ethereum } = window;
       if (!ethereum) {
-        alert("Baixe a Metamask!");
+        alert("Baixe a MetaMask!");
         return;
       }
       /*
