@@ -8,22 +8,22 @@ Nós vamos usar essa coisa chamada [Replit](https://replit.com/~)! É uma IDE b
 
 Faça uma conta no Replit antes de continuar.
 
-Eu já criei um projeto react básico que você pode fazer **fork** no Replit. **Simplesmente vá [REVIEW](https://replit.com/@NachoIacovino/Buildspace-DAO-Starter), e perto da direita você vai ver o botão "Fork".** cheque se você está logado, e então clique no botão.
+Eu já criei um projeto react básico que você pode fazer **fork** no Replit. **Simplesmente vá [aqui](https://replit.com/@DanielCukier/dao-app-web3dev), e perto da direita você vai ver o botão "Fork".** cheque se você está logado, e então clique no botão.
 
 Você vai magicamente clonar meu repositório e vai ter uma IDE completa no seu navegador para trabalhar com o código. Uma vez que terminar de carregar e mostrar algum código, clique em "run" no topo e você está pronto.
 
 Aqui está um vídeo que eu fiz explicando sobre o Replit em um projeto passado:
 
-[REVIEW](https://www.loom.com/share/4578eb9fba1243499a6913d214b21dc3)
+[Aqui](https://www.loom.com/share/4578eb9fba1243499a6913d214b21dc3)
 
 
 ### 👩‍💻 Quer trabalhar localmente? Pegue o código.
 
 Se você não quer usar o Replit, não precisa.
 
-Começe indo [REVIEW](https://github.com/buildspace/buildspace-dao-starter) onde você acha o código do repositório. A partir disso você vai querer clicar no botão "Fork" no topo direito da página:
+Começe indo [aqui](https://github.com/w3b3d3v/dao-app-web3dev) onde você acha o código do repositório. A partir disso você vai querer clicar no botão "Fork" no topo direito da página:
 
-![REVIEW](https://i.imgur.com/OnOIO2A.png)
+![Fork](https://i.imgur.com/OnOIO2A.png)
 
 Perfeito! Quando você faz fork desse repositório, você está criando uma cópia idêntica dele que fica no seu perfil do Github. Agora você tem sua própria versão desse código que você pode editar para deixar do seu jeito.
 
@@ -33,7 +33,7 @@ Vá para o seu terminal e `cd` na pasta em que seu projeto vai ficar. Por exempl
 
 ```plaintext
 git clone SEU_LINK_DO_FORK
-REVIEW cd buildspace-dao-starter 
+REVIEW cd dao-app-web3dev 
 ```
 
 É isto! A partir daí você pode rodar:

@@ -3,7 +3,7 @@
 
 O que é uma DAO? Hmmm.
 
-Existem várias explicações e definições diferentes sobre o que é uma DAO. Eu pesquisei no google e aqui diz, "Uma Organização Autônoma Descentralizada (DAO) é uma entidade sem liderança central. Decisões são tomadas de baixo para cima, governadas por uma comunidade organizada a partir de um conjunto de regras validado por uma blockchain".
+Existem várias explicações e definições diferentes sobre o que é uma DAO. Eu pesquisei no google e aqui diz, "Uma Organização Autônoma Descentralizada (DAO - Descentralized Authonomous Organization) é uma entidade sem liderança central. Decisões são tomadas de baixo para cima, governadas por uma comunidade organizada a partir de um conjunto de regras validado por uma blockchain".
 
 Eu sinto que mesmo depois de ler isso, eu ainda não entendo o que diabos é uma DAO. Em outras palavras, uma DAO é uma comunidade de pessoas com uma conta de banco compartilhada. Decisões sobre como essa conta de banco é usada são tomadas por votações em diferentes propostas que os membros criam. Quando uma proposta recebe votos suficientes, é executada on-chain!
 
@@ -23,7 +23,7 @@ Vamos imaginar YC como uma DAO, nós vamos chamá-la de YCDAO.
 
 Investidores poderiam colocar dinheiro na YCDAO e receber de volta tokens $YCDAO. O dinheiro ficaria numa tesouraria on-chain que todos poderiam ver. A tesouraria é simplesmente uma conta bancária compartilhada.
 
-Por exemplo, se eu colocar $5 na YC DAO eu posso receber 5 tokens $YCDAO  de volta. Se eu colocar $100.000 eu posso receber de volta 100.000 tokens $YCDAO. Isso depende de como os criadores fizeram as regras.
+Por exemplo, se eu colocar $5 na YC DAO eu posso receber 5 tokens $YCDAO de volta. Se eu colocar $100.000 eu posso receber de volta 100.000 tokens $YCDAO. Isso depende de como os criadores fizeram as regras.
 
 Legal, agora você tem alguns $YCDAO. Membros da YCDAO com o token agora podem votar em propostas de diferentes companhias aplicando para a YCDAO e decidir investir ou não naquela empresa.
 
@@ -45,7 +45,7 @@ Se você ainda não entendeu, não se preocupe. **Vamos começar a codar e criar
 
 ### 🚨 Relatório de Progresso
 
-*Por favor faça isso ou Danicuki vai ficar triste :(*
+*Por favor faça isso ou danicuki vai ficar triste :(*
 
 Ei! em `#progresso` diga pra gente que tipo de DAO você vai construir nesse projeto. Quanto mais divertido, melhor. Se você não sabe ainda, jogue qualquer coisa lá! Exemplos:
 
@@ -53,10 +53,10 @@ Ei! em `#progresso` diga pra gente que tipo de DAO você vai construir nesse pro
 
 **PizzaDAO** - uma DAO de caridade focada em doar pizzas. Membros podem doar ETH para a caridade e receber $PIZZA em retorno.
 
-**DanicukiDAO** - uma DAO para os fãs do Danicuki que recebem $DACK sempre que tweetam coisas boas sobre ele.
+**DanicukiDAO** - uma DAO para os fãs do danicuki que recebem $DACK sempre que tweetam coisas boas sobre ele.
 
 **ArtistDAO** - uma DAO de artistas que fazem eventos e workshops para artistas de todos os níveis. Sempre que um membro organiza um evento ou um workshop ele recebe $ARTIST.
 
-**PakistanDAO** - uma DAO para os membros da comunidade paquistanesa em startups para dar apoio entre si. Membros recebem $PAKISTAN sempre que eles geram valor para outros fundadores, por exemplo dando-lhes conselhos, testando seus produtos, ou os apoiando em redes sociais.
+**TimaoDAO** - uma DAO para os membros da torcida Corinthiana organizarem caravanas para assistir aos jogos do seu time. Membros recebem $TIMAO sempre que eles geram valor para outros fundadores, por exemplo, indo aos jogos ou treinamentos. Os membros podem ter acesso exclusivo às coletivas e vestiários dos times, ou camarotes em jogos amistosos.
 
 Por favor não copie os exemplos hehe. Seja criativo. **Eu realmente quero que você pense bem sobre algo que te faça sorrir ou algo que seus amigos achariam engraçado lol.**
