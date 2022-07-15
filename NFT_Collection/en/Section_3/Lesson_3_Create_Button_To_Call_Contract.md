@@ -33,7 +33,7 @@ const askContractToMintNft = async () => {
 }
 ```
 
-This will throw some errors. Don't worry! We'll fix it in a bit. Lets step through the code a bit.
+This will throw some errors. Don't worry! We'll fix it in a bit. Let's step through the code a bit.
 
 ```javascript
 const provider = new ethers.providers.Web3Provider(ethereum);
@@ -66,7 +66,7 @@ console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.ha
 
 The rest of the code should already make sense. It looks sorta like the code we deployed with :)! We call our contract using `makeAnEpicNFT`, wait for it to be mined, and then link the Etherscan URL!
 
-Finally, we'll want to call this function when someone clicks the "Mint NFT" button.
+Finally, we'll want to call this function when someone clicks the "Mint NFT" button. Update the button element with `askContractToMintNft` for the `onClick` handler.
 
 ```javascript
 return (
@@ -96,7 +96,7 @@ The contents of the ABI file can be found in a fancy JSON file in your hardhat p
 
 `artifacts/contracts/MyEpicNFT.sol/MyEpicNFT.json`
 
-So, the question becomes how do we get this JSON file into our frontend? Just going to copy-paste.
+So, the question becomes how do we get this JSON file into our frontend? We're just going to copy and paste it!
 
 Copy the contents from your `MyEpicNFT.json` and then head to your web app. You are going to make a new folder called `utils` under `src`. Under `utils` create a file named `MyEpicNFT.json`. So the full path will look like:
 
@@ -110,9 +110,9 @@ Now that you have your file with all your ABI content ready to go, it's time to 
 import myEpicNft from './utils/MyEpicNFT.json';
 ```
 
-And we're all done. Shouldn't have errors anymore! You're ready to mint some NFTs!
+And we're all done. You shouldn't have errors anymore! You're ready to mint some NFTs!
 
-All you'll need to do from here is click "Mint NFT", pay gas (using your fake ETH), wait for the transaction to be mined, and bam! Your NFT should show up on OpenSea either immediately or within 5-15m max.
+All you'll need to do from here is click "Mint NFT", pay gas (using your fake ETH), wait for the transaction to be mined, and bam! Your NFT should show up on OpenSea either immediately or within 5-15 minutes max.
 
 You may be asking yourself wtf gas is. I'm not going to answer that here. But, you can start researching [here](https://ethereum.org/en/developers/docs/gas/) ;).
 
