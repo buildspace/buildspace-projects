@@ -68,7 +68,7 @@ And that'll actually start an IPFS node on your local machine and retrieve the f
 
 ![Untitled](https://i.imgur.com/tWHtVbO.png)
 
-From here, we just need to update our `tokenURI` function to prepend `ipfs://`. Basically, OpenSea likes when our image URI is structured like this: `ipfs://INSERT_YOUR_CID_HERE`. 
+From here, we just need to update our JSON metadata with the image `ipfs://` URI, add the JSON metadata to IPFS to create the metadata `ipfs://` URI and update our `tokenURI` function to prepend `ipfs://`. Basically, OpenSea likes when our image URI is structured like this: `ipfs://INSERT_YOUR_CID_HERE`. 
 
 Here's what your `_setTokenURI` function should look like:
 ```javascript
