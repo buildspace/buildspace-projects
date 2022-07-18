@@ -57,7 +57,7 @@ Você deve ter por agora os três itens no seu arquivo `.env`!
 Vá para `scripts/1-initialize-sdk.js`.
 
 ```jsx
-import { ThirdwebSDK } from "@3rdweb/sdk";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import ethers from "ethers";
 
 //Importando e configurando nosso arquivo .env para que possamos usar nossas variáveis de ambiente de maneira segura
@@ -66,32 +66,30 @@ dotenv.config();
 
 // Algumas verificações rápidas para ter certeza de que nosso .env está funcionando.
 if (!process.env.PRIVATE_KEY || process.env.PRIVATE_KEY == "") {
-  console.log("🛑 Private key not found.")
+  console.log("🛑 Chave privada não encontrada.")
 }
 
 if (!process.env.ALCHEMY_API_URL || process.env.ALCHEMY_API_URL == "") {
-  console.log("🛑 Alchemy API URL not found.")
+  console.log("🛑 Alchemy API não encontrada.")
 }
 
 if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS == "") {
-  console.log("🛑 Wallet Address not found.")
+  console.log("🛑 Endereço de carteira não encontrado.")
 }
 
-const sdk = new ThirdwebSDK(
-  new ethers.Wallet(
-    // A chave privada da nossa carteira. SEMPRE MANTENHA ISSO PRIVADO, NÃO COMPARTILHE COM NINGUÉM, adicione no seu arquivo .env e NÃO comite aquele arquivo para o github!
-    process.env.PRIVATE_KEY,
-    // RPC URL, nós usaremos nossa URL da API do Alchemy do nosso arquivo .env.
-    ethers.getDefaultProvider(process.env.ALCHEMY_API_URL),
-  ),
-);
+// RPC URL, nós usaremos nossa URL da API do Alchemy do nosso arquivo .env.
+const provider = new ethers.providers.JsonRpcProvider(process.env.ALCHEMY_API_URL);
+
+// A chave privada da nossa carteira. SEMPRE MANTENHA ISSO PRIVADO, NÃO COMPARTILHE COM NINGUÉM, adicione no seu arquivo .env e NÃO comite aquele arquivo para o github!
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+const sdk = new ThirdwebSDK(wallet);
 
 (async () => {
   try {
-    const apps = await sdk.getApps();
-    console.log("Your app address is:", apps[0].address);
+    const address = await sdk.getSigner().getAddress();
+    console.log("👋 SDK inicializado pelo endereço:", address)
   } catch (err) {
-    console.error("Failed to get apps from the sdk", err);
+    console.error("Falha ao buscar apps no sdk", err);
     process.exit(1);
   }
 })()
@@ -107,11 +105,11 @@ Nós também estamos rodando isto:
 ```jsx
 (async () => {
   try {
-    const apps = await sdk.getApps();
-    console.log("Your app address is:", apps[0].address);
+    const address = await sdk.getSigner().getAddress()
+    console.log("👋 SDK inicializado pelo endereço:", address)
   } catch (err) {
-    console.error("Failed to get apps from the sdk", err);
-    process.exit(1);
+    console.error("Falha ao buscar apps no sdk", err)
+    process.exit(1)
   }
 })()
 ```
@@ -124,7 +122,10 @@ Antes de executar a função, certifique-se de que você tem o Node 12+ instalad
 node -v
 ```
 
-*Nota: se você está no Replit você pode rodar scprits pelo shell que é dado*
+*Nota: se você está no Replit você pode rodar scprits pelo shell:*
+```bash
+npm init -y && npm i --save-dev node@17 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH
+```
 
 Se você tem uma versão antiga do Node, você pode atualizá-lo [aqui](https://nodejs.org/en/). (Baixe a versão LTS) Vamos executar! Vá para o seu terminal e cole o seguinte comando;
 
@@ -135,8 +136,8 @@ node scripts/1-initialize-sdk.js
 Aqui está o que eu recebo quando rodo o script.
 
 ```plaintext
-web3dev-dao-starter % node scripts/1-initialize-sdk.js
-👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
+$ node scripts/1-initialize-sdk.js
+👋 SDK inicializado pelo endereço: 0xf9aD3D930AB5df972558636A2B8749e772aC9297
 ```
 
 *Nota: você talvez veja alguns avisos aleatórios tipo `ExperimentalWarning`, apenas certifique-se de que seu endereço está sendo impresso!*
@@ -154,81 +155,84 @@ O que nós vamos fazer agora é criar + fazer deploy de um contrato ERC-1155 par
 Vá para `scripts/2-deploy-drop.js` e adicione o código abaixo: 
 
 ```jsx
-import { ethers } from "ethers";
+import { AddressZero } from "@ethersproject/constants";
 import sdk from "./1-initialize-sdk.js";
 import { readFileSync } from "fs";
 
-const app = sdk.getAppModule("INSIRA_SEU_ENDEREÇO_AQUI");
-
 (async () => {
   try {
-    const bundleDropModule = await app.deployBundleDropModule({
+    const editionDropAddress = await sdk.deployer.deployEditionDrop({
       // O nome da coleção, ex. CryptoPunks
-      name: "NarutoDAO Membership",
+      name: "Membro da MTBDAO",
       // Uma descrição para a coleção.
-      description: "A DAO for fans of Naruto.",
+      description: "A DAO dos pedaleiros de montanha",
       // Uma imagem para a coleção que vai aparecer no OpenSea.
-      image: readFileSync("scripts/assets/naruto.png"),
+      image: readFileSync("scripts/assets/mtb.png"),
       // Nós precisamos passar o endereço da pessoa que vai estar recebendo os rendimentos das vendas dos nfts do módulo.
       // Nós estamos planejando não cobrar as pessoas pelo drop, então passaremos o endereço 0x0
       // você pode configurar isso para sua própria carteira se você quiser cobrar pelo drop.
-      primarySaleRecipientAddress: ethers.constants.AddressZero,
+      primary_sale_recipient: AddressZero,
     });
+
+    // essa inicialização retorna o endereço do nosso contrato
+    // usamos para inicializar o contrato no sdk
+    const editionDrop = sdk.getEditionDrop(editionDropAddress);
+
+    // com isso, temos os metadados no nosso contrato
+    const metadata = await editionDrop.metadata.get();
     
     console.log(
-      "✅ Successfully deployed bundleDrop module, address:",
-      bundleDropModule.address,
+      "✅ Contrato editionDrop implantado com sucesso, endereço:",
+      editionDropAddress,
     );
     console.log(
-      "✅ bundleDrop metadata:",
-      await bundleDropModule.getMetadata(),
+      "✅ bundleDrop metadados:",
+      metadata,
     );
   } catch (error) {
-    console.log("failed to deploy bundleDrop module", error);
+    console.log("falha ao implantar contrato editionDrop", error);
   }
 })()
 ```
 
-*Nota: certifique-se de mudar `INSIRA_SEU_ENDEREÇO_AQUI` para o endereço impresso por `1-initialize-sdk.js`.*
-
 Um scprit bem simples!
 
-Nós damos para nossa coleção um `name`,  `description` e `primarySaleRecipientAddress`, e `image`. A `image` nós estamos carregando nosso arquivo local então certifique-se de incluir sua imagem dentro de `scripts/assets`. Certifique-se de que é um PNG, JPG, ou GIF e que seja um arquivo local por agora - isso não vai funcionar se você usar uma link da internet!
+Nós damos para nossa coleção um `name`,  `description` e `primary_sale_recipient`, e `image`. A `image` nós estamos carregando nosso arquivo local então certifique-se de incluir sua imagem dentro de `scripts/assets`. Certifique-se de que é um PNG, JPG, ou GIF e que seja um arquivo local por agora - isso não vai funcionar se você usar uma link da internet!
 
 Quando eu rodo isso usando `node scripts/2-deploy-drop.js`, eu recebo.
 
 ```plaintext
-web3dev-dao-starter % node scripts/2-deploy-drop.js
-👋 Your app address is: 0xa002D595189bF9D50D5897C64b6e07BE5bdEe9b8
-✅ Successfully deployed bundleDrop module, address: 0x31c70F45060AE0870624Dd9D79A1d8dafC095A5d
-✅ bundleDrop metadata: {
-  metadata: {
-    name: 'NarutoDAO Membership',
-    description: 'A DAO for fans of Naruto.',
-    image: 'https://cloudflare-ipfs.com/ipfs/bafybeicuuhilocc2tskhnvbwjqarsc5k7flfqdr4ifvwxct32vzjmb3sam',
-    primary_sale_recipient_address: '0x0000000000000000000000000000000000000000',
-    uri: 'ipfs://bafkreieti3mpdd3pytt3v6vxbc3rki2ja6qpbblfznmup2tnw5mghrihnu'
-  },
-  address: '0x31c70F45060AE0870624Dd9D79A1d8dafC095A5d',
-  type: 11
+$ node scripts/2-deploy-drop.js
+👋 SDK inicializado pelo endereço: 0xf9aD3D930AB5df972558636A2B8749e772aC9297
+(node:84590) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✅ Contrato editionDrop implantado com sucesso, endereço: 0x828102F33E3Fb4798E71434F94C29fe2a8EeC27F
+✅ bundleDrop metadados: {
+  name: 'Membro da MTBDAO',
+  description: 'A DAO dos pedaleiros de montanha',
+  image: 'https://gateway.ipfscdn.io/ipfs/QmbWpS7akcej1unepzE2ZBJWg8bCjopGxM3em9SpLXejxN/0',
+  seller_fee_basis_points: 0,
+  fee_recipient: '0x0000000000000000000000000000000000000000',
+  merkle: {},
+  symbol: ''
 }
 ```
 
-Okay, o que acabou de acontecer é muito épico. Duas coisas aconteceram:
+Okay, o que acabou de acontecer é muito lôko. Duas coisas aconteceram:
 
 **Um, nós acabamos de fazer deploy de um contrato [ERC-1155](https://docs.openzeppelin.com/contracts/3.x/erc1155) na rede Rinkeby.** Isso mesmo! Se você for em `https://rinkeby.etherscan.io/` e colar o endereço do módulo `bundleDrop`, você vai ver que você acabou de dar deploy num smart contract! A parte mais legal é que você é o **dono** desse contrato e ele foi feito usando a **sua** carteira. O endereço "From" vai ser o **seu** endereço público.
 
-*Nota: Mantenha o endereço do seu `bundleDrop` por perto, vamos precisar dele mais tarde.*
+*Nota: Mantenha o endereço do seu `editionDrop` por perto, vamos precisar dele mais tarde.*
 
 ![Untitled](https://i.imgur.com/suqHbB4.png)
 
-Bem Épico. Um contrato customizado e lançado usando apenas javascript. Você pode ver o código do smart contract que o thridweb usa [aqui](https://github.com/nftlabs/nftlabs-protocols/blob/main/contracts/LazyNFT.sol).
+Bem Épico. Um contrato customizado e lançado usando apenas javascript. Você pode ver o código do smart contract que o thridweb usa [aqui](https://github.com/thirdweb-dev/contracts/blob/main/contracts/drop/DropERC1155.sol).
 
-**A outra coisa que nós fizemos aqui foi usar o thirdweb para automaticamento fazer o upload e fixar a imagem da nossa coleção no IPFS.** Você vai ver um link que inicia com `https://cloudflare-ipfs.com` impresso. Se você copiar esse link no navegador, você vai ver a imagem do seu NFT sendo recuperada do IFPS via CloudFare!
+**A outra coisa que nós fizemos aqui foi usar o thirdweb para automaticamente fazer o upload e fixar a imagem da nossa coleção no IPFS.** Você vai ver um link que inicia com `https://gateway.ipfscdn.io` impresso. Se você copiar esse link no navegador, você vai ver a imagem do seu NFT sendo recuperada do IFPS via CloudFare!
 
 Você pode até ir para o IFPS diretamente usando a URI `ipfs://` (nota - não vai funcionar no Chrome porque você precisa está rodando um nó IPFS, mas funciona no Brave que faz isso por você!)
 
-*Nota: IPFS é basicamente um sistema de armazenamento descentralizado, leia mais [aqui](https://docs.ipfs.io/concepts/what-is-ipfs/)! (em inglês)*
+*Nota: IPFS é basicamente um sistema de armazenamento descentralizado. Temos vários artigos sobre o tema [nas páginas da comunidade](https://www.web3dev.com.br/t/ipfs) e [vídeos no nosso YouTube](https://www.youtube.com/watch?v=GZCUdnIuZD8&list=PLVX4xVoD65UMJmx0RabEw-Cv0PDxoLWDs)
 
 Se você desenvolveu um smart contract personalizado em Solidity antes, isso é um pouco de explodir cabeças. Nós já temos um contrato lançado na Rinkeby + dados hospedados no IPFS. Louco. Seguindo, nós precisamos de fato criar nossos NFTs!
 

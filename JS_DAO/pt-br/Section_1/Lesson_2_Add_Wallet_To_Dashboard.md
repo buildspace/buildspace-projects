@@ -13,35 +13,26 @@ import './index.css';
 import App from './App';
 
 // Importe o ThirdWeb
-import { ThirdwebWeb3Provider } from '@3rdweb/hooks';
+import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
 
 // Inclua que redes você quer dar suporte.
 // 4 = Rinkeby.
-const supportedChainIds = [4];
+const activeChainId = ChainId.Rinkeby;
 
-// Inclua quais carteiras você quer dar suporte.
-// Nesse caso, nós suportamos a Metamask, que é uma "injected wallet".
-const connectors = {
-  injected: {},
-};
-
-// Por último, envolva o App com o ThirdwebWeb3Provider.
+// Por último, envolva o App com o thirdweb provider.
 ReactDOM.render(
   <React.StrictMode>
-    <ThirdwebWeb3Provider
-      connectors={connectors}
-      supportedChainIds={supportedChainIds}
-    >
+    <ThirdwebProvider desiredChainId={activeChainId}>
       <App />
-    </ThirdwebWeb3Provider>
+    </ThirdwebProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 ```
 
-Bem simples. Nós estamos importando o thirdweb e especificando o `chainId` da rede que estamos trabalhando, que nesse caso é a Rinkeby! Sinta-se a vontade para checar todos os ids [aqui](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/). Então, dentro de `connectors` nós estamos especificando que tipo de carteira damos suporte. Existem vários tipos de carteiras. Carteiras mobile, carteiras injetadas, carteiras em hardware, etc. O Thirdweb faz com que seja fácil dar suporte a todas elas em algumas linhas. Nesse caso, estamos dando suporte apenas para carteiras `injected` o que nos permite usar carteiras baseadas em extensões de navegador, como a Metamask.
+Bem simples. Nós estamos importando o thirdweb e especificando o `chainId` da rede que estamos trabalhando, que nesse caso é a Rinkeby! Sinta-se a vontade para checar todos os ids [aqui](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/). 
 
-Finalmente, estamos envolvendo tudo com `<ThirdwebWeb3Provider>`, esse provedor mantém os dados da carteira do usuário conectado (se ele tiver se conectado ao site antes) e passa para `App`.
+Finalmente, estamos envolvendo tudo com `<ThirdwebProvider>`, esse provedor mantém os dados da carteira do usuário conectado (se ele tiver se conectado ao site antes) e passa para `App`.
 
 *Nota: Se você trabalhou com dapps antes, certifique-se de desconectar sua carteira de [https://localhost:3000](https://localhost:3000) se estiver conectado.*
 
@@ -52,24 +43,22 @@ Se você for para o seu webapp, você verá uma página roxa em branco. Vamos ad
 Vá para `App.jsx`. Adicione o código abaixo.
 
 ```jsx
-import { useEffect, useMemo, useState } from "react";
-
-// importe o thirdweb
-import { useWeb3 } from "@3rdweb/hooks";
+import { useAddress, useMetamask } from '@thirdweb-dev/react';
 
 const App = () => {
   // Use o hook connectWallet que o thirdweb nos dá.
-  const { connectWallet, address, error, provider } = useWeb3();
-  console.log("👋 Address:", address)
+  const address = useAddress();
+  const connectWithMetamask = useMetamask();
+  console.log("👋 Address:", address);
 
   // Esse é o caso em que o usuário ainda não conectou sua carteira
   // ao nosso webapp. Deixe ele chamar connectWallet.
   if (!address) {
     return (
       <div className="landing">
-        <h1>Welcome to NarutoDAO</h1>
-        <button onClick={() => connectWallet("injected")} className="btn-hero">
-          Connect your wallet
+        <h1>Bem-vind@s à MTBDAO - a DAO dos pedaleiros de montanha</h1>
+        <button onClick={connectWithMetamask} className="btn-hero">
+          Conecte sua carteira
         </button>
       </div>
     );
@@ -79,7 +68,7 @@ const App = () => {
   // o que significa que ele conectou sua carteira ao nosso site!
   return (
     <div className="landing">
-      <h1>👀 wallet connected, now what!</h1>
+      <h1>👀 carteira conectada, e agora?!</h1>
     </div>);
 };
 
@@ -90,18 +79,18 @@ Bem fácil! A propósito -- nesse ponto certifique-se de que seu web app está r
 
 Agora, quando você for para o web app e clicar em "Connect your wallet" você vai ver um pop-up da Metamask! Depois de autorizar a sua carteira, você vai ver essa tela:
 
-![Untitled](https://i.imgur.com/oDG9uiz.png)
+![Untitled](https://i.imgur.com/qyxndEk.png)
 
 Boom. Agora se você for para o console, vai ver que ele exibe seu endereço público. Se você atualizar a página aqui, verá que a conexão com a carteira se mantém.
 
 Se você construiu uma conexão com uma carteira no passado, vai perceber como isso foi muito mais fácil com o SDK do thirdweb, por que ele lida com os casos extremos para você (ex. manter o estado da carteria do usuário em uma variável).
 
-A propósito - Aqui eu faço `<h1>Welcome to NarutoDAO</h1>`, por favor faça isso ser seu. Não me copie! Essa é a sua DAO!
+A propósito - Aqui eu faço `<h1>Bem-vind@s à MTBDAO - a DAO dos pedaleiros de montanha</h1>`, por favor faça isso ser seu. Não me copie! Essa é a sua DAO!
 
 *Nota: sinta-se a vontade para [desconectar seu website](https://metamask.zendesk.com/hc/en-us/articles/360059535551-Disconnect-wallet-from-Dapp) da Metamask se você quiser testar o caso em que o usuário ainda não conectou sua carteira.*
 
 ### 🚨 Relatório de Progresso
 
-*Por favor faça isso ou Danicuki vai ficar triste :(*
+*Por favor faça isso ou danicuki vai ficar triste :(*
 
-Poste uma captura de tela em `#progresso` mostrando a página de boas vindas da sua DAO com o botão de conectar na carteira. É melhor que não esteja escito NarutoDAO!
+Poste uma captura de tela em `#progresso` mostrando a página de boas vindas da sua DAO com o botão de conectar na carteira. É melhor que não esteja escito MTBDAO!
