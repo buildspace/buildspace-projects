@@ -46,7 +46,7 @@ Vá em frente e execute `cd` para o diretório em que você deseja trabalhar. Qu
 mkdir meu-portal-tchauzinho
 cd meu-portal-tchauzinho
 npm init -y
-npm install --save-dev hardhat
+npm install --save-dev hardhat@2.9.9
 ```
 
 👏 Comece o projeto de exemplo
