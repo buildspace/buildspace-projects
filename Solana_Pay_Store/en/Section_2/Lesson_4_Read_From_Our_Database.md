@@ -91,7 +91,7 @@ export default function Buy({ itemID }) {
   };
 
   useEffect(() => {
-    // Check if this address already has already purchased this item
+    // Check if this address has already purchased this item
     // If so, fetch the item and set paid to true
     // Async function to avoid blocking the UI
     async function checkPurchased() {
