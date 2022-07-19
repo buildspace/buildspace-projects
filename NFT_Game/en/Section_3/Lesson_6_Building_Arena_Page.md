@@ -386,7 +386,7 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
               setCharacterNFT((prevState) => {
                   return { ...prevState, hp: playerHp };
               });
-            };
+            }
             /*
             * If player isn't ours, update boss Hp only
             */

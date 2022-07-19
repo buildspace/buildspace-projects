@@ -78,7 +78,7 @@ Here's a screenshot of mine:
 
 ![Untitled](https://i.imgur.com/y1ZaYGf.png)
 
-Note: It's **very easy** to mess up here when your encoding + copy-pasting stuff. So, be very careful!!! And double-check everything works. If things are breaking, follow all the steps again!
+Note: It's **very easy** to mess up here when you're encoding + copy-pasting stuff. So, be very careful!!! And double-check everything works. If things are breaking, follow all the steps again!
 
 
 ## 🚀 Change up our contract, deploy

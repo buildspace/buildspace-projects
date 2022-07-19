@@ -26,7 +26,7 @@ Next, let's head to our terminal (Git Bash will not work). Go ahead and `cd` t
 mkdir cool-domains
 cd cool-domains
 npm init -y
-npm install --save-dev hardhat
+npm install --save-dev hardhat@2.9.9
 ```
 
 You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Running `npx audit fix` can break things, so it’s better to just skip it. Google around a bit about these vulnerabilities if you want to know more!

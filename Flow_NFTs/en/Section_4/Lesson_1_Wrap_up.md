@@ -20,15 +20,13 @@ Basically:
 - Deploy.
 - Done.
 
-Note: On Vercel, you will need to add 6th environment variable CI=false. This will make sure our build doesn't fail because of warnings.
+Note: On Vercel, you will need to add an environment variable `CI=false`. This will make sure our build doesn't fail because of warnings.
 
 ![Environment variables](https://i.imgur.com/wn2Uhj4.png)
 
 
 ### 🥞 Careers in Web3
 Tons of people have also gotten full-time jobs at top web3 companies via buildspace. I'm constantly seeing people nail their interviews after they do a few buildspace projects.
-
-![](https://i.imgur.com/CNzLdQc.png)
 
 **People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
 
@@ -39,8 +37,6 @@ I want to quickly go over wtf it means to "work in web3" as an engineer. Do you 
 For example, let's say you're a great frontend engineer. If you finished this project, you have almost everything you need to be a great frontend engineer at a web3 company. For example, the company may say "Hey — pls go and build our NFT display feature" — and you'd already have a solid idea on how to do that :).
 
 I just wanna inspire you to work in web3 lol. This shit is awesome. And it'd be cool if you gave it a shot ;).
-
-Be sure you click "Work" on the top and fill out your profile if you haven't done so already!!! We're partnered w/ some of the best web3 companies in the world (ex. Uniswap, OpenSea, Chainlink, Edge and Node, and more) and they want to hire devs from the buildspace network :). You've already picked up a skill that is actually extremely valuable and companies are paying top dollar for awesome web3 engineers
 
 Check out jobs at Flow [here](https://jobs.flowverse.co/), they're hiring for a bunch of cool roles!
 

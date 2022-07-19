@@ -42,6 +42,6 @@ This is an extremely powerful concept — the idea that any file can be made uni
 
 I don't expect you to fully get it yet. If it makes zero sense, maybe read it again! Just make sure it makes a *tiny bit* of sense before moving on lol. I just want to give you a little bit of base knowledge.
 
-If you have a question you're curious about, feel free to ask it #section-1-help.
+If you have a question you're curious about, feel free to ask it in #section-1-help on Discord.
 
-Usually, I start really understanding stuff when I start coding. So, let set up our local environment and hop into some code :).
+Usually, I start really understanding stuff when I start coding. So, let's set up our local environment and hop into some code :).

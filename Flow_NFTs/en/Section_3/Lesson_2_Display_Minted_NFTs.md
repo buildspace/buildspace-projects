@@ -509,21 +509,6 @@ And here's what it looks like!
 ![](https://hackmd.io/_uploads/rJ3GQD7qc.png)
 
 
-**Lilico!**
-Btw if you're building for Lilico, you should check the users' network. With Blocto we set the network in the fcl config. On Lilico users can change the network themselves. Here's how you can track which network Lilico users switch to:
-```js
-const [network, setNetwork] = useState("");
-
-useEffect(()=>{
-    // This is an event listener for all messages that are sent to the window
-    window.addEventListener("message", d => {
-    // This only works for Lilico testnet to mainnet changes
-      if(d.data.type==='LILICO:NETWORK') setNetwork(d.data.network)
-    })
-  }, [])
-```
-
-You can use the network value to warn the user if they're on the wrong network :D
 
 ### 🚨 Progress report 🚨
 You've come the entire way! WELL DONE!

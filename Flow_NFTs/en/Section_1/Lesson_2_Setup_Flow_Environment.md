@@ -1,7 +1,7 @@
 One of the big things the Flow playground can't do is deploy contracts to the testnet. Time to graduate from the playground to a proper development environment. 
 
 ### 🤠 Install the Cadence VS Code extension
-First, [download and install VS Code](https://code.visualstudio.com/download) if you don't have it already. We're gonna need the Cadence extension which is only available on VS Code.
+First, [download and install VS Code](https://code.visualstudio.com/download) if you don't have it already. We're gonna need the Cadence extension which is officially available for VS Code and unofficialy for the [IntelliJ platform](https://github.com/cadence-tools/cadence-for-intellij-platform#installation).
 
 MacOS/Linux users can install the extension from the marketplace:
 ![](https://hackmd.io/_uploads/HyJKJIdK5.png)
@@ -29,6 +29,11 @@ This will download the older version, navigate into its folder, install the depe
 ![](https://hackmd.io/_uploads/rJ940HuY9.png)
 
 Please note that while the older version runs, it has issues with the emulator. I highly recommend setting up WSL!  
+
+### 🤠 Install the Cadence extension for the IntelliJ platform
+As mentioned, the extension isn't officially supported on IntelliJ. It's also missing some features (at the time of writing), so I'll leave it up to you to decide if you want to use it. I recommend just sticking with VS Code. You can find the IntelliJ version [here](https://github.com/cadence-tools/cadence-for-intellij-platform#installation).
+![](https://user-images.githubusercontent.com/231274/175892621-ac4e8764-36b5-4f4a-b16d-2a214bd0ee0a.png)
+
 
 ### 🎮 Install the Flow CLI
 Next, we're going to install the Flow CLI. This is easy!
@@ -129,7 +134,7 @@ pub contract BottomShot {
     }
 }
 ```
-This contract is pretty straightforward. It lets you create individual NFTs which have just two attributes: the ID and the metadata string. We
+This contract is pretty straightforward. It lets you create individual NFTs which have just two attributes: the ID and the metadata string. 
 
 ```
 self.account.save<@NFT>(<-create NFT(initID: 1), to: /storage/BottomShot1)
