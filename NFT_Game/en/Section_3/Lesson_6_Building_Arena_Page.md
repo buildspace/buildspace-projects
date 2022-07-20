@@ -375,10 +375,6 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
 
             console.log(`AttackComplete: Boss Hp: ${bossHp} Player Hp: ${playerHp}`);
 
-            /*
-            * If player is our own, update both player and boss Hp
-            */
-            if (currentAccount === sender.toLowerCase()) {
 
               setBoss((prevState) => {
                   return { ...prevState, hp: bossHp };
@@ -386,15 +382,6 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
               setCharacterNFT((prevState) => {
                   return { ...prevState, hp: playerHp };
               });
-            }
-            /*
-            * If player isn't ours, update boss Hp only
-            */
-            else {
-              setBoss((prevState) => {
-                  return { ...prevState, hp: bossHp };
-              });
-            }
         }
 
         if (gameContract) {
