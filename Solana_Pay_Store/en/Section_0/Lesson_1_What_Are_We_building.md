@@ -12,7 +12,7 @@ Few action items for you before moving on:
 
 Connect your Discord in the project dashboard. All the good stuff is going to be happening in a secret category in the Discord that you'll only have access to once you connect your Discord.
 Connect your Ethereum wallet on the project dashboard. We'll airdrop you an NFT once you finish this, and if you don't have a wallet connected we won't be able to airdrop it to you!!
-Be sure to attend the live kick-off. If you miss it, no worries. It's not required to attend! The recording will bdise posted in Discord under #info-board.
+Be sure to attend the live kick-off. If you miss it, no worries. It's not required to attend! The recording will be posted in Discord under #info-board.
 
 ### 🛠 The project
 So what will we be building here :)? Here's a little video:
