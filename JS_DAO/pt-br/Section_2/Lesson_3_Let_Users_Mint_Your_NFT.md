@@ -8,26 +8,18 @@ Vamos fazer isso! Vamos atacar o caso #1 primeiro, precisamos detectar se o usu�
 
 ### 🤔 Checando se o usuário tem um NFT de filiação.
 
-Vá para `App.jsx`. Adicione no topo:
+Vá para `App.jsx` e atualize seus imports:
 
 ```jsx
-import { ThirdwebSDK } from "@3rdweb/sdk";
+import { useAddress, useMetamask, useEditionDrop } from '@thirdweb-dev/react';
+import { useState, useEffect } from 'react';
 ```
 
-A partir daí, aqui está o que vamos adicionar:
+A partir daí, abaixo do `console.log("👋 Address:", address);`, vamos adicionar:
 
 ```jsx
-// Nós instaciamos o SDK na rede Rinkeby.
-const sdk = new ThirdwebSDK("rinkeby");
-
-// Nós podemos pegar uma referência para o nosso contrato ERC-1155.
-const bundleDropModule = sdk.getBundleDropModule(
-  "INSIRA_O_ENDEREÇO_DO_BUNDLE_DROP",
-);
-
-const App = () => {
-  const { connectWallet, address, error, provider } = useWeb3();
-  console.log("👋 Address:", address)
+  // inicializar o contrato editionDrop
+  const editionDrop = useEditionDrop("INSIRA_O_ENDEREÇO_DO_BUNDLE_DROP");
 
   // Variável de estado para sabermos se o usuário tem nosso NFT.
   const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
@@ -38,136 +30,118 @@ const App = () => {
       return;
     }
     
-    // Veja se o usuário tem o NFT usando bundleDropModule.balanceOf
-    return bundleDropModule
-      .balanceOf(address, "0")
-      .then((balance) => {
-        // Se o saldo for maior do que 0, ele tem nosso NFT!
-        if (balance.gt(0)) {
-          setHasClaimedNFT(true);
-          console.log("🌟 this user has a membership NFT!")
-        } else {
-          setHasClaimedNFT(false);
-          console.log("😭 this user doesn't have a membership NFT.")
-        }
-      })
-      .catch((error) => {
+    const checkBalance = async () => {
+    try {
+      const balance = await editionDrop.balanceOf(address, 0);
+      // Se o saldo for maior do que 0, ele tem nosso NFT!
+      if (balance.gt(0)) {
+        setHasClaimedNFT(true);
+        console.log("🌟 esse usuário tem o NFT de membro!");
+      } else {
         setHasClaimedNFT(false);
-        console.error("failed to nft balance", error);
-      });
-  }, [address]);
+        console.log("😭 esse usuário NÃO tem o NFT de membro.");
+      }
+    } catch (error) {
+      setHasClaimedNFT(false);
+      console.error("Falha ao ler saldo", error);
+    }
+  };
+  checkBalance();
+  }, [address, editionDrop]);
 
   // ... inclua todo o seu outro código que já estava abaixo.
 ```
 
-Nós dizemos para o thirdweb que nós queremos estar na Rinkeby apenas usando `new ThirdwebSDK("rinkeby")`. Então, nós criamos o `bundleDropModule` e tudo o que nós precisamos é do endereço do nosso contrato ERC-1155! Quando fazemos isso, o thirdweb nos dá um pequeno objeto que podemos facilmente usar para interagir com o nosso contrato.
+Primeiro nós inicializados mo contrato editionDrop.
 
 A partir daí, nós usamos `bundleDropModule.balanceOf(address, "0")` para checar se o usuário tem o nosso NFT. Isso vai na verdade requisitar os dados ao nosso contrato que está na blockchain. Por que nós usamos `0`? Bem, se você se lembra o `0` é o tokenId do nosso NFT de filiação. Então aqui estamos perguntando ao nosso contrato, "Ei, esse usuário é dono de um token com o id 0?".
 
 Quando você atualizar a página, verá algo como isso aqui:
 
-![Untitled](https://i.imgur.com/m6e1sJb.png)
+![Untitled](https://i.imgur.com/QiWJs3H.png)
 
-Perfeito! Nós recebemos "esse usuário não tem um NFT de filiação". Vamos criar um botão que permite o usuário cunhar um.
+Perfeito! Nós recebemos "esse usuário NÃO tem o NFT de membro". Vamos criar um botão que permite o usuário cunhar um NFT.
 
 ### ✨ Construa um botão "Mint NFT".
 
 Vamos fazer isso! Volte para `App.jsx`. Eu coloquei alguns comentários nas linhas que eu adicionei:
 
 ```javascript
-import { useEffect, useMemo, useState } from "react";
-
-import { useWeb3 } from "@3rdweb/hooks";
-import { ThirdwebSDK } from "@3rdweb/sdk";
-
-const sdk = new ThirdwebSDK("rinkeby");
-
-const bundleDropModule = sdk.getBundleDropModule(
-  "INSIRA_O_ENDEREÇO_DO_BUNDLE_DROP",
-);
+import { useAddress, useMetamask, useEditionDrop } from '@thirdweb-dev/react';
+import { useState, useEffect } from 'react';
 
 const App = () => {
-  const { connectWallet, address, error, provider } = useWeb3();
-  console.log("👋 Address:", address)
+  // Usando os hooks que o thirdweb nos dá.
+  const address = useAddress();
+  const connectWithMetamask = useMetamask();
+  console.log("👋 Address:", address);
 
-  // O assinante é necessário para assinar transações na blockchain.
-  // Sem isso não podemos escrever dados, apenas lê-los.
-  const signer = provider ? provider.getSigner() : undefined;
-
+  // inicializar o contrato editionDrop
+  const editionDrop = useEditionDrop("INSIRA_O_ENDEREÇO_DO_BUNDLE_DROP");
+  // Variável de estado para sabermos se o usuário tem nosso NFT.
   const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
-  // isClaiming nos permite manter facilmente um estado de carregamento enquanto o NFT é cunhado.
+  // isClaiming nos ajuda a saber se está no estado de carregando enquanto o NFT é cunhado.
   const [isClaiming, setIsClaiming] = useState(false);
 
-  // Outro useEffect!
   useEffect(() => {
-    // Nós passamos o assinante para o sdk, que nos permite interagir
-    // com o nosso contrato!
-    sdk.setProviderOrSigner(signer);
-  }, [signer]);
-
-  useEffect(() => {
+    // Se ele não tiver uma carteira conectada, saia!
     if (!address) {
-      return;
+      return
     }
-    return bundleDropModule
-      .balanceOf(address, "0")
-      .then((balance) => {
+
+    const checkBalance = async () => {
+      try {
+        const balance = await editionDrop.balanceOf(address, 0)
+        // Se o saldo for maior do que 0, ele tem nosso NFT!
         if (balance.gt(0)) {
-          setHasClaimedNFT(true);
-          console.log("🌟 this user has a membership NFT!")
+          setHasClaimedNFT(true)
+          console.log("🌟 esse usuário tem o NFT de membro!")
         } else {
-          setHasClaimedNFT(false);
-          console.log("😭 this user doesn't have a membership NFT.")
+          setHasClaimedNFT(false)
+          console.log("😭 esse usuário NÃO tem o NFT de membro.")
         }
-      })
-      .catch((error) => {
-        setHasClaimedNFT(false);
-        console.error("failed to nft balance", error);
-      });
-  }, [address]);
+      } catch (error) {
+        setHasClaimedNFT(false)
+        console.error("Falha ao ler saldo", error)
+      }
+    }
+    checkBalance()
+  }, [address, editionDrop])
+
+  const mintNft = async () => {
+    try {
+      setIsClaiming(true);
+      await editionDrop.claim("0", 1);
+      console.log(`🌊 Cunhado com sucesso! Olhe na OpenSea: https://testnets.opensea.io/assets/${editionDrop.getAddress()}/0`);
+      setHasClaimedNFT(true);
+    } catch (error) {
+      setHasClaimedNFT(false);
+      console.error("Falha ao cunhar NFT", error);
+    } finally {
+      setIsClaiming(false);
+    }
+  };
 
   if (!address) {
     return (
       <div className="landing">
-        <h1>Welcome to NarutoDAO</h1>
-        <button onClick={() => connectWallet("injected")} className="btn-hero">
-          Connect your wallet
+        <h1>Bem-vind@s à MTBDAO a DAO dos pedaleiros de montanha</h1>
+        <button onClick={connectWithMetamask} className="btn-hero">
+          Conecte sua carteira
         </button>
       </div>
     );
   }
 
-  const mintNft = () => {
-    setIsClaiming(true);
-    // Chama bundleDropModule.claim("0", 1) para cunhar o NFT para a carteira do usuário.
-    bundleDropModule
-    .claim("0", 1)
-    .then(() => {
-      // Configura o estado de reivindicação.
-      setHasClaimedNFT(true);
-      // Mostre para o usuário seu novo NFT!
-      console.log(
-        `🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`
-      );
-    })
-    .catch((err) => {
-      console.error("failed to claim", err);
-    })
-    .finally(() => {
-      // Pare o estado de carregamento.
-      setIsClaiming(false);
-    });
-  }
-
   // Renderiza a tela de cunhagem do NFT.
   return (
     <div className="mint-nft">
-      <h1>Mint your free 🍪DAO Membership NFT</h1>
+      <h1>Cunhe gratuitamente seu NFT de membro 🚴 da MTBDAO</h1>
       <button
         disabled={isClaiming}
-        onClick={() => mintNft()}
+        onClick={mintNft}
       >
-        {isClaiming ? "Minting..." : "Mint your nft (FREE)"}
+        {isClaiming ? "Cunhando..." : "Cunhe seu NFT (GRATIS)"}
       </button>
     </div>
   );
@@ -176,19 +150,19 @@ const App = () => {
 export default App;
 ```
 
-Okay, um monte de coisas acontecendo! A primeira coisa que fazemos é configurar nosso `signer` que é o que precisamos para de fato mandar transações em favor de um usuário. Veja mais [aqui](https://docs.ethers.io/v5/api/signer/) e se quiser entender melhor sobre assinaturas na blockchain, [veja aqui](https://www.web3dev.com.br/felipegueller/the-magic-of-digital-signatures-on-ethereum-5hmd). A partir daí, nós chamamos `bundleDropModule.claim("0", 1)` para de fato cunhar o NFT na carteira do usuário quando ele clicar no botão. Nesse caso o tokenId do nosso NFT de filiação é `0` então nós passamos 0. Depois, passamos `1` porque só queremos cunhar um NFT de filiação para a carteira do usuário!
+Okay, um monte de coisas acontecendo! Nós chamamos `bundleDropModule.claim("0", 1)` para de fato cunhar o NFT na carteira do usuário quando ele clicar no botão. Nesse caso o tokenId do nosso NFT de filiação é `0` então nós passamos 0. Depois, passamos `1` porque só queremos cunhar um NFT de filiação para a carteira do usuário!
 
 Quando tudo está pronto, nós fazemos `setIsClaiming(false)` para parar o estado de carregamento. E depois fazemos `setHasClaimedNFT(true)` para que o nosso app react possa saber que esse usuário reivindicou seu NFT com sucesso.
 
-Quando você de fato vai cunhar o NFT, a Metamask vai mostrar um pop-up para que você pague a taxa de transação. Uma vez que a cunhagem foi feita, você deve ver `Successfully Minted!` no seu console junto com o link para o Opensea Testnet. Em [`testnets.opensea.io`](http://testnets.opensea.io/) nós podemos de fato ver os NFTs cunhados na testnet, o que é bem legal! Quando você for para o seu link, você verá algo tipo assim:
+Quando você de fato vai cunhar o NFT, a Metamask vai mostrar um pop-up para que você pague a taxa de transação. Uma vez que a cunhagem foi feita, você deve ver `Cunhado com sucesso!` no seu console junto com o link para o Opensea Testnet. Em [`testnets.opensea.io`](http://testnets.opensea.io/) nós podemos de fato ver os NFTs cunhados na testnet, o que é bem legal! Quando você for para o seu link, você verá algo tipo assim:
 
-![Untitled](https://i.imgur.com/PjjDSxd.png)
+![Untitled](https://i.imgur.com/9sASxQT.png)
 
-Legal! Aqui você consegue ver que meu NFT tem 6 donos. Você também verá que diz "Você tem 1" o que é o que você verá do seu lado desde que você tenha cunhado seu NFT!
+Legal! Aqui você consegue ver que meu NFT tem 2 donos. Você também verá que diz "You own 1" o que é o que você verá do seu lado desde que você tenha cunhado seu NFT!
 
-![Untitled](https://i.imgur.com/fdn9Qs4.png)
+![Untitled](https://i.imgur.com/j0lOE7P.png)
 
-Isso é por que eu pedi para alguns amigos meus cunharem esse NFT para mim como um teste. Novamente, porque é um ERC-1155 **todo mundo é dono do mesmo NFT**. Isso é bem legal e é também mais eficiente em termos de taxas. Cunhar um ERC721 custa 96,073 gas. Cunhar um ERC1155 custa 51,935 gas. Por que? Porque todo mundo está compartilhando os mesmos dados do NFT. Nós não precisamos copiar novos dados para cada usuários.
+Isso é por que eu pedi para um amigo meu cunhar esse NFT para mim como um teste. Novamente, porque é um ERC-1155 **todo mundo é dono do mesmo NFT**. Isso é bem legal e é também mais eficiente em termos de taxas. Cunhar um ERC721 custa 96,073 gas. Cunhar um ERC1155 custa 51,935 gas. Por que? Porque todo mundo está compartilhando os mesmos dados do NFT. Nós não precisamos copiar novos dados para cada usuários.
 
 ### 🛑 Mostre o seu Dashboard apenas se o usuário tiver o NFT.
 
@@ -202,24 +176,24 @@ Isso é bem fácil. Tudo que precisamos fazer é adicionar o código abaixo em `
 
 ```jsx
 if (!address) {
-  return (
-    <div className="landing">
-      <h1>Welcome to NarutoDAO</h1>
-      <button onClick={() => connectWallet("injected")} className="btn-hero">
-        Connect your wallet
-      </button>
-    </div>
-  );
+ return (
+   <div className="landing">
+     <h1>Bem-vind@s à MTBDAO a DAO dos pedaleiros de montanha</h1>
+     <button onClick={connectWithMetamask} className="btn-hero">
+       Conecte sua carteira
+     </button>
+   </div>
+ )
 }
 
 // Adicione esse pedacinho!
 if (hasClaimedNFT) {
-  return (
-    <div className="member-page">
-      <h1>🍪DAO Member Page</h1>
-      <p>Congratulations on being a member</p>
-    </div>
-  );
+ return (
+   <div className="member-page">
+     <h1>🚴 Página dos membros da DAO</h1>
+     <p>Parabéns por fazer parte desse clube de bikers!</p>
+   </div>
+ )
 };
 ```
 
@@ -237,15 +211,15 @@ Certifique-se de testar todos os casos!
 
 1) Carteira desconectada:
 
-![Untitled](https://i.imgur.com/wIWqk4L.png)
+![Untitled](https://i.imgur.com/T5M76f8.png)
 
 2) Carteira conectada, mas o usuário não tem o NFT de filiação:
 
-![Untitled](https://i.imgur.com/4y06Gvb.png)
+![Untitled](https://i.imgur.com/d7xq0pc.png)
 
 3) Usuário tem o NFT de filiação, então mostre a ela a página que apenas membros da DAO podem ver:
 
-![Untitled](https://i.imgur.com/SVy3Yne.png)
+![Untitled](https://i.imgur.com/p7oUlSS.png)
 
 ### 🚨 Relatório de Progresso
 
