@@ -101,6 +101,8 @@ buildspace-dao-starter % node scripts/10-create-vote-proposals.js
 ```
 
 BOOM. There are our proposals. The last thing we’re going to do is actually let users vote on proposals from our DAO dashboard now!
+(Note : If you have set the proposal_token_threshold > 0 then the code might throw an error also you have to delegate rinkeby token to the 
+voting contract for it to work before deploying the proposals!!)
 
 ### ✍️ Let users vote on proposals from the dashboard
 
