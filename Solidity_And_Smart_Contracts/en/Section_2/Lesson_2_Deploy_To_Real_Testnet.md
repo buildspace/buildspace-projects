@@ -47,26 +47,22 @@ So, you'll be doing all this within the next few lessons :).
 
 ## 🤑 Getting some fake $
 
-There are a few testnets out there and the one we'll be using is called "Rinkeby" which is run by the Ethereum foundation.
+There are a few testnets out there and the one we'll be using is called "Goerli" which is run by the Ethereum foundation.
 
-In order to deploy to Rinkeby, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copy how mainnet works, only difference is no real money is involved.
+In order to deploy to Goerli, we need fake ether. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copy how mainnet works, only difference is no real money is involved.
 
-In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake ETH for Rinkeby through a faucet. Make sure that your MetaMask wallet is set to the "Rinkeby Test Network" before using faucet.
+In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake ETH for Goerli through a faucet. Make sure that your MetaMask wallet is set to the "Goerli Test Network" before using faucet.
 
-For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
+For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds.
 
 | Name             | Link                                  | Amount          | Time         |
 | ---------------- | ------------------------------------- | --------------- | ------------ |
 | MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
-| Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
-| Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
+| Official Goerli  | [https://fauceth.komputing.org/?chain=5] | ? | ? |
+| Chainlink        | https://faucets.chain.link/    | 0.1             | None         |
 
 
-## 🙃 Having trouble getting Testnet ETH?
-
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
-
-## 📈 Deploy to Rinkeby testnet
+## 📈 Deploy to Goerli testnet
 
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
 
@@ -76,9 +72,9 @@ require("@nomiclabs/hardhat-waffle");
 module.exports = {
   solidity: "0.8.0",
   networks: {
-    rinkeby: {
+    goerli: {
       url: "YOUR_ALCHEMY_API_URL",
-      accounts: ["YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY"]
+      accounts: ["YOUR_PRIVATE_GOERLI_ACCOUNT_KEY"]
     },
   },
 };
@@ -104,7 +100,7 @@ require("dotenv").config();
 module.exports = {
   solidity: "0.8.0",
   networks: {
-    rinkeby: {
+    goerli: {
       // This value will be replaced on runtime
       url: process.env.STAGING_ALCHEMY_KEY,
       accounts: [process.env.PRIVATE_KEY],
@@ -127,18 +123,18 @@ PRIVATE_KEY=BLAHBLAH
 ```
 Finally, add `.env` to your `.gitignore` file so Git ignores it and your secrets don't leave your machine! If you're confused by any of this, just watch a YouTube video on it, it's easy stuff!
 
-Next, grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can grab from metamask and paste that in there as well.
+Next, grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** goerli key (not your public address!) which you can grab from metamask and paste that in there as well.
 
-**Note: Accessing your private key can be done by opening MetaMask, change the network to "Rinkeby Test Network" and then click the three dots and select "Account Details" > "Export Private Key"**
+**Note: Accessing your private key can be done by opening MetaMask, change the network to "Goerli Test Network" and then click the three dots and select "Account Details" > "Export Private Key"**
 
 Why do you need to use your private key? Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain. And, your username is your public address and your password is your private key. It's kinda like logging into AWS or GCP to deploy.
 
 Once you've got your config setup we're set to deploy with the deploy script we wrote earlier.
 
-Run this command from the root directory of `my-wave-portal`. Notice all we do is change it from `localhost` to `rinkeby`.
+Run this command from the root directory of `my-wave-portal`. Notice all we do is change it from `localhost` to `goerli`.
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 ## ❤️ Deployed! 
@@ -155,9 +151,9 @@ Copy that address of the deployed contract in the last line and save it somewher
 
 **You just deployed your contract. WOOOOOOOOO.**
 
-You can actually take that address and then paste it into Etherscan [here](https://rinkeby.etherscan.io/). Etherscan is a place that just shows us the state of the blockchain and helps us see where our transaction is at. You should see your transaction here :). It may take a minute to show up!
+You can actually take that address and then paste it into Etherscan [here](https://goerli.etherscan.io/). Etherscan is a place that just shows us the state of the blockchain and helps us see where our transaction is at. You should see your transaction here :). It may take a minute to show up!
 
-For example, [here's](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA808cE84E00E97d940dBD26E) mine!
+For example, [here's](https://goerli.etherscan.io/address/0xd5f08a0ae197482FA808cE84E00E97d940dBD26E) mine!
 
 ## 🚨 Before you click "Next Lesson"
 
