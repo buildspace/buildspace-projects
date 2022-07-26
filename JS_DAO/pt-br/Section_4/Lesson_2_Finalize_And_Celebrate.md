@@ -12,7 +12,7 @@ Uma revisão rápida aqui, você:
 
 ✅ Fez o deploy do seu NFT ERC-1155 que pessoas podem cunhar e se juntar à sua DAO.
 
-✅ Fez o deploy do seu próprio contrato e tesrouraria de governança.
+✅ Fez o deploy do seu próprio contrato e tesouro de governança.
 
 ✅ Criou um dapp que permite que pessoas conectem suas carteiras, recebam um NFT, vejam o dashboard da DAO onde eles podem ver os outros membros + de fato votar nas propostas que são executadas diretamente pelo nosso contrato de governança.
 
@@ -23,8 +23,6 @@ Eu sei que isso é difícil de acreditar, mas você criou uma DAO completa. Eu e
 **Certifique-se de clicar no botão na parte de baixo dessa página e envie o seu link final. Do contrário, nosso sistema não vai te marcar como "completo".**
 
 Nós vamos fazer o airdrop do seu NFT em até uma hora e vamos te enviar uma vez que estiver na sua carteira. Está rodando em um cron job! Se você não receber o email em 24h pf pf pf nos envie uma mensagem em #feedback e mencione @ **danicuki#5520**.
-
-[REVIEW](https://www.loom.com/share/99c4d4bddd624661b84e551c1257027e)
 
 ### **🌈 Antes de você ir embora.**
 

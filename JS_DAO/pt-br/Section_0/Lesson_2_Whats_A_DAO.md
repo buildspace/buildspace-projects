@@ -21,7 +21,7 @@ YC tem uma abordagem extremamente centralizada onde um # pequeno de pessoas deci
 
 Vamos imaginar YC como uma DAO, nós vamos chamá-la de YCDAO.
 
-Investidores poderiam colocar dinheiro na YCDAO e receber de volta tokens $YCDAO. O dinheiro ficaria numa tesouraria on-chain que todos poderiam ver. A tesouraria é simplesmente uma conta bancária compartilhada.
+Investidores poderiam colocar dinheiro na YCDAO e receber de volta tokens $YCDAO. O dinheiro ficaria num tesouro on-chain que todos poderiam ver. O tesouro é simplesmente uma conta bancária compartilhada.
 
 Por exemplo, se eu colocar $5 na YC DAO eu posso receber 5 tokens $YCDAO de volta. Se eu colocar $100.000 eu posso receber de volta 100.000 tokens $YCDAO. Isso depende de como os criadores fizeram as regras.
 
@@ -31,9 +31,9 @@ Legal, agora você tem alguns $YCDAO. Membros da YCDAO com o token agora podem v
 
 Por exemplo, 1 token $YCDAO poderia ser igual a um voto. Porém talvez você pense que isso não é justo porque significa que pessoas super ricas mandariam na organização com seu poder de voto. Faz sentido, você pode mudar a regra para: "Todo mundo recebe um voto, independente de quantos tokens cada pessoa tem". Isso realmente fica a critério dos criadores da DAO e do que é melhor para os membros. Mas, eu quero que você saiba que **fórmulas de poder de voto podem ser customizadas!** Essa é a beleza de uma DAO 🌸.
 
-Vamos dizer que 90% das pessoas na YCDAO votaram "Sim" para investir na DogDAO - uma DAO pra donos de cachorros. Legal. Essa proposta é executada automaticamente on-chain. YCDAO automaticamente enviaria os fundos para a tesouraria da DogDAO. Em troca, DogDAO automaticamente enviaria $DOG para a tesouraria da YCDAO. É isto. Investimento feito.
+Vamos dizer que 90% das pessoas na YCDAO votaram "Sim" para investir na DogDAO - uma DAO pra donos de cachorros. Legal. Essa proposta é executada automaticamente on-chain. YCDAO automaticamente enviaria os fundos para o tesouro da DogDAO. Em troca, DogDAO automaticamente enviaria $DOG para o tesouro da YCDAO. É isto. Investimento feito.
 
-Digamos que a DogDAO decola e se torna amplamente lucrativa vendendo aulas de adestramento de cachorro ou algo do tipo. Isso significa que o token $DOG que a YCDAO tem aumentaria em valor e a YCDAO poderia lucrar vendendo o token se eles quisessem. o token $YCDAO por si só também valorizaria porque a tesouraria da YCDAO aumentou em valor graças ao seu investimento fantástico.
+Digamos que a DogDAO decola e se torna amplamente lucrativa vendendo aulas de adestramento de cachorro ou algo do tipo. Isso significa que o token $DOG que a YCDAO tem aumentaria em valor e a YCDAO poderia lucrar vendendo o token se eles quisessem. o token $YCDAO por si só também valorizaria porque o tesouro da YCDAO aumentou em valor graças ao seu investimento fantástico.
 
 O que é mágico aqui é que você não precisa confiar numa entidade centralizada para ter certeza de que o investimento é realmente feito. Tudo é feito automaticamente e se baseia nas regras que a DAO define quando é criada.
 
