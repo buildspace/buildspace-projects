@@ -112,7 +112,7 @@ Acredite ou não, seu token agora vai aparecer na Uniswap dentro da Rinkeby.
 
 Aqui está um vídeo rápido para você fazer você mesmo: 
 
-[REVIEW](https://www.loom.com/share/8c235f0c5d974c978e5dbd564bbca59d)
+[Loom](https://www.loom.com/share/994d0e73f7f14af8a732d40e3d84c45e)
 
 Você pode ler mais sobre liquidity pools [aqui](https://www.web3dev.com.br/fatimalima/a-uniswap-v3-explicada-2b8g). Você vai notar no vídeo que não existia uma para $BIKES. Mas, tecnicamente qualquer pessoa poderia vir e criar uma pool que permite pessoas trocarem $ETH por $BIKES. Essa pool poderia ter $100. Ou, poderia ter $1.000.000.000. Depende de quão popular meu token é!
 

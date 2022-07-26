@@ -14,7 +14,7 @@ Algumas coisas para você fazer antes de continuarmos:
 
 ### **🤔 O que estamos construindo?**
 Confira um vídeo que fizemos cobrindo o projeto aqui:
-[REVIEW](https://www.loom.com/share/e9b6c6fe11fa41f3bf3bdf6ee0683335)
+[Loom](https://www.loom.com/share/c22249d1688844199f1cc0ad10cb26c5)
 
 ### **💎 Ganhando o NFT.**
 
