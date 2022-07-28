@@ -170,7 +170,7 @@ You're now someone who is actually "doing" the thing that mostly everyone else i
 
 We've seen that the best builders have made it a habit to "build in public". All this means is sharing a few learnings about the milestone they've just hit!
 
-Drop a quick update on buildspace right now by pressing "Post Update" in the top right corner 🤘
+Drop a quick update on buildspace right now by pressing "Post update" in the top right corner 🤘
 [Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
 
 You're a step closer to mastering the arts of web3.
