@@ -168,9 +168,9 @@ It's a big deal that you got this far. You created and deployed something to the
 
 You're now someone who is actually "doing" the thing that mostly everyone else is just "talking" about.
 
-From our experience, the best builders have made it a habit to "build in public". Usually, they will write quick updates whenever they achieve big milestones like this.
+We've seen that the best builders have made it a habit to "build in public". All this means is sharing a few learnings about the milestone they've just hit!
 
-Checkout the video below how you can also do that really easily right here on buildspace:
+Drop a quick update on buildspace right now by pressing "Post Update" in the top right corner 🤘
 [Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
 
 You're a step closer to mastering the arts of web3.
