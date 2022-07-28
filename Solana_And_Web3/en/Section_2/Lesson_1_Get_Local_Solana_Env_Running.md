@@ -219,11 +219,11 @@ When we did `anchor init` it created a basic Solana program for us. What we want
 
 Anchor is awesome. It lets us do this all in one step by running:
 
-*Note: Be sure you **don't** have `solana-test-validator` running anywhere else it'll conflict w/ Anchor. This took me a while to figure out lol.*
-
 ```bash
 anchor test
 ```
+
+*Note: Be sure you **don't** have `solana-test-validator` running anywhere else it'll conflict w/ Anchor. This took me a while to figure out lol.*
 
 This may take a while the first time you run it! As long as you get the green words at the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
 
