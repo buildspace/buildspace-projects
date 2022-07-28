@@ -148,7 +148,13 @@ This of course is not "Mainnet", but the "Devnet" is run by actual miners and is
 
 *Please do this else Farza will be sad :(*
 
-You deployed a Solana program!!! Hell yes!! Go ahead and post the Solana Explorer link to your deployed program in `#progress`.
+You deployed a Solana program!!! Hell yes -- this is huge!!
+
+We've seen that the best builders have made it a habit to "build in public". All this means is sharing a few learnings about the milestone they've just hit!
+
+Drop a quick update on buildspace right now by pressing "Post update" in the top right corner 🤘
+[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
+
 
 This is also a good time to tweet out that you're learning about Solana and just deployed your first program to the Solana Devnet. Inspire others to join web3!
 
