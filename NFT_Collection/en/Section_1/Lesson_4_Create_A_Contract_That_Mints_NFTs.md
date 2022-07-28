@@ -390,8 +390,6 @@ For example, here's my link: https://rinkeby.rarible.com/token/0xb6be7bd567e737c
 
 WOOOOOOO. GIVE YOURSELF A PAT ON THE BACK. YOU DEPLOYED A SMART CONTRACT THAT MINTS NFTS. WOW.
 
-This is pretty epic!
-
 Quick note here: We've seen that the best builders have made it a habit to **"build in public"**. All this means is sharing a few learnings about the milestone they've just hit!
 
 Drop a quick update on buildspace right now by pressing "Post update" in the top right corner 🤘
