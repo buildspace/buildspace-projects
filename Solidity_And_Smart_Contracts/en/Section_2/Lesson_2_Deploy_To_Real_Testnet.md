@@ -163,11 +163,15 @@ For example, [here's](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA80
 
 **YOU JUST DID A LOT.**
 
-You should totally **tweet** out that you just wrote and deployed your first smart contract and tag @_buildspace. If you want, include a screenshot of the Etherscan page that shows that your contract is on the blockchain!
 
 It's a big deal that you got this far. You created and deployed something to the actual blockchain. **Holy shit**. **I'm proud of you.**
 
 You're now someone who is actually "doing" the thing that mostly everyone else is just "talking" about.
+
+We've seen that the best builders have made it a habit to "build in public". All this means is sharing a few learnings about the milestone they've just hit!
+
+Drop a quick update on buildspace right now by pressing "Post update" in the top right corner 🤘
+[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
 
 You're a step closer to mastering the arts of web3.
 
