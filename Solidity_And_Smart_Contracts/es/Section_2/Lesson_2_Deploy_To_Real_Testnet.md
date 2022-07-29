@@ -179,12 +179,15 @@ Puede tomar unos minutos para que aparezca.
 
 **¡Hiciste mucho!**
 
-Realmente deberías enviar un **tweet** en el que digas que  acabas de escribir e implementar tu primer contrato inteligente 
-y etiquetar a @_buildspace y si quieres puedes añadir una captura de pantalla de Etherscan donde se vea que tu contrato ya está en la cadena de bloques.
-
 Es algo importante que ya hayas llegado hasta acá. Creaste e implementaste algo en la cadena de bloques. **¡Caramba!**. **Estoy orgulloso de ti.**
 
 Ahora tu ese “alguien” que en realidad está “haciendo “eso de lo que todo mundo está “hablando”.
+
+Hemos visto que los mejores constructores se están acostumbrando a "construir en público". ¡Esto significa compartir los aprendizajes sobre el logro que acabas de alcanzar!
+
+Por favor coloca esta actualización rápida en buildspace ahora mismo presionando (Post update) "Publicar actualización" en la esquina superior derecha de esta página. 
+
+[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
 
 Cada vez estás más cerca de dominar las artes del web3.
 
