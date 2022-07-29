@@ -23,7 +23,7 @@ Now we need to actually write some scripts that let us create/deploy our contrac
 ```plaintext
 PRIVATE_KEY=YOUR_PRIVATE_KEY_HERE
 WALLET_ADDRESS=YOUR_WALLET_ADDRESS
-ALCHEMY_API_URL=YOUR_ALCHEMY_API_URL
+QUICKNODE_API_URL=YOUR_QUICKNODE_API_URL
 ```
 
 *Note: On Replit? You'll need to use [this](https://docs.replit.com/programming-ide/storing-sensitive-information-environment-variables). Basically, .env files don’t work on Replit. You should use this method to add your variables one-by-one w/ the same names. When you’re done you’ll need to start Replit by stopping/running the repo so it picks up the new env variables!* 
@@ -34,17 +34,17 @@ To get your private key from Metamask, check [this](https://metamask.zendesk.com
 
 To get your wallet address, check [this](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-) out.
 
-### 🚀 Alchemy
+### 🚀 QuickNode
 
-The last thing you need in your `.env` file is `ALCHEMY_API_URL`.
+The last thing you need in your `.env` file is `QUICKNODE_API_URL`.
 
-Alchemy essentially helps us broadcast our contract creation transaction so that it can be picked up by miners on the testnet as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
+QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners on the testnet as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
-So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+So, make an account with QuickNode [here](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
 
 Check out the video below to see how to get your API key for a **testnet**! Don't mess up and create a mainnet key, **we want a testnet key.** 
 
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283)
+[Loom](https://www.loom.com/share/bdbe5470b4b745819782f6727ba60baa)
 
 You should now have all three items in your `.env` file!
 
@@ -65,16 +65,16 @@ if (!process.env.PRIVATE_KEY || process.env.PRIVATE_KEY === "") {
   console.log("🛑 Private key not found.");
 }
 
-if (!process.env.ALCHEMY_API_URL || process.env.ALCHEMY_API_URL === "") {
-  console.log("🛑 Alchemy API URL not found.");
+if (!process.env.QUICKNODE_API_URL || process.env.QUICKNODE_API_URL === "") {
+  console.log("🛑 QuickNode API URL not found.");
 }
 
 if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS === "") {
   console.log("🛑 Wallet Address not found.");
 }
 
-// RPC URL, we'll use our Alchemy API URL from our .env file.
-const provider = new ethers.providers.JsonRpcProvider(process.env.ALCHEMY_API_URL);
+// RPC URL, we'll use our QuickNode API URL from our .env file.
+const provider = new ethers.providers.JsonRpcProvider(process.env.QUICKNODE_API_URL);
 // Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
 const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 const sdk = new ThirdwebSDK(wallet);
@@ -93,7 +93,7 @@ const sdk = new ThirdwebSDK(wallet);
 export default sdk;
 ```
 
-It looks like a lot, but, all we're doing is initializing thirdweb and then adding an `export default sdk` since we'll be reusing the initialized sdk in other scripts. It's almost like initializing a connection to a database from a server. We give it stuff like our private key and our provider (which is Alchemy).
+It looks like a lot, but, all we're doing is initializing thirdweb and then adding an `export default sdk` since we'll be reusing the initialized sdk in other scripts. It's almost like initializing a connection to a database from a server. We give it stuff like our private key and our provider (which is QuickNode).
 
 We're also running this:
 
