@@ -163,12 +163,12 @@ module.exports = {
   solidity: "0.8.0",
   networks: {
     rinkeby: {
-      url: process.env.STAGING_ALCHEMY_KEY,
+      url: process.env.STAGING_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
     mainnet: {
       chainId: 1,
-      url: process.env.PROD_ALCHEMY_KEY,
+      url: process.env.PROD_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
@@ -178,8 +178,8 @@ module.exports = {
 Y tú archivo .env debe verse así:
 
 ```
-STAGING_ALCHEMY_KEY=BLAHBLAH
-PROD_ALCHEMY_KEY=BLAHBLAH
+STAGING_QUICKNODE_KEY=BLAHBLAH
+PROD_QUICKNODE_KEY=BLAHBLAH
 PRIVATE_KEY=BLAHBLAH
 ```
 Asegúrate de tener el archivo .env en el .gitignore.
