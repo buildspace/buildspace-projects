@@ -30,17 +30,17 @@ Remember, the blockchain has no owner. It's just a bunch of computers around the
 
 When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
 
-This is where [Alchemy](https://alchemy.com/?r=b93d1f12b8828a57) comes in.
+This is where [QuickNode](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de) comes in.
 
-Alchemy essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
+QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
 This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense.
 
-So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+So, make an account with QuickNode [here](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
 
 And then check out my video below!
 
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0)
+[Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
 
 ### 🕸 Testnets
 
@@ -151,14 +151,14 @@ module.exports = {
   solidity: '0.8.0',
   networks: {
     rinkeby: {
-      url: 'YOUR ALCHEMY_API_URL',
+      url: 'YOUR_QUICKNODE_API_URL',
       accounts: ['YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY'],
     },
   },
 };
 ```
 
-You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
+You can grab your API URL from the QuickNode dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
 
 **Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY. TO REDUCE RISK EVEN MORE, IT'S ALWAYS BEST TO HAVE A DEDICATED DEVELOPMENT ACCOUNT IN METAMASK.** We'll talk about `.env` variables later and how to keep this stuff secret.
 
