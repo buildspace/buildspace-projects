@@ -149,12 +149,12 @@ module.exports = {
   solidity: "0.8.0",
   networks: {
     rinkeby: {
-      url: process.env.STAGING_ALCHEMY_KEY,
+      url: process.env.STAGING_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
     mainnet: {
       chainId: 1,
-      url: process.env.PROD_ALCHEMY_KEY,
+      url: process.env.PROD_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
@@ -164,8 +164,8 @@ module.exports = {
 And your .env file would look something like:
 
 ```
-STAGING_ALCHEMY_KEY=BLAHBLAH
-PROD_ALCHEMY_KEY=BLAHBLAH
+STAGING_QUICKNODE_KEY=BLAHBLAH
+PROD_QUICKNODE_KEY=BLAHBLAH
 PRIVATE_KEY=BLAHBLAH
 ```
 
