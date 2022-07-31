@@ -148,7 +148,7 @@ const getProvider = () => {
   const provider = new Provider(
     connection, window.solana, opts.preflightCommitment,
   );
-	return provider;
+  return provider;
 }
 ```
 
