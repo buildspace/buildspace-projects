@@ -316,8 +316,8 @@ const renderConnectedContainer = () => {
       </div>
     )
   } 
-	// Otherwise, we're good! Account exists. User can submit GIFs.
-	else {
+  // Otherwise, we're good! Account exists. User can submit GIFs.
+  else {
     return(
       <div className="connected-container">
         <form
