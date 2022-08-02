@@ -139,7 +139,7 @@ This means we should probably check this as soon as our app loads, right? Let's 
  */
 useEffect(() => {
   /*
-   * The function we will call that interacts with out smart contract
+   * The function we will call that interacts with our smart contract
    */
   const fetchNFTMetadata = async () => {
     console.log('Checking for Character NFT on address:', currentAccount);
