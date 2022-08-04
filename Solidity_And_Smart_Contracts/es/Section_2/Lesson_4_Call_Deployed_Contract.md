@@ -43,7 +43,7 @@ const signer = provider.getSigner();
 `ethers` is una librería que ayuda a nuestra interfaz a comunicarse con nuestro contrato inteligente. 
 Es importante que te asegures de importarla escribiendo hasta arriba usando: `import { ethers } from "ethers";`.
 
-Un "Proveedor" es lo que usamos para comunicarnos con los nodos de Ethereum. ¿Recuerdas cómo usábamos Alchemy para **implementar**? 
+Un "Proveedor" es lo que usamos para comunicarnos con los nodos de Ethereum. ¿Recuerdas cómo usábamos QuickNode para **implementar**? 
 Bueno, en este caso usamos nodos que Metamask proporciona en segundo plano para enviar/recibir datos de nuestro contrato implementado.
 
 [Aquí](https://docs.ethers.io/v5/api/signer/#signers) hay un link que nos explica que es un “signer” firmante en la línea de código 2.

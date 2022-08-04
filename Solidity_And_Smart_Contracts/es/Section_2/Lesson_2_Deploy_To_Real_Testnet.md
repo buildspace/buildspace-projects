@@ -4,10 +4,10 @@ Continuemos y vamos a cerrar la terminal con la que corrimos la red local de cad
 Ya no lo vamos a necesitar, era para mostrarles como implementar localmente.
 Ahora lo vamos a hacer de verdad, vamos a desplegar a la cadena de bloques.
 
-Por favor ahora necesito que crees una cuenta de Alchemy [aquí](https://alchemy.com/?r=b93d1f12b8828a57).
+Por favor ahora necesito que crees una cuenta de QuickNode [aquí](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
 
 Una disculpa por pedirles que creen tantas cuentas, pero, este ecosistema es complejo y queremos que tomes ventaja de las increíbles herramientas que existen, 
-Alchemy nos ayuda a implementar en la cadena de bloques real de Ethereum de forma sencilla.
+QuickNode nos ayuda a implementar en la cadena de bloques real de Ethereum de forma sencilla.
 
 ## 💳 Transacciones.
 
@@ -23,18 +23,18 @@ copia de la Cadena de Bloques.
 Cuando despleguemos nuestro contrato lo que haremos es **decirles a esos mineros**, “Oigan, este es un nuevo contrato, por favor añadan mi contrato inteligente 
 a la cadena de bloques y díganles a todos que mi contrato funciona”.
 
-Aquí es donde aparece Alchemy.
+Aquí es donde aparece QuickNode.
 
-Esencialmente, Alchemy nos ayuda a transmitir nuestra transacción de creación de contratos para los mineros la tomen lo antes posible, una vez que la 
+Esencialmente, QuickNode nos ayuda a transmitir nuestra transacción de creación de contratos para los mineros la tomen lo antes posible, una vez que la 
 transacción es minada se transmite a la cadena de bloques como una transacción legítima. Dado esto todos los mineros actualizan su copia de la cadena de bloques.
 
 Esto es complicado, y no te preocupes si no lo entiendes por completo. Mientras más código escribas y sigas construyendo esta aplicación, naturalmente te irá 
 haciendo mayor sentido.
 
-Crea una cuenta de alchemy [aquí](https://alchemy.com/?r=b93d1f12b8828a57).
+Crea una cuenta de QuickNode [aquí](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
 
 Por favor revisa el siguiente video para que veas como obtener tu “API KEY” para la red de pruebas.
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0)
+[Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
 
 ## 🕸️ Redes de pruebas.
 
@@ -87,7 +87,7 @@ module.exports = {
   solidity: "0.8.0",
   networks: {
     rinkeby: {
-      url: "YOUR_ALCHEMY_API_URL",
+      url: "YOUR_QUICKNODE_API_URL",
       accounts: ["YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY"]
     },
   },
@@ -117,12 +117,12 @@ module.exports = {
   networks: {
     rinkeby: {
       // This value will be replaced on runtime
-      url: process.env.STAGING_ALCHEMY_KEY,
+      url: process.env.STAGING_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
     mainnet: {
       chainId: 1,
-      url: process.env.PROD_ALCHEMY_KEY,
+      url: process.env.PROD_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
@@ -131,14 +131,14 @@ module.exports = {
 En el folder raíz del proyecto, hay que crear un archivo `.env` y ahí añadir los secretos. Se verá algo así:
 
 ```
-STAGING_ALCHEMY_KEY=REPLACE_WITH_ACTUAL_ALCHEMY_URL
-PROD_ALCHEMY_KEY=BLAHBLAH
+STAGING_QUICKNODE_KEY=REPLACE_WITH_ACTUAL_QUICKNODE_URL
+PROD_QUICKNODE_KEY=BLAHBLAH
 PRIVATE_KEY=BLAHBLAH
 ```
 Finalmente añade el archivo `.env` a tu archivo `.gitignore` y así Git lo ignorará y esta información secreta no abandonará tu máquina. 
 Si estás confundido al hacer esto busca un video en youtube sobre el tema, es algo realmente sencillo de hacer.
 
-Ahora deberás utilizar el API URL del panel de control de Alchemy y pégalo donde corresponda, después vas a necesitar la llave **privada** de rinkeby 
+Ahora deberás utilizar el API URL del panel de control de QuickNode y pégalo donde corresponda, después vas a necesitar la llave **privada** de rinkeby 
 (no es tu dirección pública) esta llave la puedes obtener de metamask y debes pegarla donde corresponde.
 
 **Nota: Para accesar a tu llave privada eso se puede hacer abriendo Metamask, cambiar la red a “Rinkeby Test Network” (Red de pruebas Rinkeby), 
@@ -179,12 +179,15 @@ Puede tomar unos minutos para que aparezca.
 
 **¡Hiciste mucho!**
 
-Realmente deberías enviar un **tweet** en el que digas que  acabas de escribir e implementar tu primer contrato inteligente 
-y etiquetar a @_buildspace y si quieres puedes añadir una captura de pantalla de Etherscan donde se vea que tu contrato ya está en la cadena de bloques.
-
 Es algo importante que ya hayas llegado hasta acá. Creaste e implementaste algo en la cadena de bloques. **¡Caramba!**. **Estoy orgulloso de ti.**
 
 Ahora tu ese “alguien” que en realidad está “haciendo “eso de lo que todo mundo está “hablando”.
+
+Hemos visto que los mejores constructores se están acostumbrando a "construir en público". ¡Esto significa compartir los aprendizajes sobre el logro que acabas de alcanzar!
+
+Por favor coloca esta actualización rápida en buildspace ahora mismo presionando (Post update) "Publicar actualización" en la esquina superior derecha de esta página. 
+
+[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
 
 Cada vez estás más cerca de dominar las artes del web3.
 

@@ -42,7 +42,7 @@ const signer = provider.getSigner();
 
 `ethers` is a library that helps our frontend talk to our contract. Be sure to import it at the top using `import { ethers } from "ethers";`.
 
-A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using Alchemy to **deploy**? Well in this case we use nodes that Metamask provides in the background to send/receive data from our deployed contract.
+A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using QuickNode to **deploy**? Well in this case we use nodes that Metamask provides in the background to send/receive data from our deployed contract.
 
 [Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
 

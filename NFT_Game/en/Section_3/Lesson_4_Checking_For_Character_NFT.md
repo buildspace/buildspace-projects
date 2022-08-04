@@ -139,7 +139,7 @@ This means we should probably check this as soon as our app loads, right? Let's 
  */
 useEffect(() => {
   /*
-   * The function we will call that interacts with out smart contract
+   * The function we will call that interacts with our smart contract
    */
   const fetchNFTMetadata = async () => {
     console.log('Checking for Character NFT on address:', currentAccount);
@@ -204,7 +204,7 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 const signer = provider.getSigner();
 ```
 
-This is the main logic used to setup our Ethers object and actually call our contract 🚀.  A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using Alchemy to **deploy**? Well, in this case, we use nodes that MetaMask provides in the background to send/receive data from our deployed contract. 
+This is the main logic used to setup our Ethers object and actually call our contract 🚀.  A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using QuickNode to **deploy**? Well, in this case, we use nodes that MetaMask provides in the background to send/receive data from our deployed contract. 
 
 We won't get too much into signers, but [here is a link](https://docs.ethers.io/v5/api/signer/#signers) explaining what a signer is!
 

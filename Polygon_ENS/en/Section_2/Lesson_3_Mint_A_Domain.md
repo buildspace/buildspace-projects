@@ -253,7 +253,7 @@ const signer = provider.getSigner();
 
 Be sure to import it at the top using `import { ethers } from "ethers";`, right after we import the Twitter logo.
 
-A "provider" is what we use to actually talk to Polygon nodes. Remember how we were using Alchemy to **deploy**? Well in this case we use nodes that MetaMask provides in the background to send/receive data from our deployed contract.
+A "provider" is what we use to actually talk to Polygon nodes. Remember how we were using QuickNode to **deploy**? Well in this case we use nodes that MetaMask provides in the background to send/receive data from our deployed contract.
 
 [Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
 

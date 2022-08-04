@@ -193,16 +193,16 @@ Remember, the blockchain has no owner. It's just a bunch of computers around the
 
 When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
 
-This is where [Alchemy](https://alchemy.com/?r=b93d1f12b8828a57) comes in.
+This is where [QuickNode](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de) comes in.
 
-Alchemy essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
+QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
-This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense.
+This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
 
-So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+So, make an account with QuickNode [here](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
 
 And then check out my video below to learn how to get your API key for a testnet:
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0)
+[Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
 
 ## 🕸 Testnets
 
@@ -290,13 +290,13 @@ module.exports = {
   solidity: '0.8.1',
   networks: {
     rinkeby: {
-      url: process.env.ALCHEMY_API_KEY_URL,
+      url: process.env.QUICKNODE_API_KEY_URL,
       accounts: [process.env.RINKEBY_PRIVATE_KEY],
     },
   },
 };
 ```
-Here we are basically configuring our `hardhat.config.js` to use our env variables securely which are the **process.env.ALCHEMY_API_KEY_URL** & our **process.env.RINKEBY_PRIVATE_KEY**. You'll now need to open your terminal and type in
+Here we are basically configuring our `hardhat.config.js` to use our env variables securely which are the **process.env.QUICKNODE_API_KEY_URL** & our **process.env.RINKEBY_PRIVATE_KEY**. You'll now need to open your terminal and type in
 ```
 npm install dotenv
 ```
@@ -304,11 +304,11 @@ This basically just installs the `dotenv` package which allows us to use env var
 
 And now you can create a **.env** file in the root of your project. To be sure, it should be matching with the path that contains the **hardhat.config.js** file.
 
-You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
+You can grab your API URL from the QuickNode dashboard and paste that in. Then, you'll need your **private** key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
 
 Open the **.env** file and paste the two we've grabbed as shown below.
 ```
-ALCHEMY_API_KEY_URL=<YOUR API URL>
+QUICKNODE_API_KEY_URL=<YOUR API URL>
 RINKEBY_PRIVATE_KEY=<YOUR PRIVATE KEY>
 ```
 Don't forget to remove those `<` `>` after adding your API URL and your PRIVATE KEY! 🔑
@@ -390,7 +390,11 @@ For example, here's my link: https://rinkeby.rarible.com/token/0xb6be7bd567e737c
 
 WOOOOOOO. GIVE YOURSELF A PAT ON THE BACK. YOU DEPLOYED A SMART CONTRACT THAT MINTS NFTS. WOW.
 
-Good stuff :).
+Quick note here: We've seen that the best builders have made it a habit to **"build in public"**. All this means is sharing a few learnings about the milestone they've just hit!
+
+Drop a quick update on buildspace right now by pressing "Post update" in the top right corner 🤘
+[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
+
 
 You should totally **tweet** out that you just wrote and deployed your smart contract that can mint NFTs and tag @_buildspace. If you want, include a screenshot of the OpenSea/Rarible page that shows that your NFT :)!
 

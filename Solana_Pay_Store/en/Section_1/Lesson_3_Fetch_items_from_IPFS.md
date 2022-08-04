@@ -85,7 +85,7 @@ Here's what mine looks like, you can add or remove fields based on your product:
 
 The main fields we care about are the id, name, and price fields.
 
-Next, we'll create a `Product.js` file in the components folder. We'll use this to display our products. Here's what it'll look like:
+Next, we'll create a `Product.js` file in the `components` folder. We'll use this to display our products. Here's what it'll look like:
 ```jsx
 import React from "react";
 import styles from "../styles/Product.module.css";
@@ -117,7 +117,7 @@ export default function Product({ product }) {
 }
 ```
 
-Before we can use it, we'll need to create an API endpoint that can fetch our products from our "database". Create an `api` folder in the `pages` directory and add a file called `fetchProducts.js`:
+Before we can use it, we'll need to create an API endpoint that can fetch our products from our "database". Go over to the `api` folder in the `pages` directory and add a file called `fetchProducts.js`:
 ```jsx
 import products from "./products.json"
 

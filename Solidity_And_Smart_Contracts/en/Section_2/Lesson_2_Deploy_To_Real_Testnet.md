@@ -4,9 +4,9 @@ Go ahead and close the terminal with your local blockchain network running which
 
 Now we're going to be doing the real deal, deploying to the actual blockchain.
 
-Go ahead and make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+Go ahead and make an account with QuickNode [here](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
 
-Sorry for having you make so many accounts, but, this ecosystem is complex and we want to take advantage of the awesome tools out there. What Alchemy does is it gives us a simple way to deploy to the real Ethereum blockchain.
+Sorry for having you make so many accounts, but, this ecosystem is complex and we want to take advantage of the awesome tools out there. What QuickNode does is it gives us a simple way to deploy to the real Ethereum blockchain.
 
 ## 💳 Transactions
 
@@ -18,16 +18,16 @@ Remember, the blockchain has no owner. It's just a bunch of computers around the
 
 When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
 
-This is where Alchemy comes in.
+This is where [QuickNode](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de) comes in.
 
-Alchemy essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
+QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
 This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
 
-So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+So, make an account with QuickNode [here](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
 
 Checkout the video below to see how to get your API key for a testnet!
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283)
+[Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
 
 ## 🕸️ Testnets
 
@@ -57,9 +57,9 @@ For MyCrypto, you'll need to connect your wallet, make an account, and then clic
 
 | Name             | Link                                  | Amount          | Time         |
 | ---------------- | ------------------------------------- | --------------- | ------------ |
-| MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
-| Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
 | Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
+| Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
+| MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
 
 
 ## 🙃 Having trouble getting Testnet ETH?
@@ -77,7 +77,7 @@ module.exports = {
   solidity: "0.8.0",
   networks: {
     rinkeby: {
-      url: "YOUR_ALCHEMY_API_URL",
+      url: "YOUR_QUICKNODE_API_URL",
       accounts: ["YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY"]
     },
   },
@@ -106,12 +106,12 @@ module.exports = {
   networks: {
     rinkeby: {
       // This value will be replaced on runtime
-      url: process.env.STAGING_ALCHEMY_KEY,
+      url: process.env.STAGING_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
     mainnet: {
       chainId: 1,
-      url: process.env.PROD_ALCHEMY_KEY,
+      url: process.env.PROD_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
@@ -121,13 +121,13 @@ module.exports = {
 In the root project folder, create a `.env` file and add your secrets. It should look like this:
 
 ```
-STAGING_ALCHEMY_KEY=REPLACE_WITH_ACTUAL_ALCHEMY_URL
-PROD_ALCHEMY_KEY=BLAHBLAH
+STAGING_QUICKNODE_KEY=REPLACE_WITH_ACTUAL_QUICKNODE_URL
+PROD_QUICKNODE_KEY=BLAHBLAH
 PRIVATE_KEY=BLAHBLAH
 ```
 Finally, add `.env` to your `.gitignore` file so Git ignores it and your secrets don't leave your machine! If you're confused by any of this, just watch a YouTube video on it, it's easy stuff!
 
-Next, grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can grab from metamask and paste that in there as well.
+Next, grab your API URL from the QuickNode dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can grab from metamask and paste that in there as well.
 
 **Note: Accessing your private key can be done by opening MetaMask, change the network to "Rinkeby Test Network" and then click the three dots and select "Account Details" > "Export Private Key"**
 
@@ -163,11 +163,15 @@ For example, [here's](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA80
 
 **YOU JUST DID A LOT.**
 
-You should totally **tweet** out that you just wrote and deployed your first smart contract and tag @_buildspace. If you want, include a screenshot of the Etherscan page that shows that your contract is on the blockchain!
 
 It's a big deal that you got this far. You created and deployed something to the actual blockchain. **Holy shit**. **I'm proud of you.**
 
 You're now someone who is actually "doing" the thing that mostly everyone else is just "talking" about.
+
+We've seen that the best builders have made it a habit to "build in public". All this means is sharing a few learnings about the milestone they've just hit!
+
+Drop a quick update on buildspace right now by pressing "Post update" in the top right corner 🤘
+[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
 
 You're a step closer to mastering the arts of web3.
 
