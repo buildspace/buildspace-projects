@@ -1,14 +1,21 @@
 ## 🌊 Darle al usuario su enlace de OpenSea
+
 ¡Una cosa increíble es que después de acuñar el NFT le demos al usuario un enlace de su NFT en OpenSea que podrían compartir en Twitter o con sus amigos!
 El enlace para un NFT en OpenSea se ve así:
+
 `https://testnets.opensea.io/assets/0x88a3a1dd73f982e32764eadbf182c3126e69a5cb/9`
 Básicamente estas son las variables.
+
 `https://testnets.opensea.io/assets/INSERT_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`
+
 **Nota: si está utilizando Rarible porque OpenSea tarda mucho en mostrar los metadatos de su NFT, la configuración del enlace de Rarible, ¡es muy similar! De hecho, a mí me gusta usar Rarible en lugar de OpenSea, generalmente es mucho más rápido en mostrar los metadatos. ¡Lo cual es bueno porque los usuarios pueden ver instantáneamente su NFT!**
+
 El enlace para un NFT en Rarible se ve así:
 `https://rinkeby.rarible.com/token/0xb6be7bd567e737c878be478ae1ab33fcf6f716e0:0`
+
 Básicamente estas son las variables.
 `https://rinkeby.rarible.com/token/INSERT_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE`
+
 Entonces, nuestra aplicación web tiene la dirección del contrato, ¡pero no la identificación del token! Entonces, tendremos que cambiar nuestro contrato para poder recuperar eso. hagámoslo.
 Vamos a usar algo llamado `Events` en Solidity. Estos son como webhooks. ¡Escribamos parte del código y hagamos que funcione primero!
 ¡Agrega esta línea debajo de la línea donde creaste los tres arreglos de las palabras aleatorias!
