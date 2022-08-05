@@ -1,6 +1,6 @@
-Vale a pena falar brevemente porque a combinação jogos + crpyto é tão interessante. Eu sinto que quando as pessoas falam desse tópico, eles jogam números muito altos, como "Ah, esse jogo fez $1.2 bilhões de receita nesse trimestre" ou coisas como essa. Mas, é mais do que isso! Ajuda a explicar o porque isso é legal.
+Vale a pena falar brevemente porque a combinação jogos + crypto é tão interessante. Eu sinto que quando as pessoas falam desse tópico, eles jogam números muito altos, como "Ah, esse jogo fez $1.2 bilhões de receita nesse trimestre" ou coisas como essa. Mas, é mais do que isso! Ajuda a explicar o porque isso é legal.
 
-Por exemplo, Axie Infinity é um jogo baseado em NFT que fez **[$2.6 bilhões de dólares](https://dappradar.com/ethereum/games/axie-infinity)** em trades de NFT até agora. Mas o que isso significa??
+Por exemplo, Axie Infinity é um jogo baseado em NFT que fez **[$4.24 bilhões de dólares](https://dappradar.com/ethereum/games/axie-infinity)** em trades de NFT até agora. Mas o que isso significa??
 
 Por que as pessoas estão perdendo a cabeça desse jeito?
 
@@ -8,11 +8,11 @@ Por que as pessoas estão perdendo a cabeça desse jeito?
 
 **Nota: isso é uma NFT "Axie" - que é o personagem que você joga dentro de Axie Infinity! Jogadores comprar NFTs Axie primeiro, e depois vão jogar o jogo. Bem estranho, certo? Comprar os personagens antes de você jogar o jogo!**
 
-A filosofia da buildspace é entender através de construir você mesmo e mexer com a tecnologia. Mas, eu gostaria de passar por um exemplo rápido e informal ;)!
+A filosofia da WEB3DEV é entender através de construir você mesmo e mexer com a tecnologia. Mas, eu gostaria de passar por um exemplo rápido e informal ;)!
 
 ### 🎮 Um exemplo rápido com a Nintendo.
 
-**Vamos dizer que você é a Nintendo** e você criou o Super Mario Bros. Mario é agora **seu** IP. **Você** é o criador. Ninguém mais está permitido criar mais jogos com o Mario exceto **você**. Você também quer controlar quem ganha % em cima dos seus personagens/universo.
+**Vamos dizer que você é a Nintendo** e você criou o Super Mario Bros. Mario é agora **sua** Propriedade Intelectual. **Você** é o criador. Ninguém está permitido criar mais jogos com o Mario exceto **você**. Você também quer controlar quem ganha % em cima dos seus personagens/universo.
 
 Vamos imaginar um mundo, ao invés disso, onde nós trazemos NFTs para essa receita.
 
@@ -24,7 +24,7 @@ A parte mais importante aqui é que o código do contrato inteligente das NFTs d
 
 Por exemplo, os jogadores estariam aptos a vender suas NFTs Mario em um marketplace.
 
-Nesse caso, a Nintendo poderia falar: "toda vez que essa NFT for vendida, nós pegaremos 10% do valor que foi vendida" e eles podem programar isso dentro do contrato da NFT. Isso significa que os criadores originais da Nintendo sempre podem ter lucro em maneiras variáveis que não precisam confiar em ninguém além da blockchain.
+Nesse caso, a Nintendo poderia falar: "toda vez que essa NFT for vendida, nós pegaremos 10% do valor que foi vendida" e eles podem programar isso dentro do contrato da NFT. Isso significa que os criadores originais da Nintendo sempre podem ter lucro de maneiras variáveis que não precisam confiar em ninguém além da blockchain.
 
 Isso significa que ao passo que Mario cresce em popularidade, a NFT necessária para jogar os jogos do Mario também crescerão em valor. A Nintendo pode vender mais NFTs do Mario uma vez que as 1,000,000 originais tenham acabado. Aí é com eles!
 
@@ -34,7 +34,7 @@ A parte mais legal? **Jogadors retém uma boa parte do valor.** Jogadores sempre
 
 ### 😢 Um problema: inflação
 
-Você vai perceber que Axies custam algo como [300 dólares pra cimas](https://marketplace.axieinfinity.com/?__cf_chl_jschl_tk__=pmd_ybIeMQm0TAMzOvPj1DcoPlIZeWIcL5r4nwefM60mDTM-1634675045-0-gqNtZGzNAjujcnBszQoR)!!! Isso é insano e algo bem desanimador pra jogadores novos. Você precisa de três pra poder começar a jogar, então são 1000 dólares só ali.
+Você vai perceber que Axies MEO custam algo como [600 dólares pra cimas](https://marketplace.axieinfinity.com/?__cf_chl_jschl_tk__=pmd_ybIeMQm0TAMzOvPj1DcoPlIZeWIcL5r4nwefM60mDTM-1634675045-0-gqNtZGzNAjujcnBszQoR)!!! Isso é insano e algo bem desanimador pra jogadores novos. Você precisa de três pra poder começar a jogar, então são 1800 dólares só ali.
 
 Isso é causado basicamente pela inflação do mercado. Só uma quantidade de Axies estão sendo criados hoje em dia mas a base de jogadores está crescendo bem mais rápido. O resultado? Preços absurdos. Existem soluções que estão sendo exploradas, mas isso é uma preocupação quando falamos de jogos NFT. Vindo do [whitepaper](https://whitepaper.axieinfinity.com/gameplay/axie-population-and-long-term-sustainability) oficial do Axie:
 
@@ -59,3 +59,9 @@ As possibilidades são literalmente infinitas porque nós podemos programar o si
 ### 💪 Vamos ao trabalho;
 
 Nós falamos muito. Vamos construir nossa pequena versão de um jogo NFT. No final, eu espero que tudo isso se torne bem mais concreto, e talvez você esteja no seu caminho de construir o próximo hit dos jogos NFT ;).
+
+### 🚨 Reporte seu Progresso!
+
+Poste uma screenshot em #progresso com o nome do seu video game favorito! Ajude a levantar o ânimo de jogadores na galera!
+
+Post in #progress with the name of your fav video game! Help get everyone in the gaming mood 8).
