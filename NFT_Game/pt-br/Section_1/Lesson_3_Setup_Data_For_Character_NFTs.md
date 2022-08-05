@@ -1,16 +1,16 @@
 ### 🤔 O que é uma NFT?
 
-Haha, essa é uma grande questão. Esteja certo de ler [isso](https://github.com/buildspace/buildspace-projects/blob/main/NFT_Collection/en/Section_1/Lesson_1_What_Is_A_NFT.md) rapidamente para te dar uma noção antes de seguir em frente. Enquanto você tiver a _ideia geral_ sobre o que é uma NFT, isso é tudo o que você precisa aqui!
+Haha, essa é uma grande questão. Esteja certo de ler [isso](https://github.com/w3b3d3v/buildspace-projects/blob/web3dev-version/NFT_Collection/pt-br/Section_1/Lesson_1_What_Is_A_NFT.md) rapidamente para te dar uma noção antes de seguir em frente. Enquanto você tiver a _ideia geral_ sobre o que é uma NFT, isso é tudo o que você precisa aqui!
 
 ### 😮 Como vamos usar NFTs jogáveis.
 
 Legal. Nós temos todo ambiente básico configurado. Vamos dar uma passo pra trás para explicar esse jogo que estamos fazendo em um nível mais alto:
 
-O objetivo do nosso jogo vai ser destruir um chefão, um boss. Vamos falar que o boss tenha 1,000,000 de vida. O que os jogadores fazem é, quando começarem o jogo, eles mintam um **personagem NFT** que tem uma quantidade de **Dano de Ataque** e **Vida**. Jogadores podem pedir que o seu **personagem NFT** ataque o boss e aplicar dano nele. Quase como Pokemon!
+O objetivo do nosso jogo vai ser destruir um chefão, um boss. Vamos falar que o boss tenha 1,000,000 de vida. O que os jogadores fazem é, quando começarem o jogo, eles mintam um **personagem NFT** que tem uma quantidade de **Dano de Ataque** e **Vida**. Jogadores podem pedir que o seu **personagem NFT** ataque o boss e aplicar dano nele. Quase como Pokémon!
 
 O objetivo? Jogadores precisam trabalhar juntos para atacar o boss e trazer seu HP (vida) para 0. Qual é o truque? Toda vez que um player bater no boss, o boss bate nele de volta! Se a vida da NFT for pra 0 ou menos, o jogador daquela NFT **morre** e ele não pode mais bater no boss. Jogadores **só podem ter um personagem NFT em suas carteiras.** Uma vez que o personagem NFT morre, o jogo acaba. Isso significa que muitos jogadores precisam juntar forças para atacar o boss e matá-lo.
 
-**Nota: Se você quiser que o seu jogador esteja apto a segurar múltiplos personagens em sua carteira (como no Pokemon), sinta-se livro para fazer modificações você mesmo!**
+**Nota: Se você quiser que o seu jogador esteja apto a segurar múltiplos personagens em sua carteira (como no Pokémon), sinta-se livro para fazer modificações você mesmo!**
 
 O importante a saber aqui é que os personagens são **NFTs**.
 
@@ -129,7 +129,7 @@ const main = async () => {
     [100, 50, 25] // Attack damage values
   );
   await gameContract.deployed();
-  console.log("Contract deployed to:", gameContract.address);
+  console.log("Contrato implantado no endereço:", gameContract.address);
 };
 
 const runMain = async () => {
@@ -145,7 +145,7 @@ const runMain = async () => {
 runMain();
 ```
 
-Não estou fazendo nada muito chique aqui. Em `run.js`, basicamente definimos os três personagens e suas estatísticas. Meus personagens são Leonardo DiCaprio, Aang de Abatar e Pikachu... Cada personagem tem basicamente um id, nome, imagem, valor de vida, e valor de ataque.
+Não estou fazendo nada muito chique aqui. Em `run.js`, basicamente definimos os três personagens e suas estatísticas. Meus personagens são Leonardo DiCaprio, Aang de Avatar e Pikachu... Cada personagem tem basicamente um id, nome, imagem, valor de vida, e valor de ataque.
 
 Por exemplo, nesse caso `Aang` tem 200 HP, 50 de dano de ataque. Ele tem muita vida, mas seu ataque não dá tanto dano quanto o de Leonardo! Leonardo tem menos HP, mas dá mais dano. Isso significa que no jogo, ele morrerá mais rápido, mas dará muito dano.
 
@@ -157,7 +157,7 @@ Ok, é isso :)!! Quando eu rodar isso usando `npx hardhat run scripts/run.js` e 
 Done initializing Leo w/ HP 100, img https://i.imgur.com/pKd5Sdk.png
 Done initializing Aang w/ HP 200, img https://i.imgur.com/xVu4vFL.png
 Done initializing Pikachu w/ HP 300, img https://i.imgur.com/WMB6g9u.png
-Contract deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 ```
 
 Boom! Nós oficialmente criamos três personagens e estamos salvando os dados deles diretamente no nosso contrato.
@@ -172,4 +172,9 @@ Talvez queira que seus personagens tenham coisas como "mana", "energia", ou "cha
 
 **Customize seus personagens. É isso que faz ficar divertido!** Por exemplo, eu adicionei Leonardo DiCaprio e Pikachu como personagens pois pensei que seria engraçado - e eu rio toda vez que vejo haha.
 
-Mudar coisas pequenas como personagens vai fazere você sentir que é uma coisa mais sua e você estará mais motivado a construir tudo isso no caminho :).
+Mudar coisas pequenas como personagens vai fazer você sentir que é uma coisa mais sua e você estará mais motivado a construir tudo isso no caminho :).
+
+### 🚨 Reporte seu Progresso!
+
+Poste uma screenshot em #progresso exibindo alguns dos seus personagens -- talvez você possa mostrar o personagem e nos falar o nome dele e quanto HP e Ataque ele tem!!!
+Post a screenshot in #progress introducing one of your characters -- perhaps post their image + let us know their name and amount of AD/HP they have!! 

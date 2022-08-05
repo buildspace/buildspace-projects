@@ -2,23 +2,23 @@
 
 Quando usamos  `run.js`, só está funcionando localmente.
 
-O próximo passo é uma testnet, que você pode pensar como ambiente de desenvolvimento, de teste. Quando fizermos o deploy para uma testnet, vamos estar aptos a  **ver a nossa NFT online** e estamos mais um passo de conseguir  **usuários reais.**
+O próximo passo é uma testnet, que você pode pensar como ambiente de desenvolvimento, de teste. Quando fizermos o deploy para uma testnet, estaremos aptos a  **ver a nossa NFT online** e a mais um passo de conseguir  **usuários reais.**
 
 ### 🦊 Metamask
 
-Depois, precisamos de uma carteira Ethereum. Existem várias, mas, para esse projet, vamos usar Metamask. Baixe a extensão de navegador e configure sua carteira  [aqui](https://metamask.io/download.html). Mesmo se você tiver outra carteira, só use o Metamask por agora.
+Depois, precisamos de uma carteira Ethereum. Existem várias, mas, para esse projeto, vamos usar a Metamask. Baixe a extensão de navegador e configure sua carteira  [aqui](https://metamask.io/download.html). Mesmo se você tiver outra carteira, só use a Metamask por agora.
 
-Por quê precisamos do Metamask? Bom. Precisamos estar aptos a chamar funções no nosso contrato inteligente que vive na blockchain. E, para fazer isso, precisamos ter uma carteira que tem nosso endereço Ethereum e chave privada.
+Por quê precisamos da Metamask? Bom. Precisamos estar aptos a chamar funções no nosso contrato inteligente que vive na blockchain. E, para fazer isso, precisamos ter uma carteira que tem nosso endereço Ethereum e chave privada.
 
 **Mas, precisamos de algo para conectar o nosso site com a nossa carteira para que possamos passar nossas credenciais de carteira para o site de maneira segura, para que o site possa usar essas credenciais para chamar nosso contrato inteligente. Você precisa ter credenciais válidas para acessar funções nos contratos inteligentes.**
 
 É quase como autenticação. Precisamos de algo para fazer "login" na blockchain e depois usar essas credenciais para fazer requisições na API pelo nosso site.
 
-Então, vá em frente e configure! O flow de setup deles é bem autoexplicativo :).
+Então, vá em frente e configure! O fluxo de setup deles é bem autoexplicativo :).
 
 ### **💳 Transações**
 
-Então, quando nós quisermos performar uma ação que mude a blockchain, nós chamamos isso de _transaction_. Por exemplo, mandar ETH para alguém é uma transação porque estamos mudando o saldo das contas. Fazer algo que atualiza uma variável no nosso contrato também é considerado uma transação porque estamos mudando dados. Mintar uma NFT é uma transação porque estamos salvando dados no contrato.
+Então, quando nós quisermos realizar uma ação que mude a blockchain, nós chamamos isso de _transação_. Por exemplo, mandar ETH para alguém é uma transação porque estamos mudando o saldo das contas. Fazer algo que atualiza uma variável no nosso contrato também é considerado uma transação porque estamos mudando dados. Mintar uma NFT é uma transação porque estamos salvando dados no contrato.
 
 **Implementando (deploying) um contrato inteligente também é uma transação.**
 
@@ -26,16 +26,16 @@ Lembre-se, a blockchain não tem dono. É só um monte de computadores ao redor 
 
 Quando implementarmos nosso contrato, nós precisamos falar **para todos esses** mineradores, "ei, esse é um contrato inteligente novo, por favor adicione meu contrato inteligente à blockchain e diga para todo mundo sobre ele também".
 
-Aqui é onde o [Alchemy](https://alchemy.com/?r=b93d1f12b8828a57) entra.
+Aqui é onde o [Alchemy](https://alchemy.com/?r=jQ3MDMxMzUyMDU3N) entra.
 
 Alchemy essencialmente nos ajuda a transmitir a criação do nosso contrato para que ele possa ser pego pelos mineradores o mais rápido possível. Uma vez que a transação for minerada (validada), será então transmitida para a blockchain como uma transação legítima. A partir daí, todo mundo atualiza suas cópias da blockchain.
 
 Isso é complicado. E, não se preocupe se você não entendeu completamente. Enquanto você escrever mais código e construir esse app, vai fazer mais sentido naturalmente.
 
-Então, crie uma conta com o Alchemy [aqui](https://alchemy.com/?r=b93d1f12b8828a57).
+Então, crie uma conta com o Alchemy [aqui](https://alchemy.com/?r=jQ3MDMxMzUyMDU3N).
 
 E depois dê uma olhada no meu vídeo abaixo:
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0)
+[Loom](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933)
 )
 
 ## 🕸 Testnets
@@ -67,8 +67,6 @@ Você tem alguns faucets para escolher:
 | MyCrypto | https://app.mycrypto.com/faucet
 
 | Buildspace | https://buildspace-faucet.vercel.app/
-
-| Ethily | https://ethily.io/rinkeby-faucet/
 
 | Official Rinkeby | https://faucet.rinkeby.io/
 
@@ -150,7 +148,7 @@ Você pode conseguir URL da sua API no dashboard do Alchemy e colar ali mesmo. D
 
 **Nota: NÃO FAÇA COMMIT DESSE ARQUIVO NO GITHUB. ELE CONTÉM SUA CHAVE PRIVADA. VOCÊ PODE SER ROUBADO E HACKEADO. ESSA CHAVE PRIVADA É A MESMA QUE A DA MAINNET.** Nós vamos falar sobre variáveis `.env` depois e como mantê-las em segredo.
 
-Por quê você precisa dessa chave privada? Porque para performar uma transação como fazer deploy de um contrato, você precisa "logar" na blockchain e assinar/ fazer deploy do contrato. E, o seu nome de usuário é o seu endereço público, e sua senha é sua chave privada. É como fazer login na AWS ou GCP para fazer deploy.
+Por quê você precisa dessa chave privada? Porque para realizar uma transação, como fazer deploy de um contrato, você precisa "logar" na blockchain e assinar / fazer deploy do contrato. E, o seu nome de usuário é o seu endereço público, e sua senha é sua chave privada. É como fazer login na AWS ou GCP para fazer deploy.
 
 Uma vez que você configurou o seu setup, estamos prontos para fazer o deploy com o script que escrevemos mais cedo.
 
@@ -163,12 +161,12 @@ npx hardhat run scripts/deploy.js --network rinkeby
 Aqui está o que eu consigo:
 
 ```plaintext
-Contract deployed to: 0x1bB5b2f90AaB36E2742886f75DD7F3c5B420Bf33
+Contrato implantado no endereço: 0x1bB5b2f90AaB36E2742886f75DD7F3c5B420Bf33
 Minted NFT #1
 Minted NFT #2
 Minted NFT #3
 Minted NFT #4
-Done deploying and minting!
+Done e Minting terminados!
 ```
 
 Podemos ter certeza que tudo funcionou corretamente usando o  [Rinkeby Etherscan](https://rinkeby.etherscan.io/) onde você copiar e colar o endereço do contrato que foi o output para ver o que aconteceu com ele. Aqui eu posso ver que tivemos **cinco** transações. **Uma** transação de criação de contrato e **quatro** transações onde mintamos NFT. Isso está certo :).
@@ -216,7 +214,7 @@ _Nota: você vai perceber que nós mintamos 4 NFTs para a mesma carteira nesse c
 **Use o Rarible ao invés do OpenSea.** Rarible é outro marketplace NFT como o OpenSea. Aqui está como configurá-lo:
 
 1. Vá para `rinkeby.rarible.com`.
-2. Crie esse URL: `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE.`
+2. Crie esse URL: `https://rinkeby.rarible.com/token/INSIRA_O_ENDEREÇO_DO_CONTRATO_AQUI:INSIRA_O_TOKEN_ID_AQUI.`
 
 Por exemplo, esse é o meu link:
 
@@ -224,7 +222,7 @@ Por exemplo, esse é o meu link:
 https://rinkeby.rarible.com/token/0xcec8593c046364f163926a4327dfce6f546d9f98:4
 ```
 
-Esse é a NFT do Pikachu!! Meu  `tokenId` é `4` porque foi o quarto mint feito daquele contrato. Sinta-se livre para tentar colocar outros Ids.
+Esse é a NFT do Pikachu!! Meu `tokenId` é `4` porque foi o quarto mint feito daquele contrato. Sinta-se livre para tentar colocar outros Ids.
 
 **Basicamente, se você não vir sua NFT no OpenSea dentro de alguns minutos, tente o Rarible para ter certeza que está funcionando.**
 
@@ -248,7 +246,7 @@ O que vamos fazer depois é que vamos programar a lógica do nosso jogo para lut
 
 Quase como Pokemon!
 
-Isso significa que nossa NFT terá _utilidade_ fora ser apenas algo de se olhar.
+Isso significa que nossa NFT terá _utilidade_ além de ser apenas algo de se olhar.
 
 Isso é bem incrível. Em jogos normais hoje em dia, você compraria um jogo e escolheria um personagem (como em Super Smash Brothers).
 
@@ -274,4 +272,9 @@ Por exemplo, digamos que nós temos outros devs construindo itens em cima dos no
 
 Em cima disso, como o criador das NFTs originais do Pikachu - eu posso cobrar uma taxa royalty toda vez que alguém compre ou venda a NFT original e isso significa que quanto mais popular a NFT, mais dinheiro eu faria por venda.
 
-Ok - vamos ir para programar a lógica do jogo.
+Ok - vamos programar a lógica do jogo.
+
+### 🚨 Reporte seu Progresso !
+*Por favor, faça isso se não o yanluiz vai ficar triste :(*
+
+Poste uma screenshot em #progresso dos seus NFTs épicos no OpenSea. Faça um tweet sobre isso, espalhe pro mundo o que você fez, foi incrível! Marque a @Web3dev_ no twitter que a gente retweeta para você. Adoramos quando as pessoas interagem pelo twitter, é como uma dose de dopamina e motivação. Além do mais o seu tweet pode ajudar a divulgar a comunidade e a web3 para o mundo!

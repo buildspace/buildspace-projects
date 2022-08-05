@@ -1,10 +1,10 @@
-_Nota: Se você já fez outros projetos na buildspace, vários dos itens de configuração das próximas duas aulas são repetidos de projetos passados. Se você ja entende, incrível! Você é um pro. Sinta-se livre para passar por eles bem rápido._
+_Nota: Se você já fez outros projetos na WEB3DEV, vários dos itens de configuração das próximas duas aulas são repetidos de projetos passados. Se você ja entende, incrível! Você é um pro. Sinta-se livre para passar por eles bem rápido._
 
 ### **📚 Um pequeno resumo sobre blockchain.**
 
 Antes de qualquer coisa, vamos precisar colocar a nossa rede Ethereum para funcionar. Isso é como nós poderemos compilar e testar nosso contrato inteligente. Você sabe como você precisa construir um ambiente local pra trabalhar? Mesma coisa aqui!
 
-Por agora, tudo o que você precisa saber é que um contrato inteligente é um pedaço de código que vive na blockchain. A blockchain é um lugar público onde qualquer um pode ler e escrever dados seguramente por uma taxa. Pense nela como parecida com AWS ou Heroku, tirando o fato de que ninguém pertence ela! A blockchain é rodada por milhares de pessoas aleatórias conhecidas como "mineradoras".
+Por agora, tudo o que você precisa saber é que um contrato inteligente é um pedaço de código que vive na blockchain. A blockchain é um lugar público onde qualquer um pode ler e escrever dados seguramente por uma taxa. Pense nela como parecida com AWS ou Heroku, tirando o fato de que ninguém é dono dela! A blockchain é rodada por milhares de pessoas aleatórias conhecidas como "mineradoras".
 
 O quadro maior aqui é:
 
@@ -14,11 +14,11 @@ O quadro maior aqui é:
 
 3 -- **Nós vamos construir um site para o cliente**. Isso vai deixar as pessoas conectarem suas carteiras Ethereum facilmente e jogar nosso jogo.
 
-Eu recomendo ler  [essas](https://ethereum.org/en/developers/docs/intro-to-ethereum/) documentações quando você puder, por diversão. Esses são os melhores guias da internet para entender como o Ethereum funciona, na minha opinião!
+Eu recomendo ler [essas](https://ethereum.org/pt/developers/docs/intro-to-ethereum/) documentações quando você puder, por diversão. Esses são os melhores guias da internet para entender como o Ethereum funciona, na minha opinião!
 
 ### **⚙️ Configurando ferramentas locais.**
 
-Nós vamos usar uma muito ferramenta chamada  **Hardhat** , a qual vai nos deixar compilar e testar contratos inteligentes rapidamente e localmente. Primeiro você precisa ter o node/npm. Se você não tiver, vá até  [aqui](https://hardhat.org/tutorial/setting-up-the-environment.html).
+Nós vamos usar uma muito ferramenta chamada  **Hardhat**, a qual vai nos deixar compilar e testar contratos inteligentes rapidamente e localmente. Primeiro você precisa ter o node/npm. Se você não tiver, vá até  [aqui](https://hardhat.org/tutorial/setting-up-the-environment.html).
 
 _Nota: Eu estou usando o Node 16. Eu sei que algumas pessoas tiveram "erros de falta de memória" em versões mais velhas, então, se isso acontecer, pegue o Node 16!_
 
@@ -28,10 +28,10 @@ Depois, vamos para o terminal. Vá em frente e  `cd`  para o diretório que voc�
 mkdir epic-game
 cd epic-game
 npm init -y
-npm install --save-dev hardhat
+npm install --save-dev hardhat@2.9.9
 ```
 
-Você pode ver uma mensagem sobre vulnerabilidades depois de rodar o último comando e instalar o Hardhat. Toda vez que você isntalar algo do NPM, existe uma triagem de segurança para ver se algum dos pacotes da library que você está instalando teve alguma vulnerabilidade reportada. Isso é mais como um aviso para que você esteja ciente! Pesquise no google um pouco mais sobre essas vulnerabilidades se quiser saber mais!
+Você pode ver uma mensagem sobre vulnerabilidades depois de rodar o último comando e instalar o Hardhat. Toda vez que você instalar algo do NPM, existe uma triagem de segurança para ver se algum dos pacotes da biblioteca que você está instalando teve alguma vulnerabilidade reportada. Isso é mais como um aviso para que você esteja ciente! Pesquise no google um pouco mais sobre essas vulnerabilidades se quiser saber mais!
 
 ### **🔨 Colocar o projeto teste rodando**
 
@@ -41,7 +41,7 @@ Legal, agora nós temos o hardhat. Vamos colocar um projeto experimental funcion
 npx hardhat
 ```
 
-_Nota: Se você estiver no Windows usando Git Bash para instalar o Hardhat, você pode dar de cara com um erro nesse passo (HH1). Você pode tentar usar a CMD Windoes para performar a instalação do HardHat se você tiver problemas. Informações adicionais podem ser encontradas [aqui](https://github.com/nomiclabs/hardhat/issues/1400#issuecomment-824097242)._
+_Nota: Se você estiver no Windows usando Git Bash para instalar o Hardhat, você pode dar de cara com um erro nesse passo (HH1). Você pode tentar usar a CMD Windows para performar a instalação do HardHat se você tiver problemas. Informações adicionais podem ser encontradas [aqui](https://github.com/nomiclabs/hardhat/issues/1400#issuecomment-824097242)._
 
 Escolha a opção de criar um projeto básico. Diga sim para tudo.
 
@@ -53,7 +53,7 @@ Vá em frente e instale essas outras dependências em caso delas não terem sido
 npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 ```
 
-Você também vai querer instalar algo chamado  **OpenZeppelin** , que é outra library muito usada para desenvolver contratos inteligentes seguros. Vamos aprender mais sobre ela depois. Por agora, só a instale :).
+Você também vai querer instalar algo chamado  **OpenZeppelin** , que é outra biblioteca muito usada para desenvolver contratos inteligentes seguros. Vamos aprender mais sobre ela depois. Por agora, só a instale :).
 
 ```javascript
 npm install @openzeppelin/contracts
@@ -62,10 +62,10 @@ npm install @openzeppelin/contracts
 Depois rode:
 
 ```javascript
-npm install @openzeppelin/contracts
+npx hardhat run scripts/sample-script.js
 ```
 
-Boom! Se você ver algumas coisas no seu terminal sobre um contrato sendo implantado (deployed), isso significa que seu ambiente local está configurando  **e** você também rodou/implantou um contrato inteligente numa blockchain local.
+Boom! Se você vir algumas coisas no seu terminal sobre um contrato sendo implantado (deployed), isso significa que seu ambiente local está configurando **e** você também rodou/implantou um contrato inteligente numa blockchain local.
 
 Isso é bastante épico. Vamos mais a fundo nisso, mas basicamente o que está acontecendo aqui é:
 
@@ -73,6 +73,10 @@ Isso é bastante épico. Vamos mais a fundo nisso, mas basicamente o que está a
 2. O Hardhat vai rodar uma "blockchain local" no seu computador. É como uma mini versão de teste do Ethereum rodando no seu computador para ajudar você a rapidamente testar coisas.
 3. O Hardhat vai então fazer o "deploy" do seu contrato inteligente compilado. Esse é o endereço que você vê no final. É o seu contrato inteligente já implantado, na nossa mini versão do Ethereum.
 
-Se estiver curioso, sinta-se livre para ver o código dentor do projeto e ver como ele funciona. Especificamente, olhe  `Greeter.sol` que é o contrato inteligente e `sample-script.js` que roda o contrato.
+Se estiver curioso, sinta-se livre para olhar o código dentro do projeto e ver como ele funciona. Especificamente, olhe  `Greeter.sol` que é o contrato inteligente e `sample-script.js` que roda o contrato.
 
 Uma vez que tiver explorado, vamos para a próxima seção e começar o contrato do nosso jogo.
+
+### 🚨 Reporte seu Progresso!
+
+Poste uma screenshot em #progresso com a saída do terminal quando você rodou `sample-script.js` para mostrar que seu ambiente local tá rodando :).
