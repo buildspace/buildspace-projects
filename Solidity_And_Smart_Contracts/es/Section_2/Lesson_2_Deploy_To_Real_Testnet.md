@@ -4,7 +4,7 @@ Continuemos y vamos a cerrar la terminal con la que corrimos la red local de cad
 Ya no lo vamos a necesitar, era para mostrarles como implementar localmente.
 Ahora lo vamos a hacer de verdad, vamos a desplegar a la cadena de bloques.
 
-Por favor ahora necesito que crees una cuenta de QuickNode [aquí](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
+Por favor ahora necesito que crees una cuenta de QuickNode [aquí](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 Una disculpa por pedirles que creen tantas cuentas, pero, este ecosistema es complejo y queremos que tomes ventaja de las increíbles herramientas que existen, 
 QuickNode nos ayuda a implementar en la cadena de bloques real de Ethereum de forma sencilla.
@@ -31,7 +31,7 @@ transacción es minada se transmite a la cadena de bloques como una transacción
 Esto es complicado, y no te preocupes si no lo entiendes por completo. Mientras más código escribas y sigas construyendo esta aplicación, naturalmente te irá 
 haciendo mayor sentido.
 
-Crea una cuenta de QuickNode [aquí](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
+Crea una cuenta de QuickNode [aquí](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 Por favor revisa el siguiente video para que veas como obtener tu “API KEY” para la red de pruebas.
 [Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)

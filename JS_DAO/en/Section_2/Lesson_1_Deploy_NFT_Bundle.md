@@ -40,7 +40,7 @@ The last thing you need in your `.env` file is `QUICKNODE_API_URL`.
 
 QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners on the testnet as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
-So, make an account with QuickNode [here](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
+So, make an account with QuickNode [here](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 Check out the video below to see how to get your API key for a **testnet**! Don't mess up and create a mainnet key, **we want a testnet key.** 
 

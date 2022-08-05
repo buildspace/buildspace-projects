@@ -14,13 +14,13 @@ When we deploy our contract, we need to tell **all** the nodes:
 
 **"hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well"**
 
-This is where [QuickNode](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de) comes in.
+This is where [QuickNode](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) comes in.
 
 QuickNode helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
 This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense.
 
-This is where we will start - making an account with QuickNode! Just [click here](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de) to get started. Once you have your account all ready to go, we will need to grab our API key. Take a look at this video I made to learn how to quickly get this key as we will need it for later:
+This is where we will start - making an account with QuickNode! Just [click here](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) to get started. Once you have your account all ready to go, we will need to grab our API key. Take a look at this video I made to learn how to quickly get this key as we will need it for later:
 
 [Loom](https://www.loom.com/share/bdbe5470b4b745819782f6727ba60baa)
 

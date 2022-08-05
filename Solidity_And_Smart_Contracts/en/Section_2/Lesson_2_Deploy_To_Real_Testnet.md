@@ -4,7 +4,7 @@ Go ahead and close the terminal with your local blockchain network running which
 
 Now we're going to be doing the real deal, deploying to the actual blockchain.
 
-Go ahead and make an account with QuickNode [here](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
+Go ahead and make an account with QuickNode [here](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 Sorry for having you make so many accounts, but, this ecosystem is complex and we want to take advantage of the awesome tools out there. What QuickNode does is it gives us a simple way to deploy to the real Ethereum blockchain.
 
@@ -18,13 +18,13 @@ Remember, the blockchain has no owner. It's just a bunch of computers around the
 
 When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
 
-This is where [QuickNode](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de) comes in.
+This is where [QuickNode](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) comes in.
 
 QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
 This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
 
-So, make an account with QuickNode [here](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
+So, make an account with QuickNode [here](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 Checkout the video below to see how to get your API key for a testnet!
 [Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
