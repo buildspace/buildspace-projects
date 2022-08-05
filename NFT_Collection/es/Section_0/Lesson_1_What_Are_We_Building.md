@@ -1,4 +1,4 @@
-# Lesson_1_What_Are_We_Building
+
 ## 👋 Bienvenida
 ¡Lo lograste! ¡Bien hecho! Bienvenido :) Mi nombre es Farza y yo seré su maestro y mentor. Este proyecto es para desarrolladores que quieren introducirse a la tecnología cripto. Todo lo que realmente necesitan es conocimiento de Terminal, conocimiento y entendimiento de JavaScript y conocimiento de react.js. El resto lo irás aprendiendo en el camino.
 Algunas consideraciones importantes antes de empezar:
