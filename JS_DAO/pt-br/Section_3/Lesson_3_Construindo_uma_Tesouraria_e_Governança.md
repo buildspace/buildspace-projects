@@ -1,4 +1,4 @@
-Um token de governança é legal e tal, mas é meio inútil se as pessoas não puderem usar para goevrnar alguma coisa! O que nós vamos fazer aqui é configurar um contrato de governança que permite pssoas votarem em propostas usando seus tokens
+Um token de governança é legal e tal, mas é meio inútil se as pessoas não puderem usar para governar alguma coisa! O que nós vamos fazer aqui é configurar um contrato de governança que permite pssoas votarem em propostas usando seus tokens
 
 ### 📝 Faça deploy de um contrato de governança.
 
