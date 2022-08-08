@@ -2335,6 +2335,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "bobjiang",
+      "name": "Bob Jiang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1224604?v=4",
+      "profile": "https://github.com/bobjiang",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
