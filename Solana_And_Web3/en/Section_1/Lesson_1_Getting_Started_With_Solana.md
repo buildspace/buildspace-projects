@@ -40,7 +40,7 @@ We'll be using this thing called [Replit](https://replit.com/~)!
 
 It is a browser-based IDE that lets us easily build web apps and deploy them all from the browser. It is super legit. Instead of having to set up a full local environment and write commands to deploy, it's all just given to us.
 
-Note: **You don't have to use replit to build + deploy your site. If you want to work locally on VSCode and use Vercel/Heroku/AWS to deploy and are confident in your web dev skills -- that's totally cool. [Here is the link](https://github.com/buildspace/gif-portal-starter) to the base repo you can clone and work on locally.**
+Note: **You don't have to use replit to build + deploy your site. If you want to work locally on VSCode and use Vercel/Heroku/AWS to deploy and are confident in your web dev skills -- that's totally cool. [Here is the link](https://github.com/buildspace/gif-portal-starter) to the base repo you can clone and work on locally.** *You will need to use Node 16 or less*
 
 If you decide to go with Replit, make an account with them before moving on!
 
