@@ -424,6 +424,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ducksblock"><img src="https://avatars.githubusercontent.com/u/105146670?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ducksblock</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ducksblock" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Kampani"><img src="https://avatars.githubusercontent.com/u/75481250?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Manav Kampani</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=kampani" title="Documentation">📖</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/bobjiang"><img src="https://avatars.githubusercontent.com/u/1224604?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bob Jiang</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=bobjiang" title="Documentation">📖</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
