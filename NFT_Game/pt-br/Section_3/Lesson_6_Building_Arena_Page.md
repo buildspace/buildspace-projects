@@ -177,7 +177,7 @@ return (
 );
 ```
 
-Você provavelmente vai ter um erro onde `runAttackAction` é undefinde! Vamos adicionar um placeholder por isso embaixo do nosso estado para que possamos pelo menos ver como nossa UI vai se parecer. Vamos nos preocupar com essa lógica **#logo**:
+Você provavelmente vai ter um erro onde `runAttackAction` é undefined! Vamos adicionar um placeholder por isso embaixo do nosso estado para que possamos pelo menos ver como nossa UI vai se parecer. Vamos nos preocupar com essa lógica **#logo**:
 
 ```javascript
 // Actions
@@ -295,7 +295,7 @@ const runAttackAction = async () => {
 
 Em seções próximas, vamos falar mais sobre coonstruir noss RNG nos ataques!
 
-Vamos falar um pouco sobre `setAttackState`. Como mencionado em cima, estamos usando isso para adicionar algumas animações enquanto os ataques ocorrem. Eu tive a ideia a partir do Pokemon Yello para Gameboy Color.
+Vamos falar um pouco sobre `setAttackState`. Como mencionado em cima, estamos usando isso para adicionar algumas animações enquanto os ataques ocorrem. Eu tive a ideia a partir do Pokemon Yellow para Gameboy Color.
 
 Temos 3 estados diferentes:
 
@@ -419,9 +419,9 @@ setCharacterNFT((prevState) => {
 });
 ```
 
-No React, `useState` nos permite pegar o valor anterior do estado antes de setar um novo! Isso é muito útil porque tudo que queremos é sobrescrever a vida para cada personagem. A maneira de fazer isso é com algo chamado [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Eu não vou entrar muito a funda nisso, mas saiba que faz uma cópia de todas as propriedades no nosso objeto.
+No React, `useState` nos permite pegar o valor anterior do estado antes de setar um novo! Isso é muito útil porque tudo que queremos é sobrescrever a vida para cada personagem. A maneira de fazer isso é com algo chamado [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Eu não vou entrar muito a fundo nisso, mas saiba que faz uma cópia de todas as propriedades no nosso objeto.
 
-Finalmente, nós precisamos só adicionar a propriedade `hp` e os novos valores. Já que isso é DEPOIS do spread, o JavaScript sabe sobrescrever o valor de Hp atual com o novo. É isso.
+Finalmente, nós precisamos só adicionar a propriedade `hp` e os novos valores. Já que isso é DEPOIS do spread, o JavaScript sabe sobrescrever o valor de HP atual com o novo. É isso.
 
 Vamos tentar atacar o Elon novamente. Passe pelo seu mesmo setup e você deve ver agora as barras de vida do personagem atualizarem. Olhe seu console e você também verá seus dados escritos como isso:
 

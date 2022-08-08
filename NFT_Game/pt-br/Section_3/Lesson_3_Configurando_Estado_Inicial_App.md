@@ -28,7 +28,7 @@ import "./SelectCharacter.css";
 const SelectCharacter = ({ setCharacterNFT }) => {
   return (
     <div className="select-character-container">
-      <h2>Mint Your Hero. Choose wisely.</h2>
+      <h2>Mint seu Herói. Escolha com sabedoria.</h2>
     </div>
   );
 };
@@ -36,7 +36,7 @@ const SelectCharacter = ({ setCharacterNFT }) => {
 export default SelectCharacter;
 ```
 
-Muito bom! Viu como foi fácil? Você já tem um componente pornto! Vamos em frente e configurar nossa renderização condicional para que possamos ver essa coisa.
+Muito bom! Viu como foi fácil? Você já tem um componente pronto! Vamos em frente e configurar nossa renderização condicional para que possamos ver essa coisa.
 
 ### 👁 Mostrando o componente SelectCharacter.
 
@@ -82,7 +82,7 @@ const renderContent = () => {
           className="cta-button connect-wallet-button"
           onClick={connectWalletAction}
         >
-          Connect Wallet To Get Started
+          Conecte sua carteira para começar
         </button>
       </div>
     );
@@ -114,7 +114,7 @@ return (
   <div className="App">
     <div className="container">
       <div className="header-container">
-        <p className="header gradient-text">⚔️ Metaverse Slayer ⚔️</p>
+        <p className="header gradient-text">⚔️ Metaverso Slayer ⚔️</p>
         <p className="sub-text">Team up to protect the Metaverse!</p>
         {/*
          * Aqui é onde nosso botão e código de imagem ficava! Lembre-se que movemos para o método de renderização.
@@ -163,7 +163,7 @@ Vá em frente e conecte sua carteira! Uma vez que sua carteira estiver conectada
 
 ![Untitled](https://i.imgur.com/K3kvxeE.png)
 
-**BOOM.** Bom trbaalho! Você acabou de criar um componente em React, configurou uma condição de renderização, **_e_** configurou o seu Login de carteira, pronto e funcionando! Com os projetos da buildspace, é tudo sobre fazer o próprio projeto. Sinta-se livre para fazer o que quiser com essas páginas!
+**BOOM.** Bom trabalho! Você acabou de criar um componente em React, configurou uma condição de renderização, **_e_** configurou o seu Login de carteira, pronto e funcionando! Com os projetos da WEB3DEV, é tudo sobre fazer o próprio projeto. Sinta-se livre para fazer o que quiser com essas páginas!
 
 Na próxima seção vamos começar a interagir com o nosso contrato e ver se o endereço da carteira conectada já mintou um personagem NFT. Isso vai desbloquear que façamos o seguinte:
 

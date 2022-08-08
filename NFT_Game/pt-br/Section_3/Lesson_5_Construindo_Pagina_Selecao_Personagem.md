@@ -31,7 +31,7 @@ const SelectCharacter = ({ setCharacterNFT }) => {
 
   return (
     <div className="select-character-container">
-      <h2>Mint Your Hero. Choose wisely.</h2>
+      <h2>Minte seu Herói. Escolha com sabedoria.</h2>
     </div>
   );
 };
@@ -39,7 +39,7 @@ const SelectCharacter = ({ setCharacterNFT }) => {
 export default SelectCharacter;
 ```
 
-Quando o nosso componente for montado, nós vamos quere criar nosso `gameContract` para começar a usá-lo em seguida! Quero mostrar nossos personagens mintáveis o mais rápido possível. Isso significa que vamos chamar nosso contrato o mais cedo que pudermos. Nota: esse bloco de código vai embaixo da variável useState (embaixo de `const [gameContract, setGameContract] = useState(null);`.
+Quando o nosso componente for montado, nós vamos criar nosso `gameContract` para começar a usá-lo em seguida! Quero mostrar nossos personagens mintáveis o mais rápido possível. Isso significa que vamos chamar nosso contrato o mais cedo que pudermos. Nota: esse bloco de código vai embaixo da variável useState (embaixo de `const [gameContract, setGameContract] = useState(null);`.
 
 ```javascript
 // UseEffect
@@ -152,7 +152,7 @@ Tem algumas coisas que quero falar aqui antes de irmos em frente:
 ```javascript
 return (
   <div className="select-character-container">
-    <h2>Mint Your Hero. Choose wisely.</h2>
+    <h2>Minte seu Herói. Escolha com sabedoria.</h2>
     {/* Só mostra isso se tiver personagens no estado
      */}
     {characters.length > 0 && (

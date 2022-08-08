@@ -12,11 +12,11 @@ Nós vamos estar usando essa coisa chamada [Replit](https://replit.com/~)!
 
 É uma IDE baseada em navegador que nos deixa facilmente construir web apps e fazer o deploy deles a partir do navegador. É bem legítimo. Ao invés de configurar um ambiente local inteiro e escrever comandos para fazer deploy, é tudo dado para nós.
 
-Nota: **Você não tem que usar replit para construir + fazer deploy do seu site. Se você quiser trabalhar localmente no VSCode e usar Vercel/Heroku/AWS para fazer o deploy e está confiante de suas habilidades em desenvolvimento web -- isso está legal. [Aqui está um link](https://github.com/buildspace/buildspace-nft-game-starter) para o repositório base que você pode clonar e trabalhar localmente.**
+Nota: **Você não tem que usar replit para construir + fazer deploy do seu site. Se você quiser trabalhar localmente no VSCode e usar Vercel/Heroku/AWS para fazer o deploy e está confiante de suas habilidades em desenvolvimento web -- isso está legal. [REVIEW](https://github.com/buildspace/buildspace-nft-game-starter) para o repositório base que você pode clonar e trabalhar localmente.**
 
 Crie uma conta no Replit antes de ir em frente.
 
-Eu já criei um projeto básico em react que você pode fazer o  **fork** no Replit.  **[Só clique aqui](https://replit.com/@adilanchian/nft-game-starter-project?v=1), e perto da direita você verá um botão de "Fork".** Esteja certo de estar logado, e clique nisso.
+Eu já criei um projeto básico em react que você pode fazer o  **fork** no Replit.  **[REVIEW](https://replit.com/@adilanchian/nft-game-starter-project?v=1), e perto da direita você verá um botão de "Fork".** Esteja certo de estar logado, e clique nisso.
 
 Você irá magicamente clonar meu repositório e a IDE inteira no seu navegador para trabalhar com o código. Uma vez que parar de carregar e mostrar algum código, clique em "run" na parte de cima e pronto. Pode levar de 2-4 minutos na primeira vez.
 
@@ -24,4 +24,4 @@ Você irá magicamente clonar meu repositório e a IDE inteira no seu navegador 
 
 Aqui está um vídeo rápido que fiz para um outro projeto passando por algumas coisas básicas do Replit:
 
-[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
+[Loom](https://www.loom.com/share/4578eb9fba1243499a6913d214b21dc3)

@@ -10,7 +10,7 @@ Aqui está o flow de conseguir o nosso web app conectando com nosso contrato int
 
 2. Copie o último arquivo ABI, cole no nosso diretório do web app. (Depois vamos falar mais sobre oq ABI is).
 
-3. Importe o [ethers.js](https://github.com/ethers-io/ethers.js) par anos ajudar a falar com nosso contrato inteligente a partir do cliente.
+3. Importe o [ethers.js](https://github.com/ethers-io/ethers.js) para nos ajudar a falar com nosso contrato inteligente a partir do cliente.
 
 4. Chamar uma função no contrato inteligente para fazer alguma coisa!
 
@@ -23,7 +23,7 @@ Bem simples, esse é o endereço do contrato que fizemos deploy. Lembra que cada
 Nós vamos usar esse endereço em múltiplos componentes, então, vamos fazer isso funcionar! Na raíz do seu projeto, embaixo de `src` vá em frente e crie um arquivo `constants.js` e adicione o seguinte código:
 
 ```javascript
-const CONTRACT_ADDRESS = "YOUR_CONTRACT_ADDRESS_GOES_HERE";
+const CONTRACT_ADDRESS = "ENDEREÇO_DO_SEU_CONTRATO";
 
 export { CONTRACT_ADDRESS };
 ```
@@ -38,7 +38,7 @@ import { CONTRACT_ADDRESS } from "./constants";
 
 **Eu fiz um pequeno vídeo abaixo explicando as coisas sobre ABI:**
 
-[Loom](https://www.loom.com/share/2d493d687e5e4172ba9d47eeede64a37)
+[VEJA O VÍDEO](https://www.loom.com/share/6aa1031ea502453d9b9e77733e4cbd3b)
 
 **Por favor assista isso já que falo sobre coisas importantes (note que esse vídeo mostra esse processo acontecendo em outro projeto, mas o flow é o mesmo)**.
 
@@ -62,7 +62,7 @@ Cole o arquivo ABI dentro do nosso novo arquivo.
 import myEpicGame from "./utils/MyEpicGame.json";
 ```
 
-**Nota: você pode precisar Para e depois Começar seu Replit depois de adicionar esse arquivo**. Algumas vezes ele não pega o novo arquivo!
+**Nota: você pode precisar Parar (Stop) e depois Começar(Run) seu Replit depois de adicionar esse arquivo**. Algumas vezes ele não pega o novo arquivo!
 
 Nós agora temos as duas coisas necessárias para chamar nosso contrato a partir do web app: **o arquivo ABI e o endereço do contrato que fizemos deploy**!
 
@@ -80,7 +80,7 @@ Digamos que você queira mudar aleatoriamente seu contrat agora mesmo. Aqui est�
 
 **As pessoas esquecem constantemente de fazer esses 3 passos quando mudam seus contratos. Não esqueça.**
 
-Por queê precisamos fazer tudo isso? Porque contratos inteligentes são **imutáveis.** Eles não podem mudar, eles são permanentes. Isso significa que mudar um contrato exige um redeploy completo. Fazer um redeploy também **reiniciaria** todas as variáveis já que serão tratadas como um novo contrato. **Isso significa que perdemos todos os dados das nossas NFTs quando atualizarmos o código do contrato.**
+Por quê precisamos fazer tudo isso? Porque contratos inteligentes são **imutáveis.** Eles não podem mudar, eles são permanentes. Isso significa que mudar um contrato exige um redeploy completo. Fazer um redeploy também **reiniciaria** todas as variáveis já que serão tratadas como um novo contrato. **Isso significa que perdemos todos os dados das nossas NFTs quando atualizarmos o código do contrato.**
 
 Então, o que você precisa fazer é isso:
 
@@ -174,7 +174,7 @@ useEffect(() => {
 }, [currentAccount]);
 ```
 
-Isso é um pouco do React chique que eu estava falando antes. Você provavelmente também vai ter um erro falando como `transformCharacterData` é undefined :(. Continue - vamos endereçar isso rapidamente:
+Isso é um pouco do React chique que eu estava falando antes. Você provavelmente também vai ter um erro falando como `transformCharacterData` é undefined :(. Continue - vamos resolver isso rapidamente:
 
 ```javascript
 const fetchNFTMetadata = async () => {
@@ -236,7 +236,7 @@ Agora é hora de endereçar aquele método `transformCharacterData` que estamos 
 Podemos nos livrar do erro undefined fazendo com que o arquivo `constants.js` que criamos segure o endereço do nosso contrato e adicionando o seguinte:
 
 ```javascript
-const CONTRACT_ADDRESS = "YOUR_CONTRACT_ADDRESS_GOES_HERE";
+const CONTRACT_ADDRESS = "ENDEREÇO_DO_CONTRATO";
 
 /*
  * Adicione esse método e tenha certeza de exportá-lo no final!
