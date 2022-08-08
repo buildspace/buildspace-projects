@@ -169,3 +169,7 @@ Na próxima seção vamos começar a interagir com o nosso contrato e ver se o e
 
 1. Escreva a lógica para mintar o personagem NFT.
 2. Configure o componente `Arena` para que possamos derrubar o boss na nossa maneira 😈.
+
+## 🚨 Reporte seu Progresso!
+
+Em #progresso, poste um screenshot com a saída do seu console exibindo a mensagem que conectou na sua carteira. Incrível que você conseguiu! Conectar carteiras é o coração da magia da web3.

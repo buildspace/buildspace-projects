@@ -324,3 +324,10 @@ alert(
   `Your NFT is all done -- see it here: https://testnets.opensea.io/assets/${gameContract}/${tokenId.toNumber()}`
 );
 ```
+
+
+### 🚨 Reporte seu Progresso!
+
+Poste uma screenshot da sua seleção de personagens em #progresso -- é sempre muito divertido ver os personagens da galera!! É também ótima ideia fazer um tweet disso! Espalhe ao mundo que seu jogo NFT tem um personagem novo e fale do seu jogo para outras pessoas :).
+
+![Untitled](https://i.imgur.com/ycbOfNh.png)

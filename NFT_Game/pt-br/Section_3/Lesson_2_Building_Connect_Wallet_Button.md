@@ -304,3 +304,8 @@ export default App;
 Clique seu novo botão chique e você deve ver sua extensão Chrome do Metamask aparecer. Boa!
 
 ![Untitled](https://i.imgur.com/0HsWMpg.png)
+
+
+## 🚨 Reporte seu Progresso!
+
+Em #progresso, poste uma screenshot do seu site muito chique e não se esqueça de mudar seus GIFs e títulos para ficar algo mais a sua cara. Faça do SEU jeito!
