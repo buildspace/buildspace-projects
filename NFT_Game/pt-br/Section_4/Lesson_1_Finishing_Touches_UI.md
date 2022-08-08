@@ -165,7 +165,7 @@ const [gameContract, setGameContract] = useState(null);
 const [mintingCharacter, setMintingCharacter] = useState(false);
 ```
 
-Then let's go ahead and head over to the `mintCharacterNFTAction` , since this is the function that is doing the minting for us. Just like before, we could tweak this to include our new state updates:
+Então vamos em frente, vá para a `mintCharacterNFTAction`, já que esta é uma função que estava fazendo o mint para nós. Assim como antes, nós poderíamos mudar isso para incluir nossos novos estados atualizados:
 
 ```javascript
 const mintCharacterNFTAction = (characterId) => async () => {
@@ -260,7 +260,7 @@ O último ponto que queremos adicionar um indicador de carregamento está no nos
 
 A coisa legal sobre esse componente é que nós já temos algum estado configurado para isso - `attackState`! Nós sabemos quando um ataque está acontecendo quando nosso `attackState` == `attacking` então porque não usamos ele?
 
-Para isso tudo que precisamos fazer é adicionar mais um rendering condicional no nosso HTML. Vá em frente e adicione isso:
+Para isso tudo que precisamos fazer é adicionar mais uma renderização condicional no nosso HTML. Vá em frente e adicione isso:
 
 ```javascript
 <div className="arena-container">
@@ -318,7 +318,7 @@ Nada mau, certo? Todos esses indicadores de carregamento funcionam da mesma mane
 
 ### 🚨 Adicione os alertas de ataque na página da Arena.
 
-Outra coisa legal que você pode adicionar para o projeto é uma mensagem mostrando quando dano você deu no boss! Isso faz o seu jogo ser mais interativo ainda. Nós vamos usar um codepen muito legal para configurar nossa UI para isso. [Vá para esse codepen](https://codepen.io/jrsmiffy/pen/eYYwrap) para o código! Se você quer ser ainda mais chique com isso, você pode criar seu próprio componente React para que possa usar isso em qualquer lugar. Por agora, só vamos adicionar o código no nosso componente `Arena`!
+Outra coisa legal que você pode adicionar para o projeto é uma mensagem mostrando quanto dano você deu no boss! Isso faz o seu jogo ser mais interativo ainda. Nós vamos usar um codepen muito legal para configurar nossa UI para isso. [Vá para esse codepen](https://codepen.io/jrsmiffy/pen/eYYwrap) para o código! Se você quer ser ainda mais chique com isso, você pode criar seu próprio componente React para que possa usar isso em qualquer lugar. Por agora, só vamos adicionar o código no nosso componente `Arena`!
 
 Comece adicionando algum CSS para seu arquivo `Arena.css`:
 
@@ -530,9 +530,9 @@ return (
 );
 ```
 
-Já que sabemos que o nosso Elon sempre vai sofrer o mesmo dano de nós, você pode só adicionar aquilo ali. Se você mudar o contrato para ter algum RNG, você vai precisar fazer isso de maneira um pouco diferente usando algo como React References!
+Já que sabemos que o nosso Elon sempre vai sofrer o mesmo dano de nós, você pode só adicionar aquilo ali. Se você mudar o contrato para ter algum RNG, você vai precisar fazer isso de maneira um pouco diferente usando algo como React Ref!
 
-Agora que temos tudo isso configurado, como mostramos ou escondemos nosso toast? Se você olhar ao CSS, tem uma classe chamada `show` qye vai mostrar nosso toast, e se removermos a classe, vai esconder o toast! Nós precisamos mudar um pouco isso para dinâmicamente mudar o nome da classe. Nós vamos criar mais uma propriedade de estado e adicionar alguma lógica para adicionar e remover a classe `show`:
+Agora que temos tudo isso configurado, como mostramos ou escondemos nosso toast? Se você olhar ao CSS, tem uma classe chamada `show` que vai mostrar nosso toast, e se removermos a classe, vai esconder o toast! Nós precisamos mudar um pouco isso para dinâmicamente mudar o nome da classe. Nós vamos criar mais uma propriedade de estado e adicionar alguma lógica para adicionar e remover a classe `show`:
 
 ```javascript
 // State

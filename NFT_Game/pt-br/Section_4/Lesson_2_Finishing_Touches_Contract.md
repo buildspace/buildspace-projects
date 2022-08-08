@@ -31,9 +31,9 @@ module.exports = {
 E o seu arquivo .env vai se parecer com isso:
 
 ```javascript
-STAGING_ALCHEMY_KEY = BLAHBLAH;
-PROD_ALCHEMY_KEY = BLAHBLAH;
-PRIVATE_KEY = BLAHBLAH;
+STAGING_ALCHEMY_KEY=BLAHBLAH;
+PROD_ALCHEMY_KEY=BLAHBLAH;
+PRIVATE_KEY=BLAHBLAH;
 ```
 
 (não commite seu arquivo .env depois disso)
@@ -55,13 +55,13 @@ Primeiro, você vai precisar fazer upload das suas imagens para um serviço que 
 Vá em frente e copie os arquivos "CID". Esses são os endereços do conteúdo no IPFS! O que é legal é que agora temos que criar esse link:
 
 ```javascript
-https://cloudflare-ipfs.com/ipfs/INSERT_YOUR_CID_HERE
+https://cloudflare-ipfs.com/ipfs/INSIRA_SUA_CID_AQUI
 ```
 
 Se você estiver usando o **Brave Browser** (que tem IPFS construído nele) você pode só escrever esse paste no seu URL:
 
 ```javascript
-ipfs://INSERT_YOUR_CID_HERE
+ipfs://INSIRA_SUA_CID_AQUI
 ```
 
 E isso vai começar um node IPFS na sua máquina local e recuperar o arquivo! Mas de novo, eu só fiz isso no **Brave**. Se você tentar fazer isso em algo como o Chrome, só fará uma pesquisa no Google.
@@ -87,9 +87,9 @@ const gameContract = await gameContractFactory.deploy(
 );
 ```
 
-Daqui, nós precisamos atualizar nossa função `tokenURI` para preceder `ipfs://`. Basicamente, o OpenSea gosta quando nosso URI de imagem é estruturada como isso: `ipfs://INSERT_YOUR_CID_HERE`.
+Daqui, nós precisamos atualizar nossa função `tokenURI` para preceder `ipfs://`. Basicamente, o OpenSea gosta quando nosso URI de imagem é estruturada como isso: `ipfs://INSIRA_SUA_CID_AQUI`.
 
-Você deve estar se perguntando porque em `run.js` eu não apenas diretamente linkei para `ipfs://INSERT_YOUR_CID_HERE` ou `https://cloudflare-ipfs.com/ipfs/INSERT_YOUR_CID_HERE`. Basicamente - é mais segura só armazenar o hash no contrato, isso nos deixa ser mais flexível :).
+Você deve estar se perguntando porque em `run.js` eu não apenas diretamente linkei para `ipfs://INSIRA_SUA_CID_AQUI` ou `https://cloudflare-ipfs.com/ipfs/INSIRA_SUA_CID_AQUI`. Basicamente - é mais segura só armazenar o hash no contrato, isso nos deixa ser mais flexível :).
 
 Então, eu mudei a variável `json` no `tokenURI` para parecer com isso:
 
@@ -136,7 +136,7 @@ Plataformas como OpenSea suportam links `ipfs` para que isso funcione - eles vã
 
 ```javascript
 <img
-  src={`https://cloudflare-ipfs.com/ipfs/${INSERT_THE_CID_YOU_GET_FROM_YOUR_CONTRACT_HERE}`}
+  src={`https://cloudflare-ipfs.com/ipfs/${INSIRA_A_CID_QUE_VEIO_DO_CONTRATO}`}
 />
 ```
 
@@ -154,9 +154,9 @@ Dê uma tentativa. Não vou tentar explicar aqui mas eu acho que você tem todas
 
 ## ⚡️ Adicione a chance de hit crítico
 
-Muitos jogos tem um conceito legal de "hit crítico", como em Pokemon! Introduzir RNG para os jogos é muito legal, já que traz a chance para o jogo. Seria legal se você implementasse hits críticos -- por exemplo se tivesse 5% de chance que algum dos seus personagens desse o dobro de dano. Ou talvez 20% de chance que o ataque do boss erre e o player não perca vida!
+Muitos jogos tem um conceito legal de "hit crítico", como em Pokémon! Introduzir RNG para os jogos é muito legal, já que traz a chance para o jogo. Seria legal se você implementasse hits críticos -- por exemplo se tivesse 5% de chance que algum dos seus personagens desse o dobro de dano. Ou talvez 20% de chance que o ataque do boss erre e o player não perca vida!
 
-Seria legal se personagem específicos tivessem uma chance maiorde um ataque crítico!
+Seria legal se personagem específicos tivessem uma chance maior de um ataque crítico!
 
 ![](https://i.imgur.com/S0r7rfm.png)
 
