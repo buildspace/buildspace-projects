@@ -26,7 +26,7 @@ const main = async () => {
   );
 
   await gameContract.deployed();
-  console.log("Contract deployed to:", gameContract.address);
+  console.log("Contrato deployado no endereço:", gameContract.address);
 
   let txn;
   // Só temos 3 personagens.
@@ -56,12 +56,12 @@ const runMain = async () => {
 runMain();
 ```
 
-De novo, eu só gosto de manter os dois separados já que `deploy.js` não muda muito. O que queremos testar aqui é a função `attackBoss`. Ela deve mudar o HP na NFT.
+De novo, eu só gosto de manter os dois separados já que `deploy.js` não muda muito. O que queremos testar aqui é a função `attackBoss`. Ela deve mudar o HP no NFT.
 
 Eu faço o deploy usando `npx hardhat run scripts/deploy.js --network rinkeby`. A partir daí, aqui está meu output:
 
 ```plaintext
-Contract deployed to: 0x02f59Dc14666c4480Ae4b477eFfF15949970dfeA
+Contrato deployado no endereço: 0x02f59Dc14666c4480Ae4b477eFfF15949970dfeA
 ```
 
 Uma vez que esperar alguns minutos, sites como o OpenSea ou o Rarible devem mostrar sua NFT com o HP atualizado.

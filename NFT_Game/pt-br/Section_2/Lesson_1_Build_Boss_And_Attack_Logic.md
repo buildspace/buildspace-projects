@@ -2,7 +2,7 @@
 
 Então, no nosso jogo o personagem NFT vai estar apto a atacar um boss.
 
-O grande objetivo do jogo é atacar o boss e levar o HP dele a 0! Mas, o truque aqui é que o boss tem muito HP e toda vez que atacaramos ele, ele irá atacar de voltar e diminuir o nosso HP. Se a vida do nosso personagem chegar a 0, então o nosso personagem não vai mais poder atacar o boss e vai estar “morto“.
+O grande objetivo do jogo é atacar o boss e levar o HP dele a 0! Mas, o truque aqui é que o boss tem muito HP e toda vez que atacarmos ele, ele irá atacar de voltar e diminuir o nosso HP. Se a vida do nosso personagem chegar a 0, então o nosso personagem não vai mais poder atacar o boss e vai estar “morto“.
 
 Talvez no futuro, outro pessoa poderá construir uma função de “reviver“ que permite que as NFTs mortas ganhem 100% dos pontos de vida ;). Mas por agora, se nosso personagem morrer, é game over. E nós podemos descansar sabendo que nosso personagem deu o melhor e se deu pelo time. Isso significa que precisamos que outros players ataquem o boss também, não podemos fazer isso sozinhos.
 
@@ -49,7 +49,7 @@ constructor(
     attackDamage: bossAttackDamage
   });
 
-  console.log("Done initializing boss %s w/ HP %s, img %s", bigBoss.name, bigBoss.hp, bigBoss.imageURI);
+  console.log("Boss inicializado com sucesso %s com HP %s, img %s", bigBoss.name, bigBoss.hp, bigBoss.imageURI);
 
   // Todo o código do outro personagem está aqui embaixo do mesmo jeito que antes, só não estamos mostrando para manter as coisas simples!
 
@@ -80,17 +80,17 @@ Nós agora temos um boss cujos dados vivem no nosso contrato. O boss que escolhi
 
 **Por favor escolha seu próprio boss - talvez seja o Darth Vader? Talvez o seu tio? Talvez seu gato?** Qualquer coisa que você trocar, tenha certeza que é o seu próprio, não me copie :).
 
-Seria bem divertido se o boss fosse seu cachorro, e ao invés de tentar destruí-lo você tentasse conseguir que ele o amasse mais. E, quanto mais pessoas fizessem carinho nele na cabeça, mais ele amaria o player. Você poderia ter até um quadro de líderes de pssoas que fizeram mais carinho nele.
+Seria bem divertido se o boss fosse seu cachorro, e ao invés de tentar destruí-lo você tentasse conseguir que ele o amasse mais. E, quanto mais pessoas fizessem carinho nele na cabeça, mais ele amaria o player. Você poderia ter até um quadro de líderes de pessoas que fizeram mais carinho nele.
 
 De qualquer jeito, seja criativo. Esse é o seu projeto :).
 
-### 👾 Recuperando os atributos das NFTs do jogador.
+### 👾 Recuperando os atributos dos NFTs do jogador.
 
 Nós vamos criar uma função `attackBoss`. Aqui está um início dela:
 
 ```solidity
 function attackBoss() public {
- // Pega o estado da NFT do jogador
+ // Pega o estado do NFT do jogador
  // Tenha certeza que o player tenha mais que 0 de HP
  // Tenha certeza de que o boss tenha mais que 0 de HP
  // Permita que o player ataque o boss
@@ -100,15 +100,15 @@ function attackBoss() public {
 
 Vamos começar!
 
-A primeira coisa que precisamos fazer é **recuperar o estado da NFT do personagem do jogador.** Isso vai segurar tudo, como o HP, dano de ataque dos jogadores e etc. Esses dados são segurados no `nftHolderAttributes`, que exige o `tokenId` da NFT. Podemos pegar o `tokenId` a partir de `nftHolders`! Cheque isso :
+A primeira coisa que precisamos fazer é **recuperar o estado do NFT do personagem do jogador.** Isso vai recuperar tudo, como o HP, dano de ataque dos jogadores e etc. Esses dados são armazenados no `nftHolderAttributes`, que exige o `tokenId` do NFT. Podemos pegar o `tokenId` a partir de `nftHolders`! Cheque isso :
 
 ```solidity
 function attackBoss() public {
-  // Pega o estado da NFT do jogador
+  // Pega o estado do NFT do jogador
   uint256 nftTokenIdOfPlayer = nftHolders[msg.sender];
   CharacterAttributes storage player = nftHolderAttributes[nftTokenIdOfPlayer];
-  console.log("\nPlayer w/ character %s about to attack. Has %s HP and %s AD", player.name, player.hp, player.attackDamage);
-  console.log("Boss %s has %s HP and %s AD", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
+  console.log("\nJogador com personagem %s irá atacar. Tem %s de HP e %s de Poder de Ataque", player.name, player.hp, player.attackDamage);
+  console.log("Boss %s tem %s de HP e %s de PA", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
 }
 ```
 
@@ -138,15 +138,15 @@ Então, fazemos `attackBoss()`.
 Quando rodo isso, isso é o que consigo:
 
 ```plaintext
-Done initializing boss Elon Musk w/ HP 10000, img https://i.imgur.com/AksR0tt.png
-Done initializing Leo w/ HP 100, img https://i.imgur.com/pKd5Sdk.png
-Done initializing Aang w/ HP 200, img https://i.imgur.com/xVu4vFL.png
-Done initializing Pikachu w/ HP 300, img https://i.imgur.com/u7T87A6.png
-Contract deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
-Minted NFT w/ tokenId 0 and characterId 2
+Terminamos de incializar o boss Elon Musk com HP 10000, img https://i.imgur.com/AksR0tt.png
+Terminamos de incializar o Leo com HP 100, img https://i.imgur.com/pKd5Sdk.png
+Terminamos de incializar o Aang com HP 200, img https://i.imgur.com/xVu4vFL.png
+Terminamos de incializar o Pikachu com HP 300, img https://i.imgur.com/u7T87A6.png
+Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+NFT Mintado com tokenId 0 e characterId 2
 
-Player w/ character Pikachu about to attack. Has 300 HP and 25 AD
-Boss Elon Musk has 10000 HP and 50 AD
+Jogador com personagem Pikachu irá atacar. Tem 300 de HP e 25 de PD
+Boss Elon Musk tem 10000 HP e 50 PD
 ```
 
 Parece bom! `Pikachu` está indo atacar nosso boss `Elon Musk`. Tudo funcionou perfeitamente e estamos recuperando o estado das NFTs :).
@@ -167,8 +167,8 @@ function attackBoss() public {
   uint256 nftTokenIdOfPlayer = nftHolders[msg.sender];
   CharacterAttributes storage player = nftHolderAttributes[nftTokenIdOfPlayer];
 
-  console.log("\nPlayer w/ character %s about to attack. Has %s HP and %s AD", player.name, player.hp, player.attackDamage);
-  console.log("Boss %s has %s HP and %s AD", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
+  console.log("\nJogador com personagem %s irá atacar. Tem %s de HP e %s de PD", player.name, player.hp, player.attackDamage);
+  console.log("Boss %s tem %s de HP e %s de PD", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
 
   // Tenha certeza que o hp do player é maior que 0.
   require (
@@ -248,13 +248,13 @@ function attackBoss() public {
   // Checa se o hp do player é maior que 0.
   require (
     player.hp > 0,
-    "Error: character must have HP to attack boss."
+    "Error: personagem deve ter HP para atacar o boss."
   );
 
   // Checa que o hp do boss é maior que 0.
   require (
     bigBoss.hp > 0,
-    "Error: boss must have HP to attack boss."
+    "Error: Boss deve ter HP para ser atacado."
   );
 
   // Permite que o jogador ataque o boss.
@@ -271,8 +271,8 @@ function attackBoss() public {
     player.hp = player.hp - bigBoss.attackDamage;
   }
 
-  console.log("Player attacked boss. New boss hp: %s", bigBoss.hp);
-  console.log("Boss attacked player. New player hp: %s\n", player.hp);
+  console.log("Jogador atacou o boss. Boss ficou com HP: %s", bigBoss.hp);
+  console.log("Boss atacou o jogador. Jogador ficou com hp: %s\n", player.hp);
 }
 ```
 
@@ -295,22 +295,22 @@ await txn.wait();
 Agora quando rodo `run.js` aqui está o que eu consigo:
 
 ```plaintext
-Done initializing boss Elon Musk w/ HP 10000, img https://i.imgur.com/AksR0tt.png
-Done initializing Leo w/ HP 100, img https://i.imgur.com/pKd5Sdk.png
-Done initializing Aang w/ HP 200, img https://i.imgur.com/xVu4vFL.png
-Done initializing Pikachu w/ HP 300, img https://i.imgur.com/u7T87A6.png
-Contract deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
-Minted NFT w/ tokenId 0 and characterId 2
+Terminamos de incializar o boss Elon Musk w/ HP 10000, img https://i.imgur.com/AksR0tt.png
+Terminamos de incializar o Leo com HP 100, img https://i.imgur.com/pKd5Sdk.png
+Terminamos de incializar o Aang com HP 200, img https://i.imgur.com/xVu4vFL.png
+Terminamos de incializar o Pikachu com HP 300, img https://i.imgur.com/u7T87A6.png
+Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+NFT Mintado com tokenId 0 e characterId 2
 
-Player w/ character Pikachu about to attack. Has 300 HP and 25 AD
-Boss Elon Musk has 10000 HP and 50 AD
-Player attacked boss. New boss hp: 9975
-Boss attacked player. New player hp: 250
+Jogador com personagem Pikachu irá atacar. Tem 300 de HP e 25 de PD
+Boss Elon Musk tem 10000 HP and 50 AD
+Jogador atacou o boss. Boss ficou com hp: 9975
+Boss atacou o jogador. Jogador ficou com hp: 250
 
-Player w/ character Pikachu about to attack. Has 250 HP and 25 AD
-Boss Elon Musk has 9975 HP and 50 AD
-Player attacked boss. New boss hp: 9950
-Boss attacked player. New player hp: 200
+Jogador com personagem Pikachu irá atacar. Tem 250 de HP e 25 de PD
+Boss Elon Musk tem 9975 de HP e 50 de PD
+Jogador atacou o boss. Boss ficou com hp: 9950
+Boss atacou o jogador. Jogador ficou com hp: 200
 ```
 
 **Está tudo funcionando?** Vamos ver. Parece que o `Pikachu` atacou o `Elon Musk` com `25 AD` e a saúde do Elon caiu de `10000` para `9975` o que está certo! Então o Elon ataca o Pikachu com `50` de dano de ataque e a saúde do Pikachu cai de `300` para `250`. Parece que tudo está funcionando bem :).
@@ -322,21 +322,21 @@ Sinta-se livre para testar essa função tentando com um boss com `1 de HP` ou u
 Por exemplo, se eu dou ao jogador `1 HP`, aqui está o resultado:
 
 ```plaintext
-Done initializing boss Elon Musk w/ HP 10000, img https://i.imgur.com/AksR0tt.png
-Done initializing Leo w/ HP 100, img https://i.imgur.com/pKd5Sdk.png
-Done initializing Aang w/ HP 200, img https://i.imgur.com/xVu4vFL.png
-Done initializing Pikachu w/ HP 300, img https://i.imgur.com/u7T87A6.png
-Contract deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
-Minted NFT w/ tokenId 0 and characterId 2
+Terminamos de incializar o boss Elon Musk HP 10000, img https://i.imgur.com/AksR0tt.png
+Terminamos de incializar o Leo com, img https://i.imgur.com/pKd5Sdk.png
+Terminamos de incializar o Aang com, img https://i.imgur.com/xVu4vFL.png
+Terminamos de incializar o Pikachu com, img https://i.imgur.com/u7T87A6.png
+Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+NFT Mintado com tokenId 0 e characterId 2
 
-Player w/ character Pikachu about to attack. Has 1 HP and 25 AD
-Boss Elon Musk has 10000 HP and 50 AD
-Player attacked boss. New boss hp: 9975
-Boss attacked player. New player hp: 0
+Jogador com personagem Pikachu irá atacar. Tem 1 HP e 25 de PD
+Boss Elon Musk tem 10000 de HP e 50 de PD
+Jogador atacou o boss. Boss ficou com hp: 9975
+Boss atacou player. Jogador ficou com hp: 0
 
-Player w/ character Pikachu about to attack. Has 0 HP and 25 AD
-Boss Elon Musk has 9975 HP and 50 AD
-Error: VM Exception while processing transaction: reverted with reason string 'Error: character must have HP to attack boss.'
+Jogador com personagem Pikachu irá atacar. Tem 0 de HP e 25 de PD
+Boss Elon Musk tem 9975 de HP e 50 de PD
+Error: VM Exception while processing transaction: reverted with reason string 'Error: personagem precisa ter HP para atacar o boss.'
     at MyEpicGame.attackBoss (contracts/MyEpicGame.sol:88)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
     at runNextTicks (node:internal/process/task_queues:65:3)
@@ -349,6 +349,6 @@ Error: VM Exception while processing transaction: reverted with reason string 'E
 
 Então, você pode ver que o primeiro ataque aconteceu de maneira correta, `Boss attacked player. New player hp: 0`. Incrível! Nossa função funcionou perfeitamente. O hp do nosso personagem ia ser negativo, mas foi configurado para `0`! Yay!
 
-Mas, na seugnda vez que atacamos, conseguimos um erro com: `Error: character must have HP to attack boss`. O que está correto!!! Isso é basciamente como devolver um erro na nsosa API quando algo dá errado.
+Mas, na segunda vez que atacamos, conseguimos um erro com: `Error: character must have HP to attack boss`. O que está correto!!! Isso é basciamente como devolver um erro na nsosa API quando algo dá errado.
 
 Legal - nossa função `attack boss` está basicamente feita. Vamos adicionar mais alguma mágica depois mas por agora estamos bem. Nós oficialmente temos nossa lógica de jogo **on-chain** :).

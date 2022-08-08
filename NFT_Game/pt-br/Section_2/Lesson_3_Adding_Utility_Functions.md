@@ -94,7 +94,7 @@ event CharacterNFTMinted(address sender, uint256 tokenId, uint256 characterIndex
 event AttackComplete(uint newBossHp, uint newPlayerHp);
 ```
 
-O primeiro evento, `CharacterNFTMinted` nós iremos disparar quando acabarmos de mintar uma NFT para o usuário! Isso vai nos permitir notificar eles quando acabarmos de mintar a NFT! Então, nós podemos disparar esse evento adicionando essa linha bem no final da nossa função `mintCharacterNFT` (logo depois da parte `_tokenIds.increment()`):
+O primeiro evento, `CharacterNFTMinted` nós iremos disparar quando acabarmos de mintar um NFT para o usuário! Isso vai nos permitir notificar eles quando acabarmos de mintar a NFT! Então, nós podemos disparar esse evento adicionando essa linha bem no final da nossa função `mintCharacterNFT` (logo depois da parte `_tokenIds.increment()`):
 
 ```solidity
 emit CharacterNFTMinted(msg.sender, newItemId, _characterIndex);
@@ -140,7 +140,7 @@ const main = async () => {
   );
 
   await gameContract.deployed();
-  console.log("Contract deployed to:", gameContract.address);
+  console.log("Contrato deployado no endereço:", gameContract.address);
 };
 
 const runMain = async () => {
