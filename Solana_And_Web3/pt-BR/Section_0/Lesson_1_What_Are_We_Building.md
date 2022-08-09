@@ -50,7 +50,7 @@ Vamos te dar algum repositório de código aberto!!!
 
 **As pessoas parecem pensar que a web3 só precisa de pessoas que possam codificar contratos inteligentes ou escrever código que faça interface com o blockchain. Não é verdade.**
 
-Há muito trabalho a fazer e a maior parte do trabalho nem precisa ser feito com contratos inteligentes *lol*. Ser um engenheiro em web3 significa apenas pegar suas habilidades de web2 e aplicá-las à web3.
+Há muito trabalho a fazer e a maior parte do trabalho nem precisa ser feito com contratos inteligentes _lol_. Ser um engenheiro em web3 significa apenas pegar suas habilidades de web2 e aplicá-las à web3.
 
 A web3 também precisa desesperadamente de designers, gerentes de produto, profissionais de marketing e muito mais.
 
@@ -59,3 +59,9 @@ A web3 também precisa desesperadamente de designers, gerentes de produto, profi
 Temos empresas como OpenSea, Edge e Node e Chainlink como parceiras. **Mesmo que você esteja apenas curioso**, clique em "Trabalhar na Web3" na barra lateral, preencha o formulário bem rápido e confira as oportunidades!!
 
 Na pior das hipóteses, você consegue conversar com algumas pessoas muito legais na web3!
+
+### 🚨 Relatório de Progresso
+
+_Por favor, faça isso senão o Farza ficará triste :(_
+
+Ei! Esse projeto tem tudo a ver com GIFs, vá em frente e poste um GIF qualquer que você goste em `#progress` no Discord. Eu gosto de usar o [Giphy](https://giphy.com) para todas minhas necessidades com GIFs! :)
