@@ -67,7 +67,7 @@ Você verá que ainda tenho a função `transfer` em conjunto com `AddressZero`,
 
 ### 👍 Lide com erro de network não suportada.
 
-Primeiramente, vamos importar um último hook `useNetwork` no topo de `App.jsx` para poder reconhecer uma conexão de fora da rede Rinkeby. Também importamos `ChainId` do thirdweb SDK:
+Primeiramente, vamos importar um último hook `useNetwork` no topo de `App.jsx` para poder reconhecer uma conexão de fora da rede Goerli. Também importamos `ChainId` do thirdweb SDK:
 
 ```jsx
 import { useAddress, useMetamask, useEditionDrop, useToken, useVote, useNetwork } from '@thirdweb-dev/react';
@@ -83,12 +83,12 @@ const network = useNetwork();
 Depois, adicione o trecho a seguir no seu arquivo `App.jsx` logo abaixo da função `mintNft`.
 
 ```jsx
-if (address && (network?.[0].data.chain.id !== ChainId.Rinkeby)) {
+if (address && (network?.[0].data.chain.id !== ChainId.Goerli)) {
   return (
     <div className="unsupported-network">
-      <h2>Por favor, conecte-se à rede Rinkeby</h2>
+      <h2>Por favor, conecte-se à rede Goerli</h2>
       <p>
-        Essa dapp só funciona com a rede Rinkeby, por favor 
+        Essa dapp só funciona com a rede Goerli, por favor 
         troque de rede na sua carteira.
       </p>
     </div>
@@ -96,7 +96,7 @@ if (address && (network?.[0].data.chain.id !== ChainId.Rinkeby)) {
 }
 ```
 
-Bem simples! Mas bem útil. Uma mensagem vai ser mostrada se o usuário não estiver na rede Rinkeby!
+Bem simples! Mas bem útil. Uma mensagem vai ser mostrada se o usuário não estiver na rede Goerli!
 
 ### 🤑 Veja o seu token na Uniswap.
 
@@ -108,7 +108,7 @@ Bem louco, certo :)?
 
 Pessoas geralmente fazem trocas como essas na Uniswap.
 
-Acredite ou não, seu token agora vai aparecer na Uniswap dentro da Rinkeby.
+Acredite ou não, seu token agora vai aparecer na Uniswap dentro da Goerli.
 
 Aqui está um vídeo rápido para você fazer você mesmo: 
 

@@ -58,23 +58,23 @@ $ node scripts/5-deploy-token.js
 ✅ Módulo de token implantado com sucesso. Endereço: 0x551ab187397F8A2a7a599557C13cb2279071d4D5
 ```
 
-Boom! O deploy do contrato do token foi feito. Se você for para [`https://rinkeby.etherscan.io/`](https://rinkeby.etherscan.io/) e pesquisar o endereço do módulo do token, você vai ver o contrato que acabou de subir. Novamente, você vai ver que o deploy foi feito da **sua carteira**, então **você é o dono**.
+Boom! O deploy do contrato do token foi feito. Se você for para [`https://goerli.etherscan.io/`](https://goerli.etherscan.io/) e pesquisar o endereço do módulo do token, você vai ver o contrato que acabou de subir. Novamente, você vai ver que o deploy foi feito da **sua carteira**, então **você é o dono**.
 
-![Untitled](https://i.imgur.com/Lk2Mtb7.png)
+![Untitled](https://i.imgur.com/qyKEwoI.png)
 
 Você pode até adicionar o seu token à Metamask como um token personalizado.
 
 Cliquem em "Import Token":
 
-![Untitled](https://i.imgur.com/Bf56dyv.png)
+![Untitled](https://i.imgur.com/WrcMWep.png)
 
 Então cole o endereço do seu contrato ERC-20 e você vai ver que a Metamask magicamente pega o símbolo do seu token:
 
-![Untitled](https://i.imgur.com/pRsmHZN.png)
+![Untitled](https://i.imgur.com/dMgdqao.png)
 
 Então, volte para a sua carteira, role para baixo e boom!
 
-![Untitled](https://i.imgur.com/etOs0GG.png)
+![Untitled](https://i.imgur.com/f2ffsjm.png)
 
 Você oficialmente tem o seu próprio token :).
 
@@ -109,7 +109,7 @@ Lembre-se de que o endereço para inserir aqui é o endereço do seu **Token Mod
 
 Novamente, você pode ir no [dashboard do thirdweb](https://thirdweb.com/dashboard?utm_source=buildspace?utm_source=buildspace.so&utm_medium=buildspace_project) e procurar o endereço se você tiver perdido! Você deve ver que agora o módulo do token apareceu!
 
-![image](https://i.imgur.com/MOO0GCa.png)
+![image](https://i.imgur.com/3rmmKj5.png)
 
 
 Então, aqui nós estamos de fato cunhando o fornecimento do token e configurando o `amount` que queremos cunhar e configuramos o fornecimento máximo do token. 
@@ -124,13 +124,13 @@ $ node scripts/6-print-money.js
 
 Agora para a parte épica. Volte para o seu contrato ERC-20 na Etherscan. Você vai ver que você tem seu próprio rastreador de token!
 
-![Untitled](https://i.imgur.com/PUqXLgr.png)
+![Untitled](https://i.imgur.com/6GrjsSW.png)
 
 Vá em frente e clique no rastreador e você vai ver toda a informação de fornecimento juntamente com coisas tipo: quem tem o seu token, quem está transferindo tokens, quantos tokens estão sendo transferidos. Você também verá que temos um "Total máximo de fornecimento".
 
 Muito legal. Nós fizemos tudo isso usando apenas algumas linhas de javascript. Isso é insano. Você pode literalmente fazer a próxima moeda meme nesse ponto se você quiser kkkkkkkk.
 
-![Untitled](https://i.imgur.com/1SK373C.png)
+![Untitled](https://i.imgur.com/OwbXkLU.png)
 
 ### ✈️ Faça o Airdrop.
 
@@ -223,7 +223,7 @@ Okay, então agora se eu for ver meu contrato ERC-20 na Etherscan, eu posso ver 
 
 É ISSO AÍ.
 
-![Untitled](https://i.imgur.com/fuu01RA.png)
+![Untitled](https://i.imgur.com/iVx48XT.png)
 
 ### 🚨 Relatório de Progresso
 

@@ -16,8 +16,8 @@ import App from './App';
 import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
 
 // Inclua que redes você quer dar suporte.
-// 4 = Rinkeby.
-const activeChainId = ChainId.Rinkeby;
+// 4 = Goerli.
+const activeChainId = ChainId.Goerli;
 
 // Por último, envolva o App com o thirdweb provider.
 ReactDOM.render(
@@ -30,7 +30,7 @@ ReactDOM.render(
 );
 ```
 
-Bem simples. Nós estamos importando o thirdweb e especificando o `chainId` da rede que estamos trabalhando, que nesse caso é a Rinkeby! Sinta-se a vontade para checar todos os ids [aqui](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/). 
+Bem simples. Nós estamos importando o thirdweb e especificando o `chainId` da rede que estamos trabalhando, que nesse caso é a Goerli! Sinta-se a vontade para checar todos os ids [aqui](https://besu.hyperledger.org/en/stable/Concepts/NetworkID-And-ChainID/). 
 
 Finalmente, estamos envolvendo tudo com `<ThirdwebProvider>`, esse provedor mantém os dados da carteira do usuário conectado (se ele tiver se conectado ao site antes) e passa para `App`.
 

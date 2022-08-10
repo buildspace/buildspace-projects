@@ -12,20 +12,20 @@ Uma vez que você dá deploy no contrato, você pode interagir com ele diretamen
 
 Eu não posso ser mais claro sobre como é fácil de criar um smart contract usando o thirdweb comparado com escrever seu próprio código em Solidity, vai ser como interagir com uma biblioteca backend normal. Vamos lá:
 
-Vá para o dashboard do thirdweb [aqui](https://thirdweb.com/start?utm_source=web3dev). Clique em "**Let's get started**". Conecte sua carteira. Selecione sua rede (**Rinkeby**).
+Vá para o dashboard do thirdweb [aqui](https://thirdweb.com/start?utm_source=web3dev). Clique em "**Let's get started**". Conecte sua carteira. Selecione sua rede (**Goerli**).
 
-Crie o seu primeiro projeto e dê um nome como "My DAO" ou algo do tipo. Quando você clicar em "Criar" você vai ver que um pop-up da Metamask é aberto e você tem que pagar uma taxa de transação na rede Rinkeby. Por que?
+Crie o seu primeiro projeto e dê um nome como "My DAO" ou algo do tipo. Quando você clicar em "Criar" você vai ver que um pop-up da Metamask é aberto e você tem que pagar uma taxa de transação na rede Goerli. Por que?
 
 Essa ação cria o container para os contratos que vamos dar deploy, on-chain. **o thirdweb não tem uma base de dados, todos os seus dados são armazenados on-chain.** 
 
 ### 📝 Crie um lugar para rodar os scripts do thirdweb.
 
-Agora precisamos escrever alguns scripts que nos permitem criar/dar deploy no nosso contrato para a Rinkeby usando o thirdweb. A primeira coisa que nós precisamos fazer é criar um arquivo `.env` na raiz do seu projeto que se parece com isso:
+Agora precisamos escrever alguns scripts que nos permitem criar/dar deploy no nosso contrato para a Goerli usando o thirdweb. A primeira coisa que nós precisamos fazer é criar um arquivo `.env` na raiz do seu projeto que se parece com isso:
 
 ```plaintext
 PRIVATE_KEY=SUA_CHAVE_PRIVADA_AQUI
 WALLET_ADDRESS=ENDEREÇO_DA_SUA_CARTEIRA
-ALCHEMY_API_URL=SUA_URL_DE_API_ALCHEMY
+ALCHEMY_API_URL=SUA_URL_HTTPS_ALCHEMY
 ```
 
 *Nota: está no Replit? Você vai precisar usar [isto](https://docs.replit.com/programming-ide/storing-sensitive-information-environment-variables). Basicamente arquivos .env não funcionam no Replit. Você precisa usar esse método para adicionar suas variáveis uma por uma com os mesmos nomes. Quando você terminar você precisará reiniciar o Replit parando e rodando o repositóro de novo, para que ele possa ter acesso as novas variáveis de ambiente!*
@@ -40,7 +40,7 @@ E se você quiser aprender um pouco mais sobre assinaturas digitais com chaves p
 
 ### 🚀 Alchemy.
 
-A última coisa que você precisa no seu arquivo `.env` é a `ALCHEMY_API_URL`.
+A última coisa que você precisa no seu arquivo `.env` é a `ALCHEMY_HTTPS_URL`.
 
 Alchemy essencialmente nos ajuda a transmitir a criação do nosso smart contract para que ele possa ser pego pelos miners na testnet o mais rápido o possível. Uma vez que a transação é minerada, ela é então transmitida para a blockchain como uma transação legítima. A partir dai, todo mundo atualiza a sua cópia da blockchain.
 
@@ -148,7 +148,7 @@ Certifique-se de copiar o endereço do seu app! Você vai precisar dele em um se
 
 ### 🧨 Crie uma coleção ERC-1155.
 
-O que nós vamos fazer agora é criar + fazer deploy de um contrato ERC-1155 para a Rinkeby. Isso é basicamente o módulo base que nós vamos precisar para criar nossos NFTs. **Nós não estamos criando nossos NFT aqui ainda, nós estamos apenas configurado os metadados ao redor da coleção em si.** Coisas como o nome da coleção (ex. CryptoPunks) e uma imagem associada com a coleção que aparece no cabeçalho do OpenSea.
+O que nós vamos fazer agora é criar + fazer deploy de um contrato ERC-1155 para a Goerli. Isso é basicamente o módulo base que nós vamos precisar para criar nossos NFTs. **Nós não estamos criando nossos NFT aqui ainda, nós estamos apenas configurado os metadados ao redor da coleção em si.** Coisas como o nome da coleção (ex. CryptoPunks) e uma imagem associada com a coleção que aparece no cabeçalho do OpenSea.
 
 *Nota: Você deve conhecer ERC-721 onde todo NFT é único, mesmo se eles tiverem a mesma imagem, nome e propriedades. Com um ERC-1155, múltiplas pessoas podem ser holders do mesmo NFT. Nesse caso, nosso NFT de filiação é o mesmo para todo mundo, então ao invés de fazer um novo NFT todas as vezes, nós podemos simplesmente atribuir o mesmo NFT para todos os nossos membros. Isso também é mais eficiente em relação a taxas! Essa é uma abordagem bem comum para casos em que o NFT é o mesmo para todos os holders.*
 
@@ -220,11 +220,11 @@ $ node scripts/2-deploy-drop.js
 
 Okay, o que acabou de acontecer é muito lôko. Duas coisas aconteceram:
 
-**Um, nós acabamos de fazer deploy de um contrato [ERC-1155](https://docs.openzeppelin.com/contracts/3.x/erc1155) na rede Rinkeby.** Isso mesmo! Se você for em `https://rinkeby.etherscan.io/` e colar o endereço do módulo `bundleDrop`, você vai ver que você acabou de dar deploy num smart contract! A parte mais legal é que você é o **dono** desse contrato e ele foi feito usando a **sua** carteira. O endereço "From" vai ser o **seu** endereço público.
+**Um, nós acabamos de fazer deploy de um contrato [ERC-1155](https://docs.openzeppelin.com/contracts/3.x/erc1155) na rede Goerli.** Isso mesmo! Se você for em `https://goerli.etherscan.io/` e colar o endereço do módulo `bundleDrop`, você vai ver que você acabou de dar deploy num smart contract! A parte mais legal é que você é o **dono** desse contrato e ele foi feito usando a **sua** carteira. O endereço "From" vai ser o **seu** endereço público.
 
 *Nota: Mantenha o endereço do seu `editionDrop` por perto, vamos precisar dele mais tarde.*
 
-![Untitled](https://i.imgur.com/suqHbB4.png)
+![Untitled](https://i.imgur.com/igkj8JH.png)
 
 Bem Épico. Um contrato customizado e lançado usando apenas javascript. Você pode ver o código do smart contract que o thridweb usa [aqui](https://github.com/thirdweb-dev/contracts/blob/main/contracts/drop/DropERC1155.sol).
 
@@ -234,7 +234,7 @@ Você pode até ir para o IFPS diretamente usando a URI `ipfs://` (nota - não v
 
 *Nota: IPFS é basicamente um sistema de armazenamento descentralizado. Temos vários artigos sobre o tema [nas páginas da comunidade](https://www.web3dev.com.br/t/ipfs) e [vídeos no nosso YouTube](https://www.youtube.com/watch?v=GZCUdnIuZD8&list=PLVX4xVoD65UMJmx0RabEw-Cv0PDxoLWDs)
 
-Se você desenvolveu um smart contract personalizado em Solidity antes, isso é um pouco de explodir cabeças. Nós já temos um contrato lançado na Rinkeby + dados hospedados no IPFS. Louco. Seguindo, nós precisamos de fato criar nossos NFTs!
+Se você desenvolveu um smart contract personalizado em Solidity antes, isso é um pouco de explodir cabeças. Nós já temos um contrato lançado na Goerli + dados hospedados no IPFS. Louco. Seguindo, nós precisamos de fato criar nossos NFTs!
 
 ### 🚨 Relatório de Progresso
 

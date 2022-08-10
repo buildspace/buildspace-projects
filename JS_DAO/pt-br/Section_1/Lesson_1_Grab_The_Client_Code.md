@@ -62,33 +62,32 @@ Então, para nosso website se comunicar com a blockchain, nós precisamos de alg
 
 Então, vá em frente e configure tudo! A configuração deles é bem auto-explicativa.
 
-Uma vez que sua carteira estiver configurada, certifique-se de mudar para a rede "**Rinkeby**" que é a rede de teste que nós vamos trabalhar.
+Uma vez que sua carteira estiver configurada, certifique-se de mudar para a rede "**Goerli**" que é a rede de teste que nós vamos trabalhar.
 
-![Untitled](https://i.imgur.com/Kx3AZDp.png)
+![Untitled](https://i.imgur.com/rx1BtmY.png)
 
 ### 💸 Certifique-se de ter fundos na rede de teste.
 
 Nós **não** vamos fazer o deploy na rede mainnet do Ethereum. Por que? Porque custa dinheiro de verdade e não vale a pena quando se está testando. Nós vamos começar com uma "testnet" que é um clone da "mainnet" mas que usa dinheiro de mentira para que possamos testar o tanto que quisermos. Mas é importante saber que que testnets são rodadas por miners que imitam os cenários do mundo real.
 
-Para conseguirmos ETH falso, precisamos pedir alguns para a rede. **Esse ETH falso só vai funcionar nessa testnet específica.** Você pode conseguir alguns Ethereum falsos para o Rinkeby por um faucet. Você só precisa achar algum que funcione.
+Para conseguirmos ETH falso, precisamos pedir alguns para a rede. **Esse ETH falso só vai funcionar nessa testnet específica.** Você pode conseguir alguns Ethereum falsos para o Goerli por um faucet. Você só precisa achar algum que funcione.
 
-Para o MyCrypto, você vai precisar conectar a sua carteira, criar uma conta e então clicar no mesmo link para pedir fundos. Para o faucet oficial do rinkeby, se listar 0 "peers", não vale o tempo para fazer um tweet/post público no Facebook.
+Para o MyCrypto, você vai precisar conectar a sua carteira, criar uma conta e então clicar no mesmo link para pedir fundos. Para o faucet oficial do Goerli, se listar 0 "peers", não vale o tempo para fazer um tweet/post público no Facebook.
 
-Seguem alguns _faucets_ onde você pode solicitar ETH falso para a rede _Rinkeby_.
+Seguem alguns _faucets_ onde você pode solicitar ETH falso para a rede _Goerli_.
 
-| Nome | Link | Quantidade | Tempo |
-| ---------------- | -------------------------- | --------------- | ------------ |
-| MyCrypto | https://app.mycrypto.com/faucet | 0,01 | Nenhum |
-| Buildspace | https://buildspace-faucet.vercel.app/ | 0,025 | 1d |
-| Rinkeby Oficial | https://faucet.rinkeby.io/ | 3 / 7,5 / 18,75 | 8h / 1d / 3d |
-| Chainlink | https://faucets.chain.link/rinkeby | 0,1 | Nenhum |
+| Nome | Link
+| ---------------- | --------------------------
+| Alchemy | https://goerlifaucet.com/ 
+| Mudit | https://goerli-faucet.mudit.blog/ 
+| Paradigm | https://faucet.paradigm.xyz/ 
 
 Quando sua transação for minerada, você terá alguns ETH fake na sua carteira.
 
-![Untitled](https://i.imgur.com/9kZbhTN.png)
+![Untitled](https://i.imgur.com/dNv0GXs.png)
 
 ### 🚨 Relatório de Progresso
 
 *Por favor faça isso ou Yan ficará triste :)*
 
-Em `#progresso` envie uma captura de tela da sua Metamask mostrando o balanço total na rede Rinkeby como na imagem acima.
+Em `#progresso` envie uma captura de tela da sua Metamask mostrando o balanço total na rede Goerli como na imagem acima.

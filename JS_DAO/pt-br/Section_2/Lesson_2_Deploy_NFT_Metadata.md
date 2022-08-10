@@ -31,7 +31,7 @@ Bem direto!
 A primeira coisa que estamos fazendo é acessar nosso contrato `editionDrop`, que é o nosso contrato ERC-1155. Em `INSIRA_O_ENDEREÇO_DO_DROP_MODULE` colocamos o endereço que foi impresso no passo anterior. É o endereço impresso logo depois de `Contrato editionDrop implantado com sucesso, endereço:`.
 Você também pode achar esse endereço no seu [dashboard no thirdweb](https://thirdweb.com/dashboard?utm_source=web3dev&utm_medium=web3dev_project). O seu dashboard thirdweb vai mostrar o projeto que você está trabalhando no momento e também o endereço do módulo para que você copie e cole facilmente 
 
-![image](https://i.imgur.com/ir6VMOA.png)
+![image](https://i.imgur.com/EyDAOky.png)
 
 
 Logo após nós estamos configurando nosso NFT no nosso contrato ERC-1155 usando `createBatch`. Precisamos configurar algumas prioridades:
@@ -116,9 +116,9 @@ Depois de rodar `node scripts/4-set-claim-condition.js` aqui está o que eu rece
 ✅ Condições de reinvidicação configuradas com sucesso!
 ```
 
-Boom! Nós interagimos com o nosso smart contract com sucesso e demos ao nosso NFT certas regras que ele deve seguir, isso aí! Se você copiar e colar o endereço do seu bundle drop impresso aí em cima e procurar em `https://rinkeby.etherscan.io/` você verá lá a prova de que nós interagimos com o contrato!
+Boom! Nós interagimos com o nosso smart contract com sucesso e demos ao nosso NFT certas regras que ele deve seguir, isso aí! Se você copiar e colar o endereço do seu bundle drop impresso aí em cima e procurar em `https://goerli.etherscan.io/` você verá lá a prova de que nós interagimos com o contrato!
 
-![Untitled](https://i.imgur.com/6sRMQpA.png)
+![Untitled](https://i.imgur.com/sioQiQA.png)
 
 ### 🚨 Relatório de Progresso
 
