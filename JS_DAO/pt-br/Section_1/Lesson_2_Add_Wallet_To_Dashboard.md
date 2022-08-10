@@ -16,7 +16,7 @@ import App from './App';
 import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
 
 // Inclua que redes você quer dar suporte.
-// 4 = Goerli.
+// 5 = Goerli.
 const activeChainId = ChainId.Goerli;
 
 // Por último, envolva o App com o thirdweb provider.
