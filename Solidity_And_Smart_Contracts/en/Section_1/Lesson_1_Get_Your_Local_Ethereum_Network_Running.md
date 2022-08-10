@@ -22,9 +22,9 @@ If you have any issues throughout here, just drop a message on Discord in  `#se
 
 2\. Quickly compile smart contracts and test them on our local blockchain.
 
-First you'll need to get node/npm. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html).
+First you'll need to get Node/NPM. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html). 
 
-We recommend running Hardhat using the current LTS Node.js version or you may run into some issues! You can find the current releases [here](https://nodejs.org/en/about/releases/).
+We recommend running Hardhat using the current LTS Node.js version or you may run into some issues! You can find the current releases [here](https://nodejs.org/en/about/releases/). **Make sure your version of NodeJs is correct or you'll run into issues!** We recommend version 16 right now.
 
 Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to the directory you want to work in. Once you're there run these commands:
 
@@ -32,7 +32,7 @@ Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to th
 mkdir my-wave-portal
 cd my-wave-portal
 npm init -y
-npm install --save-dev hardhat
+npm install --save-dev hardhat@2.9.9
 ```
 
 ## 👏 Get sample project going
@@ -47,7 +47,9 @@ npx hardhat
 
 *Note: if you have yarn installed along with npm, you may get errors such as `npm ERR! could not determine executable to run`. In this case, you can do `yarn add hardhat`.*
 
-Choose the option to create a sample project. Say yes to everything.
+Choose the option _**Create a basic sample project**_. Say yes to everything.
+
+<img width="571" alt="Screen Shot 2022-06-10 at 22 51 21" src="https://user-images.githubusercontent.com/5970751/173140637-8693bab8-f610-4f1b-83ed-c6abaacf91c2.png">
 
 The sample project will ask you to install hardhat-waffle and hardhat-ethers. These are other goodies we'll use later :).
 

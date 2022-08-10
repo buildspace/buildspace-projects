@@ -39,7 +39,7 @@ Thats why I use events here. I’m able to `emit` an event on the contract and t
 
 Again, it’s sorta like a web hook. Except this is going to be the easiest webhook ever to setup lol.
 
-Be sure to read more on events [here](https://docs.soliditylang.org/en/v0.4.21/contracts.html#events).
+Be sure to read more on events [here](https://docs.soliditylang.org/en/v0.8.14/contracts.html#events).
 
 As always when we change our contract.
 
@@ -78,7 +78,7 @@ Hint, you'll need something in solidity called `require`. And, you'll like also 
 
 Your website is **only** going to work on Rinkeby (since that's where your contract lives).
 
-We're going to to add a nice message telling users about this! 
+We're going to add a nice message telling users about this! 
 
 For that, we make a RPC request to the blockchain to see the ID of the chain our wallet connects to. (Why a chain and not a network? [Good question!](https://ethereum.stackexchange.com/questions/37533/what-is-a-chainid-in-ethereum-how-is-it-different-than-networkid-and-how-is-it))
 
@@ -121,4 +121,4 @@ Note: This link you'll need to hardcode. I left a variable at the top for you to
 
 ## 🚨 Progress report!
 
-You're nearly at the end :). Post a screenshot in #progress with that little pop up that that gives your user the direct OpenSea link!
+You're nearly at the end :). Post a screenshot in #progress with that little pop-up that gives your user the direct OpenSea link!

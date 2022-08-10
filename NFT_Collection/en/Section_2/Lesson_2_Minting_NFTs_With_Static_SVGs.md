@@ -58,7 +58,7 @@ For example, mine looks like this:
 
 But wait — where will our fancy new JSON file go? Right now, we host it on [this](https://jsonkeeper.com/) random website. If that website goes down, our beautiful NFT is gone forever! Here's what we're going to do. **We're going to base64 encode our entire JSON file.** Just like we encoded our SVG.
 
-Head to [this](https://www.utilities-online.info/base64) website again. Paste in your full JSON metadata with the base64 encoded SVG (should look sorta like what I have above) and then click "encode" to get you encoded JSON. 
+Head to [this](https://www.utilities-online.info/base64) website again. Paste in your full JSON metadata with the base64 encoded SVG (should look sorta like what I have above) and then click "encode" to get your encoded JSON. 
 
 Open a new tab. And in the URL bar paste this:
 
@@ -72,13 +72,13 @@ For example, mine looks like this:
 data:application/json;base64,ewogICAgIm5hbWUiOiAiRXBpY0xvcmRIYW1idXJnZXIiLAogICAgImRlc2NyaXB0aW9uIjogIkFuIE5GVCBmcm9tIHRoZSBoaWdobHkgYWNjbGFpbWVkIHNxdWFyZSBjb2xsZWN0aW9uIiwKICAgICJpbWFnZSI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJSEJ5WlhObGNuWmxRWE53WldOMFVtRjBhVzg5SW5oTmFXNVpUV2x1SUcxbFpYUWlJSFpwWlhkQ2IzZzlJakFnTUNBek5UQWdNelV3SWo0TkNpQWdJQ0E4YzNSNWJHVStMbUpoYzJVZ2V5Qm1hV3hzT2lCM2FHbDBaVHNnWm05dWRDMW1ZVzFwYkhrNklITmxjbWxtT3lCbWIyNTBMWE5wZW1VNklERTBjSGc3SUgwOEwzTjBlV3hsUGcwS0lDQWdJRHh5WldOMElIZHBaSFJvUFNJeE1EQWxJaUJvWldsbmFIUTlJakV3TUNVaUlHWnBiR3c5SW1Kc1lXTnJJaUF2UGcwS0lDQWdJRHgwWlhoMElIZzlJalV3SlNJZ2VUMGlOVEFsSWlCamJHRnpjejBpWW1GelpTSWdaRzl0YVc1aGJuUXRZbUZ6Wld4cGJtVTlJbTFwWkdSc1pTSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0krUlhCcFkweHZjbVJJWVcxaWRYSm5aWEk4TDNSbGVIUStEUW84TDNOMlp6ND0iCn0=
 ```
 
-When you paste that full URI into your browsers address bar, you'll see the full JSON in all it's glory. **BOOOOOM!** Now we have a way to keep our JSON metadata permanent and available forever.
+When you paste that full URI into your browsers address bar, you'll see the full JSON in all its glory. **BOOOOOM!** Now we have a way to keep our JSON metadata permanent and available forever.
 
 Here's a screenshot of mine:
 
 ![Untitled](https://i.imgur.com/y1ZaYGf.png)
 
-Note: It's **very easy** to mess up here when your encoding + copy-pasting stuff. So, be very careful!!! And double-check everything works. If things are breaking, follow all the steps again!
+Note: It's **very easy** to mess up here when you're encoding + copy-pasting stuff. So, be very careful!!! And double-check everything works. If things are breaking, follow all the steps again!
 
 
 ## 🚀 Change up our contract, deploy
@@ -111,4 +111,4 @@ Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_
 
 ## 🚨Progress report
 
-If you get a fancy NFT, make sure to send a screenshot of it on OpenSea in the `#progress` channel in Discord!
+If you get a fancy NFT, make sure to send a screenshot of it on OpenSea in the `#progress` channel in Discord! 

@@ -24,13 +24,19 @@ I’m super excited to show you how to go from zero → shipping your own web3 a
 
 What does "shipping" mean? Well, it means you'll actually make something and then deploy it to the internet for the world to see and use. You'll be able to show the final project off to your friends, potential employers, and even your dog! The best part is, your fellow buildspacers will be the first users for your project!!
 
-This stuff is very new, there's a lot of hype around it, and it can be super difficult to understand the best way to learn it.
+This stuff is very new, there's a lot of hype around it, and it can be super difficult to understand. The best way to learn it is by doing.
 
 With this project, you're going to learn about crypto tech by actually writing code and just hopping into the good stuff. No B.S. We'll also go over theory and more in-depth concepts, but, it will all be structured around your project.
 
 ### 💎 Earning an NFT
 
-When you reach the end of this project, you'll earn an NFT. Here's what it looks like:
+When you reach the end of this project, you'll earn an NFT.
+
+You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+
+**Once you finish the project, you'll get the NFT airdropped within 7 days**
+
+Here's what it looks like:
 
 [Loom](https://www.loom.com/share/b3a0185f02ac4c63ab411288c2df4a30)
 

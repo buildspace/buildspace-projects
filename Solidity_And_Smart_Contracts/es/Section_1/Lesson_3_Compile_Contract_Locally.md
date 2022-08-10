@@ -1,6 +1,6 @@
-## 🔥 Imitando el entorno blockchain para probar
+## 🔥 Imitando el entorno blockchain para hacer pruebas
 
-Lo has hecho. Has escrito un contrato inteligente. ¡Eres un campeón!
+Lo hiciste. Has escrito un contrato inteligente. ¡Eres un campeón!
 
 Ahora lo que necesitamos es\
 1\. Compilarlo.\
@@ -62,7 +62,7 @@ Esto va a compilar nuestro contrato y generar los archivos que necesitamos para 
 const waveContract = await waveContractFactory.deploy();
 ```
 
-Esto es bastante elegante :). 
+Esto es bastante elegante :). 
 
 Lo que está pasando aquí es que Hardhat va a crear una red local de Ethereum para nosotros, pero solo para este contrato. Entonces, después que se complete el script, se va a destruir esa red local. Entonces, cada vez que ejecutes el contrato, esto va a crear una blockchain nueva. ¿Entonces cuál es el punto? Es como si se actualizara tu servidor local cada vez, para siempre empezar una versión limpia, lo que lo hace fácil de depurar errores.
 

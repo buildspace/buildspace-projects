@@ -3,6 +3,8 @@
 Now that we got all our scripts good to go and the basics down, we're going to mint some NFTs! Here's what my updated `MyEpicNFT.sol` looks like:
 
 ```solidity
+// SPDX-License-Identifier: UNLICENSED
+
 pragma solidity ^0.8.1;
 
 // We first import some OpenZeppelin Contracts.
@@ -47,12 +49,6 @@ It'd be crazy to write a HTTP server from scratch without using a library, right
 
 Similarly — it'd be crazy to just write an NFT contract from complete scratch! You can explore the `ERC721` contract we're inheriting from [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol).
 
-First, let's install the OpenZeppelin contracts package with npm. Run this command in your terminal:
-
-```
-npm install @openzeppelin/contracts
-```
-
 Let's take it step-by-step through the `makeAnEpicNFT` function.
 
 ```solidity
@@ -63,7 +59,7 @@ Wtf is `_tokenIds`? Well, remember the Picasso example? He had 100 NFT sketches 
 
 Same thing here, we're using `_tokenIds` to keep track of the NFTs unique identifier, and it's just a number! It's automatically initialized to 0 when we declare `private _tokenIds`. So, when we first call `makeAnEpicNFT`, `newItemId` is 0. When we run it again, `newItemId` will be 1, and so on!
 
-`_tokenIds` is **state variable** which means if we change it, the value is stored on the contract directly.
+`_tokenIds` is a **state variable** which means if we change it, the value is stored on the contract directly.
 
 ```solidity
 _safeMint(msg.sender, newItemId);
@@ -105,11 +101,11 @@ This is all part of the `ERC721` standards and it allows people to build website
 
 We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [this](https://jsonkeeper.com/) website. This website is just an easy place for people to host JSON data and we'll be using it to keep our NFT data for now. Once you click "Save" you'll get a link to the JSON file. (For example, mine is [`https://jsonkeeper.com/b/RUUS`](https://jsonkeeper.com/b/RUUS)). Be sure to test your link out and be sure it all looks good!
 
-**Note: I'd love for you to create your own JSON metadata instead of just copying mine. Use your own image, name, and description. Maybe you want your NFT to an image of your fav anime character, fav band, whatever!! Make it custom. Don't worry, we'll be able to change this in the future!**
+**Note: I'd love for you to create your own JSON metadata instead of just copying mine. Use your own image, name, and description. Maybe you want your NFT to be an image of your fav anime character, fav band, whatever!! Make it custom. Don't worry, we'll be able to change this in the future!**
 
 If you decide to use your own image, make sure the URL goes directly to the actual image, not the website that hosts the image! Direct Imgur links look like this - `https://i.imgur.com/123123.png` NOT `https://imgur.com/gallery/123123`. The easiest way to tell is to check if the URL ends in an image extension like `.png` or `.jpg`. You can right click the imgur image and "copy image address". This will give you the correct URL.
 
-Now, lets head to our smart contract and change one line. Instead of:
+Now, let's head to our smart contract and change one line. Instead of:
 
 ```solidity
 _setTokenURI(newItemId, "blah")
@@ -183,7 +179,9 @@ Now, let's move to the next step — deploying to a testnet :).
 
 When we use `run.js`, it's just us working locally.
 
-The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to to **view our NFT online** and we are a step closer to getting this to **real users.** 
+The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to **view our NFT online** and we are a step closer to getting this to **real users.** 
+
+You are a badass look at you! 
 
 ##  💳 Transactions
 
@@ -195,16 +193,16 @@ Remember, the blockchain has no owner. It's just a bunch of computers around the
 
 When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
 
-This is where [Alchemy](https://alchemy.com/?r=b93d1f12b8828a57) comes in.
+This is where [QuickNode](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) comes in.
 
-Alchemy essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
+QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
-This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense.
+This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
 
-So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+So, make an account with QuickNode [here](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 And then check out my video below to learn how to get your API key for a testnet:
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0)
+[Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
 
 ## 🕸 Testnets
 
@@ -219,7 +217,7 @@ This is awesome because we can test our application in a real-world scenario whe
 
 3. Wait for it to be mined
 
-4. Wait for it be broadcasted back to the blockchain telling all the other miners to update their copies
+4. Wait for it to be broadcasted back to the blockchain telling all the other miners to update their copies
 
 
 ## 🤑 Getting some fake $
@@ -292,13 +290,13 @@ module.exports = {
   solidity: '0.8.1',
   networks: {
     rinkeby: {
-      url: process.env.ALCHEMY_API_KEY_URL,
+      url: process.env.QUICKNODE_API_KEY_URL,
       accounts: [process.env.RINKEBY_PRIVATE_KEY],
     },
   },
 };
 ```
-Here we are basically configuring our `hardhat.config.js` to use our env variables securely which are the **process.env.ALCHEMY_API_KEY_URL** & our **process.env.RINKEBY_PRIVATE_KEY**. You'll now need to open your terminal and type in
+Here we are basically configuring our `hardhat.config.js` to use our env variables securely which are the **process.env.QUICKNODE_API_KEY_URL** & our **process.env.RINKEBY_PRIVATE_KEY**. You'll now need to open your terminal and type in
 ```
 npm install dotenv
 ```
@@ -306,16 +304,17 @@ This basically just installs the `dotenv` package which allows us to use env var
 
 And now you can create a **.env** file in the root of your project. To be sure, it should be matching with the path that contains the **hardhat.config.js** file.
 
-You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
+You can grab your API URL from the QuickNode dashboard and paste that in. Then, you'll need your **private** key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
 
 Open the **.env** file and paste the two we've grabbed as shown below.
 ```
-ALCHEMY_API_KEY_URL=<YOUR API URL>
+QUICKNODE_API_KEY_URL=<YOUR API URL>
 RINKEBY_PRIVATE_KEY=<YOUR PRIVATE KEY>
 ```
+Don't forget to remove those `<` `>` after adding your API URL and your PRIVATE KEY! 🔑
 
 **Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.
-OPEN YOUR `.gitignore` FILE AND ADD A LINE FOR `.env` IF IT IS DOES NOT EXIST**
+OPEN YOUR `.gitignore` FILE AND ADD A LINE FOR `.env` IF IT DOES NOT EXIST.**
 
 Your `.gitignore` should look somewhat like this now.
 ```
@@ -364,7 +363,7 @@ So here, you'd click "SquareNFT" under "Collections", and boom you'll see the NF
 
 ![Untitled](https://i.imgur.com/Q96NYK4.png)
 
-HOOOOLY SHIT LETS GO. IM HYPE **FOR** YOU.
+HOOOOLY SHIT LET'S GO. IM HYPE **FOR** YOU.
 
 Pretty epic, we've created our own NFT contract *and* minted two NFTs. Epic. WHILE THIS IS EPIC, it is *kinda lame —* right? It's just the same Spongebob picture every time! How can we add some randomness to this and generate stuff on the fly? That's what we'll be getting into next :).
 
@@ -391,7 +390,11 @@ For example, here's my link: https://rinkeby.rarible.com/token/0xb6be7bd567e737c
 
 WOOOOOOO. GIVE YOURSELF A PAT ON THE BACK. YOU DEPLOYED A SMART CONTRACT THAT MINTS NFTS. WOW.
 
-Good stuff :).
+Quick note here: We've seen that the best builders have made it a habit to **"build in public"**. All this means is sharing a few learnings about the milestone they've just hit!
+
+Drop a quick update on buildspace right now by pressing "Post update" in the top right corner 🤘
+[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
+
 
 You should totally **tweet** out that you just wrote and deployed your smart contract that can mint NFTs and tag @_buildspace. If you want, include a screenshot of the OpenSea/Rarible page that shows that your NFT :)!
 
@@ -404,3 +407,4 @@ You should feel awesome about the fact that you're actually building stuff every
 ![](https://i.imgur.com/HBMIgu2.png)
 
 ![](https://i.imgur.com/KwbO0Ib.png)
+ 

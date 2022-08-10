@@ -185,7 +185,7 @@ If you take a look at your app, you’ll see the input fields:
 
 **Note:** the mint button doesn’t do anything right now, this is expected! 
 
-Very cool 😎. We can now easily collect inputs from our user and call our contract! In the next session you are going to see how magical this is by calling the functions we made earlier on our smart contract!
+Very cool 😎. We can now easily collect inputs from our user and call our contract! In the next session, you are going to see how magical this is by calling the functions we made earlier on our smart contract!
 
 ### 🧞 Interacting with the contract
 
@@ -253,7 +253,7 @@ const signer = provider.getSigner();
 
 Be sure to import it at the top using `import { ethers } from "ethers";`, right after we import the Twitter logo.
 
-A "provider" is what we use to actually talk to Polygon nodes. Remember how we were using Alchemy to **deploy**? Well in this case we use nodes that MetaMask provides in the background to send/receive data from our deployed contract.
+A "provider" is what we use to actually talk to Polygon nodes. Remember how we were using QuickNode to **deploy**? Well in this case we use nodes that MetaMask provides in the background to send/receive data from our deployed contract.
 
 [Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
 
@@ -344,7 +344,7 @@ Note: You’ll still see errors and the mint button won’t work!
 
 So — when you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
 
-The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.8.11/abi-spec.html).
+The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.8.14/abi-spec.html).
 
 The contents of the ABI file can be found in a fancy JSON file in your hardhat project:
 

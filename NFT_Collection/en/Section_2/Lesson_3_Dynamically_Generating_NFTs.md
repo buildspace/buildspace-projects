@@ -28,7 +28,7 @@ Here are some of mine. I like the first row to be words that feel like they "des
 
 ![](https://i.imgur.com/ADawgrB.png)
 
-Perhaps you wanna generate random band name. Perhaps you wanna generate random character names for your Dungeons and Dragons games. Do whatever you want. Maybe you don't give a shit about three word combinations and just want to make SVGs of pixel art penguins. Go for it. Do whatever you want :).
+Perhaps you wanna generate a random band name. Perhaps you wanna generate random character names for your Dungeons and Dragons games. Do whatever you want. Maybe you don't give a shit about three word combinations and just want to make SVGs of pixel art penguins. Go for it. Do whatever you want :).
 
 Note: I recommend like 15-20 words per array. I've noticed around 10 it's usually not random enough. 
 
@@ -38,7 +38,7 @@ Note: I recommend like 15-20 words per array. I've noticed around 10 it's usuall
 function pickRandomFirstWord
 ```
 
-This function looks kinda funky. Right? Lets talk about how we're randomly picking stuff from the arrays.
+This function looks kinda funky. Right? Let's talk about how we're randomly picking stuff from the arrays.
 
 So, generating a random number in smart contracts is widely known as a **difficult problem**.
 
@@ -186,7 +186,7 @@ The coolest part is we can just re-deploy without changing our script using:
 npx hardhat run scripts/deploy.js --network rinkeby
 ```
 
-Once we redeploy, you'll be able to see your NFTs on [https://testnets.opensea.io/](https://testnets.opensea.io/) once you search the newly deployed contract address. Again, **don't click enter**. OpenSea is weird so you'll need click the collection itself when it comes up.
+Once we redeploy, you'll be able to see your NFTs on [https://testnets.opensea.io/](https://testnets.opensea.io/) once you search the newly deployed contract address. Again, **don't click enter**. OpenSea is weird so you'll need to click the collection itself when it comes up.
 
 Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE` if you're using Rarible.
 

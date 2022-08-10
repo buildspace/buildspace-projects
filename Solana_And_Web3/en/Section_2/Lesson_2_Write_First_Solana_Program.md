@@ -7,7 +7,7 @@ Inside these folders, go to the `home` folder and then `username` folder. This i
 
 You'll see all the magic stuff Anchor has generated for us here.
 
-**Delete** the contents of `programs/myepicproject/programs/myepicproject/src/lib.rs` and  `tests/myepicproject.js`. Don't actually delete the files, just what's in them.
+**Delete** the contents of `programs/myepicproject/src/lib.rs` and  `tests/myepicproject.js`. Don't actually delete the files, just what's in them.
 
 *Note: I **didn't** actually install the Rust extension for VSCode. It already has Rust syntax highlighting for me out of the box.*
 

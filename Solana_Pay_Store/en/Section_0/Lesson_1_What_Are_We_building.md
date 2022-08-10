@@ -12,7 +12,7 @@ Few action items for you before moving on:
 
 Connect your Discord in the project dashboard. All the good stuff is going to be happening in a secret category in the Discord that you'll only have access to once you connect your Discord.
 Connect your Ethereum wallet on the project dashboard. We'll airdrop you an NFT once you finish this, and if you don't have a wallet connected we won't be able to airdrop it to you!!
-Be sure to attend the live kick-off. If you miss it, no worries. It's not required to attend! The recording will bdise posted in Discord under #info-board.
+Be sure to attend the live kick-off. If you miss it, no worries. It's not required to attend! The recording will be posted in Discord under #info-board.
 
 ### 🛠 The project
 So what will we be building here :)? Here's a little video:
@@ -20,7 +20,13 @@ So what will we be building here :)? Here's a little video:
 [Loom](https://www.loom.com/share/634b5d504d6e4624b253bc33e8f6c47f)
 
 ### 💎 Earning an NFT
-When you reach the end of this project, you'll earn an NFT. Here's what it looks like:
+When you reach the end of this project, you'll earn an NFT. 
+
+You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+
+**Once you finish the project, you'll get the NFT airdropped within 7 days**
+
+Here's what it looks like:
 
 [Loom](https://www.loom.com/share/0160b290494a4279887e232317cd6322)
 

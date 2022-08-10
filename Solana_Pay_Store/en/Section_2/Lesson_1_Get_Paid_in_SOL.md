@@ -237,7 +237,19 @@ export default function Product({ product }) {
 ```
 All we did here was replace the IPFS component with the Buy component lol.
 
-And now if you click the shiny new buy button, you should see a transaction request!
+### 🧪 Setting up Devnet 
+
+One last step before you get paid! You need to make sure your network on Phantom is set to the Devnet. To do this, open up your Phantom wallet and go to settings:
+
+![](https://i.imgur.com/U5moHfW.png)
+
+Then select **Change Network** and set it to **Devnet**. Now you're all set, All transactions will be on the Devnet!
+
+![](https://i.imgur.com/WkPUkcu.png)
+
+If you are broke and you have no SOL in your wallet, you can use a faucet to get some. Checkout [Sol Facuet](https://solfaucet.com/) for some fake money.
+
+And now if you click the shiny new buy button, you should see a transaction request:
 ![](https://hackmd.io/_uploads/ByAeaFIPc.png)
 
 What's happening here is that our buy button hits the backend to fetch the transaction object for this item. Once that's done, we just set a `Paid` variable to true and enable the download button. Pretty cool, eh?

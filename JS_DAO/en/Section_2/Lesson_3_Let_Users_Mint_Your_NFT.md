@@ -154,7 +154,7 @@ Okay a lot of stuff happening! The first thing we do is set up our `signer` whic
 
 Once it's all done, we do `setIsClaiming(false)` to stop the loading state. And, then we do `setHasClaimedNFT(true)` so that we can let our react app know that this user has successfully claimed an NFT.
 
-When you actually go to mint the NFT, Metamask will pop so you can pay gas. Once it's done minting, you should see `Successfully Minted!` in your console along w/ the Testnet OpenSea link. On [`testnets.opensea.io`](http://testnets.opensea.io/) we can actually see NFTs minted on the testnet which is pretty cool! When you head to your link, you'll see something like this:
+When you actually go to mint the NFT, Metamask will pop up so you can pay gas. Once it's done minting, you should see `Successfully Minted!` in your console along w/ the Testnet OpenSea link. On [`testnets.opensea.io`](http://testnets.opensea.io/) we can actually see NFTs minted on the testnet which is pretty cool! When you head to your link, you'll see something like this:
 
 ![Untitled](https://i.imgur.com/PjjDSxd.png)
 

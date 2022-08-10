@@ -144,7 +144,7 @@ Anchor is a *really early projec*t run by a few core devs. You're bound to run i
 
 *Seriously — join that Discord, the devs are really helpful.*
 
-Installing this thing was a little troublesome for me, but, I got it working via the steps below! We're going to build it from source. *Note: If you're on Linux, there are some special instructions you can follow [here](https://project-serum.github.io/anchor/getting-started/installation.html#install-anchor). Mac and Windows below. Also, if you're using Linux for Windows, follow the Linux commands!*
+Installing this thing was a little troublesome for me, but, I got it working via the steps below! We're going to build it from source. *Note: If you're on Linux, there are some special instructions you can follow [here](https://www.anchor-lang.com/docs/installation). Mac and Windows below. Also, if you're using Linux for Windows, follow the Linux commands!*
 
 To install Anchor, go ahead an run:
 

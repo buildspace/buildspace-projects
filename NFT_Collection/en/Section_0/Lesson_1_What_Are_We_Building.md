@@ -22,7 +22,11 @@ With this project, you're going to learn about crypto tech by actually writing c
 
 When you reach the end of this project, you'll be able to earn an NFT.
 
-**We'll airdrop an NFT to your connected wallet if you finish the project within 7-days of the kick-off.**
+You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+
+**Once you finish the project, you'll get the NFT airdropped within 7 days**
+
+Here's what it looks like:
 
 ![Untitled](https://i.imgur.com/4PliKDj.png)
 
@@ -43,7 +47,7 @@ They'll even show up on OpenSea :).
 
 You'll be able to customize the NFT itself as much as you want at the end and do whatever you want.
 
-But, the NFTs I'll be going over in these guides are these NFTs that are basically a square box with a randomly generated three-word combination at the center. Why? Because I think it's funny lol. Some of these three-word combos are really fkin funny.
+But, the NFTs I'll be going over in these guides are NFTs that are basically a square box with a randomly generated three-word combination at the center. Why? Because I think it's funny lol. Some of these three-word combos are really fkin funny.
 
 Coolest part? Everything will be happening *on-chain*. This means all the NFT data will live on the blockchain itself. If that doesn't make sense, don't worry just yet — it will :)!
 
@@ -70,7 +74,7 @@ At the very least, drop a ⭐ on the repo if you're feeling fancy!
 
 ## 🚨Curious about working in web3?
 
-We're partnered with a bunch of awesome web3 companies that want to hire people from the buildspace network. We got companies like OpenSea, Edge and Node, and Chainlink as partners. **Even if you're just curious**, click "Work in Web3" on the side-bar, fill out the form real quick, and check out the opportunties!!
+We're partnered with a bunch of awesome web3 companies that want to hire people from the buildspace network. We got companies like OpenSea, Edge and Node, and Chainlink as partners. **Even if you're just curious**, click "Work in Web3" on the side-bar, fill out the form real quick, and check out the opportunities!!
 
 Worst case scenario, you get to talk to some really cool people in web3 :).
 
