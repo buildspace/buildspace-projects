@@ -71,7 +71,7 @@ But, what's an ABI? Much earlier I mentioned how when you compile a contract, it
 
 ## 🏠 Setting Your Contract Address
 
-Remember when you deployed your contract to the Rinkeby Testnet (epic btw)? The output from that deployment included your smart contract address which should look something like this:
+Remember when you deployed your contract to the Goerli Testnet (epic btw)? The output from that deployment included your smart contract address which should look something like this:
 
 ```
 Deploying contracts with the account: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
@@ -203,7 +203,7 @@ const wave = async () => {
 
 Pretty simple, right :)?
 
-What's awesome here is while the transaction is being mined you can actually print out the transaction hash, copy/paste it to [Etherscan](https://rinkeby.etherscan.io/), and see it being processed in real-time :).
+What's awesome here is while the transaction is being mined you can actually print out the transaction hash, copy/paste it to [Etherscan](https://goerli.etherscan.io/), and see it being processed in real-time :).
 
 When we run this, you'll see that total wave count is increased by 1. You'll also see that Metamask pops us and asks us to pay "gas" which we pay for using our fake $. There is a great article on it [here](https://ethereum.org/en/developers/docs/gas/). Try and figure out what gas is :).
 
