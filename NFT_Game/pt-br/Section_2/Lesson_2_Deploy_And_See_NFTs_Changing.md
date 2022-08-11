@@ -58,7 +58,7 @@ runMain();
 
 De novo, eu só gosto de manter os dois separados já que `deploy.js` não muda muito. O que queremos testar aqui é a função `attackBoss`. Ela deve mudar o HP no NFT.
 
-Eu faço o deploy usando `npx hardhat run scripts/deploy.js --network rinkeby`. A partir daí, aqui está meu output:
+Eu faço o deploy usando `npx hardhat run scripts/deploy.js --network goerli`. A partir daí, aqui está meu output:
 
 ```plaintext
 Contrato deployado no endereço: 0x02f59Dc14666c4480Ae4b477eFfF15949970dfeA
@@ -74,7 +74,7 @@ No OpenSea, aqui está como isso se parece pra mim:
 
 Está tudo funcionando como deveria!! Oba!! Pikachu perdeu vida!!
 
-Sinta-se livre para ver no Rarible também. Só saiba que o Rarible é um pouco mais lento para mostrar metadados atualizados! `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE`.
+Sinta-se livre para ver no Rarible também. Só saiba que o Rarible é um pouco mais lento para mostrar metadados atualizados! `https://goerli.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE`.
 
 ![](https://i.imgur.com/Pwx4IOM.png)
 

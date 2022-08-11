@@ -4,7 +4,7 @@ A parte legal sobre o jogo? Nós mintamos NFTs de verdade que são usadas para j
 
 A primeira coisa que vamos começar é checar se o endereço da carteira conectada com o nosso app tem um personagem NFT. Se tiver, podemos ir em frente e pegar os metadados da NFT e usá-los para batalhar contra o boss no metaverso ⚔️.
 
-Aqui está o flow de conseguir o nosso web app conectando com nosso contrato inteligente na Testnet Rinkeby:
+Aqui está o flow de conseguir o nosso web app conectando com nosso contrato inteligente na Testnet Goerli:
 
 1. Copie o endereço do último contrato que você fez deploy, e cole dentro do nosso web app.
 
@@ -84,7 +84,7 @@ Por quê precisamos fazer tudo isso? Porque contratos inteligentes são **imutá
 
 Então, o que você precisa fazer é isso:
 
-1. Fazer o dpeloy de novo usando `npx hardhat run scripts/deploy.js --network rinkeby`
+1. Fazer o dpeloy de novo usando `npx hardhat run scripts/deploy.js --network goerli`
 
 2. Mudar `contractAddress` em `constants.js` para ser o novo endereço do contrato que pegamos do passo acima no terminal (como fizemos antes da primeira vez que fizemos deploy).
 
@@ -104,13 +104,13 @@ import { ethers } from "ethers";
 
 ### 🌐 Cheque sua rede!
 
-Nesse ponto é realmente importante ter certeza que você está conectada na rede de teste do Rinkeby com o Metamask! Se não, você vai estar tentando usar funções no contrato inteligente que não existem em outras redes, e isso pode causar erros no React como "Unhandled Rejection (Error): call revert exception." Algo que você pode adicionar no seu código React para manter as coisas certas é uma função que deixa você saber se estiver na rede errada! Coloque isso na função dentro do seu useEffect:
+Nesse ponto é realmente importante ter certeza que você está conectada na rede de teste do Goerli com o Metamask! Se não, você vai estar tentando usar funções no contrato inteligente que não existem em outras redes, e isso pode causar erros no React como "Unhandled Rejection (Error): call revert exception." Algo que você pode adicionar no seu código React para manter as coisas certas é uma função que deixa você saber se estiver na rede errada! Coloque isso na função dentro do seu useEffect:
 
 ```javascript
 const checkNetwork = async () => {
   try {
     if (window.ethereum.networkVersion !== "4") {
-      alert("Please connect to Rinkeby!");
+      alert("Please connect to Goerli!");
     }
   } catch (error) {
     console.log(error);
@@ -118,7 +118,7 @@ const checkNetwork = async () => {
 };
 ```
 
-Aqui está um passo a passo do que estamos fazendo aqui. Semelhante a como definimos `const { ethereum } = window` nós estamos usando `networkVersion` no objeto ethereum para checar qual rede ethereum nós estamos. As redes ethereum tem diferentes chain IDs, e o ID do Rinkeby é 4. Tudo que precisamos fazer é falar "se a atual rede ethereum não for o Rinkeby, alerte o usuário!" Agora a qualquer hora que a página não estiver carregado no Rinkeby você terá um aviso para seus usuários trocarem para o Rinkeby.
+Aqui está um passo a passo do que estamos fazendo aqui. Semelhante a como definimos `const { ethereum } = window` nós estamos usando `networkVersion` no objeto ethereum para checar qual rede ethereum nós estamos. As redes ethereum tem diferentes chain IDs, e o ID do Goerli é 5. Tudo que precisamos fazer é falar "se a atual rede ethereum não for o Goerli, alerte o usuário!" Agora a qualquer hora que a página não estiver carregado no Goerli você terá um aviso para seus usuários trocarem para o Goerli.
 
 ### Recapitulação
 

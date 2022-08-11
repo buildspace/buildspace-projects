@@ -313,7 +313,7 @@ Aqui está como o meu se parece:
 
 ![Untitled](https://i.imgur.com/W3eca7t.png)
 
-Aí está meu Leo. Uma coisa para notar aqui - tenha certeza de ver sua NFT no [https://testnets.opensea.io/](https://testnets.opensea.io/) já que estamos usando o Rinkeby!
+Aí está meu Leo. Uma coisa para notar aqui - tenha certeza de ver sua NFT no [https://testnets.opensea.io/](https://testnets.opensea.io/) já que estamos usando a Goerli!
 
 Você conseguiu! Agora que temos nosso personagem NFT nós podemos finalmente sair e proteger o Metaverso de seres malignos!
 

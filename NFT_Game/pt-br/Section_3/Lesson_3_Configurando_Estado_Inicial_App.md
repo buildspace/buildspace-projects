@@ -147,9 +147,9 @@ Nós fizemos muita coisa! Nesse ponto, vamos ter certeza que os métodos estão 
 
 O primeirio cenário é que o usuário não tenha conectado a sua carteira ao nosso app - então mostre o botão de conectar carteira!
 
-Nota: tenha certeza que sua carteira não está conectado ao app por um projeto antigo. Para fazer isso, clique na extensão do Metamask e clique nos três pontos na direita. Você deve ver algo como "Sites Conectados". Vá em frente e clique nisso. Você deve ver `[localhost:3000](http://localhost:3000)` com um ícone de lata de lixo do lado. Clique no ícone para remover a conexão da sua carteira do seu app.
+Nota: tenha certeza que sua carteira não está conectado ao app por um projeto antigo. Para fazer isso, clique na extensão do Metamask e clique nos três pontos na direita. Você deve ver algo como "Sites Conectados". Vá em frente e clique nisso. Você deve ver `http://localhost:3000` com um ícone de lata de lixo do lado. Clique no ícone para remover a conexão da sua carteira do seu app.
 
-![Untitled](https://i.imgur.com/zPAVBYb.png)
+![Untitled](https://i.imgur.com/wWoKMRX.png)
 
 Vá em frente e recarregue a página e você deve ver um botão "Connect To Wallet" pronto! Vá em frente e conecte! Uma vez que fizer isso, seu console deve escrever a palavra `Connected` e o seu endereço público da carteira!
 

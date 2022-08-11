@@ -1,6 +1,6 @@
 ### 😍 Você conseguiu.
 
-Muito legal que você conseguiu até o fim. É uma coisa grnade!!
+Muito legal que você conseguiu até o fim. É uma coisa enorme!!
 
 Esteja certo de adicionar _seus_ toques finais também :).
 

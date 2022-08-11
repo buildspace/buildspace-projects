@@ -154,9 +154,9 @@ Por exemplo, nesse caso `Aang` tem 200 HP, 50 de dano de ataque. Ele tem muita v
 Ok, é isso :)!! Quando eu rodar isso usando `npx hardhat run scripts/run.js` e aqui é o que eu tenho:
 
 ```plaintext
-Done initializing Leo w/ HP 100, img https://i.imgur.com/pKd5Sdk.png
-Done initializing Aang w/ HP 200, img https://i.imgur.com/xVu4vFL.png
-Done initializing Pikachu w/ HP 300, img https://i.imgur.com/WMB6g9u.png
+Personagem inicializado: Leo com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
+Personagem inicializado: Aang com 200 de HP, img https://i.imgur.com/xVu4vFL.png
+Personagem inicializado: Pikachu com 300 de HP, img https://i.imgur.com/WMB6g9u.png
 Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 ```
 

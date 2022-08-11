@@ -156,6 +156,6 @@ const runMain = async () => {
 runMain();
 ```
 
-Tudo o que sobrou é fazer o deploy usando `npx hardhat run scripts/deploy.js --network rinkeby`. Lembre-se de salvar o endereço do seu contrato para a próxima seção.
+Tudo o que sobrou é fazer o deploy usando `npx hardhat run scripts/deploy.js --network goerli`. Lembre-se de salvar o endereço do seu contrato para a próxima seção.
 
 É isso :). Vamos para o nosso web app!

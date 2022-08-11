@@ -219,7 +219,7 @@ As pessoas muitas vezes pensam que os metadados não permitem mudanças, mas iss
 
 Nesse caso, o nome e a imagem do personagem **nunca** mudam, mas o valor do HP definitivamente muda! **Nossas NFTs** precisam estar aptas a manter o estado do personagem específico do jogador.
 
-Esse é o porquê de nós precisarmos da variável `nftHolderAttributes`que mapeia o tokenId da NFT para uma estrutura de `CharacterAttributes`. Nos permite atualizar facilmente os valores das NFTs do jogador. Isso significa quando o jogador joga nosso jogo e o `hp` da NFT dele muda (pois o boss ataca ele), nós na verdade mudamos o valor do `hp` em `nftHolderAttributes`. E assim é como nós armazenamos os dados específicos da NFT de cada jogador no nosso contrato!
+Esse é o porquê de nós precisarmos da variável `nftHolderAttributes` que mapeia o tokenId da NFT para uma estrutura de `CharacterAttributes`. Nos permite atualizar facilmente os valores das NFTs do jogador. Isso significa quando o jogador joga nosso jogo e o `hp` da NFT dele muda (pois o boss ataca ele), nós na verdade mudamos o valor do `hp` em `nftHolderAttributes`. E assim é como nós armazenamos os dados específicos da NFT de cada jogador no nosso contrato!
 
 Depois, fazemos:
 
@@ -264,9 +264,9 @@ Plataformas como o OpenSea e Rarible sabem como pegar o `tokenURI` já que a for
 Meu output (saída) se parece com isso:
 
 ```plaintext
-Done initializing Leo w/ HP 100, img https://i.imgur.com/pKd5Sdk.png
-Done initializing Aang w/ HP 200, img https://i.imgur.com/xVu4vFL.png
-Done initializing Pikachu w/ HP 300, img https://i.imgur.com/u7T87A6.png
+Personagem inicializado: Leo com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
+Personagem inicializado: Aang com 200 de HP, img https://i.imgur.com/xVu4vFL.png
+Personagem inicializado: Pikachu com 300 de HP, img https://i.imgur.com/u7T87A6.png
 Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 Mintou um NFT com tokenId 1 e characterIndex 2
 Token URI:
@@ -374,9 +374,9 @@ abi.encodePacked("data:application/json;base64,", json)
 Essa linha é na verdade difícil de explicar, é mais fácil apenas mostrar! Vá em frente e rode `run.js`. Aqui está meu output:
 
 ```plaintext
-Done initializing Leo w/ HP 100, img https://i.imgur.com/pKd5Sdk.png
-Done initializing Aang w/ HP 200, img https://i.imgur.com/xVu4vFL.png
-Done initializing Pikachu w/ HP 300, img https://i.imgur.com/u7T87A6.png
+Personagem inicializado: Leo com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
+Personagem inicializado: Aang com 200 de HP, img https://i.imgur.com/xVu4vFL.png
+Personagem inicializado: Pikachu com 300 de HP, img https://i.imgur.com/u7T87A6.png
 Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 Mintou um NFT com tokenId 1 e characterIndex 2
 Token URI: data:application/json;base64,eyJuYW1lIjogIlBpa2FjaHUgLS0gTkZUICM6IDEiLCAiZGVzY3JpcHRpb24iOiAiQ3JpdGljYWxIaXQgaXMgYSB0dXJuLWJhc2VkIE5GVCBnYW1lIHdoZXJlIHlvdSB0YWtlIHR1cm5zIHRvIGF0dGFjayB0aGUgYm9vcy4iLCAiaW1hZ2UiOiAiaHR0cHM6Ly9pLmltZ3VyLmNvbS91N1Q4N0E2LnBuZyIsICJhdHRyaWJ1dGVzIjogWyB7ICJ0cmFpdF90eXBlIjogIkhlYWx0aCBQb2ludHMiLCAidmFsdWUiOiAzMDAsICJtYXhfdmFsdWUiOjMwMH0sIHsgInRyYWl0X3R5cGUiOiAiQXR0YWNrIERhbWFnZSIsICJ2YWx1ZSI6IDI1fSBdfQ==
