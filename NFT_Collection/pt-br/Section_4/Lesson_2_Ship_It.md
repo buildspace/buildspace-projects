@@ -16,7 +16,7 @@ require('dotenv').config();
 module.exports = {
   solidity: '0.8.0',
   networks: {
-    rinkeby: {
+    goerli: {
       url: process.env.STAGING_ALCHEMY_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
@@ -58,7 +58,7 @@ Vou deixar para você explorar!! ;)
 📝 Verifique o contrato no Etherscan.
 ------------------
 
-Você sabe que pode mostrar o código-fonte do seu contrato inteligente para o mundo? Isso permitirá que sua lógica seja realmente transparente. Fiel ao conceito de blockchain público. Todos que desejam interagir com seu smart contract na blockchain são capazes de examinar a lógica do contrato primeiro! Para isso, o Etherscan possui a função **Verify Contract**. [Aqui](https://rinkeby.etherscan.io/address/0x86bf1a9ced43ec2ed7791c42d309ea22627429ef#code) é um exemplo de como será um contrato verificado. Sinta-se à vontade para examinar o contrato você mesmo.
+Você sabe que pode mostrar o código-fonte do seu contrato inteligente para o mundo? Isso permitirá que sua lógica seja realmente transparente. Fiel ao conceito de blockchain público. Todos que desejam interagir com seu smart contract na blockchain são capazes de examinar a lógica do contrato primeiro! Para isso, o Etherscan possui a função **Verify Contract**. [Aqui](https://goerli.etherscan.io/address/0x86bf1a9ced43ec2ed7791c42d309ea22627429ef#code) é um exemplo de como será um contrato verificado. Sinta-se à vontade para examinar o contrato você mesmo.
 
 Se você selecionar a aba **Contract** no Etherscan, notará uma longa lista de caracteres de texto que começa em `0x608060405234801 ...` Hmm .. o que poderia ser 🤔?
 
@@ -111,13 +111,13 @@ Legal, você conseguiu sua chave de API. É hora de voltar ao arquivo `hardhat.c
 Estamos chegando ao último passo, eu prometo. Tudo o que resta agora é executar o comando
 
 ```
-npx hardhat verify YOUR_CONTRACT_ADDRESS --network rinkeby 
+npx hardhat verify YOUR_CONTRACT_ADDRESS --network goerli 
 ```
 Se tudo correr bem, você deverá ver algumas saídas no terminal. O meu é assim:
 
-![image](https://i.imgur.com/lrV9g9V.png)
+![image](https://i.imgur.com/lZ1X8TR.png)
 
-Volte para a página do contrato no Rinkeby Etherscan seguindo o link retornado no terminal e você notará que o Etherscan magicamente (com a sua ajuda) transformou os bytecodes em um código Solidity muito legível.
+Volte para a página do contrato no Goerli Etherscan seguindo o link retornado no terminal e você notará que o Etherscan magicamente (com a sua ajuda) transformou os bytecodes em um código Solidity muito legível.
 
 ![image](https://i.imgur.com/SqavSrG.png)
 
@@ -146,7 +146,7 @@ O que você aprendeu neste projeto é apenas o começo! Há muito mais que você
 
 - **Adicionar Royalties** - Você também pode adicionar royalties ao seu contrato que lhe daria uma porcentagem de cada venda futura de seu NFT! Leia mais sobre isso aqui: [EIP-2981: NFT Royaly Standard](https://eips.ethereum.org/EIPS/eip-2981/)
 
-- **Teste seus contratos localmente** - Se você quiser testar seus contratos mais extensivamente sem implantar em uma rede de teste como Rinkeby, o Hardhat permitirá que você faça isso! A melhor maneira de conseguir isso é abrir uma janela de terminal separada, navegar até o diretório do projeto e, em seguida, executar ```npx hardhat node``` e manter essa janela aberta! Assim como no início do projeto, você verá um monte de contas com muito ether. Em uma outra janela de terminal, você pode executar seus scripts de teste e observá-los afetando sua janela de nó!
+- **Teste seus contratos localmente** - Se você quiser testar seus contratos mais extensivamente sem implantar em uma rede de teste como Goerli, o Hardhat permitirá que você faça isso! A melhor maneira de conseguir isso é abrir uma janela de terminal separada, navegar até o diretório do projeto e, em seguida, executar ```npx hardhat node``` e manter essa janela aberta! Assim como no início do projeto, você verá um monte de contas com muito ether. Em uma outra janela de terminal, você pode executar seus scripts de teste e observá-los afetando sua janela de nó!
 
 🤟 Seu NFT!
 ---------

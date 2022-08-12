@@ -160,7 +160,7 @@ A partir de agora, toda vez que alguém mintar um NFT com essa função, será s
 
 Agora, vamos para o próximo passo - implementar em uma testnet :).
 
-## 🎉 Implantar no Rinkeby e ver no OpenSea
+## 🎉 Implantar na Goerli e ver no OpenSea
 
 Quando usamos `run.js`, somos apenas nós trabalhando localmente.
 
@@ -204,22 +204,21 @@ Isso é incrível porque podemos testar nossa aplicação num cenário de mundo 
 
 ## 🤑 Pegando um pouco de dinheiro falso
 
-Existem algumas testnets por aí, e a que usaremos é chamada "Rinkeby", e ela é rodada pela fundação Ethereum.
+Existem algumas testnets por aí, e a que usaremos é chamada "Goerli", e ela é rodada pela fundação Ethereum.
 
-Para poder fazer deploy na Rinkeby, precisamos de ETH falso. Por quê? Porque se estivéssemos fazendo deploy na mainnet Ethereum, você usaria dinheiro real! Por isso, testnets copiam como a mainnet funciona, a única diferença é que não tem dinheiro real envolvido.
+Para poder fazer deploy na Goerli, precisamos de ETH falso. Por quê? Porque se estivéssemos fazendo deploy na mainnet Ethereum, você usaria dinheiro real! Por isso, testnets copiam como a mainnet funciona, a única diferença é que não tem dinheiro real envolvido.
 
-Para conseguirmos ETH falso, precisamos pedir alguns para a rede. **Esse ETH falso só vai funcionar nessa testnet específica.** Você pode conseguir alguns Ethereum falsos para o Rinkeby por um faucet. Você só precisa achar algum que funcione.
+Para conseguirmos ETH falso, precisamos pedir alguns para a rede. **Esse ETH falso só vai funcionar nessa testnet específica.** Você pode conseguir alguns Ethereum falsos para o Goerli por um faucet. Você só precisa achar algum que funcione.
 
-Para o MyCrypto, você vai precisar conectar a sua carteira, criar uma conta e então clicar no mesmo link para pedir fundos. Para o faucet oficial do rinkeby, se listar 0 "peers", não vale o tempo para fazer um tweet/post público no Facebook.
+Para o MyCrypto, você vai precisar conectar a sua carteira, criar uma conta e então clicar no mesmo link para pedir fundos. Para o faucet oficial do Goerli, se listar 0 "peers", não vale o tempo para fazer um tweet/post público no Facebook.
 
-Seguem alguns _faucets_ onde você pode solicitar ETH falso para a rede _Rinkeby_.
+Seguem alguns _faucets_ onde você pode solicitar ETH falso para a rede _Goerli_.
 
-| Nome | Link | Quantidade | Tempo |
-| ---------------- | -------------------------- | --------------- | ------------ |
-| MyCrypto | https://app.mycrypto.com/faucet | 0,01 | Nenhum |
-| Buildspace | https://buildspace-faucet.vercel.app/ | 0,025 | 1d |
-| Rinkeby Oficial | https://faucet.rinkeby.io/ | 3 / 7,5 / 18,75 | 8h / 1d / 3d |
-| Chainlink | https://faucets.chain.link/rinkeby | 0,1 | Nenhum |
+| Nome | Link
+| ---------------- | --------------------------
+| Alchemy | https://goerlifaucet.com/ 
+| Mudit | https://goerli-faucet.mudit.blog/ 
+| Paradigm | https://faucet.paradigm.xyz/ 
 
 ## 🚀 Configurar um arquivo deploy.js
 
@@ -253,7 +252,7 @@ const runMain = async () => {
 runMain()
 ```
 
-## **📈 Fazer o deploy para a testnet Rinkeby.**
+## **📈 Fazer o deploy para a testnet Goerli.**
 
 Nós vamos precisar mudar nosso arquivo  `hardhat.config.js` . Você pode encontrá-lo na raíz do diretório do projeto do seu contrato inteligente.
 
@@ -262,17 +261,17 @@ require("@nomiclabs/hardhat-waffle");
 module.exports = {
   solidity: "0.8.1",
   networks: {
-    rinkeby: {
+    goerli: {
       url: "SEU_URL_DA_API_ALCHEMY",
-      accounts: ["SUA_KEY_PRIVADA_DA_CONTA_RINKEBY"],
+      accounts: ["SUA_KEY_PRIVADA_DA_CONTA_GOERLI"],
     },
   },
 };
 ```
 
-Você pode conseguir URL da sua API no dashboard do Alchemy e colar ali mesmo. Depois, você vai precisar da sua chave **privada** do rinkeby (não o seu endereço público!) o qual você pode pegar na MetaMask e colar ali também.
+Você pode conseguir URL da sua API no dashboard do Alchemy e colar ali mesmo. Depois, você vai precisar da sua chave **privada** do Goerli (não o seu endereço público!) o qual você pode pegar na MetaMask e colar ali também.
 
-ℹ️ **Nota:** O acesso à sua chave privada pode ser feito abrindo a MetaMask, alterando a rede para "Rinkeby Test Network" e depois clicando nos três pontos e selecionando "Account Details" > "Export Private Key"
+ℹ️ **Nota:** O acesso à sua chave privada pode ser feito abrindo a MetaMask, alterando a rede para "Goerli Test Network" e depois clicando nos três pontos e selecionando "Account Details" > "Export Private Key"
 
 **Nota: NÃO FAÇA COMMIT DESSE ARQUIVO NO GITHUB. ELE CONTÉM SUA CHAVE PRIVADA. VOCÊ PODE SER ROUBADO E HACKEADO. ESSA CHAVE PRIVADA É A MESMA QUE A DA MAINNET.** Nós vamos falar sobre variáveis `.env` depois e como mantê-las em segredo.
 
@@ -283,16 +282,16 @@ Uma vez que você configurou o seu setup, estamos prontos para fazer o deploy co
 Rode esse comando pela raíz do seu diretório  `epic-nfts`.
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 Geralmente, leva de 20 a 40 segundos para fazer o deploy. Nós não estamos apenas fazendo deploy! Nós também estamos mintando NFTs no arquivo `deploy.js` então isso vai tomar algum tempo também. Na verdade, precisamos esperar que a transação seja minerada e validada pelos mineradores. Muito épico :). Esse único comando faz tudo isso!
 
 Quando eu rodo esse comando, esse é o resultado (o seu vai ser diferente):
 
-![gcWPqJp.png](https://i.imgur.com/gcWPqJp.png)
+![](https://i.imgur.com/mwE0jW6.png)
 
-Podemos ter certeza que tudo funcionou corretamente usando o [Rinkeby Etherscan](https://rinkeby.etherscan.io/), onde você pode colar o endereço do contrato e ver o que está acontecendo com ele.
+Podemos ter certeza que tudo funcionou corretamente usando o [Goerli Etherscan](https://goerli.etherscan.io/), onde você pode colar o endereço do contrato e ver o que está acontecendo com ele.
 
 Se acostume a usar o Etherscan porque é a maneira mais fácil de acompanhar os deploys e se alguma coisa der errado. Se não está aparecendo no Etherscan, significa que ou está processando ainda ou algo deu errado.
 
@@ -322,10 +321,10 @@ Muito épico, acabamos de criar nosso contrato NFT _e_ mintamos dois NFTs. Épic
 
 **Use o Rarible ao invés do OpenSea.** Rarible é outro marketplace NFT como o OpenSea. Aqui está como configurá-lo:
 
-1. Vá para `rinkeby.rarible.com`.
-2. Crie esse URL: `https://rinkeby.rarible.com/token/INSIRA_O_CONTRACT_ADDRESS_AQUI:INSIRA_O_TOKEN_ID_AQUI.`
+1. Vá para `testnet.rarible.com`.
+2. Crie esse URL: `https://testnet.rarible.com/token/INSIRA_O_CONTRACT_ADDRESS_AQUI:INSIRA_O_TOKEN_ID_AQUI.`
 
-Por exemplo, esse é meu link: https://rinkeby.rarible.com/token/0x5794653132ed3cb5c1758c2908bf283f4fe57f45:0 para o NFT do Chaves!! Meu `tokenId` é `0` porque foi o primeiro mint daquele contrato.
+Por exemplo, esse é meu link: https://testnet.rarible.com/token/0x5794653132ed3cb5c1758c2908bf283f4fe57f45:0 para o NFT do Chaves!! Meu `tokenId` é `0` porque foi o primeiro mint daquele contrato.
 
 **Basicamente, se você não vir seu NFT no OpenSea dentro de alguns minutos, tente o Rarible e Rarible URLs para o resto do projeto.**
 

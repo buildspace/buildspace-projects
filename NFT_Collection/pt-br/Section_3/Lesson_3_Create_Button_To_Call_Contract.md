@@ -6,7 +6,7 @@ Então, lembre-se, nosso contrato tem a função `makeAnEpicNFT` o qual vai cunh
 
 ```javascript
 const askContractToMintNft = async () => {
-  const CONTRACT_ADDRESS = "INSIRA_O_ENDEREÇO_DO_CONTRATO_NA_REDE_RINKEBY";
+  const CONTRACT_ADDRESS = "INSIRA_O_ENDEREÇO_DO_CONTRATO_NA_REDE_GOERLI";
   try {
     const { ethereum } = window;
     if (ethereum) {
@@ -22,7 +22,7 @@ const askContractToMintNft = async () => {
       console.log("Cunhando...espere por favor.");
       await nftTxn.wait();
       console.log(
-        `Cunhado, veja a transação: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`
+        `Cunhado, veja a transação: https://goerli.etherscan.io/tx/${nftTxn.hash}`
       );
     } else {
       console.log("Objeto ethereum não existe!");
@@ -63,7 +63,7 @@ console.log("Vai abrir a carteira agora para pagar o gás...");
 let nftTxn = await connectedContract.makeAnEpicNFT();
 console.log("Cunhando...espere por favor.");
 await nftTxn.wait();
-console.log(`Cunhado, veja a transação: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+console.log(`Cunhado, veja a transação: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 ```
 
 O resto do código já deve fazer sentido. Parece com o código que fizemos deploy. Nós chamamos nosso contrato usando `makeAnEpicNFT`, esperamos ser minerada e linkamos com o URL Etherscan!

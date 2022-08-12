@@ -5,7 +5,7 @@ Uma coisa que seria incrível é que, após o NFT ser cunhado, forneceríamos um
 
 O link para um NFT no OpenSea se parece com este:
 
-`https://testnets.opensea.io/assets/rinkeby/0x30844f883622922830357135e192ac13a656f9c9/2`
+`https://testnets.opensea.io/assets/goerli/0x30844f883622922830357135e192ac13a656f9c9/2`
 
 Basicamente, são duas variáveis.
 
@@ -16,11 +16,11 @@ Basicamente, são duas variáveis.
 
 O link para um NFT no Rarible se parece com este:
 
-`https://rinkeby.rarible.com/token/0x30844f883622922830357135e192ac13a656f9c9:1`
+`https://testnet.rarible.com/token/0x30844f883622922830357135e192ac13a656f9c9:1`
 
 Basicamente, são duas variaveis.
 
-`https://rinkeby.rarible.com/token/INSIRA_O_ENDEREÇO_DE_CONTRATO_AQUI:INSIRA_O_TOKEN_ID_AQUI`
+`https://testnet.rarible.com/token/INSIRA_O_ENDEREÇO_DE_CONTRATO_AQUI:INSIRA_O_TOKEN_ID_AQUI`
 
 --------------------
 
@@ -81,7 +81,7 @@ Dica, você precisará de algo que no solidity é chamado de `require`. E você 
 ❌ Alerte o usuário quando ele estiver na rede errada.
 --------------
 
-Seu site **apenas** funcionará no Rinkeby (já que é onde reside o seu contrato).
+Seu site **apenas** funcionará na Goerli (já que é onde reside o seu contrato).
 
 Vamos adicionar uma boa mensagem informando os usuários sobre isso!
 
@@ -93,9 +93,9 @@ Já endereçamos solicitações ao blockchain. Usamos `ethereum.request` com os 
 let chainId = await ethereum.request({ method: 'eth_chainId' });
 console.log("Conectado à rede " + chainId);
 // String, hex code of the chainId of the Rinkebey test network
-const rinkebyChainId = "0x4"; 
-if (chainId !== rinkebyChainId) {
-	alert("Você não está conectado a rede Rinkeby de teste!");
+const goerliChainId = "0x5"; 
+if (chainId !== goerliChainId) {
+	alert("Você não está conectado a rede Goerli de teste!");
 }
 ```
 Pronto, agora o usuário saberá se está na rede errada!

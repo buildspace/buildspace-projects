@@ -129,12 +129,12 @@ _setTokenURI(newItemId, "data:application/json;base64,ewogICJuYW1lIjogIlR1YmFpbm
 Finalmente, vamos fazer deploy do nosso contrato atualizado, mintar o NFT, e ter certeza que funciona corretamente no OpenSea! Faça o deploy usando o mesmo comando. Eu mudei o meu script de deploy para mintar um NFT ao invés de dois, sinta-se livre para fazer o mesmo!
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 Depois, a mesma coisa de antes, espere um minuto ou dois, pegue o endereço do contrato, procure no [https://testnets.opensea.io/](https://testnets.opensea.io/) e você deve ver seu NFT ali :). De novo, não clique "Enter" quando estiver procurando -- você deve clicar na coleção quando aparecer na barra de pesquisa.
 
-Nota: lembre de usar `https://rinkeby.rarible.com/token/INSIRA_O_ENDEREÇO_DO_CONTRATO_AQUI:INSIRA_O_TOKEN_ID_AQUI` se o OpenSea estiver muito lento.
+Nota: lembre de usar `https://testnet.rarible.com/token/INSIRA_O_ENDEREÇO_DO_CONTRATO_AQUI:INSIRA_O_TOKEN_ID_AQUI` se o OpenSea estiver muito lento.
 
 ![Untitled](https://i.imgur.com/lYCAzph.png)
 
