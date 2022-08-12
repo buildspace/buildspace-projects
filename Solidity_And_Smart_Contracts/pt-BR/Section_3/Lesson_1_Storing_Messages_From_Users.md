@@ -163,7 +163,7 @@ Por que precisamos fazer tudo isso? Bem, é porque os contratos inteligentes sã
 
 Então o que você precisa fazer agora é:
 
-1\. Faça do redeploy usando `npx hardhat run scripts/deploy.js --network rinkeby`
+1\. Faça do redeploy usando `npx hardhat run scripts/deploy.js --network goerli`
 
 2\. Altere `contractAddress` em `App.js` para ser o novo endereço do contrato obtido no terminal na etapa acima, assim como fizemos antes da primeira vez que implantamos.
 

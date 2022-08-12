@@ -41,7 +41,7 @@ Portanto, se uma transação custar 250.000 gas, então *depois* que a transaç�
 
 Quando seu contrato foi implantado e você o está testando com sua interface do usuário e sua carteira, pode ser confuso no início determinar se a conta da sua carteira foi recompensada com sucesso com o prêmio. Sua conta terá usado uma certa quantidade de gás e potencialmente será recompensada com ETH. Então, como você pode validar se seu contrato está funcionando conforme o esperado?
 
-Para validar, você pode abrir seu endereço de contrato no [Rinkeby Etherscan](https://rinkeby.etherscan.io/) e visualizar as transações que ocorreram. Você encontrará todo tipo de informação útil aqui, incluindo o método que foi chamado, que neste caso é `Wave`. Se você clicar em uma transação `Wave`, você notará que na propriedade `To`, ela identificará que o endereço do contrato foi chamado. Se o usuário ganhou um prêmio, você notará nesse campo que o contrato transferiu 0.0001 ETH do endereço do contrato para o endereço da sua conta.
+Para validar, você pode abrir seu endereço de contrato no [Goerli Etherscan](https://goerli.etherscan.io/) e visualizar as transações que ocorreram. Você encontrará todo tipo de informação útil aqui, incluindo o método que foi chamado, que neste caso é `Wave`. Se você clicar em uma transação `Wave`, você notará que na propriedade `To`, ela identificará que o endereço do contrato foi chamado. Se o usuário ganhou um prêmio, você notará nesse campo que o contrato transferiu 0.0001 ETH do endereço do contrato para o endereço da sua conta.
 
 Observe que o `Value` da transação ainda é 0 ETH, pois o usuário nunca pagou nada para iniciar o tchauzinho. A transferência interna de ETH por um contrato inteligente é chamada de "transação interna".
 
@@ -153,7 +153,7 @@ require("dotenv").config();
 module.exports = {
   solidity: "0.8.0",
   networks: {
-    rinkeby: {
+    goerli: {
       url: process.env.STAGING_ALCHEMY_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },

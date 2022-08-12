@@ -51,21 +51,19 @@ Então, você fará tudo isso nas próximas lições :).
 🤑 Conseguindo $ falso
 ------------------------
 
-Existem algumas redes de teste por aí e a que usaremos é chamada de "Rinkeby", que é administrada pela fundação Ethereum.
+Existem algumas redes de teste por aí e a que usaremos é chamada de "Goerli", que é administrada pela fundação Ethereum.
 
-Para implantar na Rinkeby, precisamos de **ether** falso. Por quê? Porque se você estivesse implantando na rede principal Ethereum real, usaria dinheiro real! Então, as testnets copiam como a rede principal funciona, a única diferença é que nenhum dinheiro real está envolvido.
+Para implantar na Goerli, precisamos de **ether** falso. Por quê? Porque se você estivesse implantando na rede principal Ethereum real, usaria dinheiro real! Então, as testnets copiam como a rede principal funciona, a única diferença é que nenhum dinheiro real está envolvido.
 
-Para obter ETH falso, temos que pedir à alguma rede. **Este ETH falso só funcionará nesta rede de teste específica.** Você pode pegar algum ETH falso para Rinkeby através de um **faucet** (torneira). Certifique-se de que sua carteira MetaMask esteja definida como "Rinkeby Test Network" antes de usar a faucet.
+Para obter ETH falso, temos que pedir à alguma rede. **Este ETH falso só funcionará nesta rede de teste específica.** Você pode pegar algum ETH falso para Goerli através de um **faucet** (torneira). Certifique-se de que sua carteira MetaMask esteja definida como "Goerli Test Network" antes de usar a faucet.
 
-Seguem alguns _faucets_ onde você pode solicitar ETH falso para a rede _Rinkeby_.
+Seguem alguns _faucets_ onde você pode solicitar ETH falso para a rede _Goerli_.
 
-| Nome | Link | Quantidade | Tempo |
-| ---------------- | -------------------------- | --------------- | ------------ |
-| MyCrypto | https://app.mycrypto.com/faucet | 0,01 | Nenhum |
-| Buildspace | https://buildspace-faucet.vercel.app/ | 0,025 | 1d |
-| Ethily | https://ethily.io/rinkeby-faucet/ | 0,2 | 1s |
-| Rinkeby Oficial | https://faucet.rinkeby.io/ | 3 / 7,5 / 18,75 | 8h / 1d / 3d |
-| Chainlink | https://faucets.chain.link/rinkeby | 0,1 | Nenhum |
+| Nome | Link
+| ---------------- | --------------------------
+| Alchemy | https://goerlifaucet.com/ 
+| Mudit | https://goerli-faucet.mudit.blog/ 
+| Paradigm | https://faucet.paradigm.xyz/ 
 
 Para o MyCrypto, você precisará conectar sua carteira, criar uma conta e clicar no mesmo link novamente para solicitar fundos.
 
@@ -74,7 +72,7 @@ Para o MyCrypto, você precisará conectar sua carteira, criar uma conta e clica
 
 Se os links acima não funcionarem, entre no [Discord da web3dev](https://discord.web3dev.com.br/) e use o comando `/faucet` no canal #faucet-request e que o bot enviará alguns para você! Se você quiser mais, envie seu endereço de carteira pública e solte um gif engraçado. Ou eu ou alguém do projeto enviará ETH falso assim que puder. Quanto mais engraçado o gif, mais rápido você receberá uma ETH falso LOL.
 
-📈 Faça o deploy na rede de teste Rinkeby.
+📈 Faça o deploy na rede de teste Goerli.
 ----------------------------------
 
 Precisaremos alterar nosso arquivo `hardhat.config.js`. Você pode encontrá-lo no diretório raiz do seu projeto de contrato inteligente.
@@ -85,9 +83,9 @@ require("@nomiclabs/hardhat-waffle");
 module.exports = {
   solidity: "0.8.0",
   networks: {
-    rinkeby: {
+    goerli: {
       url: "YOUR_ALCHEMY_API_URL",
-      accounts: ["YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY"],
+      accounts: ["YOUR_PRIVATE_GOERLI_ACCOUNT_KEY"],
     },
   },
 };
@@ -97,18 +95,18 @@ module.exports = {
 
 Falaremos sobre variáveis `.env` mais tarde e como manter essas coisas em segredo.
 
-Você pode pegar a URL da API no painel do Alchemy e colá-lo. Em seguida, você precisará da sua chave **privada** rinkeby (não sua chave pública!), que você pode pegar da Metamask e colá-la lá também.
+Você pode pegar a URL da API no painel do Alchemy e colá-lo. Em seguida, você precisará da sua chave **privada** goerli (não sua chave pública!), que você pode pegar da Metamask e colá-la lá também.
 
-ℹ️ **Nota:** O acesso à sua chave privada pode ser feito abrindo a MetaMask, alterando a rede para "Rinkeby Test Network" e depois clicando nos três pontos e selecionando "Account Details" > "Export Private Key"
+ℹ️ **Nota:** O acesso à sua chave privada pode ser feito abrindo a MetaMask, alterando a rede para "Goerli Test Network" e depois clicando nos três pontos e selecionando "Account Details" > "Export Private Key"
 
 Por que você precisa usar sua chave privada? Porque para realizar uma transação como o deploy de um contrato, você precisa "fazer login" na blockchain. E, seu nome de usuário é seu endereço público e sua senha é sua chave privada. É como fazer login na AWS ou no GCP para fazer o deploy.
 
 Uma vez que você tenha sua configuração, estamos prontos para realizar o deploy com o script que escrevemos anteriormente.
 
-Execute este comando a partir do diretório raiz do `meu-portal-tchauzinho`. Observe que tudo o que fazemos é alterá-lo de `localhost` para `rinkeby`.
+Execute este comando a partir do diretório raiz do `meu-portal-tchauzinho`. Observe que tudo o que fazemos é alterá-lo de `localhost` para `goerli`.
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 ❤️ Implantado!
@@ -117,18 +115,18 @@ npx hardhat run scripts/deploy.js --network rinkeby
 Aqui está saída da execução:
 
 ```bash
-Deploying contracts with the account: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
-Account balance: 3198297774605223721
-WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
+Deploying contracts with account:  0xe0c0041f496116Ee081aE9CE118D718794628654
+Account balance:  377126289290356720
+WavePortal address:  0xdC6b92Dd42a2f9C497186d11210893cD597432B2
 ```
 
 Copie esse endereço do contrato implantado na última linha e salve-o em algum lugar. Não o perca! Você precisará dele para o frontend mais tarde :). O seu será diferente do meu.
 
 **Você acabou de fazer o deploy do seu contrato. UAAAAAAAAU!** 🤩
 
-Você pode pegar esse endereço e [colá-lo no Etherscan](https://rinkeby.etherscan.io/). Etherscan é um lugar que apenas nos mostra o estado da blockchain e nos ajuda a ver onde está nossa transação. Você deve ver sua transação aqui. Pode ser que demore um minuto para aparecer!
+Você pode pegar esse endereço e [colá-lo no Etherscan](https://goerli.etherscan.io/). Etherscan é um lugar que apenas nos mostra o estado da blockchain e nos ajuda a ver onde está nossa transação. Você deve ver sua transação aqui. Pode ser que demore um minuto para aparecer!
 
-Por exemplo, [aqui está a minha](https://rinkeby.etherscan.io/address/0x56A61F82549fD077E4B9F74C6Ae6a75209F43A8b)!
+Por exemplo, [aqui está a minha](https://goerli.etherscan.io/address/0xdc6b92dd42a2f9c497186d11210893cd597432b2)!
 
 🚨 Antes de clicar em "Próxima lição"
 ----------------------------------

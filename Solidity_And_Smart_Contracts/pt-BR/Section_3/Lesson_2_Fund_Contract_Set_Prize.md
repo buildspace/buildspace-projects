@@ -208,10 +208,10 @@ Fácil!
 Vamos implantar nosso contrato usando a mesma linha antiga
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
-Agora, quando você entrar em [Etherscan](https://rinkeby.etherscan.io/) e colar o endereço do seu contrato, verá que seu contrato agora tem um valor de 0.001 ETH! Sucesso!
+Agora, quando você entrar em [Etherscan](https://goerli.etherscan.io/) e colar o endereço do seu contrato, verá que seu contrato agora tem um valor de 0.001 ETH! Sucesso!
 
 **Lembre-se de atualizar seu frontend com o novo endereço do contrato *e* o novo arquivo ABI. Caso contrário, ele irá** **quebrar**.
 

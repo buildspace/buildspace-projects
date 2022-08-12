@@ -81,7 +81,7 @@ Mas, o que é um ABI? Muito antes eu mencionei como quando você compila um cont
 🏠 Configurando o endereço do seu contrato
 -----------------------------
 
-Lembra quando você implantou seu contrato no Rinkeby Testnet (épico, por sinal)? A saída dessa implantação incluiu seu endereço de contrato inteligente, que deve ser algo assim:
+Lembra quando você implantou seu contrato no Goerli Testnet (épico, por sinal)? A saída dessa implantação incluiu seu endereço de contrato inteligente, que deve ser algo assim:
 
 ```
 Deploying contracts with the account: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
@@ -219,7 +219,7 @@ const wave = async () => {
 
 Bem simples, né?
 
-O que é incrível aqui é que, enquanto a transação está sendo minerada, você pode imprimir o hash da transação, copiar/colar no [Etherscan](https://rinkeby.etherscan.io/) e vê-lo sendo processado em tempo real.
+O que é incrível aqui é que, enquanto a transação está sendo minerada, você pode imprimir o hash da transação, copiar/colar no [Etherscan](https://goerli.etherscan.io/) e vê-lo sendo processado em tempo real.
 
 Quando executarmos isso, você verá que a contagem total de tchauzinhos é aumentada em 1. Você também verá que a Metamask aparece e nos pede para pagar "gas" que pagamos usando nosso $ falso. Há um ótimo [artigo sobre como funciona o gas](https://ethereum.org/en/developers/docs/gas/). Tente descobrir o que é o **gas** :)
 
