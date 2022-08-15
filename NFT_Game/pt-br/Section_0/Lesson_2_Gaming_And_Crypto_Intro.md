@@ -8,11 +8,11 @@ Por que as pessoas estão perdendo a cabeça desse jeito?
 
 **Nota: isso é uma NFT "Axie" - que é o personagem que você joga dentro de Axie Infinity! Jogadores comprar NFTs Axie primeiro, e depois vão jogar o jogo. Bem estranho, certo? Comprar os personagens antes de você jogar o jogo!**
 
-A filosofia da WEB3DEV é entender através de construir você mesmo e mexer com a tecnologia. Mas, eu gostaria de passar por um exemplo rápido e informal ;)!
+A filosofia da WEB3DEV é entender construindo e mexendo com a tecnologia. Mas, eu gostaria de passar por um exemplo rápido e informal ;)!
 
 ### 🎮 Um exemplo rápido com a Nintendo.
 
-**Vamos dizer que você é a Nintendo** e você criou o Super Mario Bros. Mario é agora **sua** Propriedade Intelectual. **Você** é o criador. Ninguém está permitido criar mais jogos com o Mario exceto **você**. Você também quer controlar quem ganha % em cima dos seus personagens/universo.
+**Vamos dizer que você é a Nintendo** e você criou o Super Mario Bros. Mario é agora **sua** Propriedade Intelectual. **Você** é o criador ou criadora. Ninguém está permitido criar mais jogos com o Mario exceto **você**. Você também quer controlar quem ganha % em cima dos seus personagens/universo.
 
 Vamos imaginar um mundo, ao invés disso, onde nós trazemos NFTs para essa receita.
 
@@ -20,7 +20,7 @@ Digamos que a Nintendo saia e diga "Ei jogadores, aqui estão 1,000,000 NFTs do 
 
 Por exemplo, jogadores estariam aptos a pegar a NFT Mario deles para jogar como Mario no Super Smash Bros, e talvez para jogar Super Mario Galaxy, etc.
 
-A parte mais importante aqui é que o código do contrato inteligente das NFTs do Mario teria algo especial implementado pela nintendo acerca de **royalties**.
+A parte mais importante aqui é que o código do contrato inteligente das NFTs do Mario teria algo especial implementado pela Nintendo acerca de **royalties**.
 
 Por exemplo, os jogadores estariam aptos a vender suas NFTs Mario em um marketplace.
 
@@ -34,9 +34,9 @@ A parte mais legal? **Jogadors retém uma boa parte do valor.** Jogadores sempre
 
 ### 😢 Um problema: inflação
 
-Você vai perceber que Axies MEO custam algo como [600 dólares pra cimas](https://marketplace.axieinfinity.com/?__cf_chl_jschl_tk__=pmd_ybIeMQm0TAMzOvPj1DcoPlIZeWIcL5r4nwefM60mDTM-1634675045-0-gqNtZGzNAjujcnBszQoR)!!! Isso é insano e algo bem desanimador pra jogadores novos. Você precisa de três pra poder começar a jogar, então são 1800 dólares só ali.
+No auge da sua história, um Axie MEO custava algo como [600 dólares pra cimas](https://marketplace.axieinfinity.com/?__cf_chl_jschl_tk__=pmd_ybIeMQm0TAMzOvPj1DcoPlIZeWIcL5r4nwefM60mDTM-1634675045-0-gqNtZGzNAjujcnBszQoR)!!! Isso é insano e algo bem desanimador pra jogadores novos. Você precisaria de três pra poder começar a jogar, então seriam 1800 dólares só ali.
 
-Isso é causado basicamente pela inflação do mercado. Só uma quantidade de Axies estão sendo criados hoje em dia mas a base de jogadores está crescendo bem mais rápido. O resultado? Preços absurdos. Existem soluções que estão sendo exploradas, mas isso é uma preocupação quando falamos de jogos NFT. Vindo do [whitepaper](https://whitepaper.axieinfinity.com/gameplay/axie-population-and-long-term-sustainability) oficial do Axie:
+Isso é causado basicamente pela inflação do mercado. Só uma quantidade de Axies está sendo criada hoje em dia mas a base de jogadores está crescendo bem mais rápido. O resultado? Preços absurdos. Existem soluções que estão sendo exploradas, mas isso é uma preocupação quando falamos de jogos NFT. Vindo do [whitepaper](https://whitepaper.axieinfinity.com/gameplay/axie-population-and-long-term-sustainability) oficial do Axie:
 
 "_O crescimento da população Axie é um grande fator dentro do ecossistema Axie. Até agora em nenhum momento existiu uma taxa de inflação que nos permitiu crescer até nosso potencial máximo. Muito lento e os preços do Axie estão muito altos para pessoas nova entrarem; especialmente os Axies competitivos. Muito rápido e você tem uma inflação não saudável._"
 
@@ -63,5 +63,3 @@ Nós falamos muito. Vamos construir nossa pequena versão de um jogo NFT. No fin
 ### 🚨 Reporte seu Progresso!
 
 Poste uma screenshot em #progresso com o nome do seu video game favorito! Ajude a levantar o ânimo de jogadores na galera!
-
-Post in #progress with the name of your fav video game! Help get everyone in the gaming mood 8).

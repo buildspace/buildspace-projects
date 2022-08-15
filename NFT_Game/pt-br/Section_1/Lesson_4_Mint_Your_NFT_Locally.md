@@ -4,19 +4,19 @@ Agora que temos todos os dados configurados para nossos personagens, a próxima 
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.4;
 
 // Contrato NFT para herdar.
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-// Funções de ajuda que o OpenZeppelin providencia.
+// Funcoes de ajuda que o OpenZeppelin providencia.
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
 
 import "hardhat/console.sol";
 
-// Nosso contrato herda do ERC721, que é o contrato padrão de
+// Nosso contrato herda do ERC721, que eh o contrato padrao de
 // NFT!
 contract MyEpicGame is ERC721 {
 
@@ -29,7 +29,7 @@ contract MyEpicGame is ERC721 {
     uint attackDamage;
   }
 
-  // O tokenId é o identificador único das NFTs, é um número
+  // O tokenId eh o identificador unico das NFTs, eh um numero
   // que vai incrementando, como 0, 1, 2, 3, etc.
 
   using Counters for Counters.Counter;
@@ -37,11 +37,11 @@ contract MyEpicGame is ERC721 {
 
   CharacterAttributes[] defaultCharacters;
 
-  // Nós criamos um mapping do tokenId => atributos das NFTs.
+  // Criamos um mapping do tokenId => atributos das NFTs.
   mapping(uint256 => CharacterAttributes) public nftHolderAttributes;
 
-  // Um mapping de um endereço => tokenId das NFTs, nos dá um
-  // jeito fácil de armazenar o dono da NFT e referenciar ele
+  // Um mapping de um endereco => tokenId das NFTs, nos da um
+  // jeito facil de armazenar o dono da NFT e referenciar ele
   // depois.
   mapping(address => uint256) public nftHolders;
 
@@ -50,9 +50,9 @@ contract MyEpicGame is ERC721 {
     string[] memory characterImageURIs,
     uint[] memory characterHp,
     uint[] memory characterAttackDmg
-    // Embaixo, você também pode ver que adicionei um símbolo especial para identificar nossas NFTs
-    // Esse é o nome e o símbolo do nosso token, ex Ethereum ETH.
-    // Eu chamei o meu de Heroes e HERO. Lembre-se, um NFT é só um token!
+    // Embaixo, voce tambem pode ver que adicionei um simbolo especial para identificar nossas NFTs
+    // Esse eh o nome e o simbolo do nosso token, ex Ethereum ETH.
+    // Eu chamei o meu de Heroes e HERO. Lembre-se, um NFT eh soh um token!
   )
     ERC721("Heroes", "HERO")
   {
@@ -68,9 +68,9 @@ contract MyEpicGame is ERC721 {
 
       CharacterAttributes memory c = defaultCharacters[i];
 
-      // O uso do console.log() do hardhat nos permite 4 parâmetros em qualquer order dos seguintes tipos: uint, string, bool, address
+      // O uso do console.log() do hardhat nos permite 4 parametros em qualquer order dos seguintes tipos: uint, string, bool, address
 
-      console.log("Done initializing %s w/ HP %s, img %s", c.name, c.hp, c.imageURI);
+      console.log("Personagem inicializado: %s com %s de HP, img %s", c.name, c.hp, c.imageURI);
     }
 
     // Eu incrementei tokenIds aqui para que minha primeira NFT tenha o ID 1.
@@ -78,16 +78,16 @@ contract MyEpicGame is ERC721 {
     _tokenIds.increment();
   }
 
-  // Usuários vão poder usar essa função e pegar a NFT baseado no personagem que mandarem!
+  // Usuarios vao poder usar essa funcao e pegar a NFT baseado no personagem que mandarem!
   function mintCharacterNFT(uint _characterIndex) external {
     // Pega o tokenId atual (começa em 1 já que incrementamos no constructor).
     uint256 newItemId = _tokenIds.current();
 
-    // A função mágica! Atribui o tokenID para o endereço da carteira de quem chamou o contrato.
+    // A funcao magica! Atribui o tokenID para o endereço da carteira de quem chamou o contrato.
 
     _safeMint(msg.sender, newItemId);
 
-    // Nós mapeamos o tokenId => os atributos dos personagens. Mais disso abaixo
+    // Nos mapeamos o tokenId => os atributos dos personagens. Mais disso abaixo
 
     nftHolderAttributes[newItemId] = CharacterAttributes({
       characterIndex: _characterIndex,
@@ -98,12 +98,12 @@ contract MyEpicGame is ERC721 {
       attackDamage: defaultCharacters[_characterIndex].attackDamage
     });
 
-    console.log("Minted NFT w/ tokenId %s and characterIndex %s", newItemId, _characterIndex);
+    console.log("Mintou NFT c/ tokenId %s e characterIndex %s", newItemId, _characterIndex);
 
-    // Mantém um jeito fácil de ver quem possui a NFT
+    // Mantem um jeito facil de ver quem possui a NFT
     nftHolders[msg.sender] = newItemId;
 
-    // Incrementa o tokenId para a próxima pessoa que usar.
+    // Incrementa o tokenId para a proxima pessoa que usar.
     _tokenIds.increment();
   }
 }
@@ -282,7 +282,7 @@ O `tokenURI` tem um formato específico, na verdade! Na verdade, está esperando
 
 Vamos ver como fazer isso :).
 
-Crie uma pasta nova dentro de `contracts` chamada `libraries`. Crie um arquivo chamado `Base64.sol` e coloque ele dentro de libraries. Copie e cole o código [REVIEW(Eu tenh o o link do seu gist mas eu vi uma diferença na versão do solidity, o farza ta com a 0.8.0 e vc ta usando a 0.8.1, não sei se tem mais diferenças mas queria que vc olhasse por favor.)](https://gist.github.com/farzaa/f13f5d9bda13af68cc96b54851345832) dentro de `Base64.sol`. Isso basicamente nos dá funções que nos ajudam a codificar qualquer tipo de dado em uma string Base64 - que é um padrão para codificar pedaços de dado em uma string. Não se preocupe, você vai ver como isso funciona logo!
+Crie uma pasta nova dentro de `contracts` chamada `libraries`. Crie um arquivo chamado `Base64.sol` e coloque ele dentro de libraries. Copie e cole [esse código](https://gist.github.com/danicuki/4157b854d6dc83021674c5b08bd5f2df) dentro de `Base64.sol`. Isso basicamente nos dá funções que nos ajudam a codificar qualquer tipo de dado em uma string Base64 - que é um padrão para codificar pedaços de dado em uma string. Não se preocupe, você vai ver como isso funciona logo!
 
 Vamos precisar importar essa biblioteca no nosso contrato. Para isso, adicione o snippet a seguir perto do topo do seu arquivo, junto com os outros imports.
 
@@ -307,7 +307,7 @@ function tokenURI(uint256 _tokenId) public view override returns (string memory)
       charAttributes.name,
       ' -- NFT #: ',
       Strings.toString(_tokenId),
-      '", "description": "Esta NFT dá acesso ao meu jogo NFT!", "image": "',
+      '", "description": "Esta NFT da acesso ao meu jogo NFT!", "image": "',
       charAttributes.imageURI,
       '", "attributes": [ { "trait_type": "Health Points", "value": ',strHp,', "max_value":',strMaxHp,'}, { "trait_type": "Attack Damage", "value": ',
       strAttackDamage,'} ]}'
@@ -355,7 +355,7 @@ string memory json = Base64.encode(
         charAttributes.name,
         ' -- NFT #: ',
         Strings.toString(_tokenId),
-        '", "description": "Esta NFT dá acesso ao meu jogo NFT!", "image": "',
+        '", "description": "Esta NFT da acesso ao meu jogo NFT!", "image": "',
         charAttributes.imageURI,
         '", "attributes": [ { "trait_type": "Health Points", "value": ',strHp,', "max_value":',strMaxHp,'}, { "trait_type": "Attack Damage", "value": ',
         strAttackDamage,'} ]}'
@@ -379,18 +379,18 @@ Personagem inicializado: Aang com 200 de HP, img https://i.imgur.com/xVu4vFL.png
 Personagem inicializado: Pikachu com 300 de HP, img https://i.imgur.com/u7T87A6.png
 Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 Mintou um NFT com tokenId 1 e characterIndex 2
-Token URI: data:application/json;base64,eyJuYW1lIjogIlBpa2FjaHUgLS0gTkZUICM6IDEiLCAiZGVzY3JpcHRpb24iOiAiQ3JpdGljYWxIaXQgaXMgYSB0dXJuLWJhc2VkIE5GVCBnYW1lIHdoZXJlIHlvdSB0YWtlIHR1cm5zIHRvIGF0dGFjayB0aGUgYm9vcy4iLCAiaW1hZ2UiOiAiaHR0cHM6Ly9pLmltZ3VyLmNvbS91N1Q4N0E2LnBuZyIsICJhdHRyaWJ1dGVzIjogWyB7ICJ0cmFpdF90eXBlIjogIkhlYWx0aCBQb2ludHMiLCAidmFsdWUiOiAzMDAsICJtYXhfdmFsdWUiOjMwMH0sIHsgInRyYWl0X3R5cGUiOiAiQXR0YWNrIERhbWFnZSIsICJ2YWx1ZSI6IDI1fSBdfQ==
+Token URI: data:application/json;base64,eyJuYW1lIjogIlBpa2FjaHUgLS0gTkZUICM6IDEiLCAiZGVzY3JpcHRpb24iOiAiRXN0YSBORlQgZGEgYWNlc3NvIGFvIG1ldSBqb2dvIE5GVCEiLCAiaW1hZ2UiOiAiaHR0cHM6Ly9pLmltZ3VyLmNvbS9XTUI2Zzl1LnBuZyIsICJhdHRyaWJ1dGVzIjogWyB7ICJ0cmFpdF90eXBlIjogIkhlYWx0aCBQb2ludHMiLCAidmFsdWUiOiAzMDAsICJtYXhfdmFsdWUiOjMwMH0sIHsgInRyYWl0X3R5cGUiOiAiQXR0YWNrIERhbWFnZSIsICJ2YWx1ZSI6IDI1fSBdfQ==
 ```
 
 Você verá que Token URI agora escreve coisas! **Boa!!** Vá em frente e copie essa grande string depois de `Token URI:`. Por exemplo, a minha se parece com isso:
 
 ```plaintext
-data:application/json;base64,eyJuYW1lIjogIlBpa2FjaHUgLS0gTkZUICM6IDEiLCAiZGVzY3JpcHRpb24iOiAiQ3JpdGljYWxIaXQgaXMgYSB0dXJuLWJhc2VkIE5GVCBnYW1lIHdoZXJlIHlvdSB0YWtlIHR1cm5zIHRvIGF0dGFjayB0aGUgYm9vcy4iLCAiaW1hZ2UiOiAiaHR0cHM6Ly9pLmltZ3VyLmNvbS91N1Q4N0E2LnBuZyIsICJhdHRyaWJ1dGVzIjogWyB7ICJ0cmFpdF90eXBlIjogIkhlYWx0aCBQb2ludHMiLCAidmFsdWUiOiAzMDAsICJtYXhfdmFsdWUiOjMwMH0sIHsgInRyYWl0X3R5cGUiOiAiQXR0YWNrIERhbWFnZSIsICJ2YWx1ZSI6IDI1fSBdfQ==
+Token URI: data:application/json;base64,eyJuYW1lIjogIlBpa2FjaHUgLS0gTkZUICM6IDEiLCAiZGVzY3JpcHRpb24iOiAiRXN0YSBORlQgZGEgYWNlc3NvIGFvIG1ldSBqb2dvIE5GVCEiLCAiaW1hZ2UiOiAiaHR0cHM6Ly9pLmltZ3VyLmNvbS9XTUI2Zzl1LnBuZyIsICJhdHRyaWJ1dGVzIjogWyB7ICJ0cmFpdF90eXBlIjogIkhlYWx0aCBQb2ludHMiLCAidmFsdWUiOiAzMDAsICJtYXhfdmFsdWUiOjMwMH0sIHsgInRyYWl0X3R5cGUiOiAiQXR0YWNrIERhbWFnZSIsICJ2YWx1ZSI6IDI1fSBdfQ==
 ```
 
 Cole essa string dentro da barra de URL no seu browser. Você vai ver algo como isso:
 
-![REVIEW](https://i.imgur.com/C3QmD2G.png)
+![Imagem](https://i.imgur.com/EDPCPoH.png)
 
 BOOOM!!!
 

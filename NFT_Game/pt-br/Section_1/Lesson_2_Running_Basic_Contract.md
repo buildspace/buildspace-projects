@@ -15,13 +15,14 @@ Eu sempre gosto de começar com um contrato bem básico, só para as coisas flu�
 ```javascript
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.4;
 
 import "hardhat/console.sol";
 
 contract MyEpicGame {
   constructor() {
-    console.log("Esse é o contrato do meu jogo, vamo!");
+    //nao pode usar acentos nos arquivos .sol, pois dah ruim!
+    console.log("Esse eh o contrato do meu jogo, vamo!");
   }
 }
 ```
@@ -37,10 +38,10 @@ Vamos entender linha-por-linha do que fizemos até aqui.
 Só um comentário chique.  É chamado um "Identificador de licença SPDX", sinta-se livre para pesquisar o que é isso :).
 
 ```javascript
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.4;
 ```
 
-Essa é a versão do compilador Solidity que queremos que o nosso contrato use. Basicamente diz: "quando rodar isso, eu só quero usar a versão 0.8.0 do compilador Solidity, nada menos que isso. Nota, tenha certeza que o seu compilador esteja configurado para 0.8.0 no arquivo  `hardhat.config.js`.
+Essa é a versão do compilador Solidity que queremos que o nosso contrato use. Basicamente diz: "quando rodar isso, eu só quero usar a versão 0.8.4 do compilador Solidity, nada menos que isso. Nota, tenha certeza que o seu compilador esteja configurado para 0.8.4 no arquivo  `hardhat.config.js`.
 
 ```javascript
 import "hardhat/console.sol";
@@ -131,7 +132,7 @@ Mas, tem milhões de contratos na blockchain de verdade. Então, esse endereço 
 
 ### **💨 Rode.**
 
-Antes de rodar isso, esteja certo de trocar `solidity: "0.8.4",` para `solidity: "0.8.0",` no seu `hardhat.config.js`.
+Antes de rodar isso, esteja certo de trocar para `solidity: "0.8.4",` no seu `hardhat.config.js`.
 
 Vamos rodá-lo! Abra o terminal e rode:
 

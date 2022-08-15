@@ -90,26 +90,26 @@ const main = async () => {
     [100, 50, 25]
   );
   await gameContract.deployed();
-  console.log("Contract deployed to:", gameContract.address);
+  console.log("Contrato implantado no endereço:", gameContract.address)
 
   let txn;
   txn = await gameContract.mintCharacterNFT(0);
   await txn.wait();
-  console.log("Minted NFT #1");
+  console.log("Mintou NFT #1");
 
   txn = await gameContract.mintCharacterNFT(1);
   await txn.wait();
-  console.log("Minted NFT #2");
+  console.log("Mintou NFT #2");
 
   txn = await gameContract.mintCharacterNFT(2);
   await txn.wait();
-  console.log("Minted NFT #3");
+  console.log("Mintou NFT #3");
 
   txn = await gameContract.mintCharacterNFT(1);
   await txn.wait();
   console.log("Minted NFT #4");
 
-  console.log("Done deploying and minting!");
+  console.log("Fim do deploy e mint!");
 };
 
 const runMain = async () => {
@@ -132,7 +132,7 @@ Nós vamos precisar mudar nosso arquivo `hardhat.config.js` . Você pode encontr
 ```javascript
 require("@nomiclabs/hardhat-waffle");
 module.exports = {
-  solidity: "0.8.0",
+  solidity: "0.8.4",
   networks: {
     goerli: {
       url: "SEU_URL_DA_API_ALCHEMY",
@@ -159,15 +159,15 @@ npx hardhat run scripts/deploy.js --network goerli
 Aqui está o que eu consigo:
 
 ```plaintext
-Contrato implantado no endereço: 0x1bB5b2f90AaB36E2742886f75DD7F3c5B420Bf33
-Minted NFT #1
-Minted NFT #2
-Minted NFT #3
+Contrato implantado no endereço: 0x067f2Ac969091c285BcC1e537EC748aEdD779F02
+Mintou NFT #1
+Mintou NFT #2
+Mintou NFT #3
 Minted NFT #4
-Done e Minting terminados!
+Fim do deploy e mint!
 ```
 
-Podemos ter certeza que tudo funcionou corretamente usando o  [Goerli Etherscan](https://goerli.etherscan.io/) onde você copiar e colar o endereço do contrato que foi o output para ver o que aconteceu com ele. Aqui eu posso ver que tivemos **cinco** transações. **Uma** transação de criação de contrato e **quatro** transações onde mintamos NFT. Isso está certo :).
+Podemos ter certeza que tudo funcionou corretamente usando o [Goerli Etherscan](https://goerli.etherscan.io/) onde você copiar e colar o endereço do contrato que foi o output para ver o que aconteceu com ele. Aqui eu posso ver que tivemos **cinco** transações. **Uma** transação de criação de contrato e **quatro** transações onde mintamos NFT. Isso está certo :).
 
 ![Untitled](https://i.imgur.com/hJtoYRp.png)
 
