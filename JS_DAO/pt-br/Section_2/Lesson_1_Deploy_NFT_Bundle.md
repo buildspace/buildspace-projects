@@ -228,9 +228,9 @@ Okay, o que acabou de acontecer é muito lôko. Duas coisas aconteceram:
 
 Bem Épico. Um contrato customizado e lançado usando apenas javascript. Você pode ver o código do smart contract que o thridweb usa [aqui](https://github.com/thirdweb-dev/contracts/blob/main/contracts/drop/DropERC1155.sol).
 
-**A outra coisa que nós fizemos aqui foi usar o thirdweb para automaticamente fazer o upload e fixar a imagem da nossa coleção no IPFS.** Você vai ver um link que inicia com `https://gateway.ipfscdn.io` impresso. Se você copiar esse link no navegador, você vai ver a imagem do seu NFT sendo recuperada do IFPS via CloudFare!
+**A outra coisa que nós fizemos aqui foi usar o thirdweb para automaticamente fazer o upload e fixar a imagem da nossa coleção no IPFS.** Você vai ver um link que inicia com `https://gateway.ipfscdn.io` impresso. Se você copiar esse link no navegador, você vai ver a imagem do seu NFT sendo recuperada do IPFS via CloudFare!
 
-Você pode até ir para o IFPS diretamente usando a URI `ipfs://` (nota - não vai funcionar no Chrome porque você precisa está rodando um nó IPFS, mas funciona no Brave que faz isso por você!)
+Você pode até ir para o IPFS diretamente usando a URI `ipfs://` (nota - não vai funcionar no Chrome porque você precisa está rodando um nó IPFS, mas funciona no Brave que faz isso por você!)
 
 *Nota: IPFS é basicamente um sistema de armazenamento descentralizado. Temos vários artigos sobre o tema [nas páginas da comunidade](https://www.web3dev.com.br/t/ipfs) e [vídeos no nosso YouTube](https://www.youtube.com/watch?v=GZCUdnIuZD8&list=PLVX4xVoD65UMJmx0RabEw-Cv0PDxoLWDs)
 
