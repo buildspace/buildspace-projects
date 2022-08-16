@@ -36,7 +36,6 @@ Então, crie uma conta com o Alchemy [aqui](https://alchemy.com/?r=jQ3MDMxMzUyMD
 
 E depois dê uma olhada no meu vídeo abaixo:
 [Loom](https://www.loom.com/share/35aabe54c3294ef88145a03c311f1933)
-)
 
 ## 🕸 Testnets
 
