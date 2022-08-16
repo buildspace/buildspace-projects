@@ -107,7 +107,7 @@ function attackBoss() public {
   // Pega o estado do NFT do jogador
   uint256 nftTokenIdOfPlayer = nftHolders[msg.sender];
   CharacterAttributes storage player = nftHolderAttributes[nftTokenIdOfPlayer];
-  console.log("\nJogador com personagem %s irá atacar. Tem %s de HP e %s de Poder de Ataque", player.name, player.hp, player.attackDamage);
+  console.log("\nJogador com personagem %s ira atacar. Tem %s de HP e %s de Poder de Ataque", player.name, player.hp, player.attackDamage);
   console.log("Boss %s tem %s de HP e %s de PA", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
 }
 ```
@@ -167,7 +167,7 @@ function attackBoss() public {
   uint256 nftTokenIdOfPlayer = nftHolders[msg.sender];
   CharacterAttributes storage player = nftHolderAttributes[nftTokenIdOfPlayer];
 
-  console.log("\nJogador com personagem %s irá atacar. Tem %s de HP e %s de PD", player.name, player.hp, player.attackDamage);
+  console.log("\nJogador com personagem %s ira atacar. Tem %s de HP e %s de PD", player.name, player.hp, player.attackDamage);
   console.log("Boss %s tem %s de HP e %s de PD", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
 
   // Tenha certeza que o hp do player é maior que 0.
@@ -206,19 +206,19 @@ function attackBoss() public {
   uint256 nftTokenIdOfPlayer = nftHolders[msg.sender];
   CharacterAttributes storage player = nftHolderAttributes[nftTokenIdOfPlayer];
 
-  console.log("\nPlayer w/ character %s about to attack. Has %s HP and %s AD", player.name, player.hp, player.attackDamage);
-  console.log("Boss %s has %s HP and %s AD", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
+  console.log("\nJogador com personagem %s ira atacar. Tem %s de HP e %s de PD", player.name, player.hp, player.attackDamage);
+  console.log("Boss %s tem %s de HP e %s de PD", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
 
   // Checa se o hp do player é maior que 0.
   require (
     player.hp > 0,
-    "Error: character must have HP to attack boss."
+    "Erro: Personagem deve ter HP para atacar o boss."
   );
 
   // Checa que o hp do boss é maior que 0.
   require (
     bigBoss.hp > 0,
-    "Error: boss must have HP to attack boss."
+    "Erro: Boss deve ter HP para atacar o boss."
   );
 
   // Permite que o jogador ataque o boss.
@@ -242,19 +242,19 @@ function attackBoss() public {
   uint256 nftTokenIdOfPlayer = nftHolders[msg.sender];
   CharacterAttributes storage player = nftHolderAttributes[nftTokenIdOfPlayer];
 
-  console.log("\nPlayer w/ character %s about to attack. Has %s HP and %s AD", player.name, player.hp, player.attackDamage);
-  console.log("Boss %s has %s HP and %s AD", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
+  console.log("\nJogador com personagem %s ira atacar. Tem %s de HP e %s de PD", player.name, player.hp, player.attackDamage);
+  console.log("Boss %s tem %s de HP e %s de PD", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
 
   // Checa se o hp do player é maior que 0.
   require (
     player.hp > 0,
-    "Error: personagem deve ter HP para atacar o boss."
+    "Erro: personagem deve ter HP para atacar o boss."
   );
 
   // Checa que o hp do boss é maior que 0.
   require (
     bigBoss.hp > 0,
-    "Error: Boss deve ter HP para ser atacado."
+    "Erro: Boss deve ter HP para ser atacado."
   );
 
   // Permite que o jogador ataque o boss.
