@@ -191,7 +191,7 @@ Muitas coisas acontecendo aqui! Basicamente, **nossa NFT segura dados relacionad
 {
   "characterIndex": 1,
   "name": "Ronaldinho Gaúcho",
-  "imageURI": "https://i.imgur.com/xVu4vFL.png",
+  "imageURI": "https://i.imgur.com/NplQpes.png",
   "hp": 200,
   "maxHp": 200,
   "attackDamage": 50
@@ -206,7 +206,7 @@ Digamos que o meu personagem seja atacado e perca 50 de HP, bom, então o HP iri
 {
   "characterIndex": 1,
   "name": "Ronaldinho Gaúcho",
-  "imageURI": "https://i.imgur.com/xVu4vFL.png",
+  "imageURI": "https://i.imgur.com/NplQpes.png",
   "hp": 150,
   "maxHp": 200,
   "attackDamage": 50
@@ -264,9 +264,9 @@ Plataformas como o OpenSea e Rarible sabem como pegar o `tokenURI` já que a for
 Meu output (saída) se parece com isso:
 
 ```plaintext
-Personagem inicializado: Anitta com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
-Personagem inicializado: Ronaldinho Gaúcho com 200 de HP, img https://i.imgur.com/xVu4vFL.png
-Personagem inicializado: Zeca Pagodinho com 300 de HP, img https://i.imgur.com/u7T87A6.png
+Personagem inicializado: Anitta com 100 de HP, img https://i.imgur.com/gC5qXsl.png
+Personagem inicializado: Ronaldinho Gaúcho com 200 de HP, img https://i.imgur.com/NplQpes.png
+Personagem inicializado: Zeca Pagodinho com 300 de HP, img https://i.imgur.com/Pj8lHpM.png
 Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 Mintou um NFT com tokenId 1 e characterIndex 2
 Token URI:
@@ -336,7 +336,7 @@ Então, pegamos todos esses dados e empacotamos ele em uma variável chamada `js
 {
   "name": "Ronaldinho Gaúcho",
   "description": "Aqui é a descrição",
-  "image": "https://i.imgur.com/xVu4vFL.png",
+  "image": "https://i.imgur.com/NplQpes.png",
   "attributes": [
     { "trait_type": "Health Points", "value": 200, "max_value": 200 },
     { "trait_type": "Attack Damage", "value": 50 }
@@ -374,9 +374,9 @@ abi.encodePacked("data:application/json;base64,", json)
 Essa linha é na verdade difícil de explicar, é mais fácil apenas mostrar! Vá em frente e rode `run.js`. Aqui está meu output:
 
 ```plaintext
-Personagem inicializado: Anitta com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
-Personagem inicializado: Ronaldinho Gaúcho com 200 de HP, img https://i.imgur.com/xVu4vFL.png
-Personagem inicializado: Zeca Pagodinho com 300 de HP, img https://i.imgur.com/u7T87A6.png
+Personagem inicializado: Anitta com 100 de HP, img https://i.imgur.com/gC5qXsl.png
+Personagem inicializado: Ronaldinho Gaúcho com 200 de HP, img https://i.imgur.com/NplQpes.png
+Personagem inicializado: Zeca Pagodinho com 300 de HP, img https://i.imgur.com/Pj8lHpM.png
 Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 Mintou um NFT com tokenId 1 e characterIndex 2
 Token URI: data:application/json;base64,eyJuYW1lIjogIlBpa2FjaHUgLS0gTkZUICM6IDEiLCAiZGVzY3JpcHRpb24iOiAiRXN0YSBORlQgZGEgYWNlc3NvIGFvIG1ldSBqb2dvIE5GVCEiLCAiaW1hZ2UiOiAiaHR0cHM6Ly9pLmltZ3VyLmNvbS9XTUI2Zzl1LnBuZyIsICJhdHRyaWJ1dGVzIjogWyB7ICJ0cmFpdF90eXBlIjogIkhlYWx0aCBQb2ludHMiLCAidmFsdWUiOiAzMDAsICJtYXhfdmFsdWUiOjMwMH0sIHsgInRyYWl0X3R5cGUiOiAiQXR0YWNrIERhbWFnZSIsICJ2YWx1ZSI6IDI1fSBdfQ==

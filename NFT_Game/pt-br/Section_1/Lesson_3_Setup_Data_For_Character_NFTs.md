@@ -154,8 +154,8 @@ Por exemplo, nesse caso `Ronaldinho Gaúcho` tem 200 HP, 50 de dano de ataque. E
 Ok, é isso :)!! Quando eu rodar isso usando `npx hardhat run scripts/run.js` e aqui é o que eu tenho:
 
 ```plaintext
-Personagem inicializado: Anitta com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
-Personagem inicializado: Ronaldinho Gaúcho com 200 de HP, img https://i.imgur.com/xVu4vFL.png
+Personagem inicializado: Anitta com 100 de HP, img https://i.imgur.com/gC5qXsl.png
+Personagem inicializado: Ronaldinho Gaúcho com 200 de HP, img https://i.imgur.com/NplQpes.png
 Personagem inicializado: Zeca Pagodinho com 300 de HP, img https://i.imgur.com/WMB6g9u.png
 Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 ```

@@ -138,10 +138,10 @@ Então, fazemos `attackBoss()`.
 Quando rodo isso, isso é o que consigo:
 
 ```plaintext
-Terminamos de incializar o boss Capitão Nascimento com HP 10000, img https://i.imgur.com/AksR0tt.png
-Terminamos de incializar o Anitta com HP 100, img https://i.imgur.com/pKd5Sdk.png
-Terminamos de incializar o Ronaldinho Gaúcho com HP 200, img https://i.imgur.com/xVu4vFL.png
-Terminamos de incializar o Zeca Pagodinho com HP 300, img https://i.imgur.com/u7T87A6.png
+Terminamos de incializar o boss Capitão Nascimento com HP 10000, img https://i.imgur.com/yWpKMDt.png
+Terminamos de incializar o Anitta com HP 100, img https://i.imgur.com/gC5qXsl.png
+Terminamos de incializar o Ronaldinho Gaúcho com HP 200, img https://i.imgur.com/NplQpes.png
+Terminamos de incializar o Zeca Pagodinho com HP 300, img https://i.imgur.com/Pj8lHpM.png
 Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 NFT Mintado com tokenId 0 e characterId 2
 
@@ -295,10 +295,10 @@ await txn.wait();
 Agora quando rodo `run.js` aqui está o que eu consigo:
 
 ```plaintext
-Terminamos de incializar o boss Capitão Nascimento w/ HP 10000, img https://i.imgur.com/AksR0tt.png
-Terminamos de incializar o Anitta com HP 100, img https://i.imgur.com/pKd5Sdk.png
-Terminamos de incializar o Ronaldinho Gaúcho com HP 200, img https://i.imgur.com/xVu4vFL.png
-Terminamos de incializar o Zeca Pagodinho com HP 300, img https://i.imgur.com/u7T87A6.png
+Terminamos de incializar o boss Capitão Nascimento w/ HP 10000, img https://i.imgur.com/yWpKMDt.png
+Terminamos de incializar o Anitta com HP 100, img https://i.imgur.com/gC5qXsl.png
+Terminamos de incializar o Ronaldinho Gaúcho com HP 200, img https://i.imgur.com/NplQpes.png
+Terminamos de incializar o Zeca Pagodinho com HP 300, img https://i.imgur.com/Pj8lHpM.png
 Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 NFT Mintado com tokenId 0 e characterId 2
 
@@ -322,10 +322,10 @@ Sinta-se livre para testar essa função tentando com um boss com `1 de HP` ou u
 Por exemplo, se eu dou ao jogador `1 HP`, aqui está o resultado:
 
 ```plaintext
-Terminamos de incializar o boss Capitão Nascimento HP 10000, img https://i.imgur.com/AksR0tt.png
-Terminamos de incializar o Anitta com, img https://i.imgur.com/pKd5Sdk.png
-Terminamos de incializar o Ronaldinho Gaúcho com, img https://i.imgur.com/xVu4vFL.png
-Terminamos de incializar o Zeca Pagodinho com, img https://i.imgur.com/u7T87A6.png
+Terminamos de incializar o boss Capitão Nascimento HP 10000, img https://i.imgur.com/yWpKMDt.png
+Terminamos de incializar o Anitta com, img https://i.imgur.com/gC5qXsl.png
+Terminamos de incializar o Ronaldinho Gaúcho com, img https://i.imgur.com/NplQpes.png
+Terminamos de incializar o Zeca Pagodinho com, img https://i.imgur.com/Pj8lHpM.png
 Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 NFT Mintado com tokenId 0 e characterId 2
 
