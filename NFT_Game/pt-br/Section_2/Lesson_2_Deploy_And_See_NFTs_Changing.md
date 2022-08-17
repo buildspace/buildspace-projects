@@ -11,19 +11,19 @@ const main = async () => {
   const gameContractFactory = await hre.ethers.getContractFactory("MyEpicGame");
 
   const gameContract = await gameContractFactory.deploy(
-    ["Leo", "Aang", "Pikachu"],
-    [
-      "https://i.imgur.com/pKd5Sdk.png",
-      "https://i.imgur.com/xVu4vFL.png",
-      "https://i.imgur.com/u7T87A6.png",
-    ],
-    [100, 200, 300],
-    [100, 50, 25],
-    "Elon Musk",
-    "https://i.imgur.com/AksR0tt.png",
-    10000,
-    50
-  );
+    ["Anitta", "Ronaldinho Gaúcho", "Zeca Pagodinho"],
+		[
+			"https://i.imgur.com/gC5qXsl.png",
+			"https://i.imgur.com/0PvxtwP.png",
+			"https://i.imgur.com/Pj8lHpM.png",
+		],
+		[100, 200, 300],
+		[100, 50, 25],
+		"Capitão Nascimento",
+		"https://i.imgur.com/yWpKMDt.png",
+		10000,
+		50
+	);
 
   await gameContract.deployed();
   console.log("Contrato deployado no endereço:", gameContract.address);
@@ -66,13 +66,13 @@ Contrato deployado no endereço: 0x02f59Dc14666c4480Ae4b477eFfF15949970dfeA
 
 Uma vez que esperar alguns minutos, sites como o OpenSea ou o Rarible devem mostrar sua NFT com o HP atualizado.
 
-Então nesse caso, eu mintei um `Pikachu` NFT e fiz ele atacar o `Elon Musk` duas vezes. `Pikachu` começou **com 300 de HP**, então se ele atacar o Elon duas vezes, significa que agora ele deve ter 200 de HP (pois Elon ataca de volta).
+Então nesse caso, eu mintei um `Zeca Pagodinho` NFT e fiz ele atacar o `Capitão Nascimento` duas vezes. `Zeca Pagodinho` começou **com 300 de HP**, então se ele atacar o Capitão Nascimento duas vezes, significa que agora ele deve ter 200 de HP (pois Capitão Nascimento ataca de volta).
 
 No OpenSea, aqui está como isso se parece pra mim:
 
-![](https://i.imgur.com/dv5Q2lR.png)
+![REVIEW](https://i.imgur.com/dv5Q2lR.png)
 
-Está tudo funcionando como deveria!! Oba!! Pikachu perdeu vida!!
+Está tudo funcionando como deveria!! Oba!! Zeca Pagodinho perdeu vida!!
 
 Sinta-se livre para ver no Rarible também. Só saiba que o Rarible é um pouco mais lento para mostrar metadados atualizados! `https://goerli.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE`.
 

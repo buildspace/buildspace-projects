@@ -79,14 +79,12 @@ Eu adicionei algumas chamadas a mais para `mintCharacterNFT` também só para te
 const main = async () => {
   const gameContractFactory = await hre.ethers.getContractFactory("MyEpicGame");
   const gameContract = await gameContractFactory.deploy(
-    ["Leo", "Aang", "Pikachu"],
-    [
-      "https://i.imgur.com/pKd5Sdk.png",
-      "https://i.imgur.com/xVu4vFL.png",
-      "https://i.imgur.com/u7T87A6.png",
-    ],
-    [100, 200, 300],
-    [100, 50, 25]
+    ["Anitta", "Ronaldinho Gaúcho", "Zeca Pagodinho"],
+		[
+			"https://i.imgur.com/gC5qXsl.png",
+			"https://i.imgur.com/0PvxtwP.png",
+			"https://i.imgur.com/Pj8lHpM.png",
+		]
   );
   await gameContract.deployed();
   console.log("Contrato implantado no endereço:", gameContract.address)
@@ -186,7 +184,7 @@ Então aqui, você clicaria "Heroes -" dentro de "Collections", e boom, você ve
 
 ![Untitled](https://i.imgur.com/F9xQHFE.png)
 
-**BOOM! AÍ ESTÃO MEUS PERSONAGENS!!** Se você clicar em um dos seus personagens, vai poder clicar em "**Levels**" na esquerda e até ver os atributos específicos! **Nós até temos uma barrinha de vida!! ÉPICO!!! Cada barra de vida é diferente dependendo da NFT**, por exemplo o Pikachu tem 300 de HP e o Leo tem apenas 100!
+**BOOM! AÍ ESTÃO MEUS PERSONAGENS!!** Se você clicar em um dos seus personagens, vai poder clicar em "**Levels**" na esquerda e até ver os atributos específicos! **Nós até temos uma barrinha de vida!! ÉPICO!!! Cada barra de vida é diferente dependendo da NFT**, por exemplo o Zeca Pagodinho tem 300 de HP e o Anitta tem apenas 100!
 
 Por exemplo:
 
@@ -219,7 +217,7 @@ Por exemplo, esse é o meu link:
 https://goerli.rarible.com/token/0xcec8593c046364f163926a4327dfce6f546d9f98:4
 ```
 
-Esse é a NFT do Pikachu!! Meu `tokenId` é `4` porque foi o quarto mint feito daquele contrato. Sinta-se livre para tentar colocar outros Ids.
+Esse é a NFT do Zeca Pagodinho!! Meu `tokenId` é `4` porque foi o quarto mint feito daquele contrato. Sinta-se livre para tentar colocar outros Ids.
 
 **Basicamente, se você não vir sua NFT no OpenSea dentro de alguns minutos, tente o Rarible para ter certeza que está funcionando.**
 
@@ -257,17 +255,17 @@ _Isso é muito louco de se pensar. É um dos grandes motivos de crypto + jogos s
 
 Lembra do exemplo da NFT do Mario, onde os outros podem construir em cima do Mario? Mesma coisa aqui com nossos personagens NFT!
 
-Por exemplo, digamos que eu tenho 100,000 pessoas que mintaram meu Pikachu NFT para o meu jogo. Agora, existem 100,000 jogadores únicos que possuem essa NFT.
+Por exemplo, digamos que eu tenho 100,000 pessoas que mintaram meu Zeca Pagodinho NFT para o meu jogo. Agora, existem 100,000 jogadores únicos que possuem essa NFT.
 
-Outro desenvolvedor pode vir e construir outro jogo em cima da NFT Pikachu e permitir que qualquer jogador que tenha a NFT possa entrar no seu jogo e jogá-lo! Eles poderiam fazer com que qualquer um com a NFT do Pikachu possa usá-lo como personagem em seus jogos. Eles que decidem.
+Outro desenvolvedor pode vir e construir outro jogo em cima da NFT Zeca Pagodinho e permitir que qualquer jogador que tenha a NFT possa entrar no seu jogo e jogá-lo! Eles poderiam fazer com que qualquer um com a NFT do Zeca Pagodinho possa usá-lo como personagem em seus jogos. Eles que decidem.
 
-_Nota: nesse caso, os criadores de Pokemon podem ficar brabos. Mas imagine o Pikachu como seu personagem original!_
+_Nota: nesse caso, os criadores de Pokemon podem ficar brabos. Mas imagine o Zeca Pagodinho como seu personagem original!_
 
 Talvez coisas como HP e dano de ataque são até compartilhados entre jogos, significando que diferentes jogos podem usar os atributos originais que criamos.
 
 Por exemplo, digamos que nós temos outros devs construindo itens em cima dos nossos personagens NFT - como espadas, escudos, poções e etc. Talvez um dev construa algo onde um personagem NFT possa equipar um escudo e ganhar +50 de defesa. Isso pode ser feito em um jeito aberto e sem permissão :).
 
-Em cima disso, como o criador das NFTs originais do Pikachu - eu posso cobrar uma taxa royalty toda vez que alguém compre ou venda a NFT original e isso significa que quanto mais popular a NFT, mais dinheiro eu faria por venda.
+Em cima disso, como o criador das NFTs originais do Zeca Pagodinho - eu posso cobrar uma taxa royalty toda vez que alguém compre ou venda a NFT original e isso significa que quanto mais popular a NFT, mais dinheiro eu faria por venda.
 
 Ok - vamos programar a lógica do jogo.
 

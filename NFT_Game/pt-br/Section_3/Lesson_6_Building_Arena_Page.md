@@ -139,7 +139,7 @@ Boa! Pra ter certeza que tudo está funcionando, recarregue seu app rapidamente 
 
 ![Untitled](https://i.imgur.com/0bQQgAR.png)
 
-Elon chegou. Vamos em frente e configurar nosso componente para mostrar o Elon com toda sua glória.
+Capitão Nascimento chegou. Vamos em frente e configurar nosso componente para mostrar o Capitão Nascimento com toda sua glória.
 
 ### 🙀 Renderizando o grande Boss.
 
@@ -184,7 +184,7 @@ Você provavelmente vai ter um erro onde `runAttackAction` é undefined! Vamos a
 const runAttackAction = async () => {};
 ```
 
-Vá em frente e recarregue o app e você deve ver Elon, sua saúde e um botão para atacá-lo!
+Vá em frente e recarregue o app e você deve ver Capitão Nascimento, sua saúde e um botão para atacá-lo!
 
 Essa é uma UI simples com uma estilização sólida. A parte boa é pegar todos os dados do nosso contrato inteligente:
 ![Untitled](https://i.imgur.com/o8AJpfw.png)
@@ -249,15 +249,15 @@ Você pode ver basicamente o mesmo tipo de layout que temos para nosso personage
 
 Seu app deve se parecer com isso:
 
-![Untitled](https://i.imgur.com/l7oCuCN.png)
+![REVIEW - Untitled](https://i.imgur.com/l7oCuCN.png)
 
-Elon e Leo estão prontos para uma batalha épica 🔥. Agora que temos nosso boss e o herói prontos, chegou a hora:
+Capitão Nascimento e Anitta estão prontos para uma batalha épica 🔥. Agora que temos nosso boss e o herói prontos, chegou a hora:
 
 ![Untitled](https://media.giphy.com/media/26wkP6n7c8fQJbhVS/giphy.gif)
 
 ### 💥 Atacando o Boss.
 
-O grande objetivo do nosso jogo é derrotar o Boss no metaverso! Nós levamos em conta todo o dano de ataque que seu personagem NFT tem e a vida para cada jogador. O objetivo dessa seção é desferir um ataque em Elon e ver se ele desfere um em nós.
+O grande objetivo do nosso jogo é derrotar o Boss no metaverso! Nós levamos em conta todo o dano de ataque que seu personagem NFT tem e a vida para cada jogador. O objetivo dessa seção é desferir um ataque em Capitão Nascimento e ver se ele desfere um em nós.
 
 Se você lembra quando estávamos configurando a lógica de ataque no nosso contrato, nós testamos tudo. É hora de adicionar a lógica para a função `runAttackAction` que adicionamos mais cedo e outra variável de estado chamada `attackState`:
 
@@ -336,7 +336,7 @@ return (
 
 Nós vamos adicionar dinamicamente esse nome de classe para a nossa `div` que vai aplicar novos estilos nele! Uma coisa para notar aqui é que você pode mudar o nome dos estados de ataque, mas tenha certeza de atualizar eles no arquivo `Arena.css` já que os nomes de classe são necessários para as animações funcionarem!
 
-**Boa.** Devemos estar prontos para testar e desferir um ataque em Elon. Vá em frente e clique no botão de Ataque e veja o que acontece! Você deve ver algumas coisas:
+**Boa.** Devemos estar prontos para testar e desferir um ataque em Capitão Nascimento. Vá em frente e clique no botão de Ataque e veja o que acontece! Você deve ver algumas coisas:
 
 1. O Metamask aparece para ter certeza que você quer confirmar a ação de ataque.
 2. Você deve ver logs no seu console começando com "Attacking boss..."
@@ -345,7 +345,7 @@ Nós vamos adicionar dinamicamente esse nome de classe para a nossa `div` que va
 
 ![Untitled](https://i.imgur.com/WuT9ytY.png)
 
-**Você acabou de desferir seu primeiro ataque no Elon 😲.** Mas espere um minuto, a vida do Elon e do Leo não mudaram? Como nossos jogadores vão saber o que aconteceu? Você deve estar pensando no evento que fizemos antes no nosso contrato inteligente - você está certo! Isso é fácil, nós já fizemos isso! Vamos configurar um listener para ouvir ao evento de ataque:
+**Você acabou de desferir seu primeiro ataque no Capitão Nascimento 😲.** Mas espere um minuto, a vida do Capitão Nascimento e do Anitta não mudaram? Como nossos jogadores vão saber o que aconteceu? Você deve estar pensando no evento que fizemos antes no nosso contrato inteligente - você está certo! Isso é fácil, nós já fizemos isso! Vamos configurar um listener para ouvir ao evento de ataque:
 
 ```javascript
 /*
@@ -423,8 +423,8 @@ No React, `useState` nos permite pegar o valor anterior do estado antes de setar
 
 Finalmente, nós precisamos só adicionar a propriedade `hp` e os novos valores. Já que isso é DEPOIS do spread, o JavaScript sabe sobrescrever o valor de HP atual com o novo. É isso.
 
-Vamos tentar atacar o Elon novamente. Passe pelo seu mesmo setup e você deve ver agora as barras de vida do personagem atualizarem. Olhe seu console e você também verá seus dados escritos como isso:
+Vamos tentar atacar o Capitão Nascimento novamente. Passe pelo seu mesmo setup e você deve ver agora as barras de vida do personagem atualizarem. Olhe seu console e você também verá seus dados escritos como isso:
 
 ![Untitled](https://i.imgur.com/HhZcYFe.png)
 
-Você tem um jogo bem legítimo agora. Animações, vida e atualizações em tempo real. Elon é muito forte agora, pois ele matou o Leo :(.
+Você tem um jogo bem legítimo agora. Animações, vida e atualizações em tempo real. Capitão Nascimento é muito forte agora, pois ele matou o Anitta :(.

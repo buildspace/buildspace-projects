@@ -59,24 +59,24 @@ Finalmente, só mudamos `run.js` e `deploy.js` para passar em parâmetros para o
 
 ```javascript
 const gameContract = await gameContractFactory.deploy(
-  ["Leo", "Aang", "Pikachu"],
-  [
-    "https://i.imgur.com/pKd5Sdk.png",
-    "https://i.imgur.com/xVu4vFL.png",
-    "https://i.imgur.com/u7T87A6.png",
-  ],
-  [100, 200, 300],
-  [100, 50, 25],
-  "Elon Musk", // Boss name
-  "https://i.imgur.com/AksR0tt.png", // Boss image
-  10000, // Boss hp
-  50 // Boss attack damage
-);
+  ["Anitta", "Ronaldinho Gaúcho", "Zeca Pagodinho"],
+		[
+			"https://i.imgur.com/gC5qXsl.png",
+			"https://i.imgur.com/0PvxtwP.png",
+			"https://i.imgur.com/Pj8lHpM.png",
+		],
+		[100, 200, 300],
+		[100, 50, 25],
+		"Capitão Nascimento",
+		"https://i.imgur.com/yWpKMDt.png",
+		10000,
+		50
+	);
 ```
 
 Parece um pouco feio, mas, é isso!
 
-Nós agora temos um boss cujos dados vivem no nosso contrato. O boss que escolhi é `Elon Musk`. Isso significa que nossos jogadores precisam andar juntos para **destruir** Elon Musk. Por quê estamos destruindo Elon? Nem ideia. Eu só pensei que seria engraçado se tivéssemos personagens como Aang e o Pikachu atacando o Elon XD.
+Nós agora temos um boss cujos dados vivem no nosso contrato. O boss que escolhi é `Capitão Nascimento`. Isso significa que nossos jogadores precisam andar juntos para **destruir** Capitão Nascimento. Por quê estamos destruindo Capitão Nascimento? Nem ideia. Eu só pensei que seria engraçado se tivéssemos personagens como Ronaldinho Gaúcho e o Zeca Pagodinho atacando o Capitão Nascimento XD.
 
 **Por favor escolha seu próprio boss - talvez seja o Darth Vader? Talvez o seu tio? Talvez seu gato?** Qualquer coisa que você trocar, tenha certeza que é o seu próprio, não me copie :).
 
@@ -129,7 +129,7 @@ txn = await gameContract.attackBoss();
 await txn.wait();
 ```
 
-Aqui primeiro mintamos um personagem com index `2` que é o terceiro personagem na nossa array! Para mim, meu terceiro personagem é o Pikachu. Tem algo bem engraçado sobre ter o Pikachu atacando o Elon Musk no jogo.
+Aqui primeiro mintamos um personagem com index `2` que é o terceiro personagem na nossa array! Para mim, meu terceiro personagem é o Zeca Pagodinho. Tem algo bem engraçado sobre ter o Zeca Pagodinho atacando o Capitão Nascimento no jogo.
 
 Esse é o primeiro personagem NFT que mintamos, então ele terá automaticamente um id de `1`. Por quê? Porque `_tokenIds` começa no 0, mas então incrementamos ele para `1` no `constructor`. Então, nossa primeira NFT terá um ID de `1`, **não** `0`.
 
@@ -138,18 +138,18 @@ Então, fazemos `attackBoss()`.
 Quando rodo isso, isso é o que consigo:
 
 ```plaintext
-Terminamos de incializar o boss Elon Musk com HP 10000, img https://i.imgur.com/AksR0tt.png
-Terminamos de incializar o Leo com HP 100, img https://i.imgur.com/pKd5Sdk.png
-Terminamos de incializar o Aang com HP 200, img https://i.imgur.com/xVu4vFL.png
-Terminamos de incializar o Pikachu com HP 300, img https://i.imgur.com/u7T87A6.png
+Terminamos de incializar o boss Capitão Nascimento com HP 10000, img https://i.imgur.com/AksR0tt.png
+Terminamos de incializar o Anitta com HP 100, img https://i.imgur.com/pKd5Sdk.png
+Terminamos de incializar o Ronaldinho Gaúcho com HP 200, img https://i.imgur.com/xVu4vFL.png
+Terminamos de incializar o Zeca Pagodinho com HP 300, img https://i.imgur.com/u7T87A6.png
 Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 NFT Mintado com tokenId 0 e characterId 2
 
-Jogador com personagem Pikachu irá atacar. Tem 300 de HP e 25 de PD
-Boss Elon Musk tem 10000 HP e 50 PD
+Jogador com personagem Zeca Pagodinho irá atacar. Tem 300 de HP e 25 de PD
+Boss Capitão Nascimento tem 10000 HP e 50 PD
 ```
 
-Parece bom! `Pikachu` está indo atacar nosso boss `Elon Musk`. Tudo funcionou perfeitamente e estamos recuperando o estado das NFTs :).
+Parece bom! `Zeca Pagodinho` está indo atacar nosso boss `Capitão Nascimento`. Tudo funcionou perfeitamente e estamos recuperando o estado das NFTs :).
 
 ### 🔍 Conferir algumas coisas antes de atacar.
 
@@ -295,25 +295,25 @@ await txn.wait();
 Agora quando rodo `run.js` aqui está o que eu consigo:
 
 ```plaintext
-Terminamos de incializar o boss Elon Musk w/ HP 10000, img https://i.imgur.com/AksR0tt.png
-Terminamos de incializar o Leo com HP 100, img https://i.imgur.com/pKd5Sdk.png
-Terminamos de incializar o Aang com HP 200, img https://i.imgur.com/xVu4vFL.png
-Terminamos de incializar o Pikachu com HP 300, img https://i.imgur.com/u7T87A6.png
+Terminamos de incializar o boss Capitão Nascimento w/ HP 10000, img https://i.imgur.com/AksR0tt.png
+Terminamos de incializar o Anitta com HP 100, img https://i.imgur.com/pKd5Sdk.png
+Terminamos de incializar o Ronaldinho Gaúcho com HP 200, img https://i.imgur.com/xVu4vFL.png
+Terminamos de incializar o Zeca Pagodinho com HP 300, img https://i.imgur.com/u7T87A6.png
 Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 NFT Mintado com tokenId 0 e characterId 2
 
-Jogador com personagem Pikachu irá atacar. Tem 300 de HP e 25 de PD
-Boss Elon Musk tem 10000 HP and 50 AD
+Jogador com personagem Zeca Pagodinho irá atacar. Tem 300 de HP e 25 de PD
+Boss Capitão Nascimento tem 10000 HP and 50 AD
 Jogador atacou o boss. Boss ficou com hp: 9975
 Boss atacou o jogador. Jogador ficou com hp: 250
 
-Jogador com personagem Pikachu irá atacar. Tem 250 de HP e 25 de PD
-Boss Elon Musk tem 9975 de HP e 50 de PD
+Jogador com personagem Zeca Pagodinho irá atacar. Tem 250 de HP e 25 de PD
+Boss Capitão Nascimento tem 9975 de HP e 50 de PD
 Jogador atacou o boss. Boss ficou com hp: 9950
 Boss atacou o jogador. Jogador ficou com hp: 200
 ```
 
-**Está tudo funcionando?** Vamos ver. Parece que o `Pikachu` atacou o `Elon Musk` com `25 AD` e a saúde do Elon caiu de `10000` para `9975` o que está certo! Então o Elon ataca o Pikachu com `50` de dano de ataque e a saúde do Pikachu cai de `300` para `250`. Parece que tudo está funcionando bem :).
+**Está tudo funcionando?** Vamos ver. Parece que o `Zeca Pagodinho` atacou o `Capitão Nascimento` com `25 AD` e a saúde do Capitão Nascimento caiu de `10000` para `9975` o que está certo! Então o Capitão Nascimento ataca o Zeca Pagodinho com `50` de dano de ataque e a saúde do Zeca Pagodinho cai de `300` para `250`. Parece que tudo está funcionando bem :).
 
 Você pode ver que quando atacamos uma segunda vez, os valores atualizados de HP são usados tanto para o personagem quanto para o boss :).
 
@@ -322,20 +322,20 @@ Sinta-se livre para testar essa função tentando com um boss com `1 de HP` ou u
 Por exemplo, se eu dou ao jogador `1 HP`, aqui está o resultado:
 
 ```plaintext
-Terminamos de incializar o boss Elon Musk HP 10000, img https://i.imgur.com/AksR0tt.png
-Terminamos de incializar o Leo com, img https://i.imgur.com/pKd5Sdk.png
-Terminamos de incializar o Aang com, img https://i.imgur.com/xVu4vFL.png
-Terminamos de incializar o Pikachu com, img https://i.imgur.com/u7T87A6.png
+Terminamos de incializar o boss Capitão Nascimento HP 10000, img https://i.imgur.com/AksR0tt.png
+Terminamos de incializar o Anitta com, img https://i.imgur.com/pKd5Sdk.png
+Terminamos de incializar o Ronaldinho Gaúcho com, img https://i.imgur.com/xVu4vFL.png
+Terminamos de incializar o Zeca Pagodinho com, img https://i.imgur.com/u7T87A6.png
 Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 NFT Mintado com tokenId 0 e characterId 2
 
-Jogador com personagem Pikachu irá atacar. Tem 1 HP e 25 de PD
-Boss Elon Musk tem 10000 de HP e 50 de PD
+Jogador com personagem Zeca Pagodinho irá atacar. Tem 1 HP e 25 de PD
+Boss Capitão Nascimento tem 10000 de HP e 50 de PD
 Jogador atacou o boss. Boss ficou com hp: 9975
 Boss atacou player. Jogador ficou com hp: 0
 
-Jogador com personagem Pikachu irá atacar. Tem 0 de HP e 25 de PD
-Boss Elon Musk tem 9975 de HP e 50 de PD
+Jogador com personagem Zeca Pagodinho irá atacar. Tem 0 de HP e 25 de PD
+Boss Capitão Nascimento tem 9975 de HP e 50 de PD
 Error: VM Exception while processing transaction: reverted with reason string 'Error: personagem precisa ter HP para atacar o boss.'
     at MyEpicGame.attackBoss (contracts/MyEpicGame.sol:88)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)

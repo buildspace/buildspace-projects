@@ -530,7 +530,7 @@ return (
 );
 ```
 
-Já que sabemos que o nosso Elon sempre vai sofrer o mesmo dano de nós, você pode só adicionar aquilo ali. Se você mudar o contrato para ter algum RNG, você vai precisar fazer isso de maneira um pouco diferente usando algo como React Ref!
+Já que sabemos que o nosso Capitão Nascimento sempre vai sofrer o mesmo dano de nós, você pode só adicionar aquilo ali. Se você mudar o contrato para ter algum RNG, você vai precisar fazer isso de maneira um pouco diferente usando algo como React Ref!
 
 Agora que temos tudo isso configurado, como mostramos ou escondemos nosso toast? Se você olhar ao CSS, tem uma classe chamada `show` que vai mostrar nosso toast, e se removermos a classe, vai esconder o toast! Nós precisamos mudar um pouco isso para dinâmicamente mudar o nome da classe. Nós vamos criar mais uma propriedade de estado e adicionar alguma lógica para adicionar e remover a classe `show`:
 

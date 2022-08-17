@@ -28,7 +28,7 @@ const CONTRACT_ADDRESS = "ENDEREÇO_DO_SEU_CONTRATO";
 export { CONTRACT_ADDRESS };
 ```
 
-Then head back to your `App.js` file and import this at the top of your file to get access to it, like so:
+Então volte para o arquivo `App.js` e importe isto no topo do seu arquivo para ter acesso, assim:
 
 ```javascript
 import { CONTRACT_ADDRESS } from "./constants";

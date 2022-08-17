@@ -129,7 +129,6 @@ const App = () => {
         } else {
           console.log("No authorized account found");
         }
-      }
     } catch (error) {
       console.log(error);
     }

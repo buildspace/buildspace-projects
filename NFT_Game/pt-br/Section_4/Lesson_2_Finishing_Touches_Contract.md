@@ -50,7 +50,7 @@ Eu não vou estar cobrindo como colocar suas coisas no IPFS + conectar seu React
 
 Primeiro, você vai precisar fazer upload das suas imagens para um serviço que se especializa em "[pinning](https://docs.ipfs.io/how-to/pin-files/)" - que significa que o seu arquivo vai essencialmente ficar em cachê para que seja facilmente recuperado. Eu gosto de usar o [Pinata](https://www.pinata.cloud/) como o meu serviço de pinning - só crie uma conta, faça upload sua imagem do personagem a partir da UI deles, e é isso!
 
-![Untitled](https://i.imgur.com/FAkx9yj.png)
+![Untitled](https://i.imgur.com/LA0RExz.png)
 
 Vá em frente e copie os arquivos "CID". Esses são os endereços do conteúdo no IPFS! O que é legal é que agora temos que criar esse link:
 
@@ -66,22 +66,22 @@ ipfs://INSIRA_SUA_CID_AQUI
 
 E isso vai começar um node IPFS na sua máquina local e recuperar o arquivo! Mas de novo, eu só fiz isso no **Brave**. Se você tentar fazer isso em algo como o Chrome, só fará uma pesquisa no Google.
 
-![Untitled](https://i.imgur.com/vQ9Wsr0.png)
+![Untitled](https://i.imgur.com/NplQpes.png)
 
 Daqui, você pode mudar seu link imgur em `run.js` para `ipfs` hashes! Para o exemplo, eu usei o mesmo CID para todos os personagens mas no seu caso você deve ter três diferentes, um para cada personagem!
 
 ```javascript
 const gameContract = await gameContractFactory.deploy(
-  ["Leo", "Aang", "Pikachu"],
+  ["Anitta", "Ronaldinho Gaúcho", "Zeca Pagodinho"],
   [
-    "bafybeibsifcmwkufr7zwh5s3ekvjkfj5nnadjhweniz4p7lxqelt7mbp74",
-    "bafybeibsifcmwkufr7zwh5s3ekvjkfj5nnadjhweniz4p7lxqelt7mbp74",
-    "bafybeibsifcmwkufr7zwh5s3ekvjkfj5nnadjhweniz4p7lxqelt7mbp74",
+    "bafybeihyuz2nvvi6srxnyp2g54p3xhwufhu4d2wvewnkak7lifq7lsjo5a",
+    "bafybeihoozgrvxkxo6dmkccjsqc4sbsq6vvrr4ogky56nhu3v334ckq6aa",
+    "bafybeiaaghdi5oio5a5gt6gwgxcii4h54ua4kvpjqbwszcmxvxisjoawoy",
   ],
   [100, 200, 300],
   [100, 50, 25],
-  "Elon Musk",
-  "https://i.imgur.com/AksR0tt.png",
+  "Capitão Nascimento",
+  "bafybeichyipy7k757abludnvidqqfukyy56cclsxlb63ppl2fm75olpzcm",
   10000,
   50
 );
@@ -116,9 +116,9 @@ Tudo que eu fiz foi preceder aquele pequeno `ipfs://` depois da tag `image` - e 
 
 ```javascript
 {
-	"name": "Pikachu -- NFT #: 1",
+	"name": "Zeca Pagodinho -- NFT #: 1",
 	"description": "An epic NFT",
-	"image": "ipfs://bafybeibsifcmwkufr7zwh5s3ekvjkfj5nnadjhweniz4p7lxqelt7mbp74",
+	"image": "ipfs://bafybeiaaghdi5oio5a5gt6gwgxcii4h54ua4kvpjqbwszcmxvxisjoawoy",
 	"attributes": [{
 		"trait_type": "Health Points",
 		"value": 300,
@@ -132,7 +132,7 @@ Tudo que eu fiz foi preceder aquele pequeno `ipfs://` depois da tag `image` - e 
 
 Épico, estamos fora do imgur.
 
-Plataformas como OpenSea suportam links `ipfs` para que isso funcione - eles vão saber como ler e renderizar isso! Nós agora temos um problema final - **renderizar a imagem no nosso app React**!! Se nós só dermos ao nosso app React como `ipfs://bafybeibsifcmwkufr7zwh5s3ekvjkfj5nnadjhweniz4p7lxqelt7mbp74` na tag `src` do `<img>` que não vai funcionar! Ao invés disso, no nosso app React, onde for que você renderizar a tag `src` da imagem, simplesmente faça isso:
+Plataformas como OpenSea suportam links `ipfs` para que isso funcione - eles vão saber como ler e renderizar isso! Nós agora temos um problema final - **renderizar a imagem no nosso app React**!! Se nós só dermos ao nosso app React como `ipfs://bafybeiaaghdi5oio5a5gt6gwgxcii4h54ua4kvpjqbwszcmxvxisjoawoy` na tag `src` do `<img>` que não vai funcionar! Ao invés disso, no nosso app React, onde for que você renderizar a tag `src` da imagem, simplesmente faça isso:
 
 ```javascript
 <img

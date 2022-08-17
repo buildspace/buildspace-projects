@@ -32,7 +32,7 @@ Então isso significa que se 5 pessoas quisessem mintar o personagem #1, 5 pesso
 
 Se isso não fizer sentido, não se preocupe. Vamos direto para o código - vai fazer mais sentido lentamente.
 
-A primeira coisa que precisamos fazer é uma maneira de inicializar os **atributos padrão** de um personagem (ex. sua vida padrão, dano de ataque padrão, imagem padrão, etc). Por exemplo, se tivéssemos um personagem chamado "Pikachu", então nós precisamos configurar a vida base do Pikachu, o dano de ataque base, etc.
+A primeira coisa que precisamos fazer é uma maneira de inicializar os **atributos padrão** de um personagem (ex. sua vida padrão, dano de ataque padrão, imagem padrão, etc). Por exemplo, se tivéssemos um personagem chamado "Zeca Pagodinho", então nós precisamos configurar a vida base do Zeca Pagodinho, o dano de ataque base, etc.
 
 Eu atualizei `MyEpicGame.sol` para parecer com isso:
 
@@ -88,7 +88,7 @@ contract MyEpicGame {
 }
 ```
 
-Tem muita coisa acontecendo aqui mas essencialmente estamos passando vários valores para o `constructor` para setar os personagens. Por quê? Bom - eu preciso de uma maneira de dizer ao nosso contrato "Ei - quando um jogador pedir uma NFT do Pikachu, dê a ele o HP base, o dano de ataque, a imagem e etc dessa NFT."
+Tem muita coisa acontecendo aqui mas essencialmente estamos passando vários valores para o `constructor` para setar os personagens. Por quê? Bom - eu preciso de uma maneira de dizer ao nosso contrato "Ei - quando um jogador pedir uma NFT do Zeca Pagodinho, dê a ele o HP base, o dano de ataque, a imagem e etc dessa NFT."
 
 Lembre-se, o constructor roda apenas **uma vez** quando o contrato é executado.
 
@@ -119,12 +119,12 @@ Precisamos atualizar `run.js`. Aqui está como se parece:
 const main = async () => {
   const gameContractFactory = await hre.ethers.getContractFactory("MyEpicGame");
   const gameContract = await gameContractFactory.deploy(
-    ["Leo", "Aang", "Pikachu"], // Names
-    [
-      "https://i.imgur.com/pKd5Sdk.png", // Images
-      "https://i.imgur.com/xVu4vFL.png",
-      "https://i.imgur.com/WMB6g9u.png",
-    ],
+    ["Anitta", "Ronaldinho Gaúcho", "Zeca Pagodinho"],
+		[
+			"https://i.imgur.com/gC5qXsl.png",
+			"https://i.imgur.com/0PvxtwP.png",
+			"https://i.imgur.com/Pj8lHpM.png",
+		],
     [100, 200, 300], // HP values
     [100, 50, 25] // Attack damage values
   );
@@ -145,18 +145,18 @@ const runMain = async () => {
 runMain();
 ```
 
-Não estou fazendo nada muito chique aqui. Em `run.js`, basicamente definimos os três personagens e suas estatísticas. Meus personagens são Leonardo DiCaprio, Aang de Avatar e Pikachu... Cada personagem tem basicamente um id, nome, imagem, valor de vida, e valor de ataque.
+Não estou fazendo nada muito chique aqui. Em `run.js`, basicamente definimos os três personagens e suas estatísticas. Meus personagens são Anitta, Ronaldinho Gaúcho e Zeca Pagodinho... Cada personagem tem basicamente um id, nome, imagem, valor de vida, e valor de ataque.
 
-Por exemplo, nesse caso `Aang` tem 200 HP, 50 de dano de ataque. Ele tem muita vida, mas seu ataque não dá tanto dano quanto o de Leonardo! Leonardo tem menos HP, mas dá mais dano. Isso significa que no jogo, ele morrerá mais rápido, mas dará muito dano.
+Por exemplo, nesse caso `Ronaldinho Gaúcho` tem 200 HP, 50 de dano de ataque. Ele tem muita vida, mas seu ataque não dá tanto dano quanto o de Anitta! Anitta tem menos HP, mas dá mais dano. Isso significa que no jogo, ele morrerá mais rápido, mas dará muito dano.
 
 **Você pode balancear seus personagens como quiser :). Por favor, não copie os meus. Adicione três seus.**
 
 Ok, é isso :)!! Quando eu rodar isso usando `npx hardhat run scripts/run.js` e aqui é o que eu tenho:
 
 ```plaintext
-Personagem inicializado: Leo com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
-Personagem inicializado: Aang com 200 de HP, img https://i.imgur.com/xVu4vFL.png
-Personagem inicializado: Pikachu com 300 de HP, img https://i.imgur.com/WMB6g9u.png
+Personagem inicializado: Anitta com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
+Personagem inicializado: Ronaldinho Gaúcho com 200 de HP, img https://i.imgur.com/xVu4vFL.png
+Personagem inicializado: Zeca Pagodinho com 300 de HP, img https://i.imgur.com/WMB6g9u.png
 Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 ```
 
@@ -170,7 +170,7 @@ Talvez você nem queria personagens. Você pode querer que as pessoas mintem "**
 
 Talvez queira que seus personagens tenham coisas como "mana", "energia", ou "chakra" onde os seus personagens podem invocar "feitiços" usando esses atributos.
 
-**Customize seus personagens. É isso que faz ficar divertido!** Por exemplo, eu adicionei Leonardo DiCaprio e Pikachu como personagens pois pensei que seria engraçado - e eu rio toda vez que vejo haha.
+**Customize seus personagens. É isso que faz ficar divertido!** Por exemplo, eu adicionei Anitta e Zeca Pagodinho como personagens pois pensei que seria engraçado - e eu rio toda vez que vejo haha.
 
 Mudar coisas pequenas como personagens vai fazer você sentir que é uma coisa mais sua e você estará mais motivado a construir tudo isso no caminho :).
 

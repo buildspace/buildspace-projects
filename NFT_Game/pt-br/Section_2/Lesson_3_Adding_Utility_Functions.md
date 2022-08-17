@@ -125,19 +125,19 @@ const main = async () => {
   const gameContractFactory = await hre.ethers.getContractFactory("MyEpicGame");
 
   const gameContract = await gameContractFactory.deploy(
-    ["Leo", "Aang", "Pikachu"],
-    [
-      "https://i.imgur.com/pKd5Sdk.png",
-      "https://i.imgur.com/xVu4vFL.png",
-      "https://i.imgur.com/u7T87A6.png",
-    ],
-    [100, 200, 300],
-    [100, 50, 25],
-    "Elon Musk",
-    "https://i.imgur.com/AksR0tt.png",
-    10000,
-    50
-  );
+    ["Anitta", "Ronaldinho Gaúcho", "Zeca Pagodinho"],
+		[
+			"https://i.imgur.com/gC5qXsl.png",
+			"https://i.imgur.com/0PvxtwP.png",
+			"https://i.imgur.com/Pj8lHpM.png",
+		],
+		[100, 200, 300],
+		[100, 50, 25],
+		"Capitão Nascimento",
+		"https://i.imgur.com/yWpKMDt.png",
+		10000,
+		50
+	);
 
   await gameContract.deployed();
   console.log("Contrato deployado no endereço:", gameContract.address);

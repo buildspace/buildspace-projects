@@ -118,7 +118,7 @@ mapping(address => uint256) public nftHolders;
 
 `nftHolderAttributes` vai ser onde nós armazenamos o estado das NFTs dos jogadores. Nós mapeamos o id da NFT para uma estrutura `CharacterAttributes`.
 
-Lembre-se, cada jogador tem o próprio personagem NFT. E, cada NFT tem o próprio estado como `HP`, `Dano de Ataque`, etc! Então se o player #172 tem uma NFT "Pikachu" e o Pikachu dele perder vida em uma batalha, **então só a NFT Pikachu do jogador #172 deve ser mudada**, e a NFT Pikachu de todo o resto das pessoas deve se manter a mesma! Então, nós armazenamos o nível dos dados do personagem desse jogador em um map.
+Lembre-se, cada jogador tem o próprio personagem NFT. E, cada NFT tem o próprio estado como `HP`, `Dano de Ataque`, etc! Então se o player #172 tem uma NFT "Zeca Pagodinho" e o Zeca Pagodinho dele perder vida em uma batalha, **então só a NFT Zeca Pagodinho do jogador #172 deve ser mudada**, e a NFT Zeca Pagodinho de todo o resto das pessoas deve se manter a mesma! Então, nós armazenamos o nível dos dados do personagem desse jogador em um map.
 
 Depois, eu tenho `nftHolders` que basicamente me deixa mapear facilmente o endereço de um usuário para o ID da NFT que eles possuem. Por exemplo, eu poderia fazer `nftHolders[INSIRA_UM_ENDERECO_AQUI]` e instantaneamente saber qual NFT que aquele endereço possui. Ajuda muito manter esses dados no contrato para que seja facilmente acessível.
 
@@ -190,7 +190,7 @@ Muitas coisas acontecendo aqui! Basicamente, **nossa NFT segura dados relacionad
 ```json
 {
   "characterIndex": 1,
-  "name": "Aang",
+  "name": "Ronaldinho Gaúcho",
   "imageURI": "https://i.imgur.com/xVu4vFL.png",
   "hp": 200,
   "maxHp": 200,
@@ -205,7 +205,7 @@ Digamos que o meu personagem seja atacado e perca 50 de HP, bom, então o HP iri
 ```json
 {
   "characterIndex": 1,
-  "name": "Aang",
+  "name": "Ronaldinho Gaúcho",
   "imageURI": "https://i.imgur.com/xVu4vFL.png",
   "hp": 150,
   "maxHp": 200,
@@ -264,9 +264,9 @@ Plataformas como o OpenSea e Rarible sabem como pegar o `tokenURI` já que a for
 Meu output (saída) se parece com isso:
 
 ```plaintext
-Personagem inicializado: Leo com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
-Personagem inicializado: Aang com 200 de HP, img https://i.imgur.com/xVu4vFL.png
-Personagem inicializado: Pikachu com 300 de HP, img https://i.imgur.com/u7T87A6.png
+Personagem inicializado: Anitta com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
+Personagem inicializado: Ronaldinho Gaúcho com 200 de HP, img https://i.imgur.com/xVu4vFL.png
+Personagem inicializado: Zeca Pagodinho com 300 de HP, img https://i.imgur.com/u7T87A6.png
 Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 Mintou um NFT com tokenId 1 e characterIndex 2
 Token URI:
@@ -334,7 +334,7 @@ Então, pegamos todos esses dados e empacotamos ele em uma variável chamada `js
 
 ```json
 {
-  "name": "Aang",
+  "name": "Ronaldinho Gaúcho",
   "description": "Aqui é a descrição",
   "image": "https://i.imgur.com/xVu4vFL.png",
   "attributes": [
@@ -374,9 +374,9 @@ abi.encodePacked("data:application/json;base64,", json)
 Essa linha é na verdade difícil de explicar, é mais fácil apenas mostrar! Vá em frente e rode `run.js`. Aqui está meu output:
 
 ```plaintext
-Personagem inicializado: Leo com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
-Personagem inicializado: Aang com 200 de HP, img https://i.imgur.com/xVu4vFL.png
-Personagem inicializado: Pikachu com 300 de HP, img https://i.imgur.com/u7T87A6.png
+Personagem inicializado: Anitta com 100 de HP, img https://i.imgur.com/pKd5Sdk.png
+Personagem inicializado: Ronaldinho Gaúcho com 200 de HP, img https://i.imgur.com/xVu4vFL.png
+Personagem inicializado: Zeca Pagodinho com 300 de HP, img https://i.imgur.com/u7T87A6.png
 Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 Mintou um NFT com tokenId 1 e characterIndex 2
 Token URI: data:application/json;base64,eyJuYW1lIjogIlBpa2FjaHUgLS0gTkZUICM6IDEiLCAiZGVzY3JpcHRpb24iOiAiRXN0YSBORlQgZGEgYWNlc3NvIGFvIG1ldSBqb2dvIE5GVCEiLCAiaW1hZ2UiOiAiaHR0cHM6Ly9pLmltZ3VyLmNvbS9XTUI2Zzl1LnBuZyIsICJhdHRyaWJ1dGVzIjogWyB7ICJ0cmFpdF90eXBlIjogIkhlYWx0aCBQb2ludHMiLCAidmFsdWUiOiAzMDAsICJtYXhfdmFsdWUiOjMwMH0sIHsgInRyYWl0X3R5cGUiOiAiQXR0YWNrIERhbWFnZSIsICJ2YWx1ZSI6IDI1fSBdfQ==
