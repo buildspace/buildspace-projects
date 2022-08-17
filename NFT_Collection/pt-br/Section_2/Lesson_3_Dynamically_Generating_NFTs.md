@@ -111,7 +111,7 @@ Agora, precisamos definir os metadados JSON! Primeiro, precisamos de algumas fun
 
 Okay, agora atualize o nosso contrato.
 
-**Mesma coisa, escrevi todo o código e adicionei comentários [nesse link](https://gist.github.com/danicuki/0d93584e94042de12b4722fa10faa0dc).**
+**Mesma coisa, copie o código deste [arquivo](https://gist.github.com/danicuki/0d93584e94042de12b4722fa10faa0dc) e cole em `MyEpictNFT.sol`**
 
 Sinta-se à vontade para copiar e colar algumas dessas partes e entender como funciona depois de executá-lo :). Às vezes eu gosto de fazer isso porque posso ver o código sendo executado e entender como funciona depois!!
 
