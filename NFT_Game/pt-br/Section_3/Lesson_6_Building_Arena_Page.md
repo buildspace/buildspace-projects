@@ -1,6 +1,6 @@
 Nesse ponto, fomos introduzidos a basicamente tudo que precisamos saber para construir nosso app React. Vamos configurar nosso componente `Arena`:
 
-Como com o commponente `SelectCharacter`, vamos criar um novo arquivo em `Components/Arena` chamado `index.js`. De novo, você deve ver um arquivo `Arena.css` nessa pasta! Uma vez que você tiver configurado sua base, não se esqueça de estilizar do seu jeito 💅.
+Com com o componente `SelectCharacter`, vamos criar um novo arquivo em `Components/Arena` chamado `index.js`. De novo, você deve ver um arquivo `Arena.css` nessa pasta! Uma vez que você tiver configurado sua base, não se esqueça de estilizar do seu jeito 💅.
 
 ### ⚔️ Configurando a Arena.
 
@@ -42,10 +42,10 @@ const Arena = ({ characterNFT }) => {
   return (
     <div className="arena-container">
       {/* Boss */}
-      <p>BOSS GOES HERE</p>
+      <p>O Boss vai ficar aqui</p>
 
       {/* Personagem NFT */}
-      <p>CHARACTER NFT GOES HERE</p>
+      <p>Seus NFTS vão ficar aqui</p>
     </div>
   );
 };
@@ -93,7 +93,7 @@ const renderContent = () => {
 ```
 
 **Nós agora cobrimos esses três cenários!** Nesse ponto, se você recarregar seu app você deve ser diretamente levado para o componente `Arena`, que deve parecer algo com isso:
-![Untitled](https://i.imgur.com/s0DyCYr.png)
+![Untitled](https://i.imgur.com/ZvSFEpn.png)
 
 Então para recapitular, até agora você:
 
@@ -105,7 +105,7 @@ Então para recapitular, até agora você:
 
 No componente `SelectCharacter` nós configuramos uma maneira de buscar todos os personagens mintáveis a partir do nosso contrato. Bom, no componente `Arena` nós vamos fazer a mesma coisa, mas buscando nosso boss!
 
-Na Solidity land, você configurou uma função que busca o boss no seu contrato. Tudo que precisamos fazer é chamar essa função aqui e configurar nossos dados para mostrá-los na nossa UI. Isso vai ser exatamente a mesma coisa do que configurar o `SelectCharacter`, então vamos começar adicionando um estado de boss para o nosso componente e configurando outro `useEffect` para ouvir por mudanças no `gameContract`:
+Na seu contrato em Solidity , você configurou uma função que busca o boss no seu contrato. Tudo que precisamos fazer é chamar essa função aqui e configurar nossos dados para mostrá-los na nossa UI. Isso vai ser exatamente a mesma coisa do que configurar o `SelectCharacter`, então vamos começar adicionando um estado de boss para o nosso componente e configurando outro `useEffect` para ouvir por mudanças no `gameContract`:
 
 ```javascript
 // Estado
@@ -172,7 +172,7 @@ return (
     )}
 
     {/* Personagem NFT */}
-    <p>CHARACTER NFT GOES HERE</p>
+    <p>Seus NFTS vão ficar aqui</p>
   </div>
 );
 ```
@@ -187,7 +187,7 @@ const runAttackAction = async () => {};
 Vá em frente e recarregue o app e você deve ver Capitão Nascimento, sua saúde e um botão para atacá-lo!
 
 Essa é uma UI simples com uma estilização sólida. A parte boa é pegar todos os dados do nosso contrato inteligente:
-![Untitled](https://i.imgur.com/o8AJpfw.png)
+![Untitled](https://i.imgur.com/gbmw11d.png)
 
 ### 🛡 Renderizando o personagem NFT.
 
@@ -249,7 +249,7 @@ Você pode ver basicamente o mesmo tipo de layout que temos para nosso personage
 
 Seu app deve se parecer com isso:
 
-![REVIEW - Untitled](https://i.imgur.com/l7oCuCN.png)
+![REVIEW - Untitled](https://i.imgur.com/xgC5Kzd.png)
 
 Capitão Nascimento e Anitta estão prontos para uma batalha épica 🔥. Agora que temos nosso boss e o herói prontos, chegou a hora:
 
@@ -425,6 +425,6 @@ Finalmente, nós precisamos só adicionar a propriedade `hp` e os novos valores.
 
 Vamos tentar atacar o Capitão Nascimento novamente. Passe pelo seu mesmo setup e você deve ver agora as barras de vida do personagem atualizarem. Olhe seu console e você também verá seus dados escritos como isso:
 
-![Untitled](https://i.imgur.com/HhZcYFe.png)
+![Untitled](https://i.imgur.com/3rPMyK6.png)
 
 Você tem um jogo bem legítimo agora. Animações, vida e atualizações em tempo real. Capitão Nascimento é muito forte agora, pois ele matou o Anitta :(.

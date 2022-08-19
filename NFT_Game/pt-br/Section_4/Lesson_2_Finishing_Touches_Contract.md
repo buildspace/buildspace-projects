@@ -75,8 +75,8 @@ const gameContract = await gameContractFactory.deploy(
   ["Anitta", "Ronaldinho Gaúcho", "Zeca Pagodinho"],
   [
     "bafybeihyuz2nvvi6srxnyp2g54p3xhwufhu4d2wvewnkak7lifq7lsjo5a",
-    "bafybeihoozgrvxkxo6dmkccjsqc4sbsq6vvrr4ogky56nhu3v334ckq6aa",
-    "bafybeiaaghdi5oio5a5gt6gwgxcii4h54ua4kvpjqbwszcmxvxisjoawoy",
+    "bafybeihyuz2nvvi6srxnyp2g54p3xhwufhu4d2wvewnkak7lifq7lsjo5a",
+    "bafybeihyuz2nvvi6srxnyp2g54p3xhwufhu4d2wvewnkak7lifq7lsjo5a",
   ],
   [100, 200, 300],
   [100, 50, 25],
@@ -89,7 +89,7 @@ const gameContract = await gameContractFactory.deploy(
 
 Daqui, nós precisamos atualizar nossa função `tokenURI` para preceder `ipfs://`. Basicamente, o OpenSea gosta quando nosso URI de imagem é estruturada como isso: `ipfs://INSIRA_SUA_CID_AQUI`.
 
-Você deve estar se perguntando porque em `run.js` eu não apenas diretamente linkei para `ipfs://INSIRA_SUA_CID_AQUI` ou `https://cloudflare-ipfs.com/ipfs/INSIRA_SUA_CID_AQUI`. Basicamente - é mais segura só armazenar o hash no contrato, isso nos deixa ser mais flexível :).
+Você deve estar se perguntando porque em `run.js` eu não apenas diretamente linkei para `ipfs://INSIRA_SUA_CID_AQUI` ou `https://cloudflare-ipfs.com/ipfs/INSIRA_SUA_CID_AQUI`. Basicamente - é mais seguro só armazenar o hash no contrato, isso nos deixa ser mais flexível :).
 
 Então, eu mudei a variável `json` no `tokenURI` para parecer com isso:
 
@@ -146,9 +146,9 @@ Agora, você deve estar se perguntando - o que o Cloudflare está fazendo aqui? 
 
 ## 🐸 Mostre todos os outros jogadores no jogo!
 
-Agora, tudo que você vê é você mesmo e o boss -- e se pudéssemos ver uma lista de todos os outros jogadores? Talvez você poderia mostrar o endereço de suas carteiras, a imagem dos seus personagens, e quando dano eles deram no boss!
+Agora, tudo que você vê é você mesmo e o boss -- e se pudéssemos ver uma lista de todos os outros jogadores? Talvez você poderia mostrar o endereço de suas carteiras, a imagem dos seus personagens, e quanto dano eles deram no boss!
 
-**Faria o jogo sentir mais "multiplayer" :).**
+**Faria o jogo se sentir mais "multiplayer" :).**
 
 Dê uma tentativa. Não vou tentar explicar aqui mas eu acho que você tem todas as informações necessárias para mudar esse contrato e o web app para fazer isso acontecer! Tudo que você precisa é criar uma função como `getAllPlayers` e depois chamá-la a partir do seu web app + renderizar os dados.
 

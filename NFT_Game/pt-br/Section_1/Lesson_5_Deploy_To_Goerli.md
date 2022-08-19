@@ -81,10 +81,12 @@ const main = async () => {
   const gameContract = await gameContractFactory.deploy(
     ["Anitta", "Ronaldinho Gaúcho", "Zeca Pagodinho"],
 		[
-			"https://i.imgur.com/gC5qXsl.png",
-			"https://i.imgur.com/0PvxtwP.png",
-			"https://i.imgur.com/Pj8lHpM.png",
-		]
+          "https://i.imgur.com/gC5qXsl.png",
+          "https://i.imgur.com/0PvxtwP.png",
+          "https://i.imgur.com/Pj8lHpM.png",
+		],
+    [100, 200, 300],
+    [100, 50, 25]
   );
   await gameContract.deployed();
   console.log("Contrato implantado no endereço:", gameContract.address)
@@ -176,21 +178,21 @@ Se funcionou - **INCRÍVEL VOCÊ ACABOU DE FAZER DEPLOY DE UM CONTRATO E MINTOU 
 
 Acredite ou não. As NFTs que você acabou de mintar vão estar no site do OpenSea Tesnet.
 
-Vá para [testnets.opensea.io](https://testnets.opensea.io/). Ali, procure pelo endereço do seu contrato que é o endereço que você vai encontrar no seu terminal. **Não clique enter na barra de pesquia**. OpenSea é estranho então você vai ter que clicar na coleção quando aparecer.
+Vá para [REVIEW - testnets.opensea.io](https://testnets.opensea.io/). Ali, procure pelo endereço do seu contrato que é o endereço que você vai encontrar no seu terminal. **Não clique enter na barra de pesquia**. OpenSea é estranho então você vai ter que clicar na coleção quando aparecer.
 
 Então aqui, você clicaria "Heroes -" dentro de "Collections", e boom, você veria as NFTs que mintou!!
 
-![Untitled](https://i.imgur.com/9ULR2OW.png)
+![REVIEW - Untitled](https://i.imgur.com/9ULR2OW.png)
 
-![Untitled](https://i.imgur.com/F9xQHFE.png)
+![REVIEW - Untitled](https://i.imgur.com/F9xQHFE.png)
 
 **BOOM! AÍ ESTÃO MEUS PERSONAGENS!!** Se você clicar em um dos seus personagens, vai poder clicar em "**Levels**" na esquerda e até ver os atributos específicos! **Nós até temos uma barrinha de vida!! ÉPICO!!! Cada barra de vida é diferente dependendo da NFT**, por exemplo o Zeca Pagodinho tem 300 de HP e o Anitta tem apenas 100!
 
 Por exemplo:
 
-![Untitled](https://i.imgur.com/8lry1nA.png)
+![REVIEW - Untitled](https://i.imgur.com/8lry1nA.png)
 
-![Untitled](https://i.imgur.com/mbMf8CI.png)
+![REVIEW - Untitled](https://i.imgur.com/mbMf8CI.png)
 
 Nesse caso, o OpenSea renderizou todos os atributos dos personagens eficientemente!
 

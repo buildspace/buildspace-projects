@@ -115,7 +115,7 @@ return (
     <div className="container">
       <div className="header-container">
         <p className="header gradient-text">⚔️ Metaverso Slayer ⚔️</p>
-        <p className="sub-text">Team up to protect the Metaverse!</p>
+        <p className="sub-text">Junte os amigos e proteja o Metaverso!!</p>
         {/*
          * Aqui é onde nosso botão e código de imagem ficava! Lembre-se que movemos para o método de renderização.
          */}

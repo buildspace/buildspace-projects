@@ -1,6 +1,6 @@
 Nós estamos muito bem agora. Nós configuramos dois cenários e vimos o básico de chamar o nosso contrato inteligente a partir de uma UI.
 
-Agora que estamos aptos a interagir com o nosso contrato inteligente a partir da UI e criamos nosso componente `SelectCharacter`, nós podemos facilmente pegar todos os personagens mintáveis do nosso contrato e mostrá=los na nossa UI. Vamos nessa.
+Agora que estamos aptos a interagir com o nosso contrato inteligente a partir da UI e criamos nosso componente `SelectCharacter`, nós podemos facilmente pegar todos os personagens mintáveis do nosso contrato e mostrá-los na nossa UI. Vamos nessa.
 
 ### 👀 Só mais uma coisa.
 
@@ -313,7 +313,7 @@ Aqui está como o meu se parece:
 
 ![Untitled](https://i.imgur.com/W3eca7t.png)
 
-Aí está meu Anitta. Uma coisa para notar aqui - tenha certeza de ver sua NFT no [REVIEW - https://testnets.opensea.io/](https://testnets.opensea.io/) já que estamos usando a Goerli!
+Aí está meu NFT da Anitta. Uma coisa para notar aqui - tenha certeza de ver sua NFT no [REVIEW - https://testnets.opensea.io/](https://testnets.opensea.io/) já que estamos usando a Goerli!
 
 Você conseguiu! Agora que temos nosso personagem NFT nós podemos finalmente sair e proteger o Metaverso de seres malignos!
 

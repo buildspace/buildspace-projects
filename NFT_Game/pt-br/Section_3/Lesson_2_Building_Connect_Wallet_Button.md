@@ -73,7 +73,7 @@ export default App;
 
 ### **🔒 Acessando a conta do usuário.**
 
-Então, quando você rodar isso, você deve ver aquela linha "_We have the Ethereum object_" escrita no console do website quando você inspecioná-lo.
+Então, quando você rodar isso, você deve ver aquela linha "_Nós temos o objeto ethereum_" escrita no console do website quando você inspecioná-lo.
 
 **Legal.**
 
@@ -124,10 +124,10 @@ const App = () => {
          */
         if (accounts.length !== 0) {
           const account = accounts[0];
-          console.log("Found an authorized account:", account);
+          console.log("Carteira conectada::", account);
           setCurrentAccount(account);
         } else {
-          console.log("No authorized account found");
+          console.log("Não encontramos uma carteira conectada");
         }
     } catch (error) {
       console.log(error);
@@ -143,7 +143,7 @@ const App = () => {
       <div className="container">
         <div className="header-container">
           <p className="header gradient-text">⚔️ Metaverso Slayer ⚔️</p>
-          <p className="sub-text">Team up to protect the Metaverse!</p>
+          <p className="sub-text">Junte os amigos e proteja o Metaverso!!</p>
           <div className="connect-wallet-container">
             <img
               src="https://64.media.tumblr.com/tumblr_mbia5vdmRd1r1mkubo1_500.gifv"
@@ -170,7 +170,7 @@ export default App;
 
 ### **🛍 Renderizar o botão de conectar a carteira.**
 
-Quando você roda o código acima, o `console.log` que escreve deve ser `No authorized account found`. Por quê? Bom porque nós não falamos explicitamente para o Metamask, *"Ei Metamask, por favor dê a esse website o acesso à minha carteira".*
+Quando você roda o código acima, o `console.log` que escreve deve ser `Não encontramos uma carteira conectada`. Por quê? Bom porque nós não falamos explicitamente para o Metamask, *"Ei Metamask, por favor dê a esse website o acesso à minha carteira".*
 
 Precisamos criar um botão `connectWallet` . No mundo da web3, conectar a sua carteira é literalmente fazer login como usuário.
 
@@ -217,10 +217,10 @@ const App = () => {
          */
         if (accounts.length !== 0) {
           const account = accounts[0];
-          console.log("Found an authorized account:", account);
+          console.log("Carteira conectada::", account);
           setCurrentAccount(account);
         } else {
-          console.log("No authorized account found");
+          console.log("Não encontramos uma carteira conectada");
         }
       }
     } catch (error) {
@@ -266,7 +266,7 @@ const App = () => {
       <div className="container">
         <div className="header-container">
           <p className="header gradient-text">⚔️ Metaverso Slayer ⚔️</p>
-          <p className="sub-text">Team up to protect the Metaverse!</p>
+          <p className="sub-text">Junte os amigos e proteja o Metaverso!!</p>
           <div className="connect-wallet-container">
             <img
               src="https://64.media.tumblr.com/tumblr_mbia5vdmRd1r1mkubo1_500.gifv"

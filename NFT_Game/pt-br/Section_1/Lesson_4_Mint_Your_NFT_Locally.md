@@ -379,18 +379,18 @@ Personagem inicializado: Ronaldinho Gaúcho com 200 de HP, img https://i.imgur.c
 Personagem inicializado: Zeca Pagodinho com 300 de HP, img https://i.imgur.com/Pj8lHpM.png
 Contrato implantado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 Mintou um NFT com tokenId 1 e characterIndex 2
-Token URI: data:application/json;base64,eyJuYW1lIjogIlBpa2FjaHUgLS0gTkZUICM6IDEiLCAiZGVzY3JpcHRpb24iOiAiRXN0YSBORlQgZGEgYWNlc3NvIGFvIG1ldSBqb2dvIE5GVCEiLCAiaW1hZ2UiOiAiaHR0cHM6Ly9pLmltZ3VyLmNvbS9XTUI2Zzl1LnBuZyIsICJhdHRyaWJ1dGVzIjogWyB7ICJ0cmFpdF90eXBlIjogIkhlYWx0aCBQb2ludHMiLCAidmFsdWUiOiAzMDAsICJtYXhfdmFsdWUiOjMwMH0sIHsgInRyYWl0X3R5cGUiOiAiQXR0YWNrIERhbWFnZSIsICJ2YWx1ZSI6IDI1fSBdfQ==
+Token URI: data:application/json;base64,eyJuYW1lIjogIlplY2EgUGFnb2RpbmhvIC0tIE5GVCAjOiAxIiwgImRlc2NyaXB0aW9uIjogIkVzdGEgTkZUIGRhIGFjZXNzbyBhbyBtZXUgam9nbyBORlQhIiwgImltYWdlIjogImh0dHBzOi8vaS5pbWd1ci5jb20vUGo4bEhwTS5wbmciLCAiYXR0cmlidXRlcyI6IFsgeyAidHJhaXRfdHlwZSI6ICJIZWFsdGggUG9pbnRzIiwgInZhbHVlIjogMzAwLCAibWF4X3ZhbHVlIjozMDB9LCB7ICJ0cmFpdF90eXBlIjogIkF0dGFjayBEYW1hZ2UiLCAidmFsdWUiOiAyNX0gXX0=
 ```
 
 Você verá que Token URI agora escreve coisas! **Boa!!** Vá em frente e copie essa grande string depois de `Token URI:`. Por exemplo, a minha se parece com isso:
 
 ```plaintext
-Token URI: data:application/json;base64,eyJuYW1lIjogIlBpa2FjaHUgLS0gTkZUICM6IDEiLCAiZGVzY3JpcHRpb24iOiAiRXN0YSBORlQgZGEgYWNlc3NvIGFvIG1ldSBqb2dvIE5GVCEiLCAiaW1hZ2UiOiAiaHR0cHM6Ly9pLmltZ3VyLmNvbS9XTUI2Zzl1LnBuZyIsICJhdHRyaWJ1dGVzIjogWyB7ICJ0cmFpdF90eXBlIjogIkhlYWx0aCBQb2ludHMiLCAidmFsdWUiOiAzMDAsICJtYXhfdmFsdWUiOjMwMH0sIHsgInRyYWl0X3R5cGUiOiAiQXR0YWNrIERhbWFnZSIsICJ2YWx1ZSI6IDI1fSBdfQ==
+Token URI: data:application/json;base64,eyJuYW1lIjogIlplY2EgUGFnb2RpbmhvIC0tIE5GVCAjOiAxIiwgImRlc2NyaXB0aW9uIjogIkVzdGEgTkZUIGRhIGFjZXNzbyBhbyBtZXUgam9nbyBORlQhIiwgImltYWdlIjogImh0dHBzOi8vaS5pbWd1ci5jb20vUGo4bEhwTS5wbmciLCAiYXR0cmlidXRlcyI6IFsgeyAidHJhaXRfdHlwZSI6ICJIZWFsdGggUG9pbnRzIiwgInZhbHVlIjogMzAwLCAibWF4X3ZhbHVlIjozMDB9LCB7ICJ0cmFpdF90eXBlIjogIkF0dGFjayBEYW1hZ2UiLCAidmFsdWUiOiAyNX0gXX0=
 ```
 
 Cole essa string dentro da barra de URL no seu browser. Você vai ver algo como isso:
 
-![Imagem](https://i.imgur.com/EDPCPoH.png)
+![Imagem](https://i.imgur.com/5qVWxSQ.png)
 
 BOOOM!!!
 

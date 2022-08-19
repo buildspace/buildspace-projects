@@ -109,7 +109,7 @@ Nesse ponto é realmente importante ter certeza que você está conectada na red
 ```javascript
 const checkNetwork = async () => {
   try {
-    if (window.ethereum.networkVersion !== "4") {
+    if (window.ethereum.networkVersion !== "5") {
       alert("Please connect to Goerli!");
     }
   } catch (error) {
