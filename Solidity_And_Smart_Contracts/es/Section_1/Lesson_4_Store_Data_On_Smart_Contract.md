@@ -22,17 +22,17 @@ contract WavePortal {
     uint256 totalWaves;
 
     constructor() {
-        console.log("Yo yo, I am a contract and I am smart");
+        console.log("Hey hey soy un contrato y soy inteligente");
     }
 
     function wave() public {
         totalW
         aves += 1;
-        console.log("%s has waved!", msg.sender);
+        console.log("%s ha enviado un saludo", msg.sender);
     }
 
     function getTotalWaves() public view returns (uint256) {
-        console.log("We have %d total waves!", totalWaves);
+        console.log("Tenemos %d saludos totales", totalWaves);
         return totalWaves;
     }
 }
@@ -65,8 +65,8 @@ const main = async () => {
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
 
-  console.log("Contract deployed to:", waveContract.address);
-  console.log("Contract deployed by:", owner.address);
+  console.log("Contrato desplegado en:", waveContract.address);
+  console.log("Contrato desplegado por:", owner.address);
 
   let waveCount;
   waveCount = await waveContract.getTotalWaves();
@@ -103,7 +103,7 @@ Para implementar algo en la cadena de bloques necesitamos la dirección de una c
 También le añadimos:
 
 ```javascript
-console.log("Contract deployed by:", owner.address);
+console.log("Contrato desplegado por:", owner.address);
 ```
 
 Hice esto porque quiero ver la dirección de la persona que desplegó nuestro contrato. ¡Es que soy curioso!
@@ -156,8 +156,8 @@ const main = async () => {
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
 
-  console.log("Contract deployed to:", waveContract.address);
-  console.log("Contract deployed by:", owner.address);
+  console.log("Contrato desplegado en:", waveContract.address);
+  console.log("Contrato desplegado por:", owner.address);
 
   let waveCount;
   waveCount = await waveContract.getTotalWaves();
