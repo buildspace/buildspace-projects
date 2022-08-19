@@ -80,7 +80,7 @@ Digamos que você queira mudar aleatoriamente seu contrat agora mesmo. Aqui est�
 
 **As pessoas esquecem constantemente de fazer esses 3 passos quando mudam seus contratos. Não esqueça.**
 
-Por quê precisamos fazer tudo isso? Porque contratos inteligentes são **imutáveis.** Eles não podem mudar, eles são permanentes. Isso significa que mudar um contrato exige um redeploy completo. Fazer um redeploy também **reiniciaria** todas as variáveis já que serão tratadas como um novo contrato. **Isso significa que perdemos todos os dados das nossas NFTs quando atualizarmos o código do contrato.**
+Por que precisamos fazer tudo isso? Porque contratos inteligentes são **imutáveis.** Eles não podem mudar, eles são permanentes. Isso significa que mudar um contrato exige um redeploy completo. Fazer um redeploy também **reiniciaria** todas as variáveis já que serão tratadas como um novo contrato. **Isso significa que perdemos todos os dados das nossas NFTs quando atualizarmos o código do contrato.**
 
 Então, o que você precisa fazer é isso:
 

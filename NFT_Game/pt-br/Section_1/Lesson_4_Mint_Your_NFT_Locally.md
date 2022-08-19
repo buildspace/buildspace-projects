@@ -402,7 +402,7 @@ Adicionamos `data:application/json;base64,` porque o nosso browser precisa saber
 
 De novo, isso é considerado um padrão para a maioria dos navegadores, o que é perfeito porque nós queremos que os dados das nossas NFT sejam compatíveis com o maior número de sistemas possível.
 
-Por quê estamos fazendo essas coisas de Base64? Bom, basicamente isso é como sites populares ocomo o OpenSea, Rarible e muitos outros preferem quando passam dados JSON diretamente do nosso conrtato.
+Por que estamos fazendo essas coisas de Base64? Bom, basicamente isso é como sites populares ocomo o OpenSea, Rarible e muitos outros preferem quando passam dados JSON diretamente do nosso conrtato.
 
 **Incrível**. Então, agora estamos no ponto em que mintamos oficialmente e localmente as NFTs e a NFT tem dados fixados nela em uma maneira que siga os padrões.
 

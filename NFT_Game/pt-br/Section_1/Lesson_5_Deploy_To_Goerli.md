@@ -8,7 +8,7 @@ O próximo passo é uma testnet, que você pode pensar como ambiente de desenvol
 
 Depois, precisamos de uma carteira Ethereum. Existem várias, mas, para esse projeto, vamos usar a Metamask. Baixe a extensão de navegador e configure sua carteira  [aqui](https://metamask.io/download.html). Mesmo se você tiver outra carteira, só use a Metamask por agora.
 
-Por quê precisamos da Metamask? Bom. Precisamos estar aptos a chamar funções no nosso contrato inteligente que vive na blockchain. E, para fazer isso, precisamos ter uma carteira que tem nosso endereço Ethereum e chave privada.
+Por que precisamos da Metamask? Bom. Precisamos estar aptos a chamar funções no nosso contrato inteligente que vive na blockchain. E, para fazer isso, precisamos ter uma carteira que tem nosso endereço Ethereum e chave privada.
 
 **Mas, precisamos de algo para conectar o nosso site com a nossa carteira para que possamos passar nossas credenciais de carteira para o site de maneira segura, para que o site possa usar essas credenciais para chamar nosso contrato inteligente. Você precisa ter credenciais válidas para acessar funções nos contratos inteligentes.**
 

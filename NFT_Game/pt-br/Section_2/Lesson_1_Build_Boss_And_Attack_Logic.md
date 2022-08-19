@@ -4,7 +4,7 @@ Então, no nosso jogo o personagem NFT vai estar apto a atacar um boss.
 
 O grande objetivo do jogo é atacar o boss e levar o HP dele a 0! Mas, o truque aqui é que o boss tem muito HP e toda vez que atacarmos ele, ele irá atacar de voltar e diminuir o nosso HP. Se a vida do nosso personagem chegar a 0, então o nosso personagem não vai mais poder atacar o boss e vai estar “morto“.
 
-Talvez no futuro, outro pessoa poderá construir uma função de “reviver“ que permite que as NFTs mortas ganhem 100% dos pontos de vida ;). Mas por agora, se nosso personagem morrer, é game over. E nós podemos descansar sabendo que nosso personagem deu o melhor e se deu pelo time. Isso significa que precisamos que outros players ataquem o boss também, não podemos fazer isso sozinhos.
+Talvez no futuro, outro pessoa poderá construir uma função de “reviver“ que permite que as NFTs mortas ganhem 100% dos pontos de vida ;). Mas por agora, se nosso personagem morrer, é game over. E nós podemos descansar sabendo que nosso personagem deu o melhor e se deu pelo time. Isso significa que precisamos que outros jogadores ataquem o boss também, não podemos fazer isso sozinhos.
 
 Vamos primeiro só construir uma estrutura básica de um boss e inicializar os dados, de maneira similar ao que fizemos com nossos personagens. O boss vai basicamente ter um nome, imagem, dano de ataque e HP. O boss **não vai** ser uma NFT. Os dados do boss vão apenas viver no contrato inteligente.
 
@@ -76,11 +76,11 @@ const gameContract = await gameContractFactory.deploy(
 
 Parece um pouco feio, mas, é isso!
 
-Nós agora temos um boss cujos dados vivem no nosso contrato. O boss que escolhi é `Capitão Nascimento`. Isso significa que nossos jogadores precisam andar juntos para **destruir** Capitão Nascimento. Por quê estamos destruindo Capitão Nascimento? Nem ideia. Eu só pensei que seria engraçado se tivéssemos personagens como Ronaldinho Gaúcho e o Zeca Pagodinho atacando o Capitão Nascimento XD.
+Nós agora temos um boss cujos dados vivem no nosso contrato. O boss que escolhi é `Capitão Nascimento`. Isso significa que nossos jogadores precisam andar juntos para **destruir** Capitão Nascimento. Por que estamos destruindo Capitão Nascimento? Nem ideia. Eu só pensei que seria engraçado se tivéssemos personagens como Ronaldinho Gaúcho e o Zeca Pagodinho atacando o Capitão Nascimento XD.
 
 **Por favor escolha seu próprio boss - talvez seja o Darth Vader? Talvez o seu tio? Talvez seu gato?** Qualquer coisa que você trocar, tenha certeza que é o seu próprio, não me copie :).
 
-Seria bem divertido se o boss fosse seu cachorro, e ao invés de tentar destruí-lo você tentasse conseguir que ele o amasse mais. E, quanto mais pessoas fizessem carinho nele na cabeça, mais ele amaria o player. Você poderia ter até um quadro de líderes de pessoas que fizeram mais carinho nele.
+Seria bem divertido se o boss fosse seu cachorro, e ao invés de tentar destruí-lo você tentasse conseguir que ele o amasse mais. E, quanto mais pessoas fizessem carinho nele na cabeça, mais ele amaria o jogador. Você poderia ter até um quadro de líderes de pessoas que fizeram mais carinho nele.
 
 De qualquer jeito, seja criativo. Esse é o seu projeto :).
 
@@ -91,10 +91,10 @@ Nós vamos criar uma função `attackBoss`. Aqui está um início dela:
 ```solidity
 function attackBoss() public {
  // Pega o estado do NFT do jogador
- // Tenha certeza que o player tenha mais que 0 de HP
+ // Tenha certeza que o jogador tenha mais que 0 de HP
  // Tenha certeza de que o boss tenha mais que 0 de HP
- // Permita que o player ataque o boss
- // Permita que o boss ataque o player
+ // Permita que o jogador ataque o boss
+ // Permita que o boss ataque o jogador
 }
 ```
 
@@ -145,8 +145,8 @@ Terminamos de incializar o Zeca Pagodinho com HP 300, img https://i.imgur.com/Pj
 Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 NFT Mintado com tokenId 0 e characterId 2
 
-Jogador com personagem Zeca Pagodinho irá atacar. Tem 300 de HP e 25 de PD
-Boss Capitão Nascimento tem 10000 HP e 50 PD
+Jogador com personagem Zeca Pagodinho ira atacar. Tem 300 de HP e 25 de PA
+Boss Capitão Nascimento tem 10000 HP e 50 PA
 ```
 
 Parece bom! `Zeca Pagodinho` está indo atacar nosso boss `Capitão Nascimento`. Tudo funcionou perfeitamente e estamos recuperando o estado das NFTs :).
@@ -163,23 +163,23 @@ Algumas coisas para notar aqui -
 
 ```solidity
 function attackBoss() public {
-  // Pega o estado da NFT do player.
+  // Pega o estado da NFT do jogador.
   uint256 nftTokenIdOfPlayer = nftHolders[msg.sender];
   CharacterAttributes storage player = nftHolderAttributes[nftTokenIdOfPlayer];
 
-  console.log("\nJogador com personagem %s ira atacar. Tem %s de HP e %s de PD", player.name, player.hp, player.attackDamage);
-  console.log("Boss %s tem %s de HP e %s de PD", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
+  console.log("\nJogador com personagem %s ira atacar. Tem %s de HP e %s de PA", player.name, player.hp, player.attackDamage);
+  console.log("Boss %s tem %s de HP e %s de PA", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
 
-  // Tenha certeza que o hp do player é maior que 0.
+  // Tenha certeza que o hp do jogador é maior que 0.
   require (
     player.hp > 0,
-    "Error: character must have HP to attack boss."
+    "Error: personagem precisa ter HP para atacar o boss."
   );
 
   // Tenha certeza que o HP do boss seja maior que 0.
   require (
     bigBoss.hp > 0,
-    "Error: boss must have HP to attack boss."
+    "Error: boss precisa ter HP para atacar o personagem."
   );
 }
 ```
@@ -206,10 +206,10 @@ function attackBoss() public {
   uint256 nftTokenIdOfPlayer = nftHolders[msg.sender];
   CharacterAttributes storage player = nftHolderAttributes[nftTokenIdOfPlayer];
 
-  console.log("\nJogador com personagem %s ira atacar. Tem %s de HP e %s de PD", player.name, player.hp, player.attackDamage);
-  console.log("Boss %s tem %s de HP e %s de PD", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
+  console.log("\nJogador com personagem %s ira atacar. Tem %s de HP e %s de PA", player.name, player.hp, player.attackDamage);
+  console.log("Boss %s tem %s de HP e %s de PA", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
 
-  // Checa se o hp do player é maior que 0.
+  // Checa se o hp do jogador é maior que 0.
   require (
     player.hp > 0,
     "Erro: Personagem deve ter HP para atacar o boss."
@@ -242,10 +242,10 @@ function attackBoss() public {
   uint256 nftTokenIdOfPlayer = nftHolders[msg.sender];
   CharacterAttributes storage player = nftHolderAttributes[nftTokenIdOfPlayer];
 
-  console.log("\nJogador com personagem %s ira atacar. Tem %s de HP e %s de PD", player.name, player.hp, player.attackDamage);
-  console.log("Boss %s tem %s de HP e %s de PD", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
+  console.log("\nJogador com personagem %s ira atacar. Tem %s de HP e %s de PA", player.name, player.hp, player.attackDamage);
+  console.log("Boss %s tem %s de HP e %s de PA", bigBoss.name, bigBoss.hp, bigBoss.attackDamage);
 
-  // Checa se o hp do player é maior que 0.
+  // Checa se o hp do jogador é maior que 0.
   require (
     player.hp > 0,
     "Erro: personagem deve ter HP para atacar o boss."
@@ -302,13 +302,13 @@ Terminamos de incializar o Zeca Pagodinho com HP 300, img https://i.imgur.com/Pj
 Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 NFT Mintado com tokenId 0 e characterId 2
 
-Jogador com personagem Zeca Pagodinho irá atacar. Tem 300 de HP e 25 de PD
+Jogador com personagem Zeca Pagodinho ira atacar. Tem 300 de HP e 25 de PA
 Boss Capitão Nascimento tem 10000 HP and 50 AD
 Jogador atacou o boss. Boss ficou com hp: 9975
 Boss atacou o jogador. Jogador ficou com hp: 250
 
-Jogador com personagem Zeca Pagodinho irá atacar. Tem 250 de HP e 25 de PD
-Boss Capitão Nascimento tem 9975 de HP e 50 de PD
+Jogador com personagem Zeca Pagodinho ira atacar. Tem 250 de HP e 25 de PA
+Boss Capitão Nascimento tem 9975 de HP e 50 de PA
 Jogador atacou o boss. Boss ficou com hp: 9950
 Boss atacou o jogador. Jogador ficou com hp: 200
 ```
@@ -317,7 +317,7 @@ Boss atacou o jogador. Jogador ficou com hp: 200
 
 Você pode ver que quando atacamos uma segunda vez, os valores atualizados de HP são usados tanto para o personagem quanto para o boss :).
 
-Sinta-se livre para testar essa função tentando com um boss com `1 de HP` ou um player com `1 de HP` brincando com os valores passados no constructor em `run.js`.
+Sinta-se livre para testar essa função tentando com um boss com `1 de HP` ou um jogador com `1 de HP` brincando com os valores passados no constructor em `run.js`.
 
 Por exemplo, se eu dou ao jogador `1 HP`, aqui está o resultado:
 
@@ -329,13 +329,13 @@ Terminamos de incializar o Zeca Pagodinho com, img https://i.imgur.com/Pj8lHpM.p
 Contrato deployado no endereço: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 NFT Mintado com tokenId 0 e characterId 2
 
-Jogador com personagem Zeca Pagodinho irá atacar. Tem 1 HP e 25 de PD
-Boss Capitão Nascimento tem 10000 de HP e 50 de PD
+Jogador com personagem Zeca Pagodinho ira atacar. Tem 1 HP e 25 de PA
+Boss Capitão Nascimento tem 10000 de HP e 50 de PA
 Jogador atacou o boss. Boss ficou com hp: 9975
-Boss atacou player. Jogador ficou com hp: 0
+Boss atacou jogador. Jogador ficou com hp: 0
 
-Jogador com personagem Zeca Pagodinho irá atacar. Tem 0 de HP e 25 de PD
-Boss Capitão Nascimento tem 9975 de HP e 50 de PD
+Jogador com personagem Zeca Pagodinho ira atacar. Tem 0 de HP e 25 de PA
+Boss Capitão Nascimento tem 9975 de HP e 50 de PA
 Error: VM Exception while processing transaction: reverted with reason string 'Error: personagem precisa ter HP para atacar o boss.'
     at MyEpicGame.attackBoss (contracts/MyEpicGame.sol:88)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
@@ -347,8 +347,8 @@ Error: VM Exception while processing transaction: reverted with reason string 'E
     at EthModule._sendTransactionAndReturnHash (/Users/flynn/Developer/epic-game/node_modules/hardhat/src/internal/hardhat-network/provider/modules/eth.ts:1494:18)
 ```
 
-Então, você pode ver que o primeiro ataque aconteceu de maneira correta, `Boss attacked player. New player hp: 0`. Incrível! Nossa função funcionou perfeitamente. O hp do nosso personagem ia ser negativo, mas foi configurado para `0`! Yay!
+Então, você pode ver que o primeiro ataque aconteceu de maneira correta, `Boss atacou jogador. Jogador ficou com hp: 0`. Incrível! Nossa função funcionou perfeitamente. O hp do nosso personagem ia ser negativo, mas foi configurado para `0`! Yay!
 
-Mas, na segunda vez que atacamos, conseguimos um erro com: `Error: character must have HP to attack boss`. O que está correto!!! Isso é basciamente como devolver um erro na nsosa API quando algo dá errado.
+Mas, na segunda vez que atacamos, conseguimos um erro com: `Error: personagem precisa ter HP para atacar o boss`. O que está correto!!! Isso é basciamente como devolver um erro na nsosa API quando algo dá errado.
 
-Legal - nossa função `attack boss` está basicamente feita. Vamos adicionar mais alguma mágica depois mas por agora estamos bem. Nós oficialmente temos nossa lógica de jogo **on-chain** :).
+Legal - nossa função `attackBoss` está basicamente feita. Vamos adicionar mais alguma mágica depois mas por agora estamos bem. Nós oficialmente temos nossa lógica de jogo **on-chain** :).

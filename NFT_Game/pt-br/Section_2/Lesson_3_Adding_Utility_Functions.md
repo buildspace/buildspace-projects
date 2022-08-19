@@ -20,9 +20,9 @@ O plano aqui é retornar `CharacterAttributes` preenchido com o estado da NFT do
 
 ```solidity
 function checkIfUserHasNFT() public view returns (CharacterAttributes memory) {
- // Pega o tokenId do personagem NFT do usuário
+ // Pega o tokenId do personagem NFT do usuario
  uint256 userNftTokenId = nftHolders[msg.sender];
- // Se o usuário tiver um tokenId no map, retorne seu personagem
+ // Se o usuario tiver um tokenId no map, retorne seu personagem
  if (userNftTokenId > 0) {
     return nftHolderAttributes[userNftTokenId];
   }
@@ -34,7 +34,7 @@ function checkIfUserHasNFT() public view returns (CharacterAttributes memory) {
 }
 ```
 
-Porquê fazemos `userNftTokenId > 0`? Bom, basicamente [não tem outro jeito](https://ethereum.stackexchange.com/a/13029) de checar se uma chave existe em um map. Nós configuramos nosso map desse jeito: `mapping(address => uint256) public nftHolders`. Não importa qual a chave que estamos procurando, vai ter um valor padrão de 0.
+Por que fazemos `userNftTokenId > 0`? Bom, basicamente [não tem outro jeito](https://ethereum.stackexchange.com/a/13029) de checar se uma chave existe em um map. Nós configuramos nosso map desse jeito: `mapping(address => uint256) public nftHolders`. Não importa qual a chave que estamos procurando, vai ter um valor padrão de 0.
 
 Esse é um problema para o usuário que tem a NFT com o tokenId `0`. Aí está o motivo do porque eu fiz `_tokenIds.increment()` antes no constructor! Dessa maneira, **ninguém está permitido a ter o tokenID 0.** Esse é um dos casos em que precisamos ser espertos para configurar nosso código por causa de algumas especificidades do Solidity :).
 

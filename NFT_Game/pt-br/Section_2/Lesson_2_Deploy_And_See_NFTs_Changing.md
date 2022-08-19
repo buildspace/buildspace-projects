@@ -70,13 +70,13 @@ Então nesse caso, eu mintei um `Zeca Pagodinho` NFT e fiz ele atacar o `Capitã
 
 No OpenSea, aqui está como isso se parece pra mim:
 
-![REVIEW](https://i.imgur.com/dv5Q2lR.png)
+![Zeca](https://i.imgur.com/cMM4CmP.png)
 
 Está tudo funcionando como deveria!! Oba!! Zeca Pagodinho perdeu vida!!
 
 Sinta-se livre para ver no Rarible também. Só saiba que o Rarible é um pouco mais lento para mostrar metadados atualizados! `https://goerli.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE`.
 
-![](https://i.imgur.com/Pwx4IOM.png)
+![REVIEW](https://i.imgur.com/Pwx4IOM.png)
 
 **Nota 1:** Não vê suas estatísticas atualizadas no OpenSea ou no Rarible? **Clique no botão de recarregar que eu destaquei em cima na direita e espere alguns minutos.** Se estiver usando o Rarible, eu notei que pode levar de 10-20 min para atualizar as estatísticas. _OpenSea é mais rápido nesse quesito_.
 
