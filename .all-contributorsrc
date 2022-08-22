@@ -2335,6 +2335,33 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "bobjiang",
+      "name": "Bob Jiang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1224604?v=4",
+      "profile": "https://github.com/bobjiang",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "anymose96",
+      "name": "anymose",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80447029?v=4",
+      "profile": "https://github.com/anymose96",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Xia-Sam",
+      "name": "Sam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39165351?v=4",
+      "profile": "https://github.com/Xia-Sam",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
