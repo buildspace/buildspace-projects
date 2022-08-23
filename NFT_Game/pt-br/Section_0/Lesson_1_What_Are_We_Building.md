@@ -10,7 +10,7 @@ Então, o que vamos construir aqui :)? Aqui está um pequeno vídeo:
 
 ### **🤘  Vê um problema? Quer melhorar algo? Conserte você mesmo ;).**
 
-**[Todo esse conteúdo é completamente open-source](https://github.com/w3b3d3v/buildspace-projects/tree/web3dev-version)**. Se você vir um problema, erro de digitação, etc - você pode consertar você mesmo facilmente e fazer um Pull Request!
+**[Todo esse conteúdo é completamente open-source](https://github.com/w3b3d3v/buildspace-projects/tree/web3dev-version/NFT_Game)**. Se você vir um problema, erro de digitação, etc - você pode consertar você mesmo facilmente e fazer um Pull Request!
 
 Vamos colocar você no open-source!!
 
