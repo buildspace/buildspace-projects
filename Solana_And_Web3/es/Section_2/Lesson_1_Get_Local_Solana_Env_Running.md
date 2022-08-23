@@ -25,7 +25,7 @@ Me gustó este [tweet] (https://twitter.com/armaniferrante/status/14345547250939
 La configuración de Solana comienza en tu máquina. Hay un montón de "detalles" en diferentes sistemas operativos. Si estás trabajando en una **máquina Intel macOS o una máquina Linux**, creo podrás continuar. Si estás en una **máquina con Windows o una máquina con macOS M1**, revisa los enlaces a continuación:
 
 - [Configurar Solana en una máquina con Windows](https://github.com/buildspace/buildspace-projects/tree/main/Solana_And_Web3/es/Section_2/Resources/windows_setup.md)
-- [Configurar Solana en una máquina M1 macOS](https://github.com/buildspace/buildspace-projects/tree/main/Solana_And_Web3/es/Section_2/Resources/m1_setup.md)
+- [Configurar Solana en una máquina M1 macOS](https://github.com/buildspace/buildspace-projects/tree/main/Solana_And_Web3/e/Section_2/Resources/m1_setup.md)
 
 Buena suerte, ¡lo vamos a lograr!
 
@@ -237,4 +237,4 @@ anchor test
 
 ¡¡¡Todo eso fue bastante duro!!! Definitivamente una de las instalaciones más difíciles.
 
-Publica una captura de pantalla de tu entorno funcionando en `#progress` para que la gente sepa que lo lograste :).
+Publica la captura de pantalla de tu entorno funcionando en `#progress` para que la gente sepa que lo lograste :).
