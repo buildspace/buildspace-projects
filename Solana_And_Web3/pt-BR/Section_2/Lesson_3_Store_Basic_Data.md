@@ -1,22 +1,22 @@
-Right now, our program does literally nothing haha. Let's change it up to store some data! 
+No momento, nosso programa não faz literalmente nada haha. Vamos alterá-lo para armazenar alguns dados!
 
-Our website will allow people to submit GIFs. So, storing something like a `total_gifs` number would be pretty helpful too.
+Nosso site permitirá que as pessoas enviem GIFs. Então, armazenar algo como um número `total_gifs` também seria muito útil.
 
-### 🥞 Create an integer to store GIF count
+### 🥞 Crie um número inteiro para armazenar a contagem de GIFs
 
-Cool so we just want to store a basic integer with the number of `total_gifs` people have submitted. So, every time someone adds a new gif we'd just do `total_gifs += 1`.
+Legal, então só queremos armazenar um inteiro básico com o número de `total_gifs` que as pessoas enviaram. Então, toda vez que alguém adiciona um novo gif, nós apenas fazemos `total_gifs += 1`.
 
-Let's think about this. 
+Vamos pensar sobre isso.
 
-Remember earlier I said Solana programs are **stateless**. They **don't** hold data permanently. This is very different from the world of Ethereum smart contracts — which hold state right on the contract.
+Lembre-se anteriormente que eu disse que os programas Solana são **sem estado**. Eles **não** retêm dados permanentemente. Isso é muito diferente do mundo dos contratos inteligentes Ethereum – que guarda estado diretamente no contrato.
 
-But, Solana programs can interact w/ "accounts".
+Mas, os programas Solana podem interagir com "contas".
 
-Again, accounts are basically files that programs can read and write to. The word "accounts" is confusing and super shitty. For example, when you create a wallet on Solana — you create an "account". But, your program can also make an "account" that it can write data to. Programs themselves are considered "accounts". 
+Novamente, as contas são basicamente arquivos que os programas podem ler e gravar. A palavra "contas" é confusa e super merda. Por exemplo, quando você cria uma carteira no Solana — você cria uma "conta". Mas, seu programa também pode criar uma "conta" na qual possa gravar dados. Os próprios programas são considerados "contas".
 
-**Everything is an account lol**. Just remember an account isn't just like your actual wallet — **it's a general way for programs to pass data between each other**. Read about them more [here](https://docs.solana.com/developing/programming-model/accounts). 
+**Tudo é conta lol**. Lembre-se de que uma conta não é apenas como sua carteira real - **é uma maneira geral de os programas passarem dados entre si**. Leia mais sobre eles [aqui](https://docs.solana.com/developing/programming-model/accounts).
 
-Check out the code below, I added some comments as well.
+Confira o código abaixo, eu adicionei alguns comentários também.
 
 ```rust
 use anchor_lang::prelude::*;
@@ -27,15 +27,15 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 pub mod myepicproject {
   use super::*;
   pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
-    // Get a reference to the account.
+    // Obtem a referência da conta
     let base_account = &mut ctx.accounts.base_account;
-    // Initialize total_gifs.
+    // Inicializa o total_gifs.
     base_account.total_gifs = 0;
     Ok(())
   }
 }
 
-// Attach certain variables to the StartStuffOff context.
+// Anexa algumas variaveis ao contexto do StartStuffOff.
 #[derive(Accounts)]
 pub struct StartStuffOff<'info> {
     #[account(init, payer = user, space = 9000)]
@@ -45,18 +45,18 @@ pub struct StartStuffOff<'info> {
     pub system_program: Program <'info, System>,
 }
 
-// Tell Solana what we want to store on this account.
+// Conta para a Solana o que queremos guardar nessa conta.
 #[account]
 pub struct BaseAccount {
     pub total_gifs: u64,
 }
 ```
 
-**A lot happening here.** Let's step through it.
+**Muita coisa acontecendo aqui.** Vamos passar por elas.
 
-### 🤠 Initializing an account
+### 🤠 Inicializando uma conta
 
-Lets check out this line at the bottom:
+Vamos verificar esta linha na parte inferior:
 
 ```rust
 #[account]
@@ -65,9 +65,9 @@ pub struct BaseAccount {
 }
 ```
 
-This is dope. Basically, it tells our program what kind of account it can make and what to hold inside of it. So, here, `BaseAccount` holds one thing and it's an integer named `total_gifs`.
+Isso é muito legal. Basicamente, ele diz ao nosso programa que tipo de conta ele pode fazer e o que manter dentro dela. Então, aqui, `BaseAccount` contém algo e é um inteiro chamado `total_gifs`.
 
-Then, here we actually specify how to initialize it and what to hold in our `StartStuffOff` context.
+Então, aqui nós realmente especificamos como inicializá-lo e o que manter em nosso contexto `StartStuffOff`.
 
 ```rust
 #[derive(Accounts)]
@@ -80,68 +80,68 @@ pub struct StartStuffOff<'info> {
 }
 ```
 
-Looks complicated lol.
+Parece complicado rs.
 
-First we've got `[account(init, payer = user, space = 9000)]`. **All we're doing here is telling Solana how we want to initialize `BaseAccount`.**
+Primeiro temos `[account(init, payer = user, space = 9000)]`. **Tudo o que estamos fazendo aqui é dizer a Solana como queremos inicializar `BaseAccount`.**
 
-Note, if after running your test below you get the error `Transaction simulation failed: Error processing Instruction 0: custom program error: 0x64`, you will need to change `space = 9000` to `space = 10000`. If you look at [these docs from anchor](https://project-serum.github.io/anchor/tutorials/tutorial-1.html#defining-a-program) you can see that they define a simple program that declares space = 8 + 8 (eg, 8 kilobytes + 8 kilobytes). The more logic we add to our program, the more space it will take up!
+Observe que, se após executar o teste abaixo você receber o erro `Transaction simulation failed: Error processing Instruction 0: custom program error: 0x64`, será necessário alterar `space = 9000` para `space = 10000`. Se você olhar para [estes documentos do Anchor](https://project-serum.github.io/anchor/tutorials/tutorial-1.html#defining-a-program) você pode ver que eles definem um programa simples que declara `space = 8 + 8` (por exemplo, 8 kilobytes + 8 kilobytes). Quanto mais lógica adicionarmos ao nosso programa, mais espaço ele ocupará!
 
-1. `init` will tell Solana to create a new account owned by our current program.
-2. `payer = user` tells our program who's paying for the account to be created. In this case, it's the `user` calling the function. 
-3. We then say `space = 9000` which will allocate 9000 bytes of space for our account. You can change this # if you wanted, but, 9000 bytes is enough for the program we'll be building here!
+1. `init` dirá a Solana para criar uma nova conta pertencente ao nosso programa atual.
+2. `payer = user` informa ao nosso programa quem está pagando pela criação da conta. Neste caso, é o `user` chamando a função.
+3. Dizemos então `space = 9000` que alocará 9000 bytes de espaço para nossa conta. Você pode alterar este # se quiser, mas 9000 bytes são suficientes para o programa que vamos construir aqui!
 
-Why are we paying for an account? Well — storing data isn't free! How Solana works is users will pay "rent" on their accounts. You can read more on it [here](https://docs.solana.com/developing/programming-model/accounts#rent) and how rent is calculated. Pretty wild, right? If you don't pay rent, validators will clear the account!
+Por que estamos pagando por uma conta? Bem - armazenar dados não é grátis! Como Solana funciona é que os usuários pagarão "aluguel" em suas contas. Você pode ler mais sobre isso [aqui](https://docs.solana.com/developing/programming-model/accounts#rent) e como o aluguel é calculado. Bem selvagem, certo? Se você não pagar aluguel, os validadores vão limpar a conta!
 
-[Here's](https://docs.solana.com/storage_rent_economics) another article from the docs on rent I liked as well!
+[Aqui está](https://docs.solana.com/storage_rent_economics) outro artigo dos docs sobre aluguel que eu também gostei!
 
-> "With this approach, accounts with two-years worth of rent deposits secured are exempt from network rent charges. By maintaining this minimum-balance, the broader network benefits from reduced liquidity and the account holder can rest assured that their `Account::data` will be retained for continual access/usage."
+> "Com essa abordagem, contas com dois anos de depósitos de aluguel garantidos estão isentas de cobranças de aluguel de rede. Ao manter esse saldo mínimo, a rede mais ampla se beneficia de uma liquidez reduzida e o titular da conta pode ter certeza de que sua `Account::data` serão retidos para acesso/uso contínuo."
 > 
 
-We then have `pub user: Signer<'info>` which is data passed into the program that proves to the program that the user calling this program actually owns their wallet account.
+Temos então `pub user: Signer<'info>` que são dados passados para o programa que provam ao programa que o usuário que está chamando este programa realmente possui sua conta de carteira.
 
-Finally, we have `pub system_program: Program` which is actually pretty freaking cool. It's basically a reference to the [SystemProgram](https://docs.solana.com/developing/runtime-facilities/programs#system-program). The SystemProgram is the program that basically runs Solana. It is responsible for a lot of stuff, but one of the main things it does is create accounts on Solana. The SystemProgram is a program the creators of Solana deployed that other programs like ours talk to haha — it has an id of `11111111111111111111111111111111`.
+Finalmente, temos `pub system_program: Program` que é realmente muito legal. É basicamente uma referência ao [SystemProgram](https://docs.solana.com/developing/runtime-facilities/programs#system-program). O SystemProgram é o programa que basicamente roda Solana. É responsável por muitas coisas, mas uma das principais coisas que faz é criar contas no Solana. O SystemProgram é um programa que os criadores de Solana implantaram que outros programas como o nosso falam haha — tem um id de `11111111111111111111111111111111`.
 
-Lastly, we do this thing in our function where we just grab `base_account` from the `StartStuffOff` context by doing `Context<StartStuffOff>`.
+Por último, fazemos isso em nossa função onde apenas pegamos `base_account` do contexto `StartStuffOff` fazendo `Context<StartStuffOff>`.
 
 ```rust
 pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
-	// Get a reference to the account.
+	// Obtem a referência da conta
   let base_account = &mut ctx.accounts.base_account;
-	// Initialize total_gifs.
+  // Inicializa o total_gifs.
   base_account.total_gifs = 0;
   Ok(())
 }
 ```
 
-Boom! Again — a lot of this stuff may seem confusing especially if you're new to Rust but **let's just keep writing and running code**. I think this stuff makes more sense the more you do write code → run → get errors → fix errors → repeat.
+Boom! Novamente - muitas dessas coisas podem parecer confusas, especialmente se você é novo no Rust, mas **vamos continuar escrevendo e executando o código**. Eu acho que essas coisas fazem mais sentido quanto mais você escreve código → executa → obtém erros → corrige erros → repete.
 
-*Note: We do `&mut` to get a "mutable reference" to `base_account`. When we do this it actually gives us the power to make **changes** to `base_account`. Otherwise, we'd simply be working w/ a "local copy" of `base_account`.*
+*Nota: Fazemos `&mut` para obter uma "referência mutável" para `base_account`. Quando fazemos isso, na verdade nos dá o poder de fazer **alterações** em `base_account`. Caso contrário, simplesmente estaríamos trabalhando com uma "cópia local" de `base_account`.*
 
-### 👋  Retrieve account data
+### 👋 Recuperar dados da conta
 
-Let's put it all together.
+Vamos juntar tudo.
 
-So, we can actually retrieve account data now as well over in javascript land. Go ahead and update `myepicproject.js`. I added some comments on lines I changed.
+Então, podemos realmente recuperar os dados da conta agora também em javascript. Vá em frente e atualize o `myepicproject.js`. Adicionei alguns comentários nas linhas que alterei.
 
 ```javascript
 const anchor = require('@project-serum/anchor');
 
-// Need the system program, will talk about this soon.
+// Precisa do programa do sistema, falaremos sobre isso em breve.
 const { SystemProgram } = anchor.web3;
 
 const main = async() => {
-  console.log("🚀 Starting test...")
+  console.log("🚀 Iniciando testes...")
 
-  // Create and set the provider. We set it before but we needed to update it, so that it can communicate with our frontend!
+  // Crie e defina o provedor. Nós o configuramos antes, mas precisávamos atualizá-lo, para que ele pudesse se comunicar com nosso frontend!
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
   const program = anchor.workspace.Myepicproject;
 	
-  // Create an account keypair for our program to use.
+  // Crie um par de chaves de conta para nosso programa usar.
   const baseAccount = anchor.web3.Keypair.generate();
 
-  // Call start_stuff_off, pass it the params it needs!
+  // Chame start_stuff_off, passe os parâmetros necessários!
   let tx = await program.rpc.startStuffOff({
     accounts: {
       baseAccount: baseAccount.publicKey,
@@ -151,9 +151,9 @@ const main = async() => {
     signers: [baseAccount],
   });
 
-  console.log("📝 Your transaction signature", tx);
+  console.log("📝 Sua assinatura de transação", tx);
 
-  // Fetch data from the account.
+  // Obtem dados da conta.
   let account = await program.account.baseAccount.fetch(baseAccount.publicKey);
   console.log('👀 GIF Count', account.totalGifs.toString())
 }
@@ -171,32 +171,33 @@ const runMain = async () => {
 runMain();
 ```
 
-`anchor.web3.Keypair.generate()` may also be kinda confusing — why are we doing this? Well, basically it's because we need to create some credentials for the `BaseAccount` we're creating.
+`anchor.web3.Keypair.generate()` também pode ser meio confuso — por que estamos fazendo isso? Bem, basicamente é porque precisamos criar algumas credenciais para a `BaseAccount` que estamos criando.
 
-Most of the script is the same but you'll see I pass `startStuffOff` some important params that we specified in the struct `pub struct StartStuffOff`.
+A maior parte do script é o mesmo, mas você verá que passo para `startStuffOff` alguns parâmetros importantes que especificamos no struct `pub struct StartStuffOff`.
 
-*Note: notice also that in `lib.rs` the function is called `start_stuff_off` since in Rust we use snake case (`snake_case`) instead of camel case. But, over in our javascript file we use camel case and actually call `startStuffOff`. This is something nice Anchor does for us so we can follow best practices regardless of what language we're using. You can use snake case in Rust-land and camel case in JS-land.*
+*Nota: observe também que em `lib.rs` a função é chamada `start_stuff_off` já que em Rust nós usamos snake case (`snake_case`) ao invés de camel case. Mas, em nosso arquivo javascript, usamos camel case e chamamos `startStuffOff`. Isso é algo bom que o Anchor faz por nós para que possamos seguir as melhores práticas, independentemente da linguagem que estamos usando. Você pode usar o snake case em Rust-land e camel case em JS-land.*
 
-And perhaps the coolest part about all this is where we call:
+E talvez a parte mais legal de tudo isso seja onde chamamos:
 
 ```javascript
 await program.account.baseAccount.fetch(baseAccount.publicKey)
 console.log('👀 GIF Count', account.totalGifs.toString())
 ```
 
-Here we actually retrieve the account we created and then access `totalGifs`. When I run this via `anchor test`, I get:
+Aqui nós realmente recuperamos a conta que criamos e então acessamos `totalGifs`. Quando executo isso via `anchor test`, recebo:
 
 ```
-🚀 Starting test...
-📝 Your transaction signature 2KiCcXmdDyhMhJpnYpWXQy3FxuuqnNSANeaH1CBjvomuLZ8LfzDKHtDDB2LHfsfoVQZSyxoF1R39ao6VfTrD7bG7
+🚀 Iniciando testes...
+📝 Sua assinatura de transação
+2KiCcXmdDyhMhJpnYpWXQy3FxuuqnNSANeaH1CBjvomuLZ8LfzDKHtDDB2LHfsfoVQZSyxoF1R39ao6VfTrD7bG7
 👀 GIF Count 0
 ```
 
-Yay! It's `0`! This is pretty freaking epic. We now are actually calling a program *and* storing data in a permissionless manner on the Solana chain. NICE.
+Yay! Está '0'! Isso é muito épico. Agora estamos chamando um programa *e* armazenando dados de uma maneira sem permissão na cadeia Solana. LEGAL.
 
-### 👷‍♀️ Build a function to update GIF counter
+### 👷‍♀️ Crie uma função para atualizar o contador GIF
 
-Let's actually create a new function named `add_gif` that lets us actually increment the GIF counter. Check out some of my changes below.
+Vamos criar uma nova função chamada `add_gif` que nos permite incrementar o contador GIF. Confira abaixo algumas das minhas mudanças.
 
 ```rust
 use anchor_lang::prelude::*;
@@ -212,9 +213,9 @@ pub mod myepicproject {
     Ok(())
   }
   
-	// Another function woo!
+	// Outra função uhul!
   pub fn add_gif(ctx: Context<AddGif>) -> Result <()> {
-    // Get a reference to the account and increment total_gifs.
+    // Obtem a referencia para a conta e incrementa total_gifs.
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs += 1;
     Ok(())
@@ -230,8 +231,8 @@ pub struct StartStuffOff<'info> {
   pub system_program: Program <'info, System>,
 }
 
-// Specify what data you want in the AddGif Context.
-// Getting a handle on the flow of things :)?
+// Especifica que dados queremos no Contexto AddGif
+// Obtendo um controle sobre o fluxo das coisas :)?
 #[derive(Accounts)]
 pub struct AddGif<'info> {
   #[account(mut)]
@@ -244,7 +245,7 @@ pub struct BaseAccount {
 }
 ```
 
-Pretty simple! Near the bottom I added:
+Bem simples! Perto da parte inferior eu adicionei:
 
 ```rust
 #[derive(Accounts)]
@@ -254,35 +255,35 @@ pub struct AddGif<'info> {
 }
 ```
 
-I create a `Context` named `AddGif` that has access to a mutable reference to `base_account`. That's why I do `#[account(mut)]`. Basically it means I can actually change the `total_gifs` value stored on `BaseAccount`.
+Eu crio um `Context` chamado `AddGif` que tem acesso a uma referência mutável para `base_account`. É por isso que eu faço `#[account(mut)]`. Basicamente significa que eu posso realmente alterar o valor `total_gifs` armazenado em `BaseAccount`.
 
-Otherwise, I may change data on it within my function but it *wouldn't actually change* on my account. Now, w/ a "mutable" reference if I mess w/ `base_account` in my function it'll change data on the account itself.
+Caso contrário, posso alterar os dados nele dentro da minha função, mas na verdade *não mudaria* na minha conta. Agora, com uma referência "mutável" se eu mexer com `base_account` na minha função, isso mudará os dados da própria conta.
 
-Last, I create a lil `add_gif` function!
+Por último, eu crio uma pequena função `add_gif`!
 
 ```rust
 pub fn add_gif(ctx: Context<AddGif>) -> Result <()> {
-    // Get a reference to the account and increment total_gifs.
+    // Obtem a referencia para a conta e incrementa total_gifs.
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs += 1;
     Ok(())
 }
 ```
 
-All I do is grab the `base_account` which was passed in to the function via `Context<AddGif>`. Then, I increment the counter and that's it!!
+Tudo o que faço é pegar a `base_account` que foi passada para a função via `Context<AddGif>`. Então, incremento o contador e pronto!!
 
-Hope you can kinda see how the `Context` we set up near the bottom of the program actually becomes useful within the function. It's basically a nice way to say, "Hey, when someone calls `add_gif` be sure to attach the `AddGif` context to it as well so the user can access the `base_account` and whatever else is attached to `AddGif`.
+Espero que você possa ver como o `Context` que configuramos na parte inferior do programa realmente se torna útil dentro da função. É basicamente uma boa maneira de dizer: "Ei, quando alguém chamar `add_gif` certifique-se de anexar o contexto `AddGif` a ele também para que o usuário possa acessar a `base_account` e o que mais estiver anexado a `AddGif`.
 
-### 🌈 Update the test script...again!
+### 🌈 Atualize o script de teste... novamente!
 
-Every time we update our program, we need to change up our script to test the changes! Let's update `myepicproject.js` to call `add_gif`.
+Toda vez que atualizamos nosso programa, precisamos alterar nosso script para testar as mudanças! Vamos atualizar `myepicproject.js` para chamar `add_gif`.
 
 ```javascript
 const anchor = require('@project-serum/anchor');
 const { SystemProgram } = anchor.web3;
 
 const main = async() => {
-  console.log("🚀 Starting test...")
+  console.log("🚀 Iniciando testes...")
 
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
@@ -297,19 +298,19 @@ const main = async() => {
     },
     signers: [baseAccount],
   });
-  console.log("📝 Your transaction signature", tx);
+  console.log("📝 Sua assinatura de transação", tx);
 
   let account = await program.account.baseAccount.fetch(baseAccount.publicKey);
   console.log('👀 GIF Count', account.totalGifs.toString())
 	
-  // Call add_gif!
+  // Chama add_gif!
   await program.rpc.addGif({
     accounts: {
       baseAccount: baseAccount.publicKey,
     },
   });
   
-  // Get the account again to see what changed.
+  // Obtem a conta novamente e veja o que mudou.
   account = await program.account.baseAccount.fetch(baseAccount.publicKey);
   console.log('👀 GIF Count', account.totalGifs.toString())
 }
@@ -327,23 +328,23 @@ const runMain = async () => {
 runMain();
 ```
 
-When I run this via `anchor test` I get:
+Quando executo isso via `anchor test`, recebo:
 
 ```bash
-🚀 Starting test...
-📝 Your transaction signature 2Z9LZc5sFr8GHvwjZkrkqGJZ1hFNzZq2rTPV7jSEUjFoMZ16QQwPS2B7qqyNrmfFEpodHTBhvt5oSBi958mbwiR8
+🚀 Iniciando testes...
+📝 Sua assinatura de transação 2Z9LZc5sFr8GHvwjZkrkqGJZ1hFNzZq2rTPV7jSEUjFoMZ16QQwPS2B7qqyNrmfFEpodHTBhvt5oSBi958mbwiR8
 👀 GIF Count 0
 👀 GIF Count 1
 ```
 
-NICE. We are now actually storing *and* changing data on our Solana program. Epic. 
+LEGAL. Agora estamos armazenando *e* alterando dados em nosso programa Solana. Épico.
 
-*Note: You'll notice when you run `anchor test` again it'll start the counter from 0 again. Why? Well — basically it's because whenever we run `anchor test` we generate a key pair for our account via `anchor.web3.Keypair.generate()`. This will actually create a new account every time. On our web app — we'll make sure to address this properly. But for testing purposes it's useful because we can start w/ a fresh account every time we test.*
+*Nota: Você notará que quando você executar o `anchor test` novamente, ele iniciará o contador a partir de 0 novamente. Por quê? Bem - basicamente é porque sempre que executamos `anchor test` geramos um par de chaves para nossa conta via `anchor.web3.Keypair.generate()`. Isso realmente criará uma nova conta toda vez. Em nosso aplicativo da Web, nos certificaremos de resolver isso corretamente. Mas para fins de teste, é útil porque podemos começar com uma nova conta toda vez que testamos.*
 
-### 🚨 Progress Report
+### 🚨 Relatório de progresso
 
-*Please do this else Farza will be sad :(*
+*Faça isso senão o Dani vai ficar triste :(*
 
-Post a screenshot of your terminal showing your GIF count incrementing in `#progress`!
+Poste uma captura de tela do seu terminal mostrando sua contagem de GIFs incrementando em `#progress`!
 
-Epic work so far :).
+Trabalho épico até agora :).
