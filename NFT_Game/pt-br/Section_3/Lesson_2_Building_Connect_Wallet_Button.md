@@ -45,12 +45,12 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header gradient-text">⚔️ Metaverso Slayer ⚔️</p>
-          <p className="sub-text">Junte seus amigos para proteger o Metaverso!</p>
+          <p className="header gradient-text">⚔️ Batalhas no Metaverso ⚔️</p>
+          <p className="sub-text">Junte-se a mim para vencer os inimigos do Metaverso!</p>
         </div>
         <div className="connect-wallet-container">
           <img
-            src="https://64.media.tumblr.com/tumblr_mbia5vdmRd1r1mkubo1_500.gifv"
+            src="https://thumbs.gfycat.com/AnchoredPleasedBergerpicard-size_restricted.gif"
             alt="Monty Python Gif"
           />
         </div>
@@ -142,12 +142,12 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header gradient-text">⚔️ Metaverso Slayer ⚔️</p>
+          <p className="header gradient-text">⚔️ Batalhas no Metaverso ⚔️</p>
           <p className="sub-text">Junte os amigos e proteja o Metaverso!!</p>
           <div className="connect-wallet-container">
             <img
-              src="https://64.media.tumblr.com/tumblr_mbia5vdmRd1r1mkubo1_500.gifv"
-              alt="Monty Python Gif"
+              src="https://thumbs.gfycat.com/AnchoredPleasedBergerpicard-size_restricted.gif"
+              alt="Nascimento Gif"
             />
           </div>
         </div>
@@ -236,7 +236,7 @@ const App = () => {
       const { ethereum } = window;
 
       if (!ethereum) {
-        alert("Get MetaMask!");
+        alert("Instale a MetaMask!");
         return;
       }
 
@@ -250,7 +250,7 @@ const App = () => {
       /*
        * Boom! Isso deve escrever o endereço público uma vez que autorizarmos Metamask.
        */
-      console.log("Connected", accounts[0]);
+      console.log("Contectado", accounts[0]);
       setCurrentAccount(accounts[0]);
     } catch (error) {
       console.log(error);
@@ -265,12 +265,12 @@ const App = () => {
     <div className="App">
       <div className="container">
         <div className="header-container">
-          <p className="header gradient-text">⚔️ Metaverso Slayer ⚔️</p>
+          <p className="header gradient-text">⚔️ Batalhas no Metaverso ⚔️</p>
           <p className="sub-text">Junte os amigos e proteja o Metaverso!!</p>
           <div className="connect-wallet-container">
             <img
-              src="https://64.media.tumblr.com/tumblr_mbia5vdmRd1r1mkubo1_500.gifv"
-              alt="Monty Python Gif"
+              src="https://thumbs.gfycat.com/AnchoredPleasedBergerpicard-size_restricted.gif"
+              alt="Nascimento Gif"
             />
             {/*
              * Botão que vamos usar para disparar a conexão da carteira. Não esqueça de adicionar o evento onClick para chamar seu método!
@@ -279,7 +279,7 @@ const App = () => {
               className="cta-button connect-wallet-button"
               onClick={connectWalletAction}
             >
-              Connect Wallet To Get Started
+              Conecte sua carteira para começar
             </button>
           </div>
         </div>
@@ -302,7 +302,7 @@ export default App;
 
 Clique seu novo botão chique e você deve ver sua extensão Chrome do Metamask aparecer. Boa!
 
-![Untitled](https://i.imgur.com/0HsWMpg.png)
+![Untitled](https://i.imgur.com/8pJqLFd.png)
 
 
 ## 🚨 Reporte seu Progresso!

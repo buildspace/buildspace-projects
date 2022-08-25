@@ -70,8 +70,8 @@ const renderContent = () => {
     return (
       <div className="connect-wallet-container">
         <img
-          src="https://64.media.tumblr.com/tumblr_mbia5vdmRd1r1mkubo1_500.gifv"
-          alt="Monty Python Gif"
+          src="https://thumbs.gfycat.com/AnchoredPleasedBergerpicard-size_restricted.gif"
+          alt="Nascimento Gif"
         />
         <button
           className="cta-button connect-wallet-button"

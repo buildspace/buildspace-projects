@@ -28,7 +28,7 @@ import "./SelectCharacter.css";
 const SelectCharacter = ({ setCharacterNFT }) => {
   return (
     <div className="select-character-container">
-      <h2>Mint seu Herói. Escolha com sabedoria.</h2>
+      <h2>Minte seu Herói. Escolha com sabedoria.</h2>
     </div>
   );
 };
@@ -75,8 +75,8 @@ const renderContent = () => {
     return (
       <div className="connect-wallet-container">
         <img
-          src="https://64.media.tumblr.com/tumblr_mbia5vdmRd1r1mkubo1_500.gifv"
-          alt="Monty Python Gif"
+          src="https://thumbs.gfycat.com/AnchoredPleasedBergerpicard-size_restricted.gif"
+          alt="Nascimento Gif"
         />
         <button
           className="cta-button connect-wallet-button"
@@ -153,7 +153,7 @@ Nota: tenha certeza que sua carteira não está conectado ao app por um projeto 
 
 Vá em frente e recarregue a página e você deve ver um botão "Connect To Wallet" pronto! Vá em frente e conecte! Uma vez que fizer isso, seu console deve escrever a palavra `Connected` e o seu endereço público da carteira!
 
-![Untitled](https://i.imgur.com/LvoDEBK.png)
+![Untitled](https://i.imgur.com/0yi9Afp.png)
 
 Boa - Cenário #1 **FOI**.
 
@@ -161,7 +161,7 @@ Boa - Cenário #1 **FOI**.
 
 Vá em frente e conecte sua carteira! Uma vez que sua carteira estiver conectada, você deve ver seu app renderizando alguma coisa que parece com isso:
 
-![Untitled](https://i.imgur.com/K3kvxeE.png)
+![Untitled](https://i.imgur.com/HBX1Djb.png)
 
 **BOOM.** Bom trabalho! Você acabou de criar um componente em React, configurou uma condição de renderização, **_e_** configurou o seu Login de carteira, pronto e funcionando! Com os projetos da WEB3DEV, é tudo sobre fazer o próprio projeto. Sinta-se livre para fazer o que quiser com essas páginas!
 
