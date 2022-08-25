@@ -178,9 +178,9 @@ Isso pode demorar um pouco para começar, mas quando estiver funcionando, você 
 
 Boom!! Agora você está rodando um validador local. Muito legal :).
 
-### ☕️ Instale Node, NPM e Mocha, Yarn
+### ☕️ Instale Node, NPM, Mocha e Yarn
 
-Grandes chances de você já ter Node e NPM. Quando eu faço node --version recebo v16.0.0. A versão mínima é v11.0.0. Se você não tiver o Node e o NPM, instale-o usando o NVM [aqui](https://github.com/nvm-sh/nvm#installing-and-updating).
+Grandes chances de você já ter Node e NPM. Quando eu faço `node --version` recebo `v16.0.0`. A versão mínima é `v11.0.0`. Se você não tiver o Node e o NPM, instale-o usando o NVM [aqui](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 Depois disso, certifique-se de instalar essa coisa chamada Mocha. É uma pequena estrutura de teste para nos ajudar a testar nossos programas Solana.
 
@@ -199,7 +199,7 @@ Vamos usar muito essa ferramenta chamada "Anchor". Se você já conhece o Hardha
 
 O Anchor é um *projeto realmente novo* executado por alguns desenvolvedores principais. Há grandes chances de se deparar com alguns problemas. Certifique-se de participar do [Anchor Discord](https://discord.gg/8HwmBtt2ss) e sinta-se à vontade para fazer perguntas ou [criar uma issue](https://github.com/project-serum/anchor/issues) em seu Github à medida que você encontrar problemas. Os desenvolvedores são incríveis. Talvez até diga que você é do buildspace em #general no Discord deles :).
 
-** BTW - não apenas entre no Discord e faça perguntas aleatórias esperando que as pessoas ajudem. Tente pesquisar no Discord deles para ver se mais alguém teve a mesma dúvida que você. Dê o máximo de informações possível sobre suas dúvidas. Faça as pessoas quererem te ajudar lol.**
+**BTW - não apenas entre no Discord e faça perguntas aleatórias esperando que as pessoas ajudem. Tente pesquisar no Discord deles para ver se mais alguém teve a mesma dúvida que você. Dê o máximo de informações possível sobre suas dúvidas. Faça as pessoas quererem te ajudar lol.**
 
 _Sério — junte-se ao Discord, os desenvolvedores são muito prestativos._
 
