@@ -1,12 +1,12 @@
-Epic. We're storing data on our Solana program. Not many people know how to do this stuff, so, you should definitely feel like a bit of a wizard. This ecosystem is really early and you're at the center of the magic right now.
+Épico. Estamos armazenando dados em nosso programa Solana. Poucas pessoas sabem como fazer essas coisas, então você definitivamente deve se sentir como um mago. Este ecossistema é muito novo e você está no centro da magia agora.
 
-So, a counter is cool. But, we want to store more complex data!
+Então, um contador é legal. Mas, queremos armazenar dados mais complexos!
 
-Let's now set it up where we can store an array of structs with more data we care about like: *a link to the gif and the public address of the person who submitted it.* Then, we'd be able to retrieve this data on our client!
+Vamos agora configurá-lo onde podemos armazenar um array de structs com mais dados que nos interessam, como: *um link para o gif e o endereço público da pessoa que o enviou.* Então, poderemos recuperar esses dados em nosso cliente!
 
-### 💎 Set up Vec<ItemStruct>
+### 💎 Configure o Vec<ItemStruct>
 
-Check out some of the updates below:
+Confira abaixo algumas das atualizações:
 
 ```rust
 use anchor_lang::prelude::*;
@@ -22,18 +22,18 @@ pub mod myepicproject {
     Ok(())
   }
 
-  // The function now accepts a gif_link param from the user. We also reference the user from the Context
+  // A função agora aceita um parâmetro gif_link do usuário. Também referenciamos o usuário do Contexto
   pub fn add_gif(ctx: Context<AddGif>, gif_link: String) -> Result <()> {
     let base_account = &mut ctx.accounts.base_account;
     let user = &mut ctx.accounts.user;
 
-	// Build the struct.
+	// Constroi o struct.
     let item = ItemStruct {
       gif_link: gif_link.to_string(),
       user_address: *user.to_account_info().key,
     };
 		
-	// Add it to the gif_list vector.
+	// Adiciona ele ao vetor gif_list.
     base_account.gif_list.push(item);
     base_account.total_gifs += 1;
     Ok(())
@@ -49,7 +49,7 @@ pub struct StartStuffOff<'info> {
   pub system_program: Program <'info, System>,
 }
 
-// Add the signer who calls the AddGif method to the struct so that we can save it
+// Adicione o signatário que chama o método AddGif ao struct para que possamos salvá-lo
 #[derive(Accounts)]
 pub struct AddGif<'info> {
   #[account(mut)]
@@ -58,7 +58,7 @@ pub struct AddGif<'info> {
   pub user: Signer<'info>,
 }
 
-// Create a custom struct for us to work with.
+// Crie uma estrutura personalizada para trabalharmos.
 #[derive(Debug, Clone, AnchorSerialize, AnchorDeserialize)]
 pub struct ItemStruct {
     pub gif_link: String,
@@ -68,14 +68,14 @@ pub struct ItemStruct {
 #[account]
 pub struct BaseAccount {
     pub total_gifs: u64,
-	// Attach a Vector of type ItemStruct to the account.
+	// Anexe um vetor do tipo ItemStruct à conta.
     pub gif_list: Vec<ItemStruct>,
 }
 ```
 
-Starting from the bottom again, you'll see `BaseAccount` now has a new param named `gif_list`.  It's of type `Vec` which is basically short for `Vector`. You can read about them [here](https://doc.rust-lang.org/std/vec/struct.Vec.html). It's basically an array! In this case, it holds an array of `ItemStruct`s.
+Começando de baixo novamente, você verá que `BaseAccount` agora tem um novo parâmetro chamado `gif_list`. É do tipo `Vec` que é basicamente a abreviação de `Vector`. Você pode ler sobre eles [aqui](https://doc.rust-lang.org/std/vec/struct.Vec.html). É basicamente uma matriz! Neste caso, ele contém um array de `ItemStruct`s.
 
-Then I have this fancy piece of code to declare my `ItemStruct`.
+Então eu tenho esse pedaço de código extravagante para declarar meu `ItemStruct`.
 
 ```rust
 #[derive(Debug, Clone, AnchorSerialize, AnchorDeserialize)]
@@ -85,28 +85,28 @@ pub struct ItemStruct {
 }
 ```
 
-It just holds a `String` w/ a `gif_link` and a `PubKey` w/ the user's `user_address`. Pretty straightforward. We also have this craziness:
+Ele apenas contém uma `String` com um `gif_link` e uma `PubKey` com o `user_address` do usuário. Bem direto. Também temos essa loucura:
 
 ```rust
 #[derive(Debug, Clone, AnchorSerialize, AnchorDeserialize)]
 ```
 
-It's a little complex, but, basically this tells Anchor how to serialize/deserialize the struct. Remember, data is being stored in an "account" right? That account is basically a file and we serialize our data into binary format before storing it. Then, when we want to retrieve it we'll actually deserialize it.
+É um pouco complexo, mas basicamente isso diz ao Anchor como serializar/desserializar a estrutura. Lembre-se, os dados estão sendo armazenados em uma "conta" certo? Essa conta é basicamente um arquivo e nós serializamos nossos dados em formato binário antes de armazená-los. Então, quando quisermos recuperá-lo, iremos realmente desserializá-lo.
 
-This line takes care of that to make sure our data is properly serialized/deserialized since we're creating a custom struct here.
+Essa linha cuida disso para garantir que nossos dados sejam serializados/desserializados corretamente, pois estamos criando uma estrutura personalizada aqui.
 
-How did I figure this stuff out? Well  — I actually just dig through the [docs](https://docs.rs/anchor-lang/0.4.0/anchor_lang/trait.AnchorSerialize.html) myself and just read the source code! I also ask questions in the [Anchor Discord](https://discord.gg/8HwmBtt2ss)! Remember, this stuff is new and it's up to you to discover answers when the docs don't provide them.
+Como eu descobri essas coisas? Bem - na verdade, eu mesmo vasculho os [docs](https://docs.rs/anchor-lang/0.4.0/anchor_lang/trait.AnchorSerialize.html) e apenas leio o código-fonte! Também faço perguntas no [Anchor Discord](https://discord.gg/8HwmBtt2ss)! Lembre-se, essas coisas são novas e cabe a você descobrir as respostas quando os documentos não as fornecem.
 
-### 🤯 Update the test script and boom!
+### 🤯 Atualize o script de teste e bum!
 
-As always, we need to return to our test script! Here are the updates:
+Como sempre, precisamos retornar ao nosso script de teste! Aqui estão as atualizações:
 
 ```javascript
 const anchor = require('@project-serum/anchor');
 const { SystemProgram } = anchor.web3;
 
 const main = async() => {
-  console.log("🚀 Starting test...")
+  console.log("🚀 Iniciando testes...")
 
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
@@ -121,12 +121,12 @@ const main = async() => {
     },
     signers: [baseAccount],
   });
-  console.log("📝 Your transaction signature", tx);
+  console.log("📝 Sua assinatura de transação", tx);
 
   let account = await program.account.baseAccount.fetch(baseAccount.publicKey);
   console.log('👀 GIF Count', account.totalGifs.toString())
 
-  // You'll need to now pass a GIF link to the function! You'll also need to pass in the user submitting the GIF!
+  // Você precisará agora passar um link do GIF para a função! Você também precisará passar o usuário que está enviando o GIF!
   await program.rpc.addGif("insert_a_giphy_link_here", {
     accounts: {
       baseAccount: baseAccount.publicKey,
@@ -134,11 +134,11 @@ const main = async() => {
     },
   });
   
-  // Call the account.
+  // Chama a conta
   account = await program.account.baseAccount.fetch(baseAccount.publicKey);
   console.log('👀 GIF Count', account.totalGifs.toString())
 
-  // Access gif_list on the account!
+  // Acessa o gif_list na conta
   console.log('👀 GIF List', account.gifList)
 }
 
@@ -155,17 +155,17 @@ const runMain = async () => {
 runMain();
 ```
 
-*Note: don't forget to pass `addGif` a GIF link where it says `insert_a_giphy_link_here` else you'll get a confusing error like: `baseAccount not provided`.*
+*Nota: não se esqueça de passar para `addGif` um link do GIF onde diz `insert_a_giphy_link_here` senão você receberá um erro confuso como: `baseAccount não fornecido`.*
 
-Nothing new here really! One of the magic moments for me was when I saw the output of `console.log('👀 GIF List', account.gifList)`. It's so cool to be able to just attach data to an account and access data via the account.
+Nada de novo aqui realmente! Um dos momentos mágicos para mim foi quando vi a saída de `console.log('👀 GIF List', account.gifList)`. É tão legal poder apenas anexar dados a uma conta e acessar dados por meio da conta.
 
-It's a really weird and new way to think about storing data, but it's pretty cool!!!
+É uma maneira muito estranha e nova de pensar em armazenar dados, mas é bem legal!!!
 
-Here's what my output looked like upon doing `anchor test`.
+Aqui está a aparência da minha saída ao fazer o `anchor test`.
 
 ```bash
-🚀 Starting test...
-📝 Your transaction signature 3CuBdZx8ocXmzXRctvKkhttWHpP9knvAZnXQ9XyNcgr1xeqs6E3Hj9RVkEWSc2iEW15xXprKzip1hQw8o5kWVgsa
+🚀 Iniciando testes...
+📝 Sua assinatura de transação 3CuBdZx8ocXmzXRctvKkhttWHpP9knvAZnXQ9XyNcgr1xeqs6E3Hj9RVkEWSc2iEW15xXprKzip1hQw8o5kWVgsa
 👀 GIF Count 0
 👀 GIF Count 1
 👀 GIF List [
@@ -178,12 +178,12 @@ Here's what my output looked like upon doing `anchor test`.
 ]
 ```
 
-We've gotten pretty far. We're now not only writing and running Solana programs, but, we've figured out how to store some complex data now as well! Yay :).
+Chegamos bem longe. Agora não estamos apenas escrevendo e executando programas Solana, mas descobrimos como armazenar alguns dados complexos agora também! Yay :).
 
-### 🚨 Progress Report
+### 🚨 Relatório de progresso
 
-*Please do this else Farza will be sad :(*
+*Faça isso senão Dani vai ficar triste :(*
 
-Post a screenshot of your terminal showing your item structs in `#progress`!
+Poste uma captura de tela do seu terminal mostrando suas estruturas de itens em `#progress`!
 
-Pretty tough to get all this working. You're doing great :).
+Muito difícil fazer tudo isso funcionar. Você está indo bem :).
