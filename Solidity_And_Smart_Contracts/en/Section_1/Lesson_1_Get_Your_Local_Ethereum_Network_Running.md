@@ -56,7 +56,7 @@ The sample project will ask you to install @nomicfoundation/hardhat-toolbox. The
 Go ahead and install these other dependencies just in case it didn't do it automatically.
 
 ```bash
-npm i --save-dev @nomicfoundation/hardhat-toolbox
+npm install --save-dev @nomicfoundation/hardhat-toolbox
 ```
 
 and
