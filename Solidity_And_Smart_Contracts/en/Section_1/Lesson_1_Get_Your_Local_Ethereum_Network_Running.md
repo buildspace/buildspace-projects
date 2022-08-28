@@ -70,7 +70,7 @@ Finally, run `npx hardhat node` and this should print out a bunch of strings tha
 `0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`
 
 These are Ethereum addresses that Hardhat generates for us to simulate real users on the blockchain. This is going to help us a ton later in the project when we want to simulate users 👋-ing at us!
-For now just press ```bash ctrl + c ``` twice.
+For now just press ``` ctrl + c ```  twice.
 
 ## 🌟 Run it
 
