@@ -5,6 +5,12 @@ If you are on Windows, remember that this all needs to be done with WSL. In case
 Press `'windows' + R` to open up the `RUN` Box. This is where you can type the command `\\wsl$\Ubuntu` and an explorer window should pop up.
 Inside these folders, go to the `home` folder and then `username` folder. This is where you will find `myepicproject`!
 
+  💡if you cannot find the `home` folder or `myepicproject`, another way is to type below command in the wsl termianal
+
+  `wslpath -w [myepicproject_path_in_wsl]`
+
+  (just replace the [myepicproject_path_in_wsl] with the path of `myepicproject` in your Unbuntu instance.) , then it will show u the corresponding path in your windows filesystem.
+
 You'll see all the magic stuff Anchor has generated for us here.
 
 **Delete** the contents of `programs/myepicproject/src/lib.rs` and  `tests/myepicproject.js`. Don't actually delete the files, just what's in them.
