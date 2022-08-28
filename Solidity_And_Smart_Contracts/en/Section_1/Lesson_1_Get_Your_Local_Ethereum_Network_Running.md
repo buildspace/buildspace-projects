@@ -32,7 +32,7 @@ Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to th
 mkdir my-wave-portal
 cd my-wave-portal
 npm init -y
-npm install --save-dev hardhat@2.9.9
+npm install --save-dev hardhat
 ```
 
 ## 👏 Get sample project going
@@ -51,19 +51,26 @@ Choose the option _**Create a basic sample project**_. Say yes to everything.
 
 <img width="571" alt="Screen Shot 2022-06-10 at 22 51 21" src="https://user-images.githubusercontent.com/5970751/173140637-8693bab8-f610-4f1b-83ed-c6abaacf91c2.png">
 
-The sample project will ask you to install hardhat-waffle and hardhat-ethers. These are other goodies we'll use later :).
+The sample project will ask you to install @nomicfoundation/hardhat-toolbox. These are other goodies we'll use later :).
 
 Go ahead and install these other dependencies just in case it didn't do it automatically.
 
 ```bash
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+npm i --save-dev @nomicfoundation/hardhat-toolbox
 ```
 
-Finally, run `npx hardhat accounts` and this should print out a bunch of strings that look like this: 
+and
+
+```bash
+npm install --save-dev "@nomicfoundation/hardhat-network-helpers@^1.0.0" "@nomicfoundation/hardhat-chai-matchers@^1.0.0" "@nomiclabs/hardhat-ethers@^2.0.0" "@nomiclabs/hardhat-etherscan@^3.0.0" "@types/chai@^4.2.0" "@types/mocha@^9.1.0" "@typechain/ethers-v5@^10.1.0" "@typechain/hardhat@^6.1.2" "chai@^4.2.0" "ethers@^5.4.7" "hardhat-gas-reporter@^1.0.8" "solidity-coverage@^0.7.21" "ts-node@>=8.0.0" "typechain@^8.1.0" "typescript@>=4.5.0"
+```
+
+Finally, run `npx hardhat node` and this should print out a bunch of strings that look like this: 
 
 `0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`
 
 These are Ethereum addresses that Hardhat generates for us to simulate real users on the blockchain. This is going to help us a ton later in the project when we want to simulate users 👋-ing at us!
+For now just press ```bash ctrl + c ``` twice.
 
 ## 🌟 Run it
 
@@ -86,7 +93,7 @@ Lets do a little clean-up.
 
 Go ahead and open the code for the project now in your favorite code editor. I like VSCode best! We want to delete all the lame starter code generated for us. We don't need any of that. We're pros ;)!
 
-Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `sample-script.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. Don't delete the actual folders!
+Go ahead and delete the file `Lock.js` under `test`.  Also, delete `deploy.js` under `scripts`. Then, delete `Lock.sol` under `contracts`. Don't delete the actual folders!
 
 ## 🚨 Before you click "Next Lesson"
 
