@@ -9,6 +9,7 @@ const sendGif = async () => {
   setInputValue('');
   console.log('Gif link:', inputValue);
   try {
+    const provider = getProvider()
     const program = await getProgram(); 
 
     await program.rpc.addGif(inputValue, {
