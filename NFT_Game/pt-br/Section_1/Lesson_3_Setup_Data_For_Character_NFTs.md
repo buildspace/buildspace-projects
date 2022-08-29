@@ -10,7 +10,7 @@ O objetivo do nosso jogo vai ser destruir um chefão, um boss. Vamos falar que o
 
 O objetivo? Jogadores precisam trabalhar juntos para atacar o boss e trazer seu HP (vida) para 0. Qual é o truque? Toda vez que um player bater no boss, o boss bate nele de volta! Se a vida da NFT for pra 0 ou menos, o jogador daquela NFT **morre** e ele não pode mais bater no boss. Jogadores **só podem ter um personagem NFT em suas carteiras.** Uma vez que o personagem NFT morre, o jogo acaba. Isso significa que muitos jogadores precisam juntar forças para atacar o boss e matá-lo.
 
-**Nota: Se você quiser que o seu jogador esteja apto a segurar múltiplos personagens em sua carteira (como no Pokemon), sinta-se livro para fazer modificações você mesmo!**
+**Nota: Se você quiser que o seu jogador esteja apto a segurar múltiplos personagens em sua carteira (como no Pokemon), sinta-se livre para fazer modificações você mesmo!**
 
 O importante a saber aqui é que os personagens são **NFTs**.
 
@@ -26,7 +26,7 @@ Então, quando um jogador for jogar o jogo:
 
 Hora da parte divertida, configurar os personagens NFTs. Cada personagem vai ter alguns atributos: uma imagem, um nome, valor de HP (vida) e valor do dano de ataque. **Esses atributos vão viver diretamente na NFT.** Nós podemos adicionar mais atributos mais tarde.
 
-O jeito que nosso personagem NFT vai funcionar é: vai haverum número X de personagens (ex: 3). **Mas, um número ilimitado X de NFTs de cada personagens podem ser mintados.** De novo, você pode mudar isso se você quiser - por exemplo se você quiser só uma pequena quantidade X de um certo personagem para ser mintado.
+O jeito que nosso personagem NFT vai funcionar é: vai haver um número X de personagens (ex: 3). **Mas, um número ilimitado X de NFTs de cada personagens podem ser mintados.** De novo, você pode mudar isso se você quiser - por exemplo se você quiser só uma pequena quantidade X de um certo personagem para ser mintado.
 
 Então isso significa que se 5 pessoas quisessem mintar o personagem #1, 5 pessoas teriam o exato mesmo personagem mas cada pessoa teria uma NFT única e **cada NFT possui seu próprio estado.** Por exemplo, se a NFT do Player #245 levar um ataque e perder vida, só a NFT do Player #245 vai perder vida!
 
@@ -88,7 +88,7 @@ contract MyEpicGame {
 }
 ```
 
-Tem muita coisa acontecendo aqui mas essencialmente estamos passando vários valores para o `constructor` para setar os personagens. Por quê? Bom - eu preciso de uma maneira de dizer ao nosso contrato "Ei - quando um jogador pedir uma NFT do Pikachu, dê a ele o HP base, o dano de ataque, a imagem e etc dessa NFT."
+Tem muita coisa acontecendo aqui, mas essencialmente estamos passando vários valores para o `constructor` para setar os personagens. Por quê? Bom - eu preciso de uma maneira de dizer ao nosso contrato "Ei - quando um jogador pedir uma NFT do Pikachu, dê a ele o HP base, o dano de ataque, a imagem e etc dessa NFT."
 
 Lembre-se, o constructor roda apenas **uma vez** quando o contrato é executado.
 
@@ -172,4 +172,4 @@ Talvez queira que seus personagens tenham coisas como "mana", "energia", ou "cha
 
 **Customize seus personagens. É isso que faz ficar divertido!** Por exemplo, eu adicionei Leonardo DiCaprio e Pikachu como personagens pois pensei que seria engraçado - e eu rio toda vez que vejo haha.
 
-Mudar coisas pequenas como personagens vai fazere você sentir que é uma coisa mais sua e você estará mais motivado a construir tudo isso no caminho :).
+Mudar coisas pequenas como personagens vai fazer você sentir ser uma coisa mais sua e você estará mais motivado a construir tudo isso no caminho :).
