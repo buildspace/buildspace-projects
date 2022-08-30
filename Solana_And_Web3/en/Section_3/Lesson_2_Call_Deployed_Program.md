@@ -283,6 +283,7 @@ This looks exactly like we had it working in the test script!
 ```javascript
 const createGifAccount = async () => {
   try {
+    const provider = getProvider();
     const program = await getProgram();
     
     console.log("ping")
