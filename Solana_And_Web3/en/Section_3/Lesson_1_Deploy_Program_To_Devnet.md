@@ -152,10 +152,6 @@ You deployed a Solana program!!! Hell yes -- this is huge!!
 
 We've seen that the best builders have made it a habit to "build in public". All this means is sharing a few learnings about the milestone they've just hit!
 
-Drop a quick update on buildspace right now by pressing "Post update" in the top right corner 🤘
-[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
-
-
-This is also a good time to tweet out that you're learning about Solana and just deployed your first program to the Solana Devnet. Inspire others to join web3!
+This is a good time to tweet out that you're learning about Solana and just deployed your first program to the Solana Devnet. Inspire others to join web3!
 
 Be sure to include your Solana Explorer link and attach a screenshot of your deployed program as well perhaps. Or, add a screenshot of it on Solana Explorer!! Tag `@_buildspace` if you're feeling fancy ;).

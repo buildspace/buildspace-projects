@@ -185,10 +185,6 @@ Ahora tu ese “alguien” que en realidad está “haciendo “eso de lo que to
 
 Hemos visto que los mejores constructores se están acostumbrando a "construir en público". ¡Esto significa compartir los aprendizajes sobre el logro que acabas de alcanzar!
 
-Por favor coloca esta actualización rápida en buildspace ahora mismo presionando (Post update) "Publicar actualización" en la esquina superior derecha de esta página. 
-
-[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
-
 Cada vez estás más cerca de dominar las artes del web3.
 
 ¡Sigue así!

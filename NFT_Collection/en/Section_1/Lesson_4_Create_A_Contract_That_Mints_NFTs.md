@@ -392,10 +392,6 @@ WOOOOOOO. GIVE YOURSELF A PAT ON THE BACK. YOU DEPLOYED A SMART CONTRACT THAT MI
 
 Quick note here: We've seen that the best builders have made it a habit to **"build in public"**. All this means is sharing a few learnings about the milestone they've just hit!
 
-Drop a quick update on buildspace right now by pressing "Post update" in the top right corner 🤘
-[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
-
-
 You should totally **tweet** out that you just wrote and deployed your smart contract that can mint NFTs and tag @_buildspace. If you want, include a screenshot of the OpenSea/Rarible page that shows that your NFT :)!
 
 You should feel awesome about the fact that you're actually building stuff everyone else is just talking about.  You got superpowers :).

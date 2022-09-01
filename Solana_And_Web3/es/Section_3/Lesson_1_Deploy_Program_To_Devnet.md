@@ -147,9 +147,6 @@ Desplegaste un programa Solana!!! Caramba, sí, ¡esto es enorme!
 
 Hemos visto que los mejores constructores se han acostumbrado a "construir en público". ¡Todo esto significa compartir algunos aprendizajes sobre el logro que acaban de alcanzar!
 
-Deja una actualización rápida en buildspace en este momento presionando "Publicar actualización" (Post Update) en la esquina superior derecha 🤘
-[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
-
 Este también es un buen momento para tuitear que estás aprendiendo sobre Solana y que acabas de implementar un programa en Solana Devnet. ¡Inspira a otros a unirse a web3!
 
 Asegúrate de incluir el enlace de Solana Explorer y adjunta una captura de pantalla del programa implementado. ¡Agrega una captura de pantalla de Solana Explorer! Etiqueta `@_buildspace` ;).
