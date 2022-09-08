@@ -45,7 +45,13 @@ Choose the option to “Create a basic sample project”. Say yes to everything.
 
 The sample project will ask you to install `hardhat-waffle` and `hardhat-ethers`. These are other goodies we'll use later :).
 
-Go ahead and install these other dependencies just in case it didn't do it automatically.
+Make sure you also execute this command if at all it prompts you to: 
+
+npm install --save-dev "hardhat@^2.11.1" "@nomicfoundation/hardhat-toolbox@^1.0.1"
+
+Note: The versions might differ depending on the date & time you are doing this. Refer what your command prompt says. Otherwise, hardhat might not work properly ahead! 
+
+Now,go ahead and install these other dependencies just in case it didn't do it automatically.
 
 ```bash
 npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
