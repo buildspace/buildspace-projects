@@ -1,52 +1,58 @@
-## 🪟 Setting up Solana on a Windows machine
-**First off - I want to give a HUGE shoutout to our TA, Raza! Without Raza, this guide wouldn't have been doable. Once you finish this section make sure to give some love to Raza in Discord (TooManyBags#3359)**
+## 🪟 Configuración de Solana en una máquina con Windows
 
-This resource will take you through the flow of setting up the Solana environment on your local, Windows machine. The big gotchya here is **Windows isn't really supported by Anchor at the moment.** This means we need to use a platform that *is* supported.
-Windows allows for you to boot up a Linux environment for scenarios just like this! There will be a few extra steps to get this all sorted before we actually get started with setting up all the Solana dependencies. 
+** En primer lugar, ¡quiero agradecer ENORMEMENTE a nuestro Asistente Técnico, Raza! Sin Raza, esta guía no hubiera sido posible. Una vez que termines esta sección, asegúrate de darle amor a Raza en Discord (TooManyBags#3359)**
 
-### 👩‍💻 Setup WSL
-Like I said above, we are technically not going to use Windows for this project, but instead Linux! Windows introduced this cool thing call [**Windows Subsystem for Linux**](httphttps://docs.microsoft.com/en-us/windows/wsl/). If you are really curious how this will all works, go do a little research and report back to the others in your cohort!
+Este documento te guiará a través del proceso de configuración del entorno de Solana en tu máquina Windows local. El gran problema aquí es **Windows no es realmente compatible con Anchor en este momento.** Esto significa que necesitamos usar una plataforma que *es* compatible.
 
-To get started with WSL, we are going to need to install it. Go ahead and open up `cmd.exe` in Admin mode to start and then you are going to run this command:
+¡Windows te permite iniciar un entorno Linux para escenarios como este! Habrá algunos pasos adicionales para solucionar todo esto antes de comenzar a configurar todas las dependencias de Solana.
+
+### 👩‍💻 Configurar WSL
+
+Como dije anteriormente, técnicamente no vamos a usar Windows para este proyecto, ¡sino Linux! Windows cuanto con esto genial llamado [**Subsistema de Windows para Linux**](http://docs.microsoft.com/en-us/windows/wsl/). Si tienes mucha curiosidad sobre cómo funcionará todo esto, investiga un poco e informa a los demás en su cohorte.
+
+Para comenzar con WSL, necesitaremos instalarlo. Continúe y abra `cmd.exe` en modo Administrador para comenzar y luego ejecutará este comando:
 
 ```bash
 wsl --install
 ```
 
-This command will enable the required optional components, download the latest Linux kernel, set WSL 2 as your default, and install a Linux distribution for you (Ubuntu by default, see below to change this).
+Este comando habilitará los componentes opcionales requeridos, descargará el kernel de Linux más reciente, establecerá WSL 2 como predeterminado e instalará una distribución de Linux (Ubuntu de manera predeterminada, a continuación, vamos a cambiar esto).
 
-If you are interested in doing a bit more custom setup, feel free to checkout [this installation guide](https://docs.microsoft.com/en-us/windows/wsl/install).
+Si te interesa hacer una configuración un poco más personalizada, no dudes en consultar [esta guía de instalación] (https://docs.microsoft.com/en-us/windows/wsl/install).
 
-Once this installation is done you **NEED** to restart your computer. Things will definitely not work if you install WSL and don't restart your machine. Take a second to do that and we will meet here in the next section!
+Una vez finalizada esta instalación, **NECESITAS** reiniciar su computadora. Las cosas definitivamente no funcionarán si instala WSL y no reinicia su máquina. ¡Tómate un segundo para hacer eso y nos encontraremos aquí cuando lo hayas hecho!
 
-### 📀 Installing Node.js
-Nice! You now have a Linux subsystem available on your machine. It's actually pretty cool to see how this all works. The one thing you need to realize is this environment is abstracted from your Windows environemnt. So, everything on your Windows machine is not accessible on your Ubuntu instance. This means we don't have Node.js installed which something we will need to setup the rest of our Solana environment!
+### 📀 Instalación de Node.js
 
-Start by going to your search menu and typing in `Ubuntu`. You should see a shell Ubuntu shell option pop up - go ahead and click that. Now, some of you may run into an error where you open your terminal and then there says there is an error and it closes the terminal! Make sure you go through these two steps to fix that:
+¡Genial! Ahora tienes un subsistema Linux disponible en la máquina. En realidad, es genial ver cómo funciona todo esto. Lo único que debes tener en cuenta es que este entorno se abstrae del entorno de Windows. Por lo tanto, no se puede acceder a todo en tu máquina con Windows en la instancia de Ubuntu. ¡Esto significa que no tenemos Node.js instalado, algo que necesitaremos para configurar el resto de nuestro entorno Solana!
 
-**- Verify Linux Subsystem Feature is enabled**
+Comencemos yendo al menú de búsqueda y escribiendo `Ubuntu`. Deberás ver una ventana emergente con la opción de shell de Ubuntu: siga adelante y has clic. ¡Ahora, algunos de ustedes pueden encontrarse con un error donde abren su terminal y luego dice que hay un error y cierra la terminal! Asegúrate de seguir estos dos pasos para solucionarlo:
 
-For this, we want to make sure your machine is actually enabled to use WSL. In your search bar go aheaad and type in "Windows Features". You should see an option that says something along the lines of enabling and disabling Windows features. Go ahead and choose that. You will now need to make sure that the following options are checked:
+**- Verificar que las características del subsistema Linux estén habilitadas**
 
-- Windows Subsystem for Linux
-- Windows Subsystem for Linux
-- Virtual Machine Platform
+Para esto, queremos asegurarnos de que la máquina esté realmente habilitada para usar WSL. En la barra de búsqueda, escribe "Características de Windows". Deberás ver una opción que dice algo como habilitar y deshabilitar las funciones de Windows. Adelante, elige eso. Ahora asegúrate de que las siguientes opciones estén marcadas:
 
-After you have this all ready to go, restart your machine once again and see if you can open Ubuntu terminal! If you are still running into problems with it, this may mean your CPU does not have Virtualization enabled.
+- Subsistema de Windows para Linux
+- Subsistema de Windows para Linux
+- Plataforma de máquina virtual
+- 
+Una vez que tengas todo esto listo, reinicia la máquina de nuevo y ve si puedes abrir la terminal de Ubuntu. Si todavía tienes problemas, esto puede significar que tu CPU no tiene habilitada la virtualización.
 
-**- Turn on Virtualization.**
+**- Activar la virtualización.**
 
-This sounds more intense than it truly is. Essentially some people may not have a feature on their CPU turned on. We are going to make sure it's turned on. 
-For this you will need to enter the BIOS of your machine. Not all computers can enter their BIOS in the same way. I would recommend looking up how to get access to your BIOS. This will require you to restart your computer so make sure to pull this open on another machine or your phone!
+Esto suena más intenso de lo que realmente es. Esencialmente, algunas personas pueden no tener activada una función en su CPU. Vamos a asegurarnos de que esté encendido.
 
-As your computer restarts hit the "DEL" and "F2" key. One of these keys is usually the way to enter your computer's BIOS. At this point you will want to continue to the "Advanced Options" section. Again, this may be named differently, but it should be something similar to more options. 
-From here you will want to head to a CPU section or Virtualization section and make sure it says "Enabled".
+Para ello, deberás ingresar al BIOS de la máquina. No todas las computadoras pueden ingresar al BIOS de la misma manera. Recomendaría buscar cómo obtener acceso a su BIOS. Esto requerirá que reinicie su computadora, ¡así que asegúrate de abrirlo en otra máquina o en su teléfono!
 
-These two steps should get you on your way now! If they don't make sure to reach out in your section chat on Discord with whatever error you are running into.
+A medida que la computadora se reinicia, presiona la tecla "DEL" y "F2". Una de estas teclas suele ser la forma de ingresar al BIOS de la computadora. En este punto, ir a la sección "Opciones avanzadas". Nuevamente, esto puede tener un nombre diferente, pero debería ser algo similar a más opciones.
 
-Now that we have Ubuntu Terminal ready to go - we can start installing Node.js 😎. We are actually going to be using something called [nvm](https://github.com/nvm-sh/nvm). It will make it insanely easy to install and change versions of Node!
+Desde aquí, dirígete a una sección de CPU o una sección de Virtualización y asegúrate de que dice "Habilitado".
 
-Feel free to just follow [this guide](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl) on how to get this setup on WSL, but essentially your flow is going to look like this:
+¡Estos dos pasos te pondrán en camino ahora! Si no funciona puedes comunicarte en el chat en Discord con cualquier error que tengas.
+
+Ahora que tenemos Ubuntu Terminal listo para usar, podemos comenzar a instalar Node.js 😎. De hecho, vamos a usar algo llamado [nvm](https://github.com/nvm-sh/nvm). ¡Hará que sea increíblemente fácil instalar y cambiar versiones de Node!
+
+Sigue [esta guía] (https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-wsl) sobre cómo obtener esta configuración en WSL, pero esencialmente el flujo se verá así:
 
 ```
 // Install Curl
@@ -64,64 +70,63 @@ command -v nvm
 nvm install --lts
 ```
 
-It's thats easy! One you have this all setup, you are ready to get back on track with the rest of your setup! Just remember - all of your terminal commands **NEED** to be ran in this Ubuntu Terminal from now on.
+¡Es así de fácil! Una vez que tengas todo esto configurado, ¡estarás listo para volver a encarrilarte con el resto de su configuración! Recuerda: todos los comandos de tu terminal **NECESITAN** ejecutarse en esta Terminal de Ubuntu a partir de ahora.
 
-### 🦀 Install Rust
+### 🦀 Instalar Rust
 
-In Solana, programs are written in Rust! If you don't know Rust don't worry. As long as you know some other language — you'll pick it up over the course of this project.
+¡En Solana, los programas están escritos en Rust! Si no conoces Rust no te preocupes. Siempre que sepa algún otro lenguaje, lo aprenderás en el transcurso de este proyecto.
 
-To install Rust just use this command -
+Para instalar Rust solo usa este comando:
 
 ```bash
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 ```
 
-Once you're done, verify by doing:
+Una vez que hayas terminado, verifica:
 
 ```bash
 rustup --version
 ```
 
-Then, make sure the rust compiler is installed:
+Luego, el compilador de Rust debe estar instalado:
 
 ```bash
 rustc --version
 ```
 
-Last, let's make sure Cargo is working as well. Cargo is the rust package manager.
+Por último, asegurémonos de que Cargo también funcione. Cargo es el administrador de paquetes de Rust.
 
 ```bash
 cargo --version
 ```
 
-As long as all those commands output a version and didn't error, you're good to go!
+Siempre y cuando todos estos comandos generen una versión y no tengan errores, ¡ya está listo!
 
-### 🔥 Install Solana
+### 🔥 Instalar Solana
 
-Solana has a super nice CLI that's going to be helpful later when we want to test the programs we write.
+Solana tiene una CLI súper agradable que será útil más adelante cuando queramos probar los programas que escribimos.
+De nuevo, los pasos de instalación son bastante sencillos [aquí](https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool). Hay pasos claros para instalar la CLI de Solana para Linux.
 
-Again, the installation steps are pretty straight forward [here](https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool). There are clear steps for getting the Solana CLI installed for Linux.
+**No** te preocupe por actualizar a la última versión de Solana.
 
-**Don't** worry about upgrading to the latest version of Solana.
+*Nota: Dependiendo del sistema, una vez que instales Solana, se puede generar un mensaje como "Actualice su variable de entorno PATH" y te dará una línea para copiar y ejecutar. Copie y ejecuta este comando para que la RUTA se configure correctamente.*
 
-*Note: Depending on your system — once you install Solana, it may output a message like "Please update your PATH environment variable" and it'd give you a line to copy and run. Go ahead and copy + run that command so your PATH gets setup properly.*
-
-Once you're done installing, run this to make sure stuff is working: 
+Una vez que hayas terminado de instalar, ejecuta esto para asegurarte de que todo funcione:
 
 ```bash
 solana --version
 ```
 
-If that output a version number, you're good to go!
+Si al hacer esto se genera un número de versión, ¡está listo!
 
-Next thing you'll want to do is run these two commands separately:
+Lo siguiente es ejecutar estos dos comandos por separado:
 
 ```bash
 solana config set --url localhost
 solana config get
 ```
 
-This will output something like
+Esto generará algo así:
 
 ```bash
 Config File: /Users/flynn/.config/solana/cli/config.yml
@@ -131,128 +136,125 @@ Keypair Path: /Users/flynn/.config/solana/id.json
 Commitment: confirmed
 ```
 
-This means that Solana is set up to talk to our local network! When developing programs, we're going to be working w/ our local Solana network so we can quickly test stuff on our computer.
+¡Esto significa que Solana está configurado para comunicarse con nuestra red local! Al desarrollar programas, trabajaremos con nuestra red Solana local para que podamos probar cosas rápidamente en nuestra computadora.
 
-The last thing to test is we want to make sure we can get a **local Solana node running**. Basically, remember how we said that the Solana chain is run by "validators"? Well — we can actually set up a validator on our computer to test our programs with.
+Lo último que debemos probar es que queremos asegurarnos de que podemos ejecutar un **nodo local de Solana**. Básicamente, ¿recuerdas que dijimos que la cadena Solana está dirigida por "validadores"? Bueno, en realidad podemos configurar un validador en nuestra computadora para probar nuestros programas.
 
 ```bash
 solana-test-validator
 ```
 
-This may take a bit to get started but once it's going you should see something like this:
+Esto puede tomar un poco de tiempo para ejecutarse, pero una vez que esté funcionando, deberías ver algo como esto:
 
 ![Untitled](https://i.imgur.com/F2YwcAB.png)
 
-Boom!! You're now running a local validator. Pretty cool :).
+¡¡Excelente!! Ahora estás ejecutando un validador local. Muy genial :).
 
-Now, go ahead and CONTROL + C to stop the validator. **We're never going to actually use `solana-test-validator` manually ourselves again.** The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;). 
+Ahora, vamos adelante y da clic a CONTROL + C para detener el validador. **Nunca volveremos a usar `solana-test-validator` manualmente.** El flujo de trabajo que vamos a seguir ejecutará automáticamente el validador en segundo plano para nosotros. Solo quería mostrarte cómo funciona para que puedas comenzar a tener una idea de cómo funcionan las cosas mágicamente a medida que avanzamos;).
 
-### ☕️ Install Mocha
+### ☕️ Instalar Mocha
 
-Mocha is a nice little testing framework to help us test our Solana programs.
+Mocha es un marco de prueba pequeño y agradable para ayudarnos a probar nuestros programas Solana.
 
 ```bash
 npm install -g mocha
 ```
 
-That's it! We are going to be using this later on :).
+¡Eso es todo! Vamos a usar esto más adelante :).
 
-### ⚓️ The magic of Anchor
+### ⚓️ La magia de Anchor
 
-We're going to be using this tool called "Anchor" a lot. If you know about Hardhat from the world of Ethereum, it's sorta like that! Except — it's built for Solana. **Basically, it makes it really easy for us to run Solana programs locally and deploy them to the actual Solana chain when we're ready!**
+Vamos a usar mucho esta herramienta llamada "Anchor". Si conoces Hardhat del mundo de Ethereum, ¡es algo parecido! Excepto que está hecho para Solana. **Básicamente, hace que sea muy fácil para nosotros ejecutar los programas de Solana localmente e implementarlos en la cadena de Solana real cuando estemos listos.**
 
-Anchor is a *really early projec*t run by a few core devs. You're bound to run into a few issues. Be sure to join the [Anchor Discord](https://discord.gg/8HwmBtt2ss) and feel free to ask questions or [create an issue](https://github.com/project-serum/anchor/issues) on their Github as you run into issues. The devs are awesome. Maybe even say you're from buildspace in #general on their Discord :).
+Anchor es un proyecto *muy reciente* dirigido por unos pocos desarrolladores principales. Es probable que te encuentres con algunos problemas. Asegúrate de unirse a [Anchor Discord](https://discord.gg/8HwmBtt2ss) y no dudes en hacer preguntas o [crear un tema](https://github.com/project-serum/anchor/issues) en su Github a medida que te encuentres con algún problema. Los desarrolladores son impresionantes. Tal vez incluso digas que eres de buildspace en #general en su Discord :).
 
-**BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search the their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you lol.**
+**Por cierto, no te unas a su Discord y hagas preguntas aleatorias esperando que la gente te ayude. Buscar primero en su Discord para ver si alguien más ha tenido la misma pregunta. Proporciona tantos detalles e información sobre tus preguntas como sea posible. Haz que la gente quiera ayudarte jajaja.**
 
-*Seriously — join that Discord, the devs are really helpful.*
+*En serio: únete a Discord, los desarrolladores son realmente útiles.*
 
-To install Anchor, go ahead an run:
+Para instalar Anchor, ejecuta:
 
 ```bash
 npm install --global yarn
 ```
 
-This is going to help us later down the line :)
+Esto nos ayudará más adelante :)
 
-From here run:
+Ahora ejecuta:
 
 ```bash
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev libssl-dev
 cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
 ```
 
-That's it! At this point you can run this last command to make sure Anchor is ready to rock 🤘:
+¡Eso es todo! En este punto, puedes ejecutar este último comando para asegurarte de que Anchor esté listo para rockear 🤘:
 
 ```bash
 anchor --version
 ```
 
-If you got that working, nice, you have Anchor!!
+Si lo hiciste funcionar, genial, ¡Ya tienes Anchor!
 
+### 🏃‍♂️ Crea un proyecto de prueba y ejecútalo
 
-### 🏃‍♂️ Create a test project and run it
+Bien, *casi terminamos* jaja. Lo último que debemos hacer para finalizar la instalación es ejecutar un programa Solana localmente y asegurarnos de que realmente funcione.
 
-Okay, we're *nearly done* haha. The last thing we need to do to finalize installation is to actually run a Solana program locally and make sure it actually works.
-
-Let's start a boilerplate Solana project named `myepicproject`.
+Comencemos un proyecto estándar de Solana llamado `myepicproject`.
 
 ```
 anchor init myepicproject --javascript
 cd myepicproject
 ```
 
-`anchor init` will create a bunch of files/folders for us. It's sorta like `create-react-app` in a way. We'll check out all the stuff it's created in moment.
+`anchor init` creará un montón de archivos/carpetas para nosotros. Es algo así como `create-react-app` en cierto modo. Vamos todo lo que se ha creado en este momento.
 
+### 🔑 Crea un par de llaves local
 
-### 🔑 Create a local keypair
-
-Next thing we need to do is actually generate a local Solana wallet to work with. Don't worry about create a passphrase for now, just tap "Enter" when it asks.
+Lo siguiente que debemos hacer es generar una cartera Solana local para trabajar. No se preocupe por crear una frase de contraseña por ahora, solo da clic a "Entrar" cuando se te pregunte.
 
 ```bash
 solana-keygen new
 ```
 
-What this will do is create a local Solana keypair — which is sorta like our local wallet we'll use to talk to our programs via the command line. If you run `solana config get` you'll see something called `Keypair Path`. That's where the wallet has been created, feel free to check it out :).
+Lo que esto hará es crear un par de claves Solana locales, que es algo así como una cartera local que usaremos para comunicarnos con nuestros programas a través de la línea de comandos. Si ejecutas `solana config get` verás algo llamado `Keypair Path`. Ahí es donde se ha creado la cartera, no dudes en echarle un vistazo :).
 
-If you run:
+Si ejecutas:
 
 ```bash
 solana address
 ```
 
- You'll see the public address of your local wallet we just created.
+Verás la dirección pública de tu cartera local que acabamos de crear.
 
-### 🥳 Let's run our program
+###  🥳 Vamos a ejecutar nuestro programa
 
-When we did `anchor init` it create a basic Solana program for us. What we want to do now is:
+Cuando hicimos `anchor init`, creó un programa Solana básico para nosotros. Lo que queremos hacer ahora es:
 
-1. Compile our program.
-2. Spin up `solana-test-validator` and deploy the program to our **local** Solana network w/ our wallet. This is kinda like deploying our local server w/ new code.
-3. Actually call functions on our deployed program. This is kinda like hitting a specific route on our server to test that it's working.
+1. Compilar nuestro programa.
+2. Inicia `solana-test-validator` e implementa el programa en nuestra red Solana **local** con nuestra cartera. Esto es como implementar nuestro servidor local con código nuevo.
+3. Realizar llamadas a funciones en nuestro programa desplegado. Esto es como acceder a una ruta específica en nuestro servidor para probar que funciona.
 
-Anchor is awesome. It lets us do this all in one step by running:
+Anchor es increíble. Nos permite hacer todo esto en un solo paso ejecutando:
 
-*Note: Be sure you **don't** have `solana-test-validator` running anywhere else it'll conflict w/ Anchor. This took me a while to figure out lol.*
+*Nota: asegúrate de **no** tener `solana-test-validator` ejecutándose en ningún otro lugar, ya que entrará en conflicto con Anchor. Me tomó un tiempo darme cuenta jajaja.*
 
 ```bash
 anchor test
 ```
 
-This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
+¡Esto puede tardar un poco la primera vez que lo ejecutes! ¡Mientras obtengas las palabras verdes en la parte inferior que dicen "1 passing", estás listo para comenzar! Infórmanos en Discord si tienes algún problema aquí.
 
 ![Untitled](https://i.imgur.com/V35KchA.png)
 
-**Note: If you receive the message `node: --dns-result-order= is not allowed in NODE_OPTIONS` this mean you are on an older version of Node and technically, this didn't pass! Since I tested this all with Node v16.13.0 I would highly suggest you just upgrade to this version.**
+**Nota: si recibes el mensaje `node: --dns-result-order= is not allow in NODE_OPTIONS`, significa que tienes una versión anterior de Node y, técnicamente, ¡esto no pasó! Dado que probé todo esto con Node v16.13.0, te sugiero que actualices a esta versión.**
 
-**Congrats you've successfully set up your Solana environment :).** It's been quite the journey, but, we made it fam.
+**Felicitaciones, has configurado con éxito tu entorno Solana :).** Ha sido todo un viaje, pero lo logramos familia.
 
-### 🚨 Progress Report
+### 🚨 Reporte de avances
 
-*Please do this else Farza will be sad :(*
+*Por favor haz esto sino Farza se pondrá triste :(*
 
-That was all pretty tough!!! Definitely one of the more difficult installations.
+¡¡¡Todo eso fue bastante duro!!! Definitivamente una de las instalaciones más difíciles.
 
-Post a screenshot of your test working in `#progress` so people know you made it :).
-
-Now go ahead and get back to your [buildspace Dashboard](https://app.buildspace.so/courses/CObd6d35ce-3394-4bd8-977e-cbee82ae07a3) to continue on!
+Publica una captura de pantalla de esto trabajando en `#progress` para que la gente sepa que lo lograste :).
+¡Ahora vamos al [panel de buildspace] (https://app.buildspace.so/courses/CObd6d35ce-3394-4bd8-977e-cbee82ae07a3) para continuar!
