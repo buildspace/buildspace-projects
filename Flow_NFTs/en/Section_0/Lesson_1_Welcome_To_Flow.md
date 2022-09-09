@@ -36,19 +36,6 @@ This project is broken up into 4 sections. You can see what section you're on by
 ### 🤘 See an issue? Want to improve something? Fix it yourself ;)
 [All this content is completely open-source.](https://github.com/buildspace/buildspace-projects) If you see an issue, typo, etc — you can fix it yourself easily and make a PR! At the very least, drop a ⭐ on the repo if you're feeling fancy! Let's get you some open-source rep!!!
 
-### 👀 Curious about working in web3?
-People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.
-
-There is so much work to do and most of the work doesn't even have to do with smart contracts lol. Being an engineer in web3 just means you take your web2 skills and apply them to web3.
-
-Web3 also desperately needs designers, product managers, marketers, and more.
-
-We're partnered with a bunch of awesome web3 companies that want to hire people from the buildspace network.
-
-We got companies like OpenSea, Edge and Node, and Chainlink as partners. Even if you're just curious, click "Work" in the header and check out the opportunities!!
-
-Worst case scenario, you get to talk to some really cool people in web3.
-
 ### 🚨 Progress Report
 Hey! Go ahead and say gm in #gm-only on Discord. This is very important. Extremely important. If you don't do this then all of humanity will collectively jump and disrupt the Earth's orbit causing it to collide with Venus.
 
