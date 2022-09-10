@@ -180,6 +180,11 @@ const [currentAccount, setCurrentAccount] = useState("");
    */
   const [allWaves, setAllWaves] = useState([]);
   const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  
+     /**
+   * Create a variable here that references the abi content!
+   */
+  const contractABI = abi.abi;
 
   /*
    * Create a method that gets all waves from your contract
