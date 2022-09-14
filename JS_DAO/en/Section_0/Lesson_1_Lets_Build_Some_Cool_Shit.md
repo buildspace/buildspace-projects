@@ -1,10 +1,10 @@
 ### 👋 Welcome
 
-You've made it — hell yeah! Welcome :). My name is [Farza](https://twitter.com/FarzaTV) and I’m just the guy who will be chatting with yah here. BTW -- massive shoutout to [Nacho lacovino](https://twitter.com/nachoiacovino) and [Jonas](https://twitter.com/jnsdls) for helping us write these docs. 
+You've made it — hell yeah! Welcome :). My name is [Farza](https://twitter.com/FarzaTV) and I’m just the guy who will be chatting with yah here. BTW -- massive shoutout to [Nacho lacovino](https://twitter.com/nachoiacovino) and [Jonas](https://twitter.com/jnsdls) for helping us write these docs.
 
-This project is for devs that want to better understand what the heck a DAO is by just building one themselves. 
+This project is for devs that want to better understand what the heck a DAO is by just building one themselves.
 
-All you really need to know going into this is **some terminal skills, some JavaScript, and some React.js**. You'll pick up the rest along the way. No Solidity needed. We'll be using this fancy tool called [thirdweb](https://thirdweb.com/?utm_source=buildspace) which lets us work with smart contracts using just JavaScript. 
+All you really need to know going into this is **some terminal skills, some JavaScript, and some React.js**. You'll pick up the rest along the way. No Solidity needed. We'll be using this fancy tool called [thirdweb](https://thirdweb.com/?utm_source=buildspace) which lets us work with smart contracts using just JavaScript.
 
 Few action items for you before moving on:
 
@@ -13,14 +13,15 @@ Few action items for you before moving on:
 3. **Be sure to attend the live kick-off**. If you miss it, no worries. It's not required to attend!
 
 ### 🤔 What are we building?
+
 Check out a quick video I made covering the project here:
 [Loom](https://www.loom.com/share/e9b6c6fe11fa41f3bf3bdf6ee0683335)
 
 ### 💎 Earning an NFT
 
-When you reach the end of this project, you'll earn an NFT. 
+When you reach the end of this project, you'll be able to earn an NFT.
 
-You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+**You'll only be eligible for the NFT if you finish it within 60 days of signing up, if not, you'll not be able to obtain an NFT!** So make sure you schedule time to finish, you got this!
 
 **Once you finish the project, you'll get the NFT airdropped within 7 days**
 
@@ -28,7 +29,7 @@ Here's what it looks like:
 
 [Loom](https://www.loom.com/share/b315bcdd07cf4e78b9b29806ef931ad2)
 
-**Note: Each cohort is named after a star (ex. [Alkes](https://www.star-facts.com/alkes/), [Beid](https://www.universeguide.com/star/19587/beid), etc)! Also, the # on the back will be the # minted which depends on when you finish! Each NFT is unique.** 
+**Note: Each cohort is named after a star (ex. [Alkes](https://www.star-facts.com/alkes/), [Beid](https://www.universeguide.com/star/19587/beid), etc)! Also, the # on the back will be the # minted which depends on when you finish! Each NFT is unique. If you did not receive your NFT after 7 days, please reach out to either Raza or Alec on Discord!**
 
 ### 🤚 How to get help
 
@@ -50,10 +51,10 @@ Let's get you some open-source rep!!!
 
 ### 🚨 Progress Report
 
-*Please do this else Farza will be sad :(*
+_Please do this else Farza will be sad :(_
 
 Hey! Go ahead and say gm in `#gm-only` on Discord. This is very important. Extremely important.
 
 If you don't do this then all of humanity will collectively jump and disrupt the Earth's orbit causing it to collide with Venus.
 
-**BTW -- if you want to make a tweet telling the world that you're building your own DAO today and tag [@_buildspace](https://twitter.com/_buildspace)! I always say this, but 1) that tweet could inspire someone else to join web3 and 2) it supports us!**
+**BTW -- if you want to make a tweet telling the world that you're building your own DAO today and tag [@\_buildspace](https://twitter.com/_buildspace)! I always say this, but 1) that tweet could inspire someone else to join web3 and 2) it supports us!**

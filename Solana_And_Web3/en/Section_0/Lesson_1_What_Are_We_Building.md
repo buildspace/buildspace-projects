@@ -22,7 +22,7 @@ So what will we be building here :)? Here's a little video:
 
 When you reach the end of this project, you'll be able to earn an NFT.
 
-You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+**You'll only be eligible for the NFT if you finish it within 60 days of signing up, if not, you'll not be able to obtain an NFT!** So make sure you schedule time to finish, you got this!
 
 **Once you finish the project, you'll get the NFT airdropped within 7 days**
 
@@ -30,7 +30,7 @@ Here's what it looks like:
 
 [Loom](https://www.loom.com/share/34fdda64cee643c7ba3e0e936e8a7c73)
 
-**Note: Each cohort is named after a star (ex. [Alkes](https://www.star-facts.com/alkes/), [Beid](https://www.universeguide.com/star/19587/beid), etc)! Also, the # at the bottom will be the # minted which depends on when you finish! Each NFT is unique.** 
+**Note: Each cohort is named after a star (ex. [Alkes](https://www.star-facts.com/alkes/), [Beid](https://www.universeguide.com/star/19587/beid), etc)! Also, the # at the bottom will be the # minted which depends on when you finish! Each NFT is unique. If you did not receive your NFT after 7 days, please reach out to either Raza or Alec on Discord!**
 
 ### 🤚 How to get help
 
@@ -48,7 +48,7 @@ Let's get you some open-source rep!!!
 
 ### 🚨 Progress Report
 
-*Please do this else Farza will be sad :(*
+_Please do this else Farza will be sad :(_
 
 Hey! This project is all about GIFs, go ahead and post a GIF you like in `#progress` in the Discord. I like [Giphy](https://giphy.com) for all my GIF needs :).
-**
+\*\*

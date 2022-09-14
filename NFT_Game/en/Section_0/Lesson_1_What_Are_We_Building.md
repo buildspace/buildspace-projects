@@ -18,7 +18,7 @@ So what will we be building here :)? Here's a little video:
 
 When you reach the end of this project, you'll be able to earn an NFT.
 
-You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+**You'll only be eligible for the NFT if you finish it within 60 days of signing up, if not, you'll not be able to obtain an NFT!** So make sure you schedule time to finish, you got this!
 
 **Once you finish the project, you'll get the NFT airdropped within 7 days**
 
@@ -26,7 +26,7 @@ Here's what it looks like:
 
 ![](https://media3.giphy.com/media/kaoTShRCKgtjUIuJge/giphy.gif?cid=790b7611a115c871842a5b77747ba0a4c1d58b884baa5e64&rid=giphy.gif&ct=g)
 
-**Note: Each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you finish!**
+**Note: Each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you finish! If you did not receive your NFT after 7 days, please reach out to either Raza or Alec on Discord!**
 
 ### 🤚 How to get help
 

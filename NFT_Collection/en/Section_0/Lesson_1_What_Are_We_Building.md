@@ -22,7 +22,7 @@ With this project, you're going to learn about crypto tech by actually writing c
 
 When you reach the end of this project, you'll be able to earn an NFT.
 
-You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+**You'll only be eligible for the NFT if you finish it within 60 days of signing up, if not, you'll not be able to obtain an NFT!** So make sure you schedule time to finish, you got this!
 
 **Once you finish the project, you'll get the NFT airdropped within 7 days**
 
@@ -30,8 +30,7 @@ Here's what it looks like:
 
 ![Untitled](https://i.imgur.com/4PliKDj.png)
 
-Note: instead of "Alkes", your NFT would say the name of your cohort — each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT.
-
+**Note: instead of "Alkes", your NFT would say the name of your cohort — each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT. If you did not receive your NFT after 7 days, please reach out to either Raza or Alec on Discord!**
 
 ## 🛠 What we're building
 
@@ -49,8 +48,7 @@ You'll be able to customize the NFT itself as much as you want at the end and do
 
 But, the NFTs I'll be going over in these guides are NFTs that are basically a square box with a randomly generated three-word combination at the center. Why? Because I think it's funny lol. Some of these three-word combos are really fkin funny.
 
-Coolest part? Everything will be happening *on-chain*. This means all the NFT data will live on the blockchain itself. If that doesn't make sense, don't worry just yet — it will :)!
-
+Coolest part? Everything will be happening _on-chain_. This means all the NFT data will live on the blockchain itself. If that doesn't make sense, don't worry just yet — it will :)!
 
 ## 🤚 How to get help
 
@@ -58,14 +56,13 @@ When you have a question, hit up the proper channel for the project.
 
 This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page. So, for example, if you're stuck on some part of Section 3, you'd hit up `#section-3-help` in the Discord.
 
-
 ## 📺 Where does the Live Kick-Off Happen?
 
 They will be happening on [Twitch](https://www.twitch.tv/buildspace). Be sure to make an account on Twitch ahead of time so you'll be able to chat during the stream!
 
 ## 🤘 See an issue? Want to improve something? Fix it yourself ;)
 
-**[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec` in the Discord :). 
+**[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec` in the Discord :).
 
 Let's get you some open-source rep!!
 
