@@ -101,7 +101,7 @@ To make this harder, I create a variable `seed` that will essentially change eve
 
 That's it! Then I just write a simple if statement to see if the seed is less than or equal to 50, if it is -- then the waver wins the prize! So, that means the waver has a 50% chance to win since we wrote `seed < 50`. You can change this to whatever you want :). I just made it 50% because it's easier to test that way!!
 
-It's important to see here that an attack could technically game your system here if they really wanted to. It'd just be really hard. There are other ways to generate random numbers on the blockchain but Solidity doesn't natively give us anything reliable because it can't! All the #s our contract can access are public and *never* truly random.
+It's important to see here that an attacker could technically game your system here if they really wanted to. It'd just be really hard. There are other ways to generate random numbers on the blockchain but Solidity doesn't natively give us anything reliable because it can't! All the #s our contract can access are public and *never* truly random.
 
 Really, this is one of the strengths of the blockchain. But, can be a bit annoying for some application like ours here!
 
