@@ -20,7 +20,7 @@ So what will we be building here :)? Here's a little video:
 
 When you reach the end of this project, you'll be able to earn an NFT.
 
-**You'll only be eligible for the NFT if you finish it within 60 days of signing up, if not, you'll not be able to obtain an NFT!** So make sure you schedule time to finish, you got this!
+**You'll only be eligible for the NFT if you finish it within 60 days of signing up.** So make sure you schedule time to finish, you got this!
 
 **Once you finish the project, you'll get the NFT airdropped within 7 days**
 
@@ -30,7 +30,7 @@ Here's what it looks like:
 
 You'll also get an exclusive FLOAT that you can show off!
 
-**Note: If you did not receive your NFT after 7 days, please reach out to either Raza or Alec on Discord!**
+**Note: It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
 
 ### 🤚 How to get help
 
