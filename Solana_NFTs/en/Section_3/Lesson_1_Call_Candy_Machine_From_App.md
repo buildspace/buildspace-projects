@@ -359,6 +359,8 @@ return (
 
 It's that simple! You should see all the data nicely rendered on your web app now.
 
+🚨 Incase you get a `Module parse failed error`, try checking out [this solution](https://discord.com/channels/869321815833575434/916500281364205588/1012608812739469332) on our Discord. 
+
 I provided a `CandyMachine.css` file that includes some base styles for you. When you are ready to make some changes, head over there and add whatever CSS you want to make it your own. Even if you're lazy, just change some colors around. Make this your own. Don't just follow me lol. 
 
 You'll notice you have a fancy looking Mint NFT button, but when you click it, it does nothing 😔.
