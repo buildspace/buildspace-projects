@@ -29,7 +29,7 @@ Here's what it looks like:
 
 [Loom](https://www.loom.com/share/b315bcdd07cf4e78b9b29806ef931ad2)
 
-**Note: Each cohort is named after a star (ex. [Alkes](https://www.star-facts.com/alkes/), [Beid](https://www.universeguide.com/star/19587/beid), etc)! Also, the # on the back will be the # minted which depends on when you finish! Each NFT is unique. It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
+**Note: It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
 
 ### 🤚 How to get help
 

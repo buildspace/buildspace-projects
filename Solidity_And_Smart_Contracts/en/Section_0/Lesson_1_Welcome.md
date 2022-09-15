@@ -33,7 +33,7 @@ Here's what it looks like:
 
 ![Untitled](https://i.imgur.com/HlRJTTf.png)
 
-**Note: instead of "Capella", yours would say name of your cohort — each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT. It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
+**Note: It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
 
 ## 🛠 What will you be building?
 

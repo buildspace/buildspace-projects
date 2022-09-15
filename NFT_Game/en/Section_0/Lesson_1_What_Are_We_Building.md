@@ -26,7 +26,7 @@ Here's what it looks like:
 
 ![](https://media3.giphy.com/media/kaoTShRCKgtjUIuJge/giphy.gif?cid=790b7611a115c871842a5b77747ba0a4c1d58b884baa5e64&rid=giphy.gif&ct=g)
 
-**Note: Each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you finish! It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
+**Note: It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
 
 ### 🤚 How to get help
 

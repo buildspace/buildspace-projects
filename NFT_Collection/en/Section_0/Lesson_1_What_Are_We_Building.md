@@ -30,7 +30,7 @@ Here's what it looks like:
 
 ![Untitled](https://i.imgur.com/4PliKDj.png)
 
-**Note: instead of "Alkes", your NFT would say the name of your cohort — each cohort is named after a star! Also, the # at the bottom right will be the # minted which depends on when you claim the NFT. It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
+**Note: It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
 
 ## 🛠 What we're building
 
