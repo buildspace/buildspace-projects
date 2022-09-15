@@ -45,9 +45,9 @@ We're going to make this a little spicy as well. Basically, when someone waves a
 
 You'll be able to customize the website as much as you want. For example:
 
--   Maybe instead of a 👋 you want people to send you a 💩.
--   Perhaps instead of a plain old message, you want them to send you a Spotify link and create a place where anyone can send you awesome music and have it saved.
--   You can change the smart contract to recognize when one of your friends is waving at you (based on their Ethereum wallet address) and then take them to a page where they get Rick Roll'd.
+- Maybe instead of a 👋 you want people to send you a 💩.
+- Perhaps instead of a plain old message, you want them to send you a Spotify link and create a place where anyone can send you awesome music and have it saved.
+- You can change the smart contract to recognize when one of your friends is waving at you (based on their Ethereum wallet address) and then take them to a page where they get Rick Roll'd.
 
 You can do whatever you want :).
 
