@@ -46,6 +46,6 @@ This project is broken up into 4 sections. You can see what section you're on by
 
 Hey! Go ahead and say gm in #gm-only on Discord. This is very important. Extremely important. If you don't do this then all of humanity will collectively jump and disrupt the Earth's orbit causing it to collide with Venus.
 
-BTW -- if you want to make a tweet telling the world that you're building an app with Flow today and tag @\_buildspace, go for it!
+BTW -- if you want to make a tweet telling the world that you're building an app with Flow today and tag @_buildspace, go for it!
 
 We always say this, but 1) that tweet could inspire someone else to join web3 and 2) it supports us!
