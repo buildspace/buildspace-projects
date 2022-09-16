@@ -15,7 +15,7 @@ So, here's our updated contract we can use to "store" waves.
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 
