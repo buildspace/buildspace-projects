@@ -102,7 +102,7 @@ As for the rest, we added three things:
 
 - `import { StringUtils }` - we are importing a helper file. I’ll go over this shortly.
 - A public string called `tld` - this will record what your epic domain ends with (ex. `.ninja`).
-- `string memory _tld` in the constructor - the constructor is run only once! This is how we’re setting the public `tld` variable.
+- `string memory _tld` in the constructor - the constructor runs only once! This is how we’re setting the public `tld` variable.
 
 For the new import - get [this file](https://gist.github.com/AlmostEfficient/669ac250214f30347097a1aeedcdfa12) and put it in a new folder called “libraries” in the contracts folder. Strings in Solidity are weird so we need a custom function to check their length. This function converts them to bytes first, making it much more gas efficient! Yay for savings!
 
