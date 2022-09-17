@@ -180,7 +180,7 @@ I use a special data structure called a [map](https://medium.com/upstate-interac
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 

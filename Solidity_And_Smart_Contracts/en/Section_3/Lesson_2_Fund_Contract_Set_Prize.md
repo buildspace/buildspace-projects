@@ -204,10 +204,10 @@ Easy!
 Lets deploy our contract using the same old line
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
-Now when you go to [Etherscan](https://rinkeby.etherscan.io/) and paste in your contract address you'll see that your contract now has a value of 0.001 ETH! Success!
+Now when you go to [Etherscan](https://goerli.etherscan.io/) and paste in your contract address you'll see that your contract now has a value of 0.001 ETH! Success!
 
 **Remember to update your frontend with the new contract address *and* the new ABI file. Otherwise, it will** **break**.
 
