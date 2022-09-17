@@ -6,7 +6,7 @@ So, remember, our contract has the function `makeAnEpicNFT` which will actually 
 
 ```javascript
 const askContractToMintNft = async () => {
-  const CONTRACT_ADDRESS = "INSERT_YOUR_DEPLOYED_RINKEBY_CONTRACT_ADDRESS";
+  const CONTRACT_ADDRESS = "INSERT_YOUR_DEPLOYED_GOERLI_CONTRACT_ADDRESS";
 
   try {
     const { ethereum } = window;
@@ -22,7 +22,7 @@ const askContractToMintNft = async () => {
       console.log("Mining...please wait.")
       await nftTxn.wait();
       
-      console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+      console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 
     } else {
       console.log("Ethereum object doesn't exist!");
@@ -61,7 +61,7 @@ let nftTxn = await connectedContract.makeAnEpicNFT();
 console.log("Mining...please wait.")
 await nftTxn.wait();
 
-console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 ```
 
 The rest of the code should already make sense. It looks sorta like the code we deployed with :)! We call our contract using `makeAnEpicNFT`, wait for it to be mined, and then link the Etherscan URL!
@@ -112,7 +112,7 @@ import myEpicNft from './utils/MyEpicNFT.json';
 
 And we're all done. Shouldn't have errors anymore! You're ready to mint some NFTs!
 
-All you'll need to do from here is click "Mint NFT", pay gas (using your fake ETH), wait for the transaction to be mined, and bam! Your NFT should show up on OpenSea either immediately or within 5-15m max.
+All you'll need to do from here is click "Mint NFT", pay gas (using your fake ETH), wait for the transaction to be mined, and bam! Your NFT should show up on Pixxiti either immediately or within 5-15m max.
 
 You may be asking yourself wtf gas is. I'm not going to answer that here. But, you can start researching [here](https://ethereum.org/en/developers/docs/gas/) ;).
 

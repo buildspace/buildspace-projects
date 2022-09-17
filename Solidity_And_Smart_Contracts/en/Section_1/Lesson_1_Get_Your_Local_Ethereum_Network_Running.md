@@ -47,7 +47,7 @@ npx hardhat
 
 *Note: if you have yarn installed along with npm, you may get errors such as `npm ERR! could not determine executable to run`. In this case, you can do `yarn add hardhat`.*
 
-Choose the option _**Create a basic sample project**_. Say yes to everything.
+Choose the option _**Create a JavaScript project**_. Say yes to everything.
 
 <img width="571" alt="Screen Shot 2022-06-10 at 22 51 21" src="https://i.imgur.com/j1e8vJT.png">
 
