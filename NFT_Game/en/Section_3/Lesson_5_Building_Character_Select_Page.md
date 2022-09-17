@@ -304,24 +304,24 @@ Big salute to you for your endeavors. At this point we should be able to give th
 
 ![Untitled](https://i.imgur.com/PQHzJzq.png)
 
-My. Goodness. You just minted a character NFT from your Smart Contract. Straight up legend out here 🔥. Before we move on let's head over to OpenSea and see if our character was truly minted. To get the direct link to your NFT you can just do:
+My. Goodness. You just minted a character NFT from your Smart Contract. Straight up legend out here 🔥. Before we move on let's head over to Pixxiti and see if our character was truly minted. To get the direct link to your NFT you can just do:
 
 ```javascript
-https://testnets.opensea.io/assets/CONTRACT_ADDRES/TOKEN_ID
+https://goerli.pixxiti.com/nfts/CONTRACT_ADDRES/TOKEN_ID
 ```
 
 Here's what mines looks like:
 
 ![Untitled](https://i.imgur.com/W3eca7t.png)
 
-AHH YES. There is my Leo. One thing to note here - make sure to look for your NFT on the [https://testnets.opensea.io/](https://testnets.opensea.io/) since we are using Rinkeby!
+AHH YES. There is my Leo. One thing to note here - make sure to look for your NFT on the [https://goerli.pixxiti.com](https://goerli.pixxiti.com) since we are using Goerli!
 
 You freaking did it! Now that we have our character NFT we can finally go out and protect the Metaverse from rogue beings ⚔️.
 
-Feel free to also set up an `alert` that automatically gives your player the OpenSea link when it's done minting. For example something like:
+Feel free to also set up an `alert` that automatically gives your player the Goerli link when it's done minting. For example something like:
 
 ```javascript
-alert(`Your NFT is all done -- see it here: https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
+alert(`Your NFT is all done -- see it here: https://goerli.pixxiti.com/nfts/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
 ```
 
 ### 🚨 Progress report
