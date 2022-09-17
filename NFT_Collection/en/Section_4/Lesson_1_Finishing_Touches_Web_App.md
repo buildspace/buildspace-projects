@@ -1,25 +1,14 @@
-## 🌊 Give user their OpenSea link
+## 🌊 Give user their Pixxiti link
 
-One thing that’d be awesome is after the NFT is minted we actually give a link to their NFT on OpenSea that they’d be able to share on Twitter or with their friends!!
+One thing that’d be awesome is after the NFT is minted we actually give a link to their NFT on Pixxiti that they’d be able to share on Twitter or with their friends!!
 
-The link for an NFT on OpenSea looks like this:
+The link for an NFT on Pixxiti looks like this:
 
-`https://testnets.opensea.io/assets/0x88a3a1dd73f982e32764eadbf182c3126e69a5cb/9`
-
-Basically, these are the variables.
-
-`https://testnets.opensea.io/assets/INSERT_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`
-
-
-**Note: if you're using Rarible b/c OpenSea is being slow to show your NFT's metadata -- check out the link setup below, it's very similar! I actually like using Rarible instead of OpenSea, it's usually way faster to show the metadata. Which is nice b/c your users can instantly see their NFT!**
-
-The link for an NFT on Rarible looks like this:
-
-`https://rinkeby.rarible.com/token/0xb6be7bd567e737c878be478ae1ab33fcf6f716e0:0`
+`https://goerli.pixxiti.com/nfts/0x0c8d62188c252732215d61031909cd26ba4f4d66/4`
 
 Basically, these are the variables.
 
-`https://rinkeby.rarible.com/token/INSERT_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE`
+`https://goerli.pixxiti.com/nfts/INSERT_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`
 
 So, our web app has the contract address, but not the token id! So, we’ll need to change up our contract to retrieve that. Let’s do it.
 
@@ -39,7 +28,7 @@ Thats why I use events here. I’m able to `emit` an event on the contract and t
 
 Again, it’s sorta like a web hook. Except this is going to be the easiest webhook ever to setup lol.
 
-Be sure to read more on events [here](https://docs.soliditylang.org/en/v0.8.14/contracts.html#events).
+Be sure to read more on events [here](https://docs.soliditylang.org/en/v0.8.17/contracts.html#events).
 
 As always when we change our contract.
 
@@ -54,12 +43,12 @@ Now on our frontend we add this magical line (I’ll show you where to put it in
 ```javascript
 connectedContract.on("NewEpicNFTMinted", (from, tokenId) => {
 	console.log(from, tokenId.toNumber())
-	alert(`Hey there! We've minted your NFT. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: <https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}>`)
+	alert(`Hey there! We've minted your NFT. It may be blank right now. It can take a max of 10 min to show up on Pixxiti. Here's the link: <https://goerli.pixxiti.com/nfts/${CONTRACT_ADDRESS}/${tokenId.toNumber()}>`)
 });
 
 ```
 
-Okay this is fkin epic. In real-time, we’ll capture the mint event, get the tokenId, and give the user their OpenSea link for their newly minted NFT.
+Okay this is fkin epic. In real-time, we’ll capture the mint event, get the tokenId, and give the user their Pixxiti link for their newly minted NFT.
 
 The code for `App.js` and the contract is [here](https://gist.github.com/farzaa/5015532446dfdb267711592107a285a9). It’s really nothing fancy. Just setting up an event listener! I made sure to drop comments on lines I added to make it easy to see what I changed. Be sure to add a call to `setupEventListener()` in two places like I do in the code! Don't miss that :).
 
@@ -76,7 +65,7 @@ Hint, you'll need something in solidity called `require`. And, you'll like also 
 
 ## ❌ Alert user when they’re on the wrong network
 
-Your website is **only** going to work on Rinkeby (since that's where your contract lives).
+Your website is **only** going to work on Goerli (since that's where your contract lives).
 
 We're going to add a nice message telling users about this! 
 
@@ -89,9 +78,9 @@ let chainId = await ethereum.request({ method: 'eth_chainId' });
 console.log("Connected to chain " + chainId);
 
 // String, hex code of the chainId of the Rinkebey test network
-const rinkebyChainId = "0x4"; 
-if (chainId !== rinkebyChainId) {
-	alert("You are not connected to the Rinkeby Test Network!");
+const goerliChainId = "0x5"; 
+if (chainId !== goerliChainId) {
+	alert("You are not connected to the Goerli Test Network!");
 }
 ```
 There, now the user will know if they are on the wrong network! 
@@ -112,13 +101,13 @@ Add your Twitter at the bottom :)! Already gave you a little template for it.
 
 Perhaps the most important part!
 
-Usually, when people want to see an NFT collection, they look at it on OpenSea!! It's a super-easy way for people to get a feel for your collection. So if you link your friend your site, they'll know it's legit!!
+Usually, when people want to see an NFT collection, they look at it on Pixxiti!! It's a super-easy way for people to get a feel for your collection. So if you link your friend your site, they'll know it's legit!!
 
-Add a little button that says "🌊 View Collection on OpenSea" and then when your users clicks it, it links to your collection! Remember, your collections link changes every time you change the contract. So be sure to link your latest and final collection. For example, [this](https://testnets.opensea.io/collection/squarenft-vu901lkj40) is my collection.
+Add a little button that says "🌊 View Collection on Pixxiti" and then when your users clicks it, it links to your collection! Remember, your collections link changes every time you change the contract. So be sure to link your latest and final collection. For example, [this](https://goerli.pixxiti.com/collections/0xa3edf0e5066013a62c3ef36683cbc689825303db) is my collection.
 
-Note: This link you'll need to hardcode. I left a variable at the top for you to fill in. It can't be dynamically generated unless you use the OpenSea API (which is overkill for now lol).
+Note: This link you'll need to hardcode. I left a variable at the top for you to fill in. It can't be dynamically generated unless you use the Pixxiti API (which is overkill for now lol).
 
 
 ## 🚨 Progress report!
 
-You're nearly at the end :). Post a screenshot in #progress with that little pop-up that gives your user the direct OpenSea link!
+You're nearly at the end :). Post a screenshot in #progress with that little pop-up that gives your user the direct Pixxiti link!
