@@ -2,9 +2,9 @@
 
 Now that we have all the data nicely set up for our characters, the next thing to do is actually mint the NFT. Let's go through that process. Here's my updated contract and I put a comment above lines I changed/added to make it easy!
 
-```solidity
+```javascript
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 // NFT contract to inherit from.
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -259,7 +259,7 @@ The function `tokenURI` is something we get for free from `ERC721` since we inhe
 
 Basically, `tokenUri` is a function on **every NFT** that returns the **actual data** attached to the NFT. So when I call `gameContract.tokenURI(1)` it's basically saying, *"go get me the data inside the NFT with tokenId 1"*, which would be the first NFT minted. And, it should give me back everything like: my character's name, my character's current hp, etc.
 
-Platforms like OpenSea and Rarible know to hit `tokenURI` since that's the standard way to retrieve the NFTs metadata. Let's try running our contract again (remember the command is `npx hardhat run scripts/run.js`)
+Platforms like OpenSea, Rarible, and Pixxiti know to hit `tokenURI` since that's the standard way to retrieve the NFTs metadata. Let's try running our contract again (remember the command is `npx hardhat run scripts/run.js`)
 
 My output looks like this:
 
@@ -403,11 +403,11 @@ We add `data:application/json;base64,` because our browser needs to know how to 
 
 Again, this is considered a standard for a majority of browsers which is perfect because we want our NFTs data to be compatible with as many existing systems as possible. 
 
-Why are we doing all this Base64 stuff? Well, basically this is how popular NFT websites like OpenSea, Rarible, and many others prefer when we pass them JSON data from our contract directly :).
+Why are we doing all this Base64 stuff? Well, basically this is how popular NFT websites like OpenSea, Rarible, Pixxiti, and many others prefer when we pass them JSON data from our contract directly :).
 
 **Awesome**. So, we're at the point we are officially minting NFTs locally and the NFT has actual data attached to it in a way that properly follows standards!
 
-**We're ready to deploy our NFT to OpenSea :).**
+**We're ready to deploy our NFT to Pixxiti :).**
 
 ### 🚨 Progress report!
 
