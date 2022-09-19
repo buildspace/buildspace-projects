@@ -48,7 +48,7 @@ You now have access to your new component! We need to add just a tad bit of fanc
 
 `If user has connected to your app **AND** does not have a character NFT - **Show SelectCharacter Component**`
 
-We currently are holding state for whether someone has connected their wallet our not, but we don't have anything setup for knowing if someone has minted a character NFT yet! 
+We currently are holding state for whether someone has connected their wallet or not, but we don't have anything setup for knowing if someone has minted a character NFT yet! 
 
 We are going to start by creating a render function named: `renderContent` . This will handle all the logic for what to render. Let's start by adding this new function right under where we declared `checkIfWalletIsConnected` :
 
