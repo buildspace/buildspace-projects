@@ -6,7 +6,7 @@ We want to be able to let someone wave at us and then store that wave.
 
 So, first thing we need is a function they can hit to wave at us!
 
-The blockchain = Think of it as a cloud provider, kinda like AWS, but it's owned by no one. It's run by compute power from mining machines all over the world. Usually these people are called miners and we pay them to run our code!
+The blockchain = Think of it as a cloud provider, kinda like AWS, but it's owned by no one. It's run by compute power from machines who want to support the network. Usually these people are called Nodes and they run client software to keep the network running while keeping our data or transactions stay on the network!
 
 A smart contract = Kinda like our server's code with different functions people can hit.
 
