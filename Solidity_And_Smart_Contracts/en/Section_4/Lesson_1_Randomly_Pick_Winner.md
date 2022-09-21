@@ -103,7 +103,7 @@ That's it! Then I just write a simple if statement to see if the seed is less th
 
 It's important to see here that an attacker could technically game your system here if they really wanted to. It'd just be really hard. There are other ways to generate random numbers on the blockchain but Solidity doesn't natively give us anything reliable because it can't! All the #s our contract can access are public and *never* truly random.
 
-Really, this is one of the strengths of the blockchain. But, can be a bit annoying for some application like ours here!
+Really, this is one of the strengths of the blockchain. But, can be a bit annoying for some applications like ours here!
 
 In any case, no one's going to be attacking our tiny app but I want you to know all this when you're building a dApp that has millions of users!
 
