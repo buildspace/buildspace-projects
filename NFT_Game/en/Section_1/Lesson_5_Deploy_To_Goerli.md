@@ -63,7 +63,7 @@ In order get fake ETH, we have to ask the network for some. **This fake ETH wil
 
 Please make sure you're on the **Goerli** network on Metamask. This is a super common issue I see!
 
-![Untitled](https://i.imgur.com/MKjsJXX.png)
+![Untitled](https://imgur.com/a/j8iN46I)
 
 You have a few faucets to choose from:
 
