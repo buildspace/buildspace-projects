@@ -132,8 +132,8 @@ const checkIfWalletIsConnected = async () => {
   if (window?.solana?.isPhantom) {
     console.log('Phantom wallet found!');
     /*
-      * The solana object gives us a function that will allow us to connect
-      * directly with the user's wallet
+    * The solana object gives us a function that will allow us to connect
+    * directly with the user's wallet
     */
     const response = await window.solana.connect({ onlyIfTrusted: true });
     console.log(
