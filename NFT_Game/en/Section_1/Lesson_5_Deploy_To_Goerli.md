@@ -185,7 +185,7 @@ Done deploying and minting!
 
 We can make sure it all worked properly using [Goerli Etherscan](https://goerli.etherscan.io/) where you can paste the contract address that was output and see what's up with it! Here I can see that we've had **five** transactions. **One** contract creation transaction and **four** transactions where we minted the NFT. Which is correct :)!
 
-![Untitled](https://i.imgur.com/hJtoYRp.png)
+![Untitled](https://i.imgur.com/cI4a1Oh.png)
 
 **Get used to using Goerli Etherscan a lot to debug deploys** because it's the easiest way to track deployments and if something goes wrong. If it's not showing up on Etherscan, then that means it's either still processing or something went wrong! Here's what I get:
 
