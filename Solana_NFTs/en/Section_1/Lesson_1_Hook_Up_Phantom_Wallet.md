@@ -18,7 +18,6 @@ git clone YOUR_FORKED_LINK
 
 There it is :). Time to code!
 
-
 ### 🔌 Building a connect wallet button with Phantom Wallet
 
 For this project we are going to be using a wallet called [Phantom](https://phantom.app/). This is one of the top wallet extensions for Solana.
@@ -77,7 +76,6 @@ const Home = () => {
 };
 
 export default Home;
-
 ```
 
 Nice! Not too bad right? Let's break this down a bit:
@@ -128,26 +126,19 @@ const App = ({ Component, pageProps }) => {
 export default App;
 ```
 
-### **Adding support for more wallet adapters**
+### **Adding support for more wallet adapters (Optional)**
+
 If you're looking to add support for more extensions, you can do so by importing more adapters. Like this
 
 ```javascript
 // ... Rest of your code
-import { 
-    PhantomWalletAdapter,
-    SolflareWalletAdapter, 
-    TorusWalletAdapter
-} from "@solana/wallet-adapter-wallets";
+import { PhantomWalletAdapter, SolflareWalletAdapter, TorusWalletAdapter } from "@solana/wallet-adapter-wallets";
 
 // ... Rest of your code
 
 const App = ({ Component, pageProps }) => {
     // ... Rest of your code
-    const wallets = useMemo(() => [
-        new PhantomWalletAdapter(),
-        new SolflareWalletAdapter(),
-        new TorusWalletAdapter()
-    ], [network]);
+    const wallets = useMemo(() => [new PhantomWalletAdapter(), new SolflareWalletAdapter(), new TorusWalletAdapter()], [network]);
 
     return (
         <ConnectionProvider endpoint={endpoint}>
@@ -183,7 +174,7 @@ Next, we need to actually check if we're **authorized** to actually access the
 
 Basically, **Phantom Wallet doesn't just give our wallet information to every website we go to**. It only gives it to websites we authorize. So far, we have **not** given Phantom explicit access to share our wallet's info.
 
-The first thing we need to do is check if a user has given us permission to use their wallet on our site — this is sorta like checking if our user is "logged in". 
+The first thing we need to do is check if a user has given us permission to use their wallet on our site — this is sorta like checking if our user is "logged in".
 
 ```jsx
 const wallet = useWallet();
@@ -195,6 +186,6 @@ And that's it!
 
 ### 🚨 Progress Report
 
-*Please do this else Farza will be sad :(*
+_Please do this else Farza will be sad :(_
 
 Post a screenshot in `#progress` showing off the that message "Phantom wallet found" in your console. May seem simple, but, not many people know how to do this stuff! It's epic.
