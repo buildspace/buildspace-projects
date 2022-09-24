@@ -60,7 +60,7 @@ buildspace-dao-starter % node scripts/5-deploy-token.js
 ✅ Successfully deployed token contract, address: 0xF93B8AE0a84325D1d7Aa09593DCA3Ad5Fe868eA7
 ```
 
-Boom! It deployed a fresh token contract. If you head to [`https://rinkeby.etherscan.io/`](https://rinkeby.etherscan.io/) and search the token module’s address, you’ll see the contract you just deployed. Again, you’ll see it deployed from **your wallet** so **you own it**.
+Boom! It deployed a fresh token contract. If you head to [`https://goerli.etherscan.io/`](https://goerli.etherscan.io/) and search the token module’s address, you’ll see the contract you just deployed. Again, you’ll see it deployed from **your wallet** so **you own it**.
 
 ![Untitled](https://i.imgur.com/4tHQ20A.png)
 
