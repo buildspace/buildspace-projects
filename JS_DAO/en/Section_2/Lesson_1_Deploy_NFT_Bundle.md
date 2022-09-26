@@ -174,7 +174,7 @@ import { readFileSync } from "fs";
 
     // this initialization returns the address of our contract
     // we use this to initialize the contract on the thirdweb sdk
-    const editionDrop = sdk.getEditionDrop(editionDropAddress);
+    const editionDrop = await sdk.getEditionDrop(editionDropAddress);
 
     // with this, we can get the metadata of our contract
     const metadata = await editionDrop.metadata.get();
