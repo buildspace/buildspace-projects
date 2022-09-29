@@ -88,12 +88,6 @@ Super exciting that you made it to the end. Pretty big deal!! Solana is **super
 
 Thank you for contributing to the future of web3 by learning this stuff. The fact that you know how this works and how to code it up is a superpower. Use your power wisely ;).
 
-### 🤟 Your NFT!
-
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
-
-**Be sure to click the button at the bottom of this page and submit your final link. Otherwise, our system won't mark you as "complete".**
-
 ### 🌈 Before you head out
 
 Go to **#showcase** in Discord and drop us a link to your final product that we can mess around with :).
