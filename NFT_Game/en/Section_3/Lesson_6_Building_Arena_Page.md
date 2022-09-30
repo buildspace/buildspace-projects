@@ -414,7 +414,7 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
 }
 ```
 
-Also, don't forget to head back to `App.js` and add pass the `setCharacterNFT` property to your Arena component:
+Also, don't forget to head back to `App.js` and pass the `setCharacterNFT` property to your Arena component:
 
 ```javascript
   <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />

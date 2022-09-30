@@ -194,6 +194,20 @@ This command *can* fail if you don't have all the necessary dependencies. Run th
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev
 ```
 
+If you're having issues with `openssl-sys v0.9.72` try running command below. This make sures the development packages of `openssl` are installed.
+
+If you're on Ubuntu:
+
+```bash
+sudo apt-get install libssl-dev
+```
+
+If you're on Fedora:
+
+```bash
+sudo apt-get install openssl-devel
+```
+
 Once this is done, you'll have **Anchor Version Manager** installed. Now we can actually install Anchor:
 
 ```bash

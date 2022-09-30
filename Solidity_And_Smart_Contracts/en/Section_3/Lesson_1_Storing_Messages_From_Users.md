@@ -17,7 +17,7 @@ Check out my updated smart contract code. I have added lots of comments here to 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 
@@ -161,7 +161,7 @@ Why do we need to do all this? Well, it's because smart contracts are **immutab
 
 So what you'll need to do now is:
 
-1\. Deploy again using `npx hardhat run scripts/deploy.js --network rinkeby`
+1\. Deploy again using `npx hardhat run scripts/deploy.js --network goerli`
 
 2\. Change `contractAddress` in `App.js` to be the new contract address we got from the step above in the terminal just like we did before the first time we deployed.
 
@@ -180,6 +180,11 @@ const [currentAccount, setCurrentAccount] = useState("");
    */
   const [allWaves, setAllWaves] = useState([]);
   const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  
+   /*
+   * Create a variable here that references the abi content!
+   */
+  const contractABI = abi.abi;
 
   /*
    * Create a method that gets all waves from your contract

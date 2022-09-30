@@ -9,13 +9,13 @@ npm install --save dotenv
 ```
 
 ```javascript
-require('@nomiclabs/hardhat-waffle');
+require("@nomicfoundation/hardhat-toolbox");
 require('dotenv').config();
 
 module.exports = {
-  solidity: '0.8.0',
+  solidity: '0.8.17',
   networks: {
-    rinkeby: {
+    goerli: {
       url: process.env.STAGING_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
@@ -85,7 +85,7 @@ const gameContract = await gameContractFactory.deploy(
   ); 
 ```
 
-From here, we just need to update our `tokenURI` function to prepend `ipfs://`. Basically, OpenSea likes when our image URI is structured like this: `ipfs://INSERT_YOUR_CID_HERE`. 
+From here, we just need to update our `tokenURI` function to prepend `ipfs://`. Basically, OpenSea and Pixxiti likes when our image URI is structured like this: `ipfs://INSERT_YOUR_CID_HERE`. 
 
 You may be asking why in `run.js` I didn't just directly link to `ipfs://INSERT_YOUR_CID_HERE` or `https://cloudflare-ipfs.com/ipfs/INSERT_YOUR_CID_HERE`. Basically — it's safer to just store the hash itself on the contract, it lets us be a bit more flexible, you'll see :).
 
@@ -130,7 +130,7 @@ All I did was prepend that little `ipfs://` after the `image` tag —  then I at
 
 Epic, we're off imgur.
 
-Platforms like OpenSea support `ipfs` links so this works out — they'll know how to read and render this! We now have a final issue — **rendering the image on our React app**!! If we just give our React app something like `ipfs://bafybeibsifcmwkufr7zwh5s3ekvjkfj5nnadjhweniz4p7lxqelt7mbp74` in the `src` tag of the `<img>` tag it won't work! Instead, in your React app, wherever you render the `src` tag of the image, simply do this: 
+Platforms like OpenSea and Pixxiti support `ipfs` links so this works out — they'll know how to read and render this! We now have a final issue — **rendering the image on our React app**!! If we just give our React app something like `ipfs://bafybeibsifcmwkufr7zwh5s3ekvjkfj5nnadjhweniz4p7lxqelt7mbp74` in the `src` tag of the `<img>` tag it won't work! Instead, in your React app, wherever you render the `src` tag of the image, simply do this: 
 
 ```javascript
 <img src={`https://cloudflare-ipfs.com/ipfs/${INSERT_THE_CID_YOU_GET_FROM_YOUR_CONTRACT_HERE}`} />

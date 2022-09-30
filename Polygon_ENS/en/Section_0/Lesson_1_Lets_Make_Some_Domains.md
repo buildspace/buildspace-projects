@@ -1,8 +1,8 @@
 ### 👋 Welcome
 
-You’ve made it — hell yeah! **Welcome :)**. My name is Raza and I’m going to be your installation wizard to the blockchain. 
+You’ve made it — hell yeah! **Welcome :)**. My name is Raza and I’m going to be your installation wizard to the blockchain.
 
-This project is for devs who want to understand web3 apps by just building one themselves. All you really need to know going into this: 
+This project is for devs who want to understand web3 apps by just building one themselves. All you really need to know going into this:
 
 - **some terminal skills**
 - **some Javascript**
@@ -30,15 +30,17 @@ With this project, you're going to learn about crypto tech by actually writing c
 
 ### 💎 Earning an NFT
 
-When you reach the end of this project, you'll earn an NFT.
+When you reach the end of this project, you'll be able to earn an NFT.
 
-You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+**You'll only be eligible for the NFT if you finish it within 60 days of signing up.** So make sure you schedule time to finish, you got this!
 
 **Once you finish the project, you'll get the NFT airdropped within 7 days**
 
 Here's what it looks like:
 
 [Loom](https://www.loom.com/share/b3a0185f02ac4c63ab411288c2df4a30)
+
+**Note: It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
 
 ### 🤚 How to get help
 
@@ -56,7 +58,7 @@ Let's get you some open-source rep!!!
 
 ### 🚨 Progress Report
 
-*Please do this else Raza will be sad :(*
+_Please do this else Raza will be sad :(_
 
 Hey! Go ahead and say gm in `#gm-only` on Discord. This is very important. Extremely important.
 

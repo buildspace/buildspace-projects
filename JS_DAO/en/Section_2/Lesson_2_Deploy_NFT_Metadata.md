@@ -116,7 +116,7 @@ After running `node scripts/4-set-claim-condition.js` here's what I get:
 ✅ Successfully set claim condition!
 ```
 
-Boom! We've successfully interacted w/ our deployed smart contract and have given our NFT certain rules it must follow, hell yea! If you copy-paste your bundle drop address printed out there and search it on `https://rinkeby.etherscan.io/`, you'll see proof right there that we interacted w/ the contract!
+Boom! We've successfully interacted w/ our deployed smart contract and have given our NFT certain rules it must follow, hell yea! If you copy-paste your bundle drop address printed out there and search it on `https://goerli.etherscan.io/`, you'll see proof right there that we interacted w/ the contract!
 
 ![Untitled](https://i.imgur.com/6sRMQpA.png)
 
