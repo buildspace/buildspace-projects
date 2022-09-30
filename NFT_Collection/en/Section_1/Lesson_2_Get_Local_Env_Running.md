@@ -31,7 +31,7 @@ What happens here is, you run:
 1. `mkdir epic-nfts` to create a directory named "epic-nfts".
 2. `cd epic-nfts` to enter the newly created directory.
 3. `npm init -y` to generate an empty npm project without going through an interactive process. The -y stands for yes.
-4. `npm install --save-dev hardhat@2.9.9` to install Hardhat.
+4. `npm install --save-dev hardhat@latest` to install Hardhat.
 
 You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Google around a bit about these vulnerabilities if you want to know more!
 
@@ -46,14 +46,17 @@ npx hardhat
 
 *Note: If you're on Windows using Git Bash to install hardhat, you may run into an error at this step (HH1). You can try using Windows CMD to perform the HardHat install if you run into trouble. Additional info can be found [here](https://github.com/nomiclabs/hardhat/issues/1400#issuecomment-824097242).*
 
-Choose the option to create a basic sample project. Say yes to everything.
+Choose the option _**Create a JavaScript project**_. Say yes to everything.
+
+<img width="571" alt="Screen Shot 2022-06-10 at 22 51 21" src="https://i.imgur.com/j1e8vJT.png">
+
 
 The sample project will ask you to install `hardhat-waffle` and `hardhat-ethers`. These are other goodies we'll use later.
 
 Go ahead and install these other dependencies just in case it didn't do it automatically.
 
 ```bash
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+npm install --save-dev chai @nomiclabs/hardhat-ethers ethers @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-chai-matchers
 ```
 
 You'll also want to install something called **OpenZeppelin** which is another library that's used a lot to develop secure smart contracts. We'll learn more about it later. For now, just install it :).
@@ -65,12 +68,12 @@ npm install @openzeppelin/contracts
 Then run:
 
 ```bash
-npx hardhat run scripts/sample-script.js
+npx hardhat test
 ```
 
 You should see something like this:
 
-![Untitled](https://i.imgur.com/LIYT9tf.png)
+![](https://i.imgur.com/OI9YKaU.png)
 
 Boom! If you see this it means your local environment is set up **and** you also ran/deployed a smart contract to a local blockchain.
 
@@ -80,10 +83,10 @@ This is pretty epic. We'll get into this more but basically what's happening her
 2. Hardhat will spin up a "local blockchain" on your computer. It's like a mini, test version of Ethereum running on your computer to help you quickly test stuff!
 3. Hardhat will then "deploy" your compiled contract to your local blockchain. That's that address you see at the end there. It's our deployed contract, on our mini version of Ethereum.
 
-If you're curious, feel free to look at the code inside the project to see how it works. Specifically, check out `Greeter.sol` which is the smart contract and `sample-script.js` which actually runs the contract.
+If you're curious, feel free to look at the code inside the project to see how it works. Specifically, check out `Lock.sol` which is the smart contract and `deploy.js` which actually runs the contract.
 
 Once you're done exploring, let's head to the next section and start our own NFT contract.
 
 ## 🚨 Progress report!
 
-Post a screenshot of your terminal with the output of `sample-script.js` in #progress :).
+Post a screenshot of your terminal with the output of `deploy.js` in #progress :).

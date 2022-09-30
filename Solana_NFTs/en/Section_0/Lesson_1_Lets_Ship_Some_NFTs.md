@@ -24,7 +24,7 @@ So what will we be building here :)? Here's a little video:
 
 When you reach the end of this project, you'll be able to earn an NFT.
 
-You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+**You'll only be eligible for the NFT if you finish it within 60 days of signing up.** So make sure you schedule time to finish, you got this!
 
 **Once you finish the project, you'll get the NFT airdropped within 7 days**
 
@@ -32,7 +32,7 @@ Here's what it looks like:
 
 [Loom](https://www.loom.com/share/a538ff4207a544779807a1358606b441)
 
-**Note: Each cohort is named after a star (ex. [Alkes](https://www.star-facts.com/alkes/), [Beid](https://www.universeguide.com/star/19587/beid), etc)! Also, the # at the bottom will be the # minted which depends on when you finish! Each NFT is unique.** 
+**Note: It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
 
 ### 🤚 How to get help
 
@@ -50,7 +50,7 @@ Let's get you some open-source rep!!!
 
 ### 🚨 Progress Report
 
-*Please do this else Farza will be sad :(*
+_Please do this else Farza will be sad :(_
 
 Hey! Go ahead and say gm in `#gm-only` on Discord. This is very important. Extremely important.
 

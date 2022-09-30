@@ -51,7 +51,7 @@ export default CountdownTimer;
 
 We are setting up a simple React component that will hold some state and takes in a `dropDate`.
 
-Sweet! Before we go any further, let's go over to the `app/src/CandyMachine/index.js` component and import this component. Feel free to put this anywhere at the top of the file:
+Sweet! Before we go any further, let's go over to the `app/components/CandyMachine/index.js` component and import this component. Feel free to put this anywhere at the top of the file:
 
 ```jsx
 import CountdownTimer from '../CountdownTimer';
@@ -61,7 +61,7 @@ From here we can setup our logic to handle when to show this countdown timer.
 
 In our case, we only want to show this component if the current date is **before** the drop date. **Else**, we'll go ahead and show the drop date and time.
 
-Now that we have that figured out, let's write some code near the bottom of `app/src/CandyMachine/index.js`.
+Now that we have that figured out, let's write some code near the bottom of `app/components/CandyMachine/index.js`.
 
 ```jsx
 // Create render function

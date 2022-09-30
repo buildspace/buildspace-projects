@@ -15,31 +15,38 @@ Once you create the key, you'll see a popup with all the secrets. Copy the JWT t
 
 ```json
 {
-    "price": 0.1,
-    "number": 3,
-    "gatekeeper": null,
-    "solTreasuryAccount": "<YOUR WALLET ADDRESS>",
-    "splTokenAccount": null,
-    "splToken": null,
-    "goLiveDate": "05 Jan 2022 00:00:00 GMT",
-    "endSettings": null,
-    "whitelistMintSettings": null,
-    "hiddenSettings": null,
-    "storage": "pinata",
-    "pinataJwt": "YOUR PINATA JWT TOKEN",
-    "pinataGateway": "null",
-    "ipfsInfuraProjectId": null,
-    "ipfsInfuraSecret": null,
-    "awsS3Bucket": null,
-    "noRetainAuthority": false,
-    "noMutable": false
+  "price": 0.01,
+  "number": 3,
+  "gatekeeper": null,
+  "creators": [
+    {
+      "address": "YOUR WALLET ADDRESS",
+      "share": 100      // Make sure the total share amongst all creators sums up to exactly 100
+    }
+  ],
+  "solTreasuryAccount": "YOUR WALLET ADDRESS",
+  "splTokenAccount": null,
+  "splToken": null,
+  "goLiveDate": "2022-05-02T18:00:00+00:00",
+  "endSettings": null,
+  "whitelistMintSettings": null,
+  "hiddenSettings": null,
+  "freezeTime": null,
+  "uploadMethod": "nft_storage",
+  "retainAuthority": true,
+  "isMutable": true,
+  "symbol": "NB",
+  "sellerFeeBasisPoints": 1,
+  "awsConfig": null,
+  "nftStorageAuthToken": "YOUR_NFT_STORAGE_API_KEY",
+  "shdwStorageAccount": null
 }
 ```
 
-I added `pinataJwt` and `pinataGateway`. I also set `storage` to `pinata`. Paste your JWT token in the `pinataJwt` property and you're good to go! Delete your `.cache` folder and run the upload command again:
+I added `nft_storage`. I also set `uploadMethod` to `nft_storage`. Paste your [nft.storage](https://nft.storage/) API key in the `nftStorageAuthToken` property and you're good to go! Delete your `cache.json` folder and run the upload command again:
 
 ```
-ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts upload -e devnet -k ~/.config/solana/devnet.json -cp config.json ./assets
+sugar upload
 ```
 
 And you're done! You now have really high quality NFTs on the devnet. If you wanna learn more about IPFS, [check this out](https://decrypt.co/resources/how-to-use-ipfs-the-backbone-of-web3).
@@ -51,12 +58,23 @@ Deploying a React app has gotten so easy that there is no reason not to do it at
 I made a really quick video below on deploying via Vercel. If you don't want to use Vercel, all good. Use whatever you want.
 
 Basically:
-- Push your latest code up to Github. Don't commit `.cache`.
+- Push your latest code up to Github. Don't commit `cache.json`.
 - Connect Vercel to your repo.
 - Make sure to set your root to `app`.
-- Add in your `.env` variables (since we won't be committing our `.env` file).
+- Add in your `.env.local` variables (since we won't be committing our `.env.local` file).
 - Deploy.
 - Done.
+
+To be extra safe, make sure to create a `.gitignore` file in your `root` folder so that it will automatically ignore all the files and not push to GitHub. This is how my `gitignore` looks like:
+
+```javascript
+.DS_Store
+.env
+.env.local
+node_modules
+cache.json
+config.json
+```
 
 [Loom](https://www.loom.com/share/ce89a285b90a4b34ac358fce9ae7f92d)
 
@@ -70,28 +88,6 @@ Super exciting that you made it to the end. Pretty big deal!! Solana is **super
 
 Thank you for contributing to the future of web3 by learning this stuff. The fact that you know how this works and how to code it up is a superpower. Use your power wisely ;).
 
-### 🥞 Careers in Web3
-
-Tons of people have also gotten full-time jobs at top web3 companies via buildspace. I'm constantly seeing people nail their interviews after they do a few buildspace projects.
-![Untitled](https://i.imgur.com/CNzLdQc.png)
-
-**People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
-
-There is so much work to do and most of the work doesn't even have to do w/ smart contracts lol. **Being an engineer in web3 just means you take your web2 skills and apply them to web3.**
-
-I want to quickly go over wtf it means to "work in web3" as an engineer. *Do you need to be a pro at Solana? Do you need to know how every little thing about the blockchain works?*
-
-For example, let's say you're a great frontend engineer. If you finished this project, **you have almost everything you need to be a great frontend engineer at a web3 company**. For example, the company may say "Hey — pls go and build our connect to wallet feature" — and you'd already have a solid idea on how to do that :).
-
-I just wanna inspire you to work in web3 lol. This shit is awesome. And it'd be cool if you gave it a shot ;).
-
-Be sure you click "Work in Web3" on the left and fill out your profile if you haven't done so already!!! **We're partnered w/ some of the best web3 companies in the world (ex. Uniswap, OpenSea, Chainlink, Edge and Node, and more) and they want to hire devs from the buildspace network :).** You've already picked up a skill that is actually extremely valuable and companies are paying top dollar for awesome web3 engineers.
-
-### 🤟 Your NFT!
-
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
-
-**Be sure to click the button at the bottom of this page and submit your final link. Otherwise, our system won't mark you as "complete".**
 
 ### 🌈 Before you head out
 

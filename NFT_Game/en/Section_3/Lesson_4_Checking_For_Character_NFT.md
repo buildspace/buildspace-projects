@@ -4,7 +4,7 @@ The cool part about our game? We mint actual NFTs that are used to play and all 
 
 The first thing we are going to start with is to check whether the wallet address connected to our app has a character NFT already. If it does, we can go ahead and grab the metadata from the wallet's NFT and use it to battle a boss in the metaverse ⚔️.
 
-Here's the flow of getting our web app connected to our deployed smart contract on the Rinkeby Testnet:
+Here's the flow of getting our web app connected to our deployed smart contract on the Goerli Testnet:
 
 1. Copy latest deployed contract address, paste it in to our web app.
 2. Copy the latest ABI file, paste it into our web app's directory. (Later, we will delve more into what an ABI is).
@@ -41,7 +41,7 @@ import { CONTRACT_ADDRESS } from './constants';
 
 When you compile your smart contract, the compiler spits out a bunch of files that let you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
 
-Our web app relies on the ABI file to know how to communicate with our contract. Read more about it [here](https://docs.soliditylang.org/en/v0.8.14/abi-spec.html).
+Our web app relies on the ABI file to know how to communicate with our contract. Read more about it [here](https://docs.soliditylang.org/en/v0.8.17/abi-spec.html).
 
 The contents of the ABI file can be found in a fancy JSON file in your hardhat project:
 
@@ -81,7 +81,7 @@ Why do we need to do all this? Because smart contracts are **immutable.** They
 
 So, what you'll need to do is:
 
-1. Deploy again using `npx hardhat run scripts/deploy.js --network rinkeby`
+1. Deploy again using `npx hardhat run scripts/deploy.js --network goerli`
 
 2. Change `contractAddress` in `constants.js` to be the new contract address we got from the step above in the terminal (just like we did before the first time we deployed).
 
@@ -101,13 +101,13 @@ import { ethers } from 'ethers';
 
 ### 🌐 Check your Network! 
 
-At this point it's really important to make sure you are connected to the Rinkeby test network with Metamask! If not, you will be trying to use functions on the smart contract that don't exist on the other networks, and it could cause errors in React like "Unhandled Rejection (Error): call revert exception." Something you can add to your React code to keep things straight is a function that lets you know if you're on the wrong network! Try putting this function in your useEffect: 
+At this point it's really important to make sure you are connected to the Goerli test network with Metamask! If not, you will be trying to use functions on the smart contract that don't exist on the other networks, and it could cause errors in React like "Unhandled Rejection (Error): call revert exception." Something you can add to your React code to keep things straight is a function that lets you know if you're on the wrong network! Try putting this function in your useEffect: 
 
 ```javascript
 const checkNetwork = async () => {
   try { 
-    if (window.ethereum.networkVersion !== '4') {
-      alert("Please connect to Rinkeby!")
+    if (window.ethereum.networkVersion !== '5') {
+      alert("Please connect to Goerli!")
     }
   } catch(error) {
     console.log(error)
@@ -115,7 +115,7 @@ const checkNetwork = async () => {
 }
 ```
 
-Here's a quick breakdown of what we're doing here. Similar to how we normally define ```const { ethereum } = window``` we are using ```networkVersion``` in that ethereum object to check which ethereum network we're on. The ethereum networks have different chain ID's, and the Rinkeby chain ID is "4". All we have to do is say "if the current ethereum network is not Rinkeby, alert the user!" Now anytime the page is not loaded on the Rinkeby you will get a notice for your users to switch to Rinkeby! 
+Here's a quick breakdown of what we're doing here. Similar to how we normally define ```const { ethereum } = window``` we are using ```networkVersion``` in that ethereum object to check which ethereum network we're on. The ethereum networks have different chain ID's, and the Goerli chain ID is "5". All we have to do is say "if the current ethereum network is not Goerli, alert the user!" Now anytime the page is not loaded on the Goerli you will get a notice for your users to switch to Goerli! 
 
 ### Recap 
 
