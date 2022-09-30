@@ -41,7 +41,7 @@ Run:
 npx hardhat
 ```
 
-Choose the option to “Create a basic sample project”. Say yes to everything.
+Choose the option to “Create a javascript project”. Say yes to everything.
 
 The sample project will ask you to install `hardhat-waffle` and `hardhat-ethers`. These are other goodies we'll use later :).
 
