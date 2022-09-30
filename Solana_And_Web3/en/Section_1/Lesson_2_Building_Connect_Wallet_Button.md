@@ -36,6 +36,7 @@ const App = () => {
    * connected or not
    */
   const checkIfWalletIsConnected = async () => {
+  // We're using optional chaining (question mark) to check if the object is null
     if (window?.solana?.isPhantom) {
       console.log('Phantom wallet found!');
     } else {
