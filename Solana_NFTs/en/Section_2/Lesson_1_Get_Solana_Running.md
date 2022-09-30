@@ -35,7 +35,7 @@ git version
 > git version 2.31.1 (or higher!)
 
 node --version
-> v14.17.0 (or higher, below v17 -- we found that node v16 works best)
+> v16.17.0 (or higher, below v17 -- we found that node v16 works best. Make sure it's the LTS version)
 
 yarn --version
 > 1.22.11 (or higher!)
@@ -52,7 +52,7 @@ If any of these commands are not found, please make sure to install it before mo
 - [ts-node Installation](https://www.npmjs.com/package/ts-node#installation)
 
 Be sure to install `ts-node` globally. I used this command: `npm install -g ts-node`
-> If you run into EACCES permissions errors while installing, please checkout this [link](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)
+> If you run into EACCES permissions error while installing, please checkout this [link](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)
 
 ### 🔥 Install Solana
 
@@ -93,37 +93,50 @@ Dang it! Solana can be rough to get working. We're happy to help though!! Post a
 
 ### 🤩 Getting started with the Metaplex CLI
 
-Now that we have our Solana CLI installed, we'll need to install the Metaplex CLI which allows us to actually create our candy machine.
+Now that we have our Solana CLI installed, we'll need to install the Metaplex CLI which allows us to actually create our candy machine. You can follow the installation process [here](https://docs.metaplex.com/developer-tools/sugar/overview/installation)
 
-**If you have a Mac with M1 chip, you'll need to install some additional dependencies before installing the Metaplex CLI**, follow these [instructions](https://docs.metaplex.com/storefront/installation#apple-m1-chip). 
-
-Let's start by cloning the metaplex repo from Github. Check [here](https://github.com/metaplex-foundation/metaplex/tags) for tag name of the latest version, you can replace `v1.1.1` with the latest version. *I recommend cloning the repo to the home folder of your user. So, you can do a `cd ~`  to get there (not sure what it is on Windows lol).*
-
+### 🍬 Install Sugar
 ```plaintext
-git clone -b v1.1.1 https://github.com/metaplex-foundation/metaplex.git
+1. sudo apt install libudev-dev pkg-config unzip
+2. bash <(curl -sSf https://sugar.metaplex.com/install.sh)
 ```
 
-From here it's just a matter of installing all the dependencies for this CLI, by using this command in the directory where you just installed Metaplex. Note: I don't actually cd into the folder. I just run all the commands I need from outside the folder. I never actually go inside the `metaplex` folder. You'll see why this is easier later!
+Once you've successfully install Sugar, you should be able to get the following output by typing `sugar` in the terminal.
 
-```plaintext
-yarn install --cwd ~/metaplex/js/
+```bash
+sugar-cli 1.0.0-rc.2
+Command line tool for creating and managing Metaplex Candy Machines.
+
+USAGE:
+sugar [OPTIONS] <SUBCOMMAND>
+
+OPTIONS:
+
+-h, --help Print help information
+-l, --log-level <LOG_LEVEL> Log level: trace, debug, info, warn, error, off
+-V, --version Print version information
+
+SUBCOMMANDS:
+    bundlr            Interact with the bundlr network
+    collection        Manage the collection on the candy machine
+    create-config     Interactive process to create the config file
+    deploy            Deploy cache items into candy machine config on-chain
+    freeze            Commands for the Candy Machine Freeze feature
+    hash              Generate hash of cache file for hidden settings
+    help              Print this message or the help of the given subcommand(s)
+    launch            Create a candy machine deployment from assets
+    mint              Mint one NFT from candy machine
+    reveal            Reveal the NFTs from a hidden settings candy machine
+    show              Show the on-chain config of an existing candy machine
+    sign              Sign one or all NFTs from candy machine
+    thaw              Thaw an NFT or all NFTs in a candy machine
+    unfreeze-funds    Unlock treasury funds after freeze is turned off or expires
+    update            Update the candy machine config on-chain
+    upload            Upload assets to storage and creates the cache config
+    validate          Validate JSON metadata files
+    verify            Verify uploaded data
+    withdraw          Withdraw funds from candy machine account closing it
 ```
-
-In case you get an error such as `There appears to be trouble with your network connection. Retrying...`, you may try using:
-```plaintext
-yarn install --cwd ~/metaplex/js/ --network-timeout 600000
-```
-Most of the time this happens because the default timeout that is set in the Yarn configuration is too low, so when this time runs out it assumes that it's a network problem. 
-
-Before we move on, let's make sure everything is working as expected by running the following command to get the `version`.
-
-```plaintext
-ts-node ~/metaplex/js/packages/cli/src/candy-machine-v2-cli.ts --version
-```
-
-This should spit out `0.0.2`. At this point, we are good to go to start setting up our NFTs :).
-
-**Note**: If you're on MacOS, you might run into an issue if you had the old version of the Metaplex CLI installed. Make sure you delete the `metaplex-foundation` or `metaplex` directory in your `~` folder!
  
 ### 🚨 Progress Report
 

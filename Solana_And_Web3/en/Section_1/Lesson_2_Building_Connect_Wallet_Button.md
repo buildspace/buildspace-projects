@@ -36,18 +36,11 @@ const App = () => {
    * connected or not
    */
   const checkIfWalletIsConnected = async () => {
-    try {
-      const { solana } = window;
-
-      if (solana) {
-        if (solana.isPhantom) {
-          console.log('Phantom wallet found!');
-        }
-      } else {
-        alert('Solana object not found! Get a Phantom Wallet 👻');
-      }
-    } catch (error) {
-      console.error(error);
+  // We're using optional chaining (question mark) to check if the object is null
+    if (window?.solana?.isPhantom) {
+      console.log('Phantom wallet found!');
+    } else {
+      alert('Solana object not found! Get a Phantom Wallet 👻');
     }
   };
 
@@ -93,20 +86,12 @@ Nice! Not too bad right? Let's break this down a bit:
 
 ```jsx
 const checkIfWalletIsConnected = async () => {
-  try {
-    const { solana } = window;
-
-    if (solana) {
-      if (solana.isPhantom) {
-        console.log('Phantom wallet found!');
-      }
+    if (window?.solana?.isPhantom) {
+      console.log('Phantom wallet found!');
     } else {
       alert('Solana object not found! Get a Phantom Wallet 👻');
     }
-  } catch (error) {
-    console.error(error);
-  }
-};
+  };
 ```
 
 Our function here is checking the `window` object in our DOM to see if the Phantom Wallet extension has injected the `solana` object. If we do have a `solana` object, we can also check to see if it's a Phantom Wallet.
@@ -145,28 +130,19 @@ All we need to do is add one more line to our `checkIfWalletIsConnected` functio
 
 ```jsx
 const checkIfWalletIsConnected = async () => {
-  try {
-    const { solana } = window;
-
-    if (solana) {
-      if (solana.isPhantom) {
-        console.log('Phantom wallet found!');
-
-        /*
-         * The solana object gives us a function that will allow us to connect
-         * directly with the user's wallet!
-         */
-        const response = await solana.connect({ onlyIfTrusted: true });
-        console.log(
-          'Connected with Public Key:',
-          response.publicKey.toString()
-        );
-      }
-    } else {
-      alert('Solana object not found! Get a Phantom Wallet 👻');
-    }
-  } catch (error) {
-    console.error(error);
+  if (window?.solana?.isPhantom) {
+    console.log('Phantom wallet found!');
+    /*
+    * The solana object gives us a function that will allow us to connect
+    * directly with the user's wallet
+    */
+    const response = await window.solana.connect({ onlyIfTrusted: true });
+    console.log(
+      'Connected with Public Key:',
+      response.publicKey.toString()
+    );
+  } else {
+    alert('Solana object not found! Get a Phantom Wallet 👻');
   }
 };
 ```
@@ -201,23 +177,15 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const App = () => {
   // Actions
   const checkIfWalletIsConnected = async () => {
-    try {
-      const { solana } = window;
-
-      if (solana) {
-        if (solana.isPhantom) {
-          console.log('Phantom wallet found!');
-          const response = await solana.connect({ onlyIfTrusted: true });
-          console.log(
-            'Connected with Public Key:',
-            response.publicKey.toString()
-          );
-        }
-      } else {
-        alert('Solana object not found! Get a Phantom Wallet 👻');
-      }
-    } catch (error) {
-      console.error(error);
+    if (window?.solana?.isPhantom) {
+      console.log('Phantom wallet found!');
+      const response = await window.solana.connect({ onlyIfTrusted: true });
+      console.log(
+        'Connected with Public Key:',
+        response.publicKey.toString()
+      );
+    } else {
+      alert('Solana object not found! Get a Phantom Wallet 👻');
     }
   };
 
@@ -321,28 +289,20 @@ const App = () => {
 
   // Actions
   const checkIfWalletIsConnected = async () => {
-    try {
-      const { solana } = window;
+    if (window?.solana?.isPhantom) {
+      console.log('Phantom wallet found!');
+      const response = await window.solana.connect({ onlyIfTrusted: true });
+      console.log(
+        'Connected with Public Key:',
+        response.publicKey.toString()
+      );
 
-      if (solana) {
-        if (solana.isPhantom) {
-          console.log('Phantom wallet found!');
-          const response = await solana.connect({ onlyIfTrusted: true });
-          console.log(
-            'Connected with Public Key:',
-            response.publicKey.toString()
-          );
-
-          /*
-           * Set the user's publicKey in state to be used later!
-           */
-          setWalletAddress(response.publicKey.toString());
-        }
-      } else {
-        alert('Solana object not found! Get a Phantom Wallet 👻');
-      }
-    } catch (error) {
-      console.error(error);
+      /*
+       * Set the user's publicKey in state to be used later!
+       */
+      setWalletAddress(response.publicKey.toString());
+    } else {
+      alert('Solana object not found! Get a Phantom Wallet 👻');
     }
   };
 
@@ -399,28 +359,20 @@ Look at all this fancy React. Hype. Lets just go over the changes really quick:
 
 ```jsx
 const checkIfWalletIsConnected = async () => {
-  try {
-    const { solana } = window;
+  if (window?.solana?.isPhantom) {
+    console.log('Phantom wallet found!');
+    const response = await window.solana.connect({ onlyIfTrusted: true });
+    console.log(
+      'Connected with Public Key:',
+      response.publicKey.toString()
+    );
 
-    if (solana) {
-      if (solana.isPhantom) {
-        console.log('Phantom wallet found!');
-        const response = await solana.connect({ onlyIfTrusted: true });
-        console.log(
-          'Connected with Public Key:',
-          response.publicKey.toString()
-        );
-
-        /*
-         * Set the user's publicKey in state to be used later!
-         */
-        setWalletAddress(response.publicKey.toString());
-      }
-    } else {
-      alert('Solana object not found! Get a Phantom Wallet 👻');
-    }
-  } catch (error) {
-    console.error(error);
+    /*
+     * Set the user's publicKey in state to be used later!
+     */
+    setWalletAddress(response.publicKey.toString());
+  } else {
+    alert('Solana object not found! Get a Phantom Wallet 👻');
   }
 };
 ```

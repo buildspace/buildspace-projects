@@ -179,7 +179,12 @@ const [currentAccount, setCurrentAccount] = useState("");
    * All state property to store all waves
    */
   const [allWaves, setAllWaves] = useState([]);
-  const contractAddress = "0x957fe7381be45A31967F1EcfAc6Ff001D8AF8D6c";
+  const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  
+   /*
+   * Create a variable here that references the abi content!
+   */
+  const contractABI = abi.abi;
 
   /*
    * Create a method that gets all waves from your contract

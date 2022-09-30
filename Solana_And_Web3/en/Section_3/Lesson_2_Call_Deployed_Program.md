@@ -105,7 +105,7 @@ Before we can interact with the packages that we installed earlier, we need to i
 
 ```javascript
 import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
-import { Program, Provider, web3 } from '@project-serum/anchor';
+import { Program, AnchorProvider, web3 } from '@project-serum/anchor';
 ```
 
 *Note (only for Replit users):*  
@@ -145,7 +145,7 @@ Let's create a function called `getProvider`. Add this right below `onInputChang
 ```javascript
 const getProvider = () => {
   const connection = new Connection(network, opts.preflightCommitment);
-  const provider = new Provider(
+  const provider = new AnchorProvider(
     connection, window.solana, opts.preflightCommitment,
   );
   return provider;
@@ -172,7 +172,7 @@ import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 import { Connection, PublicKey, clusterApiUrl} from '@solana/web3.js';
 import {
-  Program, Provider, web3
+  Program, AnchorProvider, web3
 } from '@project-serum/anchor';
 
 // SystemProgram is a reference to the Solana runtime!

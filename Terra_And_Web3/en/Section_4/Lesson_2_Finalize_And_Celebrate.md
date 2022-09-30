@@ -20,8 +20,6 @@ I just wanna inspire you to work in web3 lol. This shit is awesome. And it'd be 
 
 Be sure you click "Work in Web3" on the left and fill out your profile if you haven't done so already!!! We're partnered w/ some of the best web3 companies in the world (ex. Uniswap, OpenSea, Chainlink, Edge and Node, and more) and they want to hire devs from the buildspace network :). You've already picked up a skill that is actually extremely valuable and companies are paying top dollar for awesome web3 engineers.
 
-### 🤟 Your NFT!
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 1 week pls pls pls drop us a message on whereismynft@buildspace.so
 
 ### 🌈 Before you head out
 Now that you're all done, wanna see if you can beat my score? I'm trynna get as many players as I can on here :D
