@@ -57,12 +57,6 @@ You'll also want to install something called **OpenZeppelin** which is another l
 npm install @openzeppelin/contracts
 ```
 
-Finally, run `npx hardhat accounts` and this should print out a bunch of strings that look like this:
-
-`0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`
-
-These are Ethereum addresses that Hardhat generates for us to simulate real users on the blockchain. This is going to help us a ton later in the project when we want to simulate users minting domains!
-
 ### 🌟 Run it
 
 To make sure everything is working, run:
@@ -79,13 +73,13 @@ npx hardhat test
 
 You should see something like this:
 
-![https://i.imgur.com/rjPvls0.png](https://i.imgur.com/rjPvls0.png)
+![https://i.imgur.com/0pmWiND.png](https://i.imgur.com/0pmWiND.png)
 
 Let’s do a little clean-up.
 
 Go ahead and open the code for the project now in your favorite code editor. I like VSCode best! We want to delete all the lame starter code generated for us. We don't need any of that. We're pros!
 
-Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `sample-script.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. Don't delete the actual folders!
+Go ahead and delete the file `Lock.js` under `test`.  Also, delete `deploy.js` under `scripts`. Then, delete `Lock.sol` under `contracts`. Don't delete the actual folders!
 
 ### 🚨 Before you click "Next Lesson"
 
