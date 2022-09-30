@@ -70,7 +70,7 @@ I think this is pretty self explanatory. `useWallet` is a custom hook provided b
 {wallet.publicKey ? "Hello World" : renderNotConnectedContainer()}
 ```
 
-Here, we're telling React to only render `Hello World` if we have a `publicKey` available. So, if there is not `publicKey`, that means a user has not connected their wallet and we should show them the button to connect their wallet. 
+Here, we're telling React to only render `Hello World` if we have a `publicKey` available. So, if there is no `publicKey`, that means a user has not connected their wallet and we should show them the button to connect their wallet. 
 
 Go ahead and refresh your page and press your Select Wallet button! If all works, you should finally see the Phantom Wallet extension appear like this:
 

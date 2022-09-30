@@ -7,16 +7,17 @@ You may have built "Connect to Wallet" buttons in the past! This time, we'll be 
 Head over to `src/index.js` in your React App and add the following code:
 
 ```jsx
+import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 
-// Import thirdweb provider and Rinkeby ChainId
+import './index.css';
+
+// Import thirdweb provider and Goerli ChainId
 import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
 
 // This is the chainId your dApp will work on.
-const activeChainId = ChainId.Rinkeby;
+const activeChainId = ChainId.Goerli;
 
 // Wrap your app with the thirdweb provider
 ReactDOM.render(
@@ -29,7 +30,7 @@ ReactDOM.render(
 );
 ```
 
-Pretty simple. We're importing thirdweb and then specifying the `chainId` of the chain we're working on, which is Rinkeby!.
+Pretty simple. We're importing thirdweb and then specifying the `chainId` of the chain we're working on, which is Goerli!.
 
 Then we're wrapping everything with `<ThirdwebProvider>`, this provider holds the user's authenticated wallet data (if they've connected to our website before) and passes it over to `App`.
 

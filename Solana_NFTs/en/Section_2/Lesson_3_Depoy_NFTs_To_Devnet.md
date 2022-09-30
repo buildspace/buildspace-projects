@@ -2,7 +2,7 @@ This is going to be one of the most epic parts of this project - bringing your c
 
 Candy Machine Sugar has made this process a lot simpler. With just one command, you'll do the following:
 
-1. Upload your NFTs to [Arweave](https://www.arweave.org) (which is a decentralized file-store) and initialize your candy machine's config. 
+1. Upload your NFTs to [NFT Storage](https://nft.storage/) (which is a decentralized file-store) or which ever storage option you configured in your `config.json` and initialize your candy machine's config. 
 2. Create your candy machine on Metaplex's contract.
 3. Configure your candy machine with the price, number, go live date, and a bunch of other things.
 
@@ -185,26 +185,26 @@ Now that all my NFTs are uploaded to NFT.Storage, Sugar should generate a `cache
   "items": {
     "0": {
       "name": "Number #0001",
-      "image_hash": "c35549fe0b4e34ad43125c31f3230b24fd63b04ec608a2194480538ad801c7a7",
-      "image_link": "https://nftstorage.link/ipfs/bafybeibashf2petu2zntfwvgupivtk5bla4juptnrzojrtxc74bnpfgy4m/0.png",
+      "image_hash": "6e7fcf86a39f332caa9da55afff12f3bbf7de43458a0586e05c00c1c58a3dcbd",
+      "image_link": "https://nftstorage.link/ipfs/bafybeidqys52bzlqnt4mclhmkzojtgs622pbsvwjqsn5vfwg5puqu7aimi/0.png",
       "metadata_hash": "8914d9935ddcf560152e40b0cdb2ecfa1086ab6225997c35d91373a88dc935bf",
-      "metadata_link": "https://nftstorage.link/ipfs/bafybeihiosxwunv5dfxq66ykxrmdxffvcoakqprsdl3bvzzooaigwwbzvy/0.json",
+      "metadata_link": "https://nftstorage.link/ipfs/bafybeih3n56rqtq5573dcdgiedh7hkukfmeqdd6wdsdpranyw322k7hrb4/0.json",
       "onChain": false
     },
     "1": {
       "name": "Number #0002",
-      "image_hash": "c35549fe0b4e34ad43125c31f3230b24fd63b04ec608a2194480538ad801c7a7",
-      "image_link": "https://nftstorage.link/ipfs/bafybeibashf2petu2zntfwvgupivtk5bla4juptnrzojrtxc74bnpfgy4m/1.png",
+      "image_hash": "003389bcc3b62044113897f81c3b39e2238b6b73218f73cfb51182db5a9a0635",
+      "image_link": "https://nftstorage.link/ipfs/bafybeidqys52bzlqnt4mclhmkzojtgs622pbsvwjqsn5vfwg5puqu7aimi/1.png",
       "metadata_hash": "1c1a1bb8cb7b7bff0640fc87c69c6db0b6a404e648c81cdf9b08a8199e9bb1a7",
-      "metadata_link": "https://nftstorage.link/ipfs/bafybeihiosxwunv5dfxq66ykxrmdxffvcoakqprsdl3bvzzooaigwwbzvy/1.json",
+      "metadata_link": "https://nftstorage.link/ipfs/bafybeih3n56rqtq5573dcdgiedh7hkukfmeqdd6wdsdpranyw322k7hrb4/1.json",
       "onChain": false
     },
     "2": {
       "name": "Number #0003",
-      "image_hash": "c35549fe0b4e34ad43125c31f3230b24fd63b04ec608a2194480538ad801c7a7",
-      "image_link": "https://nftstorage.link/ipfs/bafybeibashf2petu2zntfwvgupivtk5bla4juptnrzojrtxc74bnpfgy4m/2.png",
+      "image_hash": "1e103f64268d4f67ee9591a5d63e565a42e7a72d8eb95523f1a5c079ad9181c1",
+      "image_link": "https://nftstorage.link/ipfs/bafybeidqys52bzlqnt4mclhmkzojtgs622pbsvwjqsn5vfwg5puqu7aimi/2.png",
       "metadata_hash": "a5e48e419e40062e6b3e84f944e1d2372ee211894dddcd4c8029711d8bf78c5a",
-      "metadata_link": "https://nftstorage.link/ipfs/bafybeihiosxwunv5dfxq66ykxrmdxffvcoakqprsdl3bvzzooaigwwbzvy/2.json",
+      "metadata_link": "https://nftstorage.link/ipfs/bafybeih3n56rqtq5573dcdgiedh7hkukfmeqdd6wdsdpranyw322k7hrb4/2.json",
       "onChain": false
     }
   }
@@ -222,7 +222,7 @@ Your output should look something like this
 ```bash
 sean@DESKTOP-BMVDNJH:/mnt/c/Users/seanl/Desktop/test$ sugar deploy
 [1/2] 🍬 Creating candy machine
-Candy machine ID: E5WhspaVfvhapn8xwcviSLgyX7YwRvC9h9LuAqLHr9Kc
+Candy machine ID: 9izUuhTxKhJ3qJTDtjR2UYNEvzTRiUiVebCqYdPNjxD8
 
 [2/2] 📝 Writing config lines
 Sending config line(s) in 1 transaction(s): (Ctrl+C to abort)
@@ -255,16 +255,16 @@ Verifying 3 config line(s): (Ctrl+C to abort)
 Verification successful. You're good to go!
 
 See your candy machine at:
-  -> https://www.solaneyes.com/address/E5WhspaVfvhapn8xwcviSLgyX7YwRvC9h9LuAqLHr9Kc?cluster=devnet
+  -> https://www.solaneyes.com/address/9izUuhTxKhJ3qJTDtjR2UYNEvzTRiUiVebCqYdPNjxD8?cluster=devnet
 
 ✅ Command successful.
 ```
 
 Boom! You are ready to go! You'll notice that there's a link provided in the terminal. Click on it and it should re-direct you to your NFT collection page. It should look something like this
 
-<img src="https://i.imgur.com/MGqWEpA.png" />
+<img src="https://i.imgur.com/XGo48BZ.png" />
 
-If you look at the `cache.json` file, you'll find an attribute `image_link` attached to each of your NFT items. Copy + paste one of those links into your browser and check out your NFT's image. You'll also find another attribute `metadata_link` in each of your NFT items. Copy + paste it into your browser and you should be able to see your NFT's metadata! If you're using `Bundlr`, it is extremely cool. It stores your image on Arweave which stores data **permanently**. This is very different from the world of IPFS/Filecoin — where data is store peer-to-peer based on nodes that decide to keep the file around.
+If you look at the `cache.json` file, you'll find an attribute `image_link` attached to each of your NFT items. Copy + paste one of those links into your browser and check out your NFT's image. You'll also find another attribute `metadata_link` in each of your NFT items. Copy + paste it into your browser and you should be able to see your NFT's metadata! If you're using `Bundlr`, it will store your image on Arweave which stores data **permanently**. This is very different from the world of IPFS/Filecoin — where data is store peer-to-peer based on nodes that decide to keep the file around.
 
 Arweave is pay once, store **forever**. They do this using an [algorithm](https://arwiki.wiki/#/en/storage-endowment#toc_Transaction_Pricing) they created that basically estimates the cost needed to store something forever based on how big it is. You can play around with the calculator [here](https://arweavefees.com/). For example, to store 1MB forever it costs `~$0.0083649802618`. Not bad!
 
