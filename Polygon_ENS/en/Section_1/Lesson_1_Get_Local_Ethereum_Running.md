@@ -48,7 +48,7 @@ The sample project will ask you to install `hardhat-waffle` and `hardhat-ethers`
 Go ahead and install these other dependencies just in case it didn't do it automatically.
 
 ```bash
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+npm install --save-dev @nomicfoundation/hardhat-chai-matchers @nomiclabs/hardhat-ethers ethers
 ```
 
 You'll also want to install something called **OpenZeppelin** which is another library that's used a lot to develop secure smart contracts. We'll learn more about it later. For now, just install it :).
