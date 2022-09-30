@@ -88,6 +88,7 @@ Super exciting that you made it to the end. Pretty big deal!! Solana is **super
 
 Thank you for contributing to the future of web3 by learning this stuff. The fact that you know how this works and how to code it up is a superpower. Use your power wisely ;).
 
+
 ### 🌈 Before you head out
 
 Go to **#showcase** in Discord and drop us a link to your final product that we can mess around with :).

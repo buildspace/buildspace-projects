@@ -179,10 +179,6 @@ What you learned in this project is just the beginning! There is so much more yo
 - **Add Royalties** - You can also add royalties to your smart contract that would give you a percentage of every future sale of your NFT! Read more about it here: [EIP-2981: NFT Royalty Standard](https://eips.ethereum.org/EIPS/eip-2981)
 - **Test your contracts locally** - If you want to test your contracts more extensively without deploying to a test net like Goerli, Hardhat of course will let you do that! Best way to achieve that is to open up a separate terminal window, navigate to your project directory, then run ```npx hardhat node``` and keep that window open! Just like in the beginning of the project you'll see a bunch of accounts with lots of ether. In your other terminal window you can run your test scripts and watch it affect your node window!
 
-## 🤟 Your NFT!
-
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
-
 
 ## 🌈 Before you head out
 
