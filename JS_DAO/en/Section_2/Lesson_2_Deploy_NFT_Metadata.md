@@ -8,7 +8,7 @@ Head over to `scripts/3-config-nft.js` and add in:
 import sdk from "./1-initialize-sdk.js";
 import { readFileSync } from "fs";
 
-const editionDrop = sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
+const editionDrop = await sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
 
 (async () => {
   try {
@@ -73,7 +73,7 @@ Head over to `scripts/4-set-claim-condition.js` and add:
 import sdk from "./1-initialize-sdk.js";
 import { MaxUint256 } from "@ethersproject/constants";
 
-const editionDrop = sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
+const editionDrop = await sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
 
 (async () => {
   try {
