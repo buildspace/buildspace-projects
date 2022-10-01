@@ -36,11 +36,11 @@ Here's what it looks like:
 
 You know those websites where people are making millions of dollars where users can come and "mint" an NFT? We're building that.
 
-Your project will let users connect their Ethereum wallet, and mint an NFT to their wallet so they actually own it. They'll even be able to re-sell the NFT on Pixxiti. The NFT itself can be customized to whatever you want.
+Your project will let users connect their Ethereum wallet, and mint an NFT to their wallet so they actually own it. They'll even be able to re-sell the NFT on OpenSea. The NFT itself can be customized to whatever you want.
 
 ![](https://i.imgur.com/n2gtgFC.png)
 
-They'll even show up on Pixxiti :).
+They'll even show up on OpenSea :).
 
 ![](https://i.imgur.com/2nQ6Csp.png)
 

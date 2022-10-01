@@ -97,7 +97,7 @@ The `tokenURI` is where the actual NFT data lives. And it usually **links** to a
 
 You can customize this, but, almost every NFT has a name, description, and a link to something like a video, image, etc. It can even have custom attributes on it! Be careful with the structure of your metadata, if your structure does not match the [OpenSea Requirements](https://docs.opensea.io/docs/metadata-standards) your NFT will appear broken on the website.
 
-This is all part of the `ERC721` standards and it allows people to build websites on top of NFT data. For example, [Pixxiti](https://goerli.pixxiti.com/) is a platform to view NFTs. And, every NFT on Pixxiti follows the `ERC721` metadata standard which makes it easy for people to view their NFTs. Imagine if everyone followed their own NFT standards and structured their metadata however they wanted, it'd be chaos!
+This is all part of the `ERC721` standards and it allows people to build websites on top of NFT data. For example, [OpenSea](https://testnets.opensea.io/) is a platform to view NFTs. And, every NFT on OpenSea follows the `ERC721` metadata standard which makes it easy for people to view their NFTs. Imagine if everyone followed their own NFT standards and structured their metadata however they wanted, it'd be chaos!
 
 We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [this](https://jsonkeeper.com/) website. This website is just an easy place for people to host JSON data and we'll be using it to keep our NFT data for now. Once you click "Save" you'll get a link to the JSON file. (For example, mine is [`https://jsonkeeper.com/b/RUUS`](https://jsonkeeper.com/b/RUUS)). Be sure to test your link out and be sure it all looks good!
 
@@ -175,9 +175,9 @@ So, right now every time someone mints an NFT with this function, it's always th
 
 Now, let's move to the next step — deploying to a testnet :).
 
-## 🎉 Deploy to Goerli and see on Pixxiti
+## 🎉 Deploy to Goerli and see on OpenSea
 
-Since OpenSea doesn't support Goerli, we have to look for an alternative. You can check out [Pixxiti](https://goerli.pixxiti.com/) to view your NFT when you deploy to Goerli. When we use `run.js`, it's just us working locally.
+Since OpenSea doesn't support Goerli, we have to look for an alternative. You can check out [OpenSea](https://goerli.OpenSea.com/) to view your NFT when you deploy to Goerli. When we use `run.js`, it's just us working locally.
 
 The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to **view our NFT online** and we are a step closer to getting this to **real users.** 
 
@@ -351,16 +351,16 @@ Get used to using Etherscan because it's like the easiest way to track deploymen
 
 If it worked — AWEEEEESOME YOU JUST DEPLOYED A CONTRACT YESSSS.
 
-## 🌊 View on Pixxiti
+## 🌊 View on OpenSea
 
-Believe it or not. The NFTs you just minted will be on Pixxiti's TestNet site.
+Believe it or not. The NFTs you just minted will be on OpenSea's TestNet site.
 
-1. Head to `https://goerli.pixxiti.com/`.
-2. Create this url: `https://goerli.pixxiti.com/nfts/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE/TOKEN_ID`
+1. Head to `https://testnets.opensea.io/`.
+2. Create this url: `https://testnets.opensea.io/assets/goerli/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE/TOKEN_ID`
 
-For example, here's my link: https://goerli.pixxiti.com/nfts/0x78d1e929cfc5256643b3cc67c50e2d7ec3580842/0 for the Spongebob NFT!! My `tokenId` is `0` because it was the first mint from that contract.
+For example, here's my link: https://testnets.opensea.io/assets/goerli/0x78d1e929cfc5256643b3cc67c50e2d7ec3580842/0 for the Spongebob NFT!! My `tokenId` is `0` because it was the first mint from that contract.
 
-**Basically, if you don't see your NFT on Pixxiti within a few minutes, refreshing the page and wait for another 15 mins** 
+**Basically, if you don't see your NFT on OpenSea within a few minutes, refreshing the page and wait for another 15 mins** 
 
 ![Untitled](https://i.imgur.com/ePDlYX1.png)
 
