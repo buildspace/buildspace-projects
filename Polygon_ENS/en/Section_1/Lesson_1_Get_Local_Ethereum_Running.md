@@ -26,7 +26,7 @@ Next, let's head to our terminal (Git Bash will not work). Go ahead and `cd` t
 mkdir cool-domains
 cd cool-domains
 npm init -y
-npm install --save-dev hardhat@2.9.9
+npm install --save-dev hardhat@latest
 ```
 
 You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Running `npx audit fix` can break things, so it’s better to just skip it. Google around a bit about these vulnerabilities if you want to know more!
@@ -41,14 +41,14 @@ Run:
 npx hardhat
 ```
 
-Choose the option to “Create a javascript project”. Say yes to everything.
+Choose the option to “Create a JavaScript project”. Say yes to everything.
 
-The sample project will ask you to install `hardhat-waffle` and `hardhat-ethers`. These are other goodies we'll use later :).
+The sample project will ask you to install `@nomicfoundation/hardhat-toolbox`. These are other goodies we'll use later :).
 
 Go ahead and install these other dependencies just in case it didn't do it automatically.
 
 ```bash
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+npm install --save-dev @nomicfoundation/hardhat-chai-matchers chai @nomiclabs/hardhat-ethers ethers
 ```
 
 You'll also want to install something called **OpenZeppelin** which is another library that's used a lot to develop secure smart contracts. We'll learn more about it later. For now, just install it :).
