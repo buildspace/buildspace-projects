@@ -1,14 +1,14 @@
-## 🌊 Give user their Pixxiti link
+## 🌊 Give user their OpenSea link
 
-One thing that’d be awesome is after the NFT is minted we actually give a link to their NFT on Pixxiti that they’d be able to share on Twitter or with their friends!!
+One thing that’d be awesome is after the NFT is minted we actually give a link to their NFT on OpenSea that they’d be able to share on Twitter or with their friends!!
 
-The link for an NFT on Pixxiti looks like this:
+The link for an NFT on OpenSea looks like this:
 
-`https://goerli.pixxiti.com/nfts/0x0c8d62188c252732215d61031909cd26ba4f4d66/4`
+`https://testnets.opensea.io/assets/goerli/0x78d1e929cfc5256643b3cc67c50e2d7ec3580842/0`
 
 Basically, these are the variables.
 
-`https://goerli.pixxiti.com/nfts/INSERT_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`
+`https://testnets.opensea.io/assets/goerli/INSERT_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`
 
 So, our web app has the contract address, but not the token id! So, we’ll need to change up our contract to retrieve that. Let’s do it.
 
@@ -43,12 +43,12 @@ Now on our frontend we add this magical line (I’ll show you where to put it in
 ```javascript
 connectedContract.on("NewEpicNFTMinted", (from, tokenId) => {
 	console.log(from, tokenId.toNumber())
-	alert(`Hey there! We've minted your NFT. It may be blank right now. It can take a max of 10 min to show up on Pixxiti. Here's the link: <https://goerli.pixxiti.com/nfts/${CONTRACT_ADDRESS}/${tokenId.toNumber()}>`)
+	alert(`Hey there! We've minted your NFT. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: <https://testnets.opensea.io/assets/goerli/${CONTRACT_ADDRESS}/${tokenId.toNumber()}>`)
 });
 
 ```
 
-Okay this is fkin epic. In real-time, we’ll capture the mint event, get the tokenId, and give the user their Pixxiti link for their newly minted NFT.
+Okay this is fkin epic. In real-time, we’ll capture the mint event, get the tokenId, and give the user their OpenSea link for their newly minted NFT.
 
 The code for `App.js` and the contract is [here](https://gist.github.com/farzaa/5015532446dfdb267711592107a285a9). It’s really nothing fancy. Just setting up an event listener! I made sure to drop comments on lines I added to make it easy to see what I changed. Be sure to add a call to `setupEventListener()` in two places like I do in the code! Don't miss that :).
 
@@ -101,13 +101,13 @@ Add your Twitter at the bottom :)! Already gave you a little template for it.
 
 Perhaps the most important part!
 
-Usually, when people want to see an NFT collection, they look at it on Pixxiti!! It's a super-easy way for people to get a feel for your collection. So if you link your friend your site, they'll know it's legit!!
+Usually, when people want to see an NFT collection, they look at it on OpenSea!! It's a super-easy way for people to get a feel for your collection. So if you link your friend your site, they'll know it's legit!!
 
-Add a little button that says "🌊 View Collection on Pixxiti" and then when your users clicks it, it links to your collection! Remember, your collections link changes every time you change the contract. So be sure to link your latest and final collection. For example, [this](https://goerli.pixxiti.com/collections/0xa3edf0e5066013a62c3ef36683cbc689825303db) is my collection.
+Add a little button that says "🌊 View Collection on OpenSea" and then when your users clicks it, it links to your collection! Remember, your collections link changes every time you change the contract. So be sure to link your latest and final collection. For example, [this](https://testnets.opensea.io/collection/squarenft-ak8283fv8m) is my collection.
 
-Note: This link you'll need to hardcode. I left a variable at the top for you to fill in. It can't be dynamically generated unless you use the Pixxiti API (which is overkill for now lol).
+Note: This link you'll need to hardcode. I left a variable at the top for you to fill in. It can't be dynamically generated unless you use the OpenSea API (which is overkill for now lol).
 
 
 ## 🚨 Progress report!
 
-You're nearly at the end :). Post a screenshot in #progress with that little pop-up that gives your user the direct Pixxiti link!
+You're nearly at the end :). Post a screenshot in #progress with that little pop-up that gives your user the direct OpenSea link!

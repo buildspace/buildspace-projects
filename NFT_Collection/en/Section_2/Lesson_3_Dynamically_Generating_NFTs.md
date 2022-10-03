@@ -156,7 +156,7 @@ All that's happening here is we're putting it all together and adding that same 
 
 ## 🛠 Debugging the `finalTokenUri` content
 
-Now that you have your tokenURI setup, how do we know if it's actually correct? After all, this holds all our data for our NFT! You can use a cool tool like - [NFT Preview](https://nftpreview.0xdev.codes/) to see a quick preview of the image and the contents of the json without deploying it again and again on the Pixxiti testnet. 
+Now that you have your tokenURI setup, how do we know if it's actually correct? After all, this holds all our data for our NFT! You can use a cool tool like - [NFT Preview](https://nftpreview.0xdev.codes/) to see a quick preview of the image and the contents of the json without deploying it again and again on the OpenSea testnet. 
 
 To make it easier, you can pass the `tokenURI` code as a query parameter like this,
 
@@ -186,13 +186,13 @@ The coolest part is we can just re-deploy without changing our script using:
 npx hardhat run scripts/deploy.js --network goerli
 ```
 
-Once we redeploy, you'll be able to see your NFTs on [https://goerli.pixxiti.com](https://goerli.pixxiti.com) once you search the newly deployed contract address. Again, **don't click enter**. Pixxiti is weird so you'll need to click the collection itself when it comes up.
+Once we redeploy, you'll be able to see your NFTs on [https://testnets.opensea.io](https://testnets.opensea.io/) once you search the newly deployed contract address. Again, **don't click enter**. OpenSea is weird so you'll need to click the collection itself when it comes up.
 
-Note: Remember to use `https://goerli.pixxiti.com/nfts/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE/TOKEN_ID` if you're using Rarible.
+Note: Remember to use `https://testnet.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:TOKEN_ID` if you're using Rarible.
 
 Contracts are **permanent**. So, whenever we re-deploy our contract we're actually creating a whole new collection.
 
-You should be able to see the new collection on Pixxiti :)!
+You should be able to see the new collection on OpenSea :)!
 
 ## 🤖 Allowing users to mint
 
@@ -204,4 +204,4 @@ So, let's build that :)!
 
 ## 🚨Progress report
 
-If you got one, send a screenshot in #progress of your new dynamically generated NFT on Pixxiti :). Also -- if you haven't tweeted an image of your hilarious NFT collection yet now is the time to do so!! Remember to tag @_buildspace!!! We'll RT as many people as we can!
+If you got one, send a screenshot in #progress of your new dynamically generated NFT on OpenSea :). Also -- if you haven't tweeted an image of your hilarious NFT collection yet now is the time to do so!! Remember to tag @_buildspace!!! We'll RT as many people as we can!

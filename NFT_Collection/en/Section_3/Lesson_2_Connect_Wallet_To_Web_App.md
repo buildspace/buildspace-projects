@@ -14,7 +14,7 @@ import twitterLogo from './assets/twitter-logo.svg';
 // Constants
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const PIXXITI_LINK = '';
+const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
 
 const App = () => {
@@ -94,7 +94,7 @@ import twitterLogo from './assets/twitter-logo.svg';
 // Constants
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const PIXXITI_LINK = '';
+const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
 
 const App = () => {
@@ -187,7 +187,7 @@ import twitterLogo from './assets/twitter-logo.svg';
 
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const PIXXITI_LINK = '';
+const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
 
 const App = () => {
