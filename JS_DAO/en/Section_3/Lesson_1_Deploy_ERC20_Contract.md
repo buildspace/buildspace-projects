@@ -66,7 +66,7 @@ Boom! It deployed a fresh token contract. If you head to [`https://goerli.ethers
 
 You can even add your token to Metamask as a custom token.
 
-Just click “Import Token”:
+Just click “Import tokens”:
 
 ![Untitled](https://i.imgur.com/Bf56dyv.png)
 
