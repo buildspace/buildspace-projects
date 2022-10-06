@@ -376,7 +376,7 @@ You should be able to go and actually mint a domain NFT right from your website 
 
 **Let's go!**
 
-This is basically how all these NFT minting sites work and you just got it done yourself :).
+This is basically how all these NFT minting sites work and you just got it done yourself :)
 
 ### ✈️ A note on contract redeploys
 
