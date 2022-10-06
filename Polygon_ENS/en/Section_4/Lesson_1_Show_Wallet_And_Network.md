@@ -175,6 +175,6 @@ const renderInputForm = () =>{
 
 ### 🚨Progress report
 
-Jump into the CSS and chuck a fancy gradient on the address container or the switch button. Maybe bring back the corners?  
+Jump into the CSS and chuck a fancy gradient on the address container or the switch button. Maybe bring back the corners?
 
 Post a screenshot of your newly added component :)

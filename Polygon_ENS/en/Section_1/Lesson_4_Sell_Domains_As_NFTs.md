@@ -469,4 +469,4 @@ AND YOU’RE CAPTURING PAYMENTS ON POLYGON.
 
 **This is tough stuff. Way to go!**
 
-Post a screenshot of your awesome custom NFT-domain in #progress and maybe even tweet it out to show people what you’re up to — be sure to tag `@_buildspace` ;). 
+Post a screenshot of your awesome custom NFT-domain in #progress and maybe even tweet it out to show people what you’re up to — be sure to tag `@_buildspace` ;) 

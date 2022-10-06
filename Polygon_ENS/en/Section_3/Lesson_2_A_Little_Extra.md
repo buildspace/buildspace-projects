@@ -79,7 +79,7 @@ function register(string calldata name) public payable {
 That’s it! If you deploy this contract, you’ll be doing a whole lot more than before. Don't forget to copy and paste your new contract address and contract ABI
 to your React application!
 
-Look at you, saving gas, being efficient, and checking domain validity on the blockchain. What’s next? Are you gonna **upgrade** your smart contracts? LOL 
+Look at you, saving gas, being efficient, and checking domain validity on the blockchain. What’s next? Are you gonna **upgrade** your smart contracts? LOL
 
 ### 🚨Progress report
 

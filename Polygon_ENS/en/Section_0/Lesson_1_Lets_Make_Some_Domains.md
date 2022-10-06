@@ -34,7 +34,7 @@ When you reach the end of this project, you'll be able to earn an NFT.
 
 **You'll only be eligible for the NFT if you finish it within 60 days of signing up.** So make sure you schedule time to finish, you got this!
 
-**Once you finish the project, you'll get the NFT airdropped within 7 days**
+**Once you finish the project, you'll get the NFT airdropped within 7 days.**
 
 Here's what it looks like:
 

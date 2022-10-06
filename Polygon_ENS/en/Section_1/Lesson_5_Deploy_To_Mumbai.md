@@ -192,4 +192,4 @@ If you don’t want to wait, or OpenSea is just not working, head over to [testn
 
 Epic work! Go ahead and post your deployed contract on PolygonScan in `#progress`
 
-Feel free to also post a screenshot of your OpenSea mint in #progress. Show everyone how hot your domain looks!
+Feel free to also post a screenshot of your OpenSea mint in #progress. Show everyone how dope your domain looks!

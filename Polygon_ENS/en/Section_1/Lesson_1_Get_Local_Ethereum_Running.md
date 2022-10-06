@@ -83,7 +83,7 @@ Go ahead and delete the file `Lock.js` under `test`.  Also, delete `deploy.
 
 ### 🚨 Before you click "Next Lesson"
 
-*Note: if you don't do this, Raza will be very sad :(.*
+*Note: if you don't do this, Raza will be very sad :(*
 
 Head to #progress and post a screenshot of **your** terminal showing the output of the test! You just ran a smart contract, that's a big deal!! Show it off :).
 

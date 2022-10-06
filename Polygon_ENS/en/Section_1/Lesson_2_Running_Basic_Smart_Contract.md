@@ -157,4 +157,4 @@ So what does this mean? Every time you run a terminal command that starts with 
 
 ### 🚨 Progress report!
 
-Post a screenshot in #progress with the output of `npx hardhat run scripts/run.js` :).
+Post a screenshot in #progress with the output of `npx hardhat run scripts/run.js` :)
