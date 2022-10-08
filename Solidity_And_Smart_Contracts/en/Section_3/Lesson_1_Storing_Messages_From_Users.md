@@ -231,8 +231,6 @@ const [currentAccount, setCurrentAccount] = useState("");
 
 Pretty simple and very similar to stuff we worked on earlier with how we're connecting to the provider, getting the signer, and connecting to the contract! I do a little magic here by looping through all our waves and saving them nicely in an array that we can use later. Feel free to console.log `waves` to see what you get there if you're having issues.
 
-Where do we call this brand new `getAllWaves()` function, though? Well -- we want to call it when we know for sure the user has a connected wallet with an authorized account because we need an authorized account to call it! Hint: you have to call this function somewhere in `checkIfWalletIsConnected()`. I'll leave it to you to figure it out. Remember, we want to call it when we know for sure we have a connected + authorized account!
-
 The last thing I did was update our HTML code to render the data for us to see!
 
 ```javascript
