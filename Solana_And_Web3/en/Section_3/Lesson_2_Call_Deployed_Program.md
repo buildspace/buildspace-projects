@@ -140,6 +140,8 @@ import { Buffer } from 'buffer';
 window.Buffer = Buffer;
 ```
 
+### 🧑‍🎄 Add `getProvider`
+
 Let's create a function called `getProvider`. Add this right below `onInputChange` . Here's the code below.
 
 ```javascript
