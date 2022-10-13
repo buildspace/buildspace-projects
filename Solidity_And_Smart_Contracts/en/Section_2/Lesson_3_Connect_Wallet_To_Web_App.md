@@ -199,8 +199,8 @@ const App = () => {
         method: "eth_requestAccounts",
       });
 
-      console.log("Connected", account[0]);
-      setCurrentAccount(account[0]);
+      console.log("Connected", accounts[0]);
+      setCurrentAccount(accounts[0]);
     } catch (error) {
       console.error(error);
     }
