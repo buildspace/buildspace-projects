@@ -34,7 +34,7 @@ If you have no experience w/ React - [checkout this intro series](https://scrim
 
 You'll be a React Wizard after this project if you aren't already 🧙‍♂!
 
-### ⬇️ Getting the code.
+### ⬇️ Getting the code
 
 We'll be using this thing called [Replit](https://replit.com/~)!
 
@@ -54,7 +54,7 @@ You'll magically clone my repo and full IDE in your browser to work with the cod
 
 Here's a quick video I made for a different project going over some Replit basics:
 
-[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
+[Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)
 
 Just like that, you have a frontend setup for your web3 app 😎.
 

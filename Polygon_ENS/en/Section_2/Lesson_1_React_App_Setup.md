@@ -1,4 +1,4 @@
-### **🏁 Getting started with React.js**
+### 🏁 Getting started with React.js
 
 Now this is where the fun **REALLY** starts. Writing and deploying your smart contract is one thing, but building a portal where anyone in the world can interact with the blockchain is just pure magic ✨.
 
@@ -8,7 +8,7 @@ Don't give up! The more you struggle the more you learn 🧠.
 
 If you have no experience w/ React - [checkout this intro series](https://scrimba.com/learn/learnreact) before you get started with this section or at least check out the intro docs [here](https://reactjs.org/docs/getting-started.html). Or don't do anything special, just hop in. Whatever works for you :). You'll be an absolute React Wizard after this project if you aren't already 🧙‍♂!
 
-### ****🤯 Replit!****
+### 🤯 Replit!
 
 We'll be using this thing called [Replit](https://replit.com/~)! It is a browser-based IDE that lets us easily build web apps and deploy them all from the browser. It is super legit. Instead of having to set up a full local environment and write commands to deploy, it's all just given to us.
 
@@ -18,9 +18,9 @@ I've already created a basic react project that you can **fork** on Replit. *
 
 You'll magically clone my repo and the full IDE in your browser to work with the code. Once it stops loading and shows you some code click "run" at the top and you're good to go. Might take 2-4 min the first time.
 
-**Please Note: As you go through this project, you may notice that we are referencing `.js` files. In Replit, if you are creating any new JavaScript files, you will need to use the `.jsx` extension instead! Replit has some performance fanciness that requires you use the `.jsx` file extension :).**
+**Please Note: As you go through this project, you may notice that we are referencing `.js` files. In Replit, if you are creating any new JavaScript files, you will need to use the `.jsx` extension instead! Replit has some performance fanciness that requires you use the `.jsx` file extension :)**
 
-### **👩‍💻 Want to work locally? Get the code.**
+### 👩‍💻 Want to work locally? Get the code
 
 If you don’t wanna use Replit, you don’t have to.
 
@@ -57,7 +57,7 @@ Mine looks like this:
 
 ![https://i.imgur.com/aHy7qhB.png](https://i.imgur.com/aHy7qhB.png)
 
-### **🚨 Progress Report**
+### 🚨 Progress Report
 
 *Please do this else Raza will be sad :(*
 

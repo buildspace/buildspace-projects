@@ -1,8 +1,8 @@
-### **📝 Write our starter contract.**
+### 📝 Write our starter contract
 
 Pick your favorite code editor and open up the directory where you setup your hardhat project! Let's do a little clean-up.
 
-We want to delete all the lame starter code generated for us. We're going to write this stuff ourselves! Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `sample-script.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. **Don't delete the actual folders!**
+We want to delete all the lame starter code generated for us. We're going to write this stuff ourselves! Go ahead and delete the file `Lock.js` under `test`.  Also, delete `deploy.js` under `scripts`. Then, delete `Lock.sol` under `contracts`. **Don't delete the actual folders!**
 
 Now, let's get to writing our NFT contract. If you've never written a smart contract don't worry. **Just follow along. Google stuff you don't understand. Ask questions in Discord.**
 
@@ -15,7 +15,7 @@ I always like starting with a really basic contract, just to get things going.
 ```javascript
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 
@@ -37,10 +37,10 @@ Let's go line-by-line here.
 Just a fancy comment.  It's called an "SPDX license identifier", feel free to Google what it is :).
 
 ```javascript
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 ```
 
-This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use version 0.8.0 of the Solidity compiler, nothing lower. Note, be sure your compiler is set to 0.8.0 in `hardhat.config.js`.
+This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use version 0.8.17 of the Solidity compiler, nothing lower. Note, be sure your compiler is set to 0.8.17 in `hardhat.config.js`.
 
 ```javascript
 import "hardhat/console.sol";
@@ -58,7 +58,7 @@ contract MyEpicGame {
 
 So, smart contracts kinda look like a `class` in other languages, if you've ever seen those! Once we initialize this contract for the first time, that constructor will run and print out that line. Please make that line say whatever you want. Have a little fun with it.
 
-### **😲 How do we run it?**
+### 😲 How do we run it?
 
 Awesome — we've got a smart contract! But, we don't know if it works. We need to actually:
 
@@ -93,7 +93,7 @@ runMain();
 
 `run.js` is our playground to mess around with our contract!
 
-### **🤔 How's it work?**
+### 🤔 How's it work?
 
 **Note: VSCode might auto-import ethers. We don't need to import ethers or anything. So, make sure not to import anything.**
 
@@ -129,9 +129,9 @@ Finally, once it's deployed `gameContract.address` will basically give us the 
 
 But, there are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will come in handy when we deploy to the actual blockchain in a few lessons.
 
-### **💨 Run it.**
+### 💨 Run it
 
-Before you run this, be sure to change `solidity: "0.8.4",` to `solidity: "0.8.0",` in your `hardhat.config.js`.
+Before you run this, be sure to change `solidity: "0.8.4",` to `solidity: "0.8.17",` in your `hardhat.config.js`.
 
 Let's run it! Open up your terminal and run:
 
@@ -142,7 +142,7 @@ npx hardhat run scripts/run.js
 You should see your `console.log` run from within the contract and then you should also see the contract address print out!!!
 
 
-### **🎩 Hardhat & HRE**
+### 🎩 Hardhat & HRE
 
 In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of sorcery is this?
 
@@ -157,6 +157,6 @@ So what does this mean? Every time you run a terminal command that starts with 
 
 **TL;DR - you will be seeing `hre` a lot in our code, but never imported anywhere! Check out the [Hardhat documentation](https://hardhat.org/advanced/hardhat-runtime-environment.html) to learn more about it!**
 
-### **🚨 Progress report!**
+### 🚨 Progress report!
 
 Post a screenshot in #progress with the output of `npx hardhat run scripts/run.js` :).

@@ -6,64 +6,54 @@ Let's head over to `App.jsx`. What we'll be doing now is
 
 Let's do it! We'll attack case #1 first, we need to detect if the user has our NFT.
 
-### 🤔 Check if user owns a membership NFT.
+### 🤔 Check if user owns a membership NFT
 
-Head over to `App.jsx`. At the top add:
+Head over to `App.jsx`. Update our imports to:
 
 ```jsx
-import { ThirdwebSDK } from "@3rdweb/sdk";
+import { useAddress, useMetamask, useEditionDrop } from '@thirdweb-dev/react';
+import { useState, useEffect } from 'react';
 ```
 
-From there, here's what we're going to add:
+From there, below our `console.log("👋 Address:", address);` we're going to add:
 
 ```jsx
-// We instantiate the sdk on Rinkeby.
-const sdk = new ThirdwebSDK("rinkeby");
 
-// We can grab a reference to our ERC-1155 contract.
-const bundleDropModule = sdk.getBundleDropModule(
-  "INSERT_BUNDLE_DROP_ADDRESS",
-);
-
-const App = () => {
-  const { connectWallet, address, error, provider } = useWeb3();
-  console.log("👋 Address:", address)
-
+  // Initialize our editionDrop contract
+  const editionDrop = useEditionDrop("INSERT_EDITION_DROP_ADDRESS");
   // State variable for us to know if user has our NFT.
   const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
 
   useEffect(() => {
-  (async () => {
-    // If they don't have an connected wallet, exit!
+    // If they don't have a connected wallet, exit!
     if (!address) {
       return;
     }
 
-    // Check if the user has the NFT by using bundleDropModule.balanceOf
-    const balance = await bundleDropModule.balanceOf(address, "0");
-   
-    try {
-      // If balance is greater than 0, they have our NFT!
-      if(balance.gt(0)) {
+    const checkBalance = async () => {
+      try {
+        const balance = await editionDrop.balanceOf(address, 0);
+        if (balance.gt(0)) {
           setHasClaimedNFT(true);
           console.log("🌟 this user has a membership NFT!");
-      } else {
+        } else {
           setHasClaimedNFT(false);
-          console.log("😭 this user doesn't have a membership NFT.")
-      }
-    } catch (error) {
+          console.log("😭 this user doesn't have a membership NFT.");
+        }
+      } catch (error) {
         setHasClaimedNFT(false);
-        console.error("failed to get nft balance", error);
-    }
-   })();
-  }, [address]);
+        console.error("Failed to get balance", error);
+      }
+    };
+    checkBalance();
+  }, [address, editionDrop]);
 
   // ... include all your other code that was already there below.
 ```
 
-We just tell thirdweb that we want to be on Rinkeby using `new ThirdwebSDK("rinkeby")`. Then, we create `bundleDropModule` and all we need is the address of our deployed ERC-1155 contract! When we do this, thirdweb gives us a little object we can easily use to interact with our contract.
+We first initialize our `editionDrop` contract.
 
-From there, we use `bundleDropModule.balanceOf(address, "0")` to check if the user has our NFT. This will actually query our deployed smart contract for the data. Why do we do `"0"`? Well, basically because if you remember `0` is the tokenId of our membership NFT. So, here we're asking our contract, "Hey, does this user own a token with id 0?".
+From there, we use `editionDrop.balanceOf(address, "0")` to check if the user has our NFT. This will actually query our deployed smart contract for the data. Why do we do `"0"`? Well, basically because if you remember `"0"` is the `tokenId` of our membership NFT. So, here we're asking our contract, "Hey, does this user own a token with id `"0"`?".
 
 When you refresh this page, you'll see something like this:
 
@@ -71,90 +61,76 @@ When you refresh this page, you'll see something like this:
 
 Perfect! We get "this user doesn't have a membership NFT". Let's create a button to let the user mint one.
 
-### ✨ Build a "Mint NFT" button.
+### ✨ Build a "Mint NFT" button
 
 Let's do it! Head back to `App.jsx`. I added some comments on the lines I added:
 
 ```javascript
-import { useEffect, useMemo, useState } from "react";
-
-import { useWeb3 } from "@3rdweb/hooks";
-import { ThirdwebSDK } from "@3rdweb/sdk";
-
-const sdk = new ThirdwebSDK("rinkeby");
-
-const bundleDropModule = sdk.getBundleDropModule(
-  "INSERT_YOUR_DROP_ADDRESS",
-);
+import { useAddress, useMetamask, useEditionDrop } from '@thirdweb-dev/react';
+import { useState, useEffect } from 'react';
 
 const App = () => {
-  const { connectWallet, address, error, provider } = useWeb3();
-  console.log("👋 Address:", address)
+  // Use the hooks thirdweb give us.
+  const address = useAddress();
+  const connectWithMetamask = useMetamask();
+  console.log("👋 Address:", address);
 
-  // The signer is required to sign transactions on the blockchain.
-  // Without it we can only read data, not write.
-  const signer = provider ? provider.getSigner() : undefined;
-
+  // Initialize our editionDrop contract
+  const editionDrop = useEditionDrop("INSERT_EDITION_DROP_ADDRESS");
+  // State variable for us to know if user has our NFT.
   const [hasClaimedNFT, setHasClaimedNFT] = useState(false);
   // isClaiming lets us easily keep a loading state while the NFT is minting.
   const [isClaiming, setIsClaiming] = useState(false);
 
-  // Another useEffect!
   useEffect(() => {
-    // We pass the signer to the sdk, which enables us to interact with
-    // our deployed contract!
-    sdk.setProviderOrSigner(signer);
-  }, [signer]);
-
-    useEffect(() => {
-    (async () => {
-    if(!address) {
+    // If they don't have an connected wallet, exit!
+    if (!address) {
       return;
     }
 
-    const balance = await bundleDropModule.balanceOf(address, "0");
-   
-    try {
-      if(balance.gt(0)) {
+    const checkBalance = async () => {
+      try {
+        const balance = await editionDrop.balanceOf(address, 0);
+        if (balance.gt(0)) {
           setHasClaimedNFT(true);
           console.log("🌟 this user has a membership NFT!");
-      } else {
+        } else {
           setHasClaimedNFT(false);
-          console.log("😭 this user doesn't have a membership NFT.")
-      }
-    } catch (error) {
+          console.log("😭 this user doesn't have a membership NFT.");
+        }
+      } catch (error) {
         setHasClaimedNFT(false);
-        console.error("failed to get nft balance", error);
-    }
-   })();
-  }, [address]);
+        console.error("Failed to get balance", error);
+      }
+    };
+    checkBalance();
+  }, [address, editionDrop]);
 
+  const mintNft = async () => {
+    try {
+      setIsClaiming(true);
+      await editionDrop.claim("0", 1);
+      console.log(`🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${editionDrop.getAddress()}/0`);
+      setHasClaimedNFT(true);
+    } catch (error) {
+      setHasClaimedNFT(false);
+      console.error("Failed to mint NFT", error);
+    } finally {
+      setIsClaiming(false);
+    }
+  };
+
+  // This is the case where the user hasn't connected their wallet
+  // to your web app. Let them call connectWallet.
   if (!address) {
     return (
       <div className="landing">
         <h1>Welcome to NarutoDAO</h1>
-        <button onClick={() => connectWallet("injected")} className="btn-hero">
+        <button onClick={connectWithMetamask} className="btn-hero">
           Connect your wallet
         </button>
       </div>
     );
-  }
-
-  const mintNft = async () => {
-    setIsClaiming(true);
-    try {
-      // Call bundleDropModule.claim("0", 1) to mint nft to user's wallet.
-      await bundleDropModule.claim("0",1);
-      // Set claim state.
-      setHasClaimedNFT(true);
-      // Show user their fancy new NFT!
-      console.log(`🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${bundleDropModule.address}/0`);
-    } catch (error) {
-      console.error("failed to claim", error);
-    } finally {
-      // Stop loading state.
-      setIsClaiming(false);
-    }
   }
 
   // Render mint nft screen.
@@ -163,22 +139,22 @@ const App = () => {
       <h1>Mint your free 🍪DAO Membership NFT</h1>
       <button
         disabled={isClaiming}
-        onClick={() => mintNft()}
+        onClick={mintNft}
       >
         {isClaiming ? "Minting..." : "Mint your nft (FREE)"}
       </button>
     </div>
   );
-};
+}
 
 export default App;
 ```
 
-Okay a lot of stuff happening! The first thing we do is set up our `signer` which is what we need to actually send transactions on behalf of a user. See more [here](https://docs.ethers.io/v5/api/signer/). From there, we call `bundleDropModule.claim("0", 1)` to actually mint the NFT to the users wallet when they click the button. In this case the tokenId of our membership NFT is `0` so we pass 0. Then, we pass `1` because we only want to mint one membership NFT to the user's wallet!
+Okay a lot of stuff happening! The first thing we do is set up our `signer` which is what we need to actually send transactions on behalf of a user. See more [here](https://docs.ethers.io/v5/api/signer/). From there, we call `editionDrop.claim("0", 1)` to actually mint the NFT to the users wallet when they click the button. In this case the `tokenId` of our membership NFT is `"0"` so we pass `"0"`. Then, we pass `1` because we only want to mint one membership NFT to the user's wallet!
 
 Once it's all done, we do `setIsClaiming(false)` to stop the loading state. And, then we do `setHasClaimedNFT(true)` so that we can let our react app know that this user has successfully claimed an NFT.
 
-When you actually go to mint the NFT, Metamask will pop so you can pay gas. Once it's done minting, you should see `Successfully Minted!` in your console along w/ the Testnet OpenSea link. On [`testnets.opensea.io`](http://testnets.opensea.io/) we can actually see NFTs minted on the testnet which is pretty cool! When you head to your link, you'll see something like this:
+When you actually go to mint the NFT, Metamask will pop up so you can pay gas. Once it's done minting, you should see `Successfully Minted!` in your console along w/ the Testnet OpenSea link. On [`testnets.opensea.io`](http://testnets.opensea.io/) we can actually see NFTs minted on the testnet which is pretty cool! When you head to your link, you'll see something like this:
 
 ![Untitled](https://i.imgur.com/PjjDSxd.png)
 
@@ -188,7 +164,7 @@ Nice! Here you'll see my NFT has "6 owners". You’ll also see it says “You ow
 
 This is because I actually had a few friends mint this NFT for me to test it out. Also, because it's an ERC-1155 **everyone is an owner of the same NFT**. This is pretty cool and it's also more gas efficient. Minting an ERC721 costs 96,073 gas. Minting an ERC1155 costs 51,935 gas. Why? Because everyone is sharing the same NFT data. We don't have to copy new data for each user.
 
-### 🛑 Show DAO Dashboard only if user owns the NFT.
+### 🛑 Show DAO Dashboard only if user owns the NFT
 
 Okay, so if you remember we need to handle two cases:
 
@@ -203,7 +179,7 @@ if (!address) {
   return (
     <div className="landing">
       <h1>Welcome to NarutoDAO</h1>
-      <button onClick={() => connectWallet("injected")} className="btn-hero">
+      <button onClick={connectWithMetamask} className="btn-hero">
         Connect your wallet
       </button>
     </div>

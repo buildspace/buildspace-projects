@@ -1,5 +1,4 @@
-💸 Send ETH to people waving at you
-----------------------------------------
+## 💸 Send ETH to people waving at you
 
 Now what we want to do is send some ETH to people waving at us! For example, maybe you want to make it where there's a 1% chance someone can win $5 from waving at you. Or, maybe you want to make it where everyone who waves at you gets $0.01 in ETH for waving at you lol.
 
@@ -56,8 +55,7 @@ is that it lets us make sure that the *balance of the contract* is bigger than t
 
 Pretty awesome, right :)?
 
-🏦 Fund the contract so we can send ETH!
------------------------------------------------
+## 🏦 Fund the contract so we can send ETH!
 
 We've now set up our code to send ETH. Nice! Now we need to actually make sure our contract is funded, otherwise, we have no ETH to send!
 
@@ -161,8 +159,7 @@ This is what I get:
 
 We just sent some ETH from our contract, big success! And, we know we succeeded because the contract balance went down by 0.0001 ETH from 0.1 to 0.0999!
 
-✈️ Update deploy script to fund contract
-----------------------------------------
+## ✈️ Update deploy script to fund contract
 
 We need to make a small update to `deploy.js`.
 
@@ -207,16 +204,15 @@ Easy!
 Lets deploy our contract using the same old line
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
-Now when you go to [Etherscan](https://rinkeby.etherscan.io/) and paste in your contract address you'll see that your contract now has a value of 0.001 ETH! Success!
+Now when you go to [Etherscan](https://goerli.etherscan.io/) and paste in your contract address you'll see that your contract now has a value of 0.001 ETH! Success!
 
 **Remember to update your frontend with the new contract address *and* the new ABI file. Otherwise, it will** **break**.
 
 Test out your wave function and make sure it still works!
 
-🎁 Wrap Up
-----------
+## 🎁 Wrap Up
 
 There is something about using actual ETH to fuel your contracts right? Take a look at [this link](https://gist.github.com/adilanchian/236fe9f3a56b73751060800cae3a780d) to see all the code written in this section!

@@ -1,8 +1,8 @@
 One thing we’re doing that's super important to recognize is we’re actually changing our NFTs attributes.
 
-For example, when we do `player.hp = player.hp - bigBoss.attackDamage;` it’s actually changing the `Health Points` attribute that shows up on OpenSea on the NFT itself. Let’s test this out to make sure it's working as expected!
+For example, when we do `player.hp = player.hp - bigBoss.attackDamage;` it’s actually changing the `Health Points` attribute that shows up on Pixxiti on the NFT itself. Let’s test this out to make sure it's working as expected!
 
-### 👻 Deploy again and see the NFTs changing values.
+### 👻 Deploy again and see the NFTs changing values
 
 Copy all of `run.js` and overwrite whats in `deploy.js`. Here's what my `run.js` looks like right now:
 
@@ -56,31 +56,31 @@ runMain();
 
 Again, I just like keeping both separate since `deploy.js` I usually don't change much. What we mainly want to test now is the `attackBoss` function. It should change the HP on the NFT.
 
-I deploy using `npx hardhat run scripts/deploy.js --network rinkeby`. From there, here's my output:
+I deploy using `npx hardhat run scripts/deploy.js --network goerli`. From there, here's my output:
 
 ```plaintext
 Contract deployed to: 0x02f59Dc14666c4480Ae4b477eFfF15949970dfeA 
 ```
 
-Once you wait a few mins, sites like OpenSea or Rarible should show your NFT w/ it's update HP #.
+Once you wait a few mins, sites like Pixxiti should show your NFT w/ it's update HP #.
 
 So in this case, I minted one `Pikachu` character NFT and then had `Pikachu` attack `Elon Musk` twice. `Pikachu` **started at 300 HP**, so if he attacks Elon twice, then that means `Pikachu` should have 200 HP.
 
-On OpenSea here's how it looks for me:
+On Pixxiti here's how it looks for me:
 
-![](https://i.imgur.com/dv5Q2lR.png)
+![](https://i.imgur.com/T2FmP2z.png)
 
 It's all working as intended!!! Yay!! Pikachu lost health!
 
-Feel free to see it on Rarible as well. Just know Rarible is much slower in showing updated metadata! `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE`.
+Feel free to see it on Pixxiti. Just know that Pixxiti is much slower in showing updated metadata! `https://goerli.pixxiti.com/nfts/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`.
 
-![](https://i.imgur.com/Pwx4IOM.png)
+![](https://i.imgur.com/N4Go4W7.png)
 
-**Note 1**: Don't see your updated stats on OpenSea or Rarible? **Tap that refresh button I circled there at the top right and wait a few minutes.** If you're using Rarible, I've noticed it takes a solid 10-20 min for it to update the stats on their end. *OpenSea is faster when it comes to updating metadata.*
+**Note 1**: Don't see your updated stats on Pixxiti? **Tap that refresh button circled there at the bottom right and wait a few minutes.** It takes a solid 10-20 min for it to update the stats on their end.
 
-**Note 2:** I should mention that the NFT itself is updated immediately on the contract once `attackBoss` is mined, but, these third-party sites like OpenSea and Rarible have their own caching mechanics.
+**Note 2:** I should mention that the NFT itself is updated immediately on the contract once `attackBoss` is mined, but, these third-party sites like OpenSea, Rarible, and Pixxiti have their own caching mechanics.
 
-### 👑 You dropped this.
+### 👑 You dropped this
 
 YOU DID IT.
 

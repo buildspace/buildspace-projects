@@ -2,9 +2,9 @@
 
 Now that we have all the data nicely set up for our characters, the next thing to do is actually mint the NFT. Let's go through that process. Here's my updated contract and I put a comment above lines I changed/added to make it easy!
 
-```solidity
+```javascript
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 // NFT contract to inherit from.
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -134,7 +134,7 @@ _tokenIds.increment();
 
 So, `_tokenIds` starts at `0`. It's just a counter. `increment()` just adds 1 - see [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/fa64a1ced0b70ab89073d5d0b6e01b0778f7e7d6/contracts/utils/Counters.sol#L32).
 
-**In the constructor** I increment it to `1`.  Why?  Basically because I don't like dealing w/ `0`s in my code. In Solidity, `0` is a [default value](https://docs.soliditylang.org/en/v0.5.11/control-structures.html#scoping-and-declarations) and I try to stay away from default values. Just trust me on it for now ;).
+**In the constructor** I increment it to `1`.  Why?  Basically because I don't like dealing w/ `0`s in my code. In Solidity, `0` is a [default value](https://docs.soliditylang.org/en/v0.8.14/control-structures.html#scoping-and-declarations) and I try to stay away from default values. Just trust me on it for now ;).
 
 I also have `increment()` in `mintCharacterNFT` but don't forget to add it in the `constructor` as well ;).
 
@@ -168,7 +168,7 @@ This is the magic line! When we do `_safeMint(msg.sender, newItemId)` it's pre
 
 What's awesome here is this is a **super-secure way to get the user's public address**. Keeping the public address itself a secret isn't an issue, it's already public!! Everyone sees it. But, by using `msg.sender` you can't "fake" someone else's public address unless you had their wallet credentials and called the contract on their behalf!
 
-### 🎨 Holding dynamic data on an NFT.
+### 🎨 Holding dynamic data on an NFT
 
 So, as players play the game, certain values on their character will change, right? For example, If I have my character attack the boss, the boss will hit back! **In that case, my NFT's HP would need to go down.** We need a way to store this data per player:
 
@@ -235,7 +235,7 @@ _tokenIds.increment();
 
 After the NFT is minted, we increment `_tokenIds` using `_tokenIds.increment()` (which is a function OpenZeppelin gives us). This makes sure that next time an NFT is minted, it'll have a different `_tokenIds` identifier. No one can have a `_tokenIds` that's already been minted.
 
-### 😳 Running it locally.
+### 😳 Running it locally
 
 In `run.js` what we need to do is actually call `mintCharacterNFT`. I added the following lines to `run.js` right under where we print out the contract address.
 
@@ -259,7 +259,7 @@ The function `tokenURI` is something we get for free from `ERC721` since we inhe
 
 Basically, `tokenUri` is a function on **every NFT** that returns the **actual data** attached to the NFT. So when I call `gameContract.tokenURI(1)` it's basically saying, *"go get me the data inside the NFT with tokenId 1"*, which would be the first NFT minted. And, it should give me back everything like: my character's name, my character's current hp, etc.
 
-Platforms like OpenSea and Rarible know to hit `tokenURI` since that's the standard way to retrieve the NFTs metadata. Let's try running our contract again (remember the command is `npx hardhat run scripts/run.js`)
+Platforms like OpenSea, Rarible, and Pixxiti know to hit `tokenURI` since that's the standard way to retrieve the NFTs metadata. Let's try running our contract again (remember the command is `npx hardhat run scripts/run.js`)
 
 My output looks like this:
 
@@ -403,12 +403,12 @@ We add `data:application/json;base64,` because our browser needs to know how to 
 
 Again, this is considered a standard for a majority of browsers which is perfect because we want our NFTs data to be compatible with as many existing systems as possible. 
 
-Why are we doing all this Base64 stuff? Well, basically this is how popular NFT websites like OpenSea, Rarible, and many others prefer when we pass them JSON data from our contract directly :).
+Why are we doing all this Base64 stuff? Well, basically this is how popular NFT websites like OpenSea, Rarible, Pixxiti, and many others prefer when we pass them JSON data from our contract directly :).
 
 **Awesome**. So, we're at the point we are officially minting NFTs locally and the NFT has actual data attached to it in a way that properly follows standards!
 
-**We're ready to deploy our NFT to OpenSea :).**
+**We're ready to deploy our NFT to Pixxiti :).**
 
-### **🚨 Progress report!**
+### 🚨 Progress report!
 
 Post a screenshot of your JSON output when you paste in the `tokenURI` into your browser's address bar :)!

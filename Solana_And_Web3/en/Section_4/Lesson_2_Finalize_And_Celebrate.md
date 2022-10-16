@@ -1,10 +1,10 @@
-### **😍 Hello, Solana Master.**
+### 😍 Hello, Solana Master
 
 Super exciting that you made it to the end. Pretty big deal!! Solana is **super early** and very powerful and you've now gotten your hands dirty w/ the core tech. Hell yes. You have all the core skills to now go and build whatever you want.
 
 Thank you for contributing to the future of web3 by learning this stuff. The fact that you know how this works and how to code it up is a superpower. Use your power wisely ;).
 
-### **🥞 Careers in Web3**
+### 🥞 Careers in Web3
 
 Tons of people have also gotten full-time jobs at top web3 companies via buildspace. I'm constantly seeing people nail their interviews after they do a few buildspace projects.
 
@@ -22,12 +22,8 @@ I just wanna inspire you to work in web3 lol. This shit is awesome. And it'd be 
 
 Be sure you click "Work in Web3" on the left and fill out your profile if you haven't done so already!!! **We're partnered w/ some of the best web3 companies in the world (ex. Uniswap, OpenSea, Chainlink, Edge and Node, and more) and they want to hire devs from the buildspace network :).** You've already picked up a skill that is actually extremely valuable and companies are paying top dollar for awesome web3 engineers.
 
-### **🤟 Your NFT!**
 
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
-
-
-### **🌈 Before you head out.**
+### 🌈 Before you head out
 
 Go to **#showcase** in Discord and drop us a link to your final product that we can mess around with :).
 

@@ -1,4 +1,4 @@
-### ✅ Running a test on devnet.
+### ✅ Running a test on devnet
 
 I actually like to run an `anchor test` at this point before I start integrating my web app. This could potentially save us from some random, annoying errors.
 
@@ -41,7 +41,7 @@ You may be asking yourself, "Why did it re-deploy? Why isn't it just talking to 
 
 *Note: this is **very very** different from Ethereum where you can never change a smart contract once it's deployed!*
 
-### 🤟 Hooking up our IDL file to the web app.
+### 🤟 Hooking up our IDL file to the web app
 
 So, we now have a deployed Solana program. Let's connect it up to our web app :).
 
@@ -55,27 +55,27 @@ You'll also see near the bottom it has our program id! This is how our web app w
 
 *Note: if you don't see the idl file or you don't see an "address" parameter near the bottom, then something has gone wrong! Start again from the "Deploy program to the devnet" section of the project.*
 
-Go ahead and copy all the content in `target/idl/myepicproject.json`.
+How do we give the idl to our web app?
+We can either copy the idl file and open it on the web app or we can actually upload the idl to solana directly and fetch it from our web app later!
+
+```
+anchor idl init  -f target/idl/myepicproject.json `solana address -k target/deploy/myepicproject-keypair.json`
+```
+
+Basically we are telling anchor to upload our idl for our program address, nice!! 
+
+> Please note that everytime you redeploy your solana program, you need to tell solana how your program api looks like, we can do so with `anchor idl upgrade` instead of `anchor idl init`
+
 
 Head over to your web app.
 
-In the `src` directory of your react app **create an empty file** named `idl.json`. It should be in the same directory as `App.js`. So for me, I have the file at `app/src/idl.json`. Once you create the file, paste the content of `target/idl/myepicproject.json` into your newly created `app/src/idl.json`.
-
-Finally, in `App.js`, go ahead and drop this in as an import:
-
-```javascript
-import idl from './idl.json';
-```
-
-Nice!! 
-
-### 🌐 Change the network Phantom connects to.
+### 🌐 Change the network Phantom connects to
 
 Right now, Phantom is probably connected to the Solana Mainnet. We need it to connect to the Solana Devnet. You can change this by going to the settings (click the little gear on the bottom right) , click "Change Network", and then click "Devnet". That's it!
 
 ![Untitled](https://i.imgur.com/JWHwPJX.png)
 
-### 👻 Fund Phantom wallet.
+### 👻 Fund Phantom wallet
 
 We also need to fund our Phantom wallet w/ some fake SOL. **Reading** **data** on accounts on Solana is free. But doing things like creating accounts and adding data to accounts costs SOL.
 
@@ -91,7 +91,7 @@ solana airdrop 2 INSERT_YOUR_PHANTOM_PUBLIC_ADDRESS_HERE  --url devnet
 
 Now, when you go back to your Phantom wallet you should have 2 SOL associated w/ your devnet wallet. Nice :).
 
-### 🍔 Setup a Solana `provider` on our web app.
+### 🍔 Setup a Solana `provider` on our web app
 
 In your web app, we'll need to install two packages. You may remember installing these for your Anchor project, we'll also be using them in our web app :).
 
@@ -105,7 +105,7 @@ Before we can interact with the packages that we installed earlier, we need to i
 
 ```javascript
 import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
-import { Program, Provider, web3 } from '@project-serum/anchor';
+import { Program, AnchorProvider, web3 } from '@project-serum/anchor';
 ```
 
 *Note (only for Replit users):*  
@@ -145,10 +145,10 @@ Let's create a function called `getProvider`. Add this right below `onInputChang
 ```javascript
 const getProvider = () => {
   const connection = new Connection(network, opts.preflightCommitment);
-  const provider = new Provider(
+  const provider = new AnchorProvider(
     connection, window.solana, opts.preflightCommitment,
   );
-	return provider;
+  return provider;
 }
 ```
 
@@ -172,10 +172,8 @@ import twitterLogo from './assets/twitter-logo.svg';
 import './App.css';
 import { Connection, PublicKey, clusterApiUrl} from '@solana/web3.js';
 import {
-  Program, Provider, web3
+  Program, AnchorProvider, web3
 } from '@project-serum/anchor';
-
-import idl from './idl.json';
 
 // SystemProgram is a reference to the Solana runtime!
 const { SystemProgram, Keypair } = web3;
@@ -183,8 +181,8 @@ const { SystemProgram, Keypair } = web3;
 // Create a keypair for the account that will hold the GIF data.
 let baseAccount = Keypair.generate();
 
-// Get our program's id from the IDL file.
-const programID = new PublicKey(idl.metadata.address);
+// This is the address of your solana program, if you forgot, just run solana address -k target/deploy/myepicproject-keypair.json
+const programID = new PublicKey(YOUR_PROGRAM_ADDRESS_HERE);
 
 // Set our network to devnet.
 const network = clusterApiUrl('devnet');
@@ -205,13 +203,13 @@ All pretty straightforward and things will make more sense as we start using the
 
 `SystemProgram` is a reference to the [core program](https://docs.solana.com/developing/runtime-facilities/programs#system-program) that runs Solana we already talked about. `Keypair.generate()` gives us some parameters we need to create the `BaseAccount` account that will hold the GIF data for our program.
 
-Then, we use `idl.metadata.address` to get our program's id and then we specify that we want to make sure we connect to devnet by doing `clusterApiUrl('devnet')`.
+Then, we reuse our programID to tell the Solana Runtime which program we are trying to talk to, finally we make sure we connect to devnet by doing `clusterApiUrl('devnet')`.
 
 This `preflightCommitment: "processed"` thing is interesting. You can read on it a little [here](https://solana-labs.github.io/solana-web3.js/modules.html#Commitment). Basically, we can actually choose *when* to receive a confirmation for when our transaction has succeeded. Because the blockchain is fully decentralized, we can choose how long we want to wait for a transaction. Do we want to wait for just one node to acknowledge our transaction? Do we want to wait for the whole Solana chain to acknowledge our transaction?
 
 In this case, we simply wait for our transaction to be confirmed by the *node we're connected to*. This is generally okay — but if you wanna be super super sure you may use something like `"finalized"` instead. For now, let's roll with `"processed"`.
 
-### 🏈 Retrieve GIFs from our program's account.
+### 🏈 Retrieve GIFs from our program's account
 
 It's actually super simple now to call our program now that we have everything set up. It's a simple `fetch` to get the account — similar to how you'd call an API. Remember this chunk of code?
 
@@ -233,10 +231,16 @@ We're still using `TEST_GIFS`! Lame. Let's call our program. It should give us b
 Let's change this up to the following:
 
 ```javascript
+const getProgram = async () => {
+  // Get metadata about your solana program
+  const idl = await Program.fetchIdl(programID, getProvider());
+  // Create a program that you can call
+  return new Program(idl, programID, getProvider());
+};
+
 const getGifList = async() => {
   try {
-    const provider = getProvider();
-    const program = new Program(idl, programID, provider);
+    const program = await getProgram(); 
     const account = await program.account.baseAccount.fetch(baseAccount.publicKey);
     
     console.log("Got the account", account)
@@ -270,7 +274,7 @@ But, what this error actually means is our program's `BaseAccount` does not exis
 
 Which makes sense, we haven't yet initialized the account via `startStuffOff`!! Our account doesn't just magically get created. Let's do that.
 
-### 🔥 Call `startStuffOff` to initialize program.
+### 🔥 Call `startStuffOff` to initialize program
 
 Let's build a simple function to call `startStuffOff`. You are going to want to add this under your `getProvider` function! 
 
@@ -280,7 +284,8 @@ This looks exactly like we had it working in the test script!
 const createGifAccount = async () => {
   try {
     const provider = getProvider();
-    const program = new Program(idl, programID, provider);
+    const program = await getProgram();
+    
     console.log("ping")
     await program.rpc.startStuffOff({
       accounts: {
@@ -316,8 +321,8 @@ const renderConnectedContainer = () => {
       </div>
     )
   } 
-	// Otherwise, we're good! Account exists. User can submit GIFs.
-	else {
+  // Otherwise, we're good! Account exists. User can submit GIFs.
+  else {
     return(
       <div className="connected-container">
         <form

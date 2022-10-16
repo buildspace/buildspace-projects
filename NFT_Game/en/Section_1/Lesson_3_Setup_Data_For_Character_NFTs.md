@@ -2,7 +2,7 @@
 
 Haha, this is a big question. Be sure to read through [this](https://github.com/buildspace/buildspace-projects/blob/main/NFT_Collection/en/Section_1/Lesson_1_What_Is_A_NFT.md) real quick to give you a little primer before moving on. As long as you have a *general idea* about what an NFT is, that's all you really need here!
 
-### 😮 How we're going to use playable NFTs.
+### 😮 How we're going to use playable NFTs
 
 Cool. We've got all our basic environment stuff set up! Let's take a step back to kinda explain this game we're making at a higher level again:
 
@@ -36,9 +36,9 @@ The first thing we need to do is actually have a way to initialize a character's
 
 I updated `MyEpicGame.sol` to look like this:
 
-```solidity
+```javascript
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 

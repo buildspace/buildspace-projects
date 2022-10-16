@@ -1,10 +1,10 @@
 The cool part about our game? We mint actual NFTs that are used to play and all the game logic happens on-chain. Earlier in this project, we set up all of our smart contract logic. Now it's time to actually interact with it.
 
-### 🌊 The flow.
+### 🌊 The flow
 
 The first thing we are going to start with is to check whether the wallet address connected to our app has a character NFT already. If it does, we can go ahead and grab the metadata from the wallet's NFT and use it to battle a boss in the metaverse ⚔️.
 
-Here's the flow of getting our web app connected to our deployed smart contract on the Rinkeby Testnet:
+Here's the flow of getting our web app connected to our deployed smart contract on the Goerli Testnet:
 
 1. Copy latest deployed contract address, paste it in to our web app.
 2. Copy the latest ABI file, paste it into our web app's directory. (Later, we will delve more into what an ABI is).
@@ -13,7 +13,7 @@ Here's the flow of getting our web app connected to our deployed smart contract 
 
 Pretty straight forward, right? Let's dive in!
 
-### 🏠 Get the latest Smart Contract Address.
+### 🏠 Get the latest Smart Contract Address
 
 Plain and simple, this is the deployed address of your smart contract. Recall how every time you run your `deploy.js` script, your console prints out the address of where your contract lives? We need that address to connect our UI to our smart contract. The blockchain has millions of contracts on it. Our client needs this address to know which contract to connect to.
 
@@ -31,7 +31,7 @@ Then head back to your `App.js` file and import this at the top of your file to 
 import { CONTRACT_ADDRESS } from './constants';
 ```
 
-### 📁 Get the latest ABI file.
+### 📁 Get the latest ABI file
 
 **I made a little video below explaining ABI stuff.**
 
@@ -41,7 +41,7 @@ import { CONTRACT_ADDRESS } from './constants';
 
 When you compile your smart contract, the compiler spits out a bunch of files that let you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
 
-Our web app relies on the ABI file to know how to communicate with our contract. Read more about it [here](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
+Our web app relies on the ABI file to know how to communicate with our contract. Read more about it [here](https://docs.soliditylang.org/en/v0.8.17/abi-spec.html).
 
 The contents of the ABI file can be found in a fancy JSON file in your hardhat project:
 
@@ -81,7 +81,7 @@ Why do we need to do all this? Because smart contracts are **immutable.** They
 
 So, what you'll need to do is:
 
-1. Deploy again using `npx hardhat run scripts/deploy.js --network rinkeby`
+1. Deploy again using `npx hardhat run scripts/deploy.js --network goerli`
 
 2. Change `contractAddress` in `constants.js` to be the new contract address we got from the step above in the terminal (just like we did before the first time we deployed).
 
@@ -89,7 +89,7 @@ So, what you'll need to do is:
 
 **Again -- you need to do this every time you change your contract's code or else you'll get errors :).**
 
-### 📞 Calling the Smart Contract with ethers.js.
+### 📞 Calling the Smart Contract with ethers.js
 
 Now that we have everything we need, we can set up an object in JavaScript to interact with our smart contract. This is where [ethers.js](https://github.com/ethers-io/ethers.js)  comes in handy!
 
@@ -101,13 +101,13 @@ import { ethers } from 'ethers';
 
 ### 🌐 Check your Network! 
 
-At this point it's really important to make sure you are connected to the Rinkeby test network with Metamask! If not, you will be trying to use functions on the smart contract that don't exist on the other networks, and it could cause errors in React like "Unhandled Rejection (Error): call revert exception." Something you can add to your React code to keep things straight is a function that lets you know if you're on the wrong network! Try putting this function in your useEffect: 
+At this point it's really important to make sure you are connected to the Goerli test network with Metamask! If not, you will be trying to use functions on the smart contract that don't exist on the other networks, and it could cause errors in React like "Unhandled Rejection (Error): call revert exception." Something you can add to your React code to keep things straight is a function that lets you know if you're on the wrong network! Try putting this function in your useEffect: 
 
 ```javascript
 const checkNetwork = async () => {
   try { 
-    if (window.ethereum.networkVersion !== '4') {
-      alert("Please connect to Rinkeby!")
+    if (window.ethereum.networkVersion !== '5') {
+      alert("Please connect to Goerli!")
     }
   } catch(error) {
     console.log(error)
@@ -115,7 +115,7 @@ const checkNetwork = async () => {
 }
 ```
 
-Here's a quick breakdown of what we're doing here. Similar to how we normally define ```const { ethereum } = window``` we are using ```networkVersion``` in that ethereum object to check which ethereum network we're on. The ethereum networks have different chain ID's, and the Rinkeby chain ID is "4". All we have to do is say "if the current ethereum network is not Rinkeby, alert the user!" Now anytime the page is not loaded on the Rinkeby you will get a notice for your users to switch to Rinkeby! 
+Here's a quick breakdown of what we're doing here. Similar to how we normally define ```const { ethereum } = window``` we are using ```networkVersion``` in that ethereum object to check which ethereum network we're on. The ethereum networks have different chain ID's, and the Goerli chain ID is "5". All we have to do is say "if the current ethereum network is not Goerli, alert the user!" Now anytime the page is not loaded on the Goerli you will get a notice for your users to switch to Goerli! 
 
 ### Recap 
 
@@ -139,7 +139,7 @@ This means we should probably check this as soon as our app loads, right? Let's 
  */
 useEffect(() => {
   /*
-   * The function we will call that interacts with out smart contract
+   * The function we will call that interacts with our smart contract
    */
   const fetchNFTMetadata = async () => {
     console.log('Checking for Character NFT on address:', currentAccount);
@@ -204,7 +204,7 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 const signer = provider.getSigner();
 ```
 
-This is the main logic used to setup our Ethers object and actually call our contract 🚀.  A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using Alchemy to **deploy**? Well, in this case, we use nodes that MetaMask provides in the background to send/receive data from our deployed contract. 
+This is the main logic used to setup our Ethers object and actually call our contract 🚀.  A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using QuickNode to **deploy**? Well, in this case, we use nodes that MetaMask provides in the background to send/receive data from our deployed contract. 
 
 We won't get too much into signers, but [here is a link](https://docs.ethers.io/v5/api/signer/#signers) explaining what a signer is!
 
@@ -237,7 +237,7 @@ Once we get a response from our contract, we need to check if there is indeed a 
 
 With that, let's set our `characterNFT` state with this data so we can use it in our app! 
 
-It's now time to address that `transformCharacterData` method we are calling. Since we will be getting character data in other spots in our app, why would we want to write the some code over and over again? Let's get a little fancy with it 😎. 
+It's now time to address that `transformCharacterData` method we are calling. Since we will be getting character data in other spots in our app, why would we want to write the same code over and over again? Let's get a little fancy with it 😎. 
 
 We can get rid of the undefined error by heading to the `constants.js` file that we created to hold our contract address and add the following:
 
@@ -292,7 +292,7 @@ Alright, so what the heck is this `[currentAccount]` thing? It's the user's publ
 
 Do some Googling and [check out this link](https://reactjs.org/docs/hooks-effect.html) from React docs to learn more.
 
-### ⭕️ Bringing it full circle.
+### ⭕️ Bringing it full circle
 
 All the things are in place. You are feeling good and you're an insanely talented engineer. So let's test this, shall we?
 

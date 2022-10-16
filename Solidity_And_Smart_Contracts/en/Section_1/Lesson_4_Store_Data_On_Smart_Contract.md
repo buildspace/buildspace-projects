@@ -1,5 +1,4 @@
-📦 Store the data!
-------------------
+## 📦 Store the data!
 
 From here, let's add some fanciness to our contract.
 
@@ -7,7 +6,7 @@ We want to be able to let someone wave at us and then store that wave.
 
 So, first thing we need is a function they can hit to wave at us!
 
-The blockchain = Think of it as a cloud provider, kinda like AWS, but it's owned by no one. It's run by compute power from mining machines all over the world. Usually these people are called miners and we pay them to run our code!
+The blockchain = Think of it as a cloud provider, kinda like AWS, but it's owned by no one. It's run by compute power from machines who want to support the network. Usually these people are called Nodes and they run client software to keep the network running while keeping our data or transactions stay on the network!
 
 A smart contract = Kinda like our server's code with different functions people can hit.
 
@@ -16,7 +15,7 @@ So, here's our updated contract we can use to "store" waves.
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 
@@ -47,8 +46,7 @@ We also use some magic here with `msg.sender`. This is the wallet address of the
 
 In the future, we can write functions that only certain wallet addresses can hit. For example, we can change this function so that only our address is allowed to send a wave. Or, maybe have it where only your friends can wave at you!
 
-✅ Updating run.js to call our functions
----------------------------------------
+## ✅ Updating run.js to call our functions
 
 So, `run.js` needs to change!
 
@@ -72,13 +70,12 @@ const main = async () => {
   console.log("Contract deployed to:", waveContract.address);
   console.log("Contract deployed by:", owner.address);
 
-  let waveCount;
-  waveCount = await waveContract.getTotalWaves();
+  await waveContract.getTotalWaves();
 
-  let waveTxn = await waveContract.wave();
+  const waveTxn = await waveContract.wave();
   await waveTxn.wait();
 
-  waveCount = await waveContract.getTotalWaves();
+  await waveContract.getTotalWaves();
 };
 
 const runMain = async () => {
@@ -95,8 +92,7 @@ runMain();
 ```
 **VSCode might auto-import `ethers`. We don't need to import `ethers`. So, make sure you have no imports. Remember, what we talked about last lesson about hre?**
 
-🤔 How's it work?
------------------
+## 🤔 How does it work?
 
 ```javascript
 const [owner, randomPerson] = await hre.ethers.getSigners();
@@ -115,16 +111,17 @@ I'm doing this just to see the address of the person deploying our contract. I'm
 The last thing I added was this:
 
 ```javascript
-let waveCount;
-waveCount = await waveContract.getTotalWaves();
+await waveContract.getTotalWaves();
 
-let waveTxn = await waveContract.wave();
+const waveTxn = await waveContract.wave();
 await waveTxn.wait();
 
-waveCount = await waveContract.getTotalWaves();
+await waveContract.getTotalWaves();
 ```
 
-Basically, we need to manually call our functions! Just like we would any normal API. First I call the function to grab the # of total waves. Then, I do the wave. Finally, I grab the waveCount one more time to see if it changed.
+Basically, we need to manually call our functions! Just like we would any normal API. First I call the function to grab the # of total waves. Then, I do the wave.
+
+Note that the function call `await waveContract.getTotalWaves()` will return the number of waves as well. We can store it in a variable to log it or do any other thing if needed, indeed. It was not necessary here because `getTotalWaves` will log something on each call.  
 
 Run the script like you would normally:
 
@@ -142,16 +139,14 @@ You can also see that wallet address that waved equaled to the address that depl
 
 So we:\
 1\. Called our wave function.\
-2\. Changed the state variable.\
-3\. Read the new value of the variable.
+2\. Changed the state variable.
 
 This is pretty much the basis of most smart contracts. Read functions. Write functions. And changing a state variable. We have the building blocks we need now to keep on working on our epic WavePortal.
 
 Pretty soon, we'll be able to call these functions from our react app that we'll be working on :).
 
 
-🤝 Test other users 
---------------------
+## 🤝 Test other users 
 
 So, we probably want someone other than us to send us a wave right? It'd be pretty boring if only we could send a wave!! We want to make our website **multiplayer**!
 
@@ -167,18 +162,17 @@ const main = async () => {
   console.log("Contract deployed to:", waveContract.address);
   console.log("Contract deployed by:", owner.address);
 
-  let waveCount;
-  waveCount = await waveContract.getTotalWaves();
+  await waveContract.getTotalWaves();
 
-  let waveTxn = await waveContract.wave();
-  await waveTxn.wait();
+  const firstWaveTxn = await waveContract.wave();
+  await firstWaveTxn.wait();
 
-  waveCount = await waveContract.getTotalWaves();
+  await waveContract.getTotalWaves();
 
-  waveTxn = await waveContract.connect(randomPerson).wave();
-  await waveTxn.wait();
+  const secondWaveTxn = await waveContract.connect(randomPerson).wave();
+  await secondWaveTxn.wait();
 
-  waveCount = await waveContract.getTotalWaves();
+  await waveContract.getTotalWaves();
 };
 
 const runMain = async () => {
@@ -194,17 +188,16 @@ const runMain = async () => {
 runMain();
 ```
 
-The newest items added to this code block are:
+In this part, I renamed `waveTxn` to `firstWaveTxn` and added these lines to the code:
 
 ```javascript
-waveTxn = await waveContract.connect(randomPerson).wave();
-await waveTxn.wait();
+secondWaveTxn = await waveContract.connect(randomPerson).wave();
+await secondWaveTxn.wait();
 
-waveCount = await waveContract.getTotalWaves();
+await waveContract.getTotalWaves();
 ```
 
-🚨 Before you click "Next Lesson"
--------------------------------------------
+## 🚨 Before you click "Next Lesson"
 
 *Note: if you don't do this, Farza will be very sad :(.*
 

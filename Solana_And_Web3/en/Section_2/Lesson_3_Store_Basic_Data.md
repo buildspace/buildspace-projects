@@ -2,7 +2,7 @@ Right now, our program does literally nothing haha. Let's change it up to store 
 
 Our website will allow people to submit GIFs. So, storing something like a `total_gifs` number would be pretty helpful too.
 
-### 🥞 Create an integer to store GIF count.
+### 🥞 Create an integer to store GIF count
 
 Cool so we just want to store a basic integer with the number of `total_gifs` people have submitted. So, every time someone adds a new gif we'd just do `total_gifs += 1`.
 
@@ -26,7 +26,7 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod myepicproject {
   use super::*;
-  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
     // Get a reference to the account.
     let base_account = &mut ctx.accounts.base_account;
     // Initialize total_gifs.
@@ -54,7 +54,7 @@ pub struct BaseAccount {
 
 **A lot happening here.** Let's step through it.
 
-### 🤠 Initializing an account.
+### 🤠 Initializing an account
 
 Lets check out this line at the bottom:
 
@@ -84,7 +84,7 @@ Looks complicated lol.
 
 First we've got `[account(init, payer = user, space = 9000)]`. **All we're doing here is telling Solana how we want to initialize `BaseAccount`.**
 
-Note, if after running your test below you get the error `Transaction simulation failed: Error processing Instruction 0: custom program error: 0x64`, you will need to change `space = 9000` to `space = 10000`. If you look at [these docs from anchor](https://project-serum.github.io/anchor/tutorials/tutorial-1.html#defining-a-program) you can see that they define a simple program that declares space = 8 + 8 (eg, 8 kilobytes + 8 kilobytes). The more logic we add to our program, the more space it will take up!
+Note, if after running your test below you get the error `Transaction simulation failed: Error processing Instruction 0: custom program error: 0x64`, you will need to change `space = 9000` to `space = 10000`. If you look at [these docs from anchor](https://project-serum.github.io/anchor/tutorials/tutorial-1.html#defining-a-program) you can see that they define a simple program that declares space = 8 + 8 (eg, 8 bytes + 8 bytes). The more logic we add to our program, the more space it will take up!
 
 1. `init` will tell Solana to create a new account owned by our current program.
 2. `payer = user` tells our program who's paying for the account to be created. In this case, it's the `user` calling the function. 
@@ -104,7 +104,7 @@ Finally, we have `pub system_program: Program` which is actually pretty freaking
 Lastly, we do this thing in our function where we just grab `base_account` from the `StartStuffOff` context by doing `Context<StartStuffOff>`.
 
 ```rust
-pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
 	// Get a reference to the account.
   let base_account = &mut ctx.accounts.base_account;
 	// Initialize total_gifs.
@@ -117,7 +117,7 @@ Boom! Again — a lot of this stuff may seem confusing especially if you're new 
 
 *Note: We do `&mut` to get a "mutable reference" to `base_account`. When we do this it actually gives us the power to make **changes** to `base_account`. Otherwise, we'd simply be working w/ a "local copy" of `base_account`.*
 
-### 👋  Retrieve account data.
+### 👋  Retrieve account data
 
 Let's put it all together.
 
@@ -133,7 +133,7 @@ const main = async() => {
   console.log("🚀 Starting test...")
 
   // Create and set the provider. We set it before but we needed to update it, so that it can communicate with our frontend!
-  const provider = anchor.Provider.env();
+  const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
   const program = anchor.workspace.Myepicproject;
@@ -194,7 +194,7 @@ Here we actually retrieve the account we created and then access `totalGifs`. Wh
 
 Yay! It's `0`! This is pretty freaking epic. We now are actually calling a program *and* storing data in a permissionless manner on the Solana chain. NICE.
 
-### 👷‍♀️ Build a function to update GIF counter.
+### 👷‍♀️ Build a function to update GIF counter
 
 Let's actually create a new function named `add_gif` that lets us actually increment the GIF counter. Check out some of my changes below.
 
@@ -206,14 +206,14 @@ declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 #[program]
 pub mod myepicproject {
   use super::*;
-  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> ProgramResult {
+  pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs = 0;
     Ok(())
   }
   
 	// Another function woo!
-  pub fn add_gif(ctx: Context<AddGif>) -> ProgramResult {
+  pub fn add_gif(ctx: Context<AddGif>) -> Result <()> {
     // Get a reference to the account and increment total_gifs.
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs += 1;
@@ -261,7 +261,7 @@ Otherwise, I may change data on it within my function but it *wouldn't actually 
 Last, I create a lil `add_gif` function!
 
 ```rust
-pub fn add_gif(ctx: Context<AddGif>) -> ProgramResult {
+pub fn add_gif(ctx: Context<AddGif>) -> Result <()> {
     // Get a reference to the account and increment total_gifs.
     let base_account = &mut ctx.accounts.base_account;
     base_account.total_gifs += 1;
@@ -284,7 +284,7 @@ const { SystemProgram } = anchor.web3;
 const main = async() => {
   console.log("🚀 Starting test...")
 
-  const provider = anchor.Provider.env();
+  const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
   const program = anchor.workspace.Myepicproject;

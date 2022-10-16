@@ -3,7 +3,9 @@
 Now that we got all our scripts good to go and the basics down, we're going to mint some NFTs! Here's what my updated `MyEpicNFT.sol` looks like:
 
 ```solidity
-pragma solidity ^0.8.0;
+// SPDX-License-Identifier: UNLICENSED
+
+pragma solidity ^0.8.17;
 
 // We first import some OpenZeppelin Contracts.
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -57,7 +59,7 @@ Wtf is `_tokenIds`? Well, remember the Picasso example? He had 100 NFT sketches 
 
 Same thing here, we're using `_tokenIds` to keep track of the NFTs unique identifier, and it's just a number! It's automatically initialized to 0 when we declare `private _tokenIds`. So, when we first call `makeAnEpicNFT`, `newItemId` is 0. When we run it again, `newItemId` will be 1, and so on!
 
-`_tokenIds` is **state variable** which means if we change it, the value is stored on the contract directly.
+`_tokenIds` is a **state variable** which means if we change it, the value is stored on the contract directly.
 
 ```solidity
 _safeMint(msg.sender, newItemId);
@@ -81,8 +83,7 @@ _tokenIds.increment();
 
 After the NFT is minted, we increment `tokenIds` using `_tokenIds.increment()` (which is a function OpenZeppelin gives us). This makes sure that next time an NFT is minted, it'll have a different `tokenIds` identifier. No one can have a `tokenIds` that's already been minted too.
 
-🎟 `tokenURI` and running locally.
-------------------------
+## 🎟 `tokenURI` and running locally
 
 The `tokenURI` is where the actual NFT data lives. And it usually **links** to a JSON file called the `metadata` that looks something like this:
 
@@ -96,15 +97,15 @@ The `tokenURI` is where the actual NFT data lives. And it usually **links** to a
 
 You can customize this, but, almost every NFT has a name, description, and a link to something like a video, image, etc. It can even have custom attributes on it! Be careful with the structure of your metadata, if your structure does not match the [OpenSea Requirements](https://docs.opensea.io/docs/metadata-standards) your NFT will appear broken on the website.
 
-This is all part of the `ERC721` standards and it allows people to build websites on top of NFT data. For example, [OpenSea](https://opensea.io/assets) is a marketplace for NFTs. And, every NFT on OpenSea follows the `ERC721` metadata standard which makes it easy for people to buy/sell NFTs. Imagine if everyone followed their own NFT standards and structured their metadata however they wanted, it'd be chaos!
+This is all part of the `ERC721` standards and it allows people to build websites on top of NFT data. For example, [OpenSea](https://testnets.opensea.io/) is a platform to view NFTs. And, every NFT on OpenSea follows the `ERC721` metadata standard which makes it easy for people to view their NFTs. Imagine if everyone followed their own NFT standards and structured their metadata however they wanted, it'd be chaos!
 
-We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [this](https://jsonkeeper.com/) website. This website is just an easy place for people to host JSON data and we'll be using it to keep our NFT data for now. Once you click "Save" you'll get a link to the JSON file. (For example, mines is [`https://jsonkeeper.com/b/RUUS`](https://jsonkeeper.com/b/RUUS)). Be sure to test your link out and be sure it all looks good!
+We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [this](https://jsonkeeper.com/) website. This website is just an easy place for people to host JSON data and we'll be using it to keep our NFT data for now. Once you click "Save" you'll get a link to the JSON file. (For example, mine is [`https://jsonkeeper.com/b/RUUS`](https://jsonkeeper.com/b/RUUS)). Be sure to test your link out and be sure it all looks good!
 
-**Note: I'd love for you to create your own JSON metadata instead of just copying mine. Use your own image, name, and description. Maybe you want your NFT to an image of your fav anime character, fav band, whatever!! Make it custom. Don't worry, we'll be able to change this in the future!**
+**Note: I'd love for you to create your own JSON metadata instead of just copying mine. Use your own image, name, and description. Maybe you want your NFT to be an image of your fav anime character, fav band, whatever!! Make it custom. Don't worry, we'll be able to change this in the future!**
 
 If you decide to use your own image, make sure the URL goes directly to the actual image, not the website that hosts the image! Direct Imgur links look like this - `https://i.imgur.com/123123.png` NOT `https://imgur.com/gallery/123123`. The easiest way to tell is to check if the URL ends in an image extension like `.png` or `.jpg`. You can right click the imgur image and "copy image address". This will give you the correct URL.
 
-Now, lets head to our smart contract and change one line. Instead of:
+Now, let's head to our smart contract and change one line. Instead of:
 
 ```solidity
 _setTokenURI(newItemId, "blah")
@@ -122,8 +123,7 @@ Under that line, we can also add a `console.log` to help us see when the NFT is 
 console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
 ```
 
-🎉 Mint an NFT locally.
-------------------------
+## 🎉 Mint an NFT locally
 
 From here, all we'll need to do is actually change our `run.js` file to actually call our `makeAnEpicNFT()` function. Here's all we need to do:
 
@@ -175,15 +175,15 @@ So, right now every time someone mints an NFT with this function, it's always th
 
 Now, let's move to the next step — deploying to a testnet :).
 
-🎉 Deploy to Rinkeby and see on OpenSea
-------------------------
+## 🎉 Deploy to Goerli and see on OpenSea
 
-When we use `run.js`, it's just us working locally.
+Since OpenSea doesn't support Goerli, we have to look for an alternative. You can check out [OpenSea](https://goerli.OpenSea.com/) to view your NFT when you deploy to Goerli. When we use `run.js`, it's just us working locally.
 
-The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to to **view our NFT online** and we are a step closer to getting this to **real users.** 
+The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to **view our NFT online** and we are a step closer to getting this to **real users.** 
 
- 💳 Transactions
-------------------------
+You are a badass look at you! 
+
+##  💳 Transactions
 
 So, when we want to perform an action that changes the blockchain we call it a *transaction*. For example, sending someone ETH is a transaction because we're changing account balances. Doing something that updates a variable in our contract is also considered a transaction because we're changing data. Minting an NFT is a transaction because we're saving data on the contract.
 
@@ -193,19 +193,18 @@ Remember, the blockchain has no owner. It's just a bunch of computers around the
 
 When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
 
-This is where [Alchemy](https://alchemy.com/?r=b93d1f12b8828a57) comes in.
+This is where [QuickNode](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) comes in.
 
-Alchemy essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
+QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
-This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense.
+This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
 
-So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+So, make an account with QuickNode [here](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 And then check out my video below to learn how to get your API key for a testnet:
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0)
+[Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
 
-🕸 Testnets
-------------------------
+## 🕸 Testnets
 
 We're not going to be deploying to the "Ethereum mainnet" for now. Why? Because it costs real $ and it's not worth messing up! We're just learning right now. We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake $ so we can test stuff out as much as we want. But, it's important to know that testnets are run by actual miners and mimic real-world scenarios.
 
@@ -218,37 +217,32 @@ This is awesome because we can test our application in a real-world scenario whe
 
 3. Wait for it to be mined
 
-4. Wait for it be broadcasted back to the blockchain telling all the other miners to update their copies
+4. Wait for it to be broadcasted back to the blockchain telling all the other miners to update their copies
 
 
-🤑 Getting some fake $
-------------------------
+## 🤑 Getting some fake $
 
-There are a few testnets out there and the one we'll be using is called "Rinkeby" which is run by the Ethereum foundation.
+There are a few testnets out there and the one we'll be using is called "Goerli" which is run by the Ethereum foundation.
 
-In order to deploy to Rinkeby, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
+In order to deploy to Goerli, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works lol.
+In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Goerli through a faucet. You just gotta find one that works lol.
 
-For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
+For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official Goerli faucet, if you log into your Alchemy account, you should be able to get 2x the amount.
 
 You have a few faucets to choose from:
 
-| MyCrypto | https://app.mycrypto.com/faucet 
+| Name             | Link                                  | Amount          | Time         |
+| ---------------- | ------------------------------------- | --------------- | ------------ |
+| MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
+| Official Goerli  | https://goerlifaucet.com/             | 0.25            | 24 Hours
+| Chainlink        | https://faucets.chain.link/goerli     | 0.1             | None         |
 
-| Buildspace | https://buildspace-faucet.vercel.app/
-
-| Chainlink | https://faucets.chain.link/rinkeby
-
-| Official Rinkeby | https://faucet.rinkeby.io/ 
-
-🙃 Having trouble getting Testnet ETH?
-------------------------
+## 🙃 Having trouble getting Testnet ETH?
 
 If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
 
-🚀 Setup a deploy.js file
-------------------------
+## 🚀 Setup a deploy.js file
 
 It's good practice to separate your deploy script from your `run.js` script. `run.js` is where we mess around a lot, we want to keep it separate. Go ahead and create a file named `deploy.js` under the `scripts` folder. Copy-paste all of `run.js` into `deploy.js`. It's going to be exactly the same right now. I added some `console.log` statements, though.
 
@@ -284,32 +278,55 @@ const runMain = async () => {
 runMain();
 ```
 
-**📈 Deploy to Rinkeby testnet.**
-------------------------
+## 📈 Deploy to Goerli testnet
 
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
 
 ```javascript
-require('@nomiclabs/hardhat-waffle');
+require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config();
 
 module.exports = {
-  solidity: '0.8.0',
+  solidity: '0.8.17',
   networks: {
-    rinkeby: {
-      url: 'YOUR_ALCHEMY_API_URL',
-      accounts: ['YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY'],
+    goerli: {
+      url: process.env.QUICKNODE_API_KEY_URL,
+      accounts: [process.env.GOERLI_PRIVATE_KEY],
     },
   },
 };
 ```
-
-You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
-
-**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.** We'll talk about `.env` variables later and how to keep this stuff secret.
-
-In the meantime - open your `.gitignore` file and add a line for `hardhat.config.js`. You can remove this later when you set up `.env`.
+Here we are basically configuring our `hardhat.config.js` to use our env variables securely which are the **process.env.QUICKNODE_API_KEY_URL** & our **process.env.GOERLI_PRIVATE_KEY**. You'll now need to open your terminal and type in
 ```
-hardhat.config.js
+npm install dotenv
+```
+This basically just installs the `dotenv` package which allows us to use env variables.
+
+And now you can create a **.env** file in the root of your project. To be sure, it should be matching with the path that contains the **hardhat.config.js** file.
+
+You can grab your API URL from the QuickNode dashboard and paste that in. Then, you'll need your **private** key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
+
+Open the **.env** file and paste the two we've grabbed as shown below.
+```
+QUICKNODE_API_KEY_URL=<YOUR API URL>
+GOERLI_PRIVATE_KEY=<YOUR PRIVATE KEY>
+```
+Don't forget to remove those `<` `>` after adding your API URL and your PRIVATE KEY! 🔑
+
+**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY.
+OPEN YOUR `.gitignore` FILE AND ADD A LINE FOR `.env` IF IT DOES NOT EXIST.**
+
+Your `.gitignore` should look somewhat like this now.
+```
+node_modules
+.env
+coverage
+coverage.json
+typechain
+
+#Hardhat files
+cache
+artifacts
 ```
 
 Why do you need to use your private key? Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain and sign/deploy the contract. And, your username is your public address and your password is your private key. It's kinda like logging into AWS or GCP to deploy.
@@ -319,27 +336,31 @@ Once you've got your config setup we're set to deploy with the deploy script we 
 Run this command from the root directory of `epic-nfts`.
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 It takes like 20-40 seconds to deploy usually. We're not only deploying! We're also minting NFTs in `deploy.js` so that'll take some time as well. We actually need to wait for the transaction to be mined + picked up by miners. Pretty epic :). That one command does all that!
 
 When I run this here's the output (yours will ofc look different):
 
-![carbon (7).png](https://i.imgur.com/nLSX6PM.png)
+![carbon (7).png](https://i.imgur.com/TwpQOTM.png)
 
-We can make sure it all worked properly using [Rinkeby Etherscan](https://rinkeby.etherscan.io/) where you can paste the contract address and see what's up with it!
+We can make sure it all worked properly using [Goerli Etherscan](https://goerli.etherscan.io/) where you can paste the contract address and see what's up with it!
 
 Get used to using Etherscan because it's like the easiest way to track deployments and if something goes wrong. If it's not showing up on Etherscan, then that means it's either still processing or something went wrong!
 
 If it worked — AWEEEEESOME YOU JUST DEPLOYED A CONTRACT YESSSS.
 
-🌊 View on OpenSea
-------------------------
+## 🌊 View on OpenSea
 
 Believe it or not. The NFTs you just minted will be on OpenSea's TestNet site.
 
-Head to [testnets.opensea.io](https://testnets.opensea.io/). Search for your contract address which is the address we deployed to that you can find in your terminal, **Don't click enter**, click the collection itself when it comes up in the search.
+1. Head to `https://testnets.opensea.io/`.
+2. Create this url: `https://testnets.opensea.io/assets/goerli/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE/TOKEN_ID`
+
+For example, here's my link: https://testnets.opensea.io/assets/goerli/0x78d1e929cfc5256643b3cc67c50e2d7ec3580842/0 for the Spongebob NFT!! My `tokenId` is `0` because it was the first mint from that contract.
+
+**Basically, if you don't see your NFT on OpenSea within a few minutes, refreshing the page and wait for another 15 mins** 
 
 ![Untitled](https://i.imgur.com/ePDlYX1.png)
 
@@ -347,36 +368,19 @@ So here, you'd click "SquareNFT" under "Collections", and boom you'll see the NF
 
 ![Untitled](https://i.imgur.com/Q96NYK4.png)
 
-HOOOOLY SHIT LETS GO. IM HYPE **FOR** YOU.
+HOOOOLY SHIT LET'S GO. IM HYPE **FOR** YOU.
 
 Pretty epic, we've created our own NFT contract *and* minted two NFTs. Epic. WHILE THIS IS EPIC, it is *kinda lame —* right? It's just the same Spongebob picture every time! How can we add some randomness to this and generate stuff on the fly? That's what we'll be getting into next :).
 
-🙀 Help my NFTs aren't showing on OpenSea!
-------------------------
- **If your NFTs aren't showing up on OpenSea** — wait a few minutes, sometimes OpenSea can take like 5-minutes. Here's my advice, if it's been 5 minutes and your metadata still looks like this:
-
-![Untitled](https://i.imgur.com/dVACrDl.png)
-
-**Then use Rarible instead of OpenSea.** Rarible is another NFT marketplace like OpenSea. Here's how to set it up:
-
-1. Head to `rinkeby.rarible.com`.
-2. Create this url: `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE.`
-
-For example, here's my link: https://rinkeby.rarible.com/token/0xb6be7bd567e737c878be478ae1ab33fcf6f716e0:0 for the Spongebob NFT!! My `tokenId` is `0` because it was the first mint from that contract.
-
-**Basically, if you don't see your NFT on OpenSea within a few minutes, try Rarible and Rarible URLs for the rest of the project.** 
-
-
-💻 The code
-------------------------
+## 💻 The code
 
 [Here](https://gist.github.com/farzaa/483c04bd5929b92d6c4a194bd3c515a5) is a link to what our code looks like up to this point.
 
-🚨Progress report.
-------------------------
+## 🚨Progress report
+
 WOOOOOOO. GIVE YOURSELF A PAT ON THE BACK. YOU DEPLOYED A SMART CONTRACT THAT MINTS NFTS. WOW.
 
-Good stuff :).
+Quick note here: We've seen that the best builders have made it a habit to **"build in public"**. All this means is sharing a few learnings about the milestone they've just hit!
 
 You should totally **tweet** out that you just wrote and deployed your smart contract that can mint NFTs and tag @_buildspace. If you want, include a screenshot of the OpenSea/Rarible page that shows that your NFT :)!
 
@@ -389,3 +393,4 @@ You should feel awesome about the fact that you're actually building stuff every
 ![](https://i.imgur.com/HBMIgu2.png)
 
 ![](https://i.imgur.com/KwbO0Ib.png)
+ 

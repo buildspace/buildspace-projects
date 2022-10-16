@@ -2,10 +2,10 @@ We are looking great right now. We have setup two scenarios and got the basics d
 
 Now that we are able to interact with our Smart Contract from our UI and we have created our `SelectCharacter` Component, we can easily grab all mint-able characters from our Smart Contract and display them in our UI. Let's jump right in.
 
-### 👀 Just one more thing.
+### 👀 Just one more thing
 Before you begin, be sure to remove any function calls to mint a character or attack a boss in your `scripts/deploy.js` file! This will help prevent some React state errors in your UI.
 
-### ♻️ Setting up a reusable contract object.
+### ♻️ Setting up a reusable contract object
 
 Since we know we are going to use our Smart Contract let's start by setting up an `ethers` object to interact with it. It's going to be the same flow as before, with a little twist. Let's start by importing all the things in `Components/SelectCharacter/index.js` :
 
@@ -66,7 +66,7 @@ useEffect(() => {
 }, []);
 ```
 
-### 😎 Fetching all the characters.
+### 😎 Fetching all the characters
 
 There isn't much different here other than setting our `gameContract` in state. We are going to use a bit more `useEffect` fanciness! Since we need to get our data ASAP, we want to know as soon as our `gameContract` is ready to use. So, why don't we just setup another `useEffect` to listen for any changes with `gameContract` ? Right under the `useEffect` you wrote above, add this:
 
@@ -122,7 +122,7 @@ Before we move on, let's give this a quick test! We should be able to see some c
 
 Always a sight to see, that's for sure. This is cool and all, but it would be even cooler if it showed up in our app, right?
 
-### 👓 Actually rendering the characters UI.
+### 👓 Actually rendering the characters UI
 
 We are going to take the same render method approach here by creating function that will map through all of our characters and create some UI to render them on the page. Let's start by creating the render method in the `SelectCharacter` component:
 
@@ -170,13 +170,13 @@ It's that easy! Go ahead and give your page a quick refresh and you should see s
 
 *Note: the characters may be arranged vertically instead of horizontally!*
 
-### ✨ Minting your Character NFT from the UI.
+### ✨ Minting your Character NFT from the UI
 
 This is amazing, but we can take it one step further - **a one button click to mint our NFT.** We are going to start by adding in our minting function `mintCharacterNFTAction` . Go ahead and add this right under where you declared your state in `SelectCharacter`:
 
 ```javascript
 // Actions
-const mintCharacterNFTAction = (characterId) => async () => {
+const mintCharacterNFTAction = async (characterId) => {
   try {
     if (gameContract) {
       console.log('Minting character in progress...');
@@ -196,7 +196,7 @@ I hope you are starting to see the common trend of interacting with a smart cont
 
 This function is going to call the `mintCharacterNFT` function on our contract. It needs to know which character to mint though, so we pass it the index of that character!
 
-We then just wait for the transaction to finish before we do anything else. Something seems a bit off though... It doesn't look like we are returning any data from our smart contract? How do we know when the NFT is truly minted? **Remember that `event` you created that fires off after an NFT is minted?** Thats the thing we are going to use!
+We then just wait for the transaction to finish before we do anything else. Something seems a bit off though... It doesn't look like we are returning any data from our smart contract? How do we know when the NFT is truly minted? **Remember that `event` you created that fires off after an NFT is minted?** That's the thing we are going to use!
 
 We are going to listen in for an event from our smart contract that says, "Yo I'm done minting your NFT. You can continue."
 
@@ -296,7 +296,7 @@ return () => {
 
 Finally, we want to make sure to stop listening to this event when the component is not being used anymore! This is good practice in React and helps with future improvements down the road :). 
 
-### 🌌 Seeing your Character NFT in the Metaverse.
+### 🌌 Seeing your Character NFT in the Metaverse
 
 ![Untitled](https://media.giphy.com/media/rHR8qP1mC5V3G/giphy.gif)
 
@@ -304,27 +304,27 @@ Big salute to you for your endeavors. At this point we should be able to give th
 
 ![Untitled](https://i.imgur.com/PQHzJzq.png)
 
-My. Goodness. You just minted a character NFT from your Smart Contract. Straight up legend out here 🔥. Before we move on let's head over to OpenSea and see if our character was truly minted. To get the direct link to your NFT you can just do:
+My. Goodness. You just minted a character NFT from your Smart Contract. Straight up legend out here 🔥. Before we move on let's head over to Pixxiti and see if our character was truly minted. To get the direct link to your NFT you can just do:
 
 ```javascript
-https://testnets.opensea.io/assets/CONTRACT_ADDRES/TOKEN_ID
+https://goerli.pixxiti.com/nfts/CONTRACT_ADDRES/TOKEN_ID
 ```
 
 Here's what mines looks like:
 
 ![Untitled](https://i.imgur.com/W3eca7t.png)
 
-AHH YES. There is my Leo. One thing to note here - make sure to look for your NFT on the [https://testnets.opensea.io/](https://testnets.opensea.io/) since we are using Rinkeby!
+AHH YES. There is my Leo. One thing to note here - make sure to look for your NFT on the [https://goerli.pixxiti.com](https://goerli.pixxiti.com) since we are using Goerli!
 
 You freaking did it! Now that we have our character NFT we can finally go out and protect the Metaverse from rogue beings ⚔️.
 
-Feel free to also set up an `alert` that automatically gives your player the OpenSea link when it's done minting. For example something like:
+Feel free to also set up an `alert` that automatically gives your player the Goerli link when it's done minting. For example something like:
 
 ```javascript
-alert(`Your NFT is all done -- see it here: https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
+alert(`Your NFT is all done -- see it here: https://goerli.pixxiti.com/nfts/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
 ```
 
-### **🚨 Progress report.**
+### 🚨 Progress report
 
 Post a screenshot of your character select screen in #progress -- it's always fun to see everyone's characters!! It's also a perfect thing to tweet out :). Tell the world about your NFT characters and what your game is all about :).
 

@@ -8,6 +8,7 @@ To start, we need to get the user’s domain name and what data they’re going 
 import React, { useEffect, useState } from "react";
 import './styles/App.css';
 import twitterLogo from './assets/twitter-logo.svg';
+import {ethers} from "ethers";
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
@@ -20,6 +21,7 @@ const App = () => {
 	const [currentAccount, setCurrentAccount] = useState('');
 	// Add some state data propertie
 	const [domain, setDomain] = useState('');
+	const [loading, setLoading] = useState(false);
   const [record, setRecord] = useState('');
 
   const connectWallet = async () => {
@@ -183,7 +185,7 @@ If you take a look at your app, you’ll see the input fields:
 
 **Note:** the mint button doesn’t do anything right now, this is expected! 
 
-Very cool 😎. We can now easily collect inputs from our user and call our contract! In the next session you are going to see how magical this is by calling the functions we made earlier on our smart contract!
+Very cool 😎. We can now easily collect inputs from our user and call our contract! In the next session, you are going to see how magical this is by calling the functions we made earlier on our smart contract!
 
 ### 🧞 Interacting with the contract
 
@@ -221,7 +223,7 @@ const mintDomain = async () => {
 				console.log("Domain minted! https://mumbai.polygonscan.com/tx/"+tx.hash);
 				
 				// Set the record for the domain
-				tx = contract.setRecord(domain, record);
+				tx = await contract.setRecord(domain, record);
 				await tx.wait();
 
 				console.log("Record set! https://mumbai.polygonscan.com/tx/"+tx.hash);
@@ -251,7 +253,7 @@ const signer = provider.getSigner();
 
 Be sure to import it at the top using `import { ethers } from "ethers";`, right after we import the Twitter logo.
 
-A "provider" is what we use to actually talk to Polygon nodes. Remember how we were using Alchemy to **deploy**? Well in this case we use nodes that MetaMask provides in the background to send/receive data from our deployed contract.
+A "provider" is what we use to actually talk to Polygon nodes. Remember how we were using QuickNode to **deploy**? Well in this case we use nodes that MetaMask provides in the background to send/receive data from our deployed contract.
 
 [Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
 
@@ -278,7 +280,7 @@ if (receipt.status === 1) {
 	console.log("Domain minted! https://mumbai.polygonscan.com/tx/"+tx.hash);
 	
 	// Set the record for the domain
-	tx = contract.setRecord(domain, record);
+	tx = await contract.setRecord(domain, record);
 	await tx.wait();
 
 	console.log("Record set! https://mumbai.polygonscan.com/tx/"+tx.hash);
@@ -299,40 +301,40 @@ Finally, we'll want to call this function when someone clicks the "Mint NFT" but
 
 ```jsx
 const renderInputForm = () => {
-	return (
-		<div className="form-container">
-			<div className="first-row">
-				<input
-					type="text"
-					value={domain}
-					placeholder="domain"
-					onChange={e => setDomain(e.target.value)}
-				/>
-				<p className='tld'> {tld} </p>
-			</div>
+  return (
+    <div className="form-container">
+      <div className="first-row">
+        <input
+          type="text"
+          value={domain}
+          placeholder="domain"
+          onChange={e => setDomain(e.target.value)}
+        />
+        <p className='tld'> {tld} </p>
+      </div>
 
-			<input
-				type="text"
-				value={record}
-				placeholder='whats ur ninja power?'
-				onChange={e => setRecord(e.target.value)}
-			/>
+      <input
+        type="text"
+        value={record}
+        placeholder='whats ur ninja power?'
+        onChange={e => setRecord(e.target.value)}
+      />
 
-			<div className="button-container">
-				{/* Call the mintDomain function when the button is clicked*/}
-				<button className='cta-button mint-button' onClick={mintDomain}>
-					Mint
-				</button> 
-			</div>
+      <div className="button-container">
+        {/* Call the mintDomain function when the button is clicked*/}
+        <button className='cta-button mint-button' onClick={mintDomain}>
+          Mint
+        </button> 
+      </div>
 
-		</div>
-	);
+    </div>
+  );
 }
 ```
 
 Note: You’ll still see errors and the mint button won’t work!
 
-### **📂 ABI files**
+### 📂 ABI files
 
 **Here’s a little video Farza made explaining all this ABI stuff. Please give it a watch as he goes over some important stuff**
 
@@ -342,7 +344,7 @@ Note: You’ll still see errors and the mint button won’t work!
 
 So — when you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
 
-The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.8.11/abi-spec.html).
+The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.8.14/abi-spec.html).
 
 The contents of the ABI file can be found in a fancy JSON file in your hardhat project:
 
@@ -359,7 +361,7 @@ Paste the ABI file contents right there in our new file.
 Now that you have your file with all your ABI content ready to go, it's time to import it into your `App.js` file. It's just going to be:
 
 ```jsx
-import contractABI from './utils/contractABI.json';
+import contractAbi from './utils/contractABI.json';
 ```
 
 And we're all done. Shouldn't have errors anymore!
@@ -368,15 +370,15 @@ All you'll need to do from here is enter a domain name, a record, click "Mint", 
 
 You may be asking yourself wtf gas is. I'm not going to answer that here. But, you can start researching [here](https://ethereum.org/en/developers/docs/gas/) ;).
 
-### **🤩 Test**
+### 🤩 Test
 
 You should be able to go and actually mint a domain NFT right from your website now. 
 
 **Let's go!**
 
-This is basically how all these NFT minting sites work and you just got it done yourself :).
+This is basically how all these NFT minting sites work and you just got it done yourself :)
 
-### **✈️ A note on contract redeploys**
+### ✈️ A note on contract redeploys
 
 Let's say you want to change your contract. You'd need to do 3 things:
 
@@ -388,6 +390,6 @@ Let's say you want to change your contract. You'd need to do 3 things:
 
 Why do we need to do all this? Well, it's because smart contracts are **immutable.** They can't change. They're permanent. That means changing a contract requires a full redeploy. This will also **reset** all the variables since it'd be treated as a brand new contract. **That means we'd lose all our domain data if we wanted to update the contract's code.**
 
-### **🚨Progress report.**
+### 🚨Progress report
 
 Post a screenshot of your console after you mint a few NFTs and show off all those `console.log`s!

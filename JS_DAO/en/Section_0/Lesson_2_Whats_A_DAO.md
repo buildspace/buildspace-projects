@@ -1,5 +1,4 @@
-👻 How does a DAO work?
-----------------------
+## 👻 How does a DAO work?
 
 What's a DAO? Hmmm.
 
@@ -7,8 +6,7 @@ There are so many different definitions and explanations of what a DAO is. I jus
 
 I feel like even after reading this, I still don’t understand what the heck a DAO is. Simply put, a DAO is a community of people with a shared bank account. Decisions around how that bank account is used are made by voting on different proposals that members create. When a proposal gets enough votes, it is executed on-chain!
 
-💰 Y-Combinator
-----------------------
+## 💰 Y-Combinator
 
 [Y-Combinator (YC)](https://www.ycombinator.com/) is a famous startup accelerator. They have a massive bank account funded by various people + profits from startups that have exited. The "YC Partners" are a group of people that decide what companies to accept into the program and invest in. The partners have invested in various companies that have exploded in value:
 
@@ -16,8 +14,7 @@ I feel like even after reading this, I still don’t understand what the heck a 
 
 YC has an extremely centralized approach where a small # of key people decide who to invest in — which isn't a bad thing! I want to stress that just because something is centralized **doesn't mean it's bad lol.**
 
-🤠 Y-Combinator as a DAO.
-----------------------
+## 🤠 Y-Combinator as a DAO
 
 Let's imagine YC as a DAO, We'll call it YCDAO.
 
@@ -29,13 +26,13 @@ Cool, so now I have some $YCDAO. YCDAO members with the token can now vote on pr
 
 "Voting Power" would depend on how it is initially set up.
 
-For example, 1 $YCDAO token could equal one vote. But maybe you think this isn't fair because it means ultra-rich people would rule the organization with their votes. That's fine, you can change the rule to say: "Everyone gets one vote, regardless of how many tokens they own". It's really up to the DAOs creators to think through what's best for members. But, I just want you to know **voting power formulas can be custom!** Thats the absolute beauty of a DAO 🌸.
+For example, 1 $YCDAO token could equal one vote. But maybe you think this isn't fair because it means ultra-rich people would rule the organization with their votes. That's fine, you can change the rule to say: "Everyone gets one vote, regardless of how many tokens they own". It's really up to the DAOs creators to think through what's best for members. But, I just want you to know **voting power formulas can be custom!** That's the absolute beauty of a DAO 🌸.
 
 Let's say 90% of people in YCDAO voted "Yes" to invest in DogDAO —  a DAO for dog owners. Great. That proposal would automatically be executed on-chain. YCDAO would automatically send the funds to DogDAO's treasury. In exchange, DogDAO would automatically send $DOG to YCDAO's treasury. Bam. Investment complete.
 
 Let's say DogDAO takes off and becomes wildly profitable by selling dog training lessons or something. That means that the $DOG token that YCDAO owns would have increased in value and YCDAO would make a profit by selling the token if they wanted. $YCDAO token itself would also go up in value because YCDAO's treasury has increased in value thanks to a fantastic investment.
 
-What's magical here is you don't need to trust a central entity to make sure the investment goes through. It's all automatic and revolves around rules that the DAO sets when it is created
+What's magical here is you don't need to trust a central entity to make sure the investment goes through. It's all automatic and revolves around rules that the DAO sets when it is created.
 
 You definitely should read through that example a few times! I wanted to lay out something concrete for you to wrap your head around. YCDAO isn't real of course, but there are quite a few people pursuing the model. [Here](https://www.hyperscalefund.com/) is an example.
 

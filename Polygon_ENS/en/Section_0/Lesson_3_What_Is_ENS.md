@@ -6,7 +6,7 @@ Okay — this is cool, but what’s the point? Well basically it means you can l
 
 Usually, you would have to go make deals with big ISP providers to have your domain accepted by them. For example, if you wanted to make the domain `.bingbongboopitybop` then all the big internet providers would need to accept it on their end. Else, the domain would just lead to a “Does not exist” error page.
 
-Recently, I wanted to buy a `.af` domain, but it doesn’t exist! In this case, I could take inspiration from ENS and build by own ENS for the `.af` domain.
+Recently, I wanted to buy a `.af` domain, but it doesn’t exist! In this case, I could take inspiration from ENS and build my own ENS for the `.af` domain.
 
 So, now that we know how hype Polygon is and what ENS is - how does this all fit into what we are building?
 
@@ -24,7 +24,7 @@ You might say “That’s okay, I’ll just register it for 10 years to save gas
 
 The bigger issue is that any time you want to update a record or change wallets, you need to pay $30-$60 for gas. That adds up. How many happy meals are you missing out on??
 
-These gas fees aren’t going away any time soon. You need to pay to store data on the blockchain and as long as people find it economical to do so, they’ll pay more than you. How cool would it be if we could build our dApps on a more scalable network that offers cheaper fees with the same amount of security? That’s what this project is going all about!
+These gas fees aren’t going away any time soon. You need to pay to store data on the blockchain and as long as people find it economical to do so, they’ll pay more than you. How cool would it be if we could build our dApps on a more scalable network that offers cheaper fees with the same amount of security? That’s what this project is going to be all about!
 
 ### 🤖 What can we do with a “name” service?
 
@@ -38,10 +38,10 @@ They have a lot of different things set, like usernames for various services,  e
 
 Any website on the internet can access this data. How cool is that? Imagine never needing to upload your profile picture ever again. Everyone will know of my moustache.
 
-### **💪 Let's get to work.**
+### 💪 Let's get to work
 
 We've been doing a lot of talking. Let's actually build our own little version of an ENS. By the end, hopefully all this becomes much more concrete and maybe you'll be on your way toward making the next hit web3 app ;).
 
-### **🚨 Progress report!**
+### 🚨 Progress report!
 
-Post in #progress your fav web app + domain combo! Help get everyone in the building mood 8).
+Post in #progress your fav web app + domain combo! Help get everyone in the building mood 8)

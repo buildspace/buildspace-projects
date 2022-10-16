@@ -10,7 +10,7 @@ Plus, I think it's easier to build the web app once we deploy our Solana program
 
 *Note: Make sure `solana-test-validator` is **not** running anywhere.*
 
-### 🌳 Set up your environment for devnet.
+### 🌳 Set up your environment for devnet
 
 It's actually pretty tricky to deploy to devnet. Stay with me here and make sure not to miss any steps :).
 
@@ -44,7 +44,7 @@ And you should see 4 fake SOL in your wallet! This is actually retrieving your b
 
 *Note: sometimes you'll get an error that says something like "insufficient funds" — whenever that happens just airdrop yourself `2` SOL like above. Note: `2` is the max you can airdrop yourself at a time right now. So, you'll need to refresh your wallet occasionally.*
 
-### ✨ Changing up some variables.
+### ✨ Changing up some variables
 
 Now, we need to change some variables in `Anchor.toml`. This is where it gets a little tricky.
 
@@ -148,8 +148,10 @@ This of course is not "Mainnet", but the "Devnet" is run by actual miners and is
 
 *Please do this else Farza will be sad :(*
 
-You deployed a Solana program!!! Hell yes!! Go ahead and post the Solana Explorer link to your deployed program in `#progress`.
+You deployed a Solana program!!! Hell yes -- this is huge!!
 
-This is also a good time to tweet out that you're learning about Solana and just deployed your first program to the Solana Devnet. Inspire others to join web3!
+We've seen that the best builders have made it a habit to "build in public". All this means is sharing a few learnings about the milestone they've just hit!
+
+This is a good time to tweet out that you're learning about Solana and just deployed your first program to the Solana Devnet. Inspire others to join web3!
 
 Be sure to include your Solana Explorer link and attach a screenshot of your deployed program as well perhaps. Or, add a screenshot of it on Solana Explorer!! Tag `@_buildspace` if you're feeling fancy ;).

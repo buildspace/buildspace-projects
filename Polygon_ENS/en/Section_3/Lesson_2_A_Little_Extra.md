@@ -25,7 +25,7 @@ function getAllNames() public view returns (string[] memory) {
 
 Pretty simple, right? You are a Solidity pro now so this should feel pretty familiar to what we did before!
 
-We added a mapping to store mint IDs with domain names and a `pure` function to iterate through all those names and put them in a list to send to us. There’s one bit missing though! We still need to set the mapping data! 
+We added a mapping to store mint IDs with domain names and a `view` function to iterate through all those names and put them in a list to send to us. There’s one bit missing though! We still need to set the mapping data! 
 
 Add this to the bottom of your `register` function, right before the `_tokenIds.increment()`:
 
@@ -70,16 +70,17 @@ function setRecord(string calldata name, string calldata record) public {
 }
 
 function register(string calldata name) public payable {
-	if (domains[name] != address(0)) revert AlreadyRegistered();
+  if (domains[name] != address(0)) revert AlreadyRegistered();
   if (!valid(name)) revert InvalidName(name);
-	// Rest of register function remains unchanged
+  // Rest of register function remains unchanged
 }
 ```
 
-That’s it! If you deploy this contract, you’ll be doing a whole lot more than before. 
+That’s it! If you deploy this contract, you’ll be doing a whole lot more than before. Don't forget to copy and paste your new contract address and contract ABI
+to your React application!
 
-Look at you, saving gas, being efficient, and checking domain validity on the blockchain. What’s next? Are you gonna **upgrade** your smart contracts? LOL 
+Look at you, saving gas, being efficient, and checking domain validity on the blockchain. What’s next? Are you gonna **upgrade** your smart contracts? LOL
 
-### **🚨Progress report.**
+### 🚨Progress report
 
 Post a screenshot of your fantastic, gas-efficient, error-handling smart contract in `#progress`!

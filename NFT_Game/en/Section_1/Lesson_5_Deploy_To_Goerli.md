@@ -1,4 +1,4 @@
-### **🎉 Getting our NFTs online.**
+### 🎉 Getting our NFTs online
 
 When we use `run.js`, it's just us working locally.
 
@@ -20,7 +20,7 @@ It's almost like authentication. We need something to "login" to the blockchain 
 
 So, go ahead and set it all up! Their setup flow is pretty self-explanatory :).
 
-### **💳 Transactions**
+### 💳 Transactions
 
 When we want to perform an action that changes the blockchain we call it a *transaction*. For example, sending someone ETH is a transaction because we're changing account balances. Doing something that updates a variable in our contract is also considered a transaction because we're changing data. Minting an NFT is a transaction because we're saving data on the contract.
 
@@ -30,19 +30,19 @@ Remember, the blockchain has no owner. It's just a bunch of computers around the
 
 When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
 
-This is where [Alchemy](https://alchemy.com/?r=b93d1f12b8828a57) comes in.
+This is where [QuickNode](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) comes in.
 
-Alchemy essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
+QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
 This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense.
 
-So, make an account with Alchemy [here](https://alchemy.com/?r=b93d1f12b8828a57).
+So, make an account with QuickNode [here](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 And then check out my video below!
 
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283?t=0)
+[Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
 
-### **🕸 Testnets**
+### 🕸 Testnets
 
 We're not going to be deploying to the "Ethereum mainnet" for now. Why? Because it costs real $ and it's not worth messing up! We're just hacking around right now. We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake $ so we can test stuff out as much as we want. But, it's important to know that testnets are run by actual miners and mimic real-world scenarios.
 
@@ -53,31 +53,29 @@ This is awesome because we can test our application in a real-world scenario whe
 3. Wait for it to be mined
 4. Wait for it be broadcasted back to the blockchain telling all the other miners to update their copies
 
-### **🤑 Getting some fake $**
+### 🤑 Getting some fake $
 
-There are a few testnets out there and the one we'll be using is called "Rinkeby" which is run by the Ethereum foundation.
+There are a few testnets out there and the one we'll be using is called "Goerli" which is run by the Ethereum foundation.
 
-In order to deploy to Rinkeby, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
+In order to deploy to Goerli, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-In order get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a "faucet". You just gotta find one that works!
+In order get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Goerli through a "faucet". You just gotta find one that works!
 
-Please make sure you're on the **Rinkeby** network on Metamask. This is a super common issue I see!
+Please make sure you're on the **Goerli** network on Metamask. This is a super common issue I see!
 
-![Untitled](https://i.imgur.com/MKjsJXX.png)
+![Untitled](https://imgur.com/a/j8iN46I)
 
 You have a few faucets to choose from:
 
-| MyCrypto | [https://app.mycrypto.com/faucet](https://app.mycrypto.com/faucet)
+| Name             | Link                                  | Amount          | Time         |
+| ---------------- | ------------------------------------- | --------------- | ------------ |
+| Chainlink        | https://faucets.chain.link/goerli     | 0.1             | None         |
+| Official Goerli  | https://goerlifaucet.com              | 0.25            | 24 hrs       |
+| MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
 
-| Buildspace | [https://buildspace-faucet.vercel.app/](https://buildspace-faucet.vercel.app/)
+Note: For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link **again** to request funds. The buildspace faucet is pretty reliable as well, just make sure Metamask is on the Goerli network :).
 
-| Chainlink | [https://faucets.chain.link/rinkeby](https://faucets.chain.link/rinkeby)
-
-| Rinkeby | [https://faucet.rinkeby.io/](https://faucet.rinkeby.io/)
-
-Note: For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link **again** to request funds. The buildspace faucet is pretty reliable as well, just make sure Metamask is on the Rinkeby network :).
-
-### **🙃 Having trouble getting Testnet ETH?**
+### 🙃 Having trouble getting Testnet ETH?
 
 **Please try the above faucets a few times before giving up. They are not very reliable and take a little bit of effort to get working! MyCrypto is the one I use all the time and hasn't messed up for me yet.**
 
@@ -85,7 +83,7 @@ If the above doesn't work, use the `/faucet` command in the #faucet-request chan
 
 Someone from the cohort will send you some fake ETH as soon as they can! 
 
-### **🚀 Setup a deploy.js file**
+### 🚀 Setup a deploy.js file
 
 It's good practice to separate your deploy script from your `run.js` script. `run.js` is where we mess around a lot, we want to keep it separate. Go ahead and create a file named `deploy.js` under the `scripts` folder. Copy-paste all of `run.js` into `deploy.js`. It's going to be exactly the same right now.
 
@@ -140,25 +138,25 @@ const runMain = async () => {
 runMain();
 ```
 
-### **📈 Deploy to Rinkeby testnet.**
+### 📈 Deploy to Goerli testnet
 
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
 
 ```javascript
-require('@nomiclabs/hardhat-waffle');
+require("@nomicfoundation/hardhat-toolbox");
 
 module.exports = {
-  solidity: '0.8.0',
+  solidity: '0.8.17',
   networks: {
-    rinkeby: {
-      url: 'YOUR ALCHEMY_API_URL',
-      accounts: ['YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY'],
+    goerli: {
+      url: 'YOUR_QUICKNODE_API_URL',
+      accounts: ['YOUR_PRIVATE_GOERLI_ACCOUNT_KEY'],
     },
   },
 };
 ```
 
-You can grab your API URL from the Alchemy dashboard and paste that in. Then, you'll need your **private** rinkeby key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
+You can grab your API URL from the QuickNode dashboard and paste that in. Then, you'll need your **private** goerli key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
 
 **Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY. TO REDUCE RISK EVEN MORE, IT'S ALWAYS BEST TO HAVE A DEDICATED DEVELOPMENT ACCOUNT IN METAMASK.** We'll talk about `.env` variables later and how to keep this stuff secret.
 
@@ -169,7 +167,7 @@ Once you've got your config setup you're all set to deploy with the deploy scrip
 Run this command from the root directory of `epic-game`.
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 It takes like 1-2 min to deploy usually. We're not only deploying! We're also minting NFTs in deploy.js so that'll take some time as well. We actually need to wait for the transaction to be mined + picked up by miners. Pretty epic :). That one command does all that!
@@ -185,19 +183,30 @@ Minted NFT #4
 Done deploying and minting!
 ```
 
-We can make sure it all worked properly using [Rinkeby Etherscan](https://rinkeby.etherscan.io/) where you can paste the contract address that was output and see what's up with it! Here I can see that we've had **five** transactions. **One** contract creation transaction and **four** transactions where we minted the NFT. Which is correct :)!
+We can make sure it all worked properly using [Goerli Etherscan](https://goerli.etherscan.io/) where you can paste the contract address that was output and see what's up with it! Here I can see that we've had **five** transactions. **One** contract creation transaction and **four** transactions where we minted the NFT. Which is correct :)!
 
-![Untitled](https://i.imgur.com/hJtoYRp.png)
+![Untitled](https://i.imgur.com/cI4a1Oh.png)
 
-**Get used to using Rinkeby Etherscan a lot to debug deploys** because it's the easiest way to track deployments and if something goes wrong. If it's not showing up on Etherscan, then that means it's either still processing or something went wrong! Here's what I get:
+**Get used to using Goerli Etherscan a lot to debug deploys** because it's the easiest way to track deployments and if something goes wrong. If it's not showing up on Etherscan, then that means it's either still processing or something went wrong! Here's what I get:
 
 If it worked — **AWEEEEESOME YOU JUST DEPLOYED A CONTRACT AND MINTED NFTS.**
 
-### **🌊 View on OpenSea**
+### 🌊 View on Pixxiti
 
-Believe it or not. The NFTs you just minted will be on OpenSea's Testnet site.
+Believe it or not. The NFTs you just minted will be on Pixxiti's Testnet site.
 
-Head to [testnets.opensea.io](https://testnets.opensea.io/). Here, search for your contract address which is the address that you can find in your terminal. **Don't click enter on the search bar**. OpenSea is weird so you'll need click the collection itself when it comes up.
+1. Head to `goerli.pixxiti.com`.
+2. Create this url: `https://goerli.pixxiti.com/nfts/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`
+
+For example, here's my link:
+
+```plaintext
+https://goerli.pixxiti.com/nfts/0xcec8593c046364f163926a4327dfce6f546d9f98/4
+```
+
+This is for the Pikachu NFT!! My `tokenId` is `4` because it was the 4th mint from that contract. Feel free to try replacing it w/ other #s :).
+
+**Basically, wait for at least 15 mins for Pixxiti to update your NFT.** 
 
 So here, you'd click "Heroes - " under "Collections", and boom you'll see the NFTs you minted!
 
@@ -213,34 +222,13 @@ For example:
 
 ![Untitled](https://i.imgur.com/mbMf8CI.png)
 
-In this case, OpenSea rendered all our character's attributes properly!
+In this case, Pixxiti rendered all our character's attributes properly!
 
-What's cool here is if we change the HP value of this player's NFT to `150` or whatever, it would actually update on OpenSea! **This is super cool because the NFT itself dynamically holds the state of the player's character :).** We don't need any centralized server holding that data.
+What's cool here is if we change the HP value of this player's NFT to `150` or whatever, it would actually update on Pixiti! **This is super cool because the NFT itself dynamically holds the state of the player's character :).** We don't need any centralized server holding that data.
 
 This is awesome because now when our players go to play the game and we detect their NFT, we'll know exactly what the state of their character NFT is in the game! 
 
 *Note: You'll notice that we minted 4 NFTs to the same wallet in this case — this **wouldn't** be allowed in our game b/c each player would only be allowed to have 1 NFT. I just wanted to test it out. Also, right now `nftHolders` can only hold one tokenId per unique address. So, everytime a new NFT is minted to the same address, the previous `tokenId` is overwritten. You could throw an error if you wanted to instead.*
-
-### **🙀 "Help my NFTs aren't showing on OpenSea!"**
-
-**If your NFTs aren't showing up on OpenSea** — wait a few minutes, sometimes OpenSea can take like 5-minutes. Here's my advice, if it's been 5 minutes and the metadata still looks like something below, **then use Rarible instead of OpenSea.**
-
-![](https://i.imgur.com/1KsJ1vH.png)
-
-Rarible is another NFT marketplace like OpenSea. Here's how to set it up:
-
-1. Head to `rinkeby.rarible.com`.
-2. Create this url: `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE`
-
-For example, here's my link:
-
-```plaintext
-https://rinkeby.rarible.com/token/0xcec8593c046364f163926a4327dfce6f546d9f98:4
-```
-
-This is for the Pikachu NFT!! My `tokenId` is `4` because it was the 4th mint from that contract. Feel free to try replacing it w/ other #s :).
-
-**Basically, if you don't see your NFT on OpenSea within a few minutes, try Rarible to at least make sure stuff is working.** 
 
 ### 🤯 Why is this epic?
 
@@ -256,9 +244,9 @@ Here's what one of their NFT characters looks like.
 
 ![Untitled](https://i.imgur.com/FIJmmbL.png)
 
-[Here](https://opensea.io/assets/0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d/78852) it is on OpenSea. **Check out all the different attributes it has on properties, levels, etc.** Get inspired :). All these attributes they have actually affect how this character actually plays in the game itself!
+[Here](https://goerli.pixxiti.com/nfts/0x4e8100e6f42357fcc5ad1c54bdd048470dc60af0/3701) it is on Pixxiti. **Check out all the different attributes it has on properties, levels, etc.** Get inspired :). All these attributes they have actually affect how this character actually plays in the game itself!
 
-What we’re going to do next is we’re going to actually program in logic to our NFT to “fight” a “boss” in our game. So, that means players will be able to take their NFT to the **arena** and collaborate with other players to “attack” a big boss you’ll create! When an NFT attacks this boss, the boss can attack the NFT back and the player's NFT will **lose health**. The HP value on OpenSea would change :).
+What we’re going to do next is we’re going to actually program in logic to our NFT to “fight” a “boss” in our game. So, that means players will be able to take their NFT to the **arena** and collaborate with other players to “attack” a big boss you’ll create! When an NFT attacks this boss, the boss can attack the NFT back and the player's NFT will **lose health**. The HP value on Pixxiti would change :).
 
 Sorta like Pokemon!
 
@@ -293,4 +281,4 @@ Okay — lets get to actually programming our game logic now :).
 ### 🚨 Progress report!
 *Pls do this or Farza will be sad :(*
 
-Post a screenshot in #progress of your epic NFTs on OpenSea. Perhaps even tweet it out and tell the world what you've done! Be sure to give @_buildspace tag as well :). We love to see people's tweets, it always gives us a dose of dopamine/motivation. Plus -- your tweet could help get new people to get into web3. You never know who may see it and get inspired to start hacking!!!
+Post a screenshot in #progress of your epic NFTs on Pixxiti. Perhaps even tweet it out and tell the world what you've done! Be sure to give @_buildspace tag as well :). We love to see people's tweets, it always gives us a dose of dopamine/motivation. Plus -- your tweet could help get new people to get into web3. You never know who may see it and get inspired to start hacking!!!

@@ -1,10 +1,12 @@
+### 👛 Installing Phantom Wallet Extension
+
 For this project we are going to be using a wallet called [Phantom](https://phantom.app/).
 
 This is one of the top wallet extensions for Solana and is actually backed by Solana as well (so you know it's legit).
 
 Before we dive into any code - make sure you have downloaded the extension and setup a Solana wallet! Currently, Phantom Wallet supports **Chrome**, **Brave**, **Firefox**, and **Edge.** But, as a note: we only tested this code on Brave and Chrome.
 
-### 👻 Using the Solana object.
+### 👻 Using the Solana object
 
 In order for our website to talk to our Solana program, we need to somehow connect our wallet (which is the Phantom Wallet extension) to it.
 
@@ -34,18 +36,11 @@ const App = () => {
    * connected or not
    */
   const checkIfWalletIsConnected = async () => {
-    try {
-      const { solana } = window;
-
-      if (solana) {
-        if (solana.isPhantom) {
-          console.log('Phantom wallet found!');
-        }
-      } else {
-        alert('Solana object not found! Get a Phantom Wallet 👻');
-      }
-    } catch (error) {
-      console.error(error);
+  // We're using optional chaining (question mark) to check if the object is null
+    if (window?.solana?.isPhantom) {
+      console.log('Phantom wallet found!');
+    } else {
+      alert('Solana object not found! Get a Phantom Wallet 👻');
     }
   };
 
@@ -91,20 +86,12 @@ Nice! Not too bad right? Let's break this down a bit:
 
 ```jsx
 const checkIfWalletIsConnected = async () => {
-  try {
-    const { solana } = window;
-
-    if (solana) {
-      if (solana.isPhantom) {
-        console.log('Phantom wallet found!');
-      }
+    if (window?.solana?.isPhantom) {
+      console.log('Phantom wallet found!');
     } else {
       alert('Solana object not found! Get a Phantom Wallet 👻');
     }
-  } catch (error) {
-    console.error(error);
-  }
-};
+  };
 ```
 
 Our function here is checking the `window` object in our DOM to see if the Phantom Wallet extension has injected the `solana` object. If we do have a `solana` object, we can also check to see if it's a Phantom Wallet.
@@ -127,7 +114,7 @@ In React, the `useEffect` hook gets called once on component mount when that sec
 
 Currently, the Phantom Wallet team suggests to wait for the window to fully finish loading before checking for the `solana` object. Once this event gets called, we can guarantee that this object is available if the user has the Phantom Wallet extension installed.
 
-### **🔒 Accessing the user's account.**
+### 🔒 Accessing the user's account
 
 So when you run this, you should see that line *"Phantom wallet found!"* printed in the console of the website when you go to inspect it.
 
@@ -143,28 +130,19 @@ All we need to do is add one more line to our `checkIfWalletIsConnected` functio
 
 ```jsx
 const checkIfWalletIsConnected = async () => {
-  try {
-    const { solana } = window;
-
-    if (solana) {
-      if (solana.isPhantom) {
-        console.log('Phantom wallet found!');
-
-        /*
-         * The solana object gives us a function that will allow us to connect
-         * directly with the user's wallet!
-         */
-        const response = await solana.connect({ onlyIfTrusted: true });
-        console.log(
-          'Connected with Public Key:',
-          response.publicKey.toString()
-        );
-      }
-    } else {
-      alert('Solana object not found! Get a Phantom Wallet 👻');
-    }
-  } catch (error) {
-    console.error(error);
+  if (window?.solana?.isPhantom) {
+    console.log('Phantom wallet found!');
+    /*
+    * The solana object gives us a function that will allow us to connect
+    * directly with the user's wallet
+    */
+    const response = await window.solana.connect({ onlyIfTrusted: true });
+    console.log(
+      'Connected with Public Key:',
+      response.publicKey.toString()
+    );
+  } else {
+    alert('Solana object not found! Get a Phantom Wallet 👻');
   }
 };
 ```
@@ -179,7 +157,7 @@ Why is that? Well, the `connect` method will only run **if** the user has alread
 
 So, let's actually initialize this connection!
 
-### **🛍 Render connect to wallet button.**
+### 🛍 Render connect to wallet button
 
 Alright, we are already checking to see if a user is already connected to our app or not. What if they aren't connected? We have no way in our app to prompt Phantom Wallet to connect to our app!
 
@@ -199,23 +177,15 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const App = () => {
   // Actions
   const checkIfWalletIsConnected = async () => {
-    try {
-      const { solana } = window;
-
-      if (solana) {
-        if (solana.isPhantom) {
-          console.log('Phantom wallet found!');
-          const response = await solana.connect({ onlyIfTrusted: true });
-          console.log(
-            'Connected with Public Key:',
-            response.publicKey.toString()
-          );
-        }
-      } else {
-        alert('Solana object not found! Get a Phantom Wallet 👻');
-      }
-    } catch (error) {
-      console.error(error);
+    if (window?.solana?.isPhantom) {
+      console.log('Phantom wallet found!');
+      const response = await window.solana.connect({ onlyIfTrusted: true });
+      console.log(
+        'Connected with Public Key:',
+        response.publicKey.toString()
+      );
+    } else {
+      alert('Solana object not found! Get a Phantom Wallet 👻');
     }
   };
 
@@ -283,7 +253,7 @@ The biggest thing to understand here are **render methods.**
 
 *Note: if you're already familiar w/ React and render methods feel free to blaze through this section.*
 
-These are ****just functions that return some UI code. We only want our "Connect to Wallet" button to render when someone hasn't actually connected their wallet to our app. 
+These are **just functions that return some UI code.** We only want our "Connect to Wallet" button to render when someone hasn't actually connected their wallet to our app. 
 
 You may be thinking now - "*how does our app control when to render or not render this button?".*
 
@@ -319,28 +289,20 @@ const App = () => {
 
   // Actions
   const checkIfWalletIsConnected = async () => {
-    try {
-      const { solana } = window;
+    if (window?.solana?.isPhantom) {
+      console.log('Phantom wallet found!');
+      const response = await window.solana.connect({ onlyIfTrusted: true });
+      console.log(
+        'Connected with Public Key:',
+        response.publicKey.toString()
+      );
 
-      if (solana) {
-        if (solana.isPhantom) {
-          console.log('Phantom wallet found!');
-          const response = await solana.connect({ onlyIfTrusted: true });
-          console.log(
-            'Connected with Public Key:',
-            response.publicKey.toString()
-          );
-
-          /*
-           * Set the user's publicKey in state to be used later!
-           */
-          setWalletAddress(response.publicKey.toString());
-        }
-      } else {
-        alert('Solana object not found! Get a Phantom Wallet 👻');
-      }
-    } catch (error) {
-      console.error(error);
+      /*
+       * Set the user's publicKey in state to be used later!
+       */
+      setWalletAddress(response.publicKey.toString());
+    } else {
+      alert('Solana object not found! Get a Phantom Wallet 👻');
     }
   };
 
@@ -397,28 +359,20 @@ Look at all this fancy React. Hype. Lets just go over the changes really quick:
 
 ```jsx
 const checkIfWalletIsConnected = async () => {
-  try {
-    const { solana } = window;
+  if (window?.solana?.isPhantom) {
+    console.log('Phantom wallet found!');
+    const response = await window.solana.connect({ onlyIfTrusted: true });
+    console.log(
+      'Connected with Public Key:',
+      response.publicKey.toString()
+    );
 
-    if (solana) {
-      if (solana.isPhantom) {
-        console.log('Phantom wallet found!');
-        const response = await solana.connect({ onlyIfTrusted: true });
-        console.log(
-          'Connected with Public Key:',
-          response.publicKey.toString()
-        );
-
-        /*
-         * Set the user's publicKey in state to be used later!
-         */
-        setWalletAddress(response.publicKey.toString());
-      }
-    } else {
-      alert('Solana object not found! Get a Phantom Wallet 👻');
-    }
-  } catch (error) {
-    console.error(error);
+    /*
+     * Set the user's publicKey in state to be used later!
+     */
+    setWalletAddress(response.publicKey.toString());
+  } else {
+    alert('Solana object not found! Get a Phantom Wallet 👻');
   }
 };
 ```
@@ -430,7 +384,7 @@ I think this is pretty self explanatory. We just connected our Phantom Wallet an
 {!walletAddress && renderNotConnectedContainer()}
 ```
 
-This is a pretty cool piece of code. We are telling React to only call this render method if there is no `walletAddress` set in our state. This is called **conditional rendering** and it will help us keep track of the different states we want to show in our app!
+This is a pretty cool piece of code. We are telling React to only call this render method if there is no `walletAddress` set in our state. This is called [**conditional rendering**](https://reactjs.org/docs/conditional-rendering.html) and it will help us keep track of the different states we want to show in our app!
 
 ```jsx
 {/* This was solely added for some styling fanciness */}
@@ -439,7 +393,7 @@ This is a pretty cool piece of code. We are telling React to only call this rend
 
 Now that we have seen some conditional rendering, this hopefully makes a bit of sense! We want to change some of our CSS styles based on whether we have a `walletAddress` or not! You will see the difference here in the next section when we build out the GIF grid.
 
-### 🔥 Okay — now ACTUALLY connect to wallet lol.
+### 🔥 Okay — now ACTUALLY connect to wallet lol
 
 We are almost there! If you click on your spicy new button you notice it still doesn't do anything! What the heck — that's pretty lame 👎. 
 

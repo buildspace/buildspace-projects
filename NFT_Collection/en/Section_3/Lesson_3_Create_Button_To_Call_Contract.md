@@ -1,5 +1,4 @@
-💚 Mint NFT through our website.
-----------------
+## 💚 Mint NFT through our website
 
 Awesome. We made it. We've deployed our website. We've deployed our contract. We've connected our wallet. **Now we need to actually call our contract from our web app** using the credentials we have access to now from Metamask!
 
@@ -7,7 +6,7 @@ So, remember, our contract has the function `makeAnEpicNFT` which will actually 
 
 ```javascript
 const askContractToMintNft = async () => {
-  const CONTRACT_ADDRESS = "INSERT_YOUR_DEPLOYED_RINKEBY_CONTRACT_ADDRESS";
+  const CONTRACT_ADDRESS = "INSERT_YOUR_DEPLOYED_GOERLI_CONTRACT_ADDRESS";
 
   try {
     const { ethereum } = window;
@@ -23,7 +22,7 @@ const askContractToMintNft = async () => {
       console.log("Mining...please wait.")
       await nftTxn.wait();
       
-      console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+      console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 
     } else {
       console.log("Ethereum object doesn't exist!");
@@ -43,7 +42,7 @@ const signer = provider.getSigner();
 
 `ethers` is a library that helps our frontend talk to our contract. Be sure to import it at the top using `import { ethers } from "ethers";`.
 
-A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using Alchemy to **deploy**? Well in this case we use nodes that Metamask provides in the background to send/receive data from our deployed contract.
+A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using QuickNode to **deploy**? Well in this case we use nodes that Metamask provides in the background to send/receive data from our deployed contract.
 
 [Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
 
@@ -62,7 +61,7 @@ let nftTxn = await connectedContract.makeAnEpicNFT();
 console.log("Mining...please wait.")
 await nftTxn.wait();
 
-console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 ```
 
 The rest of the code should already make sense. It looks sorta like the code we deployed with :)! We call our contract using `makeAnEpicNFT`, wait for it to be mined, and then link the Etherscan URL!
@@ -84,15 +83,14 @@ return (
 ```
 
 
-📂 ABI files
-----------------
+## 📂 ABI files
 
 **Made a little video here explaining all this ABI stuff. Please give it a watch I go over some important stuff!**
 [Loom](https://www.loom.com/share/2d493d687e5e4172ba9d47eeede64a37)
 
 So — when you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
 
-The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
+The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.8.14/abi-spec.html).
 
 The contents of the ABI file can be found in a fancy JSON file in your hardhat project:
 
@@ -118,15 +116,13 @@ All you'll need to do from here is click "Mint NFT", pay gas (using your fake ET
 
 You may be asking yourself wtf gas is. I'm not going to answer that here. But, you can start researching [here](https://ethereum.org/en/developers/docs/gas/) ;).
 
-🤩 Test
-----------------
+## 🤩 Test
 
 You should be able to go and actually mint an NFT right from your website now. **Let's go!!! THAT'S EPICCCCC.** This is basically how all these NFT minting sites work and you just got it done yourself :).
 
 I actually go through and test the whole thing in the ABI video I already linked above. Be sure to give it a watch! I go over some super important stuff around what to do when you **change** your contract. Because your contract is permanent, changes require you to redeploy, update the address on your frontend, and finally update the ABI file on the frontend.
 
-✈️ A note on contract redeploys
-----------------
+## ✈️ A note on contract redeploys
 
 Let's say you want to change your contract. You'd need to do 3 things:
 
@@ -140,6 +136,6 @@ Let's say you want to change your contract. You'd need to do 3 things:
 
 Why do we need to do all this? Well, it's because smart contracts are **immutable.** They can't change. They're permanent. That means changing a contract requires a full redeploy. This will also **reset** all the variables since it'd be treated as a brand new contract. **That means we'd lose all our NFT data if we wanted to update the contract's code.**
 
-🚨Progress report.
-------------------------
+## 🚨Progress report
+
 Post a screenshot of your console after you mint a few NFTs and show off all those `console.log`s!
