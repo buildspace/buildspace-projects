@@ -14,7 +14,7 @@ Then, when I'm ready to test the updates to my program on my web app — I just 
 
 Just like before, you'd need to upload your idl to solana but instead of calling `init` this time you will call `upgrade`
 ```
-anchor idl upgade -f target/idl/myepicproject.json `solana address -k target/deploy/myepicproject-keypair.json
+anchor idl upgrade -f target/idl/myepicproject.json `solana address -k target/deploy/myepicproject-keypair.json`
 ```
 
 Now, I want to go over a couple of **optional** features you could add in that I think would be fun. Again, these are optional. I also won't be guiding you on how to build them. Will leave it to you to figure out.
