@@ -8,13 +8,13 @@ Now that we got all our scripts good to go and the basics down, we're going to m
 pragma solidity ^0.8.17;
 
 // We first import some OpenZeppelin Contracts.
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "hardhat/console.sol";
 
 // We inherit the contract we imported. This means we'll have access
 // to the inherited contract's methods.
-contract MyEpicNFT is ERC721URIStorage {
+contract MyEpicNFT is ERC721 {
   // Magic given to us by OpenZeppelin to help us keep track of tokenIds.
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
@@ -32,16 +32,19 @@ contract MyEpicNFT is ERC721URIStorage {
      // Actually mint the NFT to the sender using msg.sender.
     _safeMint(msg.sender, newItemId);
 
-    // Set the NFTs data.
-    _setTokenURI(newItemId, "blah");
-
     // Increment the counter for when the next NFT is minted.
     _tokenIds.increment();
+  }
+
+  // Set the NFT's metadata
+  function tokenURI(uint256 _tokenId) public view override returns (string memory) {
+    require(_exists(_tokenId));
+    return "blah";
   }
 }
 ```
 
-A lot of stuff going on here. First you'll see I "inherit" an OpenZeppelin contract using `is ERC721URIStorage` when I declare the contract. You can read more about inheritance [here](https://solidity-by-example.org/inheritance/), but basically, it means we can call other contracts from ours. It's almost like importing functions for us to use!
+A lot of stuff going on here. First you'll see I "inherit" an OpenZeppelin contract using `is ERC721` when I declare the contract. You can read more about inheritance [here](https://solidity-by-example.org/inheritance/), but basically, it means we can call other contracts from ours. It's almost like importing functions for us to use!
 
 The NFT standard is known as `ERC721` which you can read a bit about [here](https://eips.ethereum.org/EIPS/eip-721). OpenZeppelin essentially implements the NFT standard for us and then lets us write our own logic on top of it to customize it. That means we don't need to write boiler plate code.
 
@@ -65,20 +68,20 @@ Same thing here, we're using `_tokenIds` to keep track of the NFTs unique identi
 _safeMint(msg.sender, newItemId);
 ```
 
-When we do `_safeMint(msg.sender, newItemId)` it's pretty much saying: "mint the NFT with id `newItemId` to the user with address `msg.sender`". Here, `msg.sender` is a variable [Solidity itself provides](https://docs.soliditylang.org/en/develop/units-and-global-variables.html#block-and-transaction-properties) that easily gives us access to the **public address** of the person calling the contract. 
+When we do `_safeMint(msg.sender, newItemId)` it's pretty much saying: "mint the NFT with id `newItemId` to the user with address `msg.sender`". Here, `msg.sender` is a variable [Solidity itself provides](https://docs.soliditylang.org/en/develop/units-and-global-variables.html#block-and-transaction-properties) that easily gives us access to the **public address** of the person calling the contract.
 
 What's awesome here is this is a **super-secure way to get the user's public address**. Keeping public address itself a secret isn't an issue, that's already public!! Everyone sees it. But, by using `msg.sender` you can't "fake" someone else's public address unless you had their wallet credentials and called the contract on their behalf!
 
 **You can't call a contract anonymously**, you need to have your wallet credentials connected. This is almost like "signing in" and being authenticated :).
 
 ```solidity
-_setTokenURI(newItemId, "blah");
+_tokenIds.increment();
 ```
 
-We then do, `_setTokenURI(newItemId, "blah")` which will set the NFTs unique identifier along with the data associated w/ that unique identifier. It's literally us setting the actual data that makes the NFT valuable. In this case, we're setting it as "blah" which....isn't that valuable ;). It's also not following the standard of `ERC721`. We'll cover `tokenURI` more in a bit.
+We then do, override the `tokenURI()` function in ERC721.sol which will set the NFTs unique identifier along with the data associated w/ that unique identifier. It's literally us setting the actual data that makes the NFT valuable. In this case, we're setting it as "blah" which....isn't that valuable ;). It's also not following the standard of `ERC721`. We'll cover `tokenURI` more in a bit.
 
 ```solidity
-_tokenIds.increment();
+function tokenURI(uint256 _tokenId) public view override returns (string memory);
 ```
 
 After the NFT is minted, we increment `tokenIds` using `_tokenIds.increment()` (which is a function OpenZeppelin gives us). This makes sure that next time an NFT is minted, it'll have a different `tokenIds` identifier. No one can have a `tokenIds` that's already been minted too.
@@ -105,22 +108,32 @@ We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [
 
 If you decide to use your own image, make sure the URL goes directly to the actual image, not the website that hosts the image! Direct Imgur links look like this - `https://i.imgur.com/123123.png` NOT `https://imgur.com/gallery/123123`. The easiest way to tell is to check if the URL ends in an image extension like `.png` or `.jpg`. You can right click the imgur image and "copy image address". This will give you the correct URL.
 
-Now, let's head to our smart contract and change one line. Instead of:
+Now, lets head to our smart contract and change one line in `tokenURI()`. Instead of:
 
 ```solidity
-_setTokenURI(newItemId, "blah")
+return "blah";
 ```
 
 We're going to actually set the URI as the link to our JSON file.
 
 ```solidity
-_setTokenURI(newItemId, "INSERT_YOUR_JSON_URL_HERE");
+return "INSERT_YOUR_JSON_URL_HERE";
 ```
 
-Under that line, we can also add a `console.log` to help us see when the NFT is minted and to who!
+We can also add a `console.log` to help us see when the NFT is minted and to who!
 
 ```solidity
 console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
+```
+
+This is how your tokenURI function should look now. `_exists` is a built in function to to verify if the tokenId exists in a contract. You can learn more about it [here](https://docs.openzeppelin.com/contracts/3.x/api/token/erc721#ERC721-_exists-uint256-)
+
+```solidity
+function tokenURI(uint256 _tokenId) public view override returns (string memory) {
+  require(_exists(_tokenId));
+  console.log("An NFT w/ ID %s has been minted to %s", _tokenId, msg.sender);
+  return "INSERT_YOUR_JSON_URL_HERE";
+}
 ```
 
 ## 🎉 Mint an NFT locally
@@ -179,7 +192,7 @@ Now, let's move to the next step — deploying to a testnet :).
 
 Since OpenSea doesn't support Goerli, we have to look for an alternative. You can check out [OpenSea](https://goerli.OpenSea.com/) to view your NFT when you deploy to Goerli. When we use `run.js`, it's just us working locally.
 
-The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to **view our NFT online** and we are a step closer to getting this to **real users.** 
+The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to to **view our NFT online** and we are a step closer to getting this to **real users.**
 
 You are a badass look at you! 
 
