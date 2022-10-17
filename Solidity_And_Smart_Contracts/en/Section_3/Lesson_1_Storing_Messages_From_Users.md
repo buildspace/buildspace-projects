@@ -175,75 +175,80 @@ So, here's the new function I added to `App.js`.
 
 ```javascript
 const [currentAccount, setCurrentAccount] = useState("");
-  /*
-   * All state property to store all waves
-   */
-  const [allWaves, setAllWaves] = useState([]);
-  const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
-  
-   /*
-   * Create a variable here that references the abi content!
-   */
-  const contractABI = abi.abi;
+/*
+ * All state property to store all waves
+ */
+const [allWaves, setAllWaves] = useState([]);
+const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
 
-  /*
-   * Create a method that gets all waves from your contract
-   */
-  const getAllWaves = async () => {
-    try {
-      const { ethereum } = window;
-      if (ethereum) {
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
-        const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
-
-        /*
-         * Call the getAllWaves method from your Smart Contract
-         */
-        const waves = await wavePortalContract.getAllWaves();
-
-
-        /*
-         * We only need address, timestamp, and message in our UI so let's
-         * pick those out
-         */
-        let wavesCleaned = [];
-        waves.forEach(wave => {
-          wavesCleaned.push({
-            address: wave.waver,
-            timestamp: new Date(wave.timestamp * 1000),
-            message: wave.message
-          });
+ /*
+ * Create a variable here that references the abi content!
+ */
+const contractABI = abi.abi;
+/*
+ * Create a method that gets all waves from your contract
+ */
+const getAllWaves = async () => {
+  try {
+    const { ethereum } = window;
+    if (ethereum) {
+      const provider = new ethers.providers.Web3Provider(ethereum);
+      const signer = provider.getSigner();
+      const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
+      /*
+       * Call the getAllWaves method from your Smart Contract
+       */
+      const waves = await wavePortalContract.getAllWaves();
+      /*
+       * We only need address, timestamp, and message in our UI so let's
+       * pick those out
+       */
+      let wavesCleaned = [];
+      waves.forEach(wave => {
+        wavesCleaned.push({
+          address: wave.waver,
+          timestamp: new Date(wave.timestamp * 1000),
+          message: wave.message
         });
-
-        /*
-         * Store our data in React State
-         */
-        setAllWaves(wavesCleaned);
-      } else {
-        console.log("Ethereum object doesn't exist!")
-      }
-    } catch (error) {
-      console.log(error);
+      });
+      /*
+       * Store our data in React State
+       */
+      setAllWaves(wavesCleaned);
+    } else {
+      console.log("Ethereum object doesn't exist!")
     }
+  } catch (error) {
+    console.log(error);
   }
-  ```
+}
+```
 
 Pretty simple and very similar to stuff we worked on earlier with how we're connecting to the provider, getting the signer, and connecting to the contract! I do a little magic here by looping through all our waves and saving them nicely in an array that we can use later. Feel free to console.log `waves` to see what you get there if you're having issues.
+
+Where do we call this brand new `getAllWaves()` function, though? Well -- we want to call it when we know for sure the user has a connected wallet with an authorized account because we need an authorized account to call it! I'll leave it to you to figure it out. Remember, we want to call it when we know for sure we have a connected + authorized account!
 
 The last thing I did was update our HTML code to render the data for us to see!
 
 ```javascript
-return (
+const App = () => {
+  const [currentAccount, setCurrentAccount] = useState("")
+
+  useEffect(async () => {
+    const account = await findMetaMaskAccount()
+
+    // Checks if metamask is connected
+    if (account !== null) {
+      
+    }
+  }, [])
+
+  return (
     <div className="mainContainer">
       <div className="dataContainer">
-        <div className="header">
-          👋 Hey there!
-        </div>
+        <div className="header">👋 Hey there!</div>
 
-        <div className="bio">
-          I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and wave at me!
-        </div>
+        <div className="bio">I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and wave at me!</div>
 
         <button className="waveButton" onClick={wave}>
           Wave at Me
@@ -261,12 +266,14 @@ return (
               <div>Address: {wave.address}</div>
               <div>Time: {wave.timestamp.toString()}</div>
               <div>Message: {wave.message}</div>
-            </div>)
+            </div>
+          )
         })}
       </div>
     </div>
-  );
-  ```
+  )
+}
+```
 
 Basically, I just go through `allWaves` and create new divs for every single wave and show that data on the screen.
 
