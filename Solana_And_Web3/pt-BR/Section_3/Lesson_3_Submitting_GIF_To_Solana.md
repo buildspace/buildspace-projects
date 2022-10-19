@@ -3,11 +3,11 @@ Ok - estamos finalmente no ponto em que podemos salvar alguns GIFs. É tão fác
 ```javascript
 const sendGif = async () => {
   if (inputValue.length === 0) {
-    console.log("No gif link given!")
+    console.log("Nenhum link de GIF foi dado!")
     return
   }
   setInputValue('');
-  console.log('Gif link:', inputValue);
+  console.log('Link do GIF:', inputValue);
   try {
     const provider = getProvider();
     const program = new Program(idl, programID, provider);
@@ -18,11 +18,11 @@ const sendGif = async () => {
         user: provider.wallet.publicKey,
       },
     });
-    console.log("GIF successfully sent to program", inputValue)
+    console.log("GIF foi enviado com sucesso para o programa", inputValue)
 
     await getGifList();
   } catch (error) {
-    console.log("Error sending GIF:", error)
+    console.log("Erro enviando GIF:", error)
   }
 };
 ```
@@ -44,7 +44,7 @@ O que está acontecendo aqui é que estamos gerando uma nova conta para o nosso 
 No diretório `src`, vá em frente e crie um arquivo chamado `createKeyPair.js`. Lá, cole isso em:
 
 ```javascript
-// Shoutout to Nader Dabit for helping w/ this!
+// Salve para o Nader Dabit por ajudar com isso!
 // https://twitter.com/dabit3
 
 const fs = require('fs')
