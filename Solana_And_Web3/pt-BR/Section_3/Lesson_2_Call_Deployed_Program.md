@@ -177,27 +177,27 @@ import {
 
 import idl from './idl.json';
 
-// SystemProgram is a reference to the Solana runtime!
+// SystemProgram é uma referencia ao 'executor' (runtime) da Solana!
 const { SystemProgram, Keypair } = web3;
 
-// Create a keypair for the account that will hold the GIF data.
+// Cria um par de chaves para a conta que irá guardar os dados do GIF.
 let baseAccount = Keypair.generate();
 
-// Get our program's id from the IDL file.
+// Obtém o id do nosso programa do arquivo IDL.
 const programID = new PublicKey(idl.metadata.address);
 
-// Set our network to devnet.
+// Define nossa rede para devnet.
 const network = clusterApiUrl('devnet');
 
-// Controls how we want to acknowledge when a transaction is "done".
+// Controla como queremos 'saber' quando uma transação está 'pronta'.
 const opts = {
   preflightCommitment: "processed"
 }
 
-// All your other Twitter and GIF constants you had.
+// Todas suas contantes do Twitter e dos GIFs que você tiver.
 
 const App = () => {
-	// All your other code.
+	// O resto do seu código.
 }
 ```
 
@@ -218,11 +218,11 @@ Na verdade, é super simples chamar nosso programa agora que temos tudo configur
 ```javascript
 useEffect(() => {
   if (walletAddress) {
-    console.log('Fetching GIF list...');
+    console.log('Obtendo a lista de GIF...');
 
-    // Call Solana Program
+    // Chama o programa da Solana
 
-    // Set state
+    // Define o estado
     setGifList(TEST_GIFS);
   }
 }, [walletAddress]);
@@ -239,18 +239,18 @@ const getGifList = async() => {
     const program = new Program(idl, programID, provider);
     const account = await program.account.baseAccount.fetch(baseAccount.publicKey);
     
-    console.log("Got the account", account)
+    console.log("Obtive a conta", account)
     setGifList(account.gifList)
 
   } catch (error) {
-    console.log("Error in getGifList: ", error)
+    console.log("Erro no método getGifList: ", error)
     setGifList(null);
   }
 }
 
 useEffect(() => {
   if (walletAddress) {
-    console.log('Fetching GIF list...');
+    console.log('Obtendo a lista de GIF...');
     getGifList()
   }
 }, [walletAddress]);
@@ -290,11 +290,11 @@ const createGifAccount = async () => {
       },
       signers: [baseAccount]
     });
-    console.log("Created a new BaseAccount w/ address:", baseAccount.publicKey.toString())
+    console.log("Criado uma nova BaseAccount com o endereço:", baseAccount.publicKey.toString())
     await getGifList();
 
   } catch(error) {
-    console.log("Error creating BaseAccount account:", error)
+    console.log("Erro criando uma nova BaseAccount:", error)
   }
 }
 ```
@@ -306,7 +306,7 @@ Então, só precisamos alterar o `renderConnectedContainer` para considerar dois
 
 ```jsx
 const renderConnectedContainer = () => {
-// If we hit this, it means the program account hasn't been initialized.
+// Se chegarmos aqui, significa que a conta do programa não foi inicializada.
   if (gifList === null) {
     return (
       <div className="connected-container">
@@ -316,7 +316,7 @@ const renderConnectedContainer = () => {
       </div>
     )
   } 
-  // Otherwise, we're good! Account exists. User can submit GIFs.
+  // Caso contrário, estamos bem! A conta existe. Usuários podem submeter GIFs.
   else {
     return(
       <div className="connected-container">
@@ -328,16 +328,16 @@ const renderConnectedContainer = () => {
         >
           <input
             type="text"
-            placeholder="Enter gif link!"
+            placeholder="Entre com o link do GIF!"
             value={inputValue}
             onChange={onInputChange}
           />
           <button type="submit" className="cta-button submit-gif-button">
-            Submit
+            Enviar
           </button>
         </form>
         <div className="gif-grid">
-					{/* We use index as the key instead, also, the src is now item.gifLink */}
+					{/* Usamos o indice (index) como chave (key), também o 'src' agora é 'item.gifLink' */}
           {gifList.map((item, index) => (
             <div className="gif-item" key={index}>
               <img src={item.gifLink} />
