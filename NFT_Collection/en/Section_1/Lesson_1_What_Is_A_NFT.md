@@ -24,7 +24,7 @@ Let's say Picasso wanted to create a collection of 100 of his sketches where eac
 
 Picasso would create his NFT collection by coding up his own "smart contract" (the code that runs all the logic for his NFT collection).
 
-He'd give each piece of artwork a unique identifier (ex. Sketch #1, Sketch #2, Sketch #3, etc). Then, when Picasso is ready to "launch" his NFT collection he would launch it using his own Ethereum wallet to "sign" the NFT collection. When he's ready, he'll put it on the public blockchain — where everyone can publicly see Picassos NFT collection.
+He'd give each piece of artwork a unique identifier (ex. Sketch #1, Sketch #2, Sketch #3, etc). Then, when Picasso is ready to "launch" his NFT collection he would launch it using his own Ethereum wallet to "sign" the NFT collection. When he's ready, he'll put it on the public blockchain — where everyone can publicly see Picasso's NFT collection.
 
 Then, when Picasso wants to sell one of the NFTs all he needs to do is "transfer" the NFT over to the person who bought it using the buyer's public wallet address.
 
@@ -42,6 +42,6 @@ This is an extremely powerful concept — the idea that any file can be made uni
 
 I don't expect you to fully get it yet. If it makes zero sense, maybe read it again! Just make sure it makes a *tiny bit* of sense before moving on lol. I just want to give you a little bit of base knowledge.
 
-If you have a question you're curious about, feel free to ask it #section-1-help.
+If you have a question you're curious about, feel free to ask it in #section-1-help on Discord.
 
-Usually, I start really understanding stuff when I start coding. So, let set up our local environment and hop into some code :).
+Usually, I start really understanding stuff when I start coding. So, let's set up our local environment and hop into some code :).

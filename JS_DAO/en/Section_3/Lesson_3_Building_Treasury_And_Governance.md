@@ -10,7 +10,7 @@ For example, maybe you want to create a proposal like, *“Transfer 1000 token 
 
 All these questions are answered in the initial voting contract we create
 
-It’s almost like your setting up a little country and you need to set up your initial government + voting system!
+It’s almost like you're setting up a little country and you need to set up your initial government + voting system!
 
 Head over to `8-deploy-vote.js` and add the following:
 
@@ -61,7 +61,7 @@ We’re using `deployer.deployVote` to actually set up the contract. This will
 
 Notice how we give it `voting_token_address`. This is our contract that knows which governance token to accept. We don’t want people randomly trying to use $DOGE to vote lol.
 
-We have `voting_delay_in_blocks`, which can be useful if you want to give people some time to go over the proposal before they’re allowed to vote on it. Similarly, we have `voting_period_in_blocks` which just specifies how long someone has to vote once a proposal goes lives, we do this in blocks, which depending on the blockchain you're on, might take longer, for Ethereum/Rinkeby, there's one block every 13 seconds or so, so on average, there's 6570 blocks in a day.
+We have `voting_delay_in_blocks`, which can be useful if you want to give people some time to go over the proposal before they’re allowed to vote on it. Similarly, we have `voting_period_in_blocks` which just specifies how long someone has to vote once a proposal goes lives, we do this in blocks, which depending on the blockchain you're on, might take longer, for Ethereum/Goerli, there's one block every 13 seconds or so, so on average, there's 6570 blocks in a day.
 
 `voting_quorum_fraction` is really interesting. Let’s say a member creates a proposal and the other **199** DAO members are on vacation at Disney World and aren’t online. Well, in this case, if that one DAO member creates the proposal and votes “YES” on their own proposal — that means 100% of the votes said “YES” (since there was only one vote) and the proposal **would pass once** `voting_period_in_blocks` is up! To avoid this, we use a quorum which says “In order for a proposal to pass, a minimum x % of token must be used in the vote”.
 
@@ -75,12 +75,11 @@ Go ahead and run this using `node scripts/8-deploy-vote.js`. Here’s what I en
 buildspace-dao-starter % node scripts/8-deploy-vote.js
 👋 SDK initialized by address: 0xF11D6862e655b5F4e8f62E00471261D2f9c7E380
 ✅ Successfully deployed vote contract, address: 0xE079991f3c26b832C3E8171F512694899E831eDB
-
 ```
 
 This is pretty cool. Basically, we created and deployed a new smart contract that will let us actually vote on proposals on-chain. This is a standard [governance](https://docs.openzeppelin.com/contracts/4.x/api/governance) contract. You can see the exact contract you deployed [here](https://github.com/thirdweb-dev/contracts/blob/main/contracts/vote/VoteERC20.sol).
 
-If you head to `https://rinkeby.etherscan.io/` you’ll see it there!
+If you head to `https://goerli.etherscan.io/` you’ll see it there!
 
 So, now we have three contracts: our NFT contract, our token contract, and our voting contract! Be sure to save your voting contract address, we’ll be using it again in just a moment.
 
@@ -165,7 +164,7 @@ buildspace-dao-starter % node scripts/9-setup-vote.js
 
 ```
 
-Okay, ready to see something epic? Head to your voting contract on `https://rinkeby.etherscan.io/`. Click the dropdown next to the word “Token”. Here, you’ll see my contract has “844,527 $HOKAGE” on it.
+Okay, ready to see something epic? Head to your voting contract on `https://goerli.etherscan.io/`. Click the dropdown next to the word “Token”. Here, you’ll see my contract has “844,527 $HOKAGE” on it.
 
 This kinda blew my mind when I first saw it. *We literally have our own treasury.*
 

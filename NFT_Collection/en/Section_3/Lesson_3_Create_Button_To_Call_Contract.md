@@ -6,7 +6,7 @@ So, remember, our contract has the function `makeAnEpicNFT` which will actually 
 
 ```javascript
 const askContractToMintNft = async () => {
-  const CONTRACT_ADDRESS = "INSERT_YOUR_DEPLOYED_RINKEBY_CONTRACT_ADDRESS";
+  const CONTRACT_ADDRESS = "INSERT_YOUR_DEPLOYED_GOERLI_CONTRACT_ADDRESS";
 
   try {
     const { ethereum } = window;
@@ -22,7 +22,7 @@ const askContractToMintNft = async () => {
       console.log("Mining...please wait.")
       await nftTxn.wait();
       
-      console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+      console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 
     } else {
       console.log("Ethereum object doesn't exist!");
@@ -42,7 +42,7 @@ const signer = provider.getSigner();
 
 `ethers` is a library that helps our frontend talk to our contract. Be sure to import it at the top using `import { ethers } from "ethers";`.
 
-A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using Alchemy to **deploy**? Well in this case we use nodes that Metamask provides in the background to send/receive data from our deployed contract.
+A "Provider" is what we use to actually talk to Ethereum nodes. Remember how we were using QuickNode to **deploy**? Well in this case we use nodes that Metamask provides in the background to send/receive data from our deployed contract.
 
 [Here's](https://docs.ethers.io/v5/api/signer/#signers) a link explaining what a signer is on line 2.
 
@@ -61,7 +61,7 @@ let nftTxn = await connectedContract.makeAnEpicNFT();
 console.log("Mining...please wait.")
 await nftTxn.wait();
 
-console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 ```
 
 The rest of the code should already make sense. It looks sorta like the code we deployed with :)! We call our contract using `makeAnEpicNFT`, wait for it to be mined, and then link the Etherscan URL!
@@ -90,7 +90,7 @@ return (
 
 So — when you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the `artifacts` folder located in the root of your Solidity project.
 
-The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
+The ABI file is something our web app needs to know how to communicate with our contract. Read about it [here](https://docs.soliditylang.org/en/v0.8.14/abi-spec.html).
 
 The contents of the ABI file can be found in a fancy JSON file in your hardhat project:
 

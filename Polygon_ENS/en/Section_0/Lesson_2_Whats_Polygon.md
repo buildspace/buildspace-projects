@@ -18,7 +18,7 @@ Feel free to read more about L2 scaling solutions [here](https://mirror.xyz/dcbu
 
 ### 💥 Polygon vs Ethereum
 
-You might be thinking “Hmm, do I really want to learn how to use another blockchain???”.
+You might be thinking “Hmm, do I really want to learn how to use another blockchain???”
 
 Well, no! You don’t! Since the Polygon PoS chain is EVM (Ethereum Virtual Machine) compatible, everything that runs on Ethereum can also run on Polygon without any changes
 

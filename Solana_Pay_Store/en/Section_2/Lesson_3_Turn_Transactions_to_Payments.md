@@ -239,7 +239,7 @@ This is all just plain JavaScript, feel free to go over it :)
 
 Really, all it does is that it reads data and writes to the orders.json file.
 
-Next, we'll need to interact with this API. We *could* just do it whereever we need to in the individal files, but that's bad practice. Instead, we'll create a dedicated file for it.
+Next, we'll need to interact with this API. We *could* just do it wherever we need to in the individual files, but that's bad practice. Instead, we'll create a dedicated file for it.
 
 Create a "lib" folder in the root directory of your project (same level as components) and add an `api.js` file in it.
 
@@ -386,8 +386,6 @@ export default function Buy({ itemID }) {
 ```
 
 ### 🚨 Progress Report
-Please do this else Raza will be sad :(
-
 You have a full-stack application now! Front-end, back-end, server, blockchain, woohoo! 
 
 Post a screenshot of your editor in #progress showing off the "Adding order" console statement.

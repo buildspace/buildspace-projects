@@ -60,13 +60,13 @@ buildspace-dao-starter % node scripts/5-deploy-token.js
 ✅ Successfully deployed token contract, address: 0xF93B8AE0a84325D1d7Aa09593DCA3Ad5Fe868eA7
 ```
 
-Boom! It deployed a fresh token contract. If you head to [`https://rinkeby.etherscan.io/`](https://rinkeby.etherscan.io/) and search the token module’s address, you’ll see the contract you just deployed. Again, you’ll see it deployed from **your wallet** so **you own it**.
+Boom! It deployed a fresh token contract. If you head to [`https://goerli.etherscan.io/`](https://goerli.etherscan.io/) and search the token module’s address, you’ll see the contract you just deployed. Again, you’ll see it deployed from **your wallet** so **you own it**.
 
 ![Untitled](https://i.imgur.com/4tHQ20A.png)
 
 You can even add your token to Metamask as a custom token.
 
-Just click “Import Token”:
+Just click “Import tokens”:
 
 ![Untitled](https://i.imgur.com/Bf56dyv.png)
 
@@ -95,7 +95,7 @@ const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
 (async () => {
   try {
     // What's the max supply you want to set? 1,000,000 is a nice number!
-    const amount = 0;
+    const amount = 1_000_000;
     // Interact with your deployed ERC-20 contract and mint the tokens!
     await token.mintToSelf(amount);
     const totalSupply = await token.totalSupply();
@@ -189,7 +189,7 @@ const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
 
 This is a lot. But you’re a thirdweb pro now ezpz.
 
-First, you’ll see we need both `editionDrop` and `token` contractsbecause we will be interacting with both contracts.
+First, you’ll see we need both `editionDrop` and `token` contracts because we will be interacting with both contracts.
 
 We need to first grab holders of our NFT from the `editionDrop` and then mint them their token using functions on the `token`.
 
@@ -236,4 +236,4 @@ LETS GOOO.
 
 Go ahead and share a screenshot in `#progress` of your token contract on Etherscan where it shows off your token’s name, supply, etc!
 
-**BTW, if you made it this far and are having a good time -- maybe tweet out that you're building your own DAO and tag [@_buildspace](https://twitter.com/_buildspace) :)?**
+**BTW, if you made it this far and are having a good time -- maybe tweet out that you're building your own DAO and tag [@_buildspace](https://twitter.com/_buildspace) :)?** 

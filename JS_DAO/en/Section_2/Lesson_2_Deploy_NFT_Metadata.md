@@ -8,7 +8,7 @@ Head over to `scripts/3-config-nft.js` and add in:
 import sdk from "./1-initialize-sdk.js";
 import { readFileSync } from "fs";
 
-const editionDrop = sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
+const editionDrop = await sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
 
 (async () => {
   try {
@@ -44,7 +44,7 @@ Then, we're setting up our actual NFT on our ERC-1155 using `createBatch`. We ne
 
 Be sure to replace `image: readFileSync("scripts/assets/headband.png")` with your own image. Same as before, be sure it's a local image as this won't work if you use an internet link.
 
-I'm building NarutoDAO, so, my members will need a Lead Village Headband to join hehe:
+I'm building NarutoDAO, so, my members will need a Leaf Village Headband to join hehe:
 
 ![headband.png](https://i.imgur.com/1F5I12o.png)
 
@@ -73,7 +73,7 @@ Head over to `scripts/4-set-claim-condition.js` and add:
 import sdk from "./1-initialize-sdk.js";
 import { MaxUint256 } from "@ethersproject/constants";
 
-const editionDrop = sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
+const editionDrop = await sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
 
 (async () => {
   try {
@@ -116,7 +116,7 @@ After running `node scripts/4-set-claim-condition.js` here's what I get:
 ✅ Successfully set claim condition!
 ```
 
-Boom! We've successfully interacted w/ our deployed smart contract and have given our NFT certain rules it must follow, hell yea! If you copy-paste your bundle drop address printed out there and search it on `https://rinkeby.etherscan.io/`, you'll see proof right there that we interact w/ the contract!
+Boom! We've successfully interacted w/ our deployed smart contract and have given our NFT certain rules it must follow, hell yea! If you copy-paste your bundle drop address printed out there and search it on `https://goerli.etherscan.io/`, you'll see proof right there that we interacted w/ the contract!
 
 ![Untitled](https://i.imgur.com/6sRMQpA.png)
 
@@ -124,4 +124,4 @@ Boom! We've successfully interacted w/ our deployed smart contract and have give
 
 *Please do this or Farza will be sad :(.*
 
-Hey! Go ahead and share the membership NFT you chose in `#progress` and tell us why you chose this epic NFT for your DAO.
+Hey! Go ahead and share the membership NFT you chose in `#progress` and tell us why you chose this epic NFT for your DAO. 

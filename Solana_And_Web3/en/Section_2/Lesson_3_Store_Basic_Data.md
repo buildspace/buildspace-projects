@@ -84,7 +84,7 @@ Looks complicated lol.
 
 First we've got `[account(init, payer = user, space = 9000)]`. **All we're doing here is telling Solana how we want to initialize `BaseAccount`.**
 
-Note, if after running your test below you get the error `Transaction simulation failed: Error processing Instruction 0: custom program error: 0x64`, you will need to change `space = 9000` to `space = 10000`. If you look at [these docs from anchor](https://project-serum.github.io/anchor/tutorials/tutorial-1.html#defining-a-program) you can see that they define a simple program that declares space = 8 + 8 (eg, 8 kilobytes + 8 kilobytes). The more logic we add to our program, the more space it will take up!
+Note, if after running your test below you get the error `Transaction simulation failed: Error processing Instruction 0: custom program error: 0x64`, you will need to change `space = 9000` to `space = 10000`. If you look at [these docs from anchor](https://project-serum.github.io/anchor/tutorials/tutorial-1.html#defining-a-program) you can see that they define a simple program that declares space = 8 + 8 (eg, 8 bytes + 8 bytes). The more logic we add to our program, the more space it will take up!
 
 1. `init` will tell Solana to create a new account owned by our current program.
 2. `payer = user` tells our program who's paying for the account to be created. In this case, it's the `user` calling the function. 

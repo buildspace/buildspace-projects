@@ -38,7 +38,7 @@ So, if a transaction costs 250,000 gas then *after* that transaction is finaliz
 
 When your contract has been deployed and you're testing it out with your UI and your wallet, it may be confusing at first to determine whether your wallet's account was successfully rewarded with the prize. Your account will have used up some amount of gas and potentially have been rewarded with ETH. So how can you validate whether your contract is working as expected?
 
-To validate, you can open up your contract address on [Rinkeby Etherscan](https://rinkeby.etherscan.io/) and view the transactions that have taken place. You'll find all sorts of useful information in here, including the method that was called, which in this case is `Wave`. If you click into a `Wave` transaction, you'll notice that in the `To` property, it will identify that the contract address was called. If the user had won a prize, you'll notice in that field, that the contract has transferred 0.0001 ETH from the contract address to your account address.
+To validate, you can open up your contract address on [Goerli Etherscan](https://goerli.etherscan.io/) and view the transactions that have taken place. You'll find all sorts of useful information in here, including the method that was called, which in this case is `Wave`. If you click into a `Wave` transaction, you'll notice that in the `To` property, it will identify that the contract address was called. If the user had won a prize, you'll notice in that field, that the contract has transferred 0.0001 ETH from the contract address to your account address.
 
 Note that the `Value` of the transaction is still 0 ETH, because the user never paid anything to initiate the wave. The transfer of ETH internally from a smart contract is called an "internal transaction" and you can view them by switching the tab on Etherscan.
 
@@ -52,9 +52,9 @@ emit NewWave(msg.sender, block.timestamp, _message);
 
 At a basic level, events are messages our smart contracts throw out that we can capture on our client in real-time.
 
-Lets say I'm chilling on your website and I just have it open. While I'm doing this, your other friend Jeremy waves to you. Right now, the only way I'd see Jeremy's wave is if I refreshed my page. This seems bad. Wouldn't it be cool if I could know that that contract was updated and have my UI magically update?
+Let's say I'm chilling on your website and I just have it open. While I'm doing this, your other friend Jeremy waves to you. Right now, the only way I'd see Jeremy's wave is if I refreshed my page. This seems bad. Wouldn't it be cool if I could know that that contract was updated and have my UI magically update?
 
-Even now, it's kinda annoying when we ourselves submit a message, and then we have to wait for it to be mined and then refresh the page to see all the updated list of messages, right? Lets fix that.
+Even now, it's kinda annoying when we ourselves submit a message, and then we have to wait for it to be mined and then refresh the page to see all the updated list of messages, right? Let's fix that.
 
 Check out my code here where I updated `getAllWaves` in `App.js.` 
 
@@ -148,13 +148,13 @@ require("dotenv").config();
 module.exports = {
   solidity: "0.8.0",
   networks: {
-    rinkeby: {
-      url: process.env.STAGING_ALCHEMY_KEY,
+    goerli: {
+      url: process.env.STAGING_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
     mainnet: {
       chainId: 1,
-      url: process.env.PROD_ALCHEMY_KEY,
+      url: process.env.PROD_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
@@ -164,8 +164,8 @@ module.exports = {
 And your .env file would look something like:
 
 ```
-STAGING_ALCHEMY_KEY=BLAHBLAH
-PROD_ALCHEMY_KEY=BLAHBLAH
+STAGING_QUICKNODE_KEY=BLAHBLAH
+PROD_QUICKNODE_KEY=BLAHBLAH
 PRIVATE_KEY=BLAHBLAH
 ```
 
@@ -178,10 +178,6 @@ You've done it. You've deployed a smart contract and you've written a web app th
 I hope this was a fun introduction to web3 and I hope you continue your journey.
 
 I'll keep you all posted on new projects in the Discord :).
-
-## 🤟 Your NFT!
-
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
 
 
 ## 🚨 Before you head out

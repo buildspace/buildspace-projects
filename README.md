@@ -37,11 +37,21 @@ Any and all contributions are welcome! GitHub makes it _insanely_ easy to make c
 Rather watch a video? [Check out this two minute video](https://www.loom.com/share/ea84ce8634824f9e9377e2bc4b06f031), by Alec from buildspace, for submitting a contribution to a lesson!
 
 ### Structure
-You will notice in each project folder there is an `en` and `es` folder. We are in the process of translating our projects to Spanish (and hopefully more languages)!
+You will notice in each project folder there is an `en` and `es` folder. We are in the process of translating our projects to Spanish!
 
 If you are contributing to the English version, make sure your changes are done in the `en/` folder. If you are contributing to the Spanish version, make sure to make your changes in the `es/` folder!
 
 Each project aligns with the content on your buildspace dashboard. Find the file you want to change and open up a Pull Request for it! Someone from the buildspace team will take a look at it ASAP!
+
+
+### Translations
+We want to give a ***huge*** shoutout to [@czarfreak](https://twitter.com/czarfreak) for helping push forward our first fully translated project -- **Build a Web3 app with Solidity**.
+
+We want to bring buildspace projects to everyone around the world but **we need your help.**  We are looking for people to help translate our projects in every language possible!
+
+**If you are interested in becoming part of the buildspace translator crew send a DM to `alec#8853` on Discord to get access!**
+
+Before doing any translation work, **please make sure someone hasn't already done it!** We have a number of projects that are being actively translated and are not visible on the app. Please check [here](https://github.com/buildspace/buildspace-projects/pulls?q=is%3Aopen+is%3Apr+label%3Atranslation) to make sure you don't duplicate work :)
 
 ## 🤔 Why take this project on buildspace?
 You have access to all of the content right here in GitHub!
@@ -410,6 +420,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Meacho"><img src="https://avatars.githubusercontent.com/u/15829136?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Meacho</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Meacho" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ebCrypto"><img src="https://avatars.githubusercontent.com/u/44279886?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ebCrypto</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ebCrypto" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/0xcen"><img src="https://avatars.githubusercontent.com/u/75177443?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Carlos</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=0xcen" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/cesargatica"><img src="https://avatars.githubusercontent.com/u/90020224?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cesar G. Gatica Rosales</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=cesargatica" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/ducksblock"><img src="https://avatars.githubusercontent.com/u/105146670?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ducksblock</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ducksblock" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Kampani"><img src="https://avatars.githubusercontent.com/u/75481250?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Manav Kampani</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=kampani" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/bobjiang"><img src="https://avatars.githubusercontent.com/u/1224604?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bob Jiang</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=bobjiang" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/anymose96"><img src="https://avatars.githubusercontent.com/u/80447029?v=4?s=100" width="100px;" alt=""/><br /><sub><b>anymose</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=anymose96" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Xia-Sam"><img src="https://avatars.githubusercontent.com/u/39165351?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sam</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Xia-Sam" title="Documentation">📖</a></td>
   </tr>
 </table>
 
@@ -418,4 +436,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!

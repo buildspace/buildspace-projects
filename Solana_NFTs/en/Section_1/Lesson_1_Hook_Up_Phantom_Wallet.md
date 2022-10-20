@@ -18,7 +18,6 @@ git clone YOUR_FORKED_LINK
 
 There it is :). Time to code!
 
-
 ### 🔌 Building a connect wallet button with Phantom Wallet
 
 For this project we are going to be using a wallet called [Phantom](https://phantom.app/). This is one of the top wallet extensions for Solana.
@@ -33,118 +32,139 @@ Once we connect our wallet to our website, our website will have permission to r
 
 **Remember, it's just like authenticating into a website.** If you aren't "logged in" to G-Mail, then you can't use their email product!
 
-Head over to your code and go to `App.js` under `src`. This is where the main entry point of our app will be.
+Head over to your code and go to `index.js` under `pages`. This is where the main entry point of our app will be.
 
 If you have the Phantom Wallet extension installed, it will automatically inject a special object named `solana` into your `window` object that has some magical functions. This means before we do anything, we need to check to see if this exists. If it doesn't exist, let's tell our user to go download it:
 
 ```jsx
-import React, { useEffect } from 'react';
-import './App.css';
-import twitterLogo from './assets/twitter-logo.svg';
+import React from "react";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 // Constants
-const TWITTER_HANDLE = '_buildspace';
+const TWITTER_HANDLE = "_buildspace";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
-const App = () => {
-  // Actions
+const Home = () => {
+    // Actions
+    const renderNotConnectedContainer = () => (
+        <div>
+            <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
 
-  /*
-  * Declare your function
-  */
-  const checkIfWalletIsConnected = async () => {
-    try {
-      const { solana } = window;
-
-      if (solana && solana.isPhantom) {
-          console.log('Phantom wallet found!');
-      } else {
-        alert('Solana object not found! Get a Phantom Wallet 👻');
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  /*
-   * When our component first mounts, let's check to see if we have a connected
-   * Phantom Wallet
-   */
-  useEffect(() => {
-    const onLoad = async () => {
-      await checkIfWalletIsConnected();
-    };
-    window.addEventListener('load', onLoad);
-    return () => window.removeEventListener('load', onLoad);
-  }, []);
-
-  return (
-    <div className="App">
-      <div className="container">
-        <div className="header-container">
-          <p className="header">🍭 Candy Drop</p>
-          <p className="sub-text">NFT drop machine with fair mint</p>
+            <div className="button-container">
+                <WalletMultiButton className="cta-button connect-wallet-button" />
+            </div>
         </div>
-        <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
-          <a
-            className="footer-text"
-            href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
+    );
+
+    return (
+        <div className="App">
+            <div className="container">
+                <div className="header-container">
+                    <p className="header">🍭 Candy Drop</p>
+                    <p className="sub-text">NFT drop machine with fair mint</p>
+                    {/* Render your connect to wallet button right here */}
+                    {renderNotConnectedContainer()}
+                </div>
+
+                <div className="footer-container">
+                    <img alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" />
+                    <a className="footer-text" href={TWITTER_LINK} target="_blank" rel="noreferrer">{`built on @${TWITTER_HANDLE}`}</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
-export default App;
+export default Home;
 ```
 
 Nice! Not too bad right? Let's break this down a bit:
 
 ```jsx
-const checkIfWalletIsConnected = async () => {
-  try {
-    const { solana } = window;
-
-    if (solana && solana.isPhantom) {
-        console.log('Phantom wallet found!');
-    } else {
-      alert('Solana object not found! Get a Phantom Wallet 👻');
-    }
-  } catch (error) {
-    console.error(error);
-  }
-};
+const renderNotConnectedContainer = () => (
+    <div>
+        <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
+        <div className="button-container">
+            <WalletMultiButton className="cta-button connect-wallet-button" />
+        </div>
+    </div>
+);
 ```
 
-Our function here is checking the `window` object in our DOM to see if the Phantom Wallet extension has injected the `solana` object. If we do have a `solana` object, we can also check to see if it's a Phantom Wallet.
+`WalletMultiButton` will automatically detect any Solana wallet extensions you installed in your browser such as `Phantom`, `Sollet`, `Ledger`, `Solflare` etc. This is dependent on your configurations in `_app.js`. This is how your `_app.js` should look like.
+
+```javascript
+import { useMemo } from "react";
+import { clusterApiUrl } from "@solana/web3.js";
+import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
+import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
+import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
+import { ConnectionProvider, WalletProvider } from "@solana/wallet-adapter-react";
+
+import "../styles/App.css";
+import "../styles/index.css";
+import "../styles/globals.css";
+import "../styles/CandyMachine.css";
+import "@solana/wallet-adapter-react-ui/styles.css";
+
+const App = ({ Component, pageProps }) => {
+    const network = WalletAdapterNetwork.Devnet;
+    const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+    const wallets = useMemo(() => [new PhantomWalletAdapter()], [network]);
+
+    return (
+        <ConnectionProvider endpoint={endpoint}>
+            <WalletProvider wallets={wallets} autoConnect>
+                <WalletModalProvider>
+                    <Component {...pageProps} />
+                </WalletModalProvider>
+            </WalletProvider>
+        </ConnectionProvider>
+    );
+};
+
+export default App;
+```
+
+### **Adding support for more wallet adapters (Optional)**
+
+If you're looking to add support for more extensions, you can do so by importing more adapters. Like this
+
+```javascript
+// ... Rest of your code
+import { PhantomWalletAdapter, SolflareWalletAdapter, TorusWalletAdapter } from "@solana/wallet-adapter-wallets";
+
+// ... Rest of your code
+
+const App = ({ Component, pageProps }) => {
+    // ... Rest of your code
+    const wallets = useMemo(() => [new PhantomWalletAdapter(), new SolflareWalletAdapter(), new TorusWalletAdapter()], [network]);
+
+    return (
+        <ConnectionProvider endpoint={endpoint}>
+            <WalletProvider wallets={wallets} autoConnect>
+                <WalletModalProvider>
+                    <Component {...pageProps} />
+                </WalletModalProvider>
+            </WalletProvider>
+        </ConnectionProvider>
+    );
+};
+
+export default App;
+```
+
+And now run `npm run dev` and click on the `Select Wallet` button. It should list out a few wallets for you to choose from depending on how you configure your adapters.
+
+<img src="https://i.imgur.com/0BZZTsD.png" />
 
 Since we have tested this project fully with Phantom Wallets, we recommend sticking with that. Nothing is stopping you with exploring or supporting other wallets, though 👀.
 
-```jsx
-useEffect(() => {
-  const onLoad = async () => {
-    await checkIfWalletIsConnected();
-  };
-  window.addEventListener('load', onLoad);
-  return () => window.removeEventListener('load', onLoad);
-}, []);
-```
-
-Finally, we just need to call this thing!
-
-In React, the `useEffect` hook gets called once on component mount when that second parameter (the `[]`) is empty! So, this is perfect for us. As soon as someone goes to our app, we can check to see if they have Phantom Wallet installed or not. This will be **very important** soon.
-
-Currently, the Phantom Wallet team suggests to wait for the window to fully finish loading before checking for the `solana` object. Once this event gets called, we can guarantee that this object is available if the user has the Phantom Wallet extension installed.
-
 ### 🔒 Accessing the user's account
 
-So when you run this, you should see that line *"Phantom wallet found!"* printed in the console of the website when you go to inspect it.
+Once you've successfully log into your wallet, your website should look something like this
 
-![Untitled](https://i.imgur.com/uyGcSJ4.png)
+<img src="https://i.imgur.com/Rsg01DA.png" />
 
 _For additional instructions on getting your app running, refer to `README.md` at the root of your project._
 
@@ -154,49 +174,18 @@ Next, we need to actually check if we're **authorized** to actually access the
 
 Basically, **Phantom Wallet doesn't just give our wallet information to every website we go to**. It only gives it to websites we authorize. So far, we have **not** given Phantom explicit access to share our wallet's info.
 
-The first thing we need to do is check if a user has given us permission to use their wallet on our site — this is sorta like checking if our user is "logged in". All we need to do is add one more line to our `checkIfWalletIsConnected` function. Check out the code below:
+The first thing we need to do is check if a user has given us permission to use their wallet on our site — this is sorta like checking if our user is "logged in".
 
 ```jsx
-const checkIfWalletIsConnected = async () => {
-  try {
-    const { solana } = window;
-
-    if (solana && solana.isPhantom) {
-        console.log('Phantom wallet found!');
-
-        /*
-         * The solana object gives us a function that will allow us to connect
-         * directly with the user's wallet!
-         */
-        const response = await solana.connect({ onlyIfTrusted: true });
-        console.log(
-          'Connected with Public Key:',
-          response.publicKey.toString()
-        );
-    } else {
-      alert('Solana object not found! Get a Phantom Wallet 👻');
-    }
-  } catch (error) {
-    console.error(error);
-  }
-};
+const wallet = useWallet();
 ```
 
-It's as simple as calling `connect` which tells Phantom Wallet that our NFT website is authorized to access information about that wallet! Some of you may be asking what this `onlyIfTrusted` property is.
-
-If a user has already connected their wallet with your app, this flag will immediately pull their data without prompting them with another connect popup! Pretty nifty, eh? Curious to know more - [take a look at this doc](https://docs.phantom.app/integrating/establishing-a-connection#eagerly-connecting) from Phantom!
+`useWallet()` is a custom hook that checks if the wallet is connected. If it is, it will return all the necessary information about that wallet.
 
 And that's it!
 
-*At this point you should still only be seeing the "Phantom wallet found!"* log statement in your console!
-
-Don't worry if you're seeing the "User Rejected Request" error in the console. It is totally expected at this point of the project ;), It's there because we added that `onlyIfTrusted: true` parameter inside the `connect` method.
-It will make the Phantom wallet reject the user's connection request for now (as the error's name suggests 😁).
-
-Why is that? Well, the `connect` method with `onlyIfTrusted` parameter set to `true` will only run **if** the user has already authorized a connection between their wallet and the web app. **Which they've never done so far.** Let's do that next :).
-
 ### 🚨 Progress Report
 
-*Please do this else Farza will be sad :(*
+_Please do this else Farza will be sad :(_
 
 Post a screenshot in `#progress` showing off the that message "Phantom wallet found" in your console. May seem simple, but, not many people know how to do this stuff! It's epic.

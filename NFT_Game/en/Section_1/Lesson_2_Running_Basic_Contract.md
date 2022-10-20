@@ -2,7 +2,7 @@
 
 Pick your favorite code editor and open up the directory where you setup your hardhat project! Let's do a little clean-up.
 
-We want to delete all the lame starter code generated for us. We're going to write this stuff ourselves! Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `sample-script.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. **Don't delete the actual folders!**
+We want to delete all the lame starter code generated for us. We're going to write this stuff ourselves! Go ahead and delete the file `Lock.js` under `test`.  Also, delete `deploy.js` under `scripts`. Then, delete `Lock.sol` under `contracts`. **Don't delete the actual folders!**
 
 Now, let's get to writing our NFT contract. If you've never written a smart contract don't worry. **Just follow along. Google stuff you don't understand. Ask questions in Discord.**
 
@@ -15,7 +15,7 @@ I always like starting with a really basic contract, just to get things going.
 ```javascript
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 
@@ -37,10 +37,10 @@ Let's go line-by-line here.
 Just a fancy comment.  It's called an "SPDX license identifier", feel free to Google what it is :).
 
 ```javascript
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 ```
 
-This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use version 0.8.0 of the Solidity compiler, nothing lower. Note, be sure your compiler is set to 0.8.0 in `hardhat.config.js`.
+This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use version 0.8.17 of the Solidity compiler, nothing lower. Note, be sure your compiler is set to 0.8.17 in `hardhat.config.js`.
 
 ```javascript
 import "hardhat/console.sol";
@@ -131,7 +131,7 @@ But, there are millions of contracts on the actual blockchain. So, this address 
 
 ### 💨 Run it
 
-Before you run this, be sure to change `solidity: "0.8.4",` to `solidity: "0.8.0",` in your `hardhat.config.js`.
+Before you run this, be sure to change `solidity: "0.8.4",` to `solidity: "0.8.17",` in your `hardhat.config.js`.
 
 Let's run it! Open up your terminal and run:
 

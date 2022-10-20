@@ -118,4 +118,4 @@ What’s happening here is when we call the `withdraw()` function as a random pe
 
 *Please do this else Raza will be sad :(*
 
-Post a screenshot in `#progress` of your console after you try to rob your contract. 
+Post a screenshot in `#progress` of your console after you try to rob your contract.
