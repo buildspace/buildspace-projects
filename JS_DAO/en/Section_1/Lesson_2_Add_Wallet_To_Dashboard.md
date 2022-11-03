@@ -7,14 +7,14 @@ You may have built "Connect to Wallet" buttons in the past! This time, we'll be 
 Head over to `src/index.js` in your React App and add the following code:
 
 ```jsx
-import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import './index.css';
+import App from './App';
 
 // Import thirdweb provider and Goerli ChainId
-import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
+import { ThirdwebProvider } from '@thirdweb-dev/react';
+import { ChainId } from '@thirdweb-dev/sdk';
 
 // This is the chainId your dApp will work on.
 const activeChainId = ChainId.Goerli;
@@ -43,12 +43,11 @@ If you head over to your web app, you'll see a blank purple page. Let's add some
 Head over to `App.jsx`. Add the following code.
 
 ```jsx
-import { useAddress, useMetamask } from '@thirdweb-dev/react';
+import { useAddress, ConnectWallet } from '@thirdweb-dev/react';
 
 const App = () => {
   // Use the hooks thirdweb give us.
   const address = useAddress();
-  const connectWithMetamask = useMetamask();
   console.log("👋 Address:", address);
 
   // This is the case where the user hasn't connected their wallet
@@ -57,9 +56,7 @@ const App = () => {
     return (
       <div className="landing">
         <h1>Welcome to NarutoDAO</h1>
-        <button onClick={connectWithMetamask} className="btn-hero">
-          Connect your wallet
-        </button>
+        <ConnectWallet />
       </div>
     );
   }

@@ -9,10 +9,9 @@ That way, only the voting contract is able to mint new tokens. We can do this by
 ```jsx
 import sdk from "./1-initialize-sdk.js";
 
-const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
-
 (async () => {
   try {
+    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
     // Log the current roles.
     const allRoles = await token.roles.getAll();
 
@@ -27,7 +26,7 @@ const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
     console.log("✅ Successfully revoked our superpowers from the ERC-20 contract");
 
   } catch (error) {
-    console.error("Failed to revoke ourselves from the DAO treasury", error);
+    console.error("Failed to revoke ourselves from the DAO trasury", error);
   }
 })();
 ```

@@ -89,15 +89,14 @@ Head to `6-print-money.js` and add:
 ```jsx
 import sdk from "./1-initialize-sdk.js";
 
-// This is the address of our ERC-20 contract printed out in the step before.
-const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
-
 (async () => {
   try {
+    // This is the address of our ERC-20 contract printed out in the step before.
+    const token = sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
     // What's the max supply you want to set? 1,000,000 is a nice number!
-    const amount = 1_000_000;
+    const amount = 0;
     // Interact with your deployed ERC-20 contract and mint the tokens!
-    await token.mintToSelf(amount);
+    await token.mint(amount);
     const totalSupply = await token.totalSupply();
 
     // Print out how many of our token's are out there now!
@@ -143,16 +142,14 @@ Open up `7-airdrop-token.js` and add the following code:
 ```jsx
 import sdk from "./1-initialize-sdk.js";
 
-// This is the address to our ERC-1155 membership NFT contract.
-const editionDrop = sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
-
-// This is the address to our ERC-20 token contract.
-const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
-
 (async () => {
   try {
-    // Grab all the addresses of people who own our membership NFT, 
-    // which has a tokenId of 0.
+    // This is the address to our ERC-1155 membership NFT contract.
+    const editionDrop = await sdk.getContract("INSERT_EDITION_DROP_ADDRESS", "edition-drop");
+    // This is the address to our ERC-20 token contract.
+    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
+    // Grab all the addresses of people who own our membership NFT, which has 
+    // a tokenId of 0.
     const walletAddresses = await editionDrop.history.getAllClaimerAddresses(0);
 
     if (walletAddresses.length === 0) {
