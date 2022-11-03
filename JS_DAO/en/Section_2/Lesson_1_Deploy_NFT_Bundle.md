@@ -54,7 +54,6 @@ Head over to `scripts/1-initialize-sdk.js`.
 
 ```jsx
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import ethers from "ethers";
 
 // Importing and configuring our .env file that we use to securely store our environment variables
 import dotenv from "dotenv";
@@ -73,16 +72,17 @@ if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS === "") {
   console.log("🛑 Wallet Address not found.");
 }
 
-// RPC URL, we'll use our QuickNode API URL from our .env file.
-const provider = new ethers.providers.JsonRpcProvider(process.env.QUICKNODE_API_URL);
-// Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
-const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
-const sdk = new ThirdwebSDK(wallet);
+const sdk = ThirdwebSDK.fromPrivateKey(
+  // Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
+  process.env.PRIVATE_KEY,
+  // RPC URL, we'll use our QuickNode API URL from our .env file.
+  process.env.QUICKNODE_API_URL
+)
 
 (async () => {
   try {
     const address = await sdk.getSigner().getAddress();
-    console.log("👋 SDK initialized by address:", address);
+    console.log("👋 SDK initialized by address:", address)
   } catch (err) {
     console.error("Failed to get apps from the sdk", err);
     process.exit(1);
@@ -91,22 +91,6 @@ const sdk = new ThirdwebSDK(wallet);
 
 // We are exporting the initialized thirdweb SDK so that we can use it in our other scripts
 export default sdk;
-```
-
-It looks like a lot, but, all we're doing is initializing thirdweb and then adding an `export default sdk` since we'll be reusing the initialized sdk in other scripts. It's almost like initializing a connection to a database from a server. We give it stuff like our private key and our provider (which is QuickNode).
-
-We're also running this:
-
-```jsx
-(async () => {
-  try {
-    const address = await sdk.getSigner().getAddress();
-    console.log("👋 SDK initialized by address:", address);
-  } catch (err) {
-    console.error("Failed to get apps from the sdk", err);
-    process.exit(1);
-  }
-})();
 ```
 
 To make sure that we sdk initialized correctly!
