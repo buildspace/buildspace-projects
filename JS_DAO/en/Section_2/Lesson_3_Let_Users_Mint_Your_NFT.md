@@ -12,7 +12,7 @@ Head over to `App.jsx`. Update our imports to:
 
 ```jsx
 import { useAddress, ConnectWallet, useContract } from '@thirdweb-dev/react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 ```
 
 From there, below our `console.log("👋 Address:", address);` we're going to add:
@@ -42,7 +42,7 @@ Let's do it! Head back to `App.jsx`. I added some comments on the lines I added:
 
 ```javascript
 import { useAddress, ConnectWallet, Web3Button, useContract } from '@thirdweb-dev/react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 const App = () => {
     // Initialize our Edition Drop contract
@@ -60,7 +60,9 @@ const App = () => {
     return (
       <div className="landing">
         <h1>Welcome to NarutoDAO</h1>
-        <ConnectWallet />
+        <div className="btn-hero">
+          <ConnectWallet />
+        </div>
       </div>
     );
   }
@@ -69,20 +71,22 @@ const App = () => {
   return (
     <div className="mint-nft">
       <h1>Mint your free 🍪DAO Membership NFT</h1>
-      <Web3Button 
-        contractAddress='INSERT_EDITION_DROP_ADDRESS'
-        contract={contract => {
-          contract.erc721.claim(address, 1, 0)
-        }}
-        onSuccess={() => {
-          console.log(`🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${editionDrop.getAddress()}/0`);
-        }}
-        onError={error => {
-          console.error("Failed to mint NFT", error);
-        }}
-      >
-        Mint your NFT (FREE)
-      </Web3Button>
+      <div className="btn-hero">
+        <Web3Button 
+          contractAddress='INSERT_EDITION_DROP_ADDRESS'
+          contract={contract => {
+            contract.erc721.claim(address, 1, 0)
+          }}
+          onSuccess={() => {
+            console.log(`🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${editionDrop.getAddress()}/0`);
+          }}
+          onError={error => {
+            console.error("Failed to mint NFT", error);
+          }}
+        >
+          Mint your NFT (FREE)
+        </Web3Button>
+      </div>
     </div>
   );
 }
@@ -119,7 +123,9 @@ if (!address) {
   return (
     <div className="landing">
       <h1>Welcome to NarutoDAO</h1>
-      <ConnectWallet />
+      <div className="btn-hero">
+        <ConnectWallet />
+      </div>
     </div>
   );
 }
