@@ -41,5 +41,16 @@
   "Lesson_10_Error_Handling_And_Data_Validation.md": "LE5e59b178-1df4-4207-8033-89d823115fa2",
   "Lesson_11_Secure_Our_Program.md": "LE1be6cd79-8e9d-47b4-8115-a5e27c8ec0fe",
   "Lesson_12_How_Staking_Works.md": "LEe02dacb2-0b27-47fa-9f64-3a9a06a3989d",
-  "Lesson_13_Build_NFT_Staking_Program.md": "LE88d7e80f-c566-4596-b3d5-e57a446f524f"
+  "Lesson_13_Build_NFT_Staking_Program.md": "LE88d7e80f-c566-4596-b3d5-e57a446f524f",
+  "Lesson_1_Setting_Up_Locally.md": "LEe17a9ec6-2ddc-4a49-8e10-565e7dc27e5c",
+  "Lesson_2_PDAs_With_Gage.md": "LE6ea99881-65bf-4995-b5b4-6d8d7328a9d2",
+  "Lesson_3_PDA_Deep_Dive.md": "LE77ed92b5-d9f5-4f93-8326-41feb8e70bf3",
+  "Lesson_4_Build_On_Chain_Comments.md": "LE67d441ba-8eb7-41bd-86b5-3e84e9280801",
+  "Lesson_5_CPIs_With_Gage.md": "LE1851afa6-0dac-499f-85df-6e2d830ea296",
+  "Lesson_6_Cross_Program_Boss_Fight.md": "LE74ce928c-6b9a-45d7-b040-3d9c83f446dd",
+  "Lesson_7_Mint_Tokens_For_Users.md": "LE5375d7d5-e8c8-4cd6-884e-403e32a2f01a",
+  "Lesson_8_Build_Payment_System_With_CPIs.md": "LEd2e485da-1888-4297-b473-25415fad6573",
+  "Lesson_9_Testing_With_Gage.md": "LEa6535ff4-8e5c-43c1-a196-88653319e046",
+  "Lesson_10_Testing_Solana_Programs.md": "LE69cdb362-8963-4b38-bac6-54980b3fa374",
+  "Lesson_11_Writing_Tests_In_Rust.md": "LE91c2f087-3af6-4faa-b6b3-cb6d772665f2"
 }
