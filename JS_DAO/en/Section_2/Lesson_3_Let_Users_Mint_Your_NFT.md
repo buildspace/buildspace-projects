@@ -11,7 +11,7 @@ Let's do it! We'll attack case #1 first, we need to detect if the user has our N
 Head over to `App.jsx`. Update our imports to:
 
 ```jsx
-import { useAddress, ConnectWallet, useContract } from '@thirdweb-dev/react';
+import { useAddress, ConnectWallet, useContract, useNFTBalance } from '@thirdweb-dev/react';
 import { useState, useEffect, useMemo } from 'react';
 ```
 
@@ -19,9 +19,10 @@ From there, below our `console.log("👋 Address:", address);` we're going to ad
 
 ```jsx
   // Initialize our Edition Drop contract
-  const { contract: editionDrop } = useContract("INSERT_EDITION_DROP_ADDRESS", "edition-drop");
+  const editionDropAddress = "INSERT_EDITION_DROP_ADDRESS"
+  const { contract: editionDrop } = useContract(editionDropAddress, "edition-drop");
   // Hook to check if the user has our NFT
-  const { data: nftBalance } = useNFTBalance("INSERT_EDITION_DROP_ADDRESS", address, "0")
+  const { data: nftBalance } = useNFTBalance(editionDrop, address, "0")
 
   const hasClaimedNFT = useMemo(() => {
     return nftBalance && nftBalance.gt(0)
@@ -41,14 +42,17 @@ Now we know when a user doesn't have an NFT! Let's create a button to let the us
 Let's do it! Head back to `App.jsx`. I added some comments on the lines I added:
 
 ```javascript
-import { useAddress, ConnectWallet, Web3Button, useContract } from '@thirdweb-dev/react';
+import { useAddress, ConnectWallet, Web3Button, useContract, useNFTBalance } from '@thirdweb-dev/react';
 import { useState, useEffect, useMemo } from 'react';
 
 const App = () => {
-    // Initialize our Edition Drop contract
+  // Use the hooks thirdweb give us.
+  const address = useAddress();
+  console.log("👋 Address:", address);
+  // Initialize our Edition Drop contract
   const { contract: editionDrop } = useContract("INSERT_EDITION_DROP_ADDRESS", "edition-drop");
   // Hook to check if the user has our NFT
-  const { data: nftBalance } = useNFTBalance("INSERT_EDITION_DROP_ADDRESS", address, "0")
+  const { data: nftBalance } = useNFTBalance(editionDrop, address, "0")
 
   const hasClaimedNFT = useMemo(() => {
     return nftBalance && nftBalance.gt(0)
@@ -73,9 +77,9 @@ const App = () => {
       <h1>Mint your free 🍪DAO Membership NFT</h1>
       <div className="btn-hero">
         <Web3Button 
-          contractAddress='INSERT_EDITION_DROP_ADDRESS'
-          contract={contract => {
-            contract.erc721.claim(address, 1, 0)
+          contractAddress={editionDropAddress}
+          action={contract => {
+            contract.erc1155.claim(0, 1)
           }}
           onSuccess={() => {
             console.log(`🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${editionDrop.getAddress()}/0`);

@@ -109,16 +109,12 @@ voting contract (on the relevant network) for it to work before deploying the pr
 
 ### ✍️ Let users vote on proposals from the dashboard
 
-Finally, let’s bring it all home. Right now, our proposals live on our smart contract. But, we want our users to easily be able to see them and vote! Let’s do that. Head to `App.jsx`. Add the `useVote` hook to our imports:
-
-```jsx
-import { useAddress, useMetamask, useEditionDrop, useToken, useVote } from '@thirdweb-dev/react';
-```
+Finally, let’s bring it all home. Right now, our proposals live on our smart contract. But, we want our users to easily be able to see them and vote! Let’s do that. Head to `App.jsx`. 
 
 Go ahead and add this under `token`.
 
 ```jsx
-  const vote = useVote("INSERT_VOTE_ADDRESS");
+const { contract: vote } = useContract("INSERT_VOTE_ADDRESS", "vote");
 ```
 
 Our web app needs access to our `vote` so users can interact with that contract.

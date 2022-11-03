@@ -65,8 +65,15 @@ You'll see I still have the `transfer` role in conjunction with `AddressZero`, `
 First, let's import one last hook `useNetwork` at the top of `App.jsx` to recognize a connection outside of the Goerli network. Also, we're importing `ChainId` from the thirdweb SDK to get Goerli's chain ID.
 
 ```jsx
-import { useAddress, useMetamask, useEditionDrop, useToken, useVote, useNetwork } from '@thirdweb-dev/react';
-import { ChainId } from '@thirdweb-dev/sdk'
+import {
+  useAddress,
+  useNetwork,
+  useContract,
+  ConnectWallet,
+  Web3Button,
+  useNFTBalance,
+} from '@thirdweb-dev/react';
+import { ChainId } from '@thirdweb-dev/sdk';
 ```
 
 Then, define our `useNetwork` hook under our `useAddress` hook:
@@ -75,7 +82,7 @@ Then, define our `useNetwork` hook under our `useAddress` hook:
 const network = useNetwork();
 ```
 
-Next, add the following in your `App.jsx` file right under the `mintNft` function:
+Next, add the following in your `App.jsx` file right under `const memberList =...` function:
 
 ```jsx
 if (address && (network?.[0].data.chain.id !== ChainId.Goerli)) {

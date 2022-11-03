@@ -8,7 +8,7 @@ Head over to `src/index.js` in your React App and add the following code:
 
 ```jsx
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 
@@ -20,13 +20,14 @@ import { ChainId } from '@thirdweb-dev/sdk';
 const activeChainId = ChainId.Goerli;
 
 // Wrap your app with the thirdweb provider
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
     <ThirdwebProvider desiredChainId={activeChainId}>
       <App />
     </ThirdwebProvider>
   </React.StrictMode>,
-  document.getElementById('root'),
 );
 ```
 

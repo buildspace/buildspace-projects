@@ -70,6 +70,7 @@ Head over to `scripts/4-set-claim-condition.js` and add:
 
 ```jsx
 import sdk from "./1-initialize-sdk.js";
+import { MaxUint256 } from "@ethersproject/constants";
 
 (async () => {
   try {
@@ -87,7 +88,7 @@ import sdk from "./1-initialize-sdk.js";
       maxClaimablePerWallet: 1,
       // We set the wait between transactions to unlimited, which means
       // people are only allowed to claim once.
-      waitInSeconds: "unlimited",
+      waitInSeconds: MaxUint256,
     }]
 
     await editionDrop.claimConditions.set("0", claimConditions);

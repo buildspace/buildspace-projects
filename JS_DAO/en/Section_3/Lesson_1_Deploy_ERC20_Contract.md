@@ -37,11 +37,11 @@ import sdk from "./1-initialize-sdk.js";
       primary_sale_recipient: AddressZero,
     });
     console.log(
-      "✅ Successfully deployed token module, address:",
+      "✅ Successfully deployed token contract, address:",
       tokenAddress,
     );
   } catch (error) {
-    console.error("failed to deploy token module", error);
+    console.error("failed to deploy token contract", error);
   }
 })();
 ```
@@ -92,9 +92,9 @@ import sdk from "./1-initialize-sdk.js";
 (async () => {
   try {
     // This is the address of our ERC-20 contract printed out in the step before.
-    const token = sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
+    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
     // What's the max supply you want to set? 1,000,000 is a nice number!
-    const amount = 0;
+    const amount = 1_000_000;
     // Interact with your deployed ERC-20 contract and mint the tokens!
     await token.mint(amount);
     const totalSupply = await token.totalSupply();
