@@ -206,7 +206,7 @@ Add the zero address import after your exising imports:
 import { AddressZero } from "@ethersproject/constants";
 ```
 
-Go ahead and replace the contents of `if (hasClaimedNFT) { }` with the code [here](https://github.com/buildspace/buildspace-dao-final/blob/main/src/App.jsx#L205).
+Go ahead and replace the contents of `if (hasClaimedNFT) { }` with the code [here](https://github.com/buildspace/buildspace-dao-final/blob/main/src/App.jsx#L184).
 
 When you check out your web app, you’ll see something like:
 
