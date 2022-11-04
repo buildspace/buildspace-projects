@@ -2,23 +2,16 @@
 
 It would be nice for all the members of our DAO to easily see all the people in the DAO who hold tokens along with how many tokens they hold. To do that, we’ll need to actually call our smart contracts from our client and retrieve that data.
 
-Let’s do it! Head over to `App.jsx`. At the top, add the `useToken` hook to the list of `@thirdweb-dev/react` imports. Also, make sure to import `useMemo`: 
-
-```jsx
-import { useAddress, useMetamask, useEditionDrop, useToken } from '@thirdweb-dev/react';
-import { useState, useEffect, useMemo } from 'react';
-```
-
-Then under `editionDrop`, add in your `token`.
+Head over to `App.jsx`, then under `editionDrop`, add in your `token`.
 
 ```jsx
 // Initialize our token contract
-const token = useToken("INSERT_TOKEN_ADDRESS")
+const { contract: token } = useContract('INSERT_TOKEN_ADDRESS', 'token');
 ```
 
 We need this so we can interact with both of our ERC-1155 contract and our ERC-20 contract. From the ERC-1155, we’ll get all our members' addresses. From the ERC-20, we’ll retrieve the # of tokens each member has.
 
-Next, add the following code under `const [isClaiming, setIsClaiming] = useState(false)`:
+Next, add the following code under `const hasClaimedNFT...`:
 
 ```jsx
 // Holds the amount of token each member has in state.
@@ -26,9 +19,9 @@ const [memberTokenAmounts, setMemberTokenAmounts] = useState([]);
 // The array holding all of our members addresses.
 const [memberAddresses, setMemberAddresses] = useState([]);
 
-// A fancy function to shorten someones wallet address, no need to show the whole thing. 
+// A fancy function to shorten someones wallet address, no need to show the whole thing.
 const shortenAddress = (str) => {
-  return str.substring(0, 6) + "..." + str.substring(str.length - 4);
+  return str.substring(0, 6) + '...' + str.substring(str.length - 4);
 };
 
 // This useEffect grabs all the addresses of our members holding our NFT.
@@ -41,16 +34,17 @@ useEffect(() => {
   // with tokenId 0.
   const getAllAddresses = async () => {
     try {
-      const memberAddresses = await editionDrop.history.getAllClaimerAddresses(0);
+      const memberAddresses = await editionDrop?.history.getAllClaimerAddresses(
+        0,
+      );
       setMemberAddresses(memberAddresses);
-      console.log("🚀 Members addresses", memberAddresses);
+      console.log('🚀 Members addresses', memberAddresses);
     } catch (error) {
-      console.error("failed to get member list", error);
+      console.error('failed to get member list', error);
     }
-
   };
   getAllAddresses();
-}, [hasClaimedNFT, editionDrop.history]);
+}, [hasClaimedNFT, editionDrop?.history]);
 
 // This useEffect grabs the # of token each member holds.
 useEffect(() => {
@@ -60,15 +54,15 @@ useEffect(() => {
 
   const getAllBalances = async () => {
     try {
-      const amounts = await token.history.getAllHolderBalances();
+      const amounts = await token?.history.getAllHolderBalances();
       setMemberTokenAmounts(amounts);
-      console.log("👜 Amounts", amounts);
+      console.log('👜 Amounts', amounts);
     } catch (error) {
-      console.error("failed to get member balances", error);
+      console.error('failed to get member balances', error);
     }
   };
   getAllBalances();
-}, [hasClaimedNFT, token.history]);
+}, [hasClaimedNFT, token?.history]);
 
 // Now, we combine the memberAddresses and memberTokenAmounts into a single array
 const memberList = useMemo(() => {
@@ -80,27 +74,25 @@ const memberList = useMemo(() => {
 
     return {
       address,
-      tokenAmount: member?.balance.displayValue || "0",
-    }
+      tokenAmount: member?.balance.displayValue || '0',
+    };
   });
 }, [memberAddresses, memberTokenAmounts]);
 ```
 
 Looks like a lot at first! But just know we’re doing three things:
 
-1) We’re calling `getAllClaimerAddresses` to get all the addresses of our members who hold an NFT from our ERC-1155 contract.
+1. We’re calling `getAllClaimerAddresses` to get all the addresses of our members who hold an NFT from our ERC-1155 contract.
 
-2) We’re calling `getAllHolderBalances` to get the token balances of everyone who holds our token on our ERC-20 contract.
+2. We’re calling `getAllHolderBalances` to get the token balances of everyone who holds our token on our ERC-20 contract.
 
-3) We’re combining the data into `memberList` which is one nice array that combines both the member’s address and their token balance. Feel free to check out what `useMemo` does [here](https://reactjs.org/docs/hooks-reference.html#usememo). It’s a fancy way in React to store a computed variable. 
+3. We’re combining the data into `memberList` which is one nice array that combines both the member’s address and their token balance. Feel free to check out what `useMemo` does [here](https://reactjs.org/docs/hooks-reference.html#usememo). It’s a fancy way in React to store a computed variable.
 
-Now, you may be asking yourself, “Can’t we just do `getAllHolderBalances` to grab everyone that holds our token?”. Well, basically, someone can be in our DAO and hold zero token! *And, that’s okay.* So still want them to show up on the list.
+Now, you may be asking yourself, “Can’t we just do `getAllHolderBalances` to grab everyone that holds our token?”. Well, basically, someone can be in our DAO and hold zero token! _And, that’s okay._ So still want them to show up on the list.
 
 In my console, I get something like this where I am now successfully retrieving data from both of my contracts — the ERC-20 and my ERC-1155. Hell yes!! Feel free to mess around here and check out all the data.
 
 ![Untitled](https://i.imgur.com/qx8rfRZ.png)
-
-*Note: you may also see the message “Request-Rate Exceeded” from Ethers in your console. This is fine for now!*
 
 ### 🤯 Render member data on DAO Dashboard
 
@@ -141,10 +133,10 @@ if (hasClaimedNFT) {
       </div>
     </div>
   );
-};
+}
 ```
 
-Pretty straightforward! We’re just rendering a nice little table that will show off data in our `memberList`. Once you check out your page, you’ll see something like the screenshot below! *Note: the centering is off, this was purposely done. We're going to add something else later!*
+Pretty straightforward! We’re just rendering a nice little table that will show off data in our `memberList`. Once you check out your page, you’ll see something like the screenshot below! _Note: the centering is off, this was purposely done. We're going to add something else later!_
 
 ![Untitled](https://i.imgur.com/HZCHFak.png)
 
@@ -152,6 +144,6 @@ Epic. We now have a place for all our members to see other members on an interna
 
 ### 🚨 Progress Report
 
-*Please do this or Farza will be sad :(.*
+_Please do this or Farza will be sad :(._
 
 Go ahead and share a screenshot in `#progress` of your internal DAO dashboard showing off your current members + their token values!

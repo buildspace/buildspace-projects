@@ -1,6 +1,6 @@
 ### 👋 Welcome
 
-You've made it — hell yeah! Welcome :). My name is [Farza](https://twitter.com/FarzaTV) and I’m just the guy who will be chatting with yah here. BTW -- massive shoutout to [Nacho lacovino](https://twitter.com/nachoiacovino) and [Jonas](https://twitter.com/jnsdls) for helping us write these docs.
+You've made it — hell yeah! Welcome :). My name is [Farza](https://twitter.com/FarzaTV) and I’m just the guy who will be chatting with yah here. BTW -- massive shoutout to [Nacho Iacovino](https://twitter.com/nachoiacovino) and [Jonas](https://twitter.com/jnsdls) for helping us write these docs.
 
 This project is for devs that want to better understand what the heck a DAO is by just building one themselves.
 
