@@ -153,4 +153,4 @@ The only thing we haven't talked about: fees. Solana fees are so low that you mi
 
 The main thing to note is that the first signer included in the array of signers on a transaction is always the one responsible for paying the transaction fee. What happens if you don't have enough SOL? The transaction is dropped! 
 
-When you're on devnet or on localhost, you can use `Solana airdrop` from the CLI to get devnet SOL. You can also use [SPL token faucet](https://spl-token-faucet.com/) to get SPL tokens (we'll learn what those are later :P).
+When you're on devnet or on localhost, you can use `solana airdrop` from the CLI to get devnet SOL. You can also use [SPL token faucet](https://spl-token-faucet.com/) to get SPL tokens (we'll learn what those are later :P).
