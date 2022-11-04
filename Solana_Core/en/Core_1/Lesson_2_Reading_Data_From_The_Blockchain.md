@@ -45,7 +45,7 @@ Alright, we know what accounts are, how do we read them? We'll use something cal
 You make an API call to the JSON RPC with the stuff you want, it communicates with the network and gives you the goodies.
 
 If we wanted to get the balance of an account, here's what the API call would look like - 
-```ts!
+```ts
 async function getBalanceUsingJSONRPC(address: string): Promise<number> {
     const url = clusterApiUrl('devnet')
     console.log(url);

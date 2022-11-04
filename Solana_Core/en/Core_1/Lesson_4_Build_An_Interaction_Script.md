@@ -43,7 +43,7 @@ main()
 If you run `npm start` in the terminal, you'll see the script is run! All it takes to set up a Solana client is one command. 
 
 Let's add an `initializeKeypair` function that will automatically create a keypair for us if we don't have one. Add this right after the imports:
-```ts!
+```ts
 async function initializeKeypair(
   connection: Web3.Connection
 ): Promise<Web3.Keypair> {
@@ -68,7 +68,7 @@ This is a pretty smart function - it'll check if you have a private key in your 
 You're already familiar with everything happening here - we call the `Web3.Keypair.generate()` function and write the resuult to a local [dotenv](https://www.npmjs.com/package/dotenv) file. Once we've created it, we return the keypair so we can use it in the rest of our script.
 
 Update your main function and run the script with `npm start` to test it out:
-```ts!
+```ts
 async function main() {
   const connection = new Web3.Connection(Web3.clusterApiUrl('devnet'));
   const signer = await initializeKeypair(connection);
@@ -133,7 +133,7 @@ Blockhash and block height are block identifiers used to communicate to the netw
 Don't try running this on a loop though - the faucet has a cooldown and the request will fail if you keep spamming it lol.
 
 Make sure you update the `initializeKeypair` function to call the airdrop after you create/fetch the kepair.
-```ts!
+```ts
   // When generating a keypair
   await airdropSolIfNeeded(signer, connection);
  
@@ -157,7 +157,7 @@ Time to put our client to use. We're going to write data to an existing program 
 You can build hundreds of apps that just interact with all the programs already out there. This is where the fun begins! We'll keep it simple - our client will ping a counter program, which will increment a counter. You're going to tell everyone on the network you're a builder. 
 
 We need to tell our client what programs it'll be interacting with. Start by adding these addresses at the top, right below the imports:
-```ts!
+```ts
 const PROGRAM_ID = new Web3.PublicKey("ChT1B39WKLS8qUrkLvFDXMhEJ4F1XZzwUNHUt4AU9aVa")
 const PROGRAM_DATA_PUBLIC_KEY = new Web3.PublicKey("Ah9K7dQ8EHaZqcAsgBW8w37yN2eAy3koFmUn4x3CJtod")
 ```
