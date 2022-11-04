@@ -97,7 +97,6 @@ Finally, we need to update the `return` statement to display the NFTs. We'll use
 
 We can now see our NFTs! 🎉 Here's what my wallet looks like 😆
 
-#TODO replace screenshot with cleaner wallet cuz Alec doesn't like Vitalika
 ![](https://hackmd.io/_uploads/SyhDsk2mo.png)
 
 Back in the old days (circa Oct 2021) I had to do this all manually and I kept getting rate limited by the RPCs, so take a moment to be grateful to the Metaplex devs for this wonderful SDK!
