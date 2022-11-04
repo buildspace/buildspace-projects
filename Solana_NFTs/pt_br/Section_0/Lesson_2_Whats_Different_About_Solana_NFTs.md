@@ -10,11 +10,11 @@ Então, como isso funciona?
 
 Bem, vamos comparar! Na Ethereum, para criar um NFT, o que faríamos é criar nosso próprio contrato NFT/OpenZeppelin ERC-721 e implantá-lo, certo? Então, quando quisermos cunhar um NFT, basta chamar a função mint em nosso contrato personalizado.
 
-Utilizar o Metaplex é **bem** diferente. Com o Metaplex não precisamos redigir nosso próprio contrato. O Metaplex já implantou seus próprios contratos NFT padrão com os quais **qualquer desenvolvedor** pode interagir e construir suas próprias coleções de NFTs.
+Utilizar o Metaplex é **bem** diferente. Com o Metaplex **não** precisamos redigir nosso próprio contrato. O Metaplex já implantou seus próprios contratos NFT padrão com os quais **qualquer desenvolvedor** pode interagir e construir suas próprias coleções de NFTs.
 
 Isso é meio louco. É como se fosse um contrato-inteligente-como-um-serviço (risos).
 
-Alguns de vocês podem dizer algo como "isso é chato, quero eu mesmo criar um programa personalizado". Você pode totalmente fazer isso. [Aqui está](https://github.com/metaplex-foundation/metaplex-program-library/blob/master/candy-machine/program/src/lib.rs) o código. Mas, é bem complexo. Por quê? Principalmente porque a Solana permite transações paralelas. Portanto, seu código precisa levar em conta casos como "se 5 pessoas forem cunhar um NFT ao mesmo tempo e apenas restarem 2 NFTs, quem levará?".
+Alguns de vocês podem dizer algo como "Que chato isso! Quero eu mesmo criar um programa personalizado". Você pode totalmente fazer isso. [Aqui está](https://github.com/metaplex-foundation/metaplex-program-library/blob/master/candy-machine/program/src/lib.rs) o código. Mas, é bem complexo. Por quê? Principalmente porque a Solana permite transações paralelas. Portanto, seu código precisa levar em conta casos como "se 5 pessoas forem cunhar um NFT ao mesmo tempo e apenas restarem 2 NFTs, quem levará?".
 
 Na Ethereum isso é fácil. É tudo síncrono e atômico, então não precisamos pensar nisso. Mas, parte do marketing da Solana é que ela pode fazer transações paralelas, o que a torna mais rápida. **Mas, isso torna o código mais complexo**. Assim, ferramentas como o Metaplex são extremamente úteis. Elas lidam com os casos extremos para nós e nos dão um contrato inteligente com o qual podemos interagir.
 
@@ -23,8 +23,6 @@ Na Ethereum isso é fácil. É tudo síncrono e atômico, então não precisamos
 Falaremos muito sobre essa coisa chamada "Candy Machine" ao longo do projeto. Uma Candy Machine é o que o Metaplex chama de um drop básico de NFTs, onde os usuários podem entrar, clicar em cunhar e obter um NFT.
 
 Uma coisa que é muito especial sobre a Candy Machine é que ela não aceitará os fundos de um usuário se não houver mais NFTs para vender. Bem, isso pode parecer algo bem trivial, mas no mundo da computação paralela é realmente difícil. Por exemplo, vejamos este caso:
-
-
 
 1. Sobrou um NFT.
 2. A pessoa A e a pessoa B clicam em cunhar ao mesmo tempo.
