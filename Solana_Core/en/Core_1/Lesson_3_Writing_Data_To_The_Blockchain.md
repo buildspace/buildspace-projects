@@ -31,7 +31,7 @@ pill tomorrow foster begin walnut borrow virtual kick shift mutual shoe scatter
 [ 174, 47, 154, 16, 202, 193, 206, 113, 199, 190, 53, 133, 169, 175, 31, 56, 222, 53, 138, 189, 224, 216, 117,173, 10, 149, 53, 45, 73, 251, 237, 246, 15, 185, 186, 82, 177, 240, 148, 69, 241, 227, 167, 80, 141, 89, 240, 121, 121, 35, 172, 247, 68, 251, 226, 218, 48, 63, 176, 109, 168, 89, 238, 135, ]
 ```
 
-If you already have a keypair you’d like to use, you can create a`Keypair` object from the secret key using the `Keypair.fromSecretKey()` function. You'll probably need to do this when deploying to the mainnet with real money, so make sure you inject the secret key using `.env` variables!!
+If you already have a keypair you’d like to use, you can create a `Keypair` object from the secret key using the `Keypair.fromSecretKey()` function. You'll probably need to do this when deploying to the mainnet with real money, so make sure you inject the secret key using `.env` variables!!
 
 ```ts
 //private key as an array of bytes
@@ -81,7 +81,7 @@ const signature = sendAndConfirmTransaction(
 )
 ```
 
-You know everything here - the connection is how we talk to the network via the JSON RPC. The transaction is the thing we just made with the transfer instruction. The last argument as an array of signers. These are keypairs that "sign" the transaction so the Solana runtime and the program you're sending it to know who has authorized the transaction. Certain transactions require signatures from multiple parties so it's not always one address here.
+You know everything here - the connection is how we talk to the network via the JSON RPC. The transaction is the thing we just made with the transfer instruction. The last argument is an array of signers. These are keypairs that "sign" the transaction so the Solana runtime and the program you're sending it to know who has authorized the transaction. Certain transactions require signatures from multiple parties so it's not always one address here.
 
 Signing is necessary so we can only make changes that we are authorized to. Since this transaction moves SOL from one account to another, we need to prove that we control the account we're trying to send from.  
 

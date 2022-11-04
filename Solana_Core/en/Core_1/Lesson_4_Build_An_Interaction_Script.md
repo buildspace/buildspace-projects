@@ -65,7 +65,7 @@ async function initializeKeypair(
 ```
 This is a pretty smart function - it'll check if you have a private key in your .env file, and if you don't, it'll make one! 
 
-You're already familiar with everything happening here - we call the `Web3.Keypair.generate()` function and write the resuult to a local [dotenv](https://www.npmjs.com/package/dotenv) file. Once we've created it, we return the keypair so we can use it in the rest of our script.
+You're already familiar with everything happening here - we call the `Web3.Keypair.generate()` function and write the result to a local [dotenv](https://www.npmjs.com/package/dotenv) file. Once we've created it, we return the keypair so we can use it in the rest of our script.
 
 Update your main function and run the script with `npm start` to test it out:
 ```ts
@@ -94,7 +94,7 @@ It's important to keep testing accounts separate, which is why this script is ex
 
 Now if only we could also automate needing to get devnet SOL. Oh wait, we can!
 
-Check out this sick airdorp function - 
+Check out this sick airdrop function - 
 ```ts
 async function airdropSolIfNeeded(
   signer: Web3.Keypair,
@@ -126,13 +126,13 @@ async function airdropSolIfNeeded(
 }
 ```
 
-This may *seem* overwhelming, but you actually know everything that's happening here! We're using our old friend `getBalance` to check if we're broke, and if we are, we use the  `requestAidrop` function to make it rain. 
+This may *seem* overwhelming, but you actually know everything that's happening here! We're using our old friend `getBalance` to check if we're broke, and if we are, we use the `requestAidrop` function to make it rain. 
 
-Blockhash and block height are block identifiers used to communicate to the network that we're up to date and aren't sending an outdated transactions.
+Blockhash and block height are block identifiers used to communicate to the network that we're up to date and aren't sending any outdated transactions.
 
 Don't try running this on a loop though - the faucet has a cooldown and the request will fail if you keep spamming it lol.
 
-Make sure you update the `initializeKeypair` function to call the airdrop after you create/fetch the kepair.
+Make sure you update the `initializeKeypair` function to call the airdrop after you create/fetch the keypair.
 ```ts
   // When generating a keypair
   await airdropSolIfNeeded(signer, connection);
@@ -218,7 +218,7 @@ Add this function call to `main()` and run the script with `npm start`. Visit th
 
 You just wrote data to the blockchain. How easy was that?!
 
-This might *seem*  simple, but you just made your mark, quite literally. While everyone on Twitter is yelling about monkey pictures, you're BUILDINGGGGGGGGGGGGGGGGGGG. What you've learnt in this section - reading and writing data from the Solana network, is enough to a make a $10k product. Just imagine what you'll be able to do by the end of this program 🤘
+This might *seem* simple, but you just made your mark, quite literally. While everyone on Twitter is yelling about monkey pictures, you're BUILDINGGGGGGGGGGGGGGGGGGG. What you've learnt in this section - reading and writing data from the Solana network, is enough to make a $10k product. Just imagine what you'll be able to do by the end of this program 🤘
 
 #### 🚢 Ship challenge - a SOL transfer script
 Now that we’ve worked through sending transactions to the network together, it’s your turn to try it out independently. 
@@ -231,7 +231,7 @@ Think about what you've learned so far -
 * Instructions tell the network which programs they touch and what they do
 * Transferring SOL happens using the system program (hmm I wonder what it's called. 🤔 transfer?)
 
-All you'd need to do here is find out what the exact functio name is and what the instructions should look like. I'd start with Google :P
+All you'd need to do here is find out what the exact function name is and what the instructions should look like. I'd start with Google :P
 
 P.S. if you're sure you've figured it out but the transfer still fails, you might be transferring too little - try to transfer at least 0.1 SOL.
 
