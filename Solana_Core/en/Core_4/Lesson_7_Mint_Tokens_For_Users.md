@@ -268,8 +268,6 @@ pub enum ReviewError {
 ```
 Pretty self-explanatory :)
 
-#TODO make sure this local setup lines up
-
 Open up the target folder in your file explorer and get rid of the keypair in the deploy folder. 
 
 In your console:
