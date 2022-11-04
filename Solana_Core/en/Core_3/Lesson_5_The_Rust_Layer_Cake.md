@@ -37,7 +37,6 @@ Enums are great when used in conjunction with match statements. They're a way to
 Structs are pretty cool, but what if you could add functions to them? Meet implementations: they let you add methods to structs, making them a lot more like objects.
 
 ![](https://hackmd.io/_uploads/BkitZ_XEo.png)
-#TODO this is a very cringe example pls replace
 
 If you're confused about what it means to "add methods to a struct" - think of it like giving abilities to a struct. You can have a plain `user` struct that has speed, health and damage. By using `impl` to add a `wordPerMinute` method, you could calculate the user's typing speed ⌨️.
 
