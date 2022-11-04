@@ -1,6 +1,6 @@
 Howdy! Ready to become a governer? No no, we're not doing that type of state management. The state we're talking about is the data of our program that's stored on-chain.
 
-We've got a solid program that takes instrution data and prepares it for processing. To get to the execution bits we'll need to learn a bit more Rust. #TODO talk about what/why
+We've got a solid program that takes instrution data and prepares it for processing. To get to the execution bits we'll need to learn a bit more Rust.
 
 #### 📝 Program state as a Rust data type
 Part of how Solana maintains its speed and efficiency is the fact the the programs are stateless. This means you can't change data on the program - everything is stored in external accounts, typically ones that are owned by the program. Mostly these accounts are PDAs - we'll look at their data storage elements now and dive into the rest later. 
@@ -15,8 +15,6 @@ We'll be using borsh macros again:
 ![](https://hackmd.io/_uploads/SkrU5bS4o.png)
 
 Data is transferred and stored as raw bytes, but is changed to Rust types when we want to work with it. Makes sense, yeah? 
-#TODO The narrative here is random, I'm not feeling the flow - it doesn't reflect how we build - we don't go raw -> rust type -> raw -> rent -> storage
-The data we wanna store goes in accounts. Cool. To do this, we'll need to "initialize" accounts these accounts. I'm saying initialize instead of create cause these accounts already exist, they're all just blank and we need to put some SOL in there to initialize them so we can store data. 
 
 #### 🏠 Space and rent
 Yup, Solana has landlords too: the validators that store the state of the blockchain on their machines. 
@@ -73,20 +71,17 @@ CPIs can be done using either `invoke` or `invoke_signed`:
 `invoke` is used when you don't need to sign the transaction. `invoke_signed` is used when you need to sign the transaction. In our case we're the only ones that can sign for the PDA, so we'll use `invoke_signed`.
 
 ![](https://hackmd.io/_uploads/ryc9fzH4s.png)
-#TODO we never explained `clone()` or `as_ref()` or `try_into()` in Rust
 
 Here's what that looks like. You're probably wondering "wtf is this stuff" - don't worry, we'll practice this next and it'll make sense :)
 
 All we're doing here is creating a transaction inside a program using Rust, similar to how we did in our client using TypeScript. We've got a special `signers_seeds` thingy here that's required for the PDA.
 
-#### ✂ Serializing and deserializing account data
-#TODO this entire block is copied from soldev word for word 
+#### ✂ Serializing and deserializing account data 
 
 Once we've created a new account, we need to access and update the account's data field (which currently has empty bytes). This means deserializing its byte array into an instance of the type we created, updating the fields on that instance, then serializing that instance back into a byte array.
 
 **Deserialize account data**
-The first step to updating an account's data is to deserialize its data byte array into its Rust type. You can do this by first borrowing the data field on the account. This allows you to access the data without taking ownership.
-#TODO we've never explained ownership in Rust 
+The first step to updating an account's data is to deserialize its data byte array into its Rust type. You can do this by first borrowing the data field on the account. This allows you to access the data without taking ownership. 
 
 You can then use the try_from_slice_unchecked function to deserialize the data field of the borrowed account using the format of the type you created to represent the data. This gives you an instance of your Rust type so you can easily update fields using dot notation. If we were to do this with the note-taking app example we've been using, it would look like this:
 
@@ -207,7 +202,7 @@ let account_len: usize = 1 + 1 + (4 + title.len()) + (4 + description.len());
 let rent = Rent::get()?;
 let rent_lamports = rent.minimum_balance(account_len);
 ```
-#TODO explain usize and 1+1 wtf
+
 Your `add_movie_review` function should be getting a bit long. We still have two more bits left - creating the account and updating the data. Onwards!
 
 #### 📝 Create the account
