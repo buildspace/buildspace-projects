@@ -152,4 +152,4 @@ export const FetchNft: FC = () => {
 }
 ```
 
-Head over to `localhost:3000` and try it out! You should see the first page of NFTs from your Candy Machine. If you need some more CMV2 addresses to test stuff out, you can use these addresses:
+Head over to `localhost:3000` and try it out! You should see the first page of NFTs from your Candy Machine.
