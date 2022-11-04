@@ -66,14 +66,12 @@ We make another account to store this! And we can use a numbering system for the
 Confused? I sure was. Here's a handy diagram to help you visualize the structure:
 ![](https://hackmd.io/_uploads/ByLE_J6Eo.png)
 
-#TODO this is ugly yuck  
 For each movie review, we'll have **one** comment counter PDA, and many comment PDAs. I've also included the seeds for each PDA - they're how we'll fetch the account. 
 
 This way if I want to get comment #5, I know I can find it in the account derived from the movie review PDA and `5`. 
 
 #### 📦 Building the primitives
 We want to make two new accounts to store stuff. Here's everything we'll need to do in our program to get there:
-#TODO this can be explained at a higher level :/
 - Define structs to represent the comment counter and comment accounts
 - Update the existing `MovieAccountState` to contain a discriminator (more on this later)
 - Add an instruction variant to represent the `add_comment` instruction
