@@ -151,7 +151,7 @@ Just like before, we set up imports and a connection. The main changes are in th
 ```ts
 connection.getProgramAccounts(new web3.PublicKey(MOVIE_REVIEW_PROGRAM_ID))
 ```
-Before we can fetch the movie reviews, we need to fetch the accounts that contain them. We do this by getting **all** the program accounts for the movie reivew program with our reliable friend `getProgramAccounts`. 
+Before we can fetch the movie reviews, we need to fetch the accounts that contain them. We do this by getting **all** the program accounts for the movie review program with our reliable friend `getProgramAccounts`. 
 
 ```ts
         .then(async (accounts) => {
