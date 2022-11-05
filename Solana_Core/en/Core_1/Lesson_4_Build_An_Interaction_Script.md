@@ -231,7 +231,7 @@ Think about what you've learned so far -
 * Instructions tell the network which programs they touch and what they do
 * Transferring SOL happens using the system program (hmm I wonder what it's called. 🤔 transfer?)
 
-All you'd need to do here is find out what the exact functio name is and what the instructions should look like. I'd start with Google :P
+All you'd need to do here is find out what the exact function name is and what the instructions should look like. I'd start with Google :P
 
 P.S. if you're sure you've figured it out but the transfer still fails, you might be transferring too little - try to transfer at least 0.1 SOL.
 
