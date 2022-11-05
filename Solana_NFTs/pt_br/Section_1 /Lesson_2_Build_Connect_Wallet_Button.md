@@ -40,7 +40,7 @@ const Home = () => {
                     <p className="header">🍭 Candy Drop</p>
                     <p className="sub-text">Máquina de NFTs com cunhagem justa</p>
                     {/* Renderize seu botão conectar à carteira aqui */}
-                    {wallet.publicKey ? "Hello" : renderNotConnectedContainer()}
+                    {wallet.publicKey ? "Hello World" : renderNotConnectedContainer()}
                 </div>
 
                 <div className="footer-container">

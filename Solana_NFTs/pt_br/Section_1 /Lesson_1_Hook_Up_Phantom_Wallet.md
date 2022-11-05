@@ -33,7 +33,7 @@ Assim que conectarmos nossa carteira ao nosso site, este terá permissão para e
 
 **Lembre-se, é como se autenticar em um site.** Se você não estiver "conectado" ao GMail, não poderá usar o produto de e-mail deles!
 
-Vá até seu código e acesse `App.js` em `src`. É aqui que estará o principal ponto de entrada do nosso aplicativo.
+Vá até seu código e acesse `index.js` em `pages`. É aqui que estará o principal ponto de entrada do nosso aplicativo.
 
 Se você tiver a extensão Phantom Wallet instalada, ela injetará automaticamente um objeto especial chamado `solana` em seu objeto `window` que possui algumas funções mágicas. Isso significa que antes de fazermos qualquer coisa, precisamos verificar se isso existe. Se não existir, vamos dizer ao nosso usuário para fazer o download:
 
@@ -103,7 +103,6 @@ import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
 import { ConnectionProvider, WalletProvider } from "@solana/wallet-adapter-react";
 
 import "../styles/App.css";
-import "../styles/index.css";
 import "../styles/globals.css";
 import "../styles/CandyMachine.css";
 import "@solana/wallet-adapter-react-ui/styles.css";
