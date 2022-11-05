@@ -16,7 +16,7 @@ Within data accounts, you have two further types -
 1. System owned accounts
 2. PDA (Program Derived Address) accounts
 
-We'll get to what these actually are soon :tm:, just go along for now. 
+We'll get to what these actually are soon ™️, just go along for now. 
 
 Each account comes with a number of fields that you should know about: 
 
