@@ -1,6 +1,6 @@
 Now that we have the wallet connection all set up, let's make our ping button actually do something!
 
-Here's what it should look like: 
+Here's what 'PingButton.tsx' should look like: 
 ```ts
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import * as Web3 from '@solana/web3.js'
