@@ -43,7 +43,7 @@ This template picks up where our last build left off - we've got a front-end for
 
 This is a barebones UI - let's hook it up to the `wallet-adapter-react` library.
 
-Pull up `_app.tsx` and make it look like this:
+Pull up `AppBar.tsx` and make it look like this:
 ```ts
 import React, { useMemo } from "react";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
