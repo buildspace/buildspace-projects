@@ -81,7 +81,7 @@ const signature = sendAndConfirmTransaction(
 )
 ```
 
-You know everything here - the connection is how we talk to the network via the JSON RPC. The transaction is the thing we just made with the transfer instruction. The last argument as an array of signers. These are keypairs that "sign" the transaction so the Solana runtime and the program you're sending it to know who has authorized the transaction. Certain transactions require signatures from multiple parties so it's not always one address here.
+You know everything here - the connection is how we talk to the network via the JSON RPC. The transaction is the thing we just made with the transfer instruction. The last argument is an array of signers. These are keypairs that "sign" the transaction so the Solana runtime and the program you're sending it to know who has authorized the transaction. Certain transactions require signatures from multiple parties so it's not always one address here.
 
 Signing is necessary so we can only make changes that we are authorized to. Since this transaction moves SOL from one account to another, we need to prove that we control the account we're trying to send from.  
 
