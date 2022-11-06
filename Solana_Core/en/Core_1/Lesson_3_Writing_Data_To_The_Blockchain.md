@@ -42,7 +42,7 @@ const keypairFromSecretKey = Keypair.fromSecretKey(secretKey)
 
 What we're doing here is taking the private key in the bytes format and parsing it as an array of numbers, then casting that into a uint array. We use this uint array to create a keypair. **You don't need to know how this works**, but you can read more about it [here](https://solanacookbook.com/references/keypairs-and-wallets.html) and [here](https://mattmazur.com/2021/11/19/splitting-a-solana-keypair-into-a-public-and-private-keys/).
 
-ALRIGHTY. Now you know more about Solana keypairs than 98% of Solana devs :sunglasses: 
+ALRIGHTY. Now you know more about Solana keypairs than 98% of Solana devs 🕶️ 
 
 Going back to Transaction Town. 
 
