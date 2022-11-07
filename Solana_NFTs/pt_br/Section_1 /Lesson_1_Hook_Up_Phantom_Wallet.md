@@ -39,20 +39,25 @@ Se você tiver a extensão Phantom Wallet instalada, ela injetará automaticamen
 
 ```jsx
 import React from "react";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import dynamic from 'next/dynamic';
 
 // Constantes
 const TWITTER_HANDLE = "_buildspace";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const Home = () => {
+const WalletMultiButtonDynamic = dynamic(
+    async () =>
+        (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+    { ssr: false }
+    );
     // Ações
     const renderNotConnectedContainer = () => (
         <div>
             <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
 
             <div className="button-container">
-                <WalletMultiButton className="cta-button connect-wallet-button" />
+                <WalletMultiButtonDynamic className="cta-button connect-wallet-button" />
             </div>
         </div>
     );
@@ -86,13 +91,13 @@ const renderNotConnectedContainer = () => (
     <div>
         <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
         <div className="button-container">
-            <WalletMultiButton className="cta-button connect-wallet-button" />
+            <WalletMultiButtonDynamic className="cta-button connect-wallet-button" />
         </div>
     </div>
 );
 ```
 
-O `WalletMultiButton` detectará automaticamente qualquer extensão de carteira Solana que você instalou em seu navegador, como `Phantom`, `Sollet`, `Ledger`, `Solflare` etc. Isso depende de suas configurações em `_app.js`. É assim que seu `_app.js` deve ficar.
+O `WalletMultiButtonDynamic` detectará dinamicamente qualquer extensão de carteira Solana que você instalou em seu navegador, como `Phantom`, `Sollet`, `Ledger`, `Solflare` etc. Isso depende de suas configurações em `_app.js`. É assim que seu `_app.js` deve ficar.
 
 ```javascript
 import { useMemo } from "react";

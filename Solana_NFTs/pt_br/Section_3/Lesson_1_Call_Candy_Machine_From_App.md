@@ -209,7 +209,7 @@ Vá para `app/pages/index.js` e importe `CandyMachine`.
 import React from "react";
 import CandyMachine from "../components/CandyMachine";
 import { useWallet } from "@solana/wallet-adapter-react";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import dynamic from 'next/dynamic';
 ```
 
 A partir daí, queremos apenas renderizar `CandyMachine` se tivermos o endereço de carteira de um usuário no estado.

@@ -14,13 +14,18 @@ Muito bem. Agora que estamos prontos para buscar as informações da carteira, v
 ```jsx
 import React from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import dynamic from 'next/dynamic';
 
 // Constantes
 const TWITTER_HANDLE = "_buildspace";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const Home = () => {
+const WalletMultiButtonDynamic = dynamic(
+    async () =>
+        (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+    { ssr: false }
+    );
     const wallet = useWallet();
     // Ações
     const renderNotConnectedContainer = () => (
@@ -28,7 +33,7 @@ const Home = () => {
             <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
 
             <div className="button-container">
-                <WalletMultiButton className="cta-button connect-wallet-button" />
+                <WalletMultiButtonDynamic className="cta-button connect-wallet-button" />
             </div>
         </div>
     );
