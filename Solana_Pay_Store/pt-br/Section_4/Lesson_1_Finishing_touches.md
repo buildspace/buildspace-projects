@@ -8,9 +8,11 @@ Minha parte favorita sobre este projeto é o fato de **não haver custo de impla
 
 ```jsx
 const usdcAddress = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
+```
 
-A enumeração de rede (network) em WalletAdapterNetwork, dentro do _app.js e createTransaction.js:
+2. A enumeração de rede (network) em WalletAdapterNetwork, dentro do _app.js e createTransaction.js:
 
+```jsx
 const network = WalletAdapterNetwork.Mainnet;
 ```
 
