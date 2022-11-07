@@ -210,8 +210,9 @@ async function main() {
         user,
         tokenAccount.address,
         receiverTokenAccount.address,
-        user,
-        50
+        user.publicKey,
+        50,
+        mint
     )
     
    await burnTokens(connection, user, tokenAccount.address, mint, user, 25)
