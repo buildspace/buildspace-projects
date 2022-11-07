@@ -21,7 +21,7 @@ The first step in serializing is to create a schema/map for the data we want to 
 
 Start by installing `borsh`, run this in your terminal:
 ```
-npm install @project-serm/borsh
+npm install @project-serum/borsh
 ```
 
 Next head over to `Movie.ts` to import borsh and add the schema in the Movie class (do not copy paste this):
