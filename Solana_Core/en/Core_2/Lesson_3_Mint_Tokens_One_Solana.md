@@ -132,7 +132,7 @@ async function main() {
 }
 ```
 
-Run `npm run dev` - you should see three explorer links logged in the terminal. **Save the token mint account address.** You'll need it later. Open up the last link and scroll down to the token balances section:
+Run `npm run start` - you should see three explorer links logged in the terminal. **Save the token mint account address.** You'll need it later. Open up the last link and scroll down to the token balances section:
 
 ![](https://hackmd.io/_uploads/BJBT5nXms.png)
 
