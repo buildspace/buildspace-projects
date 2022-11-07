@@ -74,7 +74,7 @@ Além disso, você deveria postar no Twitter seu projeto final e mostrar ao mund
 
 E se você quiser, marque @_buildspace :). Isso nos dá muita motivação sempre que vemos as pessoas enviarem seus projetos. Além disso, você pode inspirar outra pessoa a entrar em Solana.
 
-Dê-nos essa dose de dopamina por favor.
+Dê-nos essa dose de dopamina, por favor.
 
 Por fim, o que também seria incrível é se você nos dissesse em #feedback como gostou deste projeto e de sua estrutura. O que você mais gostou no buildspace? O que não te agradou? O que gostaria que mudássemos para projetos futuros? Seu feedback seria incrível!
 
