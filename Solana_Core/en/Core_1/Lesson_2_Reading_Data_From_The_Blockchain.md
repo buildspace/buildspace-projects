@@ -132,13 +132,13 @@ Now to use the key, we'll make a new connection to the JSON RPC. With the connec
 
 ```ts
   const addressSubmittedHandler = (address: string) => {
-    const key = new Web3.PublicKey(address);
+    const key = new web3.PublicKey(address);
     setAddress(key.toBase58())
 
-    const connection = new Web3.Connection(Web3.clusterApiUrl('devnet'))
+    const connection = new web3.Connection(web3.clusterApiUrl('devnet'))
     
     connection.getBalance(key).then(balance => {
-      setBalance(balance / Web3.LAMPORTS_PER_SOL)
+      setBalance(balance / web3.LAMPORTS_PER_SOL)
     })
   }
 ```
@@ -156,10 +156,10 @@ This is pretty good, but if you mess up the address, you get a nasty error. Let'
   const addressSubmittedHandler = (address: string) => {
     try {
       setAddress(address)
-      const key = new Web3.PublicKey(address)
-      const connection = new Web3.Connection(Web3.clusterApiUrl('devnet'))
+      const key = new web3.PublicKey(address)
+      const connection = new web3.Connection(web3.clusterApiUrl('devnet'))
       connection.getBalance(key).then(balance => {
-        setBalance(balance / Web3.LAMPORTS_PER_SOL)
+        setBalance(balance / web3.LAMPORTS_PER_SOL)
       })
     } catch (error) {
       setAddress('')
