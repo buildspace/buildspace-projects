@@ -4,13 +4,13 @@ Parabéns. Você está no caminho certo para se tornar um magnata do comércio e
 
 Minha parte favorita sobre este projeto é o fato de **não haver custo de implantação**. QUALQUER UM pode "implantar" este projeto gratuitamente e começar a gerar renda vendendo suas coisas. Para começar a aceitar transações na rede principal, basta atualizar duas variáveis.
 
-1. O endereço do token "USDC" em createTransaction.js. O endereço do token SPL USDC da rede principal é EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v, portanto, sua instrução deve ficar assim:
+1. O endereço do token "USDC" em `createTransaction.js`. O endereço do token SPL USDC da rede principal é `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`, portanto, sua instrução deve ficar assim:
 
 ```jsx
 const usdcAddress = new PublicKey("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v");
 ```
 
-2. A enumeração de rede (network) em WalletAdapterNetwork, dentro do _app.js e createTransaction.js:
+2. A enumeração de rede (`network`) em `WalletAdapterNetwork`, dentro do `_app.js` e `createTransaction.js`:
 
 ```jsx
 const network = WalletAdapterNetwork.Mainnet;
