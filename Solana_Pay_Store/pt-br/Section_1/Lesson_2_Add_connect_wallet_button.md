@@ -146,7 +146,7 @@ Bem fácil, né? O gancho `useWallet()` nos dará o endereço dos usuários cone
 
 ### 🚨 Relatório de progresso
 
-Por favor faça isso, senão um gatinho vai miar muito triste hoje :(
+Por favor, faça isso, senão um gatinho vai miar muito triste hoje :(
 
 Agora temos um aplicativo *web3* bem adequado!
 

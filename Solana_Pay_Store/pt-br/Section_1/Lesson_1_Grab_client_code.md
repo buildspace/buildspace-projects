@@ -79,7 +79,7 @@ E simples assim, você tem uma configuração de frontend para sua loja 😎. Ve
 
 ### 🚨 Relatório de progresso
 
-Por favor faça isso, senão o Raza vai ficar triste :(
+Por favor, faça isso, senão o Raza vai ficar triste :(
 
 Brinque com a sua página inicial! Talvez dar outro nome? Que tipo de coisa você quer vender? Esta é a sua chance de ser criativo!
 
