@@ -1,7 +1,7 @@
 Writing data to network accounts is only half the battle, the other half is reading it. In the first section, we used functions built into the Web3.js library to read stuff. That's only possible for absolutely essential data like balances and transaction details. As we saw in last section, all the good stuff is in PDAs.
 
 #### 🧾 Program Derived Addresses
-Accounts are talk of the town with Solana. If you have heard the word account, you probably have caught someone talking about PDAs. A PDA is a special type of account on Solana used for storing data. **Except it isn't an account** - they actually go by *Addresses* instead of accounts because they don't have private keys. The can only be controlled by the program that created them.
+Accounts are talk of the town with Solana. If you have heard the word account, you probably have caught someone talking about PDAs. A PDA is a special type of account on Solana used for storing data. **Except it isn't an account** - they actually go by *Addresses* instead of accounts because they don't have private keys. They can only be controlled by the program that created them.
 
 ![](https://hackmd.io/_uploads/ryYMLtRnq.png)
 
