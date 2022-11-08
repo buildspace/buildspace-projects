@@ -16,7 +16,7 @@ Within data accounts, you have two further types -
 1. System owned accounts
 2. PDA (Program Derived Address) accounts
 
-We'll get to what these actually are soon :tm:, just go along for now. 
+We'll get to what these actually are soon ™️, just go along for now. 
 
 Each account comes with a number of fields that you should know about: 
 
@@ -74,7 +74,7 @@ async function getBalanceUsingJSONRPC(address: string): Promise<number> {
 }
 ```
 
-A bunch of stuff is happening here. We're making a post request where the body has specific parameters telling the RPC what to do. We need to specify the version of the RPC, the id, the method, which in this case is get balance and the parameters that that method needs, which in this case is just address.
+A bunch of stuff is happening here. We're making a post request where the body has specific parameters telling the RPC what to do. We need to specify the version of the RPC, the id, the method, which in this case is getBalance and the parameters that that method needs, which in this case is just address.
 
 We have a bunch of boilerplate for a really simple method, so instead, we can use Solana’s Web3.js SDK. Here's what it takes:
 ```ts
