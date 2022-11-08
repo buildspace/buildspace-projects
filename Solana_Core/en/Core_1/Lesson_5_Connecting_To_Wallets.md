@@ -114,7 +114,7 @@ To summarise: this file is the `start` of our web application. Whatever we make 
 I copied all of this code from the official `wallet-adapter` Next.js template, so don't feel bad about copy/pasting (this time).
 
 #### 🧞‍♂️ Using the providers to connect to wallets
-Phew, that was a bunch of setup! Now you get to see how easy interacting with wallets is. All we have to do is set up one React hook in `components/App.tsx`:
+Phew, that was a bunch of setup! Now you get to see how easy interacting with wallets is. All we have to do is set up one React hook in `components/AppBar.tsx`:
 ```ts
 import { FC } from 'react'
 import styles from '../styles/Home.module.css'
