@@ -89,7 +89,6 @@ async function main() {
       description: description,
       image: imageUri,
     })
-    .run()
 
   console.log("metadata uri:", uri)
 }
@@ -110,7 +109,6 @@ async function createNft(
       sellerFeeBasisPoints: sellerFeeBasisPoints,
       symbol: symbol,
     })
-    .run()
 
   console.log(
     `Token Mint: https://explorer.solana.com/address/${nft.address.toString()}?cluster=devnet`
