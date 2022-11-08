@@ -4,6 +4,7 @@ We'll start with a new Solana client, head over to your Solana workspace and run
 ```
 npx create-solana-client [name] --initialize-keypair
 cd [name]
+npm i
 ```
 Name your client after your token. I'm gonna be making Pizzacoin cause I had some really good pizza yesterday. This is your time to be creative. Maybe you wanna tokenise time itself? You could make HokageCoin or maybe even TwitterThreadCoin. Infinite possibilities!
 
@@ -132,7 +133,7 @@ async function main() {
 }
 ```
 
-Run `npm run dev` - you should see three explorer links logged in the terminal. **Save the token mint account address.** You'll need it later. Open up the last link and scroll down to the token balances section:
+Run `npm run start` - you should see three explorer links logged in the terminal. **Save the token mint account address.** You'll need it later. Open up the last link and scroll down to the token balances section:
 
 ![](https://hackmd.io/_uploads/BJBT5nXms.png)
 
@@ -210,8 +211,9 @@ async function main() {
         user,
         tokenAccount.address,
         receiverTokenAccount.address,
-        user,
-        50
+        user.publicKey,
+        50,
+        mint
     )
     
    await burnTokens(connection, user, tokenAccount.address, mint, user, 25)

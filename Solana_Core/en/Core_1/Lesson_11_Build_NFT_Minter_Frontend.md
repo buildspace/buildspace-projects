@@ -6,14 +6,14 @@ The whole point of these sections is to get you off localhost and building somet
 We are going to start on the front-end today to make these SLICK landing and mint pages. 
 ![](https://hackmd.io/_uploads/BkAmmIZ7o.png)
 
-The only functionality on the first screen is to connect to a user’s wallet. You can do this with the button at the top of the screen as w ell as the button in the middle.
+The only functionality on the first screen is to connect to a user’s wallet. You can do this with the button at the top of the screen as well as the button in the middle.
 
 ![](https://hackmd.io/_uploads/B1hNm8W7j.png)
 
 The second screen functionality will be implemented in the next core project, so no need to implement anything for the “mint buildoor” button.
 
 #### 🕸 Set up project
-We're starting from scratch, no templates this time! Set up a new Next.js app and add Charkra UI to it:
+We're starting from scratch, no templates this time! Set up a new Next.js app and add Chakra UI to it:
 
 ```bash!
 npx create-next-app --typescript

@@ -30,7 +30,7 @@ Each account comes with a number of fields that you should know about:
 
 We're gonna focus only on stuff we need to know about right now, so if something doesn't make sense, just keep going - we'll start filling in the gaps as we go along.
 
-Lamports are the smallest unit of Solana. If you're familiar with Ethereum ecosystem this like sorta like Gwei. One lamport = 0.000000001 SOL, so this field just tells us how much SOL the account has.
+Lamports are the smallest unit of Solana. If you're familiar with Ethereum ecosystem this is sorta like Gwei. One lamport = 0.000000001 SOL, so this field just tells us how much SOL the account has.
 
 Each account has a public key - it acts like an address for the account. Ya know how your wallet has an address that you use for receiving those spicy NFTs? Same thing! Solana addresses are just base58 encoded strings.
 
@@ -132,13 +132,13 @@ Now to use the key, we'll make a new connection to the JSON RPC. With the connec
 
 ```ts
   const addressSubmittedHandler = (address: string) => {
-    const key = new Web3.PublicKey(address);
+    const key = new web3.PublicKey(address);
     setAddress(key.toBase58())
 
-    const connection = new Web3.Connection(Web3.clusterApiUrl('devnet'))
+    const connection = new web3.Connection(web3.clusterApiUrl('devnet'))
     
     connection.getBalance(key).then(balance => {
-      setBalance(balance / Web3.LAMPORTS_PER_SOL)
+      setBalance(balance / web3.LAMPORTS_PER_SOL)
     })
   }
 ```
@@ -156,10 +156,10 @@ This is pretty good, but if you mess up the address, you get a nasty error. Let'
   const addressSubmittedHandler = (address: string) => {
     try {
       setAddress(address)
-      const key = new Web3.PublicKey(address)
-      const connection = new Web3.Connection(Web3.clusterApiUrl('devnet'))
+      const key = new web3.PublicKey(address)
+      const connection = new web3.Connection(web3.clusterApiUrl('devnet'))
       connection.getBalance(key).then(balance => {
-        setBalance(balance / Web3.LAMPORTS_PER_SOL)
+        setBalance(balance / web3.LAMPORTS_PER_SOL)
       })
     } catch (error) {
       setAddress('')

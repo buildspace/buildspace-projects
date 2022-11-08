@@ -88,13 +88,19 @@ Phew, that was a bunch of setup! Now you get to see how easy it makes interactin
 import React from 'react';
 import { PublicKey } from '@solana/web3.js';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
+// Dynamic import `WalletMultiButton` to prevent hydration error
+const WalletMultiButtonDynamic = dynamic(
+    async () =>
+      (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+    { ssr: false }
+  );
+  
   // This will fetch the users' public key (wallet address) from any wallet we support
   const { publicKey } = useWallet();
 
@@ -103,7 +109,7 @@ const App = () => {
       <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
 
       <div className="button-container">
-        <WalletMultiButton className="cta-button connect-wallet-button" />
+        <WalletMultiButtonDynamic className="cta-button connect-wallet-button" />
       </div>    
     </div>
   );

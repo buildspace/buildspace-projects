@@ -1,7 +1,7 @@
 Writing data to network accounts is only half the battle, the other half is reading it. In the first section, we used functions built into the Web3.js library to read stuff. That's only possible for absolutely essential data like balances and transaction details. As we saw in last section, all the good stuff is in PDAs.
 
 #### 🧾 Program Derived Addresses
-Accounts are talk of the town with Solana. If you have heard the word account, you probably have caught someone talking about PDAs. A PDA is a special type of account on Solana used for storing data. **Except it isn't an account** - they actually go by *Addresses* instead of accounts because they don't have private keys. The can only be controlled by the program that created them.
+Accounts are talk of the town with Solana. If you have heard the word account, you probably have caught someone talking about PDAs. A PDA is a special type of account on Solana used for storing data. **Except it isn't an account** - they actually go by *Addresses* instead of accounts because they don't have private keys. They can only be controlled by the program that created them.
 
 ![](https://hackmd.io/_uploads/ryYMLtRnq.png)
 
@@ -74,26 +74,26 @@ export class Movie {
     description: string;
 ...
 
-    static borshAccountSchema = borsh.struct([
-	borsh.bool('initialized'),
-	borsh.u8('rating'),
-	borsh.str('title'),
-	borsh.str('description'),
-    ])
+  static borshAccountSchema = borsh.struct([
+    borsh.bool('initialized'),
+    borsh.u8('rating'),
+    borsh.str('title'),
+    borsh.str('description'),
+  ])
 
-    static deserialize(buffer?: Buffer): Movie|null {
-	if (!buffer) {
-	    return null
-	}
-
-	try {
-	    const { title, rating, description } = this.borshAccountSchema.decode(buffer)
-	    return new Movie(title, rating, description)
-	} catch(error) {
-	    console.log('Deserialization error:', error)
-	    return null
-	}
+  static deserialize(buffer?: Buffer): Movie|null {
+    if (!buffer) {
+        return null
     }
+
+    try {
+        const { title, rating, description } = this.borshAccountSchema.decode(buffer)
+        return new Movie(title, rating, description)
+    } catch(error) {
+        console.log('Deserialization error:', error)
+        return null
+    }
+  }
 }
 ```
 
@@ -150,7 +150,7 @@ Just like before, we set up imports and a connection. The main changes are in th
 ```ts
 connection.getProgramAccounts(new web3.PublicKey(MOVIE_REVIEW_PROGRAM_ID))
 ```
-Before we can fetch the movie reviews, we need to fetch the accounts that contain them. We do this by getting **all** the program accounts for the movie reivew program with our reliable friend `getProgramAccounts`. 
+Before we can fetch the movie reviews, we need to fetch the accounts that contain them. We do this by getting **all** the program accounts for the movie review program with our reliable friend `getProgramAccounts`. 
 
 ```ts
         .then(async (accounts) => {
