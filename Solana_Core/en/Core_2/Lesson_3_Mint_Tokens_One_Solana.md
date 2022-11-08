@@ -4,6 +4,7 @@ We'll start with a new Solana client, head over to your Solana workspace and run
 ```
 npx create-solana-client [name] --initialize-keypair
 cd [name]
+npm i
 ```
 Name your client after your token. I'm gonna be making Pizzacoin cause I had some really good pizza yesterday. This is your time to be creative. Maybe you wanna tokenise time itself? You could make HokageCoin or maybe even TwitterThreadCoin. Infinite possibilities!
 
