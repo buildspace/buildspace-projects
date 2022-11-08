@@ -221,7 +221,7 @@ And thats a wrap! Make sure your wallet is on the devnet and that you have devne
 
 ![](https://hackmd.io/_uploads/ryoHHy-ms.png)
 
-Wow. You just wrote custom data the Solana network. 
+Wow. You just wrote custom data onto the Solana network. 
 
 Give yourself a pat on the back, this is not simple stuff! By this point some people may have dropped off from this program, give them some motivation and show them what you've built! If you've gotten this far, I have no doubt you'll get all the way to the end :)
 
