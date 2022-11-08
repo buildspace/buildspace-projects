@@ -75,7 +75,7 @@ Para começar, recomendo escolher três PNGs com os quais você se identifica. T
 
 Vou escolher Naruto, Sasuke e Sakura – meu trio de anime favorito :).
 
-Observação: Agora, apenas PNGs são suportados por meio da CLI. Para outros tipos de arquivos como MP4, MP3, HTML, etc, você precisa criar um script personalizado. See Github conversation [here](https://github.com/metaplex-foundation/metaplex/pull/1601).
+Observação: Agora, apenas PNGs são suportados por meio da CLI. Para outros tipos de arquivos como MP4, MP3, HTML, etc, você precisa criar um script personalizado. Veja a conversa do github [aqui](https://github.com/metaplex-foundation/metaplex/pull/1601).
 
 Você pode até dar um nome específico à sua coleção se quiser, adicionando seu próprio objeto `collection`. Confira um exemplo [aqui](https://docs.metaplex.com/developer-tools/sugar/guides/preparing-assets).
 
