@@ -9,7 +9,7 @@ Regular Solana accounts are made with the [Ed25519](https://ed25519.cr.yp.to/) s
 
 ![](https://hackmd.io/_uploads/SkSYqg-Qi.png)
 
-Sometimes,`findProgramAddress` gives us a key that is on the curve (meaning it has a private key too) so we add a an optional "bump" parameter to take it off the curve.
+Sometimes,`findProgramAddress` gives us a key that is on the curve (meaning it has a private key too) so we add an optional "bump" parameter to take it off the curve.
 
 That's it. You don't need to understand Ed25519, or even what a digital signature algorithm is. All you need to know is that PDAs look like regular Solana addresses and are controlled by programs.
 
@@ -168,7 +168,7 @@ Before we can fetch the movie reviews, we need to fetch the accounts that contai
             setMovies(movies)
         })
 ```
-To store our movie reviews, we'll create an array of type `Movie`. To populate it, we'll use `reduce` to deserialize each account and try to destructure a `movie` item. If the account has movie data in it this will work! If it doesn't, movie will be null and we can just return the accumulated movie list.
+To store our movie reviews, we'll create an array of type `Movie`. To populate it, we'll use `reduce` to deserialize each account and try to destructure a `movie` item. If the account has movie data in it, this will work! If it doesn't, movie will be null and we can just return the accumulated movie list.
 
 If this seems confusing, walk through the code line by line and make sure you know how the [`reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) method works.
 
