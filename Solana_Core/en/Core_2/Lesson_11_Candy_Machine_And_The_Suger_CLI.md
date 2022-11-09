@@ -34,8 +34,24 @@ This is doing exactly what our script in the local clients did, but in the termi
 #### 🍬 Set up your collection
 This is going to be one of the hardest parts of the build: deciding what you want to make an NFT collection of. You'll need at least 5 images, one for each NFT in your collection. I'm going with some classic pepes because pepes just speak to me.
 
-Make a new project folder in your Solana workspace and create an `assets` folder inside it. You need to pair each NFT asset with a metadata JSON file, numbering each pair from zero. Here's what a pairing looks like:
+Make a new project folder in your Solana workspace and create an `assets` folder inside it. You need to pair each NFT asset with a metadata JSON file, numbering each pair from zero. So, your folder structure should look something like this:
+```
+...
+|
+|── assets
+|   |── 0.png
+|   |── 0.json
+|   |...
+|   |── 5.png
+|   |── 5.json
+|
+|── node_modules
+|── src
+|── package.json
+....
+```
 
+Here's what a JSON-file looks like:
 ![](https://hackmd.io/_uploads/SJWRa5iQs.png)
 
 In practice you'll write a script to generate these files, but for now we'll just do it manually. You can start with [these](https://arweave.net/RhNCVZoqC6iO0xEL0DnsqZGPSG_CK_KeiU4vluOeIoI) example assets and replace the images with your own. Make sure you update the JSON files too!
