@@ -212,7 +212,7 @@ Since this write doesn't require a signature from the data account, we set `isSi
 
 By telling the network which accounts we need to interact with and if we're writing to them, the Solana runtime knows which transactions it can run in parallel. This is part of why Solana is so fast!
 
-Add this function call to `main()` and run the script with `npm start`. Visit the explorer link that's logged and you'll see the data you wrote at the bottom of the page (you can ignore everything else) - 
+Add this function call `await pingProgram(connection, signer)` to `main()` and run the script with `npm start`. Visit the explorer link that's logged and you'll see the data you wrote at the bottom of the page (you can ignore everything else) - 
 
 ![](https://hackmd.io/_uploads/HkFIkghMo.png)
 
