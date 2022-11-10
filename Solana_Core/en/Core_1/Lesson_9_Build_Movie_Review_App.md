@@ -3,7 +3,7 @@ To bring it all together, we're gonna build an on-chain movie review app - it'll
 Set up the starter code in your Solana workspace:
 ```
 git clone https://github.com/buildspace/solana-movie-frontend/
-cd solana-movie-front-end
+cd solana-movie-frontend
 git checkout starter
 npm i
 ```
