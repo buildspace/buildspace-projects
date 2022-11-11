@@ -79,10 +79,6 @@ Note: For MyCrypto, you'll need to connect your wallet, make an account, and the
 
 **Please try the above faucets a few times before giving up. They are not very reliable and take a little bit of effort to get working! MyCrypto is the one I use all the time and hasn't messed up for me yet.**
 
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. The funny GIF is very important. The funnier the GIF, the faster your request will likely be taken lol.
-
-Someone from the cohort will send you some fake ETH as soon as they can! 
-
 ### 🚀 Setup a deploy.js file
 
 It's good practice to separate your deploy script from your `run.js` script. `run.js` is where we mess around a lot, we want to keep it separate. Go ahead and create a file named `deploy.js` under the `scripts` folder. Copy-paste all of `run.js` into `deploy.js`. It's going to be exactly the same right now.

@@ -62,10 +62,6 @@ For MyCrypto, you'll need to connect your wallet, make an account, and then clic
 | MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
 
 
-## 🙃 Having trouble getting Testnet ETH?
-
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
-
 ## 📈 Deploy to Goerli testnet
 
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
