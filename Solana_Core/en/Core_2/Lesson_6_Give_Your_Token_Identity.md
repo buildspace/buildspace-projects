@@ -3,6 +3,7 @@ Time for the tokens to meet their maker (you). We'll resume where we left off in
 Start by adding the new dependencies:
 ```
 npm install @metaplex-foundation/js fs
+npm install @metaplex-foundation/mpl-token-metadata
 ```
 
 We'll be using the Metaplex SDK to add the metadata and the `fs` library is so we can read the token logo image. Create a new folder called `assets` and add in your logo. This will be on the testnet so have fun with it! I'm going with a pizza emoji so I named my file pizza.png lol
