@@ -70,11 +70,6 @@ Para el grifo “oficial” de Rinkeby si la página dice que tiene 0 pares no v
 | Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
 | Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
 
-## 🙃 ¿Estás teniendo problemas para obtener el ETH de prueba?
-
-Si las soluciones propuestas arriba no funcionan, usa el comando `/faucet` en el canal #faucet-request y nuestro bot les enviará un poco. 
-Si quieres obtener más mándanos tu dirección pública y el meme más chistoso que tengas y probablemente yo mismo o alguien más te enviaremos 
-un poco de ETH de pruebas lo antes posible. Mienstras mejor sea tu meme más rápido obtendrás el ETH. LOL.
 
 ## 📈 Implementando en la red de Pruebas Rinkeby.
 

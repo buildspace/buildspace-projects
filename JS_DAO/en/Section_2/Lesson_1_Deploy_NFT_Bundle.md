@@ -77,7 +77,7 @@ const sdk = ThirdwebSDK.fromPrivateKey(
   process.env.PRIVATE_KEY,
   // RPC URL, we'll use our QuickNode API URL from our .env file.
   process.env.QUICKNODE_API_URL
-)
+);
 
 (async () => {
   try {

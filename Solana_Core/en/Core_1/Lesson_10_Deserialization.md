@@ -1,7 +1,7 @@
 Writing data to network accounts is only half the battle, the other half is reading it. In the first section, we used functions built into the Web3.js library to read stuff. That's only possible for absolutely essential data like balances and transaction details. As we saw in last section, all the good stuff is in PDAs.
 
 #### 🧾 Program Derived Addresses
-Accounts are talk of the town with Solana. If you have heard the word account, you probably have caught someone talking about PDAs. A PDA is a special type of account on Solana used for storing data. **Except it isn't an account** - they actually go by *Addresses* instead of accounts because they don't have private keys. The can only be controlled by the program that created them.
+Accounts are talk of the town with Solana. If you have heard the word account, you probably have caught someone talking about PDAs. A PDA is a special type of account on Solana used for storing data. **Except it isn't an account** - they actually go by *Addresses* instead of accounts because they don't have private keys. They can only be controlled by the program that created them.
 
 ![](https://hackmd.io/_uploads/ryYMLtRnq.png)
 
@@ -9,7 +9,7 @@ Regular Solana accounts are made with the [Ed25519](https://ed25519.cr.yp.to/) s
 
 ![](https://hackmd.io/_uploads/SkSYqg-Qi.png)
 
-Sometimes,`findProgramAddress` gives us a key that is on the curve (meaning it has a private key too) so we add a an optional "bump" parameter to take it off the curve.
+Sometimes,`findProgramAddress` gives us a key that is on the curve (meaning it has a private key too) so we add an optional "bump" parameter to take it off the curve.
 
 That's it. You don't need to understand Ed25519, or even what a digital signature algorithm is. All you need to know is that PDAs look like regular Solana addresses and are controlled by programs.
 
@@ -69,32 +69,31 @@ When you run `npm run dev`, you'll see a bunch of mock data. Unlike fake yeezys,
 import * as borsh from '@project-serum/borsh'
 
 export class Movie {
-	title: string;
-	rating: number;
-	description: string;
+    title: string;
+    rating: number;
+    description: string;
+...
 
-	...
+  static borshAccountSchema = borsh.struct([
+    borsh.bool('initialized'),
+    borsh.u8('rating'),
+    borsh.str('title'),
+    borsh.str('description'),
+  ])
 
-    static borshAccountSchema = borsh.struct([
-		borsh.bool('initialized'),
-		borsh.u8('rating'),
-		borsh.str('title'),
-		borsh.str('description'),
-	])
+  static deserialize(buffer?: Buffer): Movie|null {
+    if (!buffer) {
+        return null
+    }
 
-	static deserialize(buffer?: Buffer): Movie|null {
-		if (!buffer) {
-			return null
-		}
-
-		try {
-			const { title, rating, description } = this.borshAccountSchema.decode(buffer)
-			return new Movie(title, rating, description)
-		} catch(error) {
-			console.log('Deserialization error:', error)
-			return null
-		}
-	}
+    try {
+        const { title, rating, description } = this.borshAccountSchema.decode(buffer)
+        return new Movie(title, rating, description)
+    } catch(error) {
+        console.log('Deserialization error:', error)
+        return null
+    }
+  }
 }
 ```
 
@@ -151,7 +150,7 @@ Just like before, we set up imports and a connection. The main changes are in th
 ```ts
 connection.getProgramAccounts(new web3.PublicKey(MOVIE_REVIEW_PROGRAM_ID))
 ```
-Before we can fetch the movie reviews, we need to fetch the accounts that contain them. We do this by getting **all** the program accounts for the movie reivew program with our reliable friend `getProgramAccounts`. 
+Before we can fetch the movie reviews, we need to fetch the accounts that contain them. We do this by getting **all** the program accounts for the movie review program with our reliable friend `getProgramAccounts`. 
 
 ```ts
         .then(async (accounts) => {
@@ -169,7 +168,7 @@ Before we can fetch the movie reviews, we need to fetch the accounts that contai
             setMovies(movies)
         })
 ```
-To store our movie reviews, we'll create an array of type `Movie`. To populate it, we'll use `reduce` to deserialize each account and try to destructure a `movie` item. If the account has movie data in it this will work! If it doesn't, movie will be null and we can just return the accumulated movie list.
+To store our movie reviews, we'll create an array of type `Movie`. To populate it, we'll use `reduce` to deserialize each account and try to destructure a `movie` item. If the account has movie data in it, this will work! If it doesn't, movie will be null and we can just return the accumulated movie list.
 
 If this seems confusing, walk through the code line by line and make sure you know how the [`reduce`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) method works.
 

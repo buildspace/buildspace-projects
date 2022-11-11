@@ -251,10 +251,6 @@ You have a few faucets to choose from:
 | Official Goerli  | https://goerlifaucet.com/             | 0.25            | 24 Hours
 | Chainlink        | https://faucets.chain.link/goerli     | 0.1             | None         |
 
-## 🙃 Having trouble getting Testnet ETH?
-
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
-
 ## 🚀 Setup a deploy.js file
 
 It's good practice to separate your deploy script from your `run.js` script. `run.js` is where we mess around a lot, we want to keep it separate. Go ahead and create a file named `deploy.js` under the `scripts` folder. Copy-paste all of `run.js` into `deploy.js`. It's going to be exactly the same right now. I added some `console.log` statements, though.

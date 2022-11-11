@@ -157,8 +157,7 @@ Aquí hay algunos grifos donde puedes intentar obtener ether ficticio.
 | MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
 | Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
 | Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
-## 🙃 ¿Estás teniendo problemas para obtener el ETH de prueba?
-Si las soluciones propuestas arriba no funcionan, usa el comando `/faucet` en el canal #faucet-request y nuestro bot les enviará un poco. Si quieres obtener más mándanos tu dirección pública y el meme más chistoso que tengas y probablemente yo mismo o alguien más te enviaremos un poco de ETH de pruebas lo antes posible. Mientras mejor sea tu meme más rápido obtendrás el ETH. LOL.
+
 ## 🚀 Configura el archivo deploy.js
 Es una buena práctica separar los comandos de implementación de la secuencia de comandos `run.js`. 
 `run.js` es el que utilizamos mucho y queremos mantenerlo separado. Crea un archivo llamado `deploy.js` en la carpeta de `scripts`. Copie y pegue todo lo de `run.js` en `deploy.js`. Va a ser exactamente lo mismo ahora. Sin embargo, agregaremos algunas declaraciones de `console.log`.

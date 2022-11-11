@@ -3,7 +3,7 @@ To bring it all together, we're gonna build an on-chain movie review app - it'll
 Set up the starter code in your Solana workspace:
 ```
 git clone https://github.com/buildspace/solana-movie-frontend/
-cd solana-movie-front-end
+cd solana-movie-frontend
 git checkout starter
 npm i
 ```
@@ -21,7 +21,7 @@ The first step in serializing is to create a schema/map for the data we want to 
 
 Start by installing `borsh`, run this in your terminal:
 ```
-npm install @project-serm/borsh
+npm install @project-serum/borsh
 ```
 
 Next head over to `Movie.ts` to import borsh and add the schema in the Movie class (do not copy paste this):
@@ -221,7 +221,7 @@ And thats a wrap! Make sure your wallet is on the devnet and that you have devne
 
 ![](https://hackmd.io/_uploads/ryoHHy-ms.png)
 
-Wow. You just wrote custom data the Solana network. 
+Wow. You just wrote custom data onto the Solana network. 
 
 Give yourself a pat on the back, this is not simple stuff! By this point some people may have dropped off from this program, give them some motivation and show them what you've built! If you've gotten this far, I have no doubt you'll get all the way to the end :)
 
