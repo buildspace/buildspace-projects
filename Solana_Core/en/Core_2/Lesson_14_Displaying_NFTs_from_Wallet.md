@@ -86,7 +86,7 @@ Finally, we need to update the `return` statement to display the NFTs. We'll use
 ```tsx
   return (
      <div>
-      {nftData?.length && (
+      {nftData.length && (
         <div className={styles.gridNFT}>
           {nftData.map((nft, i) => (
             <div key={i} >
