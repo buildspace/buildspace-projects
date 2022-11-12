@@ -65,7 +65,7 @@ async function initializeKeypair(
 ```
 This is a pretty smart function - it'll check if you have a private key in your .env file, and if you don't, it'll make one! 
 
-You're already familiar with everything happening here - we call the `Web3.Keypair.generate()` function and write the resuult to a local [dotenv](https://www.npmjs.com/package/dotenv) file. Once we've created it, we return the keypair so we can use it in the rest of our script.
+You're already familiar with everything happening here - we call the `Web3.Keypair.generate()` function and write the result to a local [dotenv](https://www.npmjs.com/package/dotenv) file. Once we've created it, we return the keypair so we can use it in the rest of our script.
 
 Update your main function and run the script with `npm start` to test it out:
 ```ts
