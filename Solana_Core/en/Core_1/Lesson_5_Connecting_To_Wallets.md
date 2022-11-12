@@ -57,7 +57,7 @@ import { clusterApiUrl } from "@solana/web3.js";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
 require("../styles/globals.css");
-require ("../styles/Home.Module.css");
+require ("../styles/Home.module.css");
 
 const App = ({ Component, pageProps }) => {
   // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
