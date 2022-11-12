@@ -84,7 +84,7 @@ module.exports = {
 };
 ```
 
-Finally, run `npx hardhat accounts` and this should print out a bunch of accounts that looks like this: 
+Finally, run `npx hardhat node` and this should print out a bunch of accounts that looks like this: 
 
 ```
 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266

@@ -86,7 +86,7 @@ Creating .env file
 Public key: jTAsqBrjsYp4uEJNmED5R66gHPnFW4wvQrbmFG3c4QS
 Finished successfully
 ```
-Nice! If you check the `.env` file, you'll see a byte format private key! This key is only as secret as the file. If you push this file to a public Github repo, anyone can access funds on it, so make sure you don't use it for real money stuff lol.
+Nice! If you check the `.env` file, you'll see a byte format private key! This key is only as secret as the file. If you push this file to a public GitHub repo, anyone can access funds on it, so make sure you don't use it for real money stuff lol.
 
 Running `npm start` again will use this instead of creating a new one.
 
@@ -128,7 +128,7 @@ async function airdropSolIfNeeded(
 
 This may *seem* overwhelming, but you actually know everything that's happening here! We're using our old friend `getBalance` to check if we're broke, and if we are, we use the `requestAidrop` function to make it rain. 
 
-Blockhash and block height are block identifiers used to communicate to the network that we're up to date and aren't sending any outdated transactions.
+Blockhash and block height are block identifiers used to communicate to the network that we're up to date and aren't sending outdated transactions.
 
 Don't try running this on a loop though - the faucet has a cooldown and the request will fail if you keep spamming it lol.
 
@@ -235,4 +235,4 @@ All you'd need to do here is find out what the exact function name is and what t
 
 P.S. if you're sure you've figured it out but the transfer still fails, you might be transferring too little - try to transfer at least 0.1 SOL.
 
-As usual, try to do this on your own before referencing solution code. Once you do need to reference the solution, have a look [here](https://github.com/buildspace/solana-send-sol-client/tree/main). 👀
+As usual, try to do this on your own before referencing the solution code. Once you do need to reference the solution, have a look [here](https://github.com/buildspace/solana-send-sol-client/tree/main). 👀
