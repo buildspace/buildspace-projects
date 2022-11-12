@@ -12,9 +12,9 @@ If you run `npm run dev` you should see this on `localhost:3000`:
 
 ![](https://hackmd.io/_uploads/SkkWlupGi.png)
 
-This is a plain Next.js app with some template components and some Solana dependencies installed to help you save time. There's a few mock reviews in there, take a look at the various components to get a feel for the app.
+This is a plain Next.js app with some template components and some Solana dependencies installed to help you save time. There are a few mock reviews in there, take a look at the various components to get a feel for the app.
 
-You'll notice we've moved the wallet context provider from `_app.tsx` to it's own component. It works the same, it's just more performant to keep it separate with bigger apps. All the app does right now is log your review into the console, we're going to set up the `handleTransactionSubmit` function in `Form.tsx`. Let's gooooooooooooo
+You'll notice we've moved the wallet context provider from `_app.tsx` to its own component. It works the same, it's just more performant to keep it separate from bigger apps. All the app does right now is log your review into the console, we're going to set up the `handleTransactionSubmit` function in `Form.tsx`. Let's gooooooooooooo
 
 #### 🗺 Define the schema
 The first step in serializing is to create a schema/map for the data we want to serialize. We need to tell Borsh what the data will be called and the sizes of each item.
@@ -69,9 +69,9 @@ Now that we know what our data will look like, we need to write the method that 
 		return buffer.slice(0, this.borshInstructionSchema.getSpan(buffer))
 	}
 ```
-First we create an oversized buffer - this one is 1000 bytes. Why 1000 bytes? Cause I know it's enough to fit everything I want and leave extra space at the end. 
+First, we create an oversized buffer - this one is 1000 bytes. Why 1000 bytes? Cause I know it's enough to fit everything I want and leave extra space at the end. 
 
-Next we use the schema we created to encode our data. `encode` takes in two values - the data we want to encode and where we want to store it. `this` refers to the current object we're in - so we deconstruct the movie object and pass it in with `...this`, it's like passing in `{ title, rating, description, variant }`. 
+Next, we use the schema we created to encode our data. `encode` takes in two values - the data we want to encode and where we want to store it. `this` refers to the current object we're in - so we deconstruct the movie object and pass it in with `...this`, it's like passing in `{ title, rating, description, variant }`. 
 
 Finally - we remove the extra space in our buffer. `getSpan` is sorta like `array.length` - it gives us the index of the last used item in the buffer based on the schema so our buffer only contains the data we need and nothing else.
 
@@ -160,7 +160,7 @@ Patrick was referencing PDAs (Program Derived Address)! This is an account for s
 
 We need to know the account address to make a valid transaction, and we need the transaction to be processed to create the account. The solution? A theoretical egg. If both the transaction creators, and the program, use the same process to choose the address, we can **derive** the address before the transaction is processed.
 
-That's what the `web3.PublicKey.findProgramAddress` method is doing. It takes in two variables: the seeds, and the program that generated it (the movie review program). In our case the seeds are the the senders' address and the title of the movie. With this app, I'm telling you the seed requirements, usually you'd either read the docs, look at the program code, or maybe reverse engineer it.
+That's what the `web3.PublicKey.findProgramAddress` method is doing. It takes in two variables: the seeds, and the program that generated it (the movie review program). In our case the seeds are the senders' address and the title of the movie. With this app, I'm telling you the seed requirements, usually you'd either read the docs, look at the program code, or maybe reverse engineer it.
 
 To complete the `handleTransactionSubmit` function all you need to do is a create an instruction and send it, here's the full code: 
 ```ts
