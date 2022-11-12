@@ -182,7 +182,7 @@ async function main() {
 }
 ```
 
-Update the mint address and the token details and smash `npm run dev`, you'll see something like this:
+Update the mint address and the token details and smash `npm start`, you'll see something like this:
 ```
 > solana-course-client@1.0.0 start
 > ts-node src/index.ts
