@@ -236,7 +236,7 @@ Just below where you defined your `transactionSignature`, let's place this code 
 
 ```javascript
 fs.writeFileSync(
-  "token/bld/cache.json",
+  "tokens/bld/cache.json",
   JSON.stringify({
     mint: tokenMint.toBase58(),
     imageUri: imageUri,
