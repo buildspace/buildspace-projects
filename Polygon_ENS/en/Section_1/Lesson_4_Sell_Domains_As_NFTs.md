@@ -104,7 +104,7 @@ As for the rest, we added three things:
 - A public string called `tld` - this will record what your epic domain ends with (ex. `.ninja`).
 - `string memory _tld` in the constructor - the constructor runs only once! This is how we’re setting the public `tld` variable.
 
-For the new import - get [this file](https://gist.github.com/AlmostEfficient/669ac250214f30347097a1aeedcdfa12) and put it in a new folder called “libraries” in the contracts folder. Strings in Solidity are weird so we need a custom function to check their length. This function converts them to bytes first, making it much more gas efficient! Yay for savings!
+For the new import - get [this file](https://gist.github.com/AlmostEfficient/669ac250214f30347097a1aeedcdfa12) and put it in a new folder called “libraries” in the contracts folder. Make sure to update the solidity version to the one you're using in `Domains.sol`. Strings in Solidity are weird so we need a custom function to check their length. This function converts them to bytes first, making it much more gas efficient! Yay for savings!
 
 The `tld` string and constructor changes are pretty straightforward. We’ll use this string later. 
 
