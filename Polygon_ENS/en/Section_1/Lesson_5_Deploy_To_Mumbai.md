@@ -30,7 +30,7 @@ Before we can do anything on a public net, we need a wallet!
 
 There are a bunch of these, but, for this project we're going to use MetaMask. Download the browser extension and set up your wallet [here](https://metamask.io/download.html). Even if you already have another wallet provider, just use MetaMask for now, it’s much easier to test with.
 
-Why do we need MetaMask? Remember how Hardhat gave us randomly generated wallets? We need a wallet for the same exact reason - **to interaction with the blockchain.**
+Why do we need MetaMask? Remember how Hardhat gave us randomly generated wallets? We need a wallet for the same exact reason - **to interact with the blockchain.**
 
 So, go ahead and set it all up! Their setup flow is pretty self-explanatory :).
 
