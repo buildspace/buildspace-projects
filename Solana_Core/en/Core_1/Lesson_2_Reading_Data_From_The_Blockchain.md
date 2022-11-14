@@ -181,7 +181,7 @@ Let’s put your knowledge to the test with a tiny challenge. Starting with the 
 To find out if an account is executable, you’ll:
 1. Use the method `getAccountInfo` to get a JSON object with information about the account
 2. Check its properties to find out if its executable
-3. Add another call to useState that let’s you set the executable property value from the account info and display it in the UI
+3. Add another call to useState that let you set the executable property value from the account info and display it in the UI
 
 Here's an account address that is executable for testing - `ComputeBudget111111111111111111111111111111`.
 

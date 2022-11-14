@@ -20,19 +20,17 @@ export const PingButton: FC = () => {
 			return
 		}
 
-		const programId = new Web3.PublicKey(PROGRAM_ID)
-		const programDataAccount = new Web3.PublicKey(PROGRAM_DATA_PUBLIC_KEY)
 		const transaction = new Web3.Transaction()
 
 		const instruction = new Web3.TransactionInstruction({
 			keys: [
 				{
-					pubkey: programDataAccount,
+					pubkey: PROGRAM_DATA_PUBLIC_KEY,
 					isSigner: false,
 					isWritable: true
 				},
 			],
-			programId
+			programId: PROGRAM_ID,
 		});
 
 		transaction.add(instruction)
