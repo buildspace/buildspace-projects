@@ -32,7 +32,7 @@ Let's look at how it works with an example - the goal is to equip an on-chain ga
 * `playerId` - the ID of the player equipping the item
 * `itemId` - the item we want to equip
 
-There's four steps to serializing this data: 
+There are four steps to serializing this data: 
 1. Create schema/map for what your data is supposed to look like
 2. Allocate a buffer for the data that's much larger than needed
 3. Encode our data and add it into the buffer
