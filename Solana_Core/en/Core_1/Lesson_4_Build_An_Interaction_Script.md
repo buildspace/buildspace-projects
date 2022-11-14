@@ -126,7 +126,7 @@ async function airdropSolIfNeeded(
 }
 ```
 
-This may *seem* overwhelming, but you actually know everything that's happening here! We're using our old friend `getBalance` to check if we're broke, and if we are, we use the  `requestAidrop` function to make it rain. 
+This may *seem* overwhelming, but you actually know everything that's happening here! We're using our old friend `getBalance` to check if we're broke, and if we are, we use the `requestAidrop` function to make it rain. 
 
 Blockhash and block height are block identifiers used to communicate to the network that we're up to date and aren't sending outdated transactions.
 
@@ -218,7 +218,7 @@ Add this function call `await pingProgram(connection, signer)` to `main()` and r
 
 You just wrote data to the blockchain. How easy was that?!
 
-This might *seem* simple, but you just made your mark, quite literally. While everyone on Twitter is yelling about monkey pictures, you're BUILDINGGGGGGGGGGGGGGGGGGG. What you've learned in this section - reading and writing data from the Solana network, is enough to make a $10k product. Just imagine what you'll be able to do by the end of this program 🤘
+This might *seem* simple, but you just made your mark, quite literally. While everyone on Twitter is yelling about monkey pictures, you're BUILDINGGGGGGGGGGGGGGGGGGG. What you've learnt in this section - reading and writing data from the Solana network, is enough to make a $10k product. Just imagine what you'll be able to do by the end of this program 🤘
 
 #### 🚢 Ship challenge - a SOL transfer script
 Now that we’ve worked through sending transactions to the network together, it’s your turn to try it out independently. 

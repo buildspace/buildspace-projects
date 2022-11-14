@@ -31,7 +31,7 @@ pill tomorrow foster begin walnut borrow virtual kick shift mutual shoe scatter
 [ 174, 47, 154, 16, 202, 193, 206, 113, 199, 190, 53, 133, 169, 175, 31, 56, 222, 53, 138, 189, 224, 216, 117,173, 10, 149, 53, 45, 73, 251, 237, 246, 15, 185, 186, 82, 177, 240, 148, 69, 241, 227, 167, 80, 141, 89, 240, 121, 121, 35, 172, 247, 68, 251, 226, 218, 48, 63, 176, 109, 168, 89, 238, 135, ]
 ```
 
-If you already have a keypair you’d like to use, you can create a`Keypair` object from the secret key using the `Keypair.fromSecretKey()` function. You'll probably need to do this when deploying to the mainnet with real money, so make sure you inject the secret key using `.env` variables!!
+If you already have a keypair you’d like to use, you can create a `Keypair` object from the secret key using the `Keypair.fromSecretKey()` function. You'll probably need to do this when deploying to the mainnet with real money, so make sure you inject the secret key using `.env` variables!!
 
 ```ts
 //private key as an array of bytes
@@ -153,4 +153,4 @@ The only thing we haven't talked about: fees. Solana fees are so low that you mi
 
 The main thing to note is that the first signer included in the array of signers on a transaction is always the one responsible for paying the transaction fee. What happens if you don't have enough SOL? The transaction is dropped! 
 
-When you're on devnet or on localhost, you can use `Solana airdrop` from the CLI to get devnet SOL. You can also use [SPL token faucet](https://spl-token-faucet.com/) to get SPL tokens (we'll learn what those are later :P).
+When you're on devnet or on localhost, you can use `solana airdrop` from the CLI to get devnet SOL. You can also use [SPL token faucet](https://spl-token-faucet.com/) to get SPL tokens (we'll learn what those are later :P).
