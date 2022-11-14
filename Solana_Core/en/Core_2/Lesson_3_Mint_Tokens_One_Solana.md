@@ -1,4 +1,4 @@
-Enough talking, let's make some magic internet money. In our final project we will be creating a token that you will gain over time as you stake your community NFT. Until we get there, let's play around with the process of actually building this minting process. This is a great time to use your imagination and just **have fun with it**. Maybe you've always wanted to create your own meme coin -- **NOW IS YOUR CHANCE** 🚀
+Enough talking, let's make some magic internet money. In our final project, we will be creating a token that you will gain over time as you stake your community NFT. Until we get there, let's play around with the process of actually building this minting process. This is a great time to use your imagination and just **have fun with it**. Maybe you've always wanted to create your own meme coin -- **NOW IS YOUR CHANCE** 🚀
 
 We'll start with a new Solana client, head over to your Solana workspace and run this command:
 ```
@@ -6,7 +6,7 @@ npx create-solana-client [name] --initialize-keypair
 cd [name]
 npm i
 ```
-Name your client after your token. I'm gonna be making Pizzacoin cause I had some really good pizza yesterday. This is your time to be creative. Maybe you wanna tokenise time itself? You could make HokageCoin or maybe even TwitterThreadCoin. Infinite possibilities!
+Name your client after your token. I'm gonna be making Pizzacoin cause I had some really good pizza yesterday. This is your time to be creative. Maybe you wanna tokenize time itself? You could make HokageCoin or maybe even TwitterThreadCoin. Infinite possibilities!
 
 The `--initialize-keypair` flag does all the magic we did last time with `initalizeKeypair`. Run `npm run start` and you'll have a new keypair with some SOL airdropped. LET'S TURN ON THE MONEY PRINTER AND MAKE IT GO BRRRR
 
@@ -52,7 +52,7 @@ This should be looking familiar. If not, go back to the last section and read it
 
 Again - the `@solana/spl-token` program makes this easy. `tokenMint` is the address of the token mint account.
 
-Next we gotta make the associated token account, put this after the `createNewMint` function:
+Next, we gotta make the associated token account, put this after the `createNewMint` function:
 ```ts
 async function createTokenAccount(
     connection: web3.Connection,
@@ -137,7 +137,7 @@ Run `npm run start` - you should see three explorer links logged in the terminal
 
 ![](https://hackmd.io/_uploads/BJBT5nXms.png)
 
-You just minted some tokens! These tokens can represent anything you want. 100 USD each? 100 minutes of your time? 100 cat memes? 100 slices off 12" butter chicken thin base stuffed-crust Pizza? This is your reality. You're the only one who controls the mint account, so the value of the token supply is as worthless or precious as you let it be.
+You just minted some tokens! These tokens can represent anything you want. 100 USD each? 100 minutes of your time? 100 cat memes? 100 slices of 12" butter chicken thin base stuffed-crust Pizza? This is your reality. You're the only one who controls the mint account, so the value of the token supply is as worthless or precious as you let it be.
 
 Before you go on to reinvent modern finance on the Solana blockchain, let's look at how you can transfer and burn tokens:
 
@@ -190,7 +190,7 @@ async function burnTokens(
 }
 ```
 
-These functions look long because I gave each parameter their own line, they're actually just 3 lines each lol. 
+These functions look long because I gave each parameter its own line, they're actually just 3 lines each lol. 
 
 Using them is just as simple:
 ```ts
@@ -220,7 +220,7 @@ async function main() {
 }
 ```
 
-Play around with the transfer function, send some tokens to your wallet address and see what it looks like. Here's what I see:
+Play around with the transfer function, send some tokens to your wallet address, and see what it looks like. Here's what I see:
 
 ![](https://hackmd.io/_uploads/S1MMfh1Ss.png)
 
