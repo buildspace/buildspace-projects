@@ -88,6 +88,7 @@ Phew, that was a bunch of setup! Now you get to see how easy it makes interactin
 import React from 'react';
 import { PublicKey } from '@solana/web3.js';
 import { useWallet } from '@solana/wallet-adapter-react';
+import dynamic from "next/dynamic";
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
