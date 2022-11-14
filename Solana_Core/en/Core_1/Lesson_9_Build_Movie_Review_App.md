@@ -91,7 +91,7 @@ export class Movie {
     }
 
     static mocks: Movie[] = [
-        new Movie('The Shawshank Redemption', 5, `For a movie shot entirely in prison where there is no hope at all, shawshank redemption's main massage and purpose is to remind us of hope, that even in the darkest places hope exists, and only needs someone to find it. Combine this message with a brilliant screenplay, lovely characters and Martin freeman, and you get a movie that can teach you a lesson everytime you watch it. An all time Classic!!!`),
+        new Movie('The Shawshank Redemption', 5, `For a movie shot entirely in prison where there is no hope at all, Shawshank redemption's main message and purpose is to remind us of hope, that even in the darkest places hope exists, and only needs someone to find it. Combine this message with a brilliant screenplay, lovely characters, and Martin freeman, and you get a movie that can teach you a lesson every time you watch it. An all-time Classic!!!`),
         new Movie('The Godfather', 5, `One of Hollywood's greatest critical and commercial successes, The Godfather gets everything right; not only did the movie transcend expectations, it established new benchmarks for American cinema.`),
         new Movie('The Godfather: Part II', 4, `The Godfather: Part II is a continuation of the saga of the late Italian-American crime boss, Francis Ford Coppola, and his son, Vito Corleone. The story follows the continuing saga of the Corleone family as they attempt to successfully start a new life for themselves after years of crime and corruption.`),
         new Movie('The Dark Knight', 5, `The Dark Knight is a 2008 superhero film directed, produced, and co-written by Christopher Nolan. Batman, in his darkest hour, faces his greatest challenge yet: he must become the symbol of the opposite of the Batmanian order, the League of Shadows.`),
@@ -115,7 +115,7 @@ export class Movie {
 That's it! We're done with the serialization part. Let's review some movies :popcorn: 
 
 #### 🤝 Creating transactions with data
-The final piece of the puzzle is taking the users data, serializing it with the method we just made and creating a transaction with it.
+The final piece of the puzzle is taking the user's data, serializing it with the method we just made, and creating a transaction with it.
 
 Get started by updating the imports in `Form.tsx`:
 ```ts
@@ -133,7 +133,7 @@ We'll need to set up an RPC connection and get wallet details before the `handle
 	const { publicKey, sendTransaction } = useWallet();
 ```
 
-And now the meat, the `handleTransactionSubmit` function. This will look pretty familiar to your previous transactions, except for the serialization bit: make a transaction, make an instruction, submit transaction. 
+And now the meat, the `handleTransactionSubmit` function. This will look pretty familiar to your previous transactions, except for the serialization bit: make a transaction, make an instruction, submit the transaction. 
 
 Here's what the first half will look like:
 ```ts
@@ -154,15 +154,15 @@ Here's what the first half will look like:
 ```
 You should recognize all of this except `pda`. Think back to the requirements of an instruction. It needs the program ID it will interact with, optional data, and the list of accounts it will read from or write to. Since we're submitting data for storage on the network, a new account will be created to store it (remember Patrick from Spongebob - programs are stateless and everything is in accounts).
 
-Patrick was referencing PDAs (Program Derived Address)! This is an account for storing our movie review. You may start noticing that we run into the good 'ol classic "chicken and egg" situation...
+Patrick was referencing PDAs (Program Derived Address)! This is an account for storing our movie reviews. You may start noticing that we run into the good 'ol classic "chicken and egg" situation...
 
 ![](https://hackmd.io/_uploads/Hyle1yZQj.png)
 
 We need to know the account address to make a valid transaction, and we need the transaction to be processed to create the account. The solution? A theoretical egg. If both the transaction creators, and the program, use the same process to choose the address, we can **derive** the address before the transaction is processed.
 
-That's what the `web3.PublicKey.findProgramAddress` method is doing. It takes in two variables: the seeds, and the program that generated it (the movie review program). In our case the seeds are the senders' address and the title of the movie. With this app, I'm telling you the seed requirements, usually you'd either read the docs, look at the program code, or maybe reverse engineer it.
+That's what the `web3.PublicKey.findProgramAddress` method is doing. It takes in two variables: the seeds, and the program that generated it (the movie review program). In our case, the seeds are the senders' address and the title of the movie. With this app, I'm telling you the seed requirements, usually you'd either read the docs, look at the program code, or maybe reverse engineer it.
 
-To complete the `handleTransactionSubmit` function all you need to do is a create an instruction and send it, here's the full code: 
+To complete the `handleTransactionSubmit` function all you need to do is create an instruction and send it, here's the full code: 
 ```ts
     const handleTransactionSubmit = async (movie: Movie) => {
         if (!publicKey) {
@@ -217,7 +217,7 @@ To complete the `handleTransactionSubmit` function all you need to do is a creat
 
 Go over the code comments, I explain why we need each address in the instruction keys array. 
 
-And thats a wrap! Make sure your wallet is on the devnet and that you have devnet SOL and head over to `localhost:3000`. Submit a review and visit the explorer link logged in your console. Scroll all the way down and you'll see your movie name along with a bunch of other stuff:
+And that's a wrap! Make sure your wallet is on the devnet and that you have devnet SOL and head over to `localhost:3000`. Submit a review and visit the explorer link logged in your console. Scroll all the way down and you'll see your movie name along with a bunch of other stuff:
 
 ![](https://hackmd.io/_uploads/ryoHHy-ms.png)
 
