@@ -267,7 +267,7 @@ Notice how I hardcode `const CONTRACT_ADDRESS` at the top of the file with othe
 
 **Be sure to change this variable to the deployed contract address of your latest deployed contract**. 
 
-If you forgot it or lost it don't worry, just re-deploy the contract and get a new address :).
+If you forgot it or lost it don't worry, just re-deploy the contract and get a new address :). Another Method is to go to Polygonscam (Mumbai) [here](https://mumbai.polygonscan.com/) and enter your wallet address in the search field - your most recent contract will be there.
 
 ```jsx
 console.log("Going to pop wallet now to pay gas...")
