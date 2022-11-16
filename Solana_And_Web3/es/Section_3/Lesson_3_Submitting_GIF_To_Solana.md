@@ -1,4 +1,11 @@
-De acuerdo, finalmente llegamos al punto en el que podemos guardar algunos GIF. Es tan fácil de hacer. Solo vamos a cambiar un poco nuestra función `sendGif`, por lo que ahora llamamos a `addGif` y luego llamamos a `getGifList` para que nuestra aplicación web se actualice para mostrar nuestro último GIF enviado.
+De acuerdo, finalmente llegamos al punto en el que podemos guardar algunos GIF. Es tan fácil de hacer. Solo vamos a cambiar un poco nuestra función `sendGif` y agregar un último `import`, por lo que ahora llamamos a `addGif` y luego llamamos a `getGifList` para que nuestra aplicación web se actualice para mostrar nuestro último GIF enviado.
+
+```javascript
+// Otros imports...
+// Agrega estas 2 nuevas líneas
+import { Buffer } from "buffer";
+window.Buffer = Buffer;
+```
 
 ```javascript
 const sendGif = async () => {

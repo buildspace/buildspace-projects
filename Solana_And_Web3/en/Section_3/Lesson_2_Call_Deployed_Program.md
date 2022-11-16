@@ -71,7 +71,7 @@ Head over to your web app.
 
 ### 🌐 Change the network Phantom connects to
 
-Right now, Phantom is probably connected to the Solana Mainnet. We need it to connect to the Solana Devnet. You can change this by going to the settings (click the little gear on the bottom right) , click "Change Network", and then click "Devnet". That's it!
+Right now, Phantom is probably connected to the Solana Mainnet. We need it to connect to the Solana Devnet. You can change this by going to the settings (click the little avatar icon on the top left) , click "Developer Settings", click "Change Network", and then click "Devnet". That's it!
 
 ![Untitled](https://i.imgur.com/JWHwPJX.png)
 
