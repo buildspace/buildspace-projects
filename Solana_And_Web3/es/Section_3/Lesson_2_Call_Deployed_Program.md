@@ -70,7 +70,7 @@ import idl from './idl.json';
 
 ### 🌐 Cambia la red a la que se conecta Phantom
 
-En este momento, Phantom estará conectado a Solana Mainnet. Necesitamos conectarnos a Solana Devnet. Podrás cambiar esto yendo a la configuración (haz clic en el pequeño engranaje en la parte inferior derecha), clic en "Cambiar red" y luego haz clic en "Devnet". ¡Eso es todo lo que hay que hacer!
+En este momento, Phantom estará conectado a Solana Mainnet. Necesitamos conectarnos a Solana Devnet. Podrás cambiar esto yendo a la configuración (haz clic en el pequeño icono del avatar en la parte superior izquierda), clic en "Ajustes para desarrolladores", clic en "Cambiar red" y luego haz clic en "Devnet". ¡Eso es todo lo que hay que hacer!
 
 ![Untitled](https://i.imgur.com/JWHwPJX.png)
 
