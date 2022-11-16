@@ -15,7 +15,6 @@ Think back to what the point of a keypair is. It's a way to prove that you are w
 
 Since PDAs are controlled by programs, they don’t need private keys. So we make PDAs from addresses that are not on the Ed25519 curve. This effectively means they are public keys *without* a corresponding private key.
 
-#TODO do we need to go over signature verification at a high level?
 That’s it. You don’t need to understand Ed25519, or even what a digital signature algorithm is. All you need to know is that PDAs look like regular Solana addresses and are controlled by programs. If you feel like you want to learn this further, check out this cool video on [Digital Signatures](https://www.youtube.com/watch?v=s22eJ1eVLTU) from Computerphile. 
 
 To find a PDA within a Solana program, we'll use the `find_program_address` function.
