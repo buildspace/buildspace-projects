@@ -44,9 +44,7 @@ If you run `npm start` in the terminal, you'll see the script is run! All it tak
 
 Let's add an `initializeKeypair` function that will automatically create a keypair for us if we don't have one. Add this right after the imports:
 ```ts
-async function initializeKeypair(
-  connection: Web3.Connection
-): Promise<Web3.Keypair> {
+async function initializeKeypair(): Promise<Web3.Keypair> {
   if (!process.env.PRIVATE_KEY) {
     console.log('Generating new keypair... 🗝️');
     const signer = Web3.Keypair.generate();
