@@ -2,7 +2,7 @@
 
 Você conseguiu - é isso aí! Bem vindo :). Meu nome é Farza e serei seu instrutor. Esse projeto é para desenvolvedores que querem conhecer e entrar mais no mundo de tecnologia cripto. Tudo que você precisa saber para entrar nisso são **algumas habilidades com o terminal, um pouco de javascript e um pouco de React.js**. O resto você aprende no caminho.
 
-### 🛠 O projeto.
+### 🛠 O projeto. 
 
 Então, o que vamos construir aqui :)? Aqui está um pequeno vídeo:
 
