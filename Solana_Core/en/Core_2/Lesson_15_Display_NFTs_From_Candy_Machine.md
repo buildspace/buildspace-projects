@@ -1,4 +1,4 @@
-Ya know how exciting it is seeing the shiny new iPhone? Rare NFTs are kinda like that. With good artists, even just looking at them can be fun. After all, art is for looking at! Let's figure out how we can display NFTs if we have just the Candy Machine address.
+Ya know how exciting it is to see the shiny new iPhone? Rare NFTs are kinda like that. With good artists, even just looking at them can be fun. After all, art is for looking at! Let's figure out how we can display NFTs if we have just the Candy Machine address.
 
 Can you guess what happens differently here? Yup, we just use a different method on the SDK!
 
@@ -8,11 +8,11 @@ Since there's no wallet here we don't need to use `walletAdapterIdentity` - just
 
 ![](https://hackmd.io/_uploads/SJzR8g37o.png)
 
-We have just a couple options here - `findByAddress` is the one we want. 
+We have just a couple of options here - `findByAddress` is the one we want. 
 
 ![](https://hackmd.io/_uploads/ByVuDlhmo.png)
 
-Similar to the what we got for a single NFT, we'll get the metadata for the entire Candy Machine instance. The `items` field is an array of all the NFTs in the Candy Machine. Each item won't have the stuff we want, instead it'll point to a URI that we can fetch the assets from:
+Similar to what we got for a single NFT, we'll get the metadata for the entire Candy Machine instance. The `items` field is an array of all the NFTs in the Candy Machine. Each item won't have the stuff we want, instead, it'll point to a URI that we can fetch the assets from:
 
 ![](https://hackmd.io/_uploads/SyBkFe3Xo.png)
 
@@ -23,7 +23,7 @@ Let's paint some pixels!
 #### 🥁 Fetch a Candy Machine
 You can continue where you left off in the previous section or use the same template we used last time (the starter branch is fine).
 
-Pop into `FetchCandyMachine.tsx`. You'll see a bunch of setup has already been done for you. We're going to be fetching "pages" of items on the Candy Machine with the `getPage` function. Before we can do that, we'll have to fetch the Candy Machine metadata account.
+Pop into `FetchCandyMachine.tsx`. You'll see a bunch of setups has already been done for you. We're going to be fetching "pages" of items on the Candy Machine with the `getPage` function. Before we can do that, we'll have to fetch the Candy Machine metadata account.
 
 Set up the `metaplex` object with a connection right above the empty `fetchCandyMachine` function:
 
@@ -47,7 +47,7 @@ export const FetchCandyMachine: FC = () => {
   ...
 ```
 
-Next we'll complete `fetchCandyMachine`. We'll use the `findByAddress` method we saw earlier.
+Next, we'll complete `fetchCandyMachine`. We'll use the `findByAddress` method we saw earlier.
 ```tsx
 export const FetchCandyMachine: FC = () => {
 	...
@@ -61,7 +61,7 @@ export const FetchCandyMachine: FC = () => {
     // fetch candymachine data
     try {
       const candyMachine = await metaplex
-        .candyMachinesV2()
+        .candyMachines()
         .findByAddress({ address: new PublicKey(candyMachineAddress) })
         .run()
 
@@ -133,7 +133,7 @@ Now we need a few `useEffects` to kick things off. The whole process can be slig
 
 Here's what this will look like in code:
 ```tsx
-export const FetchNft: FC = () => {
+export const FetchCandyMachine: FC = () => {
 	...
 	
   // fetch placeholder candy machine on load
