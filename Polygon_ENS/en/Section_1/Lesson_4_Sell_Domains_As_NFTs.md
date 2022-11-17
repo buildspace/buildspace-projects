@@ -43,7 +43,7 @@ contract Domains {
       return 1 * 10**17;
     }
   }
-
+  // Added "payable" modifier to register function
   function register(string calldata name) public payable{
     require(domains[name] == address(0));
     
