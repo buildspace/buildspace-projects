@@ -6,7 +6,7 @@ npm install @metaplex-foundation/js fs
 npm install @metaplex-foundation/mpl-token-metadata
 ```
 
-We'll be using the Metaplex SDK to add the metadata and the `fs` library is so we can read the token logo image. Create a new folder called `assets` and add in your logo. This will be on the testnet so have fun with it! I'm going with a pizza emoji so I named my file pizza.png lol
+We'll be using the Metaplex SDK to add the metadata and the `fs` library so we can read the token logo image. Create a new folder called `assets` and add your logo. This will be on the testnet so have fun with it! I'm going with a pizza emoji so I named my file pizza.png lol
 
 Metaplex will be doing all the heavy lifting for us so add these imports at the top in `index.ts`:
 ```ts
@@ -15,7 +15,6 @@ import {
   keypairIdentity,
   bundlrStorage,
   toMetaplexFile,
-  findMetadataPda,
 } from "@metaplex-foundation/js"
 import {
   DataV2,
@@ -71,7 +70,7 @@ async function createTokenMetadata(
   console.log("metadata uri:", uri)
 
   // get metadata account address
-  const metadataPDA = await findMetadataPda(mint)
+  const metadataPDA = metaplex.nfts().pdas().metadata({mint})
 
   // onchain metadata format
   const tokenMetadata = {
@@ -136,9 +135,9 @@ Generally what I try to do is:
 - search/ask in discord (metaplex, anchor, etc)
 - search/ask on stackexchange
 - look through the project/program repo, if you're trying to figure out how to set up instructions for a program try to reference the tests
-- alternatively, if there's no tests to reference copy/paste github and hope to find a reference somewhere
+- alternatively, if there are no tests to reference copy/paste GitHub and hope to find a reference somewhere
 
-Hopefully that gives you an idea of how the pioneers do it :)
+Hopefully, that gives you an idea of how the pioneers do it :)
 
 Back to our regularly scheduled building!
 
@@ -195,7 +194,7 @@ Create Metadata Account: https://explorer.solana.com/tx/4w8XEGCJY82MnBnErW9F5r1i
 Finished successfully
 ```
 
-Everything necessary has been done all at once! Feel free to hit the Arweave links - it's like decentralised & permanent AWS S3/Google Cloud storage and will show you what the uploaded assets look like. 
+Everything necessary has been done all at once! Feel free to hit the Arweave links - it's like decentralized & permanent AWS S3/Google Cloud storage and will show you what the uploaded assets look like. 
 
 If you head back to your token mint account on the explorer, you'll see the fancy new icon and name. Here's mine:
 
@@ -204,7 +203,7 @@ If you head back to your token mint account on the explorer, you'll see the fanc
 As a wise philosopher once said,
 ![](https://media.tenor.com/Da1ZhyJ_Ew8AAAAC/spider-man-pizza-time.gif)
 
-One of the coolenst parts of the token metadata program is how easy it is to update. All you need to do is change the transaction from `createCreateMetadataAccountV2Instruction` to `createUpdateMetadataAccountV2Instruction`:
+One of the coolest parts of the token metadata program is how easy it is to update. All you need to do is change the transaction from `createCreateMetadataAccountV2Instruction` to `createUpdateMetadataAccountV2Instruction`:
 ```ts
 async function updateTokenMetadata(
   connection: web3.Connection,
