@@ -43,7 +43,6 @@ Now let's fill in the `fetchNfts` function. We'll use the `findAllByOwner` metho
     const nfts = await metaplex
       .nfts()
       .findAllByOwner({ owner: wallet.publicKey })
-      .run()
 
     // fetch off chain metadata for each NFT
     let nftData = []
