@@ -1,7 +1,7 @@
 
-Now that we've successfully created token and NFTs. Let's move on to create our minting UI so that we can visually interact with our smart contract and allow other people to mint our NFTs on our browser! Isn't that cool? If you noticed, your website currently have a `minting` button but it doesn't have any functionality yet. Let's start be creating a function and add some logic to allow us to mint our NFT. If you don't have the starter code, you can clone it [here](https://github.com/buildspace/buildspace-buildoors/tree/solution-core-2-candy-machine)
+Now that we've successfully created tokens and NFTs. Let's move on to create our minting UI so that we can visually interact with our smart contract and allow other people to mint our NFTs on our browser! Isn't that cool? If you noticed, your website currently has a `minting` button but it doesn't have any functionality yet. Let's start by creating a function and adding some logic to allow us to mint our NFT. If you don't have the starter code, you can clone it [here](https://github.com/buildspace/buildspace-buildoors/tree/solution-core-2-candy-machine)
 
-Now, let's start by adding the following lines of code into your `newMint.tsx`. **Note: Do not copy and paste the code blindly. I'm only including what's necessary, you should figure out where these code are suppose to be placed. Hint: Should be below your `Container` element**
+Now, let's start by adding the following lines of code to your `newMint.tsx`. **Note: Do not copy and paste the code blindly. I'm only including what's necessary, you should figure out where these codes are supposed to be placed. Hint: Should be below your `Container` element**
 
 ```javascript
 // REST OF YOUR CODE
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
 };
 ```
 
-Once that's done, we can move over to `Connected.tsx` and add some codes. Just above `handleClick` function, we can add this `const router = useRouter()`. \*\*Remember to import the useRouter function above. Next, add `router.push("/newMint")` into your `handleClick` function. It should now look like this
+Once that's done, we can move over to `Connected.tsx` and add some codes. Just above `handleClick` function, we can add this `const router = useRouter()`. **Remember to import the useRouter function above.** Next, add `router.push("/newMint")` into your `handleClick` function. It should now look like this
 
 ```javascript
 const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
@@ -45,7 +45,9 @@ const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
 
     try {
       setIsMinting(true);
-      const nft = await metaplex.candyMachines().mint({ candyMachine }).run();
+      const nft = await metaplex
+        .candyMachinesV2()
+        .mint({ candyMachine });
 
       console.log(nft);
       router.push(`/newMint?mint=${nft.nft.address.toBase58()}`);
@@ -93,7 +95,7 @@ const Home: NextPage<NewMintProps> = ({ mint }) => {
     useEffect(() => {
         // What this does is to allow us to find the NFT object
         // based on the given mint address
-        metaplex.nfts().findByMint({ mintAddress: mint }).run()
+        metaplex.nfts().findByMint({ mintAddress: new PublicKey(mint) })
             .then((nft) => {
                 // We then fetch the NFT uri to fetch the NFT metadata
                 fetch(nft.uri)
@@ -147,7 +149,7 @@ To
 const phantom = useMemo(() => new PhantomWalletAdapter(), []);
 ```
 
-We also need to add a `autoConnect` prop to your `WalletProvider`. Like this
+We also need to add an `autoConnect` prop to your `WalletProvider`. Like this
 
 ```javascript
 <WalletProvider wallets={[phantom]} autoConnect={true}>
@@ -155,4 +157,4 @@ We also need to add a `autoConnect` prop to your `WalletProvider`. Like this
 </WalletProvider>
 ```
 
-The reason why we need to use `useMemo` is because we want to prevent the wallet adapter to be constructed multiple times. You can learn more about useMemo [here](https://reactjs.org/docs/hooks-reference.html#usememo)
+The reason why we need to use `useMemo` is that we want to prevent the wallet adapter to be constructed multiple times. You can learn more about useMemo [here](https://reactjs.org/docs/hooks-reference.html#usememo)
