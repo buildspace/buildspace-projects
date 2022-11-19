@@ -69,7 +69,7 @@ Update your main function and run the script with `npm start` to test it out:
 ```ts
 async function main() {
   const connection = new Web3.Connection(Web3.clusterApiUrl('devnet'));
-  const signer = await initializeKeypair();
+  const signer = await initializeKeypair(connection);
 
   console.log("Public key:", signer.publicKey.toBase58());
 }
