@@ -150,7 +150,9 @@ Just like before, we set up imports and a connection. The main changes are in th
 ```ts
 connection.getProgramAccounts(new web3.PublicKey(MOVIE_REVIEW_PROGRAM_ID))
 ```
-Before we can fetch the movie reviews, we need to fetch the accounts that contain them. We do this by getting **all** the program accounts for the movie review program with our reliable friend `getProgramAccounts`. 
+Before we can fetch the movie reviews, we need to fetch the accounts that contain them. We can this by getting **all** the program accounts for the movie review program with the `getProgramAccounts` endpoint. 
+
+This is a pretty **heavy** endpoint - if you try it on a massive program like the Magic Eden program, you'll get hundreds of thousands to MILLIONS of results back. This **will** break things if you're not careful. In the real world you'll [*rarely* need to get multiple accounts at once](https://twitter.com/redacted_noah/status/1593831571014012929), so don't worry about that for now. Just know that you shouldn't model your data such that `getProgramAccounts` is necessary.
 
 ```ts
         .then(async (accounts) => {
