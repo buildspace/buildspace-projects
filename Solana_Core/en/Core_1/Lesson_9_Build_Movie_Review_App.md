@@ -112,7 +112,7 @@ export class Movie {
 }
 ```
 
-That's it! We're done with the serialization part. Let's review some movies :popcorn: 
+That's it! We're done with the serialization part. Let's review some movies 🍿 
 
 #### 🤝 Creating transactions with data
 The final piece of the puzzle is taking the user's data, serializing it with the method we just made, and creating a transaction with it.

@@ -44,9 +44,7 @@ If you run `npm start` in the terminal, you'll see the script is run! All it tak
 
 Let's add an `initializeKeypair` function that will automatically create a keypair for us if we don't have one. Add this right after the imports:
 ```ts
-async function initializeKeypair(
-  connection: Web3.Connection
-): Promise<Web3.Keypair> {
+async function initializeKeypair(connection: Web3.Connection): Promise<Web3.Keypair> {
   if (!process.env.PRIVATE_KEY) {
     console.log('Generating new keypair... 🗝️');
     const signer = Web3.Keypair.generate();
@@ -149,7 +147,7 @@ New balance is 1 SOL
 Public key: 7Fw3bXskk5eonycvET6BSufxAsuNudvuxF7MMnS8KMqX
 ```
 
-We are ready to rrrrrrrrrrrrumble :boxing_glove: 
+We are ready to rrrrrrrrrrrrumble 🥊
 
 #### 🖱 Call an on-chain program
 Time to put our client to use. We're going to write data to an existing program on the Solana network. People think that Solana development is all about writing programs in Rust. Nah! The majority of blockchain development is interacting with existing programs. 

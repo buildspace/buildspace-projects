@@ -1,4 +1,4 @@
-We now know a bunch about interacting with the network via code. To make transactions, we used private keys. That won't work with users lol. To let people buy jpegs for real money from us, we need to work with wallets. 
+We now know a bunch about interacting with the network via code. To make transactions, we used private keys. That won't work with users lol. To let people buy jpegs for real money from us, we need to work with wallets.
 
 "Wallet" is kind of a weird name, since they do a lot more than just hold stuff. A wallet is *anything* that stores a secret key securely and lets the user sign transactions. They come in many forms, most commonly browser extensions, and they give you (the developer) APIs to suggest transactions to the user. Wallets make it possible for you to safely do this:
 
@@ -21,11 +21,11 @@ npm install @solana/wallet-adapter-base \
     @solana/wallet-adapter-react-ui
 ```
 
-`wallet-adapter-ui` takes care of the whole UI for us - connecting, selecting your wallet, disconnecting, all sorted!
+`wallet-adapter-react-ui` takes care of the whole UI for us - connecting, selecting your wallet, disconnecting, all sorted!
 
 ![Solana Wallet adapter popup](https://github.com/solana-labs/wallet-adapter/raw/master/wallets.png)
 
-Thanks to all these sick libraries, we never have to build wallet connection stuff on Solana! Take this moment to be greatful to the maintainers for saving you time and the hair on your head. 
+Thanks to all these sick libraries, we never have to build wallet connection stuff on Solana! Take this moment to be greatful to the maintainers for saving you time and the hair on your head.
 
 #### 👜 Build a wallet connect button
 Let's take these libraries out for a spin! Set up a new project in your workspace:
