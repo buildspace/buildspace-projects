@@ -5,9 +5,9 @@ Really, all you need to know is that IPFS is the industry standard for storing a
 ### 🛸 Uploading files to IPFS
 Using it is pretty simple. All you need to do is upload your files to IPFS and then use the unique content ID hash it gives you back in your web app when people want to download stuff.
 
-First, you'll need to upload your files to a service that specializes in "[pinning](https://docs.ipfs.io/how-to/pin-files/)" — which means your file will essentially be cached so its easily retrievable. I like using [**Pinata**](https://www.pinata.cloud/?utm_source=buildspace) as my pinning service — they give you 1 GB of storage for free, which is enough for 100s of assets. Just make an account, upload your store files through their UI, and that's it! 
+First, you'll need to upload your files to a service that specializes in "[pinning](https://docs.ipfs.io/how-to/pin-files/)" — which means your file will essentially be cached so its easily retrievable. I like using [**Web3.Storage**](https://web3.storage/) as my pinning service — they give you 1 TiB of storage for free, which is enough for 100s of assets. Just make an account, upload your store files through their UI, and that's it! 
 
-![](https://hackmd.io/_uploads/ry9MWF8P9.png)
+![](https://i.imgur.com/ZWHn8KM.jpg)
 
 Go ahead and copy the files "CID". This is the files content address on IPFS! What's cool now is we can create this link to access the file:
 
@@ -24,6 +24,10 @@ ipfs://INSERT_YOUR_CID_HERE
 And that'll actually start an IPFS node on your local machine and retrieve the file! If you try to do it on something like Chrome it just does a Google search lol. Instead you'll have to use the `cloudflare-ipfs` link.
 
 And now you know how to use IPFS! There's a catch in our scenario though - since items on IPFS are public, **anyone** can access them if they have the unique content ID hash. We'll explore methods of protecting our stores from this later ;)
+
+REAL QUICK, while you're on your Account Page of Web3.Storage, create an API Token for your account (you'll need this in a minute). Name it w/e, I call my "dev", it doesn't matter.
+
+![](https://i.imgur.com/73lrTlT.png)
 
 ### 🎈 Downloading files from IPFS
 Whatever goes up, must come down. Unless it's a rocket to the moon. Or the 21 helium balloons I bought on my fourth birthday without telling my parents. I wonder where they are today. 
