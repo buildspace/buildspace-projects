@@ -289,7 +289,6 @@ useEffect(() => {
       metaplex
         .nfts()
         .findByMint({ mintAddress: mint })
-        .run()
         .then((nft) => {
           console.log("nft data on stake page:", nft)
           setNftData(nft)
