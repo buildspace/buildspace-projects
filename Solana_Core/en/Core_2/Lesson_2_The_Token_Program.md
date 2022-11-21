@@ -2,7 +2,7 @@ The humble token - the original promise of the blockchain, and probably the main
 
 This lesson is all about how tokens work on Solana. If you’re familiar with other chains, there are likely some differences here, so try not to draw too many connections to how you currently think about tokens.
 
-Talking about how tokens work in Solana is also a great opportunity to see how different programs use accounts. The deeper and deeper you get into Solana, the more important you see accounts have. They’re abstract and flexible like files in a file system, but that also means the accounts on any given program can get complex! It may be confusing starting out, but give it time and it’ll start to make more sense.
+Talking about how tokens work in Solana is also a great opportunity to see how different programs use accounts. The deeper and deeper you get into Solana, the more important you see accounts are. They’re abstract and flexible like files in a file system, but that also means the accounts on any given program can get complex! It may be confusing starting out, but give it time and it’ll start to make more sense.
 
 Tokens on Solana are made and managed using the Solana Token Program, one of the few programs in the Solana Program Library (SPL). Both regular tokens and NFTs are Solana program library tokens. We won't be working with NFTs today, but don't worry we'll get there soon.
 
