@@ -18,7 +18,6 @@ const OPENSEA_LINK = '';
 const TOTAL_MINT_COUNT = 50;
 
 const App = () => {
-
   const checkIfWalletIsConnected = () => {
     /*
     * First make sure we have access to window.ethereum

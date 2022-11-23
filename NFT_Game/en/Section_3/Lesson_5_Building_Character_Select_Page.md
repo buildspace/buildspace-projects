@@ -196,7 +196,7 @@ I hope you are starting to see the common trend of interacting with a smart cont
 
 This function is going to call the `mintCharacterNFT` function on our contract. It needs to know which character to mint though, so we pass it the index of that character!
 
-We then just wait for the transaction to finish before we do anything else. Something seems a bit off though... It doesn't look like we are returning any data from our smart contract? How do we know when the NFT is truly minted? **Remember that `event` you created that fires off after an NFT is minted?** Thats the thing we are going to use!
+We then just wait for the transaction to finish before we do anything else. Something seems a bit off though... It doesn't look like we are returning any data from our smart contract? How do we know when the NFT is truly minted? **Remember that `event` you created that fires off after an NFT is minted?** That's the thing we are going to use!
 
 We are going to listen in for an event from our smart contract that says, "Yo I'm done minting your NFT. You can continue."
 
@@ -304,24 +304,24 @@ Big salute to you for your endeavors. At this point we should be able to give th
 
 ![Untitled](https://i.imgur.com/PQHzJzq.png)
 
-My. Goodness. You just minted a character NFT from your Smart Contract. Straight up legend out here 🔥. Before we move on let's head over to OpenSea and see if our character was truly minted. To get the direct link to your NFT you can just do:
+My. Goodness. You just minted a character NFT from your Smart Contract. Straight up legend out here 🔥. Before we move on let's head over to Pixxiti and see if our character was truly minted. To get the direct link to your NFT you can just do:
 
 ```javascript
-https://testnets.opensea.io/assets/CONTRACT_ADDRES/TOKEN_ID
+https://goerli.pixxiti.com/nfts/CONTRACT_ADDRES/TOKEN_ID
 ```
 
 Here's what mines looks like:
 
 ![Untitled](https://i.imgur.com/W3eca7t.png)
 
-AHH YES. There is my Leo. One thing to note here - make sure to look for your NFT on the [https://testnets.opensea.io/](https://testnets.opensea.io/) since we are using Rinkeby!
+AHH YES. There is my Leo. One thing to note here - make sure to look for your NFT on the [https://goerli.pixxiti.com](https://goerli.pixxiti.com) since we are using Goerli!
 
 You freaking did it! Now that we have our character NFT we can finally go out and protect the Metaverse from rogue beings ⚔️.
 
-Feel free to also set up an `alert` that automatically gives your player the OpenSea link when it's done minting. For example something like:
+Feel free to also set up an `alert` that automatically gives your player the Goerli link when it's done minting. For example something like:
 
 ```javascript
-alert(`Your NFT is all done -- see it here: https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
+alert(`Your NFT is all done -- see it here: https://goerli.pixxiti.com/nfts/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`)
 ```
 
 ### 🚨 Progress report

@@ -28,7 +28,7 @@ Here are some of mine. I like the first row to be words that feel like they "des
 
 ![](https://i.imgur.com/ADawgrB.png)
 
-Perhaps you wanna generate random band name. Perhaps you wanna generate random character names for your Dungeons and Dragons games. Do whatever you want. Maybe you don't give a shit about three word combinations and just want to make SVGs of pixel art penguins. Go for it. Do whatever you want :).
+Perhaps you wanna generate a random band name. Perhaps you wanna generate random character names for your Dungeons and Dragons games. Do whatever you want. Maybe you don't give a shit about three word combinations and just want to make SVGs of pixel art penguins. Go for it. Do whatever you want :).
 
 Note: I recommend like 15-20 words per array. I've noticed around 10 it's usually not random enough. 
 
@@ -38,7 +38,7 @@ Note: I recommend like 15-20 words per array. I've noticed around 10 it's usuall
 function pickRandomFirstWord
 ```
 
-This function looks kinda funky. Right? Lets talk about how we're randomly picking stuff from the arrays.
+This function looks kinda funky. Right? Let's talk about how we're randomly picking stuff from the arrays.
 
 So, generating a random number in smart contracts is widely known as a **difficult problem**.
 
@@ -156,7 +156,7 @@ All that's happening here is we're putting it all together and adding that same 
 
 ## 🛠 Debugging the `finalTokenUri` content
 
-Now that you have your tokenURI setup, how do we know if it's actually correct? After all, this holds all our data for our NFT! You can use a cool tool like - [NFT Preview](https://nftpreview.0xdev.codes/) to see a quick preview of the image and the contents of the json without deploying it again and again on the opensea testnet. 
+Now that you have your tokenURI setup, how do we know if it's actually correct? After all, this holds all our data for our NFT! You can use a cool tool like - [NFT Preview](https://nftpreview.0xdev.codes/) to see a quick preview of the image and the contents of the json without deploying it again and again on the OpenSea testnet. 
 
 To make it easier, you can pass the `tokenURI` code as a query parameter like this,
 
@@ -178,21 +178,21 @@ console.log("--------------------\n");
 ```
 ![image](https://i.imgur.com/CsBxROj.png)
 
-## 🚀 Deploy to Rinkeby
+## 🚀 Deploy to Goerli
 
 The coolest part is we can just re-deploy without changing our script using:
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
-Once we redeploy, you'll be able to see your NFTs on [https://testnets.opensea.io/](https://testnets.opensea.io/) once you search the newly deployed contract address. Again, **don't click enter**. OpenSea is weird so you'll need click the collection itself when it comes up.
+Once we redeploy, you'll be able to see your NFTs on [https://testnets.opensea.io](https://testnets.opensea.io/) once you search the newly deployed contract address. Again, **don't click enter**. OpenSea is weird so you'll need to click the collection itself when it comes up.
 
-Note: Remember to use `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE` if you're using Rarible.
+Note: Remember to use `https://testnet.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:TOKEN_ID` if you're using Rarible.
 
 Contracts are **permanent**. So, whenever we re-deploy our contract we're actually creating a whole new collection.
 
-You should be able to see the new collection on OpenSea or Rarible :)!
+You should be able to see the new collection on OpenSea :)!
 
 ## 🤖 Allowing users to mint
 
@@ -204,4 +204,4 @@ So, let's build that :)!
 
 ## 🚨Progress report
 
-If you got one, send a screenshot in #progress of your new dynamically generated NFT on OpenSea/Rarible :). Also -- if you haven't tweeted an image of your hilarious NFT collection yet now is the time to do so!! Remember to tag @_buildspace!!! We'll RT as many people as we can!
+If you got one, send a screenshot in #progress of your new dynamically generated NFT on OpenSea :). Also -- if you haven't tweeted an image of your hilarious NFT collection yet now is the time to do so!! Remember to tag @_buildspace!!! We'll RT as many people as we can!

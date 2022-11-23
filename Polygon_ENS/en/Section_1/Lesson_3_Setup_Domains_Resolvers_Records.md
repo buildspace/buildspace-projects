@@ -36,7 +36,7 @@ contract Domains {
 
 Boom!
 
-We added a few functions here, but also the `domains` [mapping](https://docs.soliditylang.org/en/v0.8.10/types.html#mapping-types) variable! A mapping is a simple data type that “maps” two values. In our case, we’re matching a string (domain name) to a wallet address. 
+We added a few functions here, but also the `domains` [mapping](https://docs.soliditylang.org/en/v0.8.14/types.html#mapping-types) variable! A mapping is a simple data type that “maps” two values. In our case, we’re matching a string (domain name) to a wallet address. 
 
 This variable is special because it's called a "state variable" and it's cool because it is stored **permanently** in the contract’s storage. Meaning anyone who calls the register function will permanently store data related to their domain right on our contract.
 
@@ -252,7 +252,7 @@ await txn.wait();
 
 ### 🚨 Before you click "Next Lesson"
 
-*Note: if you don't do this, Raza will be very sad :(.*
+*Note: if you don't do this, Raza will be very sad :(*
 
 Customize your code a little!! Feel free to play around with the contract and `run.js` file and register multiple domains and set all sorts of records. Maybe you want people to map their domain to their email address — so `raza.mycustomdomain` would map to my email. Or maybe you want people to be able to add the IP address of their personal website as a record. You could even have the domain map to an SVG of the persons favorite meme lol. 
 

@@ -36,9 +36,9 @@ The first thing we need to do is actually have a way to initialize a character's
 
 I updated `MyEpicGame.sol` to look like this:
 
-```solidity
+```javascript
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 

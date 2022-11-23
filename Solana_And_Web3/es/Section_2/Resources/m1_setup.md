@@ -1,68 +1,68 @@
-## 🍎 Setting up Solana on a M1 macOS Machine
-**First off - I want to give a HUGE shoutout to our TA, Nick! Without Nick, this guide wouldn't have been doable. Once you finish this section make sure to give some love to Nick in Discord (Nick_G#4818)**
+## 🍎 Configuración de Solana en una máquina M1 macOS
 
-We are going to go **from this doesn't work on M1 masOS??** to 
+** En primer lugar, ¡quiero agradecer ENORMEMENTE a nuestro Asistente Técnico, Nick! Sin Nick, esta guía no hubiera sido posible. Una vez que termines esta sección, asegúrate de darle amor a Nick en Discord (Nick_G#4818)**
 
-![ankin it's working Gif](https://media.giphy.com/media/CuMiNoTRz2bYc/giphy.gif) 
+Vamos a pasar **de esto no funciona en M1 masOS??** a
 
-**real quick.**
+![ankin está funcionando Gif](https://media.giphy.com/media/CuMiNoTRz2bYc/giphy.gif)
 
-This guide will get you up and running with the Solana enviroment on your local machine(shoutout to fellow builder, **@billyjacoby#7369** he mocked up the first guide about getting set up without Rosetta!) We made modifications that will get you to becoming a Solana Master faster with less headaches 🙂.
+**Muy rápido.**
 
-Let's kick it off!
+Esta guía te ayudará a poner en funcionamiento el entorno de Solana en la máquina local (gracias a nuestro compañero constructor, **@billyjacoby#7369**, se burló de la primera guía sobre cómo configurar sin Rosetta). Hicimos modificaciones que harán que te conviertas en Solana Master más rápido y con menos dolores de cabeza 🙂.
 
-### ⚙️ Install Rust
+¡Vamos a empezar!
 
-In Solana, programs are written in Rust! If you don't know Rust don't worry. As long as you know some other language — you'll pick it up over the course of this project.
+### ⚙️ Instalación de Rust
 
-To install Rust we will open up our terminal and run this command:
+¡En Solana, los programas están escritos en Rust! Si no conoces Rust no te preocupes. Siempre que sepas algún otro lenguaje, lo aprenderás en el transcurso de este proyecto.
+
+Para instalar Rust abriremos nuestra terminal y ejecutaremos este comando:
 
 ```bash
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 ```
 
-You will be prompted with multiple options to install. We are going to go with default entering 1 and then enter!
-
-Once you're done, go ahead and restart your terminal and then verfiy it was installed by entering:
+Aparecerán múltiples opciones para instalar. Vamos a ir con el valor predeterminado ingresando 1 y luego ¡ingresar!
+Una vez que haya terminado, continuemos y vamos a reiniciar la terminal y luego verificar que se instaló ingresando:
 
 ```bash
 rustup --version
 ```
 
-Then, make sure the rust compiler is installed:
+Luego, revisar que el compilador de Rust esté instalado:
 
 ```bash
 rustc --version
 ```
 
-Last, let's make sure Cargo is working as well. Cargo is the rust package manager.
+Por último, asegurémonos de que Cargo también funcione. Cargo es el administrador de paquetes de Rust.
 
 ```bash
 cargo --version
 ```
-As long as all those commands output a version and didn't error, you're good to go!
 
+Siempre y cuando todos estos comandos generen una versión y no tengan errores, ¡ya está listo!
 
-### 🔥Install Solana - THIS IS WHAT WE CAME FOR!
+### 🔥Instalar Solana - ¡ESTO ES PARA LO QUE VENIMOS!
 
-We are going to build it from it's source. What does this mean? In short, it allows us to build Solana on our computer instead of downloading a pre-built version.
+Vamos a construir desde el origen. ¿Qué significa esto? En resumen, nos permite construir Solana en nuestra computadora en lugar de descargar una versión preconstruida.
 
-We are to download with this command:
+Vamos a descargar con este comando:
 
 ```bash
 git clone https://github.com/solana-labs/solana.git/
 ```
 
-Once it has finished cloning, we are going to enter the Solana directory and checkout the version branch `v1.8.2`:
+Una vez que haya terminado de clonar, ingresaremos al directorio de Solana y revisaremos la rama de la versión `v1.8.2`:
 
 ```bash
 cd solana
 git checkout v1.8.2
 ```
 
-`git checkout` is just switching to a stable version, so we can send ourselves some `$SOL` later on without receieving this error `Error: RPC response error -32601: Method not found`.
+`git checkout` solo está cambiando a una versión estable, por lo que podemos enviarnos algunos `$SOL` más adelante sin recibir este error `Error: error de respuesta RPC -32601: Método no encontrado`.
 
-Next, we are going to run this command:
+A continuación, vamos a ejecutar este comando:
 
 ```bash
 ./scripts/cargo-install-all.sh .
@@ -70,32 +70,28 @@ Next, we are going to run this command:
 
 <details>
 <summary>Having Problems?</summary>
-
-If you receieve an error that looks like this - `greadlink: command not found` you will need to do two things:
-- Install Brew using `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` (this may take a while)
-  
-- Add brew to your path using `export PATH="/opt/homebrew/bin:$PATH"`
-
-- Install coreutils using `brew install coreutils`
-
-Then run the script above once more an see if it works!
-If that outputs a version number, you're good to go!
+Si te llega a aparecer un error similar a este: `greadlink: comando no encontrado`, deberás hacer dos cosas:
+- Instale Brew usando `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` (esto puede llevar un rato)
+- Agrega Brew a su ruta usando `export PATH="/opt/homebrew/bin:$PATH"`
+- Instala coreutils usando `brew install coreutils`
+¡Luego ejecute el script anterior una vez más y ve si funciona!
+Si eso genera un número de versión, ¡está listo!
 </details>
 
-This might take some time, so don't be alarmed! Once you're done installing, run this to make sure everything is in working order:
+Esto puede tomar algún tiempo, ¡así que no te preocupes! Una vez que se haya terminado de instalar, ejecuta esto para estar seguros de que todo funcione correctamente:
 
 ```bash
 solana --version
 ```
 
-Next thing you'll want to do is run these two commands separately:
+Lo siguiente que vamos a hacer es ejecutar estos dos comandos por separado:
 
 ```bash
 solana config set --url localhost
 solana config get
 ```
 
-This will output something like this:
+Esto generará algo como esto:
 
 ```bash
 Config File: /Users/nicholas-g/.config/solana/cli/config.yml
@@ -105,126 +101,124 @@ Keypair Path: /Users/nicholas-g/.config/solana/id.json
 Commitment: confirmed 
 ```
 
-This means that Solana is set up to talk to our local network! When developing programs, we're going to be working w/ our local Solana network so we can quickly test stuff on our computer.
-The last thing to test is we want to make sure we can get a local Solana node running. Basically, remember how we said that the Solana chain is run by "validators"? Well — we can actually set up a validator on our computer to test our programs with.
+¡Esto significa que Solana está configurado y se habla con nuestra red local! Al desarrollar programas, trabajaremos con nuestra red Solana local para que podamos probar cosas rápidamente en nuestra computadora.
 
-First, shoutout to **@dimfled#9450**, and send some love his way! He has 'seen things' building with Solana recently and gave us this step to get things working on M1s!
+Lo último que debemos probar es que queremos asegurarnos de que podemos ejecutar un nodo local de Solana. Básicamente, ¿recuerdas que dijimos que la cadena Solana está dirigida por "validadores"? Bueno, en realidad podemos configurar un validador en nuestra computadora para probar nuestros programas.
 
-We are going to run our Solana validator manually. Will exaplin why we need this shortly:
+¡Primero, manda saludos a **@dimfled#9450** y envíale, amor! ¡Él ha 'visto cosas' construyendo con Solana recientemente y nos dio este paso para hacer que las cosas funcionen en M1!
+
+Vamos a ejecutar nuestro validador Solana manualmente. Explicaré por qué necesitamos esto en breve:
 
 ```bash
 solana-test-validator --no-bpf-jit
 ```
 
-
-This may take a bit to get started but once it's going you should see something like this:
+Esto puede tomar un poco de tiempo para comenzar, pero una vez que esté funcionando, deberás ver algo como esto:
 
 ![Untitled](https://i.imgur.com/FUjRage.jpg)
 
+¡¡Excelente!! Ahora estás ejecutando un validador local. Muy genial :).
 
-Boom!! You're now running a local validator. Pretty cool :).
+### ☕️ Instalación de Node, NPM y Mocha
 
+Es muy probable que ya tengas Node y NPM. Cuando hago node --version obtengo v16.0.0. La versión mínima es v11.0.0. Si no tiene Node y NPM, consíguelo [aquí] (https://nodejs.org/en/download/).
 
-
-### ☕️ Install Node, NPM, and Mocha
-
-Pretty solid chance you already have Node and NPM. When I do node --version I get v16.0.0. The minimum version is v11.0.0. If you don't have node and NPM, get it [here](https://nodejs.org/en/download/).
-
-After that, be sure to install this thing called Mocha. It's a nice little testing framework to help us test our Solana programs.
+Después de revisar eso, instalaremos esto llamado Mocha. Es un marco de prueba pequeño y agradable para ayudarnos a probar nuestros programas Solana.
 
 ```bash
 npm install -g mocha
 ```
 
-### ⚓️ The magic of Anchor
+### ⚓️ La magia de Anchor
 
+Vamos a usar mucho esta herramienta llamada "Anchor". Si conoces Hardhat del mundo de Ethereum, ¡es algo parecido! Excepto que está hecho para Solana. **Básicamente, hace que sea muy fácil para nosotros ejecutar los programas de Solana localmente e implementarlos en la cadena de Solana real cuando estemos listos.**
 
-We're going to be using this tool called "Anchor" a lot. If you know about Hardhat from the world of Ethereum, it's sorta like that! Except — it's built for Solana. **Basically, it makes it really easy for us to run Solana programs locally and deploy them to the actual Solana chain when we're ready!**
+Anchor es un proyecto *muy reciente* dirigido por unos pocos desarrolladores principales. Es probable que te encuentres con algunos problemas. Únete a [Anchor Discord](https://discord.gg/8HwmBtt2ss) y no dudes en hacer preguntas o [crear un problema](https://github.com/project-serum/anchor/issues) en el Github a medida que te encuentres con problemas. Los desarrolladores son impresionantes. Tal vez incluso digas que eres de buildspace en #general en su Discord :).
 
-Anchor is a *really early projec*t run by a few core devs. You're bound to run into a few issues. Be sure to join the [Anchor Discord](https://discord.gg/8HwmBtt2ss) and feel free to ask questions or [create an issue](https://github.com/project-serum/anchor/issues) on their Github as you run into issues. The devs are awesome. Maybe even say you're from buildspace in #general on their Discord :).
+**Por cierto, no te unas a su Discord y hagas preguntas aleatorias esperando que la gente te ayude. Esfuerzate primero por buscar en el Discord para ver si alguien más ha tenido la misma pregunta. Proporciona tanta información y detalle sobre tus preguntas como sea posible. Haz que la gente quiera ayudarte jajaja.**
 
-**BTW — don't just join their Discord and ask random questions expecting people to help. Try hard yourself to search the their Discord to see if anyone else has had the same question you have. Give as much info about your questions as possible. Make people want to help you lol.**
+*En serio: únete a Discord, los desarrolladores son realmente útiles.*
 
-*Seriously — join that Discord, the devs are really helpful.*
-
-To install Anchor, go ahead an run:
+Para instalar Anchor, siga adelante y ejecute:
 
 ```bash
 cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
 ```
 
-The above command may take a while. Once it's done, it may ask you to update you path, remember to do that.
+El comando anterior puede tardar un poco en ejecutarse. Una vez hecho esto, te pedirá que actualices su ruta, recuerda hacerlo.
 
-From here run:
+Ejecutamos:
 
 ```bash
 anchor --version
 ```
 
-If you got that working, nice, you have Anchor!!
+Si ya funciona, genial, ¡tienes Anchor!
 
-We'll also use Anchor's npm module and Solana Web3 JS — these both will help us connect our web app to our Solana program!
+También usaremos el módulo npm de Anchor y Solana Web3 JS; ¡ambos nos ayudarán a conectar nuestra aplicación web a nuestro programa Solana!
 
 ```bash
 npm install @project-serum/anchor @solana/web3.js
 ```
 
-### 🏃‍♂️ Create a test project and run it
+### 🏃‍♂️ Crea un proyecto de prueba y ejecútalo
 
-Okay, we're *nearly done* haha. The last thing we need to do to finalize installation is to actually run a Solana program 
-locally and make sure it actually works.
+Bien, *casi terminamos* jaja. Lo último que debemos hacer para finalizar la instalación es ejecutar un programa Solana localmente y asegurarnos de que realmente funcione.
 
-Before we begin, make sure you have `yarn` installed on your machine:
+Antes de comenzar, fíjate de tener `yarn` instalado en tu máquina:
 
 ```bash
 brew install yarn
 ```
 
-We can make the boilerplate Solana project named `myepicproject` with one easy command:
+Podemos hacer que el proyecto estándar de Solana se llame `myepicproject` con un comando fácil:
 
 ```bash
 anchor init myepicproject --javascript
 cd myepicproject
 ```
 
-`anchor init` will create a bunch of files/folders for us. It's sort of like `create-react-app` in a way. Go ahead and open up your project directory in VSCode and take a look around!
+`anchor init` creará un montón de archivos/carpetas para nosotros. Es algo así como `create-react-app` en cierto modo. ¡Continua y abre el directorio del proyecto en VSCode y echa un vistazo!
 
-Before we dive in, remember when we set our local validator as `solana-test-validator --no-bpf-jit`? Well, we did that because things right now are still really new with M1 Mac's and Anchor. 
-Anchor actually runs it's own validator, and on the M1 it will fail to do that and throw an error like - `FetchError: request to http://localhost:8899/ failed` when you go to run `anchor test`.
+Antes de ir directamente, ¿recuerdas cuando configuramos nuestro validador local como `solana-test-validator --no-bpf-jit`? Bueno, lo hicimos porque las cosas en este momento todavía son realmente nuevas con M1 Mac y Anchor.
 
-The solution right now is to have Anchor run with Solana's validator instead. Pretty dope!
+Anchor en realidad ejecuta su propio validador, y en el M1 no lo hará y arrojará un error como - `FetchError: solicitud a http://localhost:8899/ falló` cuando vaya a ejecutar `anchor test`.
 
-Okay, back to it! Let's open up a new terminal window and run:
+La solución en este momento es hacer que Anchor se ejecute con el validador de Solana.
+
+Bien, ¡volvamos a eso! Abramos una nueva ventana de terminal y ejecutemos:
 
 ```bash
 solana-test-validator --no-bpf-jit
 ```
 
-### 🔑 Create a local keypair
+### 🔑 Crea un par de llaves local
 
-In order for us to talk to our Solana programs we need to generate a keypair. Really all you need to know about this is it allows us to digitally sign for transactions in Solana! Still curious? [Take a look at this page](https://solana-labs.github.io/solana-web3.js/classes/Keypair.html) for more information!
+Para que podamos comunicarnos con nuestros programas Solana, necesitamos generar un par de claves. ¡Realmente todo lo que necesitas saber sobre esto es que nos permite firmar digitalmente para transacciones en Solana! ¿Todavía tienes curiosidad? [Eche un vistazo a esta página](https://solana-labs.github.io/solana-web3.js/classes/Keypair.html) para obtener más información.
 
 ```bash
 solana-keygen new -o target/deploy/myepicproject-keypair.json
 ```
-(Don't worry about creating a passphrase for now, just press "Enter" when asked!)
 
-You will see this keypair in a generated `JSON` file located at `target/deploy/myepicproject-keypair.json`.
+(No te preocupes por crear una frase de contraseña por ahora, ¡simplemente presiona "Enter" cuando te lo pida!)
+Verás este par de claves en un archivo 'JSON' generado ubicado en 'target/deploy/myepicproject-keypair.json'.
 
-Then run this command: 
+Ahora ejecuta este comando:
 
 ```bash
 solana address -k target/deploy/myepicproject-keypair.json
 ```
 
-This will return the keypair in the terminal. We are going to copy that address and open up our project in our code editor and go to `Anchor.toml` in the root of our project and paste this on line two replacing the address that is already there.
-Now, we will go back over to our terminal where we got set up in our project folder and run:
+Esto devolverá el par de claves en la terminal. Vamos a copiar esa dirección y abrir nuestro proyecto en nuestro editor de código e ir a `Anchor.toml` en la raíz de nuestro proyecto y pegar esto en la línea dos reemplazando la dirección que ya está allí.
+
+Ahora, volvamos a la terminal donde instalamos en nuestra carpeta de proyecto y ejecutaremos:
 
 ```bash
 anchor test --skip-local-validator
 ```
 
-This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
-
+¡Esto puede tomar un tiempo la primera vez que lo ejecutas! ¡Mientras obtenga las palabras verdes en la parte inferior que dicen "1 passing", estás listo para comenzar! Mantenme informado en Discord si llegas a tener problemas con esto.
 
 ![Untitled](https://i.imgur.com/V35KchA.png)
+
+

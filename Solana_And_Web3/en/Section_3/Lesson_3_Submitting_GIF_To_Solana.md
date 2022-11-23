@@ -1,4 +1,11 @@
-Okay — we are finally at the point where we can save some GIFs. It's so easy to do. We're just going to change up our `sendGif` function a little bit so we now call `addGif` and then call `getGifList` so that our web app refreshes to show our latest submitted GIF!
+Okay — we are finally at the point where we can save some GIFs. It's so easy to do. We're just going to change up our `sendGif` function a little bit, and add one last  `import` so we now call `addGif` and then call `getGifList` so that our web app refreshes to show our latest submitted GIF!
+
+```javascript
+// Other imports...
+// Add this 2 new lines
+import { Buffer } from "buffer";
+window.Buffer = Buffer;
+```
 
 ```javascript
 const sendGif = async () => {
@@ -9,8 +16,8 @@ const sendGif = async () => {
   setInputValue('');
   console.log('Gif link:', inputValue);
   try {
-    const provider = getProvider();
-    const program = new Program(idl, programID, provider);
+    const provider = getProvider()
+    const program = await getProgram(); 
 
     await program.rpc.addGif(inputValue, {
       accounts: {

@@ -27,7 +27,6 @@ Start by going to your search menu and typing in `Ubuntu`. You should see a shel
 For this, we want to make sure your machine is actually enabled to use WSL. In your search bar go aheaad and type in "Windows Features". You should see an option that says something along the lines of enabling and disabling Windows features. Go ahead and choose that. You will now need to make sure that the following options are checked:
 
 - Windows Subsystem for Linux
-- Windows Subsystem for Linux
 - Virtual Machine Platform
 
 After you have this all ready to go, restart your machine once again and see if you can open Ubuntu terminal! If you are still running into problems with it, this may mean your CPU does not have Virtualization enabled.
@@ -74,7 +73,7 @@ To install Rust just use this command -
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 ```
 
-Once you're done, verify by doing:
+Once you're done, restart Ubuntu terminal. Once it's up, verify by doing:
 
 ```bash
 rustup --version
@@ -190,9 +189,23 @@ cargo install --git https://github.com/project-serum/anchor avm --locked --force
 
 The above command may take a while and your computer may get a little toasty 🔥. 
 
-This command *can* fail if you don't have all the necessary dependencies. Run this if cargo install fails:
+This command *can* fail if you don't have all the necessary dependencies. Run this **if** cargo install fails (and then run the above command again to install Anchor Version Manager) :
 ```bash
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev libssl-dev
+```
+
+If you're having issues with `openssl-sys v0.9.72` try running command below. This make sures the development packages of `openssl` are installed.
+
+If you're on Ubuntu:
+
+```bash
+sudo apt-get install libssl-dev
+```
+
+If you're on Fedora:
+
+```bash
+sudo apt-get install openssl-devel
 ```
 
 Once this is done, you'll have **Anchor Version Manager** installed. Now we can actually install Anchor:

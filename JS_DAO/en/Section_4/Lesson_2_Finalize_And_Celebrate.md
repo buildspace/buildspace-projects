@@ -6,9 +6,9 @@ You’ve done it. You made it to the end. I’m proud af. This is you rn:
 
 DAOs are this really new, mystical thing that a lot of people are talking about. But, you did more than just talk about them — you actually made one!! In classic buildspace style, you dove into this really deep and complex topic by just hopping right into the code. Congrats my friend!
 
-A quick review here you just:
+A quick review here, you just:
 
-✅ deployed your own custom ERC-20 token
+✅ deployed your own custom ERC-20 token.
 
 ✅ deployed your own ERC-1155 NFT people can mint to join your DAO.
 
@@ -16,15 +16,7 @@ A quick review here you just:
 
 ✅ built a dapp that lets people connect their wallet, get an NFT, see a DAO Dashboard where they can see other members + actually vote on proposals that are executed directly by your governance contract.
 
-I know it’s hard to believe, but you created a full-fledged DAO. I hope at the very least this project gave you a grasp on what a DAO is and how one works. There is of course more to a DAO than what we covered in this project here, stuff like tokenomics, running an actual community, planning your DAOs roadmap, etc — these are all things we haven't covered by hey I’m sure you’ll figure it out ;).
-
-### 🤟 Your NFT!
-
-**Be sure to click the button at the bottom of this page and submit your final link. Otherwise, our system won't mark you as "complete".**
-
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
-
-[Loom](https://www.loom.com/share/99c4d4bddd624661b84e551c1257027e)
+I know it’s hard to believe, but you created a full-fledged DAO. I hope at the very least this project gave you a grasp on what a DAO is and how one works. There is of course more to a DAO than what we covered in this project here, stuff like tokenomics, running an actual community, planning your DAOs roadmap, etc — these are all things we haven't covered , but hey, I’m sure you’ll figure it out ;).
 
 ### 🌈 Before you head out
 

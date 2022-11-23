@@ -8,7 +8,7 @@ Note: **You don't have to use replit to build + deploy your site. If you want to
 
 Make an account on Replit before moving on.
 
-I've already created a basic react project that you can **fork** on Replit. **Just go [here](https://replit.com/@adilanchian/nft-starter-project?v=1), and near the right you'll see the "Fork" button.** Be sure you're logged in, then click this.
+I've already created a basic react project that you can **fork** on Replit. **Just go [here](https://replit.com/@adilanchian/nft-starter-project?v=1), and near the right, you'll see the "Fork" button.** Be sure you're logged in, then click this.
 
 You'll magically clone my repo and full IDE in your browser to work with the code. Once it stops loading and shows you some code click "run" at the top and you're good to go. Might take 2-4 min the first time.
 
@@ -18,7 +18,7 @@ You'll magically clone my repo and full IDE in your browser to work with the cod
 
 Awesome, we have a **deployed** React project we can easily work with. That was simple :).
 
-Next we need an Ethereum wallet. There are a bunch of these, but, for this project we're going to use Metamask. Download the browser extension and set up your wallet [here](https://metamask.io/download.html). Even if you already have another wallet provider, just use Metamask for now.
+Next, we need an Ethereum wallet. There are a bunch of these, but, for this project, we're going to use Metamask. Download the browser extension and set up your wallet [here](https://metamask.io/download.html). Even if you already have another wallet provider, just use Metamask for now.
 
 Why do we need Metamask? Well. We need to be able to call functions on our smart contract that live on the blockchain. And, to do that we need to have a wallet that has our Ethereum address and private key.
 

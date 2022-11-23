@@ -14,15 +14,15 @@ When we deploy our contract, we need to tell **all** the nodes:
 
 **"hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well"**
 
-This is where [Alchemy](https://alchemy.com/?r=b93d1f12b8828a57) comes in.
+This is where [QuickNode](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) comes in.
 
-Alchemy helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
+QuickNode helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
 This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense.
 
-This is where we will start - making an account with Alchemy! Just [click here](https://alchemy.com/?r=b93d1f12b8828a57) to get started. Once you have your account all ready to go, we will need to grab our API key. Take a look at this video I made to get a more in depth look at how to find this key as we will need it for later:
+This is where we will start - making an account with QuickNode! Just [click here](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) to get started. Once you have your account all ready to go, we will need to grab our API key. Take a look at this video I made to learn how to quickly get this key as we will need it for later:
 
-[Loom](https://www.loom.com/share/da01870f7d064725a5161811104128a3)
+[Loom](https://www.loom.com/share/bdbe5470b4b745819782f6727ba60baa)
 
 ### 🦊 MetaMask
 
@@ -30,7 +30,7 @@ Before we can do anything on a public net, we need a wallet!
 
 There are a bunch of these, but, for this project we're going to use MetaMask. Download the browser extension and set up your wallet [here](https://metamask.io/download.html). Even if you already have another wallet provider, just use MetaMask for now, it’s much easier to test with.
 
-Why do we need MetaMask? Remember how Hardhat gave us randomly generated wallets? We need a wallet for the same exact reason - **to interaction with the blockchain.**
+Why do we need MetaMask? Remember how Hardhat gave us randomly generated wallets? We need a wallet for the same exact reason - **to interact with the blockchain.**
 
 So, go ahead and set it all up! Their setup flow is pretty self-explanatory :).
 
@@ -121,7 +121,7 @@ module.exports = {
   solidity: "0.8.10",
   networks: {
     mumbai: {
-      url: "YOUR_ALCHEMY_MUMBAI_URL",
+      url: "YOUR_QUICKNODE_MUMBAI_URL",
       accounts: ["YOUR_TEST_WALLET_PRIVATE_KEY"],
     }
   }
@@ -192,4 +192,4 @@ If you don’t want to wait, or OpenSea is just not working, head over to [testn
 
 Epic work! Go ahead and post your deployed contract on PolygonScan in `#progress`
 
-Feel free to also post a screenshot of your OpenSea mint in #progress. Show everyone how hot your domain looks!
+Feel free to also post a screenshot of your OpenSea mint in #progress. Show everyone how dope your domain looks!

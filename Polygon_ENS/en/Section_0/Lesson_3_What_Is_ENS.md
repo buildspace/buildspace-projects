@@ -44,4 +44,4 @@ We've been doing a lot of talking. Let's actually build our own little version o
 
 ### 🚨 Progress report!
 
-Post in #progress your fav web app + domain combo! Help get everyone in the building mood 8).
+Post in #progress your fav web app + domain combo! Help get everyone in the building mood 8)

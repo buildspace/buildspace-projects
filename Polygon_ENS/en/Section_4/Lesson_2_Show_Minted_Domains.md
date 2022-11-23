@@ -263,7 +263,7 @@ And this is what it renders to:
 
 ![https://i.imgur.com/EWZCQ0a.png](https://i.imgur.com/EWZCQ0a.png)
 
-Looking gooooooooooooooooooooooooooooood! See the tiny pencils? They let you edit the records for each domain you own.
+Looking goooooooooooooooooooooooood! See the tiny pencils? They let you edit the records for each domain you own.
 
 ### 🥂 Show “domain minted” popup
 

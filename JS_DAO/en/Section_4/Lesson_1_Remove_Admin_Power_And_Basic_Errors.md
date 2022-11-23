@@ -9,10 +9,9 @@ That way, only the voting contract is able to mint new tokens. We can do this by
 ```jsx
 import sdk from "./1-initialize-sdk.js";
 
-const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
-
 (async () => {
   try {
+    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
     // Log the current roles.
     const allRoles = await token.roles.getAll();
 
@@ -63,11 +62,18 @@ You'll see I still have the `transfer` role in conjunction with `AddressZero`, `
 
 ### 👍 Handle basic unsupported network error
 
-First, let's import one last hook `useNetwork` at the top of `App.jsx` to recognize a connection outside of the Rinkeby network. Also, we're importing `ChainId` from the thirdweb SDK to get Rinkeby's chain ID.
+First, let's import one last hook `useNetwork` at the top of `App.jsx` to recognize a connection outside of the Goerli network. Also, we're importing `ChainId` from the thirdweb SDK to get Goerli's chain ID.
 
 ```jsx
-import { useAddress, useMetamask, useEditionDrop, useToken, useVote, useNetwork } from '@thirdweb-dev/react';
-import { ChainId } from '@thirdweb-dev/sdk'
+import {
+  useAddress,
+  useNetwork,
+  useContract,
+  ConnectWallet,
+  Web3Button,
+  useNFTBalance,
+} from '@thirdweb-dev/react';
+import { ChainId } from '@thirdweb-dev/sdk';
 ```
 
 Then, define our `useNetwork` hook under our `useAddress` hook:
@@ -76,15 +82,15 @@ Then, define our `useNetwork` hook under our `useAddress` hook:
 const network = useNetwork();
 ```
 
-Next, add the following in your `App.jsx` file right under the `mintNft` function:
+Next, add the following in your `App.jsx` file right under `const memberList =...` function:
 
 ```jsx
-if (address && (network?.[0].data.chain.id !== ChainId.Rinkeby)) {
+if (address && (network?.[0].data.chain.id !== ChainId.Goerli)) {
   return (
     <div className="unsupported-network">
-      <h2>Please connect to Rinkeby</h2>
+      <h2>Please connect to Goerli</h2>
       <p>
-        This dapp only works on the Rinkeby network, please switch networks
+        This dapp only works on the Goerli network, please switch networks
         in your connected wallet.
       </p>
     </div>
@@ -92,9 +98,9 @@ if (address && (network?.[0].data.chain.id !== ChainId.Rinkeby)) {
 }
 ```
 
-We're checking if we're finding a chain on our preferred network, in our case Rinkeby, if we are not, we're prompting users to switch network.
+We're checking if we're finding a chain on our preferred network, in our case Goerli, if we are not, we're prompting users to switch network.
 
-Pretty simple! But, very useful. It’ll pop a message if the user isn’t on Rinkeby!
+Pretty simple! But, very useful. It’ll pop a message if the user isn’t on Goerli!
 
 ### 🤑 See your token on Uniswap
 
@@ -106,7 +112,7 @@ Pretty wild, right :)?
 
 People usually do swaps like these on Uniswap.
 
-Believe it or not, your token will now show up on Uniswap under Rinkeby.
+Believe it or not, your token will now show up on Uniswap under Goerli.
 
 Here’s a quick video for you to actually do it yourself:
 
