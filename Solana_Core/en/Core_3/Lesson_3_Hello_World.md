@@ -58,7 +58,7 @@ That's what our second `use` statement is for - it brings in the `entrypoint!` m
 
 Macros are like code shortcuts - they're a way to write code that writes code. `entrypoint!(process_instruction);` will expand to a bunch of boilerplate code at compile time, sort of like a template. You don't need to know how macros work, but you can read more about them [here](https://doc.rust-lang.org/book/ch19-06-macros.html).
 
-Our entrypoint function will called `process_instruction`, so here's what our `lib.rs` file should look like so far:
+Our entrypoint function will call `process_instruction`, so here's what our `lib.rs` file should look like so far:
 ```rs
 use solana_program::{
     account_info::AccountInfo,
