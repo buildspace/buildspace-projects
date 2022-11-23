@@ -22,7 +22,7 @@ npx hardhat node
 
 BOOM.
 
-You just started a local Ethereum network that **stays alive**. And, as you can see Hardhat gave us 20 accounts to work with and gave them all 10000 ETH we are now rich! Wow! Best project ever.
+You just started a local Ethereum network that **stays alive**. And, as you can see Hardhat gave us 20 accounts to work with and gave them all 10000 ETH. we are now rich! Wow! Best project ever.
 
 So right now, this is just an empty blockchain. No blocks!
 
