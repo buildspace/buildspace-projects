@@ -5,7 +5,6 @@ You can pick up where you left off in your last local environment, or set up a n
 git clone https://github.com/buildspace/solana-movie-program/
 cd solana-movie-program
 git checkout solution-add-comments
-npm i
 ```
 
 We'll be using the SPL token program to make all of this magic happen so go ahead and update the dependencies in `Cargo.toml`:
