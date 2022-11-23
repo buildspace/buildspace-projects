@@ -103,7 +103,7 @@ The `WalletModalProvider` is exactly that lol - it's a fancy React component tha
 
 `WalletProvider` gives us a standard interface for connecting to all sorts of wallets, so we don't have to bother reading docs for each wallet hehe.
 
-Next you'll see a bunch of wallet adapters from `wallet-adapter-wallets`. We'll use the imports from this to create a list of wallets we'll feed the `WalletProvider`. There's a bunch of other wallet adapters available, even some made for other blockchains! Check them out here. I just went with Phantom and Glow.
+Next you'll see a bunch of wallet adapters from `wallet-adapter-wallets`. We'll use the imports from this to create a list of wallets we'll feed the `WalletProvider`. There's a bunch of other wallet adapters available, even some made for other blockchains! Check them out [here](https://github.com/solana-labs/wallet-adapter/blob/master/PACKAGES.md#wallets). I just went with Phantom and Glow.
 
 Finally, we have `clusterApiURL`, which is just a function that generates an RPC endpoint for us based on the network we give it.
 
