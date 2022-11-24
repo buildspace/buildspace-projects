@@ -158,10 +158,10 @@ Hopefully you're starting to see the patterns now. We have to write a lot of cod
 #### 🚀 Build, deploy and test
 Time to earn some popcorn tokens 🍿
 
-First we'll build and deploy
+First we'll build and deploy.
 ```
 cargo build-bpf
-solana program deploy PATH_TO_TARGET
+solana program deploy <PATH>
 ```
 
 Then we'll test initialize the token mint
