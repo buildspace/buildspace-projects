@@ -528,7 +528,7 @@ First you'll want to build the program:
 cargo build-bpf
 ```
 
-Next, we can deploy:
+Next, we can deploy. Make sure <PATH> is replaced with the path to your `target/deploy/pda_local.so`:
 ```
 solana program deploy <PATH>
 ```
