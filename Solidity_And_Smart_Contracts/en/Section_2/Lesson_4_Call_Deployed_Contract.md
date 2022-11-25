@@ -13,7 +13,7 @@ So, our smart contract has this function that retrieves the total number of wave
 
 Lets call this function from our website :).
 
-Go ahead and write this function right under our `connectWallet()` function.
+Go ahead and write this function right below our `connectWallet()` function.
 
 ```javascript
 const wave = async () => {
