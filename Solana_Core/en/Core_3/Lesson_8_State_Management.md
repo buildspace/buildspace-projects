@@ -1,9 +1,9 @@
-Howdy! Ready to become a governer? No no, we're not doing that type of state management. The state we're talking about is the data of our program that's stored on-chain.
+Howdy! Ready to become a governor? No no, we're not doing that type of state management. The state we're talking about is the data of our program that's stored on-chain.
 
-We've got a solid program that takes instrution data and prepares it for processing. To get to the execution bits we'll need to learn a bit more Rust.
+We've got a solid program that takes instruction data and prepares it for processing. To get to the execution bits we'll need to learn a bit more Rust.
 
 #### 📝 Program state as a Rust data type
-Part of how Solana maintains its speed and efficiency is the fact the the programs are stateless. This means you can't change data on the program - everything is stored in external accounts, typically ones that are owned by the program. Mostly these accounts are PDAs - we'll look at their data storage elements now and dive into the rest later. 
+Part of how Solana maintains its speed and efficiency is the fact the programs are stateless. This means you can't change data on the program - everything is stored in external accounts, typically ones that are owned by the program. Mostly these accounts are PDAs - we'll look at their data storage elements now and dive into the rest later. 
 
 Just like how we convert instruction data to Rust types, we'll convert program state to Rust types to make it easier to work with. 
 
@@ -14,7 +14,7 @@ Think back to the `data` field in Solana accounts - it stores an array of raw by
 We'll be using borsh macros again:
 ![](https://hackmd.io/_uploads/SkrU5bS4o.png)
 
-Data is transferred and stored as raw bytes, but is changed to Rust types when we want to work with it. Makes sense, yeah? 
+Data is transferred and stored as raw bytes but is changed to Rust types when we want to work with it. Makes sense, yeah? 
 
 #### 🏠 Space and rent
 Yup, Solana has landlords too: the validators that store the state of the blockchain on their machines. 
@@ -23,8 +23,8 @@ Rent is paid in Lamports - the smallest unit of SOL (0.000000001 SOL = 1 Lamport
 
 ![](https://hackmd.io/_uploads/SyxoWWrNj.png)
 
-There's two ways to pay rent:
-1. Pay rent on a per-epoch basis. This is like paying rent monthly - as long as you keep paying you get to stay. If the account doesn't have enough SOL, it gets reset and the data is lost.
+There are two ways to pay rent:
+1. Pay rent on a per-epoch basis. This is like paying rent monthly - as long as you keep paying you to get to stay. If the account doesn't have enough SOL, it gets reset and the data is lost.
 2. Maintain a minimum balance equivalent to 2 years of rent. This makes the account *exempt* from rent. The logic here is that the hardware cost drops by 50% every 2 years, so if you have enough SOL to pay for 2 years of rent, you're good forever!
 
 Being rent-exempt is *required* now, so #2 is the only option. The best part about this approach is that when you no longer need to store data, you can destroy the account and get your SOL back! Free storage on the blockchain (minus transaction fees) 🥳
@@ -36,7 +36,7 @@ You can read more about this [here](https://docs.solana.com/implemented-proposal
 #### 📊 Calculating rent
 Calculating rent is easy - there's a helpful function for it. The tricky part is figuring out how much space you need.
 
-Here's this would look like for our epic note-taking program: 
+Here's what this would look like for our epic note-taking program: 
 ```rs
 // Calculate account size required for struct NoteState
 // 4 bytes to store the size of the subsequent dynamic data (string)
@@ -48,18 +48,18 @@ let rent = Rent::get()?;
 let rent_lamports = rent.minimum_balance(account_len);
 ```
 
-First thing we gotta do is calculate the total length of the data we're storing. We can do this by adding up the lengths of the strings and the 8 bytes for the id. 
+The first thing we gotta do is calculate the total length of the data we're storing. We can do this by adding up the lengths of the strings and the 8 bytes for the id. 
 
 In our case the `title` and `body` are dynamic data types (strings) - they can be of any length. We use the first 4 bytes to store the length of each item, so we add 4 to the length of each string.
 
 Then we can use the `Rent::get()` function to get the rent for the account. Ezpz!
 
 #### 📜 Program Derived Addresses
-We've got our data from the instruction, we've calculated how much we need to pay for rent, now we need an account to toss it in. Hello PDAs! Remember the chicken and egg problem from the front-end? Same deal here! We'll derive the address of the account from the program ID and a set of seeds.
+We've got our data from the instruction, we've calculated how much we need to pay for rent, and now we need an account to toss it in. Hello PDAs! Remember the chicken and egg problem from the front-end? Same deal here! We'll derive the address of the account from the program ID and a set of seeds.
 
 ![](https://hackmd.io/_uploads/SJjCC-BEs.png)
 
-We'll go into depth on how PDAs work in the future, for now all you need to know is the `find_program_address` function and that only the program in the `program_id` can sign for the PDA. It's like secure storage without needing a password.
+We'll go into depth on how PDAs work in the future, for now, all you need to know is the `find_program_address` function and that only the program in the `program_id` can sign for the PDA. It's like secure storage without needing a password.
 
 #### 🛫 Cross Program Invocations
 The last bit is to initialize the PDA (we only found the address in the last step). We'll use a Cross Program Invocation (CPI) to do this. As the name suggests, we'll be interacting with another program on the Solana network from within our program.
@@ -74,7 +74,7 @@ CPIs can be done using either `invoke` or `invoke_signed`:
 
 Here's what that looks like. You're probably wondering "wtf is this stuff" - don't worry, we'll practice this next and it'll make sense :)
 
-All we're doing here is creating a transaction inside a program using Rust, similar to how we did in our client using TypeScript. We've got a special `signers_seeds` thingy here that's required for the PDA.
+All we're doing here is creating a transaction inside a program using Rust, similar to how we did in our client using TypeScript. We've got a special `signers_seeds` thing here that's required for the PDA.
 
 #### ✂ Serializing and deserializing account data 
 
@@ -140,7 +140,7 @@ pub struct MovieAccountState {
 
 We've got both `BorshSerialize` and `BorshDeserialize` in here :)
 
-Next we'll need to update `lib.rs` to bring everything we'll need into scope. Update the top of the file to look like this:
+Next, we'll need to update `lib.rs` to bring everything we'll need into scope. Update the top of the file to look like this:
 
 ```rs
 use solana_program::{
@@ -225,7 +225,7 @@ invoke_signed(
 msg!("PDA created: {}", pda);
 ```
 
-`invoke_signed` is a transction to create the account. We're passing in the `create_account` instruction, the accounts we're using, and the seeds we're using to derive the PDA address.
+`invoke_signed` is a transaction to create the account. We're passing in the `create_account` instruction, the accounts we're using, and the seeds we're using to derive the PDA address.
 
 The final thing we need to do is update the account data:
 ```rs
@@ -277,7 +277,7 @@ Recall that the Student Intro program takes a user's name and a short message as
 Using what you've learned in this lesson, try to recreate the entirety of the Student Intro program.
 
 **Hints:** 
-In addition to taking a name a short message as instruction data, the program should:
+In addition to taking a name and a short message as instruction data, the program should:
 1. Create a separate account for each student
 2. Store `is_initialized` as a boolean, `name` as a string, and `msg` as a string in each account
 
