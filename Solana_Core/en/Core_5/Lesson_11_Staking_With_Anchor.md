@@ -1,4 +1,7 @@
-It's time to convert the NFT Staking Program and UI to Anchor! The buildoor project you've been working on is awesome as is, but it'll be simpler to work with moving forward if it's in Anchor. Go ahead and use what you've learned to:1. Rewrite the program from scratch using Anchor. Add some solid test coverage to make sure you aren't letting security risks slip through the cracks3. Replace complex UI code with calls to the Anchor method builder
+It's time to convert the NFT Staking Program and UI to Anchor! The buildoor project you've been working on is awesome as is, but it'll be simpler to work with moving forward if it's in Anchor. Go ahead and use what you've learned to:
+1. Rewrite the program from scratch using Anchor. 
+2. Add some solid test coverage to make sure you aren't letting security risks slip through the cracks
+3. Replace complex UI code with calls to the Anchor method builder
 
 You should spend a fair amount of time trying to do this independently. It's not a simple task, but you've got this. After a few hours if you feel stuck feel free to watch the video walkthroughs of our solution.
 
