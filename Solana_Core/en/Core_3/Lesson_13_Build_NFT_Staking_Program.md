@@ -166,7 +166,7 @@ Notice how we have defined the variables in the `process_initialize_stake_accoun
 
 ```rust
 // state.rs
-use borsh:: { BorshSeralize, BorshDeserialize };
+use borsh:: { BorshSerialize, BorshDeserialize };
 use solana_program:: {
     program_pack::{ IsInitialized, Sealed },
     pubkey::Pubkey,
