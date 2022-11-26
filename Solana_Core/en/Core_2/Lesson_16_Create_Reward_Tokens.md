@@ -47,7 +47,6 @@ Awesome! Now that we have the code to get started, let's paste the next chunk of
 import * as fs from "fs";
 import {
   bundlrStorage,
-  findMetadataPda,
   keypairIdentity,
   Metaplex,
   toMetaplexFile,
@@ -100,11 +99,10 @@ async function createBldToken(
         name: TOKEN_NAME,
         description: TOKEN_DESCRIPTION,
         image: imageUri,
-        })
-        .run();
+        });
 
     // Finding out the address where the metadata is stored
-    const metadataPda = findMetadataPda(tokenMint);
+    const metadataPda = metaplex.nfts().pdas().metadata({mint: tokenMint});
     const tokenMetadata = {
         name: TOKEN_NAME,
         symbol: TOKEN_SYMBOL,
@@ -187,15 +185,14 @@ const { uri } = await metaplex
     name: TOKEN_NAME,
     description: TOKEN_DESCRIPTION,
     image: imageUri,
-  })
-  .run();
+  });
 ```
 
 Once we've successfully uploaded our image to metaplex, we'll then fetch the address by calling the following section below.
 
 ```javascript
  // Finding out the address where the metadata is stored
-const metadataPda = findMetadataPda(tokenMint);
+const metadataPda = metaplex.nfts().pdas().metadata({mint: tokenMint});
 const tokenMetadata = {
     name: TOKEN_NAME,
     symbol: TOKEN_SYMBOL,
@@ -263,7 +260,7 @@ That's it. You're done now. Let's start running our code.
 #### 🚀 Running our code
 Open up your terminal in VS Code. You'll first need to install a module named `ts-node`. This is essential as we'll be running some typescript commands. Type `npm install --save-dev ts-node` into the terminal. Now, headover to your `package.json` and add this line to your `scripts` section.
 
-`"create-bld-token": "ts-node ./tokens/bld/index.ts"`.
+`"create-bld-token": "ts-node ./src/tokens/bld/index.ts"`.
 
 This is how it should look now.
 
