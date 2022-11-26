@@ -1,9 +1,9 @@
 ### 💻 Build an NFT minter front-end
-Welcome to your first week of SHIPPING. Every week you will have an entire section dedicated to taking your learnings and building it into your custom NFT staking app w/ loot boxes! 
+Welcome to your first week of SHIPPING. Every week you will have an entire section dedicated to taking your learnings and building it into your custom NFT staking app w/ loot boxes!
 
 The whole point of these sections is to get you off localhost and building something real that others can use. All the builders that have come before you have found wild success from just putting their work out there and building in public. This is the moment you have been preparing for -- **let's do this thing 🤘.**
 
-We are going to start on the front-end today to make these SLICK landing and mint pages. 
+We are going to start on the front-end today to make these SLICK landing and mint pages.
 ![](https://hackmd.io/_uploads/BkAmmIZ7o.png)
 
 The only functionality on the first screen is to connect to a user’s wallet. You can do this with the button at the top of the screen as well as the button in the middle.
@@ -17,7 +17,7 @@ We're starting from scratch, no templates this time! Set up a new Next.js app an
 
 ```bash!
 npx create-next-app --typescript
-cd 
+cd
 npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6 @chakra-ui/icons
 npm i @solana/wallet-adapter-base @solana/wallet-adapter-react @solana/wallet-adapter-react-ui @solana/wallet-adapter-wallets @solana/web3.js
 ```
@@ -27,7 +27,7 @@ If it asks to install `create-next-app`, say yes. You can name your app whatever
 
 Next you wanna add some assets. You can get them [here](https://cdn.disco.co/media%2FAssets_a68f5cab-20c9-45c7-b25c-43bc9dcd9e7d.zip) or you can make your own. You'll see five "avatar" files and a background svg. Put them in the public folder.
 
-#### ✨ Set up Chakra UI 
+#### ✨ Set up Chakra UI
 First order of business is setting up Chakra UI so we don't have to manually write a ton of CSS. We'll do this in `pages/_app.tsx`:
 ```ts
 import type { AppProps } from "next/app"
@@ -69,7 +69,7 @@ Open up `styles/Home.module.css` and make it look like this:
 If you have a `globals.css` file in your styles folder, delete it. We won't be needing it!
 
 Next up we have `index.tsx`, we'll update the imports to use Chakra UI and  render except for a single `<div className={styles.container}`. Then update the imports to:
-    
+
 ```tsx
 import { Box, Center, Spacer, Stack } from "@chakra-ui/react"
 import type { NextPage } from "next"
@@ -123,7 +123,7 @@ export default Home
 
 #### 🎫 Add a navigation bar
 Now let’s build out the `NavBar`. Create a `components` folder and add a new file `NavBar.tsx`. We’ll build it as a horizontal stack with a spacer and a button for connecting the wallet:
-    
+
 ```tsx
 import { HStack, Spacer } from "@chakra-ui/react"
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui"
@@ -156,7 +156,7 @@ const Home: NextPage = () => {
       <Box
         w="full"
         h="calc(100vh)"
-        bgImage={connected ? "" : "url(/home-background.svg)"}
+        bgImage={"url(/home-background.svg)"}
         backgroundPosition="center"
       >
         <Stack w="full" h="calc(100vh)" justify="center">
@@ -238,7 +238,7 @@ const Home: NextPage = () => {
       <Box
         w="full"
         h="calc(100vh)"
-        bgImage={connected ? "" : "url(/home-background.svg)"}
+        bgImage={"url(/home-background.svg)"}
         backgroundPosition="center"
       >
         <Stack w="full" h="calc(100vh)" justify="center">
@@ -247,8 +247,7 @@ const Home: NextPage = () => {
 
           <Spacer />
           <Center>
-            { /* If connected, the second view, otherwise the first */ }
-            {!connected && <Disconnected />}
+            <Disconnected />
           </Center>
           <Spacer />
 
@@ -311,7 +310,7 @@ import { useWallet } from "@solana/wallet-adapter-react"
 ```
 
 Then update the body of `Disconnected` before the render to the following:
-    
+
 ```tsx
   const modalState = useWalletModal()
   const { wallet, connect } = useWallet()
@@ -331,7 +330,7 @@ Then update the body of `Disconnected` before the render to the following:
     [wallet, connect, modalState]
   )
 ```
-And voila, you should be able to connect! 
+And voila, you should be able to connect!
 
 #### 🎇 Create connected view
 Now that we can connect, we need to update the view to show what it should look like when we’re connected. Let’s create a `Connected.tsx` file in the `components` directory
@@ -393,14 +392,14 @@ export default Connected
 ```
 
 Now we’ve just got to find a way to show it on screen. Back in `index.tsx`, let’s add two imports:
-    
+
 ```tsx
 import { useWallet } from "@solana/wallet-adapter-react"
 import Connected from "../components/Connected"
 ```
 
 Now we can use the `useWallet` hook to get access to a variable telling us whether or not we are connected. We can use that to conditionally render the `Connected` vs `Disconnected` view.
-    
+
 ```tsx
 const Home: NextPage = () => {
   const { connected } = useWallet()
