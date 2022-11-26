@@ -179,6 +179,6 @@ async function main() {
 }
 ```
 
-You can get the mint address from the URL that was logged when you minted the NFT. It's in seveal places - the URL itself, the "Address" property and the metadata tab. 
+You can get the mint address from the URL that was logged when you minted the NFT. It's in several places - the URL itself, the "Address" property and the metadata tab. 
 
 ![](https://hackmd.io/_uploads/H17jnFjXo.png)
