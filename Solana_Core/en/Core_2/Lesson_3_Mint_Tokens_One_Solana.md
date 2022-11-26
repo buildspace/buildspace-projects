@@ -175,13 +175,16 @@ async function burnTokens(
     owner: web3.Keypair,
     amount: number
 ) {
+
+    const mintInfo = await token.getMint(connection, mint)
+    
     const transactionSignature = await token.burn(
         connection,
         payer,
         account,
         mint,
         owner,
-        amount
+        amount * 10 ** mintInfo.decimals
     )
 
     console.log(
