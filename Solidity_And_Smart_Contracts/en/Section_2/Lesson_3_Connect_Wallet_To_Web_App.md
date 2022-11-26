@@ -107,11 +107,12 @@ const App = () => {
    * The passed callback function will be run when the page loads.
    * More technically, when the App component "mounts".
    */
-  useEffect(async () => {
-    const account = await findMetaMaskAccount();
-    if (account !== null) {
-      setCurrentAccount(account);
-    }
+  useEffect(() => {
+    findMetaMaskAccount().then((account) => {
+      if (account !== null) {
+        setCurrentAccount(account);
+      }
+    });
   }, []);
 
   return (
