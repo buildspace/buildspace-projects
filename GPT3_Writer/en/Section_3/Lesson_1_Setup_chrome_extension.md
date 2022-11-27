@@ -58,13 +58,13 @@ Here’s the basic stuff we’ve given you in `manifest.json`— this is the tim
 
 ```json
 {
-	// Change to your title
+  // Change to your title
   "name": "magic blog post generator",
-	// Change to your description
+  // Change to your description
   "description": "highlight your blog post title, we'll generate the rest",
   "version": "1.0",
   "manifest_version": 3,
-	// Update these assets in the folder
+  // Update these assets in the folder
   "icons": {
     "48": "assets/48.png",
     "72": "assets/72.png",
@@ -73,7 +73,7 @@ Here’s the basic stuff we’ve given you in `manifest.json`— this is the tim
   },
   "action": {
     "default_popup": "index.html",
-		// Change the default title
+    // Change the default title
     "default_title": "Generate blog post"
   }
 }
@@ -83,7 +83,7 @@ If you copy paste this you’ll need to remove comments btw :P
 
 Because extensions can basically become malware that runs in your browser, security is a huge deal with them. You need to explicitly declare which permissions your extension needs. Make sure to add this line, we’ll explain later:
 
-```jsx
+```json
 {
   "name": "magic blog post generator",
   "description": "highlight your blog post title, we'll generate the rest",
@@ -99,8 +99,8 @@ Because extensions can basically become malware that runs in your browser, secur
     "default_popup": "index.html",
     "default_title": "Generate blog post"
   },
-	// Add this line
-	"permissions": ["contextMenus", "tabs", "storage"]
+  // Add this line
+  "permissions": ["contextMenus", "tabs", "storage"]
 }
 ```
 
@@ -116,7 +116,7 @@ Take a look at your `manifest.json` file that and find the `default_popup` actio
 
 Create a new file at the root of your project called `index.html`
 
-```jsx
+```html
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
@@ -154,7 +154,7 @@ Again, super basic. Just start with `key_entered` as a hidden `div` and we will 
 
 We are going to start by writing some listeners so we know when buttons are clicked!
 
-```jsx
+```javascript
 document.getElementById('save_key_button').addEventListener('click', saveKey);
 document
   .getElementById('change_key_button')
@@ -163,7 +163,7 @@ document
 
 You can see we are listening to `save_key_button` and `change_key_button`. These will both call different functions. Let’s get the function declaration setup for both of them, but start with the first listener and create the `saveKey` :
 
-```jsx
+```javascript
 const saveKey = async () => {}
 
 const changeKey = () => {}
@@ -178,31 +178,30 @@ Nice! We want to save the OpenAI API Key that is entered. This may feel sus, but
 
 Here’s what it looks like:
 
-```jsx
+```javascript
 const saveKey = () => {
-	const input = document.getElementById('key_input');
-	
-	if (input) {
-	  const { value } = input;
-	
-	  // Encode String
-	  const encodedValue = encode(value);
-	
-	  // Save to google storage
-	  chrome.storage.local.set({ 'openai-key': encodedValue }, () => {
-	    document.getElementById('key_needed').style.display = 'none';
-	    document.getElementById('key_entered').style.display = 'block';
-	  });
-	}
-}
+  const input = document.getElementById('key_input');
 
+  if (input) {
+    const { value } = input;
+
+    // Encode String
+    const encodedValue = encode(value);
+
+    // Save to google storage
+    chrome.storage.local.set({ 'openai-key': encodedValue }, () => {
+      document.getElementById('key_needed').style.display = 'none';
+      document.getElementById('key_entered').style.display = 'block';
+    });
+  }
+};
 ```
 
 We’re grabbing the input value from the input box itself, then doing some Base64 encoding on it (this just makes it difficult to read to the naked eye), then setting the key in google storage and finally change CSS setting to show the “you have entered key” dialog.
 
 You’ll probably notice that your app is crashing here — well we still need to add the `encode` function! Super simple one-liner that you’ll put right above the `saveKey` function:
 
-```jsx
+```javascript
 const encode = (input) => {
   return btoa(input);
 };
@@ -212,7 +211,7 @@ const encode = (input) => {
 
 Finally, let’s add some fanciness to the `changeKey` function:
 
-```jsx
+```javascript
 const changeKey = () => {
   document.getElementById('key_needed').style.display = 'block';
   document.getElementById('key_entered').style.display = 'none';
@@ -225,7 +224,7 @@ Now, you have these two different states, how do we know which one to show first
 
 At the top of your `index.js` file, go ahead and add this:
 
-```jsx
+```javascript
 const checkForKey = () => {
   return new Promise((resolve, reject) => {
     chrome.storage.local.get(['openai-key'], (result) => {
@@ -239,7 +238,7 @@ All we are doing here is checking for the key in our state. If it’s there go a
 
 Finally, call this at the very bottom of your file. Every time your extension is opened this will run:
 
-```jsx
+```javascript
 checkForKey().then((response) => {
   if (response) {
     document.getElementById('key_needed').style.display = 'none';
