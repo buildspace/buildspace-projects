@@ -17,7 +17,7 @@ A “prompt” is what you input to GPT-3.
 
 I just want to be very clear about something — **the next 30m may be super magical, or they may be painful.** Prompts can be really fkin annoying to write and I just want you to know that.
 
-Prompt engineering is a skill, you won’t be good at it to start and that’s fine. But, just be sure to keep treading forward. **Remember, your goal is to ship this project. Nothing else.** Don’t get caught up in trying to get ****one**** thing to work.
+Prompt engineering is a skill - you won’t be good at it to start, and that’s fine. But, just be sure to keep treading forward. **Remember, your goal is to ship this project. Nothing else.** Don’t get caught up in trying to get ****one**** thing to work.
 
 Some tips I wish I had when I was learning prompt engineering:
 
