@@ -85,12 +85,8 @@ const Home = () => {
         </div>
         {/* Add this code here*/}
         <div className="prompt-container">
-          <textarea
-						placeholder="start typing here"
-						className="prompt-box"
-					/>
+          <textarea placeholder="start typing here" className="prompt-box" />
         </div>
-	
       </div>
       <div className="badge-container grow">
         <a
@@ -134,11 +130,11 @@ Now, let’s put those variables to use on the `textarea` you created earlier.
 
 ```jsx
 <textarea
-	className="prompt-box"
-	placeholder="start typing here"
-	value={userInput}
-	onChange={onUserChangedText}
-/>
+  className="prompt-box"
+  placeholder="start typing here"
+  value={userInput}
+  onChange={onUserChangedText}
+/>;
 ```
 
 *Note: Your code will be crashing here because we haven’t created the `onUserChangedText` function yet.*
@@ -180,7 +176,6 @@ Now, we just want to add a generate button that our user can click to generate s
       </div>
     </a>
   </div>
-
 </div>
 ```
 
