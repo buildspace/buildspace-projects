@@ -14,7 +14,7 @@ For us, we need to go out to GPT-3, get our completion result and send it to the
 
 Go ahead and make a `scripts/contextMenuServiceWorker.js` directory and file. The first thing we are going to tackle in this file is setting up our `contextMenu`! We need to tell our extension which file is going to be used for our `service_worker.` For this let’s head to the `manifest.json` file again and add this:
 
-```jsx
+```json
 {
   "name": "magic blog post generator",
   "description": "highlight your blog post title, we'll generate the rest",
@@ -30,11 +30,11 @@ Go ahead and make a `scripts/contextMenuServiceWorker.js` directory and file. Th
     "default_popup": "index.html",
     "default_title": "Generate blog post"
   },
-	// Add this thing here
+  // Add this thing here
   "background": {
     "service_worker": "scripts/contextMenuServiceWorker.js"
   },
-	"permissions": ["contextMenus", "tabs", "storage"]
+  "permissions": ["contextMenus", "tabs", "storage"]
 }
 ```
 
@@ -42,7 +42,7 @@ Now that our extension knows about our service worker, we can start with writing
 
 Remember, we want to highlight some text in Calmly, right click it, and be able to select an option that says “Generate blog post”. Check out how simple this is:
 
-```jsx
+```javascript
 // Add this in scripts/contextMenuServiceWorker.js
 chrome.contextMenus.create({
   id: 'context-run',
@@ -58,7 +58,7 @@ Nice so we are creating a new option in our menu that will read “Generate blog
 
 Let’s go ahead and create that right above where we setup our listeners and then we can check out our `contextMenu`:
 
-```jsx
+```javascript
 // New function here
 const generateCompletionAction = async (info) => {}
 
@@ -82,16 +82,15 @@ Let’s jump into Calmly and start writing 🤘. Once you have some stuff writte
 
 IGHT — lets get this selection to do something epic. We’re going to start by capturing the selection text and get it ready to package up for GPT-3! Lets start by adding this to the `generateCompleteAction` function:
 
-```jsx
+```javascript
 const generateCompletionAction = async (info) => {
-	try {
+  try {
     const { selectionText } = info;
-    const basePromptPrefix =
-      `
-			Write me a detailed table of contents for a blog post with the title below.
-			
-			Title:
-			`;
+    const basePromptPrefix = `
+	Write me a detailed table of contents for a blog post with the title below.
+
+	Title:
+	`;
   } catch (error) {
     console.log(error);
   }
@@ -113,16 +112,16 @@ const generateCompletionAction = async (info) => {
     const { selectionText } = info;
     const basePromptPrefix =
       `
-			Write me a detailed table of contents for a blog post with the title below.
-			
-			Title:
-			`;
+      Write me a detailed table of contents for a blog post with the title below.
+
+      Title:
+      `;
 
 		// Add this to call GPT-3
     const baseCompletion = await generate(`${basePromptPrefix}${selectionText}`);
 
-		// Let's see what we get!
-		console.log(baseCompletion.text)	
+    // Let's see what we get!
+    console.log(baseCompletion.text)	
   } catch (error) {
     console.log(error);
   }
@@ -133,16 +132,16 @@ The `generate` function is actually going to save quite a bit of time (you’ll 
 
 Hey — you’re getting into some under the hood shit, look at you! Cool, lets write this thing:
 
-```jsx
+```javascript
 // Function to get + decode API key
 const getKey = () => {}
 
 const generate = async (prompt) => {
-	// Get your API key from storage
+  // Get your API key from storage
   const key = await getKey();
   const url = 'https://api.openai.com/v1/completions';
 	
-	// Call completions endpoint
+  // Call completions endpoint
   const completionResponse = await fetch(url, {
     method: 'POST',
     headers: {
@@ -157,7 +156,7 @@ const generate = async (prompt) => {
     }),
   });
 	
-	// Select the top choice and send back
+  // Select the top choice and send back
   const completion = await completionResponse.json();
   return completion.choices.pop();
 }
@@ -172,7 +171,7 @@ That’s all about it! A few things to note here —
 
 At this point (assuming you have a proper API key) you should be able to call GPT-3 just like you did in your landing page. Let’s just quickly implement our `getKey` function and then we are well on our way to get this thing shipped 🚢:
 
-```jsx
+```javascript
 const getKey = () => {
   return new Promise((resolve, reject) => {
     chrome.storage.local.get(['openai-key'], (result) => {
@@ -209,36 +208,36 @@ Remember that `generate` function you wrote earlier? Here is the moment where it
 
 Head back to your `generateCompletionAction` and go ahead and add these last few lines:
 
-```jsx
+```javascript
 const generateCompletionAction = async (info) => {
-	try {
+  try {
     const { selectionText } = info;
-    const basePromptPrefix =
-      `
-			Write me a detailed table of contents for a blog post with the title below.
+    const basePromptPrefix = `
+      Write me a detailed table of contents for a blog post with the title below.
 			
-			Title:
-			`;
+      Title:
+      `;
 
-    const baseCompletion = await generate(`${basePromptPrefix}${selectionText}`);
+    const baseCompletion = await generate(
+      `${basePromptPrefix}${selectionText}`
+    );
 
-		// Add your second prompt here 
-		const secondPrompt = 
-		  `
-		  Take the table of contents and title of the blog post below and generate a blog post written in thwe style of Paul Graham. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
-		
-		  Title: ${selectionText}
-		
-		  Table of Contents: ${baseCompletion.text}
-		
-		  Blog Post:
-		  `;
-		
-		// Call your second prompt
+    // Add your second prompt here
+    const secondPrompt = `
+      Take the table of contents and title of the blog post below and generate a blog post written in thwe style of Paul Graham. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
+      
+      Title: ${selectionText}
+      
+      Table of Contents: ${baseCompletion.text}
+      
+      Blog Post:
+      `;
+
+    // Call your second prompt
     const secondPromptCompletion = await generate(secondPrompt);
-	} catch (error) {
-      console.log(error);
-    }
+  } catch (error) {
+    console.log(error);
+  }
 };
 ```
 
@@ -270,7 +269,7 @@ It’s actually pretty straightforward when you look at it from a higher level. 
 
 Head back to your `contextMenuServiceWorker.js`  file and add a new function called `sendMessage` right under where we declared `getKey`
 
-```jsx
+```javascript
 const sendMessage = (content) => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const activeTab = tabs[0].id;
@@ -304,40 +303,40 @@ Go ahead and head to the `generateCompletionAction` function and add these lines
 
 ```jsx
 const generateCompletionAction = async (info) => {
-	try {
-		// Send mesage with generating text (this will be like a loading indicator)
-		sendMessage('generating...');
-	
-    const { selectionText } = info;
-    const basePromptPrefix =
-      `
-			Write me a detailed table of contents for a blog post with the title below.
-			
-			Title:
-			`;
+  try {
+    // Send mesage with generating text (this will be like a loading indicator)
+    sendMessage('generating...');
 
-    const baseCompletion = await generate(`${basePromptPrefix}${selectionText}`);
- 
-		const secondPrompt = 
-		  `
-		  Take the table of contents and title of the blog post below and generate a blog post written in thwe style of Paul Graham. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
-		
-		  Title: ${selectionText}
-		
-		  Table of Contents: ${baseCompletion.text}
-		
-		  Blog Post:
+    const { selectionText } = info;
+    const basePromptPrefix = `
+      Write me a detailed table of contents for a blog post with the title below.
+      
+      Title:
+      `;
+
+      const baseCompletion = await generate(
+        `${basePromptPrefix}${selectionText}`
+      );
+      
+      const secondPrompt = `
+        Take the table of contents and title of the blog post below and generate a blog post written in thwe style of Paul Graham. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
+        
+        Title: ${selectionText}
+        
+        Table of Contents: ${baseCompletion.text}
+        
+        Blog Post:
 		  `;
-		
-    const secondPromptCompletion = await generate(secondPrompt);
-		
-		// Send the output when we're all done
-		sendMessage(secondPromptCompletion.text);
+      
+      const secondPromptCompletion = await generate(secondPrompt);
+      
+      // Send the output when we're all done
+      sendMessage(secondPromptCompletion.text);
   } catch (error) {
     console.log(error);
 
-		// Add this here as well to see if we run into any errors!
-		sendMessage(error.toString());
+    // Add this here as well to see if we run into any errors!
+    sendMessage(error.toString());
   }
 };
 ```
