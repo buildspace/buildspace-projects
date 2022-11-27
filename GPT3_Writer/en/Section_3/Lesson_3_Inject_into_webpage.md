@@ -4,7 +4,7 @@ Let's go ahead and get some listeners going by first creating a brand new file i
 
 Now, for our extension to know that this is the file that we will use for our frontend scripting, we need to let the `manifest.json` file know. Go ahead and head there and add this to your file:
 
-```jsx
+```json
 {
   "name": "magic blog post generator",
   "description": "highlight your blog post title, we'll generate the rest",
@@ -23,8 +23,8 @@ Now, for our extension to know that this is the file that we will use for our fr
   "background": {
     "service_worker": "scripts/contextMenuServiceWorker.js"
   },
-	"permissions": ["contextMenus", "tabs", "storage"],
-	// Add this array here
+  "permissions": ["contextMenus", "tabs", "storage"],
+  // Add this array here
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
@@ -40,18 +40,16 @@ Now, if we decided to just run this now, we would get an error in our service wo
 
 Lets head to our `content.js` file and setup our listener:
 
-```jsx
-chrome.runtime.onMessage.addListener(
-  (request, sender, sendResponse) => {
-    if (request.message === 'inject') {
-      const { content } = request;
+```javascript
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.message === 'inject') {
+    const { content } = request;
 
-			console.log(content)
+    console.log(content);
 
-      sendResponse({ status: 'success' });
-    }
+    sendResponse({ status: 'success' });
   }
-);
+});
 ```
 
 This looks very similar to our `sendMessage` function, but in reverse! When this listener is triggered, it will receive 3 props, `request` , `sender` , and `sendResponse` . We really care about `request` and `sendResponse` right now.
@@ -85,7 +83,7 @@ This is probably one of the most difficult parts about this process. Every site 
 
 Go ahead and add these two lines in your message listener + declare a new function in `content.js`:
 
-```jsx
+```javascript
 // Declare new function
 const insert = (content) => {}
 
@@ -95,10 +93,10 @@ chrome.runtime.onMessage.addListener(
     if (request.message === 'inject') {
       const { content } = request;
 			
-			// Call this insert function
+      // Call this insert function
       const result = insert(content);
 			
-			// If something went wrong, send a failes status
+      // If something went wrong, send a failes status
       if (!result) {
         sendResponse({ status: 'failed' });
       }
@@ -113,9 +111,9 @@ It’s awesome how chrome makes it so easy to hook into these events and add our
 
 Before we go super deep into the `insert` function, I’m going to layout the flow we should follow with comments inside the function and then fill it in one by one (this is actually called psuedo code):
 
-```jsx
+```javascript
 const insert = (content) => {
-	// Find Calmly editor input section
+  // Find Calmly editor input section
 
   // Grab the first p tag so we can replace it with our injection
 
@@ -124,10 +122,10 @@ const insert = (content) => {
   // Wrap in p tags
 
   // Insert into HTML one at a time
-	
-	// On success return true
-	return true;
-}
+
+  // On success return true
+  return true;
+};
 ```
 
 Sick — this type of brainstorming always helps me setup some sort of flow without writing code. It becomes super clear the steps I need to take to get to where I wanna go. Let’s start from the top then, finding the calmly editor input section.
@@ -150,7 +148,7 @@ The `document` element has tons of fancy operations to help us pinpoint specific
 
 **ALRIGHT CODE TIME:**
 
-```jsx
+```javascript
 // Find Calmly editor input section
 const elements = document.getElementsByClassName('droid');
 
@@ -185,7 +183,7 @@ Okay nice — so we are grabbing some divs manipulating some text, pretty cool r
 
 Our response from GPT-3 is actually nicely indented (yo thanks OpenAI) so we want to make sure to abide by that here as well! This is where step 3 comes in:
 
-```jsx
+```javascript
 // Split content by \n
 const splitContent = content.split('\n');
 ```
@@ -202,7 +200,7 @@ That means if we encounter a `\n` we should create this `p` tag with a `br` elem
 
 To do that we can write this cool little piece of code:
 
-```jsx
+```javascript
 // Wrap in p tags
 splitContent.forEach((content) => {
   const p = document.createElement('p');
