@@ -228,6 +228,6 @@ Got ideas for something you’d wanna build? I know this build is titled “buil
 
 The ideas are endless.
 
-Before moving on, come up with your own wild idea you think would be cool. Once you got one, post it in #ideas. Feel free to check the channel out for ideas other people have as well for inspiration!
+Before moving on, come up with your own wild idea you think would be cool. Once you got one, post it in #ideas. Feel free to check the channel out for ideas other people have as well for inspiration! 
 
 *P.S: Most ideas can be tested pretty quickly in Playground. Whatever you have an idea — write a quick prompt for it in Playground and see how it goes. Iterate!*
