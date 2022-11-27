@@ -9,12 +9,6 @@ Hey! My name’s [Farza](https://twitter.com/FarzaTV). I started my first compan
 
 It might seem like I’ve done a lot but tbh at my core I’m just a fool figuring stuff out like everyone else.
 
-### **What are we building.**
-
-With building, showing is always better than telling. Check out a demo below!
-
-<insert loom>
-
 ### **What you need to know to build this.**
 
 You don’t need to know *that* much to build this thing. Most of it, I’ll show you how to do along the way.
