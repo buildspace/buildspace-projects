@@ -178,7 +178,6 @@ Let’s show the output on our UI. We already have the output in `apiOutput`, bu
     </div>
   </div>
 )}
-
 </div>
 ```
 
