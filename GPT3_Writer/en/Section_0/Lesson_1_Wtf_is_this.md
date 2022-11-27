@@ -72,4 +72,4 @@ This NFT gives you access to a few secret powers:
 
 In #gpt3-general — tell the world why you’re curious about doing this stuff. It’d be cool to understand why you’re curious about this stuff, what you’re trying to build, what inspired you to get into this, etc.
 
-Also, this is a cool way to make some friends — the magical thing about buildspace is that over **135,000 people are in the Discord** and you never know who may see your message, resonate with what you say, and reach out to you!
+Also, this is a cool way to make some friends — the magical thing about buildspace is that over **135,000 people are in the Discord** and you never know who may see your message, resonate with what you say, and reach out to you! 
