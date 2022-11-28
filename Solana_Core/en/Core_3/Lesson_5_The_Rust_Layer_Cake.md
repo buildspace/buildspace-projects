@@ -1,10 +1,10 @@
 We've said hello. It's time to learn how to handle instruction data, just like we did with client-side development.
 
-Before we get into building, I wanna go over some of the concepts we'll be using. Remember what I said about rules, abilities and interactions? I'll walk you through the abilities and rules you need to know to make a native Solana program. The word native is important here - a lot of what we'll learn here will be handled by Anchor later on. 
+Before we get into building, I wanna go over some of the concepts we'll be using. Remember what I said about rules, abilities, and interactions? I'll walk you through the abilities and rules you need to know to make a native Solana program. The word native is important here - a lot of what we'll learn here will be handled by Anchor later on. 
 
 The reason we're learning native development is because it's important to understand how things work under the hood. Once you understand how things work at the atomic level, you'll be able to use tools like Anchor to build even more powerful programs. Think of it like a boss fight with different types of enemies - you need to learn how to counter each individual monster (and your abilities) before taking them all on at the same time.
 
-When I first learned this stuff I had trouble understanding what I was missing, so I broke it down into "layers". Each topic you'll learn will be built on top of a layer of knowledge. If something doesn't make sense, go back to the the layers it's built on and make sure you understand them. 
+When I first learned this stuff I had trouble understanding what I was missing, so I broke it down into "layers". Each topic you'll learn will be built on top of a layer of knowledge. If something doesn't make sense, go back to the layers it's built on and make sure you understand them. 
 
 **This is the Rust layer cake**. 
 ![](https://hackmd.io/_uploads/r1evwdmNj.png)
