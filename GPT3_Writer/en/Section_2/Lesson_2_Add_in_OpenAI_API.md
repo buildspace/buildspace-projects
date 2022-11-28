@@ -121,7 +121,7 @@ const callGenerateEndpoint = async () => {
 
 Nothing too crazy here.
 
-First, I created a state variable for `isGenerating`. This will let us easily create a loading state later so we can tell our users to wait for the OpenAI API to reply. Then, I create `apiOutput` — this will be where we story the output of the API we want to show the user.
+First, I created a state variable for `isGenerating`. This will let us easily create a loading state later so we can tell our users to wait for the OpenAI API to reply. Then, I create `apiOutput` — this will be where we store the output of the API we want to show the user.
 
 Next, we hop into the `callGenerateEndpoint`. The summary:
 
