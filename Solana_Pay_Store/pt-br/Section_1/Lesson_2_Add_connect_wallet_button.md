@@ -74,7 +74,7 @@ O `WalletModalProvider` é exatamente isso rsrs - é um componente sofisticado d
 
 `WalletProvider` nos dá uma interface padrão para conectar a todos os tipos de carteiras, então não precisamos nos preocupar em ler a documentação de cada carteira hehe.
 
-Em seguida, você verá vários adaptadores de carteira em `wallet-adapter-wallets`. Usaremos essas importações para criar uma lista de carteiras que daremos ao `WalletProvider`. Há vários outros adaptadores de carteira disponíveis, mesmo alguns feitos para outras blockchains! Confira-os [aqui](https://github.com/solana-labs/wallet-adapter/#wallets). Eu apenas fui com os que estavam no modelo inicial por padrão.
+Em seguida, você verá vários adaptadores de carteira em `wallet-adapter-wallets`. Usaremos essas importações para criar uma lista de carteiras que daremos ao `WalletProvider`. Há vários outros adaptadores de carteira disponíveis, mesmo alguns feitos para outras blockchains! Confira-os [aqui](https://github.com/solana-labs/wallet-adapter/blob/master/PACKAGES.md#wallets). Eu apenas fui com os que estavam no modelo inicial por padrão.
 
 Por fim, temos `clusterApiURL`, que é apenas uma função que gera um ponto de extremidade RPC para nós com base na rede que fornecemos.
 
