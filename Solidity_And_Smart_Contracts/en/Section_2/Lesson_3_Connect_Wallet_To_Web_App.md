@@ -4,7 +4,7 @@ So, in order for our website to talk to the blockchain, we need to somehow conne
 
 Head over to Replit and go to `App.jsx` under `src`, this is where we'll be doing all our work.
 
-If we're logged in to Metamask, it will automatically inject a special object named `ethereum` into our window. Let's check if we have that first.
+If we have Metamask browser extension wallet installed, it will automatically inject a special object named `ethereum` into our window. Let's check if we have that first.
 
 ```javascript
 import React, { useEffect } from "react";
