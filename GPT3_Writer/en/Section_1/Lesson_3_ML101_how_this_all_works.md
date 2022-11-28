@@ -5,7 +5,7 @@ You may be wondering how this thing works — and honestly, understanding how it
 
 ### The basics behind GPT-3.
 
-You’ve may have heard that GPT-3 is made up of a lot of “parameters” — each parameter is a **specialized** **number**. When you input a sentence into GPT-3 it’ll combine that sentence with all it’s parameters to predict what comes next in the sentence.
+You may have heard that GPT-3 is made up of a lot of “parameters” — each parameter is a **specialized** **number**. When you input a sentence into GPT-3 it’ll combine that sentence with all it’s parameters to predict what comes next in the sentence.
 
 GPT-3 has **175 billion of these parameters** and is 800 GB. 
 
