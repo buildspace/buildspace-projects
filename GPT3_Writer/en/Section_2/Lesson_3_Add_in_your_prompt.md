@@ -160,7 +160,7 @@ The main trick I showed you that can 10X the quality of your results is ******pr
 
 I can’t help you directly with your prompt, because everyone’s prompt is so different. But, I’ll show you how I used prompt chaining to 10X my results. And, you can apply my learnings to your build as well!
 
-*Note: maybe you’re already happy with your results already, if so, cool! I still recommend you explore prompt change, you never know what you may get.*
+*Note: maybe you’re already happy with your results already, if so, cool! I still recommend you explore prompt chaining, you never know what you may get.*
 
 So, here’s what I did, I went to Playground and:
 
@@ -182,7 +182,7 @@ Title: USER_TITLE_GOES_HERE
 Prompt #2:
 
 ```
-Take the table of contents and title of the blog post below and generate a blog post written in thwe style of Paul Graham. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
+Take the table of contents and title of the blog post below and generate a blog post written in the style of Paul Graham. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
 
 Title: USER_TITLE_GOES_HERE
 
@@ -262,7 +262,7 @@ export default generateAction;
 
 The most important line here is `const secondPrompt`. This is where “build” my second prompt based on the output of `basePromptOutput`. I also use `${req.body.userInput}` here as well to give my model even more context. At the end, I change final JSON result to `{ output: secondPromptOutput }` so my user see’s the output of the second prompt on our UI.
 
-No UI changes requires here btw! All we’re doing is changing the backend.
+No UI changes required here btw! All we’re doing is changing the backend.
 
 So…how’s your product feeling now? Mines is absolutely insane now lol. It’s creating some A+ tier blog posts for me about everything from anime to nuclear fission to relationship advice. Beautiful.
 
