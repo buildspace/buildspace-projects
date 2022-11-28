@@ -37,7 +37,7 @@ Let’s say you actually want to make your Chrome Extension available for downlo
 
 ![Untitled](https://i.imgur.com/oHxDLjO.png)
 
-Well, you’d need to actually submit it for approval which can take a few days. If you want to go down that path, you can read up on it here (<insert>). Highly recommend you explore this later once you’ve polished up your extension more.
+Well, you’d need to actually submit it for approval which can take a few days. If you want to go down that path, you can read up on it [here](https://developer.chrome.com/docs/webstore/publish/). Highly recommend you explore this later once you’ve polished up your extension more.
 
 But -- for now, what we can actually do is if someone wants to use your Extension we can just give them a download link to the code. Then, they can just do the same thing as you where they go to chrome://extensions/ and load the extension manually to their browser by doing “Load Unpacked”.
 
