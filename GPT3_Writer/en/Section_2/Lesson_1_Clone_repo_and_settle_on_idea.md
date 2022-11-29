@@ -54,7 +54,7 @@ yarn add next react react-dom
 yarn dev
 ```
 
-Then, head to `[localhost:3000](http://localhost:3000)` and you should see the following:
+Then, head to [localhost:3000](http://localhost:3000) and you should see the following:
 
 ![Untitled](https://i.imgur.com/5Ucablc.png)
 
