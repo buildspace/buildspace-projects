@@ -127,7 +127,7 @@ Next, we hop into the `callGenerateEndpoint`. The summary:
 
 - I call `setIsGenerating(true)` to set the loading state to `true`. At the bottom of the function, I do `setIsGenerating(false)` because that’s when we’re all done with the API and can set the loading state to `false`.
 - I do a simple `fetch` to our API — notice the route I use: `/api/generate`. NextJS automatically creates this route for us based on the structure of our directory: `api/generate.js`. Pretty cool!
-- From there, I convert the response to JSON by doing `await response.json()` and then pull out `output`. *****************************************Note: I’m using [object destructing](https://www.javascripttutorial.net/es6/javascript-object-destructuring/) here.*
+- From there, I convert the response to JSON by doing `await response.json()` and then pull out `output`. *****************************************Note: I’m using [object destructuring](https://www.javascripttutorial.net/es6/javascript-object-destructuring/) here.*
 - Finally, I use `setApiOutput` to actually set `apiOutput` with the actual text that GPT-3 output.
 
 To test it all out, add `callGenerateEndpoint` to your “Generate” button’s `onClick` event by doing:
