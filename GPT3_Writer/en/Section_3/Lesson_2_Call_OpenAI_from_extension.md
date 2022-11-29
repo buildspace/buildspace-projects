@@ -149,7 +149,7 @@ const generate = async (prompt) => {
       Authorization: `Bearer ${key}`,
     },
     body: JSON.stringify({
-      model: 'text-davinci-002',
+      model: 'text-davinci-003',
       prompt: prompt,
       max_tokens: 1250,
       temperature: 0.7,

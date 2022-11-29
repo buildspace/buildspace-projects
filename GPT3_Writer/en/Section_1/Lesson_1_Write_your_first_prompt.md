@@ -7,7 +7,7 @@ First thing you’ll need to do is make an account on OpenAI [here](https://beta
 
 Once you make an account, head to the [Playground](https://beta.openai.com/playground). This is where we’ll be spending a bit of time before we even start writing any code.
 
-Don’t worry to much about those settings on the right yet, we’ll get to them. Just make sure your model is `text-davinci-002` and make sure the “Temperature” is set to `0.7`. **And, also make sure `Maximum length` is set to `650`.**
+Don’t worry to much about those settings on the right yet, we’ll get to them. Just make sure your model is `text-davinci-003` and make sure the “Temperature” is set to `0.7`. **And, also make sure `Maximum length` is set to `650`.**
 
 *Note: if you had an account in the past, you’ll need to make a new w/ a different email because the credits expire after 3-months.*
 
