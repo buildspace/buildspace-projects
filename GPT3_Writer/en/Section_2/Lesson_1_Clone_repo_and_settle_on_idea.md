@@ -120,7 +120,7 @@ Let’s set up that capture system so we know what our user is typing. We’re g
 import { useState } from 'react';
 ```
 
-From there, we’re going to create two new state variables: `input` and `setInput` which we’ll use in a moment. Go ahead and this line right underneath `const Home = () => {`.
+From there, we’re going to create two new state variables: `input` and `setInput` which we’ll use in a moment. Go ahead and add this line right underneath `const Home = () => {`.
 
 ```jsx
 const [userInput, setUserInput] = useState('');
