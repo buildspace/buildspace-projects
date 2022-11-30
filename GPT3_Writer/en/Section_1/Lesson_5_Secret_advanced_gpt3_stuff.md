@@ -78,7 +78,7 @@ Well again — GPT-3 does better when 1) you give it more examples 2) you are hi
 Here are other examples of prompts you can chain:
 
 - *generate a table of contents for a blog → write a sentence for each section → for each sentence, write two paragraphs → done*
-- **generate a sad love story about a boy and a girl → generate a rap chorus → generate a chrous that rhymes and has lyrics in the style of drake → generate the intro and outro verse based on the chorus → done.**
+- **generate a sad love story about a boy and a girl → generate a rap chorus → generate a chorus that rhymes and has lyrics in the style of drake → generate the intro and outro verse based on the chorus → done.**
 - **generate headline landing page copy for a product → generate more detailed copy for the product → generate ad copy targeted to 26-year-olds in Pakistan → done**
 
 Prompt chaining is **highly** underrated and not talked about much. It really lets you get really great performance for specific tasks you have in mind. Shoutout to my buddy [Sharif](https://twitter.com/sharifshameem) for showing me it!
