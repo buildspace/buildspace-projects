@@ -202,7 +202,7 @@ All we need to do is display it! Here’s the code:
     onClick={callGenerateEndpoint}
   >
     <div className="generate">
-    {isGenerating ? <span class="loader"></span> : <p>Generate</p>}
+    {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
     </div>
   </a>
 </div>
