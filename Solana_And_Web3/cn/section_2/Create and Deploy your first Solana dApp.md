@@ -108,73 +108,91 @@ Boom！！现在你也可以成功运行Solana本地网络了Cool：）
 
 Anchor也是一个非常早期的项目，由几个核心开发人员运行。在操作过程中你肯定会遇到一些问题，加入他们的Discord，随时提出问题或在他们的Github上提交问题。开发人员都非常友善，你甚至可以说你来自buildspace:)。
 
-顺便提一下，不要只是加入他们的Discord，问一些普遍性的问题并期待得到帮助。自己动手搜索Discord讯息，看看是否有人遇到你同样的问题。关于你的问题，尽可能多地提供信息，让大家有帮助你的欲望，哈哈。
+**顺便提一下，不要只是加入他们的Discord，问一些普遍性的问题并期待得到帮助。自己动手搜索Discord讯息，看看是否有人遇到你同样的问题。关于你的问题，尽可能多地提供信息，让大家有帮助你的欲望，哈哈。**
 
 说真的，加入[Anchor Discord](https://discord.com/invite/8HwmBtt2ss?utm_source=buildspace.so&utm_medium=buildspace_project)吧，你一定会受益匪浅。
 
 接下来我们通过下面的步骤来安装Anchor，我们将从源代码开始构建。
-注意:如果您使用的是Linux，则可以查看此处的一些说明进行操作。下面是Mac和Windows。另外，如果您在Windows上使用Linux，请使用Linux命令!
+注意:如果您使用的是Linux，则可以查看[此处](https://www.anchor-lang.com/docs/installation?utm_source=buildspace.so&utm_medium=buildspace_project)的一些说明进行操作。下面是Mac和Windows。另外，如果您在Windows上使用Linux，请使用Linux命令!
 
 要安装 Anchor，请继续运行：
-cargo install --git https://github.com/project-serum/anchor anchor-cli --locked
+
+`cargo install --git https://github.com/project-serum/anchor anchor-cli --locked`
+
 上面的命令可能需要一段时间才能完成，并且可能会要求您更新PATH，照做吧。
 
-继续运行：anchor --version
+继续运行：  
+
+`anchor --version`
+
 如果能显示版本号，恭喜你，你已经可以成功使用Anchor了。
 
 我们还将使用Anchor的npm和Solana Web3 JS模块，运行以下命令安装 --这两个模块将帮助我们的网页App链接到Solana程序。
-npm install @project-serum/anchor @solana/web3.js
+
+`npm install @project-serum/anchor @solana/web3.js`
 
 
-创建并运行一个测试程序
+#### 🏃‍♂️创建并运行一个测试程序
 好了，我们快接近完成了，哈哈。要完成安装，我们需要做的最后一件事是在本地运行Solana程序，并确保它真正运行起来。
 
 我们先创建一个名为myepicproject的Solana示例项目，依次运行以下两行命令：
-anchor init myepicproject --javascript
-cd myepicproject
 
-Windows 用户须知
+        anchor init myepicproject --javascript
+        cd myepicproject
+#### Windows 用户须知
 1、使用WSL2 而不是powershell来运行命令。
-2、如果显示cargo install --git https://github.com/project-serum/anchor avm --locked --force这个错误，请参考Anchor用户文档。您可能需要安装Linux (WSL)依赖，为此，运行：
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev
-3、如果出现error: failed to run custom build command for openssl-sys v0.9.71等错误，请运行：sudo apt install libssl-dev命令。
+
+2、如果显示`cargo install --git https://github.com/project-serum/anchor avm --locked --force`这个错误，请参考Anchor用户文档。您可能需要安装Linux (WSL)依赖，为此，运行：`
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get install -y pkg-config build-essential libudev-dev`
+
+3、如果出现`error: failed to run custom build command for openssl-sys v0.9.71`等错误，请运行：`sudo apt install libssl-dev`
+
 4、安装完这些依赖，步骤2中的命令应该就可以正常运行了。
+
 5、现在使用avm设置Anchor最新版本后，就可以继续了!
 
 运行anchor init命令将为我们创建一系列文件/文件夹。在某种程度上有点像create-react-app，我们即将检索它创建的所有内容。
 
-如果您在本地运行项目并且没有安装yarn，anchor init命令将会失效。要解决这个问题，您可以通过运行npm install --global yarn来安装yarn 。
+如果您在本地运行项目并且没有安装yarn，`anchor init`命令将会失效。要解决这个问题，您可以通过运行`npm install --global yarn`来安装yarn 。
 
-创建本地密钥对
-接下来我们需要做的是生成一个真实的本地 Solana 钱包。不要担心助记词的创建，当它运行时，你只需点击“Enter”键。
-输入：solana-keygen new
+#### 🔑创建本地密钥对
+接下来我们需要做的是生成一个真实的本地 Solana 钱包。不要担心助记词的创建，当它运行时，你只需按下“Enter”键。
+
+输入：`solana-keygen new`
 
 这将创建一个本地Solana密钥对——它有点像我们的本地钱包，我们将使用它通过命令行与程序通信。如果你运行solana config get，会显示一个叫Keypair Path的数据行。这就是钱包被创建的地方，请随意查看:)。
 
-如果运行solana address，将会显示我们刚才创建的本地钱包地址。
+如果运行`solana address`，将会显示我们刚才创建的本地钱包地址。
 
-运行程序
-当我们在前述步骤运行ancho init命令时，就已经创建了一个最基础的Solana程序。现在我们要做的是:
+#### 🥳启动我们的程序
+当我们在前述步骤运行`ancho init`命令时，就已经创建了一个最基本的Solana程序。现在我们要做的是:
+
 1、编译代码
-2、运行solana-test-validator命令启动Solana测试节点，并使用我们的钱包将该程序部署到Solana本地网络。这有点像在我们的本地服务器部署代码。
+
+2、运行`solana-test-validator`命令启动Solana测试节点，并使用我们的钱包将该程序部署到Solana本地网络。这有点像在我们的本地服务器部署代码。
+
 3、真实调用部署程序上的函数。这有点像在我们的服务器上点击一个特定的路由来测试它是否工作。
 
 在这里得夸赞一下Anchor，是它让我们只差最后一行命令就能使得整个程序跑起来。
-注意:请确保您没有在其他任何运行solana-test-validator，它会与Anchor产生冲突。这个问题困扰了我很长一段时间才得意想明白，哈哈。
-运行：anchor test
-第一次运行这行命令可能需要一段时间，耐心等待！当最终在数据行底部显示一行“1 passing”的绿色单词，说明你已经全部搭建成功了，你可以开始后续的课程了了!如果你在这里遇到问题，请在Discord中告诉我们。
+_注意:请确保您没有在其他任何运行`solana-test-validator`，它会与Anchor产生冲突。这个问题困扰了我很长一段时间才得意想明白，哈哈。_
 
+运行：`anchor test`
 
-注意:如果您显示node: --dns-result-order= is not allowed in NODE_OPTIONS这样的消息，这意味着你当前node版本太低，从技术理论上来看，你没有运行成功。因为我是用的Node v16.13.0测试的，所以我强烈建议您升级到这个版本。升级node是一个繁琐的过程，但是希望你能学到更多知识。我喜欢用nvm。
+第一次运行这行命令可能需要一段时间，耐心等待！当最终在数据行底部显示“1 passing”的绿色单词，说明你已经全部搭建成功了，你可以开始后续的课程了了!如果你在这里遇到任何问题，请在Discord中告诉我们。
+![](https://i.imgur.com/V35KchA.png)
 
-注意:如果您显示Error: Your configured rpc port: 8899 is already in use这样的错误，并且您没有正在监听端口8899的应用程序，请尝试运行solana-test-validator，并在下一条终端命令中运行：anchor test --skip-local-validator，它应该能就能生效。
+**注意:如果您显示`node: --dns-result-order= is not allowed in NODE_OPTIONS`这样的消息，这意味着你当前node版本太低，从技术理论上来看，你没有运行成功。因为我是用的Node v16.13.0测试的，所以我强烈建议您升级到这个版本。升级node是一个繁琐的过程，但是希望你能学到更多知识。我喜欢用nvm。**
+
+**注意:如果您显示`Error: Your configured rpc port: 8899 is already in use`这样的错误，并且您没有正在监听端口8899的应用程序，请尝试运行`solana-test-validator`，并在下一条终端命令中运行：`anchor test --skip-local-validator`，它应该能就能生效。**
 
 现在，恭喜你成功搭建了Solana环境:)。这是一段漫长而艰难的旅程，但我们拿下了。
 
-进展提交
-请一定要提交，否则Farza 会伤心的:(
+#### 🚨 进度提交
+_请一定要提交，否则Farza 会伤心的:(_
+
 这真是太难了!!绝对是最困难的安装之一。
-在#progress频道发布你正在进行的测试截图，这样大家就知道你完成了测试:)。
+
+在`#progress`频道发布你正在进行的测试截图，这样大家就知道你完成了测试:)。
 
 
 
