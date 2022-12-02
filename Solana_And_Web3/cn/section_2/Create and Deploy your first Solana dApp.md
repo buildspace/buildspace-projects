@@ -76,8 +76,11 @@ _注意:由于系统的差异性—-当你安装完Solana后，可能会输出�
 如果您是Windows 用户并且上述命令不起作用，或者您收到以下错误，`Unable to connect to validator: Client error: test-ledger/admin.rpc does not exist`请确保执行以下操作：
 
 1、打开WSL 而不是 Powershell。
+
 2、输入命令`cd ~/`退出退出并返回到根目录
+
 3、最后输入`solana-test-validator`
+
 这可能需要一点时间，但一旦开始，您应该会看到如下内容：
 ![](https://i.imgur.com/F2YwcAB.png)
 Boom！！现在你也可以成功运行Solana本地网络了Cool：）
