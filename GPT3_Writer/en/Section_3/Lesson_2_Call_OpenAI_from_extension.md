@@ -345,7 +345,7 @@ Okay okay okay. **WE GETTING SOMEWHERE NOW**.
 
 So we are sending messages, but we don’t have anything receiving it. It’s like you’re screaming at the top of your lungs in a forest, but no one is there to listen 😟. 
 
-Since we want our UI to receive the message we should setup a listener over there. In order for us to do that, we need to create a file that handles scripts for us in on the UI side. That’s where the `content.js` file will come in.
+Since we want our UI to receive the message we should setup a listener over there. In order for us to do that, we need to create a file that handles scripts for us on the UI side. That’s where the `content.js` file will come in.
 
 ### Please do this or Farza will be sad.
 
