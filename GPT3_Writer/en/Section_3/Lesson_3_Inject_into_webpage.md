@@ -96,7 +96,7 @@ chrome.runtime.onMessage.addListener(
       // Call this insert function
       const result = insert(content);
 			
-      // If something went wrong, send a failes status
+      // If something went wrong, send a failed status
       if (!result) {
         sendResponse({ status: 'failed' });
       }
