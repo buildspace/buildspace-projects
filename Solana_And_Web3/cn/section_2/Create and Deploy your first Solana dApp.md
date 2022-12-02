@@ -198,7 +198,7 @@ _请一定要提交，否则Farza 会伤心的:(_
 
 
 
-Translate the lessons into Chinese
+
 
 
 
