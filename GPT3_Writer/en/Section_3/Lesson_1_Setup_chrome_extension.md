@@ -164,7 +164,7 @@ document
 You can see we are listening to `save_key_button` and `change_key_button`. These will both call different functions. Let’s get the function declaration setup for both of them, but start with the first listener and create the `saveKey` :
 
 ```javascript
-const saveKey = async () => {}
+const saveKey = () => {}
 
 const changeKey = () => {}
 
