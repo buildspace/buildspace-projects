@@ -21,6 +21,26 @@
 
 _注意:实际上我并没有给VSCode安装Rust插件，但它自带了Rust语法高亮显示功能。_
 
+#### 👶 一个基础程序
+让我们编写第一个 Solana 程序！将下方Rust 代码存放到lib.rs文件中。
+
+看起来像这样：
+
+    use anchor_lang::prelude::*;
+    use anchor_lang::solana_program::entrypoint::ProgramResult;
+
+    declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+
+    #[program]
+    pub mod myepicproject {
+      use super::*;
+      pub fn start_stuff_off(ctx: Context<StartStuffOff>) -> Result <()> {
+        Ok(())
+      }
+    }
+
+    #[derive(Accounts)]
+    pub struct StartStuffOff {}
 
 
 
