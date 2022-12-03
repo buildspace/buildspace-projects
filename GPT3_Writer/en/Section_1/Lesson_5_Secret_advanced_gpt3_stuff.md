@@ -115,7 +115,7 @@ I love that first idea — it’s beautiful.
 
 Imagine if kids could learn to read with custom stories generated just for them.
 
-The stories would be perfect for them. GPT-3 could even generate stories they really like (ex. detective stories, adventure stories, etc). The stories could even include the names of the characters they come up with. They could be in their own stories. Plus, we could even tell use GPT-3 to use certain types of vocabulary to make sure the reading level is just right.
+The stories would be perfect for them. GPT-3 could even generate stories they really like (ex. detective stories, adventure stories, etc). The stories could even include the names of the characters they come up with. They could be in their own stories. Plus, we could even tell GPT-3 to use certain types of vocabulary to make sure the reading level is just right.
 
 **Before moving on, be sure to generate an idea you kinda like in an industry you think is interesting — VR, crypto, AR, gaming, FinTech, consumer, etc. You’ll need to play around a lot with the industry, audience, etc. As always, don’t copy me! Get good at prompts!**
 
