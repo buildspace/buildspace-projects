@@ -1,28 +1,28 @@
-*Note: If you've taken previous projects at buildspace, many of the initial setup items in the next two lessons are repeated from previous projects. If you already understand it, awesome! You're a pro. Feel free to blaze through it really fast.*
+*注意:如果您已经在buildspace做过前面的项目，那么接下来两节课中的许多初始设置项将重复以前的项目。如果您已经理解了，那太棒了!您是专业人士。请随意快速浏览即可*
 
-### 📚 A little blockchain primer
+### 📚 区块链入门知识
 
-Before anything, we'll need to get our local Ethereum network working. This is how we can compile and test our smart contract code! You know how you need to spin up a local environment to work on? Same deal here!
+在做任何事情之前，我们需要让我们的本地以太坊网络工作。这是我们如何编译和测试智能合约代码的方法!您知道如何创建本地环境来进行工作吗?这里也一样!
 
-For now, all you need to know is that a smart contract is a piece of code that lives on the blockchain. The blockchain is a public place where anyone can securely read and write data for a fee. Think of it sorta like AWS or Heroku, except no one actually owns it! It's run by thousands of random people known as "miners".
+现在，您只需要知道智能合约是保留在区块链上的一段代码。区块链是一个公共场所，任何人都可以安全地读取和写入数据，但需要付费。你可以把它想象成AWS或Heroku，只不过没有人真正拥有它!它是由数千名被称为“矿工”的随机人员管理的。
 
-The bigger picture here is:
+整个流程是这样的:
 
-1 -- **We're going to write a smart contract**. That contract has all the logic around our actual game.
+1 - **我们要写一个智能合约**。这份智能合约包含了我们实现游戏的所有逻辑。
 
-2 -- **Our smart contract will be deployed to the blockchain**. This way, anyone in the world will be able to access and run our smart contract — and we'll let them access our game.
+2 - **我们的智能合约将被部署到区块链**。这样，世界上任何人都可以访问并运行我们的智能合约——我们也会让他们访问我们的游戏。
 
-3 -- **We're going to build a client website** that will let people easily connect their Ethereum wallet and play our game.
+3 - **我们将建立一个客户端网站**，让人们可以轻松连接他们的以太坊钱包并玩我们的游戏。
 
-I recommend also reading over [these](https://ethereum.org/en/developers/docs/intro-to-ethereum/) docs when you can for fun. These are the best guides on the internet for understanding how Ethereum works in my opinion!
+如果你觉得有趣的话，我建议你也阅读[这些](https://ethereum.org/en/developers/docs/intro-to-ethereum/)文档。在我看来，这些是互联网上理解以太坊如何工作的最好指南!
 
-### ⚙️ Setup local tooling
+### ⚙️ 设置本地工具
 
-We're going to be using a tool called **Hardhat** a lot which let us quickly compile smart contracts and test them locally. First you'll need to get node/npm. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html).
+我们将经常使用一个名为**Hardhat**的工具，它可以让我们快速编译智能合约并在本地测试它们。首先，您需要获取node/npm。如果你没有，请到[这里](https://hardhat.org/tutorial/setting-up-the-environment.html)。
 
-*Note: I'm on Node 16. I know some people have gotten "out of memory errors" on older versions of node so if that happens, get Node 16 LTS!*
+*注意:我使用的Node版本在16上。我知道有些人会在旧版本的节点上出现“内存不足错误”，所以如果发生这种情况，请获得Node16 LTS!*
 
-Next, let's head to the terminal. Go ahead and `cd` to the directory you want to work in. Once you're there run these commands:
+接下来，我们去终端。继续并 `cd` 到你想要工作的目录。一旦你进入了你想要工作的目录，那里，运行这些命令:
 
 ```javascript
 mkdir epic-game
@@ -31,57 +31,58 @@ npm init -y
 npm install --save-dev hardhat@latest
 ```
 
-You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Google around a bit about these vulnerabilities if you want to know more!
+在运行最后一个命令并安装Hardhat之后，您可能会看到一条关于漏洞的消息。每次你从NPM安装一些东西时，都会进行一次安全检查，看看你正在安装的库中是否有任何报告的漏洞。这更多的是对你的警告，所以你要意识到!如果你想知道更多的话，我们就来了解一下这些漏洞吧!
 
-### 🔨 Get sample project working
+### 🔨 让示例项目运行起来
 
-Cool, now we should have hardhat. Let's get a JavaScript project going.
+酷，现在我们应该有HardHat了。让我们开始一个JavaScript项目。
 
 ```javascript
 npx hardhat
 ```
 
-*Note: If you're on Windows using Git Bash to install hardhat, you may run into an error at this step (HH1). You can try using Windows CMD to perform the HardHat install if you run into trouble. Additional info can be found [here](https://github.com/nomiclabs/hardhat/issues/1400#issuecomment-824097242).*
+*注意:如果你在Windows上使用Git Bash安装HardHat，你可能会在这一步(HH1)遇到错误。如果遇到麻烦，您可以尝试使用Windows CMD来执行HardHat安装。更多的信息可以在 [这里](https://github.com/nomiclabs/hardhat/issues/1400#issuecomment-824097242) 找到.*
 
-*Note: if you have yarn installed along with npm, you may get errors such as `npm ERR! could not determine executable to run`. In this case, you can do `yarn add hardhat`.*
+*注意:如果你安装了基于npm的yarn，你可能会得到诸如' npm ERR!无法确定要运行的可执行文件。在这种情况下，你可以做' yarn add hardhat ' .*
 
-Choose the option _**Create a JavaScript project**_. Say yes to everything.
+选择选项_**创建一个JavaScript项目**_。对一切都说“yes”。
+
+
 
 <img width="571" alt="Screen Shot 2022-06-10 at 22 51 21" src="https://i.imgur.com/j1e8vJT.png">
 
-The sample project will ask you to install hardhat-waffle and hardhat-ethers. These are other goodies we'll use later :).
+示例项目将要求您安装hardhat-waffle和hardhat-ethers。这些是我们稍后会用到的其他东西:)。
 
-Go ahead and install these other dependencies just in case it didn't do it automatically.
+继续安装下面这些其他依赖项，以防它没有自动完成。
 
 ```bash
 npm install --save-dev chai @nomiclabs/hardhat-ethers ethers @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-chai-matchers
 ```
 
-You'll also want to install something called **OpenZeppelin** which is another library that's used a lot to develop secure smart contracts. We'll learn more about it later. For now, just install it :).
+您还需要安装一个名为**OpenZeppelin**的程序库，它被广泛用于开发安全智能合约。我们稍后会了解更多。现在，只安装它:)。
 
 ```javascript
 npm install @openzeppelin/contracts
 ```
 
-Then run:
+然后运行:
 
 ```javascript
 npx hardhat run scripts/deploy.js
 ```
 
+Boom!如果您在终端中看到一些关于正在部署的合约的内容，这意味着您的本地环境已设置**，并且**您还运行/部署了一个智能合约到本地区块链。
 
-Boom! If you see some stuff in your terminal about a contract being deployed, this means that your local environment is set up **and** you also ran/deployed a smart contract to a local blockchain.
+这简直是史诗。我们还会进一步讨论这个问题，但基本上这里发生的是:
 
-This is pretty epic. We'll get into this more, but basically what's happening here is:
+1. Hardhat将您的智能合约从实体代码编译为字节码。
+2. Hardhat将在您的计算机上旋转构成一个“本地区块链”。它就像一个迷你的以太坊测试版本，在你的电脑上运行，帮助你快速测试你编写的合约代码!
+3. Hardhat会将编译好的智能合约“部署”到本地区块链。这就是你在末尾看到的地址。这是我们在迷你版以太坊上部署的合约。
 
-1. Hardhat compiles your smart contract from solidity to bytecode.
-2. Hardhat will spin up a "local blockchain" on your computer. It's like a mini, test version of Ethereum running on your computer to help you quickly test stuff!
-3. Hardhat will then "deploy" your compiled contract to your local blockchain. That's the address you see at the end there. It's our deployed contract, on our mini version of Ethereum.
+如果您感到好奇，可以随意查看项目中的代码，看看它是如何工作的。具体来说，请选中智能合约 `Lock.sol` ，`deploy.js` 是实际运行部署合约的脚本。
 
-If you're curious, feel free to look at the code inside the project to see how it works. Specifically, check out `Lock.sol` which is the smart contract and `deploy.js` which actually runs the contract.
+当你完成探索后，让我们进入下一节并开始编写真正的游戏智能合约。
 
-Once you're done exploring, let's head to the next section and start our actual game contract.
+### 🚨 进度报告!
 
-### 🚨 Progress report!
-
-Post a screenshot of your terminal with the output of `deploy.js` in #progress to show you've gotten your local env working :)!
+发布一个终端的屏幕截图，输出 `deploy.js` 在Discord中的#progress显示你已经得到了你的本地环境工作:)!

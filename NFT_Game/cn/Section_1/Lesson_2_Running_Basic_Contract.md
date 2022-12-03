@@ -1,16 +1,16 @@
-### 📝 Write our starter contract
+### 📝 编写我们的启动器智能合约
 
-Pick your favorite code editor and open up the directory where you setup your hardhat project! Let's do a little clean-up.
+选择您最喜欢的代码编辑器并打开您设置Hardhat项目的目录!让我们开始编写智能合约吧。
 
-We want to delete all the lame starter code generated for us. We're going to write this stuff ourselves! Go ahead and delete the file `Lock.js` under `test`.  Also, delete `deploy.js` under `scripts`. Then, delete `Lock.sol` under `contracts`. **Don't delete the actual folders!**
+我们希望删除Hardhat为我们生成的所有的初始代码。我们要自己写这些东西！所以请删除 `test`下的'`Lock.js` 文件。同时，删除`scripts`下的 `deploy.js` 。然后删除“ `contracts`的 `Lock.sol` 。**不要删除实际的文件夹!**
 
-Now, let's get to writing our NFT contract. If you've never written a smart contract don't worry. **Just follow along. Google stuff you don't understand. Ask questions in Discord.**
+现在，我们开始写非功能性智能合约吧。如果你从未写过智能合约，也不用担心。**跟着我走就行了。你不懂的东西。在Discord中提问。**
 
-Create a file named `MyEpicGame.sol` under the `contracts` directory. File structure is super important when using Hardhat, so, be careful here!
+在`contracts` 下面创建一个名为 `MyEpicGame.sol` 的文件。在使用Hardhat时，文件结构非常重要，所以在这里要小心!
 
-Note: I recommend downloading the [Solidity extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) for VSCode which gives nice syntax highlighting.
+注意:我推荐下载VSCode的[Solidity扩展](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)，它提供了很好的语法高亮显示。
 
-I always like starting with a really basic contract, just to get things going.
+我总是喜欢从一个非常基本的合同开始，只是为了让事情开始。
 
 ```javascript
 // SPDX-License-Identifier: UNLICENSED
@@ -26,15 +26,15 @@ contract MyEpicGame {
 }
 ```
 
-Note: Sometimes VSCode itself will throw errors that aren't actually a problem. For example, it may underline the hardhat import and say it doesn't exist. These happens because your global Solidity compiler isn't set locally. If you don't know how to fix this, don't worry. Ignore this for now. Also I recommend that you don't use VSCode's terminal, use your own separate terminal! Sometimes the VSCode terminal gives issues if the compiler isn't set.
+注意:有时VSCode本身会抛出实际上不是问题的错误。例如，它可能在Hardhat导入下面加下划线，并表示它不存在。发生这些情况是因为您的全局Solidity编译器没有在本地设置。如果你不知道如何解决这个问题，不要担心。暂时忽略这一点。另外，我建议你不要使用VSCode的终端，使用你自己的独立终端!如果编译器没有设置，VSCode终端有时会出现问题。
 
-Let's go line-by-line here.
+让我们一行一行地看。
 
 ```javascript
 // SPDX-License-Identifier: UNLICENSED
 ```
 
-Just a fancy comment.  It's called an "SPDX license identifier", feel free to Google what it is :).
+只是一个花哨的评论。它被称为“SPDX许可证标识符”，可以自由谷歌它是什么:)。
 
 ```javascript
 pragma solidity ^0.8.17;
@@ -42,11 +42,13 @@ pragma solidity ^0.8.17;
 
 This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use version 0.8.17 of the Solidity compiler, nothing lower. Note, be sure your compiler is set to 0.8.17 in `hardhat.config.js`.
 
+这是我们希望智能合约使用的Solidity编译器的版本。它基本上是说:“当运行这个时，我只想使用Solidity编译器的0.8.17版本，不要更低。注意，确保你的编译器在`hardhat.config.js`中设置为0.8.17。
+
 ```javascript
 import "hardhat/console.sol";
 ```
 
-Some magic given to us by Hardhat to do some console logs in our contract. It's actually challenging to debug smart contracts but this is one of the goodies Hardhat gives us to make life easier.
+Hardhat允许我们在智能合约中做一些控制台日志。实际上，调试智能合约具有挑战性，但这是Hardhat提供给我们的好处之一，使工作更容易。
 
 ```javascript
 contract MyEpicGame {
@@ -56,19 +58,19 @@ contract MyEpicGame {
 }
 ```
 
-So, smart contracts kinda look like a `class` in other languages, if you've ever seen those! Once we initialize this contract for the first time, that constructor will run and print out that line. Please make that line say whatever you want. Have a little fun with it.
+所以，智能合约有点像其他语言中的 `class` ，如果你见过的话!一旦我们第一次初始化这个智能合约，构造函数就会运行并打印出这一行。请让这条线说你想说的。希望你玩得开心点。
 
-### 😲 How do we run it?
+### 😲 我们如何运作它?
 
-Awesome — we've got a smart contract! But, we don't know if it works. We need to actually:
+太棒了——我们有了一个智能合约!但是，我们不知道它是否有效。我们实际上需要:
 
-1. Compile it.
-2. Deploy it to our local blockchain.
-3. Once it's there, that console.log will run.
+1. 编译它。
+2. 将它部署到我们的本地区块链。
+3. 一旦它部署了，console.log就会运行。
 
-We're just going to write a custom script that handles those 3 steps for us.
+我们只需要编写一个自定义脚本来为我们处理这三个步骤。
 
-Go into the `scripts` directory and make a file named `run.js`. This is what `run.js` is going to have inside it:
+进入 `scripts` 目录，创建一个名为`run.js`的文件。这是`run.js`的内容:
 
 ```javascript
 const main = async () => {
@@ -91,72 +93,74 @@ const runMain = async () => {
 runMain();
 ```
 
-`run.js` is our playground to mess around with our contract!
+`run.js`是我们测试智能合约的游乐场!
 
-### 🤔 How's it work?
+### 🤔 它是如何工作的?
 
-**Note: VSCode might auto-import ethers. We don't need to import ethers or anything. So, make sure not to import anything.**
+**注意:VSCode可能会自动导入ethers。我们不需要进口 ethers之类的东西。因此，请确保没有导入任何内容。**
 
-Again going line by line here.
+还是一行一行的看。
 
 ```javascript
 const gameContractFactory = await hre.ethers.getContractFactory('MyEpicGame');
 ```
 
-This will actually compile our contract and generate the necessary files we need to work with our contract under the `artifacts` directory. Go check it out after you run this :).
+这实际上将编译我们的合同，并在 `artifacts` 目录下生成我们使用智能合约所需的必要文件。在你运行这个之后去看看吧:)。
 
 ```javascript
 const gameContract = await gameContractFactory.deploy();
 ```
 
-This is pretty fancy :).
+这是相当奇特的:)。
 
-What's happening here is Hardhat will create a local Ethereum network for us, but just for this contract. Then, after the script completes it'll destroy that local network. So, every time you run the contract, it'll be a fresh blockchain. Whats the point? It's kinda like refreshing your local server every time so you always start from a clean slate which makes it easy to debug errors.
+现在的情况是，Hardhat将为我们创建一个本地以太坊网络，但只是为了这个智能合约。然后，脚本完成后，它会破坏本地网络。每次运行合约时，它都是一个新的区块链。这有什么意义?这有点像每次刷新你的本地服务器，所以你总是从头开始，这使得调试错误很容易。
 
 ```javascript
 await gameContract.deployed();
 ```
 
-We'll wait until our contract is officially mined and deployed to our local blockchain! That's right, hardhat actually creates fake "miners" on your machine to try its best to imitate the actual blockchain.
+我们要等到我们的智能合约被正式挖掘并部署到我们当地的区块链!没错，Hardhat实际上在您的机器上创建了假的“矿工”，以尽力模仿实际的区块链。
 
-Our `constructor` runs when we actually are fully deployed!
+我们的`constructor`构造函数在我们实际完全部署时运行!
 
 ```javascript
 console.log("Contract deployed to:", gameContract.address);
 ```
 
-Finally, once it's deployed `gameContract.address` will basically give us the address of the deployed contract. This address is how we can actually find our contract on the blockchain. Right now on our local blockchain it's just us. So, this isn't that cool.
+最后，一旦它完成了部署了， `gameContract.address`会返回给我们部署智能合约的地址。这个地址就是我们在区块链上找到智能合约的地方。现在我们本地的区块链只有我们。这并不是很酷。
 
-But, there are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will come in handy when we deploy to the actual blockchain in a few lessons.
+但是，在实际的区块链上有数百万的智能合约。因此，这个地址使我们可以方便地访问我们感兴趣的智能合约!当我们在后面几节课中部署到实际的区块链时，这将派上用场。
 
-### 💨 Run it
+### 💨 运行它
 
-Before you run this, be sure to change `solidity: "0.8.4",` to `solidity: "0.8.17",` in your `hardhat.config.js`.
+在你运行这个之前，一定要在你的`hardhat.config.js`中把 `solidity: "0.8.4",`  改为 `solidity: "0.8.17",` 。
 
-Let's run it! Open up your terminal and run:
+让我们运行它!打开终端并运行:
 
 ```javascript
 npx hardhat run scripts/run.js
 ```
 
-You should see your `console.log` run from within the contract and then you should also see the contract address print out!!!
+你应该看到你的 `console.log` 在智能合约中运行，然后你也应该看到合约地址打印出来!!
 
 
 ### 🎩 Hardhat & HRE
 
-In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of sorcery is this?
+在这些代码块中，你会经常注意到我们使用了`hre.ethers`,但 `hre` 从来没有输入过任何地方?这是什么巫术?
 
-Directly from the Hardhat docs themselves, you will notice this:
+直接从Hardhat文档中，你会注意到:
 
-> The Hardhat Runtime Environment, or HRE for short, is an object containing all the functionality that Hardhat exposes when running a task, test or script. In reality, Hardhat is the HRE.
+> Hardhat运行时环境，简称HRE，是一个包含Hardhat在运行任务、测试或脚本时公开的所有功能的对象。实际上，Hardhat就是HRE。
 > 
 
 So what does this mean? Every time you run a terminal command that starts with `npx hardhat` you are getting this `hre` object built on the fly using the `hardhat.config.js` specified in your code! This means you will never have to actually do some sort of import into your files like:
 
+这是什么意思呢?每次你运行一个以 `npx hardhat` 开头的终端命令时，你都在使用你的代码中指定的 `hardhat.config.js` 动态构建这个' `hre` 对象!这意味着你永远不需要在你的文件中执行如下的导入操作:
+
 `const hardhat = require("hardhat")`
 
-**TL;DR - you will be seeing `hre` a lot in our code, but never imported anywhere! Check out the [Hardhat documentation](https://hardhat.org/advanced/hardhat-runtime-environment.html) to learn more about it!**
+**TL;DR -你会在我们的代码中看到很多“`hre` ，但从来没有导入过任何地方!查看[Hardhat文档](https://hardhat.org/advanced/hardhat-runtime-environment.html)了解更多信息!**
 
-### 🚨 Progress report!
+### 🚨 进度报告!
 
-Post a screenshot in #progress with the output of `npx hardhat run scripts/run.js` :).
+在Discord中的#progress中发布一个截图，将`npx hardhat run scripts/run.js` 的输出结果发出去:)。
