@@ -10,7 +10,7 @@
 
 注意:我推荐下载VSCode的[Solidity扩展](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)，它提供了很好的语法高亮显示。
 
-我总是喜欢从一个非常基本的合同开始，只是为了让事情开始。
+我总是喜欢从一个非常基本的智能合约开始，只是为了让事情开始。
 
 ```javascript
 // SPDX-License-Identifier: UNLICENSED
