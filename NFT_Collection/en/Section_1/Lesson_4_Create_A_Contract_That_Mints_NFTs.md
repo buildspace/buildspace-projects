@@ -32,7 +32,7 @@ contract MyEpicNFT is ERC721 {
      // Actually mint the NFT to the sender using msg.sender.
     _safeMint(msg.sender, newItemId);
     
-    //Return the NFT's metadata
+    // Return the NFT's metadata
     tokenURI(newItemId);
 
     // Increment the counter for when the next NFT is minted.
