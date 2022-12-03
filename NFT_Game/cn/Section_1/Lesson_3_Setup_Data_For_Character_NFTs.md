@@ -1,6 +1,6 @@
 ### 🤔 什么是NFT ?
 
-哈哈，这是个大问题。在继续学习之前，一定要快速阅读[这篇文章](https://github.com/buildspace/buildspace-projects/blob/main/NFT_Collection/en/Section_1/Lesson_1_What_Is_A_NFT.md)，给你一点入门知识。只要你对非功能性语言有一个*大致的概念*，这就是你真正需要的!
+哈哈，这是个大问题。在继续学习之前，一定要快速阅读[这篇文章](https://github.com/buildspace/buildspace-projects/blob/main/NFT_Collection/en/Section_1/Lesson_1_What_Is_A_NFT.md)，给你一点入门知识。只要你对NFT有一个*大致的概念*，这就是你真正需要的!
 
 ### 😮我们将如何使用可玩性NFTs
 
