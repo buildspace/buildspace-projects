@@ -6,7 +6,7 @@ Now for the fun stuff — actually using our extension to call OpenAI. The way w
 
 The goal is to highlight text in our browser, right click it, and see an option that says “Generate blog post”. Whatever we get from GPT-3 we will inject directly into our website 🙂.
 
-**Again for my extension, I’ll be working with [Calmly](https://www.calmlywriter.com/online/).** I recommend you follow along w/ Calmly. Afterwords, you’ll be able to use the same flow for whatever website you want to generate text on.
+**Again for my extension, I’ll be working with [Calmly](https://www.calmlywriter.com/online/).** I recommend you follow along w/ Calmly. Afterwards, you’ll be able to use the same flow for whatever website you want to generate text on.
 
 To get this all working we’ll need to setup this thing called a service worker. You can think of this like a server setup for your app. Instead of having all our code run in our UI, we can have our UI do things while our service worker does everything in the background!
 
