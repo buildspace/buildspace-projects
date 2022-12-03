@@ -1,6 +1,6 @@
-### ✨ Mint the NFTs
+### ✨ 铸造NFTs
 
-Now that we have all the data nicely set up for our characters, the next thing to do is actually mint the NFT. Let's go through that process. Here's my updated contract and I put a comment above lines I changed/added to make it easy!
+现在我们已经为角色设置好了所有数据，接下来要做的就是制作NFT。让我们回顾一下这个过程。这是我更新的合约，我在我修改/添加的行上面加了注释，让它更容易理解!
 
 ```javascript
 // SPDX-License-Identifier: MIT
@@ -105,20 +105,20 @@ contract MyEpicGame is ERC721 {
 }
 ```
 
-A lot of stuff going on here.
+这里做了很多改变。
 
-First thing I do is create two state variables which are sorta like permanent global variables on the contract. Read about them [here](https://ethereum.stackexchange.com/a/25556).
+我要做的第一件事是创建两个状态变量，它们有点像合约上的永久全局变量。阅读他们[这里](https://ethereum.stackexchange.com/a/25556)。
 
 ```javascript
 mapping(uint256 => CharacterAttributes) public nftHolderAttributes;
 mapping(address => uint256) public nftHolders;
 ```
 
-`nftHolderAttributes` will be where we store the state of the player's NFTs. We map the the NFT's id to a `CharacterAttributes` struct.
+`nftHolderAttributes` 将是我们存储玩家的NFTs状态的地方。我们将NFT的id映射到一个`CharacterAttributes` 结构体。
 
-Remember, every player has their own character NFT. And, every single NFT has their own state like `HP`, `Attack Damage`, etc! So if Player #172 owns a "Pikachu" NFT and their Pikachu NFT loses health in a battle **then only Player 172's Pikachu NFT should be changed** everyone else's Pikachu should stay the same! So, we store this player character level data in a map.
+记住，每个玩家都有自己的角色NFT。而且，每个NFT都有自己的状态，如“HP”、“攻击伤害”等。所以如果玩家172拥有一个“皮卡丘”NFT，而他们的皮卡丘NFT在战斗中失去了生命值**那么只有玩家172的皮卡丘NFT应该被更改**，其他人的皮卡丘应该保持不变!所以，我们将玩家角色等级数据存储在映射中。
 
-Next, I have `nftHolders` which basically lets me easily map the address of a user to the ID of the NFT they own. For example, I would be able to do `nftHolders[INSERT_PUBLIC_ADDRESS_HERE]` and instantly know what NFT  that address owns. It's just helpful to keep this data on the contract so it's easily accessible. 
+接下来，我创建了`nftHolders` ，它基本上可以让我轻松地将用户的地址映射到他们所拥有的NFT的ID。例如，我将能够执行`nftHolders[INSERT_PUBLIC_ADDRESS_HERE]` ，就能立即知道该地址拥有什么NFT。将这些数据保存在合约中是很有帮助的，这样就很容易获得。
 
 ### ⚡️ ERC 721
 
@@ -128,49 +128,55 @@ The NFT standard is known as `ERC721` which you can read a bit about [here](h
 
 It'd be crazy to write a HTTP server from scratch without using a library, right? Of course, unless you wanted to explore lol. Similarly — it'd be crazy to just write an NFT contract from complete scratch! You can explore the `ERC721` contract we're inheriting from [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol).
 
+您还会看到我在声明一个OpenZeppelin合约时，使用 `is ERC721`  来继承这个合约。你可以阅读更多关于继承的内容[在这里](https://solidity-by-example.org/inheritance/)，但基本上，这意味着我们可以从我们的合约中调用其他合约。这就像导入函数供我们使用。
+
+NFT标准被称为“ERC721”，你可以在 [这里](https://eips.ethereum.org/EIPS/eip-721).读到一些相关内容。OpenZeppelin实际上为我们实现了NFT标准，然后让我们在其上编写自己的逻辑来定制它。这意味着我们不需要编写模版代码。
+
+从头开始编写HTTP服务器而不使用库是很疯狂的，对吧?当然，除非你想探索，哈哈。同样的，从头开始编写NFT合同也太疯狂了!您可以从[这里](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol).探索继承的 `ERC721` 合约
+
 ```solidity
 _tokenIds.increment();
 ```
 
-So, `_tokenIds` starts at `0`. It's just a counter. `increment()` just adds 1 - see [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/fa64a1ced0b70ab89073d5d0b6e01b0778f7e7d6/contracts/utils/Counters.sol#L32).
+因此， `_tokenIds` 从 `0`开始。它只是一个计数器。`increment()` 只是增加了1 -参见[这里](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/fa64a1ced0b70ab89073d5d0b6e01b0778f7e7d6/contracts/utils/Counters.sol#L32)。
 
-**In the constructor** I increment it to `1`.  Why?  Basically because I don't like dealing w/ `0`s in my code. In Solidity, `0` is a [default value](https://docs.soliditylang.org/en/v0.8.14/control-structures.html#scoping-and-declarations) and I try to stay away from default values. Just trust me on it for now ;).
+**在构造函数**中，我将它加到 `1`。为什么?基本上是因为我不喜欢在代码中处理w/  `0`。在Solidity中， `0`是一个[默认值](https://docs.soliditylang.org/en/v0.8.14/control-structures.html#scoping-and-declarations)，我尝试远离默认值。现在就相信我吧;)。
 
-I also have `increment()` in `mintCharacterNFT` but don't forget to add it in the `constructor` as well ;).
+我也有 `increment()` 在 `mintCharacterNFT` 中，但不要忘记添加它在 `constructor` ;)。
 
 ```solidity
 function mintCharacterNFT(uint _characterIndex)
 ```
 
-This function is where the actual minting is happening.
+这个函数是实际铸造发生的地方。
 
-First, you'll see that we pass in `_characterIndex`. Why?
+首先，你会看到我们传入 `_characterIndex`. 。为什么?
 
-Well, because players need to be able to tell us **which character they want**! For example, if I do `mintCharacterNFT(0)` then the character w/ the stats of `defaultCharacters[0]` is minted!
+因为玩家需要能够告诉我们他们想要的是哪个角色!例如，如果我做 `mintCharacterNFT(0)` ，那么角色 `defaultCharacters[0]` 将被铸造!
 
 ```solidity
 uint256 newItemId = _tokenIds.current();
 ```
 
-From there we have a number called `newItemId`. This is the id of the NFT itself. Remember, each NFT is "unique" and the way we do this is we give each token a unique ID. It's just a basic counter. `_tokenIds.current()` starts at 0, but, we did `_tokenIds.increment()` in the `constructor` so it'll be at `1`. 
+在这里我们定义了一个数字叫做`newItemId`。这是NFT本身的id。记住，每个NFT都是“唯一的”，我们做到这一点的方法是给每个令牌一个唯一的ID。这只是一个基本的计数器。 `_tokenIds.current()` 从0开始，但是，我们在`constructor` 中做了`_tokenIds.increment()` ，所以它将开始值为 `1`。
 
-We're using `_tokenIds` to keep track of the NFTs unique identifier, and it's just a number! So, when we first call `mintCharacterNFT`, `newItemId` is 1. When we run it again, `newItemId` will be 2, and so on!
+我们使用 `_tokenIds` 来跟踪nft的唯一标识符，它只是一个数字!当我们第一次调用`mintCharacterNFT`时，`newItemId` 是1。当我们再次运行它时，`newItemId` 将是2，以此类推!
 
-`_tokenIds` is **state** **variable** which means if we change it, the value is stored on the contract directly like a global variable that stays permanently in memory.
+`_tokenIds` 是**状态变量**，这意味着如果我们改变它，值将直接存储在合约上，就像一个永久保存在内存中的全局变量一样。
 
 ```solidity
 _safeMint(msg.sender, newItemId). 
 ```
 
-This is the magic line! When we do `_safeMint(msg.sender, newItemId)` it's pretty much saying: "mint the NFT with id `newItemId` to the user with address `msg.sender`". Here, `msg.sender` is a variable [Solidity itself provides](https://docs.soliditylang.org/en/develop/units-and-global-variables.html#block-and-transaction-properties) that easily gives us access to the **public address** of the person calling the contract.
+这是魔法线!当我们执行`_safeMint(msg.sender, newItemId)` ，这就相当于在说:“将id为`newItemId` 的NFT发送给地址为 `msg.sender`的用户”。在这里, `msg.sender`是一个变量，是由[Solidity本身提供](https://docs.soliditylang.org/en/develop/units-and-global-variables.html#block-and-transaction-properties)，它可以让我们轻松访问调用合约的人的**公共地址**。
 
-**You can't call a contract anonymously**, you need to have your wallet credentials connected. This is almost like "signing in" and being authenticated :).
+**你不能匿名调用合约**，你需要有你的钱包凭证连接。这几乎就像“登录”和被验证:)。
 
-What's awesome here is this is a **super-secure way to get the user's public address**. Keeping the public address itself a secret isn't an issue, it's already public!! Everyone sees it. But, by using `msg.sender` you can't "fake" someone else's public address unless you had their wallet credentials and called the contract on their behalf!
+最棒的是，**这是一种获取用户公共地址的超级安全方式**。公开地址本身不是个问题，它已经是公开的了!!每个人都看到了。但是，通过使用`msg.sender`你不能“伪造”别人的公共地址，除非你有他们的钱包凭证，并代表他们调用合约!
 
-### 🎨 Holding dynamic data on an NFT
+### 🎨 在NFT上保存动态数据
 
-So, as players play the game, certain values on their character will change, right? For example, If I have my character attack the boss, the boss will hit back! **In that case, my NFT's HP would need to go down.** We need a way to store this data per player:
+所以，随着玩家玩游戏，他们角色的某些属性也会改变，对吧?例如，如果我让我的角色攻击boss, boss就会反击!**在这种情况下，我的NFT的HP将需要下降。**我们需要一种方法来存储每个玩家的数据:
 
 ```solidity
 nftHolderAttributes[newItemId] = CharacterAttributes({
@@ -185,6 +191,8 @@ nftHolderAttributes[newItemId] = CharacterAttributes({
 
 A lot happening here! Basically, **our NFT holds data related to our player's NFT. But, this data is dynamic. For example,** let's say I create an NFT. By default my NFT starts with default stats like:
 
+这里发生了很多事情!基本上，**我们的NFT与玩家的NFT的数据对应上了。但是，这些数据是动态的。例如，**假设我创建一个NFT。默认情况下，我的NFT以默认状态开始:
+
 ```json
 {
   characterIndex: 1,
@@ -196,9 +204,9 @@ A lot happening here! Basically, **our NFT holds data related to our player's NF
 } 
 ```
 
-**Remember**, **every player has their own character NFT and the NFT itself holds data on the state of the character.**
+**记住，每个玩家都有自己的角色NFT，而NFT本身也拥有关于角色状态的数据。**
 
-Let's say my character is attacked and loses 50 HP, well then HP would go from 200 → 150, right? That value would need to change on the NFT! 
+假设我的角色受到攻击并失去了50点HP，那么HP将从200变成150，对吧?这个值需要在NFT上改变!
 
 ```json
 {
@@ -211,33 +219,39 @@ Let's say my character is attacked and loses 50 HP, well then HP would go from 2
 } 
 ```
 
-Or maybe we want our game to have **upgradeable** characters, where you can give your character a sword and add +10 attack damage from 50 → 60. Then, `attackDamage` would need to change on the NFT!
-
-People often think that NFTs metadata isn't allowed to change, but, that's not true. It's actually up to the creator!!!
-
 In this case, our character name and character image **never** change, but it's HP value definitely does! **Our NFTs** must be able to maintain the state of our specific player's character.
 
 This is why we need the variable `nftHolderAttributes` which maps the tokenId of the NFT to a struct of `CharacterAttributes`. It allows us to easily update values related to the player's NFT. That means as players play our game and their NFT's `hp` value changes (because the boss hits them), we actually change their `hp` value on `nftHolderAttributes`. And that's how we can store player-specific NFT data on our contract!
 
 Next, we do:
 
+或者我们希望我们的游戏拥有可升级的角色，即你可以给角色一把剑并添加10点攻击伤害(50 → 60)。然后，`attackDamage` 就需要在NFT上改变了!
+
+人们通常认为NFTs元数据是不允许改变的，但事实并非如此。这实际上取决于创造者!!
+
+在这种情况下，我们的角色名称和角色形象**永远不会改变**，但它的HP值却会改变!**我们的NFTs**必须能够维持特定玩家角色的状态。
+
+这就是为什么我们需要变量 `nftHolderAttributes` ，它将NFT的tokenId映射到一个结构体`CharacterAttributes`。这让我们能够轻松地更新与玩家NFT相关的值。这意味着当玩家在玩我们的游戏时，他们的NFT的 `hp` 值发生了变化(因为boss击中了他们)，我们实际上是在 `nftHolderAttributes`上改变了他们的 `hp` 值。这就是我们如何在合约中存储特定于玩家的NFT数据的方法!
+
+接下来，我们做:
+
 ```solidity
 nftHolders[msg.sender] = newItemId;
 ```
 
-Map the user's public wallet address to the NFTs tokenId. What this lets me do later is easily keep track of who owns which NFTs.
+将用户的公共钱包地址映射到 NFTs 的tokenId。这让我以后可以轻松地跟踪谁拥有哪些nft。
 
-*Note: Right now this is designed where each player can only hold one character NFT per wallet address. If you wanted, you could adjust this to where players can hold multiple characters but I stuck with 1 character per player for the sake of ease! This is our game, do whatever the heck you want.*
+*注意:现在的设计是每个玩家在每个钱包中只能持有一个角色NFT。如果你愿意，你可以调整到玩家可以持有多个角色，但为了方便起见，我坚持每个玩家持有1个角色。这是我们的游戏，你想怎么做就怎么做。*
 
 ```solidity
 _tokenIds.increment();
 ```
 
-After the NFT is minted, we increment `_tokenIds` using `_tokenIds.increment()` (which is a function OpenZeppelin gives us). This makes sure that next time an NFT is minted, it'll have a different `_tokenIds` identifier. No one can have a `_tokenIds` that's already been minted.
+在创建NFT之后，我们使用 `_tokenIds.increment()`(这是OpenZeppelin提供给我们的函数)增加`_tokenIds` 。这可以确保下次生成NFT时，它将具有不同的 `_tokenIds` 标识符。没有人可以拥有已经创建的 `_tokenIds` 。
 
-### 😳 Running it locally
+### 😳 本地运行
 
-In `run.js` what we need to do is actually call `mintCharacterNFT`. I added the following lines to `run.js` right under where we print out the contract address.
+在 `run.js` 中，我们需要做的是调用`mintCharacterNFT`。我在`run.js` 中添加了以下几行，就在我们打印合约地址的地方。
 
 ```javascript
 
@@ -253,15 +267,15 @@ console.log("Token URI:", returnedTokenUri);
 
 ```
 
-When we do `mintCharacterNFT(2)` Hardhat will actually call this function with a **default wallet** that it sets up for us locally. So that means `msg.sender` will be the public address of our local wallet! **This is another reason Hardhat is so nice,** it easily lets us use default local wallets!! This is usually a massive pain to set up yourself.
+当我们执行 `mintCharacterNFT(2)` 时，Hardhat将使用它为我们本地设置的**默认钱包**调用这个函数。这意味着是 `msg.sender` 将是我们本地钱包的公共地址!**这是Hardhat如此好用的另一个原因，**它很容易让我们使用默认的本地钱包！如果你自己建立本地钱包的话，这将是一个巨大的痛苦。
 
-The function `tokenURI` is something we get for free from `ERC721` since we inherited from it. 
+函数 `tokenURI` 是我们从 `ERC721` 中免费获得的，因为我们继承了它。
 
-Basically, `tokenUri` is a function on **every NFT** that returns the **actual data** attached to the NFT. So when I call `gameContract.tokenURI(1)` it's basically saying, *"go get me the data inside the NFT with tokenId 1"*, which would be the first NFT minted. And, it should give me back everything like: my character's name, my character's current hp, etc.
+ `tokenURI` 是一个函数，它在每个NFT上返回附加到NFT的实际数据。所以当我调用`gameContract.tokenURI(1)` 时，它通常是在说，“去获取带有tokenId为1的NFT中的数据”，这将是第一个NFT。并且，它应该返回我的所有内容:我的角色的名字，我的角色的当前hp等等。
 
-Platforms like OpenSea, Rarible, and Pixxiti know to hit `tokenURI` since that's the standard way to retrieve the NFTs metadata. Let's try running our contract again (remember the command is `npx hardhat run scripts/run.js`)
+OpenSea、Rarible和Pixxiti等平台也可以点击按钮获取 `tokenURI` ，因为这是检索NFT元数据的标准方式。让我们再次运行我们的合约(记住命令是 `npx hardhat run scripts/run.js`)。
 
-My output looks like this:
+我的输出看起来像这样:
 
 ```plaintext
 Done initializing Leo w/ HP 100, img https://i.imgur.com/pKd5Sdk.png
@@ -272,27 +286,27 @@ Minted NFT w/ tokenId 1 and characterIndex 2
 Token URI:
 ```
 
-**Hmmmmmm**. Token URI prints out nothing! That means we have no data attached to our NFT. But wait, that makes no sense! Didn't we already set our data up with `nftHolderAttributes`?
+**Hmmmmmm。** Token URI什么也打印不出来!这意味着我们的NFT没有数据。但是等等，这说不通!我们不是已经用`nftHolderAttributes`设置了数据吗?
 
-**Nope. `nftHolderAttributes` hasn't actually attached to our NFT in any way. It's just a mapping that lives on the contract right now.** What we're going to do next is basically attach `nftHolderAttributes` to the `tokenURI` by overriding it :).
+**不。`nftHolderAttributes`没有以任何方式附加到我们的NFT。这只是目前存在于合约中的一个映射。**我们接下来要做的是通过覆盖 `tokenURI` 来将它附加到 `nftHolderAttributes` )。
 
-### ⭐️ Setup tokenURI
+### ⭐️ 设置tokenURI
 
-The `tokenURI` actually has a specific format! It's actually expecting the NFT data in **JSON**.
+ `tokenURI` 实际上有一个特定的格式!它实际上期望NFT数据保存在**JSON**中。
 
-Let's go over how to do this :).
+让我们来看看怎么做:)。
 
-Create a new folder under `contracts` called `libraries`. Create a file named `Base64.sol` and drop it under libraries. Copy and paste the code from [here](https://gist.github.com/farzaa/f13f5d9bda13af68cc96b54851345832) into `Base64.sol`. This basically provides us with some helper functions to let us encode any data into a Base64 string — which is a standard way to encode some piece of data into a string. Don't worry, you'll see how it works in a bit!
+在 `contracts` 下创建一个名为`libraries`的新文件夹。在libraries下面创建一个名为 `Base64.sol`的文件。从[这里](https://gist.github.com/farzaa/f13f5d9bda13af68cc96b54851345832)复制并粘贴代码到  `Base64.sol`。这基本上为我们提供了一些帮助函数，让我们可以将任何数据编码为Base64字符串—这是将一些数据编码为字符串的标准方法。别担心，您很快就会看到它是如何工作的!
 
+我们需要将该库导入到我们的合约中。
+为此，将以下代码片段与其他导入一起添加到合约文件的顶部附近。
 
-We'll need to import that library into our contract.
-For that, add the following snippet near the top of your file, with the other imports.
 ```solidity
 // Helper we wrote to encode in Base64
 import "./libraries/Base64.sol";
-``` 
+```
 
-Next, we write a function called `tokenURI` in `MyEpicGame.sol`.
+接下来，我们在 `MyEpicGame.sol`.中编写一个名为 `tokenURI` 的函数。
 
 ```solidity
 function tokenURI(uint256 _tokenId) public view override returns (string memory) {
@@ -323,15 +337,15 @@ function tokenURI(uint256 _tokenId) public view override returns (string memory)
 }
 ```
 
-This looks pretty complex. But, it's not too crazy! First we start here:
+这看起来很复杂。但是，这并不太疯狂!首先我们从这里开始:
 
 ```solidity
 CharacterAttributes memory charAttributes = nftHolderAttributes[_tokenId];
 ```
 
-This line actually **retrieves** this specific NFTs data by querying for it using it's `_tokenId` that was passed in to the function. So, if I did `tokenURI(256)` it would return the JSON data related the 256th NFT (if it existed!).
+这一行实际上是通过使用传入函数的 `_tokenId` 查询来获取这个特定的NFTs数据。所以，如果我执行 `tokenURI(256)` ，它将返回与第256个NFT相关的JSON数据(如果它存在的话!)
 
-Then, we take all that data and pack it nicely in a variable named `json`. The JSON's structure looks sorta like this (when it's all cleaned up):
+然后，我们将所有数据很好地打包到一个名为 `json`的变量中。JSON的结构看起来像这样:
 
 ```json
 {
@@ -345,9 +359,9 @@ Then, we take all that data and pack it nicely in a variable named `json`. The J
 }
 ```
 
-You can read more on the structure of the data [here](https://docs.opensea.io/docs/metadata-standards#metadata-structure).
+您可以阅读更多关于数据结构的信息[在这里](https://docs.opensea.io/docs/metadata-standards#metadata-structure)。
 
-So, this may look pretty crazy but it's just us structuring the data to follow the format above:
+所以，这可能看起来很疯狂，但它只是我们按照上面的格式构造数据:
 
 ```solidity
 string memory json = Base64.encode(
@@ -368,11 +382,15 @@ We **dynamically** set things like the NFTs name, HP, AD, etc. *Note: abi.encode
 
 Also, this metadata standard is followed by tons of popular NFT websites like OpenSea. So, all we're doing in the function is we're nicely formatting our `json` variable to follow the standards! Note: `max_value` isn't required, but, I decided to just add it in for fun.
 
+我们**动态地**设置诸如NFTs名称、HP、AD等。*abi.encodePacked 只是组合字符串。*这真的很酷，因为我们可以改变像NFT的HP或图像之后，如果我们想，它会在NFT本身更新! ***因为这是动态的。*** 
+
+此外，OpenSea等许多热门NFT网站也遵循了这一元数据标准。所以，我们在函数中所做的就是按照标准很好地格式化 `json` 变量!注意:`max_value` 不是必需的，但是，我决定添加它只是为了好玩。
+
 ```solidity
 abi.encodePacked("data:application/json;base64,", json)
 ```
 
-This line is actually kinda hard to explain, it's easier to just show you! Go ahead and run `run.js`. Here's my output:
+这句话其实有点难解释，直接给你看更容易!继续并运行 `run.js`.。这是我的输出:
 
 ```plaintext
 Done initializing Leo w/ HP 100, img https://i.imgur.com/pKd5Sdk.png
@@ -383,32 +401,32 @@ Minted NFT w/ tokenId 1 and characterIndex 2
 Token URI: data:application/json;base64,eyJuYW1lIjogIlBpa2FjaHUgLS0gTkZUICM6IDEiLCAiZGVzY3JpcHRpb24iOiAiQ3JpdGljYWxIaXQgaXMgYSB0dXJuLWJhc2VkIE5GVCBnYW1lIHdoZXJlIHlvdSB0YWtlIHR1cm5zIHRvIGF0dGFjayB0aGUgYm9vcy4iLCAiaW1hZ2UiOiAiaHR0cHM6Ly9pLmltZ3VyLmNvbS91N1Q4N0E2LnBuZyIsICJhdHRyaWJ1dGVzIjogWyB7ICJ0cmFpdF90eXBlIjogIkhlYWx0aCBQb2ludHMiLCAidmFsdWUiOiAzMDAsICJtYXhfdmFsdWUiOjMwMH0sIHsgInRyYWl0X3R5cGUiOiAiQXR0YWNrIERhbWFnZSIsICJ2YWx1ZSI6IDI1fSBdfQ==
 ```
 
-You'll see that Token URI now actually prints stuff out! **Nice!** Go ahead and copy that whole string after `Token URI:`. For example, mines looks like this:
+您将看到Token URI 现在实际打印出东西!很好I 继续并复制 `Token URI:`后整个字符串。例如，是这样的:
 
 ```plaintext
 data:application/json;base64,eyJuYW1lIjogIlBpa2FjaHUgLS0gTkZUICM6IDEiLCAiZGVzY3JpcHRpb24iOiAiQ3JpdGljYWxIaXQgaXMgYSB0dXJuLWJhc2VkIE5GVCBnYW1lIHdoZXJlIHlvdSB0YWtlIHR1cm5zIHRvIGF0dGFjayB0aGUgYm9vcy4iLCAiaW1hZ2UiOiAiaHR0cHM6Ly9pLmltZ3VyLmNvbS91N1Q4N0E2LnBuZyIsICJhdHRyaWJ1dGVzIjogWyB7ICJ0cmFpdF90eXBlIjogIkhlYWx0aCBQb2ludHMiLCAidmFsdWUiOiAzMDAsICJtYXhfdmFsdWUiOjMwMH0sIHsgInRyYWl0X3R5cGUiOiAiQXR0YWNrIERhbWFnZSIsICJ2YWx1ZSI6IDI1fSBdfQ==
 ```
 
-Paste that string into the URL bar of your browser. What you'll see is something that looks like this:
+将该字符串粘贴到浏览器的URL栏中。你将看到的是这样的东西:
 
 ![Untitled](https://i.imgur.com/C3QmD2G.png)
 
-BOOOOOOM!!!
+BOOOOOOM ! !
 
-Basically, what we did was we formatted our JSON file and then **encoded** **it** in Base64. So it turns the JSON file into this super long, encoded string that is readable by our browser when we prepend it with `data:application/json;base64,`.
+基本上，我们所做的就是格式化我们的JSON文件，然后在Base64中**编码**它。因此，当我们在JSON文件前加上 `data:application/json;base64,`时，它会将JSON文件变成这个超长的编码字符串，浏览器可以读懂。
 
-We add `data:application/json;base64,` because our browser needs to know how to read the encoded string we're passing it. In this case we're saying, 
+我们添加了 `data:application/json;base64,`，因为我们的浏览器需要知道如何读取我们传递给它的编码字符串。在这种情况下，我们说，
 
-"Hey, I'm passing you a Base64 encoded JSON file, please render it properly". 
+“嘿，我传递给你一个Base64编码的JSON文件，请正确地渲染它”。
 
-Again, this is considered a standard for a majority of browsers which is perfect because we want our NFTs data to be compatible with as many existing systems as possible. 
+同样，这被认为是大多数浏览器的标准，这是完美的，因为我们希望我们的NFT数据与尽可能多的现有系统兼容。
 
-Why are we doing all this Base64 stuff? Well, basically this is how popular NFT websites like OpenSea, Rarible, Pixxiti, and many others prefer when we pass them JSON data from our contract directly :).
+为什么我们要做Base64这些东西?基本上，这就是OpenSea、Rarible、Pixxiti等热门NFT网站喜欢我们直接从合约中传递JSON数据的原因。
 
-**Awesome**. So, we're at the point we are officially minting NFTs locally and the NFT has actual data attached to it in a way that properly follows standards!
+**太棒了.**我们已经在本地正式创造了NFT，并且NFT以一种符合标准的方式附加了实际数据!
 
-**We're ready to deploy our NFT to Pixxiti :).**
+**我们准备将我们的NFT部署到Pixxiti:) **
 
-### 🚨 Progress report!
+### 🚨 进度报告!
 
-Post a screenshot of your JSON output when you paste in the `tokenURI` into your browser's address bar :)!
+当你将 `tokenURI` 粘贴到浏览器的地址栏时，发布你的JSON输出截图:)!

@@ -1,36 +1,26 @@
-### 🎉 Getting our NFTs online
+### 🎉 让我们的NFTs在线
 
-When we use `run.js`, it's just us working locally.
+当我们使用`run.js`时，只有我们在本地工作。
 
-The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to to **view our NFT online** and we are a step closer to getting this to **real users.**
+下一步是一个测试网，你可以把它想象成一个“登台”环境。当我们部署到测试网络时，我们实际上能够**在线查看我们的NFT **，我们离真正的用户更近了一步。
 
 ### 🦊 Metamask
 
-**Note: It's a good idea to create a new account in MetaMask strictly for development purposes. This way, if your development account credentials accidentally leak, your real funds will still be safe.**
+**注意:在MetaMask中创建一个严格用于开发目的的新帐户是一个好主意。这样，如果您的开发帐户凭证意外泄露，您的真实资金仍然是安全的**
 
-[Instructions for adding an account in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-MetaMask-wallet)
+[在MetaMask中添加帐户的说明](https://metamask.zendesk.com/hc/en-us/articles/360015289452-How-to-create-an-additional-account-in-your-MetaMask-wallet)
 
-Next we need an Ethereum wallet. There are a bunch of these, but, for this project we're going to use Metamask. Download the browser extension and set up your wallet [here](https://metamask.io/download.html). Even if you already have another wallet provider, just use Metamask for now.
+接下来我们需要一个以太坊钱包。有很多这样的，但是，对于这个项目，我们将使用Metamask。从[这里](https://metamask.io/download.html)下载浏览器扩展和设置您的钱包。即使您已经有了另一个钱包提供商，也可以暂时使用Metamask。
 
-Why do we need Metamask? Well. We need to be able to call functions on our smart contract that live on the blockchain. And, to do that we need to have a wallet that has our Ethereum address and private key.
+为什么我们需要Metamask?我们需要能够调用位于区块链上的智能合约上的函数。要做到这一点，我们需要有一个钱包，里面有我们的以太坊地址和私钥。
 
-**But, we need something to connect our website with our wallet so we can securely pass our wallet credentials to our website so our website can use those credentials to call our smart contract. You need to have valid credentials to access functions on smart contracts.**
+**但是，我们需要一些东西来连接我们的网站与我们的钱包，这样我们就可以安全地传递我们的钱包证书到我们的网站，同时我们的网站可以使用这些证书来调用我们的智能合约。您需要有有效的凭证来访问智能合约上的函数。**
 
-It's almost like authentication. We need something to "login" to the blockchain and then use those login credentials to make API requests from our website.
+这就像认证一样。我们需要一些东西来“登录”到区块链，然后使用这些登录凭证从我们的网站发出API请求。
 
-So, go ahead and set it all up! Their setup flow is pretty self-explanatory :).
+所以，去把它都设置好吧!他们的设置流程是不言自明的:)。
 
-### 💳 Transactions
-
-When we want to perform an action that changes the blockchain we call it a *transaction*. For example, sending someone ETH is a transaction because we're changing account balances. Doing something that updates a variable in our contract is also considered a transaction because we're changing data. Minting an NFT is a transaction because we're saving data on the contract.
-
-**Deploying a smart contract is also a transaction.**
-
-Remember, the blockchain has no owner. It's just a bunch of computers around the world run by **miners** that have a copy of the blockchain.
-
-When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
-
-This is where [QuickNode](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) comes in.
+### 💳 交易
 
 QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
@@ -42,30 +32,50 @@ And then check out my video below!
 
 [Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
 
-### 🕸 Testnets
+当我们想要执行一个改变区块链的操作时，我们称之为交易。例如，给某人发送ETH是一种交易，因为我们正在改变账户余额。更新合约中的变量的操作也被视为交易，因为我们正在更改数据。创建NFT是一个交易，因为我们在保存合约上的数据。
 
-We're not going to be deploying to the "Ethereum mainnet" for now. Why? Because it costs real $ and it's not worth messing up! We're just hacking around right now. We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake $ so we can test stuff out as much as we want. But, it's important to know that testnets are run by actual miners and mimic real-world scenarios.
+**部署智能合约也是一个交易**
 
-This is awesome because we can test our application in a real-world scenario where we're actually going to:
+记住，区块链没有主人。它只是世界上由**矿工**运行的一堆计算机，拥有区块链的副本。
 
-1. Broadcast our transaction
-2. Wait for it to be picked up by actual miners
-3. Wait for it to be mined
-4. Wait for it be broadcasted back to the blockchain telling all the other miners to update their copies
+当我们部署我们的合约时，我们需要告诉**所有的**矿工，“嘿，这是一个新的智能合约，请将我的智能合约添加到区块链，然后将它也告诉所有其他人”。
 
-### 🤑 Getting some fake $
+这就是[QuickNode](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace)发挥作用的地方。
 
-There are a few testnets out there and the one we'll be using is called "Goerli" which is run by the Ethereum foundation.
+QuickNode可以帮助我们广播我们的合约创建交易，以便矿工能够尽可能快地获取它。一旦交易被挖掘，它将作为合法交易广播到区块链。从那里，每个人更新他们的区块链副本。
 
-In order to deploy to Goerli, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
+这很复杂。如果你没有完全理解，也不要担心。当你写更多的代码并真正构建这个应用时，它自然会更有意义。
 
-In order get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Goerli through a "faucet". You just gotta find one that works!
+所以，在QuickNode[这里](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace)建立一个帐户。
 
-Please make sure you're on the **Goerli** network on Metamask. This is a super common issue I see!
+然后看看我下面的视频!
+
+[Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
+
+### 🕸 测试网
+
+我们现在还不打算部署到“以太坊主网”。为什么?因为它很贵，不值得测试!我们现在只是随便走走。我们将从一个“测试网”开始，它是“主网”的克隆，但它使用假美元，所以我们可以尽可能多地测试内容。但是，重要的是要知道测试网是由真正的矿工运行的，并模拟真实的场景。
+
+这很棒，因为我们可以在现实场景中测试我们的应用程序，我们实际上要:
+
+1. 广播我们的交易
+2. 等着被真正的矿工捡起来吧
+3. 等着它被挖出来
+4. 等待它被广播回区块链告诉所有其他矿工更新他们的副本
+
+### 🤑 得到一些假美元
+
+有一些测试网，我们将使用的是由以太坊基金会运行的“Goerli”。
+
+为了部署到Goerli，我们需要假ETH。为什么?因为如果你部署到实际的以太坊主网，你将使用真钱!所以，测试网复制了主网的工作方式，唯一的区别是没有真正的钱。
+
+为了获得假ETH，我们必须向网络请求一些。**这个假ETH只在这个特定的测试网上工作。**你可以通过“水龙头”为Goerli抓取一些假冒的以太坊。你只需要找到一个有用的!
+
+请确保您在Metamask上的**Goerli**网络上。这是我看到的一个超级常见的问题!
 
 ![Untitled](https://imgur.com/a/j8iN46I)
 
-You have a few faucets to choose from:
+你有几个水龙头可以选择:
 
 | Name             | Link                                  | Amount          | Time         |
 | ---------------- | ------------------------------------- | --------------- | ------------ |
@@ -73,17 +83,17 @@ You have a few faucets to choose from:
 | Official Goerli  | https://goerlifaucet.com              | 0.25            | 24 hrs       |
 | MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
 
-Note: For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link **again** to request funds. The buildspace faucet is pretty reliable as well, just make sure Metamask is on the Goerli network :).
+注意:对于MyCrypto，你需要连接你的钱包，创建一个账户，然后再次点击相同的链接请求资金。buildspace的水龙头也很可靠，只要确保Metamask在Goerli网络上:)。
 
-### 🙃 Having trouble getting Testnet ETH?
+### 🙃获得测试网ETH有困难吗?
 
-**Please try the above faucets a few times before giving up. They are not very reliable and take a little bit of effort to get working! MyCrypto is the one I use all the time and hasn't messed up for me yet.**
+**在放弃之前，请多尝试几次以上的水龙头。它们不是很稳定，需要多点尝试才能工作!MyCrypto是我一直在使用的，还没有给我带来麻烦。**
 
-### 🚀 Setup a deploy.js file
+### 🚀 设置一个deploy.js文件
 
-It's good practice to separate your deploy script from your `run.js` script. `run.js` is where we mess around a lot, we want to keep it separate. Go ahead and create a file named `deploy.js` under the `scripts` folder. Copy-paste all of `run.js` into `deploy.js`. It's going to be exactly the same right now.
+将部署脚本与`run.js`脚本分开是一个很好的实践。`run.js`是我们经常测试的地方，我们想要把它分开。在 `scripts` 文件夹下创建一个名为`deploy.js`的文件。复制粘贴所有的 `run.js` 到`deploy.js`。现在的情况完全一样。
 
-I added a few extra calls to `mintCharacterNFT` as well just to test stuff out!
+我添加了一些额外的调用 `mintCharacterNFT` ，当然这只是测试代码!
 
 ```javascript
 const main = async () => {
@@ -134,9 +144,9 @@ const runMain = async () => {
 runMain();
 ```
 
-### 📈 Deploy to Goerli testnet
+### 📈 部署到Goerli测试网
 
-We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
+我们需要修改我们的 `hardhat.config.js` 文件。您可以在智能合约项目的根目录中找到它。
 
 ```javascript
 require("@nomicfoundation/hardhat-toolbox");
@@ -152,23 +162,23 @@ module.exports = {
 };
 ```
 
-You can grab your API URL from the QuickNode dashboard and paste that in. Then, you'll need your **private** goerli key (not your public address!) which you can [grab from metamask](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) and paste that in there as well.
+您可以从quickknode仪表板获取API URL并将其粘贴进来。然后，你需要你的**私人** goerli密钥(不是你的公共地址!)，你可以[从metamask[获取](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)并粘贴到那里。
 
-**Note: DON'T COMMIT THIS FILE TO GITHUB. IT HAS YOUR PRIVATE KEY. YOU WILL GET HACKED + ROBBED. THIS PRIVATE KEY IS THE SAME AS YOUR MAINNET PRIVATE KEY. TO REDUCE RISK EVEN MORE, IT'S ALWAYS BEST TO HAVE A DEDICATED DEVELOPMENT ACCOUNT IN METAMASK.** We'll talk about `.env` variables later and how to keep this stuff secret.
+**注意:不要提交这个文件到GITHUB。它有您的私钥。你会被黑+抢劫。此私钥与您的主网私钥相同。为了进一步降低风险，最好在metamask中有一个专门的开发帐户。我们后面会使用 `.env` 来配置变量以及如何保持这些东西的秘密。**
 
-Why do you need to use your private key? Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain and sign/deploy the contract. Also, your username is your public address and your password is your private key. It's kinda like logging into AWS or GCP to deploy.
+为什么需要使用您的私钥?因为为了执行像部署合约这样的交易，您需要“登录”到区块链并签署/部署合约。此外，您的用户名是您的公共地址，您的密码是您的私钥。这有点像登录到AWS或GCP进行部署。
 
-Once you've got your config setup you're all set to deploy with the deploy script we wrote earlier.
+配置设置完成后，就可以使用前面编写的部署脚本进行部署了。
 
-Run this command from the root directory of `epic-game`.
+在`epic-game`的根目录下运行此命令。
 
 ```bash
 npx hardhat run scripts/deploy.js --network goerli
 ```
 
-It takes like 1-2 min to deploy usually. We're not only deploying! We're also minting NFTs in deploy.js so that'll take some time as well. We actually need to wait for the transaction to be mined + picked up by miners. Pretty epic :). That one command does all that!
+部署通常需要1-2分钟。我们不仅仅是在部署!我们也在`deploy.js`中创建NFTs，所以这也需要一些时间。我们实际上需要等待交易被挖矿+被挖矿者拾取。相当的史诗。这一个命令就可以做到这一切!
 
-Here's what I get:
+我得到的是:
 
 ```plaintext
 Contract deployed to: 0x1bB5b2f90AaB36E2742886f75DD7F3c5B420Bf33
@@ -179,7 +189,7 @@ Minted NFT #4
 Done deploying and minting!
 ```
 
-We can make sure it all worked properly using [Goerli Etherscan](https://goerli.etherscan.io/) where you can paste the contract address that was output and see what's up with it! Here I can see that we've had **five** transactions. **One** contract creation transaction and **four** transactions where we minted the NFT. Which is correct :)!
+我们可以使用[Goerli Etherscan](https://goerli.etherscan.io/)确保它正常工作，在那里您可以粘贴输出的合约地址，看看它发生了什么!在这里我可以看到我们有** 5 **个交易。**一个合约创建交易和**四个我们铸造NFTs的** *交易。哪个是正确的:)!
 
 ![Untitled](https://i.imgur.com/cI4a1Oh.png)
 
@@ -187,94 +197,100 @@ We can make sure it all worked properly using [Goerli Etherscan](https://goerli
 
 If it worked — **AWEEEEESOME YOU JUST DEPLOYED A CONTRACT AND MINTED NFTS.**
 
-### 🌊 View on Pixxiti
+**习惯大量使用Goerli Etherscan来调试部署**，因为这是跟踪部署以及出现错误的最简单方法。如果Etherscan没有显示出来，那就意味着它要么还在处理，要么出了什么问题!我得到的是:
 
-Believe it or not. The NFTs you just minted will be on Pixxiti's Testnet site.
+如果它工作,**太棒了，你部署一个合约和铸造NFTS测试。**
 
-1. Head to `goerli.pixxiti.com`.
-2. Create this url: `https://goerli.pixxiti.com/nfts/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`
+### 🌊 Pixxiti上查看
 
-For example, here's my link:
+信不信由你。您刚刚铸造的nft将在Pixxiti的Testnet站点上。
+
+1. 登录 `goerli.pixxiti.com`。
+2. 创建这个url:  `https://goerli.pixxiti.com/nfts/部署的合约地址/TOKEN_ID`
+
+例如，这是我的链接:
 
 ```plaintext
 https://goerli.pixxiti.com/nfts/0xcec8593c046364f163926a4327dfce6f546d9f98/4
 ```
 
-This is for the Pikachu NFT!! My `tokenId` is `4` because it was the 4th mint from that contract. Feel free to try replacing it w/ other #s :).
+这是皮卡丘的NFT!!我的 `tokenId` 是 `4` ，因为它是该合约中的第4个铸币。请随意尝试用其他你自己铸造的TOKEN_ID替换它:)。
 
-**Basically, wait for at least 15 mins for Pixxiti to update your NFT.** 
+**基本上，等待至少15分钟，Pixxiti才能更新您的NFT**
 
-So here, you'd click "Heroes - " under "Collections", and boom you'll see the NFTs you minted!
+所以在这里，你点击“Collections"”下的“Heroes -”，你就会看到你铸造的NFT !
 
 ![Untitled](https://i.imgur.com/9ULR2OW.png)
 
 ![Untitled](https://i.imgur.com/F9xQHFE.png)
 
-**BOOM THERE ARE MY CHARACTERS!!** If you click one of your characters, you'll be able to click "**Levels**" on the left and even see specific attributes! **We even have a little health bar!!! EPICCCC. Each health bar is different depending on the NFT**, for example Pikachu has 300 HP and Leo has 100 HP!
+BOOM，我的角色来了!!**如果你点击你的一个角色，你将能够点击左边的“Levels**”，甚至可以看到特定的属性!我们甚至有一个小生命棒!!EPICCCC。每个生命条根据 NFT的不同而不同，例如皮卡丘有300 HP而Leo有100 HP!
 
-For example:
+例如:
 
 ![Untitled](https://i.imgur.com/8lry1nA.png)
 
+
+
 ![Untitled](https://i.imgur.com/mbMf8CI.png)
 
-In this case, Pixxiti rendered all our character's attributes properly!
+在这种情况下，Pixxiti正确渲染了我们所有角色的属性!
 
-What's cool here is if we change the HP value of this player's NFT to `150` or whatever, it would actually update on Pixiti! **This is super cool because the NFT itself dynamically holds the state of the player's character :).** We don't need any centralized server holding that data.
+这里最酷的是，如果我们将这个玩家的NFT的HP值更改为 `150` 或其他值，它就会在Pixiti上更新!**这非常酷，因为NFT本身动态地保存着玩家角色的状态:)。**我们不需要任何中央服务器保存数据。
 
-This is awesome because now when our players go to play the game and we detect their NFT, we'll know exactly what the state of their character NFT is in the game! 
+这非常棒，因为现在当我们的玩家开始玩游戏时，我们检测到他们的NFT，我们就能确切地知道他们的角色在游戏中的NFT,状态!
 
-*Note: You'll notice that we minted 4 NFTs to the same wallet in this case — this **wouldn't** be allowed in our game b/c each player would only be allowed to have 1 NFT. I just wanted to test it out. Also, right now `nftHolders` can only hold one tokenId per unique address. So, everytime a new NFT is minted to the same address, the previous `tokenId` is overwritten. You could throw an error if you wanted to instead.*
+*注意:你会注意到我们在这种情况下铸造了4个NFT到同一个钱包-这**不**被允许在我们的游戏中，每个玩家将只允许有1个NFT。我只是想测试一下。另外，现在 `nftHolders` 每个唯一地址只能保存一个tokenId。因此，每当一个新的NFT被铸造到相同的地址，之前的 `tokenId` 将被覆盖。如果你想，你可以抛出一个错误。*
 
-### 🤯 Why is this epic?
+### 🤯 为什么这是史诗?
 
-It’s worth talking about why what you just did is a big deal.
+我们有必要谈谈为什么你刚刚做的事很重要。
 
-Basically, you made an NFT. So, that’s already cool. People can own a character from your game in their wallet, yay!
+基本上，你做了一个NFT。这已经很酷了。人们可以在钱包里拥有你游戏中的一个角色。
 
-But, these NFTs actually have attributes as well! Like attack damage, health, mana, or whatever else you added. So, that means the NFT itself is more than just a JPG — it has other elements that make it more interactive.
+但是，这些NFT实际上也有属性!就像攻击伤害，生命值，法力值或任何你添加的东西。因此，这意味着NFT本身不仅仅是一个JPG格式——它还有其他元素使其更具互动性。
 
-The biggest NFT game in the world, Axie Infinity, functions just like this as well. It's a turn-based, Pokemon style game where you fight against other players 1v1.
+世界上最大的NFT游戏Axie Infinity的功能也是如此。这是一款回合制、《口袋妖怪》风格的游戏，玩家在游戏中与其他玩家进行1v1对战。
 
-Here's what one of their NFT characters looks like. 
+这是他们的一个NFT角色的样子。
 
 ![Untitled](https://i.imgur.com/FIJmmbL.png)
 
-[Here](https://goerli.pixxiti.com/nfts/0x4e8100e6f42357fcc5ad1c54bdd048470dc60af0/3701) it is on Pixxiti. **Check out all the different attributes it has on properties, levels, etc.** Get inspired :). All these attributes they have actually affect how this character actually plays in the game itself!
+[这里](https://goerli.pixxiti.com/nfts/0x4e8100e6f42357fcc5ad1c54bdd048470dc60af0/3701)在Pixxiti上可以查看，**查看它在属性，levels等所有不同属性。**获得灵感:)所有这些属性都会影响角色在游戏中的表现!
 
-What we’re going to do next is we’re going to actually program in logic to our NFT to “fight” a “boss” in our game. So, that means players will be able to take their NFT to the **arena** and collaborate with other players to “attack” a big boss you’ll create! When an NFT attacks this boss, the boss can attack the NFT back and the player's NFT will **lose health**. The HP value on Pixxiti would change :).
+我们接下来要做的是，在我们的NFT中编写逻辑程序，让它在游戏中“对抗”一个“boss”。所以，这意味着玩家将能够带着他们的NFT去**竞技场**与其他玩家合作去“攻击”你所创造的大boss !当一个NFT攻击这个boss时，boss可以反击这个NFT，而玩家的NFT将**损失生命值**。Pixxiti的HP值会改变:)。
 
-Sorta like Pokemon!
+有点像《口袋妖怪》!
 
-That means our NFT will have *utility* outside of just being cool to look at.
+这意味着我们的NFT将除了看起来很酷之外还有“实用”。
 
-This is pretty awesome. In normal games today, you’d buy a game and then pick your character (ex. like in Super Smash Brothers).
+这真是太棒了。在今天的普通游戏中，你会购买一款游戏，然后选择你的角色(游戏邦注:例如《Super Smash Brothers》)。
 
 ![Untitled](https://i.imgur.com/BTI8Qhp.png)
 
-**In this case, players pick their character NFT, then can play their NFT in-game, and own that character in their wallet forever or until they want to sell it to another player.** The selling aspect is extremely interesting, because it means as the player you get something back for playing the game or helping it increase in popularity.
+**在这种情况下，玩家选择自己的角色NFT，然后在游戏中玩他们的角色，并在钱包中永远拥有这个NFT，或者直到他们想要出售给其他玩家。**销售方面非常有趣，因为这意味着作为玩家，你可以通过玩游戏或帮助游戏提高人气而获得回报。
 
-Another interesting thing is that players would be able to take their character NFT to other games that support it. 
+另一件有趣的事情是，玩家将能够将他们的角色带到其他支持它的游戏中。
 
-*This is a pretty wild thing to think about. It’s one of the biggest reasons crypto + gaming is so cool.* 
+这是一个非常疯狂的想法。这也是加密+游戏如此酷的最大原因之一
 
-Remember that Mario NFT example earlier, where others could build on top of Mario? Same deal here with our character NFTs!
+还记得之前的马里奥NFT例子吗?我们的角色NFTs也是如此!
 
-For example, let’s say I have 100,000 people mint my “Pikachu” NFT for my game. Now, there are 100,000 unique players who own this NFT.
+例如，假设有10万人为我的游戏铸造“皮卡丘”NFT。现在，有10万名独立玩家拥有这个NFT游戏。
 
-Another developer could come in and build another game on top of the Pikachu NFT and allow any player who has the NFT to enter their game and play it! They could make it where anyone w/ the Pikachu NFT would be able to play as Pikachu in their game. It’s totally up to them.
+其他开发者可以在皮卡丘NFT基础上开发另一款游戏，并允许任何拥有NFT的玩家进入他们的游戏并体验它!他们可以让任何拥有皮卡丘NFT的人都能够在游戏中扮演皮卡丘。这完全取决于他们。
 
-*Note: In this case, the Pokemon creators might get mad lol. But, imagine Pikachu was your own original character!* 
+**注意:在这种情况下，口袋妖怪的创造者可能会生气。但是，想象一下皮卡丘是你自己最初的角色!**
 
-Maybe stuff like HP and attack damage is even shared between games, meaning different games could build on top of the original attributes we created.
+也许像HP和攻击伤害等内容是在游戏间共享的，这意味着不同的游戏能够基于我们所创造的最初属性而创造。
 
-For example, let’s say we have other devs start building “items” on top of our NFT characters — like swords, shields, potions, etc. Maybe a dev builds something where an NFT character could “equip” a shield in and gain +50 defense. This can all be done in an open, permission-less way :).
+例如，假设我们有其他开发者开始在我们的NFT角色上制作“物品”——如剑、盾、药水等。也许开发者会创造一些非游戏角色能够“装备”盾牌并获得+50防御的内容。这一切都可以以一种开放的、无需许可的方式完成:)。
 
-On top of that, as the creator of the original Pikachu NFTs — I can charge a royalty fee every time someone buys/sells the original NFTs and that means as my NFTs gain popularity I would make money on every sale.
+除此之外，作为原版皮卡丘NFT的创造者，我可以在每次有人购买/出售原版NFT时收取版税，这意味着随着我的NFT越来越受欢迎，我可以从每笔销售中获利。
 
-Okay — lets get to actually programming our game logic now :).
+好了-让我们现在开始编程我们的游戏逻辑:)。
 
-### 🚨 Progress report!
-*Pls do this or Farza will be sad :(*
+### 🚨 进度报告!
+请这么做，否则Farza会伤心的:(*
 
-Post a screenshot in #progress of your epic NFTs on Pixxiti. Perhaps even tweet it out and tell the world what you've done! Be sure to give @_buildspace tag as well :). We love to see people's tweets, it always gives us a dose of dopamine/motivation. Plus -- your tweet could help get new people to get into web3. You never know who may see it and get inspired to start hacking!!!
+在Discord的 #progress 中贴出你在Pixxiti上发布你的史诗NFTs的截图。甚至可以在推特上发布，告诉全世界你都做了什么!一定要加上@_buildspace标签:)。我们喜欢看人们的推文，这总是给我们一剂多巴胺/动力。另外，你的推文可以帮助吸引更多的人使用web3。你永远不知道谁会看到它，并受到启发，开始吧!!

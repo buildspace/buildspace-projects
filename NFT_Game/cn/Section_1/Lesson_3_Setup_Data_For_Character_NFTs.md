@@ -1,40 +1,40 @@
-### 🤔 What's an NFT?
+### 🤔 什么是NFT ?
 
-Haha, this is a big question. Be sure to read through [this](https://github.com/buildspace/buildspace-projects/blob/main/NFT_Collection/en/Section_1/Lesson_1_What_Is_A_NFT.md) real quick to give you a little primer before moving on. As long as you have a *general idea* about what an NFT is, that's all you really need here!
+哈哈，这是个大问题。在继续学习之前，一定要快速阅读[这篇文章](https://github.com/buildspace/buildspace-projects/blob/main/NFT_Collection/en/Section_1/Lesson_1_What_Is_A_NFT.md)，给你一点入门知识。只要你对非功能性语言有一个*大致的概念*，这就是你真正需要的!
 
-### 😮 How we're going to use playable NFTs
+### 😮我们将如何使用可玩性NFTs
 
-Cool. We've got all our basic environment stuff set up! Let's take a step back to kinda explain this game we're making at a higher level again:
+酷。我们已经把所有基本的环境设置好了!让我们回过头来再次解释一下我们正在创造的这款游戏:
 
-The goal of our game will be to destroy a boss. Let's say that boss has 1,000,000 HP. What players do is when they start the game, they mint a **character NFT** that has a certain amount of **Attack Damage** and **HP.** Players can order their **character NFT** to attack the boss and deal damage to it. Kinda like a Pokemon!
+我们游戏的目标是消灭一个boss。假设boss拥有1,000,000 HP。玩家所做的是，当他们开始游戏时，他们创造了一个拥有一定**攻击伤害**和**HP的**角色NFT**。**玩家可以命令自己的**角色NFT**攻击boss并对其造成伤害。有点像口袋妖怪!
 
-The goal? Players need to work together to attack the boss and bring its HP down to 0. The catch? Every time a player hit the boss, the boss hits the player back! If the NFT's HP goes below 0, the player's NFT **dies** and they can't hit the boss anymore. Players **can only have one character NFT in their wallet.** Once the character's NFT dies, it's game over. That means many players need to join forces to attack the boss and kill it.
+我们的目标吗?玩家需要合作攻击boss，将其HP降至0。每当玩家攻击boss时，boss也会反击玩家!如果NFT的HP低于0，玩家的NFT就会死亡，他们就不能再打boss了。玩家**只能在钱包中拥有一个角色NFT。**一旦角色的NFT死亡，游戏就结束了。这意味着许多玩家需要联合起来攻击boss并杀死它。
 
-**Note: If you want your player to be able to hold multiple character in their wallet (like Pokemon) feel free to make the modifications on your own!**
+**注意:如果你希望你的玩家能够在他们的钱包中容纳多个角色(如Pokemon)，你可以自己进行修改!**
 
-The important thing to know here is that the characters themselves are **NFTs**.
+这里要知道的重要事情是，字符本身是**NFTs**。
 
-So, when a player goes to play the game:
+所以，当玩家开始玩游戏时:
 
-1. They'll connect their wallet.
-2. Our game will detect they don't have a character NFT in their wallet.
-3. We'll let them choose a character and mint their own character NFT to play the game. Each character NFT has its own attributes stored on the NFT directly like: HP, Attack Damage, the image of the character, etc. So, when the character's HP hits 0, it would say `hp: 0` on the NFT itself.
+1. 他们会连接他们的钱包。
+2. 我们的游戏将检测到他们的钱包中是否拥有角色NFT。
+3. 没有角色NFT，我们将让他们选择一个角色并创造自己的角色NFT来玩游戏。每个角色的NFT都有自己的属性并直接存储在NFT中，比如:HP、攻击伤害、角色的形象等。所以，当角色的HP达到0时，它会在NFT上显示“HP: 0”。
 
-**This is exactly how the world's most popular NFT games work :).**  We're going to build it ourselves! What we need to do first is basically set up our minting NFT code because, without that, players can't even get into our game to play!
+**这正是世界上最流行的NFT游戏的运作方式:)**。我们要自己建造它!我们首先需要做的是设置我们的铸造NFT代码，因为如果没有它，玩家甚至无法进入我们的游戏!
 
-### ✨ Setup the data for your NFTs
+### ✨ 为NFTs设置数据
 
-Time for the fun part, setting up our character NFTs. Each character will have a few attributes: an image, a name, HP value, and attack damage value. **These attributes will live directly on the NFT itself.** We may add some more attributes later on.
+到了有趣的部分，设置我们的角色NFTs。每个角色都有一些属性:图像、名字、HP值和攻击伤害值。**这些属性将直接存在于NFT本身。**稍后我们可能会添加更多的属性。
 
-The way our character NFTs will work is there will only be a set # of characters (ex. 3). **But, an unlimited # of NFTs of each character can be minted.** Again, you can change this if you want — for example if you want only a small # of a certain character to be minted.
+我们的角色 NFTs的工作方式是只有一组#字符(例如3)。**但是，每个角色的 NFT数量是无限的。**同样，如果您愿意，您可以更改这一点——例如，如果您只想要一个特定字符的小#被铸造。
 
-So that means if five people mint character #1, that means all five people will have the exact same character but each person will have a unique NFT and **each NFT holds its own state.** For example, if Player #245's NFT gets hit and loses HP, only their NFT should lose HP!
+这意味着如果5个人创造了第1个角色，这5个人将拥有完全相同的角色，**但每个人将拥有独特的NFT并且每个NFT拥有自己的状态。**例如，如果245号玩家的NFT被击中并失去HP，那么只有他们的NFT应该失去HP!
 
-If that doesn't make sense, don't worry! Let's just jump in the code — it'll slowly make more sense.
+如果你不明白，别担心!让我们直接进入代码-它会慢慢变得更有意义。
 
-The first thing we need to do is actually have a way to initialize a character's **default attributes** (ex. their default HP, default attack damage, default image, etc). For example, if we have a character named "Pikachu", then we need to set Pikachu's base HP, base attack damage, etc. 
+我们需要做的第一件事便是找到一种方法去初始化角色的默认属性(例如他们的默认HP，默认攻击伤害，默认图像等)。例如，如果我们拥有一个名为“皮卡丘”的角色，那么我们便需要设置皮卡丘的基础HP，基础攻击伤害等。
 
-I updated `MyEpicGame.sol` to look like this:
+我更新了 `MyEpicGame.sol` 。看起来像这样:
 
 ```javascript
 // SPDX-License-Identifier: MIT
@@ -86,11 +86,11 @@ contract MyEpicGame {
 }
 ```
 
-There is a lot happening here but essentially I'm passing in a bunch of values to my `constructor` to set up my characters. Why? Well — I need a way to tell my contract, "Hey — when a player requests a Pikachu NFT, please give that NFT this base HP, this base AD, this base image, etc".
+这里发生了很多事情，但本质上我传递了一堆值给我的 `constructor` 来设置我的角色。为什么?我需要告诉我的合约，“嘿——当玩家要求皮卡丘NFT时，请给NFT这个基础HP，这个基础AD，这个基础图像等等。”
 
-Remember, the constructor runs only **once** when the contract is executed.
+记住，在执行合约时， `constructor` 只运行**一次**。
 
-I take the character data in my `constructor` and store it nicely on the contract in a `struct` of type `CharacterAttributes`. Each `CharacterAttributes` holds the base attributes for each character. 
+我在我的 `constructor` 中获取字符数据，并将其漂亮地存储在类型为 `CharacterAttributes`的`struct` 中。每个' `CharacterAttributes`包含每个角色的基本属性。
 
 ```solidity
 struct CharacterAttributes {
@@ -103,15 +103,15 @@ struct CharacterAttributes {
 }
 ```
 
-I actually store each character in an array called `defaultCharacters`. 
+我将每个角色存储在一个名为 `defaultCharacters`的数组中。
 
 ```solidity
 CharacterAttributes[] defaultCharacters;
 ```
 
-All this gives me is easy access to each character. For example, I can just do `defaultCharacters[0]` and get access to the default attributes of the first character. This is useful for when we mint our NFTs and need to initialize their data!
+所有这些都让我很容易接触到每个角色。例如，我可以只执行 `defaultCharacters[0]` ，并获得对第一个角色的默认属性的访问。当我们创建我们的NFTs并需要初始化它们的数据时，这是很有用的!
 
-We then need to update `run.js`. Here's what that looks like:
+然后我们需要更新`run.js`。这是它看起来的样子:
 
 ```javascript
 const main = async () => {
@@ -141,13 +141,13 @@ const runMain = async () => {
 runMain();
 ```
 
-I'm not doing anything very fancy here. In `run.js` I basically define my three characters and their stats. My characters are Leonardo DiCaprio, Aang from Avatar, and Pikachu...lol. Each character basically has an: id, name, image, hp value, and attack value. 
+我没有做什么特别的事情。在 `run.js` 中，我定义了我的三个角色和他们的属性。我的角色是莱昂纳多·迪卡普里奥、《阿凡达》中的安昂和皮卡丘……哈哈。每个角色基本上都有一个:id、名称、图像、hp值和攻击值。
 
-For example, in this case `Aang` has 200 HP, and 50 Attack Damage. He has a lot of health, but his attacks don't hit as hard as Leonardo! Leonardo has less HP, but his attacks are more powerful. That means in the game he'll die faster, but will do lots of damage.
+例如，在这种情况下，安昂有200点HP和50点攻击伤害。他有很多的生命值，但他的攻击不像莱昂纳多那么严重!莱昂纳多的HP更少，但他的攻击更强大。这意味着在游戏中他会死得更快，但会造成很大的伤害。
 
-**You can balance your characters however you want :). Please don't copy my characters. Add three of your own.**
+**你可以平衡你的角色:)。请不要模仿我的角色。再加三个你自己的。**
 
-Okay, that's it :)!! When I run this using `npx hardhat run scripts/run.js` here's what I get:
+好了，就这样:)!!当我使用`npx hardhat run scripts/run.js` 运行时这是我得到的:
 
 ```plaintext
 Done initializing Leo w/ HP 100, img https://i.imgur.com/pKd5Sdk.png
@@ -156,20 +156,20 @@ Done initializing Pikachu w/ HP 300, img https://i.imgur.com/WMB6g9u.png
 Contract deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 ```
 
-Boom! We've officially created three characters and are saving their data directly on our contract.
+Boom!我们已经正式创建了三个角色，并将他们的数据直接保存在我们的合约中。
 
-**Again**, **don't copy my characters. Come up with you own before moving on.**
+**再次强调不要复制我的角色。在继续前行之前，拿出你自己的想法。**
 
-Maybe your characters can be from your fav anime or video game.
+也许你的角色可以来自你最喜欢的动漫或电子游戏。
 
-Maybe you don't even want characters. Maybe instead you want people to mint "**weapons**" that players using in the game like a **sword**, **machine gun**, or a **laser cannon**.
+也许你根本不想要角色。也许你想让玩家制作“武器”，让玩家在游戏中使用，比如剑、机关枪或激光炮。
 
-Maybe you want your characters to have things like "mana", "energy", or "chakra" where your character can cast certain "spells" using these attributes.
+也许你想让角色拥有“法力”、“能量”或“脉轮”这样的东西，让角色能够使用这些属性施放特定的“法术”。
 
-**Customize your characters. It's what makes this fun + your own.** For example, I added Leonardo DiCaprio and Pikachu as characters because I thought it'd be funny as hell lol — and I chuckle every time I see it haha.
+**定制你的角色。这是你自己的乐趣。**例如，我添加了莱昂纳多·迪卡普里奥和皮卡丘作为角色，因为我认为这将是有趣的，哈哈-我笑每次我都能看到它哈哈。
 
-Changing around little things like the character will make you feel more like it's your own thing and you'll be a little more motivated to build this thing all the way :).
+改变像角色这样的小事情会让你觉得这是你自己的事情，你会更有动力去创造这个东西:)
 
-### 🚨 Progress report!
+### 🚨 进度报告!
 
-Post a screenshot in #progress introducing one of your characters -- perhaps post their image + let us know their name and amount of AD/HP they have!! 
+在#progress 中发布一个介绍你的角色的截图——也许是发布他们的图片，让我们知道他们的名字和伤害/HP数量!!
