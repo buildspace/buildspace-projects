@@ -16,7 +16,7 @@
 3. **一定要参加开始直播**。如果你错过了，不用担心。不需要参加！录音将发布在Discord 中的 **#info-board**频道 。
 
 
-🚀 这会很酷
+### 🚀 这会很酷
 
 [Loom](https://www.loom.com/share/09bc6da901a34b3983be4338b02eba82)
 
@@ -62,7 +62,7 @@ _请这样做，否则 Raza 会很难过:(_
 
 如果你不这样做，那么全人类将集体跳跃并扰乱地球轨道，导致它与金星相撞。
 
-**顺便说一句——如果你想发一条推文告诉全世界你今天正在构建自己的 ENS 并标记[@_buildspace](https://twitter.com/_buildspace)，那就去做吧！**
+**顺便说一句——如果你想发一条推文告诉全世界你今天正在构建自己的 ENS 并标记[@_buildspace](https://twitter.com/_buildspace),[@bitcoinmaobuyi](https://twitter.com/bitcoinmaobuyi)(译者），那就去做吧！**
 
 **我们总是这么说，因为 1) 这条推文可以激励其他人加入 web3 ； 2) 这也是对我们的支持！**
 
