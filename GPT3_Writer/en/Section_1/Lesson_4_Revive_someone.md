@@ -1,8 +1,3 @@
-
-```
-1m video op: the stuff i go over in this part of the build is what caused me to fall in love with this stuff.
-```
-
 ### A conversation with Steve Jobs.
 
 I want to explore another cool thing you can do with GPT-3, you can build really compelling chat applications. And, because GPT-3 has knowledge of the real-world you can even choose to chat with specific people.
