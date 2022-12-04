@@ -164,7 +164,7 @@ const generate = async (prompt) => {
 
 That’s all about it! A few things to note here —
 
-1. We need to know the url of the API call which is `[https://api.openai.com/v1/completions](https://api.openai.com/v1/completions)` . You can find this by checking out the docs for this API :)
+1. We need to know the url of the API call which is [https://api.openai.com/v1/completions](https://api.openai.com/v1/completions). You can find this by checking out the [docs for this API](https://beta.openai.com/docs/api-reference/completions)
 2. The `getKey` function! Remember the key we stored in our extension state? We are going to add the logic to that very soon, but it’s named as what it does lol.
 3. We have to make sure we are making a `POST` request + including our Authorization in the header object! This is all needed for the OpenAI API to say, “Yo what I expect this call to look like and you have permission to access this data!”
 4. Finally, the body. We pass in on the options we want GPT-3 to use. This should look very familiar as this is the same data you put in when calling GPT-3 through their library
