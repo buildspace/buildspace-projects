@@ -101,7 +101,7 @@ Pretty simple to start and things should look pretty familiar to you. First thin
 
 Once we get that setup, we can start with our base prompt. You already have the cheat codes from your website so feel free to use them again here!
 
-Okay cool, we are ready to actually call GPT-3. Lets start by declaring a new function called `generate` right about `generateCompletionAction` .  Once you do that, add the line right under your `basePromptPrefix` that will call our generate function:
+Okay cool, we are ready to actually call GPT-3. Lets start by declaring a new function called `generate` right above `generateCompletionAction` .  Once you do that, add the line right under your `basePromptPrefix` that will call our generate function:
 
 ```jsx
 // Setup our generate function
