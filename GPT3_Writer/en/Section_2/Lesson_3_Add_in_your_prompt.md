@@ -154,7 +154,7 @@ Cool, you got something working!
 
 Now you just need to spend some time improving your prompt. I showed you a ton of tricks earlier in this build. For example, right now I’m doing zero-shot learning, where I’m not giving my prompt any examples! Even if I did single-shot learning, my results would improve a ton.
 
-**If you’re results are meh and you’re doing zero-shot learning, try out a prompt with single-shot learning and see what happens.**
+**If your results are meh and you’re doing zero-shot learning, try out a prompt with single-shot learning and see what happens.**
 
 The main trick I showed you that can 10X the quality of your results is ******prompt chaining******.
 
