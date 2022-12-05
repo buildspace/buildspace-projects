@@ -223,6 +223,41 @@ Again, if we hit a `\n` (which also is `''` ) we are going to put a `br` element
 
 Finally, we take that beautifully constructed `p` tag and append it to the `droid` `div` element that we found earlier. I guess those *****were***** the droids we were looking for.
 
+### Optional - adding host permission to your **
+If you are facing an issue where your targeted text area is not being populated by the response of OpenAI, it is because you don't have [host permission](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/) to modify the data. To grant permission, simply add `"host_permissions": ["https://*/*"],` into `manifest.json` as such:
+
+```json
+{
+  "name": "magic blog post generator",
+  "description": "highlight your blog post title, we'll generate the rest",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "48": "assets/48.png",
+    "72": "assets/72.png",
+    "96": "assets/96.png",
+    "144": "assets/144.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Generate blog post"
+  },
+  "background": {
+    "service_worker": "scripts/contextMenuServiceWorker.js"
+  },
+  "permissions": ["contextMenus", "tabs", "storage"],
+  // Add the line of code here
+  "host_permissions": ["https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}
+```
+
+
 **WELL WELL WELL** — looks like we are ready to give this thing a proper run :). If things work out you have just unlocked a crazy cool new skill — GPT-3 AND Chrome extensions. 
 
 For real, this stuff is not easy to get into and you’re out here doing just that. Alright lets see this thing fly.
