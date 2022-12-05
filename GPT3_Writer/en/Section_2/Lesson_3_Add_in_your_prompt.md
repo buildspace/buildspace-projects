@@ -114,7 +114,7 @@ prompt: `${basePromptPrefix}${req.body.userInput}`
 
 This will combine the base prompt with whatever the user gives us.
 
-I’m actually going to do add a `/n` to this at the end. Why? Well, GPT-3 does better on generation tasks when it knows where to start writing. So in this case, I specifically make it start writing on a new line:
+I’m actually going to do add a `\n` to this at the end. Why? Well, GPT-3 does better on generation tasks when it knows where to start writing. So in this case, I specifically make it start writing on a new line:
 
 ```
 prompt: `${basePromptPrefix}${req.body.userInput}\n`
@@ -122,7 +122,7 @@ prompt: `${basePromptPrefix}${req.body.userInput}\n`
 
 **For example, if I didn’t have this** — GPT-3 would start writing directly after my title on the same line, so it might try and autocomplete my title instead of writing my actual blog post!
 
-But, just know this isn’t needed for all usecases, depends on what you’re doing. Maybe you **do** want GPT-3 to autocomplete a phrase, in which case it makes sense to **not** have a `/n`.
+But, just know this isn’t needed for all usecases, depends on what you’re doing. Maybe you **do** want GPT-3 to autocomplete a phrase, in which case it makes sense to **not** have a `\n`.
 
 For example, if you have this prompt:
 
