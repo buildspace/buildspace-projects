@@ -110,7 +110,9 @@ Here are my answers:
 ✔ Do you want your NFTs to remain mutable? We HIGHLY recommend you choose yes. · yes
 ```
 
-We don't need any special features for now. If you're curious, you can read more about them [here](https://docs.metaplex.com/tools/sugar/configuration).
+You should get the `MISSING COLLECTION FILES IN ASSETS FOLDER` warning, dont worry about it, it because we didn't set up the `collection.png` and `collection.json` files at our `assets` folder. Go ahead and answer `y`. If you want to know a bit more about those files you can read more about it [here](https://docs.metaplex.com/developer-tools/sugar/guides/preparing-assets).
+
+We don't need any special features for now. If you're curious, you can read more about them [here](https://docs.metaplex.com/developer-tools/sugar/learning/settings).
 
 If something breaks or if you want to change your mind mid-way, you can just `CMD/CTRL+C` out of the process and start again. You can also edit the `config.json` file directly. The Sugar CLI prints out really helpful errors so if you get stuck, just read them and you'll probably figure it out.
 
