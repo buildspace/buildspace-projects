@@ -4,6 +4,7 @@ You know how it goes. Template time. However, as the things we're building get b
 git clone https://github.com/buildspace/solana-display-nfts-frontend
 cd solana-display-nfts-frontend
 git checkout starter
+npm install @metaplex-foundation/js@latest
 npm i
 npm run dev
 ```
