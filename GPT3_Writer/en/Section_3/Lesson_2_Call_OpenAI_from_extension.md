@@ -44,17 +44,19 @@ Remember, we want to highlight some text in Calmly, right click it, and be able 
 
 ```javascript
 // Add this in scripts/contextMenuServiceWorker.js
-chrome.contextMenus.create({
-  id: 'context-run',
-  title: 'Generate blog post',
-  contexts: ['selection'],
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create({
+    id: 'context-run',
+    title: 'Generate blog post',
+    contexts: ['selection'],
+  });
 });
 
 // Add listener
 chrome.contextMenus.onClicked.addListener(generateCompletionAction);
 ```
 
-Nice so we are creating a new option in our menu that will read “Generate blog post”. Then we setup a listener for whenever that is clicked to call this thing called `generateCompletionAction`. 
+Nice so what we're doing here is listening for when the extension is installed. When that happens, we create a new option in our menu that will read “Generate blog post”. Then we setup a listener for whenever that is clicked to call the `generateCompletionAction` function. 
 
 Let’s go ahead and create that right above where we setup our listeners and then we can check out our `contextMenu`:
 
@@ -63,10 +65,12 @@ Let’s go ahead and create that right above where we setup our listeners and th
 const generateCompletionAction = async (info) => {}
 
 // Don't touch this
-chrome.contextMenus.create({
-  id: 'context-run',
-  title: 'Generate blog post',
-  contexts: ['selection'],
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create({
+    id: 'context-run',
+    title: 'Generate blog post',
+    contexts: ['selection'],
+  });
 });
 
 chrome.contextMenus.onClicked.addListener(generateCompletionAction);
