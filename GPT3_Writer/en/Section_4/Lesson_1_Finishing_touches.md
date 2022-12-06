@@ -82,7 +82,7 @@ git push
 *Note: we have a .gitignore file that stops us from accidentally committing the `.env` file and other files that we don’t want going to source control.*
 
 Here's how you can deploy it on Railway:
-[](https://www.loom.com/share/15d1b1c45d0b46199d677ca3dc222d17)
+[https://www.loom.com/share/15d1b1c45d0b46199d677ca3dc222d17](https://www.loom.com/share/15d1b1c45d0b46199d677ca3dc222d17)
 
 **Note: Railway won't give you a domain lol**  
 You'll have to generate it from the settings tab of your project:
