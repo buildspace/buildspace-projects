@@ -140,6 +140,18 @@ import { Buffer } from 'buffer';
 window.Buffer = Buffer;
 ```
 
+*3. If you get an error related to `AnchorProvider`, make sure your anchor version is upper 0.25.0 in `package.json`:*
+![https://s1.ax1x.com/2022/12/07/zg0DtP.png](https://s1.ax1x.com/2022/12/07/zg0DtP.png)
+
+```sh
+# after you change the package.json as above, go to Replit console and run three commands bellow 
+rm ~/gif-portal-starter-project/package-lock.json
+rm -rf ~/gif-portal-starter-project/node_modules
+npm update
+# after you execute these three commands, just refresh your website.
+```
+![https://s1.ax1x.com/2022/12/07/zgDSVs.png](https://s1.ax1x.com/2022/12/07/zgDSVs.png)
+
 ### 🧑‍🎄 Add `getProvider`
 
 Let's create a function called `getProvider`. Add this right below `onInputChange` . Here's the code below.
