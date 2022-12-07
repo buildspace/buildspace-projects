@@ -140,7 +140,7 @@ import { Buffer } from 'buffer';
 window.Buffer = Buffer;
 ```
 
-*3. If you get an error related to `AnchorProvider`, make sure your anchor version is upper 0.25.0 in `package.json`:*
+*3. If you get an error related to `AnchorProvider is not a constructor`, make sure your anchor version is upper 0.25.0 in `package.json`:*
 ![https://s1.ax1x.com/2022/12/07/zg0DtP.png](https://s1.ax1x.com/2022/12/07/zg0DtP.png)
 
 ```sh
