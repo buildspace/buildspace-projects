@@ -145,9 +145,11 @@ window.Buffer = Buffer;
 
 ```sh
 # after you change the package.json as above, go to Replit console and run three commands bellow 
-rm ~/gif-portal-starter-project/package-lock.json
-rm -rf ~/gif-portal-starter-project/node_modules
-npm update
+
+rm ~/gif-portal-starter-project/package-lock.json # remove the file that package metadata stored in case there is cache
+rm -rf ~/gif-portal-starter-project/node_modules # remove all package download before in case conflicting
+npm update # update package for re-downloading all packages
+
 # after you execute these three commands, just refresh your website.
 ```
 ![https://s1.ax1x.com/2022/12/07/zgDSVs.png](https://s1.ax1x.com/2022/12/07/zgDSVs.png)
