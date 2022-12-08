@@ -3,21 +3,27 @@ Let’s put all that magic into action!
 We’re going to adapt the Movie Review frontend to use Anchor IDL.
 
 #### Download the starter code
+```
+git clone https://github.com/buildspace/anchor-solana-movie-review-frontend
+cd anchor-solana-movie-review-frontend
+git checkout starter-add-token
+npm i
+```
+
 - Note, starter code will not run until Anchor Setup complete
-- In `./context/Anchor/MockWallet.ts`
-- This is a temporary `AnchorWallet` to use before a wallet connects
-    
-    ```tsx
-    import { Keypair } from "@solana/web3.js"
-    
-    const MockWallet = {
-      publicKey: Keypair.generate().publicKey,
-      signTransaction: () => Promise.reject(),
-      signAllTransactions: () => Promise.reject(),
-    }
-    
-    export default MockWallet
-    ```
+- In `./context/Anchor/MockWallet.ts`we have a temporary `AnchorWallet` to use before a wallet connects
+
+```tsx
+import { Keypair } from "@solana/web3.js"
+
+const MockWallet = {
+  publicKey: Keypair.generate().publicKey,
+  signTransaction: () => Promise.reject(),
+  signAllTransactions: () => Promise.reject(),
+}
+
+export default MockWallet
+```
     
 
 #### Anchor Setup
