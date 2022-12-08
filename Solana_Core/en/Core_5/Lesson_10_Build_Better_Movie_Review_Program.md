@@ -6,7 +6,7 @@ We’re going to adapt the Movie Review frontend to use Anchor IDL.
 ```
 git clone https://github.com/buildspace/anchor-solana-movie-review-frontend
 cd anchor-solana-movie-review-frontend
-git checkout starter-add-token
+git checkout starter-add-tokens
 npm i
 ```
 
