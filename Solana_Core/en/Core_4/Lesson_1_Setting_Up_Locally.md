@@ -194,4 +194,5 @@ This is all we'll need! Next, we need to build this. Cargo comes with a special 
 cargo build-bpf
 ```
 
-This will take a few minutes the first time, it gets faster after. You'll notice a new folder called "target" has appeared. This is where the compiled code is, ready to be deployed. You'll also notice a deploy command printed out at the bottom after you ran the build command. Copy and paste this in the terminal and your program will be deployed locally!
+This will take a few minutes the first time, it gets faster after. You'll notice a new folder called "target" has appeared. This is where the compiled code is, ready to be deployed. To deploy this program you can use the command `solana program deploy <PATH>` with <PATH> pointing to your "target", for me it looks like `solana program deploy ~/Desktop/solana-core/local-program/target/deploy/local_program.so`
+
