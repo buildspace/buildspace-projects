@@ -268,6 +268,9 @@ This is how it should look now.
 
 Remember to save your changes! You should now be able to use the new commands you added by running `npm run create-bld-token` in your terminal. This should start creating and minting your token for you in the devnet. Once that's done, you should be able to see a `cache.json` generated in your folder. Open it up, it should look like this.
 
+**Note: if you receive an error like `SyntaxError: Cannot use import statement outside a module` then check your `tsconfig.json` and add/change to `"module": "CommonJS"`
+
+
 ![](https://i.imgur.com/nBwN6Ii.png)
 
 Go ahead and copy the address listed in the `mint` and paste it in https://explorer.solana.com/?cluster=devnet. You should now be able to see your token with the image you selected, like this
