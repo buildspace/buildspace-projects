@@ -77,7 +77,7 @@ const App = () => {
       <h1>Mint your free 🍪DAO Membership NFT</h1>
       <div className="btn-hero">
         <Web3Button 
-          contractAddress={editionDropAddress}
+          contractAddress={"editionDropAddress"}
           action={contract => {
             contract.erc1155.claim(0, 1)
           }}
