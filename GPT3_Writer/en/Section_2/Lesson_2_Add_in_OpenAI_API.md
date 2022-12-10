@@ -212,7 +212,7 @@ All we need to do is display it! Here’s the code:
 I actually used some fancy stuff here. The first thing you see me doing is changing the `className` based on the value of `isGenerating`. If you’ve never seen the `? :` syntax, that’s called a [ternary operator](https://www.javascripttutorial.net/javascript-ternary-operator/). It works like this:
 
 ```jsx
-ifThingThingIsTrue ? thenDoThis : elseDoThis
+ifThisThingIsTrue ? thenDoThis : elseDoThis
 ```
 
 It’s basically a cleaner `if` + `else`.
