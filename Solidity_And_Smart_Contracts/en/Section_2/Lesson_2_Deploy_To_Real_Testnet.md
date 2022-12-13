@@ -14,13 +14,13 @@ So, when we want to perform an action on the Ethereum blockchain we call it a *t
 
 So when we call `wave` and it does `totalWaves += 1`, that's a transaction! **Deploying a smart contract is also a transaction.**
 
-Remember, the blockchain has no owner. It's just a bunch of computers around the world run by **miners** that have a copy of the blockchain.
+Remember, the blockchain has no owner. It's just a bunch of computers around the world run by **validators** that have a copy of the blockchain.
 
-When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
+When we deploy our contract, we need to tell **all those** validators, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
 
 This is where [QuickNode](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) comes in.
 
-QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
+QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by validator as quickly as possible. Once the transaction is validated, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
 This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
 
@@ -31,17 +31,17 @@ Checkout the video below to see how to get your API key for a testnet!
 
 ## 🕸️ Testnets
 
-We're not going to be deploying to the "Ethereum mainnet" until the very end. Why? Because it costs real $ and it's not worth messing up! We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake $ so we can test stuff out as much as we want. But, it's important to know that testnets are run by actual miners and mimic real-world scenarios.
+We're not going to be deploying to the "Ethereum mainnet" until the very end. Why? Because it costs real $ and it's not worth messing up! We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake $ so we can test stuff out as much as we want. But, it's important to know that testnets are run by actual validators and mimic real-world scenarios.
 
 This is awesome because we can test our application in a real-world scenario where we're actually going to:
 
 1\. Broadcast our transaction
 
-2\. Wait for it to be picked up by actual miners
+2\. Wait for it to be picked up by actual validator
 
-3\. Wait for it to be mined
+3\. Wait for it to be validated
 
-4\. Wait for it to be broadcasted back to the blockchain telling all the other miners to update their copies
+4\. Wait for it to be broadcasted back to the blockchain telling all the other nodes to update their copies
 
 So, you'll be doing all this within the next few lessons :).
 
