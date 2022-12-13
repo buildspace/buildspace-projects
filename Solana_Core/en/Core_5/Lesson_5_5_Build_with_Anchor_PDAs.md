@@ -236,7 +236,7 @@ We're using the `close` constraint to specify we are closing the `movie_revie
 
 The `has_one` constraint is used to restrict closing the account - the `reviewer` account must match the `reviewer` on the Movie Review account.
 
-We're all done! Test it out, it'll behave the same as the old native movie review program. You can compare with the solution code [here](https://beta.solpg.io/631b39c677ea7f12846aee8c) if something goes wrong :)
+We're all done! Test it out, it'll behave the same as the old native movie review program. You can compare with the solution code [here](https://beta.solpg.io/63184c17bb7e0b5f4ca6dfa5?utm_source=buildspace.so&utm_medium=buildspace_project) if something goes wrong :)
 
 #### 🚢 Ship challenge
 Now it’s your turn to build something independently. Because we're starting with very simple programs, yours will look almost identical to what we just created. It's useful to try and get to the point where you can write it from scratch without referencing prior code, so try not to copy and paste here.
