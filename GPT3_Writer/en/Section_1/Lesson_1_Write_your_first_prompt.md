@@ -228,7 +228,7 @@ Tell me a full story with a beginning, middle, and end titled "Farza and the Mag
 
 **Keep messing around with the temperature as you run these** **different prompts.** I like changing the temperature by like `0.1` a few times to test. Also, the same prompt at a different temperature can create wildly different results.
 
-So basically lesson here: you need to adjust more than just the prompt to get good results, you also to need to also adjust your hyperparamaters.
+So basically lesson here: you need to adjust more than just the prompt to get good results, you also to need adjust your hyperparameters.
 
 Didn’t get a plot twist? Don’t sweat it. Move on! There’s so much more to GPT-3 that we still have yet to unlock that can massively improve its performance.
 
