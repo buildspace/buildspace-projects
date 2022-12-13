@@ -27,7 +27,6 @@ pub fn create_reward_mint(
         let account_info = vec![
             ctx.accounts.metadata.to_account_info(),
             ctx.accounts.reward_mint.to_account_info(),
-            ctx.accounts.reward_mint.to_account_info(),
             ctx.accounts.user.to_account_info(),
             ctx.accounts.token_metadata_program.to_account_info(),
             ctx.accounts.token_program.to_account_info(),
