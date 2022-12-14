@@ -44,7 +44,7 @@ import {
 import { MovieReview, IDL } from "./movie_review"
 import { Connection, PublicKey } from "@solana/web3.js"
 import { useAnchorWallet, useConnection } from "@solana/wallet-adapter-react"
-import MockWallet from "./MockWallet
+import MockWallet from "./MockWallet"
 const WorkspaceContext = createContext({})
 const programId = new PublicKey("BouTUP7a3MZLtXqMAm1NrkJSKwAjmid8abqiNjUyBJSr")
 
