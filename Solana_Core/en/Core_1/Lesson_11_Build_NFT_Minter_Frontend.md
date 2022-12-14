@@ -60,7 +60,7 @@ I'm going with some custom colours for mine, be sure you spice up yours as you l
 Open up `styles/Home.module.css` and make it look like this:
 ```css
 .container {
-	background: "#1F1F1F"
+  background: #1F1F1F;
 }
 .wallet-adapter-button-trigger {
   background-color: #833BBE;
