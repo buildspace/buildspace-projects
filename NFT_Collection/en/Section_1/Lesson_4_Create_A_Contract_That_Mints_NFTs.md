@@ -251,7 +251,7 @@ You have a few faucets to choose from:
 | Name             | Link                                  | Amount          | Time         |
 | ---------------- | ------------------------------------- | --------------- | ------------ |
 | MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
-| Official Goerli  | https://goerlifaucet.com/             | 0.25            | 24 Hours
+| Official Goerli  | https://goerlifaucet.com/             | 0.20            | 24 Hours
 | Chainlink        | https://faucets.chain.link/goerli     | 0.1             | None         |
 
 ## 🚀 Setup a deploy.js file
