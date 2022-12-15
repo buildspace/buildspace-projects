@@ -77,7 +77,7 @@ We have already addressed requests to the blockchain. We used `ethereum.request`
 let chainId = await ethereum.request({ method: 'eth_chainId' });
 console.log("Connected to chain " + chainId);
 
-// String, hex code of the chainId of the Rinkebey test network
+// String, hex code of the chainId of the Goerli test network
 const goerliChainId = "0x5"; 
 if (chainId !== goerliChainId) {
 	alert("You are not connected to the Goerli Test Network!");

@@ -15,6 +15,7 @@ pub enum NoteError {
   Forbidden,
 
   #[error("Text is too long")]
+  InvalidLength
 }
 ```
 The derive macro attribute takes the error trait and applies it to `NoteError` enum, giving it a default implementation to make them errors.

@@ -516,7 +516,7 @@ pub fn add_comment(
 
 This is a lot of code that's doing stuff we already know, so I won't go over it again. 
 
-We went over **a lot** of changes. [Here's](https://beta.solpg.io/6312eaf988a7fca897ad7d15) what the final version looks like, you can use it to compare if something is broken on your end! 
+We went over **a lot** of changes. [Here's](https://beta.solpg.io/6313104b88a7fca897ad7d19) what the final version looks like, you can use it to compare if something is broken on your end! 
 
 #### 🚀 Deploy the program
 We're ready to deploy! 

@@ -37,7 +37,7 @@ Let’s say you actually want to make your Chrome Extension available for downlo
 
 ![Untitled](https://i.imgur.com/oHxDLjO.png)
 
-Well, you’d need to actually submit it for approval which can take a few days. If you want to go down that path, you can read up on it here (<insert>). Highly recommend you explore this later once you’ve polished up your extension more.
+Well, you’d need to actually submit it for approval which can take a few days. If you want to go down that path, you can read up on it [here](https://developer.chrome.com/docs/webstore/publish/). Highly recommend you explore this later once you’ve polished up your extension more.
 
 But -- for now, what we can actually do is if someone wants to use your Extension we can just give them a download link to the code. Then, they can just do the same thing as you where they go to chrome://extensions/ and load the extension manually to their browser by doing “Load Unpacked”.
 
@@ -61,28 +61,34 @@ We don’t want to just stay on localhost, after all. That’d be boring! After 
 
 Also, deploying a NextJS app has gotten so easy and should just take a few minutes — and then you’ll have a link to your creation you can share with the world.
 
-We’re going to be using [Vercel](https://vercel.com/) which is the go-to way to deploy a NextJS project. It’s **free** to use. You can use whatever you want though — ex. AWS, Netlify, etc,
+We’re going to be using [Railway](https://railway.app?referralCode=buildspace) which is deployment service like Vercel/Netlify. It’s **free** to use. You can use whatever you want though — ex. AWS, Netlify, etc.
 
-Head over there and make an account by connecting your Github.
+The reason I'm going with Railway instead of Vercel is cuz on the Vercel Hobby plan serverless functions time out after 10 seconds. This sucks cause OpenAI can take 30-40 seconds to respond with longer prompts. You'll have to start the pro trial which will kill your app after 14 days unless you pay $20/m lol 
+
+![](https://hackmd.io/_uploads/HkecEt3Pj.png)
+
+Head over to Railway and connect your Github. Once you finish set up and accept their terms of service, you'll get 500 hours for free!
+
+![](https://hackmd.io/_uploads/H1sWrFnvs.png)
 
 All we need to do now is get your final code up on your Github Repo. Open up a new terminal window, `cd` into your project folder, and run:
 
-```jsx
+```bash
 git add .
 git commit -m "latest build"
 git push
 ```
 
-**********************************************************************************Note: we have .gitignore file that stops us from accidentally committing the `.env` file and other files that we don’t want going to source control.*
+*Note: we have a .gitignore file that stops us from accidentally committing the `.env` file and other files that we don’t want going to source control.*
 
-**There is some weirdness I need to cover with Vercel even if you are a pro**.
+Here's how you can deploy it on Railway:
+[https://www.loom.com/share/15d1b1c45d0b46199d677ca3dc222d17](https://www.loom.com/share/15d1b1c45d0b46199d677ca3dc222d17)
 
-Basically, Vercel times our functions out after 10s, so, we need to do some stuff otherwise our functions will crash after 10s. The reason this is important is that OpenAI can sometimes takes ~15-seconds or more to respond. Depends on the prompt. For example, for my longer blog posts, that are 6,000+ characters it takes ~40-seconds.
+**Note: Railway won't give you a domain lol**  
+You'll have to generate it from the settings tab of your project:
+![](https://hackmd.io/_uploads/ryTbIFhDi.png)
 
-Watch here:
-
-[https://www.loom.com/share/a966a2854e8d409b8cf046f5608e7416](https://www.loom.com/share/a966a2854e8d409b8cf046f5608e7416)
-
+**YOU'RE DONE. LFG**
 ### Please do this or Farza will be sad.
 
 Once you deploy your web app, take a screenshot of your deployed app and post it in #progress! Show the world that you’re off localhost.

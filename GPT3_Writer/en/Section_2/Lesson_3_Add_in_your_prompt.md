@@ -114,7 +114,7 @@ prompt: `${basePromptPrefix}${req.body.userInput}`
 
 This will combine the base prompt with whatever the user gives us.
 
-I’m actually going to do add a `/n` to this at the end. Why? Well, GPT-3 does better on generation tasks when it knows where to start writing. So in this case, I specifically make it start writing on a new line:
+I’m actually going to do add a `\n` to this at the end. Why? Well, GPT-3 does better on generation tasks when it knows where to start writing. So in this case, I specifically make it start writing on a new line:
 
 ```
 prompt: `${basePromptPrefix}${req.body.userInput}\n`
@@ -122,7 +122,7 @@ prompt: `${basePromptPrefix}${req.body.userInput}\n`
 
 **For example, if I didn’t have this** — GPT-3 would start writing directly after my title on the same line, so it might try and autocomplete my title instead of writing my actual blog post!
 
-But, just know this isn’t needed for all usecases, depends on what you’re doing. Maybe you **do** want GPT-3 to autocomplete a phrase, in which case it makes sense to **not** have a `/n`.
+But, just know this isn’t needed for all usecases, depends on what you’re doing. Maybe you **do** want GPT-3 to autocomplete a phrase, in which case it makes sense to **not** have a `\n`.
 
 For example, if you have this prompt:
 
@@ -154,13 +154,13 @@ Cool, you got something working!
 
 Now you just need to spend some time improving your prompt. I showed you a ton of tricks earlier in this build. For example, right now I’m doing zero-shot learning, where I’m not giving my prompt any examples! Even if I did single-shot learning, my results would improve a ton.
 
-**If you’re results are meh and you’re doing zero-shot learning, try out a prompt with single-shot learning and see what happens.**
+**If your results are meh and you’re doing zero-shot learning, try out a prompt with single-shot learning and see what happens.**
 
 The main trick I showed you that can 10X the quality of your results is ******prompt chaining******.
 
 I can’t help you directly with your prompt, because everyone’s prompt is so different. But, I’ll show you how I used prompt chaining to 10X my results. And, you can apply my learnings to your build as well!
 
-*Note: maybe you’re already happy with your results already, if so, cool! I still recommend you explore prompt change, you never know what you may get.*
+*Note: maybe you’re already happy with your results already, if so, cool! I still recommend you explore prompt chaining, you never know what you may get.*
 
 So, here’s what I did, I went to Playground and:
 
@@ -182,7 +182,7 @@ Title: USER_TITLE_GOES_HERE
 Prompt #2:
 
 ```
-Take the table of contents and title of the blog post below and generate a blog post written in thwe style of Paul Graham. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
+Take the table of contents and title of the blog post below and generate a blog post written in the style of Paul Graham. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
 
 Title: USER_TITLE_GOES_HERE
 
@@ -262,7 +262,7 @@ export default generateAction;
 
 The most important line here is `const secondPrompt`. This is where “build” my second prompt based on the output of `basePromptOutput`. I also use `${req.body.userInput}` here as well to give my model even more context. At the end, I change final JSON result to `{ output: secondPromptOutput }` so my user see’s the output of the second prompt on our UI.
 
-No UI changes requires here btw! All we’re doing is changing the backend.
+No UI changes required here btw! All we’re doing is changing the backend.
 
 So…how’s your product feeling now? Mines is absolutely insane now lol. It’s creating some A+ tier blog posts for me about everything from anime to nuclear fission to relationship advice. Beautiful.
 

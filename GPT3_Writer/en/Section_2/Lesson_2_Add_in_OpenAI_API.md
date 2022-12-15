@@ -35,6 +35,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 ```
+*Note: If you are facing any issues with openai module, try running `npm install openai` in your terminal
 
 This is pretty straightforward, we’re using the OpenAI JS library to setup the API easily. But you’ll see here we need a `process.env.OPENAI_API_KEY`. This will come from our `.env` file which is a file that holds any secret information that you don’t want to push to GitHub by accident.
 
@@ -121,13 +122,13 @@ const callGenerateEndpoint = async () => {
 
 Nothing too crazy here.
 
-First, I created a state variable for `isGenerating`. This will let us easily create a loading state later so we can tell our users to wait for the OpenAI API to reply. Then, I create `apiOutput` — this will be where we story the output of the API we want to show the user.
+First, I created a state variable for `isGenerating`. This will let us easily create a loading state later so we can tell our users to wait for the OpenAI API to reply. Then, I create `apiOutput` — this will be where we store the output of the API we want to show the user.
 
 Next, we hop into the `callGenerateEndpoint`. The summary:
 
 - I call `setIsGenerating(true)` to set the loading state to `true`. At the bottom of the function, I do `setIsGenerating(false)` because that’s when we’re all done with the API and can set the loading state to `false`.
 - I do a simple `fetch` to our API — notice the route I use: `/api/generate`. NextJS automatically creates this route for us based on the structure of our directory: `api/generate.js`. Pretty cool!
-- From there, I convert the response to JSON by doing `await response.json()` and then pull out `output`. *****************************************Note: I’m using [object destructing](https://www.javascripttutorial.net/es6/javascript-object-destructuring/) here.*
+- From there, I convert the response to JSON by doing `await response.json()` and then pull out `output`. *****************************************Note: I’m using [object destructuring](https://www.javascripttutorial.net/es6/javascript-object-destructuring/) here.*
 - Finally, I use `setApiOutput` to actually set `apiOutput` with the actual text that GPT-3 output.
 
 To test it all out, add `callGenerateEndpoint` to your “Generate” button’s `onClick` event by doing:
@@ -202,7 +203,7 @@ All we need to do is display it! Here’s the code:
     onClick={callGenerateEndpoint}
   >
     <div className="generate">
-    {isGenerating ? <span class="loader"></span> : <p>Generate</p>}
+    {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
     </div>
   </a>
 </div>
@@ -211,7 +212,7 @@ All we need to do is display it! Here’s the code:
 I actually used some fancy stuff here. The first thing you see me doing is changing the `className` based on the value of `isGenerating`. If you’ve never seen the `? :` syntax, that’s called a [ternary operator](https://www.javascripttutorial.net/javascript-ternary-operator/). It works like this:
 
 ```jsx
-ifThingThingIsTrue ? thenDoThis : elseDoThis
+ifThisThingIsTrue ? thenDoThis : elseDoThis
 ```
 
 It’s basically a cleaner `if` + `else`.
