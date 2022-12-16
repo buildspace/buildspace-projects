@@ -219,3 +219,7 @@ npx hardhat run scripts/deploy.js --network goerli
 ----------
 
 使用实际的 ETH 来为你的合约充值，对吗？看一下[这个链接](https://gist.github.com/adilanchian/236fe9f3a56b73751060800cae3a780d)可以看到本节写的所有代码！
+
+如果你想要捐赠我们：
+0x45ca2696d9a4f762c7a51a22a230797700e28794
+这会让我们更有动力。
