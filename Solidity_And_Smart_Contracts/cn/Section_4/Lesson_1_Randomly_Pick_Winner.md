@@ -60,13 +60,13 @@ contract WavePortal {
          * Generate a new seed for the next user that sends a wave
          */
         seed = (block.difficulty + block.timestamp + seed) % 100;
-        
+
         console.log("Random # generated: %d", seed);
 
         /*
          * Give a 50% chance that the user wins the prize.
          */
-        if (seed <= 50) {
+        if (seed < 50) {
             console.log("%s won!", msg.sender);
 
             /*
@@ -96,9 +96,9 @@ contract WavePortal {
 
 在这里，我取了 Solidity 给我的两个数字，`block.difficulty` 和 `block.timestamp`，然后将它们组合起来创建一个随机数。 `block.difficulty` 根据区块中的交易告诉矿工该区块的挖掘难度。由于多种原因，区块变得更难，但是，主要是当区块中有更多交易时它们会变得更难（一些矿工更喜欢简单的区块，但这些支出较少）。 `block.timestamp` 只是块正在被处理的 Unix 时间戳。
 
-这些#s 是*非常*随机的。但是，从技术上讲，“block.difficulty”和“block.timestamp”都可以由老练的攻击者控制。
+这些#s 是*非常*随机的。但是，从技术上讲，`block.difficulty`和`block.timestamp`都可以由老练的攻击者控制。
 
-为了使这更难，我创建了一个变量“种子”，每次用户发送新wave时，它都会发生本质上的变化。因此，我将所有这三个变量结合起来生成一个新的随机种子。然后我只做“% 100”，这将确保数字降低到 0 - 100 之间的范围。
+为了使这更难，我创建了一个变量`seed` ，每次用户发送新wave时，它都会发生本质上的变化。因此，我将所有这三个变量结合起来生成一个新的随机种子。然后我只做`% 100`，这将确保数字降低到 0 - 100 之间的范围。
 
 仅此而已！然后我就写一个简单的if语句，看看种子是否小于或等于50，如果是——那么摇摆不定的人就赢了！所以，这意味着自从我们写了 `seed <= 50` 以来，摇摆者有 50% 的机会获胜。您可以将其更改为您想要的任何内容:)。我只做了 50%，因为这样更容易测试！！
 
@@ -115,33 +115,33 @@ contract WavePortal {
 
 ```javascript
 const main = async () => {
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther('0.1'),
+    value: hre.ethers.utils.parseEther("0.1"),
   });
   await waveContract.deployed();
-  console.log('Contract addy:', waveContract.address);
+  console.log("Contract addy:", waveContract.address);
 
   let contractBalance = await hre.ethers.provider.getBalance(
     waveContract.address
   );
   console.log(
-    'Contract balance:',
+    "Contract balance:",
     hre.ethers.utils.formatEther(contractBalance)
   );
 
   /*
    * Let's try two waves now
    */
-  const waveTxn = await waveContract.wave('This is wave #1');
+  const waveTxn = await waveContract.wave("This is wave #1");
   await waveTxn.wait();
 
-  const waveTxn2 = await waveContract.wave('This is wave #2');
+  const waveTxn2 = await waveContract.wave("This is wave #2");
   await waveTxn2.wait();
 
   contractBalance = await hre.ethers.provider.getBalance(waveContract.address);
   console.log(
-    'Contract balance:',
+    "Contract balance:",
     hre.ethers.utils.formatEther(contractBalance)
   );
 
@@ -182,7 +182,7 @@ runMain();
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 
@@ -266,3 +266,7 @@ contract WavePortal {
 尝试运行 `npx hardhat run scripts/run.js` 并查看如果尝试连续挥手两次而间隔时间小于 15 分钟时得到的错误消息:)。
 
 砰！这就是你建立冷却时间的方式！
+
+如果你想要捐赠我们：
+0x45ca2696d9a4f762c7a51a22a230797700e28794
+这会让我们更有动力。

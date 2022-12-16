@@ -5,7 +5,7 @@
 
 现在我们要做的是真正的交易，部署到实际的区块链上。
 
-继续吧，在 Alchemy [这里](https://alchemy.com/?r=b93d1f12b8828a57)创建一个账户。
+继续并在 [此处](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) 创建一个帐户
 
 很抱歉让你建立这么多账户，但是，这个生态系统很复杂，我们想利用现有的强大工具。Alchemy所做的是为我们提供了一个简单的方法来部署到真正的以太坊区块链上。
 
@@ -16,20 +16,20 @@
 
 因此，当我们调用`wave`，并且它做了`totalWaves += 1`，这就是一个交易！**部署智能合约也是一个交易。 **部署一个智能合约也是一个交易。
 
-记住，区块链没有主人。它只是世界上由**人运行的一堆计算机，它们拥有区块链的副本。
+记住，区块链没有主人。它只是世界上由**矿工**运行的一堆计算机，它们拥有区块链的副本。
 
 当我们部署我们的合约时，我们需要告诉**所有这些**矿工，"嘿，这是一个新的智能合约，请把我的智能合约添加到区块链上，然后把它也告诉其他人"。
 
-这就是 Alchemy 炼金术的由来。
+这就是 [QuickNode](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) 的用武之地。
 
-炼金术本质上是帮助我们广播合约创建交易，以便它能尽快被矿工捡到。一旦交易被挖掘出来，它就会作为合法交易被广播到区块链上。从那里开始，每个人都会更新他们的区块链副本。
+QuickNode 本质上帮助我们广播我们的合约创建交易，以便矿工尽快获取它。 一旦交易被挖掘，它就会作为合法交易广播到区块链。 从那里，每个人都更新他们的区块链副本。
 
-这很复杂。而且，如果你不完全理解它，也不用担心。当你写更多的代码并实际构建这个应用程序时，它自然会变得更有意义。 
+这是复杂的。 而且，如果您不完全理解它，请不要担心。 当您编写更多代码并实际构建此应用程序时，它自然会更有意义。
 
-所以，在Alchemy先创建一个账户吧 [这里](https://alchemy.com/?r=b93d1f12b8828a57)。
+因此，[在此处](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) 创建一个帐户。
 
-请看下面的视频，看看如何为测试网获得你的API密钥!
-[Loom](https://www.loom.com/share/21aa1d64ea634c0c9da8fc5faaf24283)
+查看下面的视频，了解如何获取测试网的 API 密钥！
+[loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
 
 🕸️ 测试网
 ------------
@@ -51,82 +51,135 @@
 🤑 获得一些假币 $
 ------------------------
 
-现在有几个测试网，我们将使用的测试网叫做 "Rinkeby"，由以太坊基金会管理。
+现在有几个测试网，我们将使用的测试网叫做 " Goerli "，由以太坊基金会管理。
 
-为了部署到Rinkeby，我们需要假的Ether。为什么？因为如果你要部署到真正的以太坊主网，你会使用真钱！所以，测试网复制了主网的工作方式，唯一的区别是不涉及真钱。
+为了部署到Goerli，我们需要假的Ether。为什么？因为如果你要部署到真正的以太坊主网，你会使用真钱！所以，测试网复制了主网的工作方式，唯一的区别是不涉及真钱。
 
-为了获得假ETH，我们必须向网络索取一些。**这种假ETH只在这个特定的测试网络上工作。**你可以通过水龙头为Rinkeby获得一些假ETH。在使用龙头之前，请确保你的MetaMask钱包被设置为 "Rinkeby测试网络"。
+为了获得假ETH，我们必须向网络索取一些。**这种假ETH只在这个特定的测试网络上工作。**你可以通过水龙头为Goerli获得一些假ETH。在使用龙头之前，请确保你的MetaMask钱包被设置为 "Goerli测试网络"。
 
-对于MyCrypto，你需要连接你的钱包，建立一个账户，然后再次点击同一个链接来请求资金。对于官方的Rinkeby水龙头，如果它列出了0个队列，就不值得花时间去发推特/Facebook公开帖子。
+对于 MyCrypto，您需要连接您的钱包，创建一个帐户，然后再次单击相同的链接以申请资金。 对于官方 Goerli 水龙头，您应该登录您的 Alchemy 帐户以获得 2 倍的金额。
 
 | Name             | Link                                  | Amount          | Time         |
 | ---------------- | ------------------------------------- | --------------- | ------------ |
+| Chainlink        | https://faucets.chain.link/goerli     | 0.1             | None         |
+| Official Goerli  | https://goerlifaucet.com              | 0.25            | 24 hrs       |
 | MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
-| Buildspace       | https://buildspace-faucet.vercel.app/ | 0.025           | 1d           |
-| Ethily           | https://ethily.io/rinkeby-faucet/     | 0.2             | 1w           |
-| Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
 
 
-📈 部署到Rinkeby测试网
----------------------------------
 
-我们需要改变我们的`hardhat.config.js`文件。你可以在你的智能合约项目的根目录下找到它。
+## 📈 部署到 Goerli 测试网
+
+我们需要更改我们的 hardhat.config.js 文件。 你可以在你的智能合约项目的根目录中找到它。
 
 ```javascript
-require('@nomiclabs/hardhat-waffle');
+require("@nomicfoundation/hardhat-toolbox");
+
+// This is a sample Hardhat task. To learn how to create your own go to
+// https://hardhat.org/guides/create-task.html
+task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
+    const accounts = await hre.ethers.getSigners();
+
+    for (const account of accounts) {
+        console.log(account.address);
+    }
+});
+
+// You need to export an object to set up your config
+// Go to https://hardhat.org/config/ to learn more
+
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+module.exports = {
+    solidity: "0.8.17",
+    networks: {
+      goerli: {
+        url: "YOUR_QUICKNODE_API_URL",
+        accounts: ["YOUR_PRIVATE_GOERLI_ACCOUNT_KEY"]
+      },
+    },
+};
+```
+
+**注意：不要将此文件提交给 GITHUB。 它有您的私钥。 你会被黑+抢劫。 此私钥与您的主网私钥相同。**
+
+**如果上传到 Github 或通常使用 git 版本控制，最好保护自己不要将密钥上传到你不想要的地方。 首先，最好的方法是不要通过将安全帽配置文件添加到 .gitignore 来上传它。**
+
+另一种保护自己并保持 `hardhat.config.js` 安全的方法是使用 dotenv。 安装它：
+
+```bash
+npm install --save dotenv
+```
+现在我们可以更新 hardhat.config.js 来使用 dotenv 了：
+
+```javascript
+require("@nomicfoundation/hardhat-toolbox");
+// Import and configure dotenv
+require("dotenv").config();
 
 module.exports = {
-  solidity: '0.8.0',
+  solidity: "0.8.17",
   networks: {
-    rinkeby: {
-      url: 'YOUR_ALCHEMY_API_URL',
-      accounts: ['YOUR_PRIVATE_RINKEBY_ACCOUNT_KEY'],
+    goerli: {
+      // This value will be replaced on runtime
+      url: process.env.STAGING_QUICKNODE_KEY,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    mainnet: {
+      url: process.env.PROD_QUICKNODE_KEY,
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
 };
 ```
 
-**注意：不要把这个文件提交给GITHUB，它有你的私钥，你会被黑客攻击和抢劫的！这个私钥和你的主网私钥是一样的。**我们稍后会讨论`.env`变量以及如何保持这些东西的机密。
+In the root project folder, create a `.env` file and add your secrets. It should look like this:
 
-你可以从Alchemy仪表板上获得你的API URL并粘贴进去。然后，你将需要你的**私人**rinkeby密钥（不是你的公共地址！），你可以从metamask中复制并粘贴到那里。
-
-**注意：访问你的私钥可以通过打开MetaMask，将网络改为 "Rinkeby测试网络"，然后点击三个点，选择 "账户细节">"导出私钥 "**。
-
-为什么你需要使用你的私钥？因为为了执行像部署合同这样的交易，你需要 "登录 "到区块链上。所以你的用户名是你的公共地址，你的密码是你的私钥。这有点像登录AWS或GCP进行部署。
-
-一旦你设置好了你的配置，我们就可以用我们之前写的部署脚本进行部署了。
-
-在`my-wave-portal`的根目录下运行这个命令。注意我们所做的只是把它从`localhost`改为`rinkeby`。
-
-```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+```javascript
+STAGING_QUICKNODE_KEY=REPLACE_WITH_ACTUAL_QUICKNODE_URL     // Goerli Quicknode
+PROD_QUICKNODE_KEY=BLAHBLAH                                 // Mainnet Quicknode
+PRIVATE_KEY=BLAHBLAH
 ```
 
-❤️ 部署！
--------------
+最后，将 .env 添加到你的 .gitignore 文件中，这样 Git 就会忽略它，你的秘密就不会离开你的机器！ 如果您对此感到困惑，只需观看有关它的 YouTube 视频，这很简单！
 
-这是我的输出
+接下来，从 QuickNode 仪表板获取您的 API URL 并将其粘贴进去。然后，您将需要您的 **私人** Goerli 密钥（不是您的公共地址！），您可以从 metamask 获取它并将其也粘贴到那里。
+
+**注意：访问您的私钥可以通过打开MetaMask来完成，将网络更改为“Goerli Test Network”，然后单击三个点并选择“Account Details”>“Export Private Key”**
+
+为什么需要使用私钥？ 因为为了执行像部署合约这样的交易，你需要“登录”到区块链。 而且，您的用户名是您的公共地址，您的密码是您的私钥。 这有点像登录 AWS 或 GCP 进行部署。
+
+一旦您完成了配置设置，我们就可以使用我们之前编写的部署脚本进行部署。
+
+从`my-wave-portal`的根目录运行此命令。 请注意，我们所做的只是将其从`localhost`更改为`goerli`。
+
+```bash
+npx hardhat run scripts/deploy.js --network goerli
+```
+
+## ❤️部署! 
+
+这是我的输出:
 
 ```bash
 Deploying contracts with the account: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
 Account balance: 3198297774605223721
 WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
 ```
+复制最后一行已部署合约的地址并将其保存在某处。 别弄丢了！ 稍后您将需要它作为前端:)。 你的会和我的不一样。
 
-复制最后一行中部署合同的地址，并将其保存在某个地方。不要丢失它! 你以后会需要它来做前端:)，你的和我的是不一样的。
+**你刚刚部署了你的合约。哇塞。**
 
-**你刚刚部署了你的合同，WOOOOOOO。**
+实际上，您可以获取该地址，然后将其粘贴到 Etherscan [此处](https://goerli.etherscan.io/)。 Etherscan 是一个向我们展示区块链状态并帮助我们查看交易位置的地方。 你应该在这里看到你的交易:)。 可能需要一分钟才能出现！
 
-你实际上可以把这个地址，然后粘贴到Etherscan[这里](https://rinkeby.etherscan.io/)。Etherscan是一个向我们展示区块链状态的地方，帮助我们看到我们的交易处于什么位置。你应该在这里看到你的交易:)。它可能需要一分钟才能显示出来!
-
-举例， [这里](https://rinkeby.etherscan.io/address/0xd5f08a0ae197482FA808cE84E00E97d940dBD26E)是我的！
+例如，[这里是](https://goerli.etherscan.io/address/0x957fe7381be45A31967F1EcfAc6Ff001D8AF8D6c) 我的！
 
 🚨 在你点击 "下一课 "之前
 ---------------------------------
 
 **你刚刚做了很多。**
 
-你完全应该**发推特**，说你刚刚编写并部署了你的第一个智能合约，并@_buildspace。如果你愿意，请附上以太坊页面的截图，显示你的合约已经在区块链上了。
+你完全应该**发推特**，说你刚刚编写并部署了你的第一个智能合约，并@_buildspace @bitcoinmaobuyi。如果你愿意，请附上以太坊页面的截图，显示你的合约已经在区块链上了。
 
 你能走到这一步，是件大事。你创造并部署了一些东西到实际的区块链上。**我勒个去**。**我为你感到骄傲**。
 
@@ -135,6 +188,9 @@ WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
 你离掌握web3的艺术又近了一步。
 
 继续努力 :).
+如果你想要捐赠我们：
+0x45ca2696d9a4f762c7a51a22a230797700e28794
+这会让我们更有动力。
 
 --
 

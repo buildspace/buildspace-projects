@@ -24,9 +24,11 @@
 
 2\. 快速编译智能合约，并在我们的本地区块链上测试它们。
 
-首先，你需要得到node/npm。如果你没有它，请前往[这里](https://hardhat.org/tutorial/setting-up-the-environment.html)。
+首先，您需要获取 Node/NPM。 如果没有，请前往 [此处](https://hardhat.org/tutorial/setting-up-the-environment.html)。
 
-接下来，让我们去终端机（Git Bash不能用）。继续前进，cd到你想工作的目录。一旦你到了那里，运行这些命令。
+我们建议使用当前的 LTS Node.js 版本运行 Hardhat，否则您可能会遇到一些问题！ 您可以在 [此处](https://nodejs.org/en/about/releases/) 找到当前版本。 **确保您的 NodeJs 版本正确，否则您会遇到问题！**我们现在推荐版本 16。
+
+接下来，让我们前往终端（Git Bash 将无法运行）。 继续并 cd 到你想要工作的目录。一旦你在那里运行这些命令：
 
 ```bash
 mkdir my-wave-portal
@@ -47,19 +49,67 @@ npm install --save-dev hardhat
 npx hardhat
 ```
 
-选择创建一个样本项目的选项。对一切都说是。
+*注意：如果你在安装 npm 的同时安装了 yarn，你可能会收到诸如 `npm ERR! could not determine executable to run`。 在这种情况下，您可以执行 `yarn add hardhat`。* 
+
+选择**Create a JavaScript project**的选项。对一切都说是。
+<img width="571" alt="Screen Shot 2022-06-10 at 22 51 21" src="https://i.imgur.com/j1e8vJT.png">
 
 这个样本项目会要求你安装hardhat-waffle和hardhat-ethers。这些是我们以后会用到的其他好东西:)。
 
 继续安装这些其他依赖项，以防它没有自动完成。
-
 ```bash
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+npm install --save-dev chai @nomiclabs/hardhat-ethers ethers @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-chai-matchers
+```
+
+你的`hardhat.config.js` 文件应该看起来是这样.
+```javascript
+require("@nomicfoundation/hardhat-toolbox");
+
+// This is a sample Hardhat task. To learn how to create your own go to
+// https://hardhat.org/guides/create-task.html
+task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
+    const accounts = await hre.ethers.getSigners();
+
+    for (const account of accounts) {
+        console.log(account.address);
+    }
+});
+
+// You need to export an object to set up your config
+// Go to https://hardhat.org/config/ to learn more
+
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+module.exports = {
+    solidity: "0.8.17",
+};
 ```
 
 最后，运行`npx hardhat accounts`，这应该会打印出一堆字符串，看起来像这样。
 
-`0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`
+```
+0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
+0x90F79bf6EB2c4f870365E785982E1f101E93b906
+0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65
+0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc
+0x976EA74026E726554dB657fA54763abd0C3a0aa9
+0x14dC79964da2C08b23698B3D3cc7Ca32193d9955
+0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f
+0xa0Ee7A142d267C1f36714E4a8F75612F20a79720
+0xBcd4042DE499D14e55001CcbB24a551F3b954096
+0x71bE63f3384f5fb98995898A86B02Fb2426c5788
+0xFABB0ac9d68B0B445fB7357272Ff202C5651694a
+0x1CBd3b2770909D4e10f157cABC84C7264073C9Ec
+0xdF3e18d64BC6A983f673Ab319CCaE4f1a57C7097
+0xcd3B766CCDd6AE721141F452C550Ca635964ce71
+0x2546BcD3c84621e976D8185a91A922aE77ECEc30
+0xbDA5747bFD65F08deb54cb465eB87D40e51B197E
+0xdD2FD4581271e230360230F9337D5c0430Bf44C0
+0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199
+```
 
 这些是Hardhat为我们生成的Ethereum地址，用于模拟区块链上的真实用户。在项目后期，当我们想模拟用户👋在我们身边时，这将对我们有很大的帮助!
 
@@ -79,13 +129,13 @@ npx hardhat test
 
 你应该看到像这样的东西。
 
-![](https://i.imgur.com/rjPvls0.png)
+![](https://i.imgur.com/OI9YKaU.png)
 
 让我们做一个小小的清理。
 
-继续在你喜欢的代码编辑器中打开项目的代码。我最喜欢VSCode! 我们要删除所有为我们生成的蹩脚的启动代码。我们不需要任何这些东西。我们是专家;)!
+继续，现在在您最喜欢的代码编辑器中打开项目的代码。 我最喜欢 VSCode！ 我们想删除为我们生成的所有蹩脚的启动代码。 我们不需要这些。 我们是专业人士 ;)！
 
-继续删除`test`下的`sample-test.js`文件。  同时，删除`scripts`下的`sample-script.js`。然后，删除`contracts`下的`Greeter.sol`。不要删除实际的文件夹!
+继续并删除 `test` 下的文件 `Lock.js`。 另外，删除 `scripts` 下的 `deploy.js`。 然后，删除 contracts 下的 Lock.sol。 不要删除实际的文件夹！
 
 🚨 在你点击 "下一课 "之前
 -------------------------------------------
@@ -94,4 +144,4 @@ npx hardhat test
 
 前往#progress，并发布一张**你的**终端的截图，显示测试的输出结果! 你刚刚运行了一个智能合约，这可是件大事！! 炫耀一下吧:)。
 
-P.S: 如果你**没有访问#progress的权限，请确保你链接了你的Discord，加入Discord[这里](https://discord.gg/mXDqs6Ubcc)，在#general里打给我们，我们会帮助你进入正确的频道!
+P.S: 如果你**没有访问#progress的权限，请确保你链接了你的Discord，加入Discord[这里](https://discord.gg/buildspace)，在#general里打给我们，我们会帮助你进入正确的频道!

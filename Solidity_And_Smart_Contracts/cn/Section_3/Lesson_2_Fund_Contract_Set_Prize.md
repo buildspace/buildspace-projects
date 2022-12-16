@@ -7,9 +7,9 @@
 
 **轻松地向用户发送 ETH 是智能合约的核心部分，也是他们最酷的部分之一**，所以，让我们去做吧！
 
-首先，我们将给所有向我们挥手致意的人发送“0.0001 ETH”。这是 0.31 美元 :)。而这一切都发生在测试网上，所以，它是假的！
+首先，我们将给所有向我们挥手致意的人发送`0.0001 ETH`。这是 $0.31 :)。而这一切都发生在测试网上，所以，它是假的！
 
-在“WavePortal.sol”上查看我更新的“wave”函数。
+在`WavePortal.sol`上查看我更新的`wave`函数。
 
 ```solidity
 function wave(string memory _message) public {
@@ -32,7 +32,7 @@ function wave(string memory _message) public {
 
 这真是太棒了。
 
-使用`prizeAmount` 我只是启动一个奖金金额。 Solidity 实际上让我们使用关键字“ether”，这样我们就可以轻松地表示货币金额。很方便的 ：）！
+使用`prizeAmount` 我只是启动一个奖金金额。 Solidity 实际上让我们使用关键字 `ether`，这样我们就可以轻松地表示货币金额。很方便的 ：）！
 
 我们也有一些新的关键字。你会看到`require`，它基本上会检查某些条件是否为真。如果不正确，它将退出该功能并取消交易。这就像一个花哨的 if 语句！
 
@@ -50,7 +50,7 @@ require(prizeAmount <= address(this).balance, "Trying to withdraw more money tha
 
 `(msg.sender).call{value: PrizeAmount}("")` 是我们汇款的魔法线:)。语法有点奇怪！注意我们如何传递它`prizeAmount`！
 
-`require(success` 是我们知道交易成功的地方:)。如果不是，它会将交易标记为错误并说“无法从合约中提取资金”。
+`require(success` 是我们知道交易成功的地方:)。如果不是，它会将交易标记为错误并说`"Failed to withdraw money from contract."`。
 
 非常棒，对吧:)？
 
@@ -65,12 +65,12 @@ require(prizeAmount <= address(this).balance, "Trying to withdraw more money tha
 
 ```javascript
 const main = async () => {
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther('0.1'),
+    value: hre.ethers.utils.parseEther("0.1"),
   });
   await waveContract.deployed();
-  console.log('Contract addy:', waveContract.address);
+  console.log("Contract addy:", waveContract.address);
 
   /*
    * Get Contract balance
@@ -79,14 +79,14 @@ const main = async () => {
     waveContract.address
   );
   console.log(
-    'Contract balance:',
+    "Contract balance:",
     hre.ethers.utils.formatEther(contractBalance)
   );
 
   /*
    * Send Wave
    */
-  let waveTxn = await waveContract.wave('A message!');
+  let waveTxn = await waveContract.wave("A message!");
   await waveTxn.wait();
 
   /*
@@ -94,7 +94,7 @@ const main = async () => {
    */
   contractBalance = await hre.ethers.provider.getBalance(waveContract.address);
   console.log(
-    'Contract balance:',
+    "Contract balance:",
     hre.ethers.utils.formatEther(contractBalance)
   );
 
@@ -119,7 +119,7 @@ runMain();
 
 然后执行 `hre.ethers.utils.formatEther(contractBalance)` 来测试合约是否真的有 0.1 的余额。我使用了 `ethers` 给一个名为 `getBalance` 的函数，并将它传递给合约地址！
 
-但是，我们还想看看当我们调用 `wave` 时是否从合约中正确删除了 0.0001 ETH！！这就是为什么我在调用“wave”后再次打印出余额。
+但是，我们还想看看当我们调用 `wave` 时是否从合约中正确删除了 0.0001 ETH！！这就是为什么我在调用`wave`后再次打印出余额。
 
 当我们运行
 
@@ -135,7 +135,7 @@ npx hardhat run scripts/run.js
 Error: non-payable constructor cannot override value
 ```
 
-这就是说，我们的合约现在不允许付钱给人！这是快速修复，我们需要在 WavePortal.sol 的构造函数中添加关键字“payable”。看看这个：
+这就是说，我们的合约现在不允许付钱给人！这是快速修复，我们需要在`WavePortal.sol`的构造函数中添加关键字`payable`。看看这个：
 
 ```solidity
 constructor() payable {
@@ -166,14 +166,14 @@ npx hardhat run scripts/run.js
 
 ```javascript
 const main = async () => {
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther('0.001'),
+    value: hre.ethers.utils.parseEther("0.001"),
   });
 
   await waveContract.deployed();
 
-  console.log('WavePortal address: ', waveContract.address);
+  console.log("WavePortal address: ", waveContract.address);
 };
 
 const runMain = async () => {
@@ -193,7 +193,7 @@ runMain();
 
 ```javascript
 const waveContract = await waveContractFactory.deploy({
-    value: hre.ethers.utils.parseEther('0.001'),
+    value: hre.ethers.utils.parseEther("0.001"),
 });
 ```
 
@@ -206,7 +206,7 @@ const waveContract = await waveContractFactory.deploy({
 让我们使用相同的方法部署我们的合约
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 现在，当您转到 [Etherscan](https://rinkeby.etherscan.io/) 并粘贴合约地址时，您会看到合约现在的价值为 0.001 ETH！成功！
@@ -219,3 +219,7 @@ npx hardhat run scripts/deploy.js --network rinkeby
 ----------
 
 使用实际的 ETH 来为你的合约充值，对吗？看一下[这个链接](https://gist.github.com/adilanchian/236fe9f3a56b73751060800cae3a780d)可以看到本节写的所有代码！
+
+如果你想要捐赠我们：
+0x45ca2696d9a4f762c7a51a22a230797700e28794
+这会让我们更有动力。
