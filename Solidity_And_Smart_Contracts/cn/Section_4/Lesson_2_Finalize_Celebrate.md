@@ -204,3 +204,7 @@ PRIVATE_KEY=BLAHBLAH
 ----------
 
 *你做到了。*周围鼓掌👏！想查看我们为本节编写的所有代码吗？点击[这个链接](https://gist.github.com/adilanchian/93fbd2e06b3b5d3acb99b5723cebd925) 看全部！
+
+如果你想要捐赠我们：
+0x45ca2696d9a4f762c7a51a22a230797700e28794
+这会让我们更有动力。
