@@ -2362,6 +2362,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "KevinFiorentino",
+      "name": "Kevin Emanuel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30932278?v=4",
+      "profile": "https://www.linkedin.com/in/kevinfiorentino/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -2369,5 +2378,6 @@
   "projectOwner": "buildspace",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
