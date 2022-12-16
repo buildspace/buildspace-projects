@@ -171,7 +171,7 @@ use solana_program:: {
     program_pack::{ IsInitialized, Sealed },
     pubkey::Pubkey,
     clock::UnixTimestamp
-}
+};
 
 #[derive(BorshSerialize, BorshDeserialize, Debug)]
 pub struct UserStakeInfo {
@@ -202,7 +202,7 @@ Let's now head over to `error.rs` to define our custom error for our program.
 
 ```rust
 // error.rs
-use solana_program::{ program_error::Programerror };
+use solana_program::{ program_error::ProgramError };
 use thiserror::Error;
 
 #[derive(Debug, Error)]
@@ -247,11 +247,11 @@ use solana_program::{
     program::invoke_signed,
     borsh::try_from_slice_unchecked,
     program_error::ProgramError
-}
+};
 use borsh::BorshSerialize;
 use crate::instruction::StakeInstruction;
 use crate::error::StakeError;
-use create::state::{ UserStakeInfo, StakeState };
+use crate::state::{ UserStakeInfo, StakeState };
 
 fn process_initialize_stake_account(
     program_id: &Pubkey,
@@ -259,7 +259,7 @@ fn process_initialize_stake_account(
 ) -> ProgramResult {
     let account_info_iter = &mut accounts.iter();
     let user = next_account_info(account_info_iter)?;
-    let nft_token = next_account_info(account_info_iter)?;
+    let nft_token_account = next_account_info(account_info_iter)?;
     let stake_state = next_account_info(account_info_iter)?;
     let system_program = next_account_info(account_info_iter)?;
 
@@ -295,7 +295,7 @@ fn process_initialize_stake_account(
     )?;
 
     // Let's create account
-    let mut account_data = try_from_slice_unchecked::<UserStakeInfo>(&stake_state.data.borrow()).unwrap()
+    let mut account_data = try_from_slice_unchecked::<UserStakeInfo>(&stake_state.data.borrow()).unwrap();
 
     if account_data.is_initialized() {
         msg!("Account already initialized");
@@ -359,7 +359,7 @@ fn process_stake(
     }
 
      // Let's create account
-    let mut account_data = try_from_slice_unchecked::<UserStakeInfo>(&stake_state.data.borrow()).unwrap()
+    let mut account_data = try_from_slice_unchecked::<UserStakeInfo>(&stake_state.data.borrow()).unwrap();
 
     if !account_data.is_initialized() {
         msg!("Account not initialized");
@@ -408,11 +408,11 @@ fn process_redeem(
     // For verification, we need to make sure it's the right signer
     if !user.is_signer {
         msg!("Missing required signature");
-        return Err(ProgramError::MissingrequiredSignature);
+        return Err(ProgramError::MissingRequiredSignature);
     }
 
      // Let's create account
-    let mut account_data = try_from_slice_unchecked::<UserStakeInfo>(&stake_state.data.borrow()).unwrap()
+    let mut account_data = try_from_slice_unchecked::<UserStakeInfo>(&stake_state.data.borrow()).unwrap();
 
     if !account_data.is_initialized() {
         msg!("Account not initialized");
@@ -431,7 +431,7 @@ fn process_redeem(
 
     if *nft_token_account.key != account_data.token_account {
         msg!("NFT Token account do not match");
-        return Err(StakeError::InvalidTokenAccount.into())
+        return Err(StakeError::InvalidTokenAccount.into());
     }
 
     let clock = Clock::get()?;
@@ -473,11 +473,11 @@ fn process_unstake(
     // For verification, we need to make sure it's the right signer
     if !user.is_signer {
         msg!("Missing required signature");
-        return Err(ProgramError::MissingrequiredSignature);
+        return Err(ProgramError::MissingRequiredSignature);
     }
 
      // Let's create account
-    let mut account_data = try_from_slice_unchecked::<UserStakeInfo>(&stake_state.data.borrow()).unwrap()
+    let mut account_data = try_from_slice_unchecked::<UserStakeInfo>(&stake_state.data.borrow()).unwrap();
 
     if !account_data.is_initialized() {
         msg!("Account not initialized");
@@ -486,7 +486,7 @@ fn process_unstake(
 
     if account_data.stake_state != StakeState::Staked {
         msg!("Stake account is not staking anything");
-        return Err(StakeError::InvalidArgument)
+        return Err(ProgramError::InvalidArgument)
     }
 
     let clock = Clock::get()?;
