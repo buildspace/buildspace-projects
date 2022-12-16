@@ -16,7 +16,7 @@
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 
@@ -65,20 +65,19 @@ contract WavePortal {
 ```javascript
 const main = async () => {
   const [owner, randomPerson] = await hre.ethers.getSigners();
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
 
   console.log("Contract deployed to:", waveContract.address);
   console.log("Contract deployed by:", owner.address);
 
-  let waveCount;
-  waveCount = await waveContract.getTotalWaves();
-  
-  let waveTxn = await waveContract.wave();
+  await waveContract.getTotalWaves();
+
+  const waveTxn = await waveContract.wave();
   await waveTxn.wait();
 
-  waveCount = await waveContract.getTotalWaves();
+  await waveContract.getTotalWaves();
 };
 
 const runMain = async () => {
@@ -104,10 +103,10 @@ const [owner, randomPerson] = await hre.ethers.getSigners();
 
 为了将某些东西部署到区块链，我们需要有一个钱包地址！ Hardhat在后台神奇地为我们做了这件事，但在这里我抓取了合约所有者的钱包地址，我也抓取了一个随机的钱包地址，并将其命名为“randomPerson”。这会更有意义。
 
-我还补充道：
+我还添加了：
 
 ```javascript
-console.log("合约部署者：", owner.address);
+console.log("Contract deployed by:", owner.address);
 ```
 
 我这样做只是为了查看部署合约的地址。我很好奇！
@@ -115,16 +114,17 @@ console.log("合约部署者：", owner.address);
 我添加的最后一件事是：
 
 ```javascript
-let waveCount;
-waveCount = await waveContract.getTotalWaves();
+await waveContract.getTotalWaves();
 
-let waveTxn = await waveContract.wave();
+const waveTxn = await waveContract.wave();
 await waveTxn.wait();
 
-waveCount = await waveContract.getTotalWaves();
+await waveContract.getTotalWaves();
 ```
 
-基本上，我们需要手动调用我们的函数！就像我们使用任何普通 API 一样。首先我调用函数来获取总的挥手次数。然后，运行挥手。最后，我再次抓取 waveCount 以查看它是否发生了变化。
+基本上，我们需要手动调用我们的函数！ 就像我们使用任何普通 API 一样。 首先，我调用函数来获取总波数。 然后，我做波浪。
+
+请注意，函数调用 `await waveContract.getTotalWaves()` 也会返回波数。 我们可以将它存储在一个变量中以记录它或在需要时做任何其他事情。 此处没有必要，因为 getTotalWaves 会在每次调用时记录一些内容。
 
 像往常一样运行脚本：
 
@@ -141,13 +141,12 @@ npx hardhat run scripts/run.js
 您还可以看到挥手的钱包地址等于部署合约的地址。我对自己挥手！
 
 所以我们：\
-1\.调用了wave函数。\
-2\.更改了状态变量。\
-3\.读取变量的新值。
+1\. 称为我们的波函数。\
+2\. 更改了状态变量。
 
-这几乎是大多数智能合约的基础。读取函数。编写函数。并改变状态变量。我们正在构建需要继续开发的史诗般的 WavePortal。
+这几乎是大多数智能合约的基础。 读取函数。 编写函数。 并更改状态变量。 我们现在拥有继续开发史诗般的 WavePortal 所需的构建块。
 
-很快，我们将能够从我们将要处理的 React 应用程序中调用这些函数:)。
+很快，我们将能够从我们将要开发的 React 应用程序中调用这些函数 :)。
 
 
 🤝 测试其他用户
@@ -160,25 +159,24 @@ npx hardhat run scripts/run.js
 ```javascript
 const main = async () => {
   const [owner, randomPerson] = await hre.ethers.getSigners();
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
 
-  console.log('Contract deployed to:', waveContract.address);
-  console.log('Contract deployed by:', owner.address);
+  console.log("Contract deployed to:", waveContract.address);
+  console.log("Contract deployed by:", owner.address);
 
-  let waveCount;
-  waveCount = await waveContract.getTotalWaves();
+  await waveContract.getTotalWaves();
 
-  let waveTxn = await waveContract.wave();
-  await waveTxn.wait();
+  const firstWaveTxn = await waveContract.wave();
+  await firstWaveTxn.wait();
 
-  waveCount = await waveContract.getTotalWaves();
+  await waveContract.getTotalWaves();
 
-  waveTxn = await waveContract.connect(randomPerson).wave();
-  await waveTxn.wait();
+  const secondWaveTxn = await waveContract.connect(randomPerson).wave();
+  await secondWaveTxn.wait();
 
-  waveCount = await waveContract.getTotalWaves();
+  await waveContract.getTotalWaves();
 };
 
 const runMain = async () => {
@@ -194,20 +192,20 @@ const runMain = async () => {
 runMain();
 ```
 
-添加到此代码块的最新项目是：
+在这一部分中，我将 `waveTxn` 重命名为 `firstWaveTxn` 并将这些行添加到代码中：
 
 ```javascript
-waveTxn = await waveContract.connect(randomPerson).wave();
-await waveTxn.wait();
+secondWaveTxn = await waveContract.connect(randomPerson).wave();
+await secondWaveTxn.wait();
 
-waveCount = await waveContract.getTotalWaves();
+await waveContract.getTotalWaves();
 ```
 
 🚨 在您点击“下一课”之前
 -------------------------------------
 
-*注意：如果你不这样做，Farza 会很伤心:(.*
+*注意：如果你不这样做，Farza 会很伤心 :(.*
 
-稍微自定义您的代码！！也许您想存储其他东西？我要你捣乱也许您想将发件人的地址存储在一个数组中？也许您想存储地址和wave计数的map，以便跟踪谁最常向您挥手？即使您只是将变量名称和函数名称更改为您认为有趣的东西，这也是一件大事。尽量不要直接复制我！想想您的最终网站和您想要的功能类型。构建您想要的功能**。
+自定义您的代码一点！ 也许您想存储其他东西？ 我要你乱来 也许您想将发件人的地址存储在一个数组中？ 也许您想存储地址和波数的地图，以便跟踪谁最常向您挥手？ 即使您只是将变量名和函数名更改为您认为有趣的名称，这也很重要。 尽量不要直接抄袭我！ 想想您的最终网站和您想要的功能类型。 构建功能**您想要**。
 
-在这里完成所有操作后，请务必在#progress 中发布终端输出的屏幕截图。
+完成此处的所有操作后，请务必在#progress 中发布终端输出的屏幕截图。
