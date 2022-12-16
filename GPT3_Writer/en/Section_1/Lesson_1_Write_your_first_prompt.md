@@ -17,7 +17,7 @@ A “prompt” is what you input to GPT-3.
 
 I just want to be very clear about something — **the next 30m may be super magical, or they may be painful.** Prompts can be really fkin annoying to write and I just want you to know that.
 
-Prompt engineering is a skill - you won’t be good at it to start, and that’s fine. But, just be sure to keep treading forward. **Remember, your goal is to ship this project. Nothing else.** Don’t get caught up in trying to get ****one**** thing to work.
+Prompt engineering is a skill, you won’t be good at it to start and that’s fine. But, just be sure to keep treading forward. **Remember, your goal is to ship this project. Nothing else.** Don’t get caught up in trying to get ****one**** thing to work.
 
 Some tips I wish I had when I was learning prompt engineering:
 
@@ -176,7 +176,7 @@ Take some time here to fk around with your prompt. 99% of the time, it isn’t G
 Few recommendations:
 
 - **Is your story just 1-2 sentences long every time?** No worries, it’s okay. We’ll show you some fixes for this later on. But for now, try to give GPT-3 more info about your character, the plot you want, and the setting. Is your character funny? Is the world they’re in on some futuristic space planet? Set it all up for GPT-3!
-- **************************************************Not getting a good story?************************************************** Try and make your story something that remixes something in the real world. You can literally tell GPT-3 to do so. For example: `Tell me a full story with a beginning, middle, and end titled "Farza and the Magical Red Box". This story should combine vibes from Game of Thrones and Breaking Bad.`. The more context and comparisons you give GPT-3, the better.
+- **************************************************Not getting a good story?************************************************** Try and make your story something that remixes something in the real world. You can literally GPT-3 to do so. For example: `Tell me a full story with a beginning, middle, and end titled "Farza and the Magical Red Box". This story should combine vibes from Game of Thrones and Breaking Bad.`. The more context and comparisons you give GPT-3, the better.
 - **And most importantly** — don’t get obsessed with the same story/prompt. After a few attempts, it’s fine to say fuck it and delete your whole prompt and try something wildly new.
 
 ### Temperature
@@ -228,7 +228,7 @@ Tell me a full story with a beginning, middle, and end titled "Farza and the Mag
 
 **Keep messing around with the temperature as you run these** **different prompts.** I like changing the temperature by like `0.1` a few times to test. Also, the same prompt at a different temperature can create wildly different results.
 
-So basically lesson here: you need to adjust more than just the prompt to get good results, you also need to adjust your hyperparameters.
+So basically lesson here: you need to adjust more than just the prompt to get good results, you also to need to also adjust your hyperparamaters.
 
 Didn’t get a plot twist? Don’t sweat it. Move on! There’s so much more to GPT-3 that we still have yet to unlock that can massively improve its performance.
 

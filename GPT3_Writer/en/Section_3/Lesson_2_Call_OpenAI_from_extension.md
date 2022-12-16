@@ -6,7 +6,7 @@ Now for the fun stuff — actually using our extension to call OpenAI. The way w
 
 The goal is to highlight text in our browser, right click it, and see an option that says “Generate blog post”. Whatever we get from GPT-3 we will inject directly into our website 🙂.
 
-**Again for my extension, I’ll be working with [Calmly](https://www.calmlywriter.com/online/).** I recommend you follow along w/ Calmly. Afterwards, you’ll be able to use the same flow for whatever website you want to generate text on.
+**Again for my extension, I’ll be working with [Calmly](https://www.calmlywriter.com/online/).** I recommend you follow along w/ Calmly. Afterwords, you’ll be able to use the same flow for whatever website you want to generate text on.
 
 To get this all working we’ll need to setup this thing called a service worker. You can think of this like a server setup for your app. Instead of having all our code run in our UI, we can have our UI do things while our service worker does everything in the background!
 
@@ -44,19 +44,17 @@ Remember, we want to highlight some text in Calmly, right click it, and be able 
 
 ```javascript
 // Add this in scripts/contextMenuServiceWorker.js
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.contextMenus.create({
-    id: 'context-run',
-    title: 'Generate blog post',
-    contexts: ['selection'],
-  });
+chrome.contextMenus.create({
+  id: 'context-run',
+  title: 'Generate blog post',
+  contexts: ['selection'],
 });
 
 // Add listener
 chrome.contextMenus.onClicked.addListener(generateCompletionAction);
 ```
 
-Nice so what we're doing here is listening for when the extension is installed. When that happens, we create a new option in our menu that will read “Generate blog post”. Then we setup a listener for whenever that is clicked to call the `generateCompletionAction` function. 
+Nice so we are creating a new option in our menu that will read “Generate blog post”. Then we setup a listener for whenever that is clicked to call this thing called `generateCompletionAction`. 
 
 Let’s go ahead and create that right above where we setup our listeners and then we can check out our `contextMenu`:
 
@@ -65,12 +63,10 @@ Let’s go ahead and create that right above where we setup our listeners and th
 const generateCompletionAction = async (info) => {}
 
 // Don't touch this
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.contextMenus.create({
-    id: 'context-run',
-    title: 'Generate blog post',
-    contexts: ['selection'],
-  });
+chrome.contextMenus.create({
+  id: 'context-run',
+  title: 'Generate blog post',
+  contexts: ['selection'],
 });
 
 chrome.contextMenus.onClicked.addListener(generateCompletionAction);
@@ -105,7 +101,7 @@ Pretty simple to start and things should look pretty familiar to you. First thin
 
 Once we get that setup, we can start with our base prompt. You already have the cheat codes from your website so feel free to use them again here!
 
-Okay cool, we are ready to actually call GPT-3. Lets start by declaring a new function called `generate` right above `generateCompletionAction` .  Once you do that, add the line right under your `basePromptPrefix` that will call our generate function:
+Okay cool, we are ready to actually call GPT-3. Lets start by declaring a new function called `generate` right about `generateCompletionAction` .  Once you do that, add the line right under your `basePromptPrefix` that will call our generate function:
 
 ```jsx
 // Setup our generate function
@@ -168,7 +164,7 @@ const generate = async (prompt) => {
 
 That’s all about it! A few things to note here —
 
-1. We need to know the url of the API call which is [https://api.openai.com/v1/completions](https://api.openai.com/v1/completions). You can find this by checking out the [docs for this API](https://beta.openai.com/docs/api-reference/completions)
+1. We need to know the url of the API call which is `[https://api.openai.com/v1/completions](https://api.openai.com/v1/completions)` . You can find this by checking out the docs for this API :)
 2. The `getKey` function! Remember the key we stored in our extension state? We are going to add the logic to that very soon, but it’s named as what it does lol.
 3. We have to make sure we are making a `POST` request + including our Authorization in the header object! This is all needed for the OpenAI API to say, “Yo what I expect this call to look like and you have permission to access this data!”
 4. Finally, the body. We pass in on the options we want GPT-3 to use. This should look very familiar as this is the same data you put in when calling GPT-3 through their library
@@ -250,6 +246,106 @@ LFG. That's it — reusable code is good code. We basically did the same exact t
 Now all we need to do is inject this into Calmly. There is just one problem here — our service worker doesn’t have access to the DOM. It has no way of manipulating the UI… That's the entire point of this extension isn’t it?
 
 Don’t worry — we got you.
+
+### Communicating with the web app tab
+
+First off if you don’t know what the DOM is drop a quick search on Google to understand a bit more about it. Your UI is the only piece of any website that has access to this and that’s because it needs to manipulate + interact with it! 
+
+Things like your service worker have 0 clue what the DOM is and how to manipulate it. Just like a server, it runs code in its own environment and your DOM can’t access it.
+
+That's where **messaging** comes into play! You can actually communicate between a service worker and DOM by sending a message like, “hey DOM, I have a message for ya. Check it out and do something with it”.
+
+In our case, we are going to take our output from GPT-3 and send that to our front end to inject into the DOM of Calmly.
+
+The flow is pretty simple, but helps to see it laid out. The game plan is:
+
+1. Write a messenger in our service worker that sends messages to our UI
+2. Create a new file that can listen for messages from our service worker
+3. When we send a certain message, the extension injects a value into the DOM
+
+Think of it like going to a restaurant and ordering food. You (the customer) are the app. The extension is a waiter. The chef can’t talk to you (just pretend they’re locked in the kitchen by Gordon Ramsay). You send the chef an order, and the extension takes to chef GPT-3 and brings back a delicious AI-generated dish. 
+
+It’s actually pretty straightforward when you look at it from a higher level. Ight enough chatting lets build.
+
+Head back to your `contextMenuServiceWorker.js`  file and add a new function called `sendMessage` right under where we declared `getKey`
+
+```javascript
+const sendMessage = (content) => {
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    const activeTab = tabs[0].id;
+
+    chrome.tabs.sendMessage(
+      activeTab,
+      { message: 'inject', content },
+      (response) => {
+        if (response.status === 'failed') {
+          console.log('injection failed.');
+        }
+      }
+    );
+  });
+};
+```
+
+This block of code is doing a few things — 
+
+1. First,  we’re looking for which tab is currently active. In order to send a message we need to do it in an active tab
+2. We then use a fancy `sendMessage` function given to us from chrome. This takes 3 things — `tab`, `payload`, and `callback`. Our payload is going to include a message called `inject` and the content of whatever we have passed in
+3. Finally, our message will respond with a status, to let us know things are working well 🤘
+
+Niceee! So now that we have this, let’s start dropping some messages. We are going to add a few different types here:
+
+1. A message for when we start generating a completion
+2. A message for when we are ready to send over our final output
+3. A message in case we have an error so the user can see what it is
+
+Go ahead and head to the `generateCompletionAction` function and add these lines:
+
+```jsx
+const generateCompletionAction = async (info) => {
+  try {
+    // Send mesage with generating text (this will be like a loading indicator)
+    sendMessage('generating...');
+
+    const { selectionText } = info;
+    const basePromptPrefix = `
+      Write me a detailed table of contents for a blog post with the title below.
+      
+      Title:
+      `;
+
+      const baseCompletion = await generate(
+        `${basePromptPrefix}${selectionText}`
+      );
+      
+      const secondPrompt = `
+        Take the table of contents and title of the blog post below and generate a blog post written in thwe style of Paul Graham. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
+        
+        Title: ${selectionText}
+        
+        Table of Contents: ${baseCompletion.text}
+        
+        Blog Post:
+		  `;
+      
+      const secondPromptCompletion = await generate(secondPrompt);
+      
+      // Send the output when we're all done
+      sendMessage(secondPromptCompletion.text);
+  } catch (error) {
+    console.log(error);
+
+    // Add this here as well to see if we run into any errors!
+    sendMessage(error.toString());
+  }
+};
+```
+
+Okay okay okay. **WE GETTING SOMEWHERE NOW**. 
+
+So we are sending messages, but we don’t have anything receiving it. It’s like you’re screaming at the top of your lungs in a forest, but no one is there to listen 😟. 
+
+Since we want our UI to receive the message we should setup a listener over there. In order for us to do that, we need to create a file that handles scripts for us in on the UI side. That’s where the `content.js` file will come in.
 
 ### Please do this or Farza will be sad.
 

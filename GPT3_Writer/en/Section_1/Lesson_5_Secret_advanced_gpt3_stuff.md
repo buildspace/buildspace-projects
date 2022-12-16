@@ -78,7 +78,7 @@ Well again — GPT-3 does better when 1) you give it more examples 2) you are hi
 Here are other examples of prompts you can chain:
 
 - *generate a table of contents for a blog → write a sentence for each section → for each sentence, write two paragraphs → done*
-- **generate a sad love story about a boy and a girl → generate a rap chorus → generate a chorus that rhymes and has lyrics in the style of drake → generate the intro and outro verse based on the chorus → done.**
+- **generate a sad love story about a boy and a girl → generate a rap chorus → generate a chrous that rhymes and has lyrics in the style of drake → generate the intro and outro verse based on the chorus → done.**
 - **generate headline landing page copy for a product → generate more detailed copy for the product → generate ad copy targeted to 26-year-olds in Pakistan → done**
 
 Prompt chaining is **highly** underrated and not talked about much. It really lets you get really great performance for specific tasks you have in mind. Shoutout to my buddy [Sharif](https://twitter.com/sharifshameem) for showing me it!
@@ -115,7 +115,7 @@ I love that first idea — it’s beautiful.
 
 Imagine if kids could learn to read with custom stories generated just for them.
 
-The stories would be perfect for them. GPT-3 could even generate stories they really like (ex. detective stories, adventure stories, etc). The stories could even include the names of the characters they come up with. They could be in their own stories. Plus, we could even tell GPT-3 to use certain types of vocabulary to make sure the reading level is just right.
+The stories would be perfect for them. GPT-3 could even generate stories they really like (ex. detective stories, adventure stories, etc). The stories could even include the names of the characters they come up with. They could be in their own stories. Plus, we could even tell use GPT-3 to use certain types of vocabulary to make sure the reading level is just right.
 
 **Before moving on, be sure to generate an idea you kinda like in an industry you think is interesting — VR, crypto, AR, gaming, FinTech, consumer, etc. You’ll need to play around a lot with the industry, audience, etc. As always, don’t copy me! Get good at prompts!**
 

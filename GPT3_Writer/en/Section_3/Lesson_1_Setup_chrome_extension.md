@@ -42,12 +42,7 @@ Like most extensions, our extension will take data in from the browser, do some 
 
 ### Getting started
 
-Start building your $5b browser extension by cloning [this repo](https://github.com/buildspace/gpt3-writer-extension-starter). There’s no build or setup step here, the files are all you need to get going. Since this is Chromium-based, it’ll work on almost all the popular browsers - Google Chrome (lol), Brave and even Microsoft Edge (where my Edge homies at).
-
-```
-git clone https://github.com/buildspace/gpt3-writer-extension-starter
-cd gpt3-writer-extension-starter/
-```
+Start building your $5b browser extension by cloning [this repo](https://github.com/buildspace/gpt3-writer-extension-starter/tree/starter). There’s no build or setup step here, the files are all you need to get going. Since this is Chromium-based, it’ll work on almost all the popular browsers - Google Chrome (lol), Brave and even Microsoft Edge (where my Edge homies at).
 
 There’s nothing in here except some assets and a `manifest.json` file. The `manifest.json` file has a bunch of metadata - it tells the browser what the extension is called, which assets it needs, what permissions are required for it to run and identifies which files to run in the background and on the page.
 
@@ -111,13 +106,11 @@ Because extensions can basically become malware that runs in your browser, secur
 
 ### Creating a UI for your extension
 
-Our extension is going to have a super basic UI. This UI will be for inputting our OpenAI API key. You're going to need this because:
+Our extension is going to have a super basic UI. This UI will be for inputting our OpenAI API key. You are going to need this because:
 
 1. You need an API key to call GPT-3
 2. We don’t just want to hardcode it, so we are asking the user for it
 3. We want it stored in extension storage which can only be accessed by the person on the computer
-
-This way we don't have to worry about OpenAI credits - the users do it all!
 
 Take a look at your `manifest.json` file that and find the `default_popup` action. This is the file we will create to show up in our extension on open!
 
@@ -143,7 +136,7 @@ Create a new file at the root of your project called `index.html`
 </html>
 ```
 
-Super simple, just some imports and classes. We'll show the `key_needed` div when the storage is empty and hide it with the `key_entered` div when there is a key in storage.
+Super simple, just some imports and classes. We’ll be hiding the `key_entered` section when there is a key in storage, else we will be showing the input field page.
 
 Let’s move onto styling all of this with CSS. First we’ll need to create an `index.css` file at the root of your project and set it up with this:
 
@@ -168,10 +161,10 @@ document
   .addEventListener('click', changeKey);
 ```
 
-You can see we're listening to `save_key_button` and `change_key_button`. These will both call different functions. Let’s get the function declaration setup for both of them, but start with the first listener and create the `saveKey` :
+You can see we are listening to `save_key_button` and `change_key_button`. These will both call different functions. Let’s get the function declaration setup for both of them, but start with the first listener and create the `saveKey` :
 
 ```javascript
-const saveKey = () => {}
+const saveKey = async () => {}
 
 const changeKey = () => {}
 
@@ -206,14 +199,15 @@ const saveKey = () => {
 
 We’re grabbing the input value from the input box itself, then doing some Base64 encoding on it (this just makes it difficult to read to the naked eye), then setting the key in google storage and finally change CSS setting to show the “you have entered key” dialog.
 
-You might be getting a JS error here — we still need to add the `encode` function! Super simple one-liner that you’ll put right above the `saveKey` function:
+You’ll probably notice that your app is crashing here — well we still need to add the `encode` function! Super simple one-liner that you’ll put right above the `saveKey` function:
 
 ```javascript
 const encode = (input) => {
   return btoa(input);
 };
 ```
-As the function name suggests, we're encoding whatever is passed in to something else. `btoa` stands for [Binary to ASCII.](https://developer.mozilla.org/en-US/docs/Web/API/btoa) All we’re doing here is changing the format - this is **not** secure at all lol
+
+`btoa` stands for [Binary to ASCII.](https://developer.mozilla.org/en-US/docs/Web/API/btoa) All we’re doing here is changing the format - this is ******not****** secure at all lol
 
 Finally, let’s add some fanciness to the `changeKey` function:
 
@@ -240,7 +234,7 @@ const checkForKey = () => {
 };
 ```
 
-All we are doing here is checking for the key in our state. If it’s there go ahead and return it! We use a promise here because we need to wait for the callback to be called in the `chrome.storage` section. Once it’s called we can resolve our promise. 
+All we are doing here is checking for the key in our state. If it’s there go ahead and return it! We use a promise here because we need to wait for the callback to be called in the [chrome.storage](http://chrome.storage) section. Once it’s called we can resolve our promise.
 
 Finally, call this at the very bottom of your file. Every time your extension is opened this will run:
 
@@ -277,21 +271,11 @@ You can do all sorts of stuff with the UI in extensions - use React, make them p
 
 One big note here — **there is no hot reloading!**
 
-So, every time you update your code, you have to go back to your list of extensions, find yours, and press the refresh button on the bottom right:
+So, every time you update your code, you have to go back to your list of extensions, find yours, and pressing the refresh button on the bottom right:
 
 ![Untitled](https://i.imgur.com/Ma9zU1C.png)
 
-But that's not all! Remember that extensions are injected _into_ your browser tabs when the tab loads. Refreshing the extension alone is not enough. You also need to refresh the tab you're using it on. So the flow will go:
-
-1. Change extension code in VS Code 
-2. Reload extension in your browser
-3. Reload any tab you want to use the extension on
-4. Click the extension and add in the API key
-5. Test!
-
-You'll get used to this pretty quick :P
-
-7/10 issues I'm seeing on Discord are because of this. There could be changes that you write that actually never applied to your bundle yet. Sometimes, if you're noticing that your code isn’t updating I recommend just deleting the extension and loading it from scratch.
+If you run into problems with your extension while building make sure to refresh it! There could be changes that you write that actually never applied to your bundle yet. Sometimes, if you're noticing that your code isn’t updating I recommend just deleting the extension and loading it from scratch.
 
 ### Please do this or Farza will be sad.
 

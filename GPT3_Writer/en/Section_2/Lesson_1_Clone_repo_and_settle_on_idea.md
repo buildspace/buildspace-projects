@@ -54,7 +54,7 @@ yarn add next react react-dom
 yarn dev
 ```
 
-Then, head to [localhost:3000](http://localhost:3000) and you should see the following:
+Then, head to `[localhost:3000](http://localhost:3000)` and you should see the following:
 
 ![Untitled](https://i.imgur.com/5Ucablc.png)
 
@@ -120,7 +120,7 @@ Let’s set up that capture system so we know what our user is typing. We’re g
 import { useState } from 'react';
 ```
 
-From there, we’re going to create two new state variables: `userInput` and `setUserInput` which we’ll use in a moment. Go ahead and add this line right underneath `const Home = () => {`.
+From there, we’re going to create two new state variables: `input` and `setInput` which we’ll use in a moment. Go ahead and this line right underneath `const Home = () => {`.
 
 ```jsx
 const [userInput, setUserInput] = useState('');
@@ -141,7 +141,7 @@ Now, let’s put those variables to use on the `textarea` you created earlier.
 
 What are we doing here? Well, first, we set the `value` of the `textarea` to `userInput` which means that whatever is in the `userInput` variable we’re going to show in the `textarea`.
 
-Then we have an `onChange` parameter — so, whenever the user types, it’ll call `onUserChangedText`. Let’s go ahead and write that function. It’s pretty simple. Add this underneath where you have `const [userInput  , setUserInput]`:
+Then we have an `onChange` parameter — so, whenever the user types, it’ll call `onUserChangedText`. Let’s go ahead and write that function. It’s pretty simple. Add this underneath where you have `const [input, setInput]`:
 
 ```jsx
 const onUserChangedText = (event) => {
@@ -156,7 +156,7 @@ Easy! Let’s test it. Head to your console and start typing in your `textarea` 
 
 ![Untitled](https://i.imgur.com/X6cS8xx.png)
 
-See how it drops an event for every key you type in? We’re taking that event object, grabbing the text, printing it, and then holding it in our input state. Feel free to remove the `console.log` statement now so it doesn’t clutter up your console.
+See how it drops an event for every key you type in? We’re taking that event object, grabbing the text, printing it, and then holding it in our input state. Feel free to remove the `console.log` statement now so it doesn’t cluster up your console.
 
 Now, we just want to add a generate button that our user can click to generate some magic — later we’ll connect this to the GPT-3 API. But for now, we’ll just add it in as a button that doesn’t do anything.
 

@@ -1,106 +1,5 @@
 
 
-### Communicating with the web app tab
-
-First off if you don’t know what the DOM is drop a quick search on Google to understand a bit more about it. Your UI is the only piece of any website that has access to this and that’s because it needs to manipulate + interact with it! 
-
-Things like your service worker have 0 clue what the DOM is and how to manipulate it. Just like a server, it runs code in its own environment and your DOM can’t access it.
-
-That's where **messaging** comes into play! You can actually communicate between a service worker and DOM by sending a message like, “hey DOM, I have a message for ya. Check it out and do something with it”.
-
-In our case, we are going to take our output from GPT-3 and send that to our front end to inject into the DOM of Calmly.
-
-The flow is pretty simple, but helps to see it laid out. The game plan is:
-
-1. Write a messenger in our service worker that sends messages to our UI
-2. Create a new file that can listen for messages from our service worker
-3. When we send a certain message, the extension injects a value into the DOM
-
-Think of it like going to a restaurant and ordering food. You (the customer) are the app. The extension is a waiter. The chef can’t talk to you (just pretend they’re locked in the kitchen by Gordon Ramsay). You send the chef an order, and the extension takes to chef GPT-3 and brings back a delicious AI-generated dish. 
-
-It’s actually pretty straightforward when you look at it from a higher level. Ight enough chatting lets build.
-
-Head back to your `contextMenuServiceWorker.js`  file and add a new function called `sendMessage` right under where we declared `getKey`
-
-```javascript
-const sendMessage = (content) => {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    const activeTab = tabs[0].id;
-
-    chrome.tabs.sendMessage(
-      activeTab,
-      { message: 'inject', content },
-      (response) => {
-        if (response.status === 'failed') {
-          console.log('injection failed.');
-        }
-      }
-    );
-  });
-};
-```
-
-This block of code is doing a few things — 
-
-1. First,  we’re looking for which tab is currently active. In order to send a message we need to do it in an active tab
-2. We then use a fancy `sendMessage` function given to us from chrome. This takes 3 things — `tab`, `payload`, and `callback`. Our payload is going to include a message called `inject` and the content of whatever we have passed in
-3. Finally, our message will respond with a status, to let us know things are working well 🤘
-
-Niceee! So now that we have this, let’s start dropping some messages. We are going to add a few different types here:
-
-1. A message for when we start generating a completion
-2. A message for when we are ready to send over our final output
-3. A message in case we have an error so the user can see what it is
-
-Go ahead and head to the `generateCompletionAction` function and add these lines:
-
-```jsx
-const generateCompletionAction = async (info) => {
-  try {
-    // Send mesage with generating text (this will be like a loading indicator)
-    sendMessage('generating...');
-
-    const { selectionText } = info;
-    const basePromptPrefix = `
-      Write me a detailed table of contents for a blog post with the title below.
-      
-      Title:
-      `;
-
-      const baseCompletion = await generate(
-        `${basePromptPrefix}${selectionText}`
-      );
-      
-      const secondPrompt = `
-        Take the table of contents and title of the blog post below and generate a blog post written in thwe style of Paul Graham. Make it feel like a story. Don't just list the points. Go deep into each one. Explain why.
-        
-        Title: ${selectionText}
-        
-        Table of Contents: ${baseCompletion.text}
-        
-        Blog Post:
-		  `;
-      
-      const secondPromptCompletion = await generate(secondPrompt);
-      
-      // Send the output when we're all done
-      sendMessage(secondPromptCompletion.text);
-  } catch (error) {
-    console.log(error);
-
-    // Add this here as well to see if we run into any errors!
-    sendMessage(error.toString());
-  }
-};
-```
-
-Okay okay okay. **WE GETTING SOMEWHERE NOW**. 
-
-So we are sending messages, but we don’t have anything receiving it. It’s like you’re screaming at the top of your lungs in a forest, but no one is there to listen 😟. 
-
-Since we want our UI to receive the message we should setup a listener over there. In order for us to do that, we need to create a file that handles scripts for us on the UI side. That’s where the `content.js` file will come in.
-
-### Listening for messages
 Let's go ahead and get some listeners going by first creating a brand new file in our `scripts` folder called `content.js`! This file will hold all of our scripts for the frontend of our extension, such as DOM manipulation 🤘.
 
 Now, for our extension to know that this is the file that we will use for our frontend scripting, we need to let the `manifest.json` file know. Go ahead and head there and add this to your file:
@@ -161,12 +60,10 @@ For now, we are going to just print out whatever the message sends our way and t
 
 We are ready to test out our message functions! If you have never worked with this type of messaging before, get ready to be amazed. A lot of this project has some crazy magic moments and this will be one of them.
 
-Go ahead and reload your extension and head back to Calmly! Before we test this fully a few 🚨VERY IMPORTANT REMINDERS 🚨-
+Go ahead and reload your extension and head back to Calmly! Before we test this fully a few 🚨VERY IMPORTANT NOTES 🚨-
 
-You'll need to remove the extension and install it again since you're adding new scripts. After that it's just the standard testing flow:
-1. Reload any tab you want to use the extension on
-2. Click the extension and add in the API key
-3. To see the log messages from `content.js` just open up the console in your web browser tab (not the extension logs)! Remember this is a front end script we are dealing with :)
+1. Make sure to **refresh** whatever tab you’re on else the messaging will be a bit wonky
+2. to see the log messages from `content.js` just open up the console in your web browser tab (not the extension logs)! Remember this is a front end script we are dealing with :)
 
 If you don’t refresh, stuff will not work as expected. If you look at the wrong console, you won’t see anything :P
 
@@ -199,7 +96,7 @@ chrome.runtime.onMessage.addListener(
       // Call this insert function
       const result = insert(content);
 			
-      // If something went wrong, send a failed status
+      // If something went wrong, send a failes status
       if (!result) {
         sendResponse({ status: 'failed' });
       }
@@ -325,41 +222,6 @@ First thing’s first, lets go through our content string and put each line in a
 Again, if we hit a `\n` (which also is `''` ) we are going to put a `br` element inside the `p` tag!
 
 Finally, we take that beautifully constructed `p` tag and append it to the `droid` `div` element that we found earlier. I guess those *****were***** the droids we were looking for.
-
-### Optional - adding host permission**
-If you are facing an issue where your targeted text area is not being populated by the response of OpenAI, it is because you don't have [host permission](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/) to modify the data. To grant permission, simply add `"host_permissions": ["https://*/*"],` into `manifest.json`:
-
-```json
-{
-  "name": "magic blog post generator",
-  "description": "highlight your blog post title, we'll generate the rest",
-  "version": "1.0",
-  "manifest_version": 3,
-  "icons": {
-    "48": "assets/48.png",
-    "72": "assets/72.png",
-    "96": "assets/96.png",
-    "144": "assets/144.png"
-  },
-  "action": {
-    "default_popup": "index.html",
-    "default_title": "Generate blog post"
-  },
-  "background": {
-    "service_worker": "scripts/contextMenuServiceWorker.js"
-  },
-  "permissions": ["contextMenus", "tabs", "storage"],
-  // Add the line of code here
-  "host_permissions": ["https://*/*"],
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["scripts/content.js"]
-    }
-  ]
-}
-```
-
 
 **WELL WELL WELL** — looks like we are ready to give this thing a proper run :). If things work out you have just unlocked a crazy cool new skill — GPT-3 AND Chrome extensions. 
 
