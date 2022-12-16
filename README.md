@@ -1,4 +1,4 @@
-<h1 align="center">🦄 buildspace Projects</h1>
+<h1 align="center">😎Buildspace Projects</h1>
 
 
 <h3 align="center">
