@@ -18,7 +18,7 @@
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 
@@ -97,10 +97,10 @@ contract WavePortal {
 
 ```javascript
 const main = async () => {
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
-  console.log('Contract addy:', waveContract.address);
+  console.log("Contract addy:", waveContract.address);
 
   let waveCount;
   waveCount = await waveContract.getTotalWaves();
@@ -109,11 +109,11 @@ const main = async () => {
   /**
    * Let's send a few waves!
    */
-  let waveTxn = await waveContract.wave('A message!');
+  let waveTxn = await waveContract.wave("A message!");
   await waveTxn.wait(); // Wait for the transaction to be mined
 
   const [_, randomPerson] = await hre.ethers.getSigners();
-  waveTxn = await waveContract.connect(randomPerson).wave('Another message!');
+  waveTxn = await waveContract.connect(randomPerson).wave("Another message!");
   await waveTxn.wait(); // Wait for the transaction to be mined
 
   let allWaves = await waveContract.getAllWaves();
@@ -164,12 +164,11 @@ runMain();
 
 所以你现在需要做的是：
 
-1\.使用 `npx hardhat run scripts/deploy.js --network rinkeby` 再次部署
+1\.使用 `npx hardhat run scripts/deploy.js --network goerli` 再次部署
 
 2\.将`App.js`中的`contractAddress`更改为我们在终端上一步得到的新合约地址，就像我们第一次部署之前所做的一样。
 
-3\.像我们之前所做的那样从 `artifacts` 中获取更新的 abi 文件，然后像我们之前所做的那样将其复制粘贴到 Replit 中。如果您忘记了如何执行此操作，请务必重温课程 [此处](https://app.buildspace.so/courses/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b/lessons/LE52134606-af90-47ed-9447959803 ) 并观看我在下面的 ABI 文件中制作的视频：
-[Loom](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)。
+3\.像我们之前所做的那样从 `artifacts` 中获取更新的 abi 文件，然后像我们之前所做的那样将其复制粘贴到 Replit 中。如果您忘记了如何执行此操作，请务必重温课程 [此处](https://app.buildspace.so/courses/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b/lessons/LE52134606-af90-47ed-9441-980479599350)
 
 **再说一遍——每次更改合约代码时都需要这样做。**
 
@@ -185,6 +184,11 @@ const [currentAccount, setCurrentAccount] = useState("");
    */
   const [allWaves, setAllWaves] = useState([]);
   const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  
+   /*
+   * Create a variable here that references the abi content!
+   */
+  const contractABI = abi.abi;
 
   /*
    * Create a method that gets all waves from your contract
@@ -201,7 +205,7 @@ const [currentAccount, setCurrentAccount] = useState("");
          * Call the getAllWaves method from your Smart Contract
          */
         const waves = await wavePortalContract.getAllWaves();
-        
+
 
         /*
          * We only need address, timestamp, and message in our UI so let's
@@ -231,7 +235,7 @@ const [currentAccount, setCurrentAccount] = useState("");
 
 非常简单，与我们之前所做的工作非常相似，即我们如何连接到提供者、获取签名者以及连接到合约！我在这里通过循环遍历我们所有的 waves 并将它们保存在我们可以稍后使用的数组中来做一个小魔术。如果遇到问题，请随时到 console.log `waves` 看看你会得到什么。
 
-但是，我们在哪里调用这个全新的“getAllWaves()”函数呢？好吧——我们想在我们确定用户有一个带有授权帐户的连接钱包时调用它，因为我们需要一个授权帐户来调用它！提示：你必须在 `checkIfWalletIsConnected()` 的某个地方调用这个函数。我会把它留给你去弄清楚。请记住，当我们确定我们有一个连接+授权的帐户时，我们想调用它！
+但是，我们在哪里调用这个全新的`getAllWaves()`函数呢？好吧——我们想在我们确定用户有一个带有授权帐户的连接钱包时调用它，因为我们需要一个授权帐户来调用它！提示：你必须在 `checkIfWalletIsConnected()` 的某个地方调用这个函数。我会把它留给你去弄清楚。请记住，当我们确定我们有一个连接+授权的帐户时，我们想调用它！
 
 我做的最后一件事是更新我们的 HTML 代码以呈现数据供我们查看！
 
@@ -289,3 +293,6 @@ const waveTxn = await wavePortalContract.wave("这是一条消息")
 --------------------
 
 去把这个东西变成你想要的样子！ 我不会在这里教你太多。 请随时在#section-3-help 中提问！
+如果你想要捐赠我们：
+0x45ca2696d9a4f762c7a51a22a230797700e28794
+这会让我们更有动力。
