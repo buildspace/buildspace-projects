@@ -126,21 +126,39 @@ Now let’s build out the `NavBar`. Create a `components` folder and add a new f
 
 ```tsx
 import { HStack, Spacer } from "@chakra-ui/react"
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui"
 import { FC } from "react"
 import styles from "../styles/Home.module.css"
+import dynamic from "next/dynamic";
+
+const WalletMultiButtonDynamic = dynamic(
+	async () =>
+		(await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+	{ ssr: false }
+);
 
 const NavBar: FC = () => {
   return (
     <HStack width="full" padding={4}>
       <Spacer />
-      <WalletMultiButton className={styles["wallet-adapter-button-trigger"]} />
+			<WalletMultiButtonDynamic className={styles["wallet-adapter-button-trigger"]}/>
     </HStack>
   )
 }
 
 export default NavBar
 ```
+
+We have `import dynamic from "next/dynamic"` to dynamically import `WalletMultiButton` from `@solana/wallet-adapter-react-ui` and assign it to `WalletMultiButtonDynamic` as follows:.
+
+```tsx
+const WalletMultiButtonDynamic = dynamic(
+	async () =>
+		(await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+	{ ssr: false }
+);
+```
+
+This is because NextJS is server-side rendering and has no access to external dependency or component that relies on browser APIs like `window` before loading onto the client. This means NextJS can't interact with our wallets that are only available on the browser. `{ ssr: false }` disables server-rendering of the import. If you do not have use dynamic import for your module, you will most likely encounter `Hydration failed because the initial UI does not match what was rendered on the server`. You can read more on dynamic imports [here](https://nextjs.org/docs/advanced-features/dynamic-import)!
 
 Head back to `index.tsx`, import `NavBar` and put it at the top of the stack (I left a comment for where it should be):
 ```tsx
