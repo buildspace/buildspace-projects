@@ -353,7 +353,7 @@ We are going to dynamically add this class name to our `div` which in turn will 
 /*
 * We are going to need to update our character NFT so pass setCharacterNFT here.
 */
-const Arena = ({ characterNFT, setCharacterNFT }) => {
+const Arena = ({ characterNFT, setCharacterNFT, currentAccount }) => {
 	
     ...
 
