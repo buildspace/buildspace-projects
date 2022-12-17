@@ -15,7 +15,7 @@
 
 我会根据需要深入解释某些事情（例如，挖矿是如何进行的，智能合约是如何编译和运行的，等等），*但现在我们只关注让东西运行*。 
 
-如果你在这里有任何问题，只要在Discord的`#section-1-help`中留言就可以了。 
+如果你在这里有任何问题，只需要在Discord的`#section-1-help`中留言就可以了。 
 
 ✨ Hardhat的魅力
 ----------------------
@@ -28,7 +28,7 @@
 
 我们建议使用当前的 LTS Node.js 版本运行 Hardhat，否则您可能会遇到一些问题！ 您可以在 [此处](https://nodejs.org/en/about/releases/) 找到当前版本。 **确保您的 NodeJs 版本正确，否则您会遇到问题！**我们现在推荐版本 16。
 
-接下来，让我们前往终端（Git Bash 将无法运行）。 继续并 cd 到你想要工作的目录。一旦你在那里运行这些命令：
+接下来，让我们前往(CMD)终端（Git Bash 将无法运行）。 继续并 cd 到你想要工作的目录。一旦你在那里运行这些命令：
 
 ```bash
 mkdir my-wave-portal
@@ -51,7 +51,7 @@ npx hardhat
 
 *注意：如果你在安装 npm 的同时安装了 yarn，你可能会收到诸如 `npm ERR! could not determine executable to run`。 在这种情况下，您可以执行 `yarn add hardhat`。* 
 
-选择**Create a JavaScript project**的选项。对一切都说是。
+选择**Create a JavaScript project**的选项。对一切都选择yes。
 <img width="571" alt="Screen Shot 2022-06-10 at 22 51 21" src="https://i.imgur.com/j1e8vJT.png">
 
 这个样本项目会要求你安装hardhat-waffle和hardhat-ethers。这些是我们以后会用到的其他好东西:)。
@@ -65,7 +65,7 @@ npm install --save-dev chai @nomiclabs/hardhat-ethers ethers @nomicfoundation/ha
 ```javascript
 require("@nomicfoundation/hardhat-toolbox");
 
-// This is a sample Hardhat task. To learn how to create your own go to
+// 这是一个hardhat的项目示例。可以到下面网站去学习创建你自己的项目。
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     const accounts = await hre.ethers.getSigners();
@@ -75,8 +75,8 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     }
 });
 
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
+// 您需要导出一个对象来设置您的配置
+// 到 https://hardhat.org/config/ 学习更多内容
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
@@ -135,7 +135,7 @@ npx hardhat test
 
 继续，现在在您最喜欢的代码编辑器中打开项目的代码。 我最喜欢 VSCode！ 我们想删除为我们生成的所有蹩脚的启动代码。 我们不需要这些。 我们是专业人士 ;)！
 
-继续并删除 `test` 下的文件 `Lock.js`。 另外，删除 `scripts` 下的 `deploy.js`。 然后，删除 contracts 下的 Lock.sol。 不要删除实际的文件夹！
+继续并删除 `test` 下的文件 `Lock.js`。 另外，删除 `scripts` 下的 `deploy.js`。 然后，删除 `contracts` 下的 `Lock.sol`文件。是删文件，不是删除文件夹！
 
 🚨 在你点击 "下一课 "之前
 -------------------------------------------
