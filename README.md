@@ -430,6 +430,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/anymose96"><img src="https://avatars.githubusercontent.com/u/80447029?v=4?s=100" width="100px;" alt="anymose"/><br /><sub><b>anymose</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=anymose96" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/Xia-Sam"><img src="https://avatars.githubusercontent.com/u/39165351?v=4?s=100" width="100px;" alt="Sam"/><br /><sub><b>Sam</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=Xia-Sam" title="Documentation">📖</a></td>
       <td align="center"><a href="https://www.linkedin.com/in/kevinfiorentino/"><img src="https://avatars.githubusercontent.com/u/30932278?v=4?s=100" width="100px;" alt="Kevin Emanuel"/><br /><sub><b>Kevin Emanuel</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=KevinFiorentino" title="Documentation">📖</a></td>
+      <td align="center"><a href="http://justinleng.vercel.app"><img src="https://avatars.githubusercontent.com/u/79987741?v=4?s=100" width="100px;" alt="ScorpiusSigma"/><br /><sub><b>ScorpiusSigma</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=ScorpiusSigma" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
