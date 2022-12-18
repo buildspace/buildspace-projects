@@ -16,7 +16,7 @@ CPIs essentially turn the entire Solana ecosystem into one giant API that is at 
 #### 🤔 How to make a CPI
 You've made CPIs a couple times before, so this should look familiar!
 
-CPIs are made using the `[invoke](https://docs.rs/solana-program/1.10.19/solana_program/program/fn.invoke.html)` or `[invoke_signed](https://docs.rs/solana-program/1.10.19/solana_program/program/fn.invoke_signed.html)` function from the `solana_program` crate. 
+CPIs are made using the [invoke](https://docs.rs/solana-program/1.10.19/solana_program/program/fn.invoke.html) or [invoke_signed](https://docs.rs/solana-program/1.10.19/solana_program/program/fn.invoke_signed.html) function from the `solana_program` crate. 
 
 CPIs extend the signer privileges of the caller to the callee.
 - `invoke` passes the original transaction signature to the program you are invoking.
@@ -45,7 +45,7 @@ The `Instruction` type has the following definition:
 - `account` - a list of account metadata as a vector. You need to include every account that the invoked program will read from or write to
 - `data` - a byte buffer representing the data being passed to the callee program as a vector
 
-Depending on the program you're making the call to, there may be a crate available with helper functions for creating the `Instruction` object. Both the `accounts` and `data` fields are of type `Vec`, or vector. You can use the `[vec](https://doc.rust-lang.org/std/macro.vec.html)` macro to construct a vector using array notation
+Depending on the program you're making the call to, there may be a crate available with helper functions for creating the `Instruction` object. Both the `accounts` and `data` fields are of type `Vec`, or vector. You can use the [vec](https://doc.rust-lang.org/std/macro.vec.html) macro to construct a vector using array notation
 
 ```rs
 pub struct Instruction {
@@ -57,7 +57,7 @@ pub struct Instruction {
 
 ![](https://hackmd.io/_uploads/H1QOhTTEo.png)
 
-The `accounts` field of the `Instruction` struct expects a vector of type `[AccountMeta](https://docs.rs/solana-program/latest/solana_program/instruction/struct.AccountMeta.html)`. The `AccountMeta` struct looks like this:
+The `accounts` field of the `Instruction` struct expects a vector of type [AccountMeta](https://docs.rs/solana-program/latest/solana_program/instruction/struct.AccountMeta.html). The `AccountMeta` struct looks like this:
 
 ```rust
 pub struct AccountMeta {
@@ -117,11 +117,11 @@ let instruction = Instruction {
 
 Under the hood, both `invoke` and `invoke_signed` are just transactions, so we'll need to pass in a list  of `account_info` objects. 
 
-Copy each `account_info` object that you need to pass into the CPI using the `[Clone](https://docs.rs/solana-program/1.10.19/solana_program/account_info/struct.AccountInfo.html#impl-Clone)` trait that is implemented on the `account_info` struct in the `solana_program` crate.
+Copy each `account_info` object that you need to pass into the CPI using the [Clone](https://docs.rs/solana-program/1.10.19/solana_program/account_info/struct.AccountInfo.html#impl-Clone) trait that is implemented on the `account_info` struct in the `solana_program` crate.
 
 ![](https://hackmd.io/_uploads/r1gJ6T6Ns.png)
 
-This `Clone` trait returns a copy of the `[account_info](https://docs.rs/solana-program/1.10.19/solana_program/account_info/struct.AccountInfo.html)` instance.
+This `Clone` trait returns a copy of the [account_info](https://docs.rs/solana-program/1.10.19/solana_program/account_info/struct.AccountInfo.html) instance.
 
 ```rust
 &[first_account.clone(), second_account.clone(), third_account.clone()]
@@ -139,7 +139,7 @@ Remember - invoke is like passing on a transaction, the program doing it doesn't
 
 Whenever we're working with PDAs, we'll use `invoke_signed` and pass in the seeds.
 
-The Solana runtime will internally call `[create_program_address](https://docs.rs/solana-program/1.4.4/solana_program/pubkey/struct.Pubkey.html#method.create_program_address)` using the seeds provided and the `program_id` of the calling program. It then compares the result against the addresses supplied in the instruction. If any of the account addresses match the PDA, then the `is_signer` flag on that account is set to true.
+The Solana runtime will internally call [create_program_address](https://docs.rs/solana-program/1.4.4/solana_program/pubkey/struct.Pubkey.html#method.create_program_address) using the seeds provided and the `program_id` of the calling program. It then compares the result against the addresses supplied in the instruction. If any of the account addresses match the PDA, then the `is_signer` flag on that account is set to true.
 
 It's like an efficiency shortcut!
 
