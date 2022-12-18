@@ -133,7 +133,7 @@ use borsh::{BorshSerialize, BorshDeserialize};
 pub struct MovieAccountState {
     pub is_initialized: bool,
     pub rating: u8,
-    pub title: String
+    pub title: String,
     pub description: String,
 }
 ```
@@ -150,7 +150,6 @@ use solana_program::{
     msg,
     account_info::{next_account_info, AccountInfo},
     system_instruction,
-    program_error::ProgramError,
     sysvar::{rent::Rent, Sysvar},
     program::{invoke_signed},
     borsh::try_from_slice_unchecked,
