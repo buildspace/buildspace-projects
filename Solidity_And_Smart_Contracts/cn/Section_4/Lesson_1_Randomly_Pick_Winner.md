@@ -28,7 +28,7 @@ contract WavePortal {
     uint256 totalWaves;
 
     /*
-     * We will be using this below to help generate a random number
+     *我们用这个来帮忙生成随机数 
      */
     uint256 private seed;
 
@@ -45,7 +45,7 @@ contract WavePortal {
     constructor() payable {
         console.log("We have been constructed!");
         /*
-         * Set the initial seed
+         * 初始化seed
          */
         seed = (block.timestamp + block.difficulty) % 100;
     }
@@ -57,14 +57,14 @@ contract WavePortal {
         waves.push(Wave(msg.sender, _message, block.timestamp));
 
         /*
-         * Generate a new seed for the next user that sends a wave
+         * 生成一个新的seed为接下来的用户
          */
         seed = (block.difficulty + block.timestamp + seed) % 100;
 
         console.log("Random # generated: %d", seed);
 
         /*
-         * Give a 50% chance that the user wins the prize.
+         * 用户有50%的几率获得奖金。
          */
         if (seed < 50) {
             console.log("%s won!", msg.sender);
@@ -201,8 +201,8 @@ contract WavePortal {
     Wave[] waves;
 
     /*
-     * This is an address => uint mapping, meaning I can associate an address with a number!
-     * In this case, I'll be storing the address with the last time the user waved at us.
+     * 这是一个地址型到实数型的映射，我可以把一个地址和一个数字联系起来
+     * 在这里，我将把地址和用户向我们wave的时间储存在一起
      */
     mapping(address => uint256) public lastWavedAt;
 
@@ -216,7 +216,7 @@ contract WavePortal {
 
     function wave(string memory _message) public {
         /*
-         * We need to make sure the current timestamp is at least 15-minutes bigger than the last timestamp we stored
+         *我们需要确保当前时间戳至少比我们存储的上一个时间戳大 15 分钟
          */
         require(
             lastWavedAt[msg.sender] + 15 minutes < block.timestamp,
@@ -224,7 +224,7 @@ contract WavePortal {
         );
 
         /*
-         * Update the current timestamp we have for the user
+         * 收集用户当前的时间戳
          */
         lastWavedAt[msg.sender] = block.timestamp;
 
@@ -234,7 +234,7 @@ contract WavePortal {
         waves.push(Wave(msg.sender, _message, block.timestamp));
 
         /*
-         * Generate a new seed for the next user that sends a wave
+         * 生成一个新的seed为后面的用户发送wave准备。
          */
         seed = (block.difficulty + block.timestamp + seed) % 100;
 

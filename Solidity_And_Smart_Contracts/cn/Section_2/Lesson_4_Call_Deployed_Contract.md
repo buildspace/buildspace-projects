@@ -111,7 +111,7 @@ ABI 文件的内容可以在您的 hardhat 项目中的一个精美的 JSON 文�
 
 那么，问题就变成了我们如何将这个 JSON 文件放入我们的前端？ 对于这个项目，我们将做一些不错的旧“复制意大利面”！
 
-复制`WavePortal.json`中的内容，然后转到您的网络应用程序。 您将在 `src` 下创建一个名为 `utils` 的新文件夹。 在“utils”下创建一个名为`WavePortal.json`的文件。 所以完整的路径看起来像：
+复制`WavePortal.json`中的内容，然后转到您的网络应用程序。 您将在 `src` 下创建一个名为 `utils` 的新文件夹。 在`utils`下创建一个名为`WavePortal.json`的文件。 所以完整的路径看起来像：
 
 `src/utils/WavePortal.json`
 
