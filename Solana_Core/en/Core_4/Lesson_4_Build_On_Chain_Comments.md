@@ -59,7 +59,7 @@ First thing we need to decide is where we'll store our comments. As you (hopeful
 Let's follow the same pattern we used for the movie reviews. We'll create a new PDA for each comment. This way we can store as many comments as we want! We'll need to link the comments to the review they belong to, so we'll use the movie review PD Address as a seed for the comment account.
 
 **Reading comments**
-Our structure will give us a theoretically infinite number of comments per movie review. However, there's nothing distingushing comments from each other for each movie review. How am we supposed to know how many comments there are for each movie review? 
+Our structure will give us a theoretically infinite number of comments per movie review. However, there are nothing distinguishing comments from each other for each movie review. How are we supposed to know how many comments there are for each movie review? 
 
 We make another account to store this! And we can use a numbering system for the comment accounts to keep track of them. 
 
@@ -206,7 +206,7 @@ To recap, for each account state we have:
 #### 👨‍🏫 Update our instructions
 Now that all of our state is taking care of, we can move on to upgrading our instruction handlers and implementing the actual comment logic. 
 
-Starting with the instruciton handlers, we'll need to update our instruction enum to add support for comments in `instruction.rs`:
+Starting with the instruction handlers, we'll need to update our instruction enum to add support for comments in `instruction.rs`:
 ```rs
 pub enum MovieInstruction {
     AddMovieReview {
@@ -233,7 +233,7 @@ struct CommentPayload {
 }
 ```
 
-We'll need to refactor the `unpack` implementation a little bit. Since the payload for both our previous instructions (add and update) was the same, we could deserialize it before the match statement. Now that we've got comment with a different type of payload, we'll move the desrialization into the match statement. Check it out:
+We'll need to refactor the `unpack` implementation a little bit. Since the payload for both our previous instructions (add and update) was the same, we could deserialize it before the match statement. Now that we've got comment with a different type of payload, we'll move the deserialization into the match statement. Check it out:
 ```rs
 impl MovieInstruction {
     pub fn unpack(input: &[u8]) -> Result<Self, ProgramError> {
@@ -256,7 +256,7 @@ impl MovieInstruction {
                 }
             },
             2 => {
-                // Comment payload uses it's own desrializer cause of the different data type
+                // Comment payload uses its own deserializer cause of the different data type
                 let payload = CommentPayload::try_from_slice(rest).unwrap();
                 Self::AddComment {
                     comment: payload.comment
