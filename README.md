@@ -26,9 +26,9 @@ Here's what you'll get:
 
 ## 📚 Projects
 
-At [buildspace](https://buildspace.so) we take a lot of time to write projects that make sense and are just straight up fun! Just like software, we are bound to make some mistakes, but that's where you come in.
+At [buildspace](https://buildspace.so) we are committed to creating high-quality projects that are both educational and enjoyable. We believe that by providing engaging and well-written content, we can help others learn about the exciting world of the decentralized web. However, we understand that even the most carefully-crafted projects can have mistakes or areas for improvement. That's why we've made all of our lessons open source, so that members of the community can help us identify and fix any issues, and also contribute their own ideas and enhancements.
 
-We made all these lessons Open Source so you can help make our projects even better and help others conquer the decentralized web 🤘.
+By working together and collaborating on our projects, we can help ensure that they are as informative and effective as possible. And by sharing our knowledge and expertise, we can help others to learn about the decentralized web and join us in building a more decentralized and open future. Whether you're a seasoned developer or just starting out, we welcome your contributions and feedback. Together, let's conquer the decentralized web and build a better future 🤘.
 
 ## 🛠 Contributing
 
