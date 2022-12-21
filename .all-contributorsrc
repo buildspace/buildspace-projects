@@ -2380,7 +2380,16 @@
       "contributions": [
         "doc"
       ]
-    }
+    },
+    {
+      "login": "develo-pera",
+      "name": "Petar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9700675?v=4",
+      "profile": "https://github.com/develo-pera",
+      "contributions": [
+        "doc"
+      ]
+    },
   ],
   "contributorsPerLine": 7,
   "projectName": "buildspace-projects",
