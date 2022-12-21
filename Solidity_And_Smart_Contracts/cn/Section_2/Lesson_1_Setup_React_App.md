@@ -19,7 +19,7 @@
 **请注意: 当你浏览这个项目时，你可能会注意到，我们正在引用`.js`文件， 你将需要使用`.jsx`扩展名来代替! Replit有一些性能上的缺陷，需要你使用`.jsx`文件扩展名:).**。 
 
 我做了一个快速上手视频，介绍了如何在Replit上编辑代码，部署并开启dark模式。请看：
-[Loom](https://www.loom.com/share/babd8d81b83b4af2a196d6ea656e379a)
+[Loom](https://www.loom.com/share/8e8f47eacf6d448eb5d25b6908021035)
 
 🦊 Metamask
 -----------

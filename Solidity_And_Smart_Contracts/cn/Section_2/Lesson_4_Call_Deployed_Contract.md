@@ -32,7 +32,7 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
 }
 ```
@@ -44,13 +44,13 @@ const provider = new ethers.providers.Web3Provider(ethereum);
 const signer = provider.getSigner();
 ```
 
-`ethers` 是一个帮助我们的前端与合同对话的库。请确保在顶部使用 `import { ethers } from "ethers";`.
+`ethers` 是一个库，可以帮助我们的前端与我们的合约对话。 确保使用 `import { ethers } from "ethers";` 将其导入到顶部。
 
-"提供者"是我们用来与Ethereum节点实际对话的东西。还记得我们是如何使用Alchemy来**部署的吗？那么在这种情况下，我们使用Metamask在后台提供的节点来发送/接收来自我们部署的合约的数据。
+“提供者”是我们用来与以太坊节点实际交谈的东西。 还记得我们是如何使用 QuickNode 来**部署**的吗？ 那么在这种情况下，我们使用 Metamask 在后台提供的节点来从我们部署的合约发送/接收数据。
 
-[这里的](https://docs.ethers.io/v5/api/signer/#signers) 是在第2行有一个链接，解释什么是签名人。
+[这里是](https://docs.ethers.io/v5/api/signer/#signers) 解释第 2 行签名者是什么的链接。
 
-通过将 "onClick "功能从 "null "更新为 "wave"，将这个函数连接到我们的wave按钮。
+通过将 `onClick` 属性从 `null` 更新为 `wave` 将此函数连接到我们的 wave 按钮：
 
 ```html
 <button className="waveButton" onClick={wave}>
@@ -73,67 +73,64 @@ const signer = provider.getSigner();
 🏠 设置你的合约地址
 -----------------------------
  
-还记得你在Rinkeby Testnet上部署你的合约吗（史诗级的）？那次部署的输出包括你的智能合约地址，看起来应该是这样的。
+还记得你在Goerli Testnet上部署你的合约吗（史诗级的）？那次部署的输出包括你的智能合约地址，看起来应该是这样的。
 
 ```
 Deploying contracts with the account: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
 Account balance: 3198297774605223721
-WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
+WavePortal address: 0x957fe7381be45A31967F1EcfAc6Ff001D8AF8D6c
 ```
 
-你需要在你的React应用程序中获得这个访问权。这很简单，只要在你的`App.js`文件中创建一个名为`contractAddress`的新属性，并将其值设置为`WavePortal地址`，并在控制台中打印出来。
+你需要在你的React应用程序中获得这个访问权。这很简单，只要在你的`App.js`文件中创建一个名为`contractAddress`的新属性，并将其值设置为`WavePortal address`，并在控制台中打印出来。
 
 ```javascript
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import './App.css';
+import "./App.css";
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
   /**
    * Create a variable here that holds the contract address after you deploy!
    */
-  const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  const contractAddress = "0x957fe7381be45A31967F1EcfAc6Ff001D8AF8D6c";
 ```
 
 🛠 获取ABI文件内容
 ---------------------------
-**不如看着我经历这些？看看下面的视频吧！**
-[Loom](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)
+看看你，已经下到一半了！ 让我们回到我们的智能合约文件夹。
 
-看看你，已经走了一半的路了! 让我们搬回我们的智能合约文件夹。
+当你编译你的智能合约时，编译器会吐出一堆让你与合约交互所需的文件。 您可以在 Solidity 项目根目录下的 `artifacts`文件夹中找到这些文件。
 
-当你编译你的智能合约时，编译器会吐出一堆需要的文件，让你与合约互动。你可以在位于你Solidity项目根部的`artifacts`文件夹中找到这些文件。
+ABI 文件是我们的网络应用程序需要知道如何与我们的合约进行通信的文件。 [此处](https://docs.soliditylang.org/en/v0.8.14/abi-spec.html) 了解相关信息。
 
-ABI文件是我们的网络应用需要知道如何与我们的合约沟通的东西。阅读相关内容 [这里](https://docs.soliditylang.org/en/v0.5.3/abi-spec.html).
-
-ABI文件的内容可以在你的hardhat项目中的一个性感的JSON文件中找到。
+ABI 文件的内容可以在您的 hardhat 项目中的一个精美的 JSON 文件中找到：
 
 `artifacts/contracts/WavePortal.sol/WavePortal.json`
 
 
-那么，问题来了，我们如何把这个JSON文件放到我们的前端？在这个项目中，我们要做一些好的老的 "复制粘贴"!
+那么，问题就变成了我们如何将这个 JSON 文件放入我们的前端？ 对于这个项目，我们将做一些不错的旧“复制意大利面”！
 
-复制`WavePortal.json`中的内容，然后前往你的网络应用。你将在`src`下建立一个名为`utils`的新文件夹。在`utils`下创建一个名为`WavePortal.json`的文件。因此，完整的路径将看起来像。
+复制`WavePortal.json`中的内容，然后转到您的网络应用程序。 您将在 `src` 下创建一个名为 `utils` 的新文件夹。 在`utils`下创建一个名为`WavePortal.json`的文件。 所以完整的路径看起来像：
 
 `src/utils/WavePortal.json`
 
 
-将整个JSON文件粘贴在那里！
+将整个 JSON 文件粘贴到那里！
 
-现在你已经有了包含所有ABI内容的文件，是时候把它导入你的`App.js`文件并创建对它的引用。就在你导入`App.css`的地方，继续导入你的JSON文件并创建对ABI内容的引用。
+现在您已经准备好包含所有 ABI 内容的文件，是时候将其导入您的`App.js`文件并创建对它的引用了。 就在您导入 `App.css`的位置下，继续导入您的 JSON 文件并创建对 abi 内容的引用：
 
 
 ```javascript
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import './App.css';
-import abi from './utils/WavePortal.json';
+import "./App.css";
+import abi from "./utils/WavePortal.json";
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
-  
-  const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+
+  const contractAddress = "0x957fe7381be45A31967F1EcfAc6Ff001D8AF8D6c";
   /**
    * Create a variable here that references the abi content!
    */
@@ -161,7 +158,7 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
   ```
@@ -203,7 +200,7 @@ const wave = async () => {
         console.log("Ethereum object doesn't exist!");
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 ```
@@ -236,3 +233,6 @@ const wave = async () => {
 --------------------
 
 你正在征服去中心化网络的道路上。令人印象深刻的是。通过访问[此链接]，看看你在本节中写的所有代码。 [这个链接](https://gist.github.com/adilanchian/71890bf4fcd8f78e94c77cf694b24659) 用来确保你的代码是正确的!
+如果你想要捐赠我们：
+0x45ca2696d9a4f762c7a51a22a230797700e28794
+这会让我们更有动力。

@@ -13,12 +13,12 @@
 
 3\.在我们的网站上显示该数据，以便任何人都可以看到所有向我们挥手致意的人和他们的消息。
 
-查看更新的智能合约代码。我在这里添加了很多评论，以帮助您了解发生了什么变化:)。
+查看更新的智能合约代码。我在这里添加了很多注释，以帮助您了解发生了什么变化:)。
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 
@@ -26,23 +26,23 @@ contract WavePortal {
     uint256 totalWaves;
 
     /*
-     * A little magic, Google what events are in Solidity!
+     * 小魔法，试试谷歌一下events在solidity中是什么
      */
     event NewWave(address indexed from, uint256 timestamp, string message);
 
     /*
-     * I created a struct here named Wave.
-     * A struct is basically a custom datatype where we can customize what we want to hold inside it.
+     *我创建了一个叫wave的结构体。 
+     * 结构体基本上是一种自定义数据类型，我们可以在其中自定义我们想要在其中保存的内容。
      */
     struct Wave {
-        address waver; // The address of the user who waved.
-        string message; // The message the user sent.
-        uint256 timestamp; // The timestamp when the user waved.
+        address waver; // 向我们招手的用户的地址。
+        string message; // 用户发送的信息。
+        uint256 timestamp; // 用户招手时的时间戳。
     }
 
     /*
-     * I declare a variable waves that lets me store an array of structs.
-     * This is what lets me hold all the waves anyone ever sends to me!
+     * 我声明了一个变量 wave，它可以让我存储一个结构数组
+     * 这就是让我能够承受任何人发送给我的所有wave的原因！
      */
     Wave[] waves;
 
@@ -51,29 +51,29 @@ contract WavePortal {
     }
 
     /*
-     * You'll notice I changed the wave function a little here as well and
-     * now it requires a string called _message. This is the message our user
-     * sends us from the frontend!
+     * 你会注意到，这里wave函数也有一些改变，You'll notice I changed the wave function a little here as well and
+     * 现在他要求我们用户从前端给我们发一些信息
+     * 
      */
     function wave(string memory _message) public {
         totalWaves += 1;
         console.log("%s waved w/ message %s", msg.sender, _message);
 
         /*
-         * This is where I actually store the wave data in the array.
+         * 我在这里储存wave的数据在数组中。
          */
         waves.push(Wave(msg.sender, _message, block.timestamp));
 
         /*
-         * I added some fanciness here, Google it and try to figure out what it is!
-         * Let me know what you learn in #general-chill-chat
+         *我在这添加了一些有趣的东西，去谷歌并弄懂他把。
+         * 在#general-chill-chat 频道中告诉我们你学到的吧
          */
         emit NewWave(msg.sender, block.timestamp, _message);
     }
 
     /*
-     * I added a function getAllWaves which will return the struct array, waves, to us.
-     * This will make it easy to retrieve the waves from our website!
+     * 我添加了一个函数 getAllWaves，它将返回结构数组 waves 给我们。
+      * 这将使从我们的网站检索wave变得容易！
      */
     function getAllWaves() public view returns (Wave[] memory) {
         return waves;
@@ -97,10 +97,10 @@ contract WavePortal {
 
 ```javascript
 const main = async () => {
-  const waveContractFactory = await hre.ethers.getContractFactory('WavePortal');
+  const waveContractFactory = await hre.ethers.getContractFactory("WavePortal");
   const waveContract = await waveContractFactory.deploy();
   await waveContract.deployed();
-  console.log('Contract addy:', waveContract.address);
+  console.log("Contract addy:", waveContract.address);
 
   let waveCount;
   waveCount = await waveContract.getTotalWaves();
@@ -109,11 +109,11 @@ const main = async () => {
   /**
    * Let's send a few waves!
    */
-  let waveTxn = await waveContract.wave('A message!');
+  let waveTxn = await waveContract.wave("A message!");
   await waveTxn.wait(); // Wait for the transaction to be mined
 
   const [_, randomPerson] = await hre.ethers.getSigners();
-  waveTxn = await waveContract.connect(randomPerson).wave('Another message!');
+  waveTxn = await waveContract.connect(randomPerson).wave("Another message!");
   await waveTxn.wait(); // Wait for the transaction to be mined
 
   let allWaves = await waveContract.getAllWaves();
@@ -164,12 +164,11 @@ runMain();
 
 所以你现在需要做的是：
 
-1\.使用 `npx hardhat run scripts/deploy.js --network rinkeby` 再次部署
+1\.使用 `npx hardhat run scripts/deploy.js --network goerli` 再次部署
 
 2\.将`App.js`中的`contractAddress`更改为我们在终端上一步得到的新合约地址，就像我们第一次部署之前所做的一样。
 
-3\.像我们之前所做的那样从 `artifacts` 中获取更新的 abi 文件，然后像我们之前所做的那样将其复制粘贴到 Replit 中。如果您忘记了如何执行此操作，请务必重温课程 [此处](https://app.buildspace.so/courses/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b/lessons/LE52134606-af90-47ed-9447959803 ) 并观看我在下面的 ABI 文件中制作的视频：
-[Loom](https://www.loom.com/share/ddecf3caf54848a3a01edd740683ec48)。
+3\.像我们之前所做的那样从 `artifacts` 中获取更新的 abi 文件，然后像我们之前所做的那样将其复制粘贴到 Replit 中。如果您忘记了如何执行此操作，请务必重温课程 [此处](https://app.buildspace.so/courses/CO02cf0f1c-f996-4f50-9669-cf945ca3fb0b/lessons/LE52134606-af90-47ed-9441-980479599350)
 
 **再说一遍——每次更改合约代码时都需要这样做。**
 
@@ -185,6 +184,11 @@ const [currentAccount, setCurrentAccount] = useState("");
    */
   const [allWaves, setAllWaves] = useState([]);
   const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  
+   /*
+   * Create a variable here that references the abi content!
+   */
+  const contractABI = abi.abi;
 
   /*
    * Create a method that gets all waves from your contract
@@ -201,7 +205,7 @@ const [currentAccount, setCurrentAccount] = useState("");
          * Call the getAllWaves method from your Smart Contract
          */
         const waves = await wavePortalContract.getAllWaves();
-        
+
 
         /*
          * We only need address, timestamp, and message in our UI so let's
@@ -231,7 +235,7 @@ const [currentAccount, setCurrentAccount] = useState("");
 
 非常简单，与我们之前所做的工作非常相似，即我们如何连接到提供者、获取签名者以及连接到合约！我在这里通过循环遍历我们所有的 waves 并将它们保存在我们可以稍后使用的数组中来做一个小魔术。如果遇到问题，请随时到 console.log `waves` 看看你会得到什么。
 
-但是，我们在哪里调用这个全新的“getAllWaves()”函数呢？好吧——我们想在我们确定用户有一个带有授权帐户的连接钱包时调用它，因为我们需要一个授权帐户来调用它！提示：你必须在 `checkIfWalletIsConnected()` 的某个地方调用这个函数。我会把它留给你去弄清楚。请记住，当我们确定我们有一个连接+授权的帐户时，我们想调用它！
+但是，我们在哪里调用这个全新的`getAllWaves()`函数呢？好吧——我们想在我们确定用户有一个带有授权帐户的连接钱包时调用它，因为我们需要一个授权帐户来调用它！提示：你必须在 `checkIfWalletIsConnected()` 的某个地方调用这个函数。我会把它留给你去弄清楚。请记住，当我们确定我们有一个连接+授权的帐户时，我们想调用它！
 
 我做的最后一件事是更新我们的 HTML 代码以呈现数据供我们查看！
 
@@ -289,3 +293,6 @@ const waveTxn = await wavePortalContract.wave("这是一条消息")
 --------------------
 
 去把这个东西变成你想要的样子！ 我不会在这里教你太多。 请随时在#section-3-help 中提问！
+如果你想要捐赠我们：
+0x45ca2696d9a4f762c7a51a22a230797700e28794
+这会让我们更有动力。

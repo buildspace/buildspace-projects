@@ -41,9 +41,9 @@ wavePortalContract.wave(message, { gasLimit: 300000 })
 
 当你的合约被部署并且你正在用你的 UI 和你的钱包测试它时，首先确定你的钱包帐户是否成功获得奖品可能会令人困惑。您的账户将消耗一定数量的 gas 并可能获得 ETH 奖励。那么您如何验证您的合约是否按预期工作？
 
-要验证，您可以在 [Rinkeby Etherscan](https://rinkeby.etherscan.io/) 上打开您的合约地址并查看已发生的交易。您会在此处找到各种有用的信息，包括被调用的方法，在本例中为“Wave”。如果您单击“Wave”交易，您会注意到在“To”属性中，它将标识调用了合约地址。如果用户中了奖，您会在该字段中注意到，已从合约地址转移了 0.0001 ETH 到您的帐户地址。
+要验证，您可以在 [Goerli Etherscan](https://goerli.etherscan.io/)上打开您的合约地址并查看已发生的交易。您会在此处找到各种有用的信息，包括被调用的方法，在本例中为`Wave`。如果您单击`Wave`交易，您会注意到在`To`属性中，它将标识调用了合约地址。如果用户中了奖，您会在该字段中注意到，已从合约地址转移了 0.0001 ETH 到您的帐户地址。
 
-请注意，交易的“价值”仍然是 0 ETH，因为用户从未支付任何费用来发起wave。从智能合约内部转移 ETH 称为“内部交易”。
+请注意，交易的`Value`仍然是 0 ETH，因为用户从未支付任何费用来发起wave。从智能合约内部转移 ETH 称为“内部交易”。
 
 🎤 事件
 ---------
@@ -60,7 +60,7 @@ emit NewWave(msg.sender, block.timestamp, _message);
 
 即使是现在，当我们自己提交一条消息，然后我们必须等待它被挖矿交易然后刷新页面才能看到所有更新的消息列表时，这有点烦人，对吧？让我们解决这个问题。
 
-在此处查看我在“App.js”中更新“getAllWaves”的代码。
+在此处查看我在`App.js.`中更新`getAllWaves` 的代码。
 
 ```javascript
 const getAllWaves = async () => {
@@ -97,7 +97,7 @@ useEffect(() => {
   let wavePortalContract;
 
   const onNewWave = (from, timestamp, message) => {
-    console.log('NewWave', from, timestamp, message);
+    console.log("NewWave", from, timestamp, message);
     setAllWaves(prevState => [
       ...prevState,
       {
@@ -113,12 +113,12 @@ useEffect(() => {
     const signer = provider.getSigner();
 
     wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
-    wavePortalContract.on('NewWave', onNewWave);
+    wavePortalContract.on("NewWave", onNewWave);
   }
 
   return () => {
     if (wavePortalContract) {
-      wavePortalContract.off('NewWave', onNewWave);
+      wavePortalContract.off("NewWave", onNewWave);
     }
   };
 }, []);
@@ -147,19 +147,19 @@ npm install --save dotenv
 您的 hardhat.config.js 文件类似于：
 
 ```javascript
-require('@nomiclabs/hardhat-waffle');
-require('dotenv').config();
+require("@nomiclabs/hardhat-waffle");
+require("dotenv").config();
 
 module.exports = {
-  solidity: '0.8.0',
+  solidity: "0.8.0",
   networks: {
-    rinkeby: {
-      url: process.env.STAGING_ALCHEMY_KEY,
+    goerli: {
+      url: process.env.STAGING_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
     mainnet: {
       chainId: 1,
-      url: process.env.PROD_ALCHEMY_KEY,
+      url: process.env.PROD_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
@@ -192,7 +192,7 @@ PRIVATE_KEY=BLAHBLAH
 
 此外，应该完全发布您的最终项目并向世界展示您的史诗般的创作！你所做的事情无论如何都不容易。甚至可以制作一个小视频来展示您的项目并将其附加到推文中。让你的推文看起来很漂亮并炫耀:)。
 
-如果您愿意，请标记@_buildspace :) （译者注：请顺便 @bobjiang123 ）。我们会RT它。此外，每当我们看到人们发布他们的项目时，它都会给我们带来很多动力。
+如果您愿意，请标记@_buildspace :) （译者注：请顺便 @bobjiang123 @bitcoinmaobuyi）。我们会RT它。此外，每当我们看到人们发布他们的项目时，它都会给我们带来很多动力。
 
 最后，如果您在#feedback 中告诉我们您对这个项目的喜爱程度以及项目的结构，那也太棒了。你最喜欢构建空间的什么？我们希望为未来的项目做出哪些改变？你的反馈会很棒！！
 
@@ -204,3 +204,7 @@ PRIVATE_KEY=BLAHBLAH
 ----------
 
 *你做到了。*周围鼓掌👏！想查看我们为本节编写的所有代码吗？点击[这个链接](https://gist.github.com/adilanchian/93fbd2e06b3b5d3acb99b5723cebd925) 看全部！
+
+如果你想要捐赠我们：
+0x45ca2696d9a4f762c7a51a22a230797700e28794
+这会让我们更有动力。
