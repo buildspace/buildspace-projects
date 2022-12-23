@@ -82,7 +82,7 @@ Let’s jump into Calmly and start writing 🤘. Once you have some stuff writte
 
 ![Untitled](https://i.imgur.com/YeT4PPn.png)
 
-**WOAH** — that’s pretty sick. Crazy how easy it was to this going right? This is some of the “under the hood” stuff I was talking about earlier + one of the benefits of building a Chrome extension :).
+**WOAH** — that’s pretty sick. Crazy how easy it was to get this going right? This is some of the “under the hood” stuff I was talking about earlier + one of the benefits of building a Chrome extension :).
 
 IGHT — lets get this selection to do something epic. We’re going to start by capturing the selection text and get it ready to package up for GPT-3! Lets start by adding this to the `generateCompleteAction` function:
 
