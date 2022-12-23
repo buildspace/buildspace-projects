@@ -270,4 +270,4 @@ So…how’s your product feeling now? Mines is absolutely insane now lol. It’
 
 You’ve gotten so far. I’m proud af of you. **Give yourself a pat on the back, you’re doing some insane stuff!!** Go ahead and take a screenshot of your web app with one of your favorite prompts + outputs and post it in #progress. I want to see all the crazy shit y’all are generating lol.
 
-Also, it’s time to **get your first user** — if you someone near you, show them what you’re doing (ex. mom, friend, roomate, etc)! Pull them over, show them the crazy thing you built, and have them mess around in your web app. See what they say!
+Also, it’s time to **get your first user** — if you have someone near you, show them what you’re doing (ex. mom, friend, roomate, etc)! Pull them over, show them the crazy thing you built, and have them mess around in your web app. See what they say!
