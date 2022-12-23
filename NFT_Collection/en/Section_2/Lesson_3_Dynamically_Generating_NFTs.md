@@ -142,7 +142,25 @@ If you take one of the `data:application/json;base64` blobs and drop it in your 
 👀 How tf does `finalTokenUri` work?
 ------------------
 
-That big line with `string memory json = Base64.encode` may look pretty confusing, but, it only looks confusing because of all the quotation marks lol. All we're doing is we're base64 encoding the JSON metadata! But — it's all **on-chain**. So, all that JSON will live on the contract itself.
+That big line with `string memory json = Base64.encode` may look pretty confusing, but, there is a much cleaner way to go about it.
+
+```solidity
+string memory json = Base64.encode(
+    bytes(
+        string(
+            abi.encodePacked(
+                '{'
+                    '"name": "', combinedWord, '", '
+                    '"description": "A highly acclaimed collection of squares.", '
+                    '"image": "data:image/svg+xml;base64,', Base64.encode(bytes(finalSvg)), '"'
+                '}'
+            )
+        )
+    )
+);
+```
+
+All we're doing is we're base64 encoding the JSON metadata! But — it's all **on-chain**. So, all that JSON will live on the contract itself.
 
 We also dynamically add the `name` and the base64 encoded SVG as well!
 
