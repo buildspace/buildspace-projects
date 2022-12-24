@@ -370,7 +370,7 @@ fn process_stake(
 
     account_data.token_account = *nft_token_account.key;
     account_data.user_pubkey = *user.key;
-    account_data.stake_state = StakeState::Unstaked;
+    account_data.stake_state = StakeState::Staked;
     account_data.stake_start_time = clock.unix_timestamp;
     account_data.last_stake_redeem = clock.unix_timestamp;
     account_data.is_initialized = true;
