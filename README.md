@@ -439,6 +439,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/saad039"><img src="https://avatars.githubusercontent.com/u/30202619?v=4?s=100" width="100px;" alt="Saad"/><br /><sub><b>Saad</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=saad039" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/shungo0222"><img src="https://avatars.githubusercontent.com/u/54393289?v=4?s=100" width="100px;" alt="shungo"/><br /><sub><b>shungo</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=shungo0222" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/IvoBiaus"><img src="https://avatars.githubusercontent.com/u/43274372?v=4?s=100" width="100px;" alt="Ivo Biaus"/><br /><sub><b>Ivo Biaus</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=IvoBiaus" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/IGoRFonin"><img src="https://avatars.githubusercontent.com/u/10962426?v=4?s=100" width="100px;" alt="IGoR"/><br /><sub><b>IGoR</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=IGoRFonin" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
