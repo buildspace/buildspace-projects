@@ -151,6 +151,7 @@ For `account_name`the `#[account(..)]` attribute specifies:
 - `space`- specifies the `space` that allocated for the account is 8 + 8 bytes.
   - The first 8 bytes is a discriminator that Anchor automatically adds to identify the account type.
   - The next 8 bytes allocates space for the data stored on the account as defined in the AccountStruct type.
+  - The detail is here: [Space Reference](https://www.anchor-lang.com/docs/space).
 
 I wanna go over that again. In **one single line**, we execute a CPI to the system program to create an account!!!!!!!!!!!!! How insane is that? We don't have to write any code to create an account, we just specify that we want it to be created and Anchor does the rest!
 
