@@ -1,4 +1,4 @@
-If you're a gamer, you've probably played a game that's had a massive boss fight. The type that impossible to take down by one person so you have to join forces with friends and gang up on them. Think Thanos vs The Avengers.
+If you're a gamer, you've probably played a game that's had a massive boss fight. The type that is impossible to take down by one person so you have to join forces with friends and gang up on them. Think Thanos vs The Avengers.
 
 The secret to beating them is collaboration. Everyone works together to amplify their powers. Solana gives you these superpowers of collaboration: [composability](https://en.wikipedia.org/wiki/Composability) is a key design principal in its architecture.
 
@@ -172,7 +172,7 @@ Here's a bunch of other scenarios that can break things:
 Program returned error: "Cross-program invocation with unauthorized signer or writable account"
 ```
 
-This jist here is that you can't mess around with accounts without explicitly declaring in the transaction that you'll be messing around with them. You don't need to remember all these scenarios, just remember the fundamentals of transactions from the first section - **you must declare all accounts you're reading from or writing to.**
+This just here is that you can't mess around with accounts without explicitly declaring in the transaction that you'll be messing around with them. You don't need to remember all these scenarios, just remember the fundamentals of transactions from the first section - **you must declare all accounts you're reading from or writing to.**
 
 #### 🤔 What's the point
 CPIs are a very important feature of the Solana ecosystem and they make all programs deployed interoperable with each other. This creates the opportunity for building new protocols and applications on top of what’s already been built, just like building blocks or Lego bricks. 
