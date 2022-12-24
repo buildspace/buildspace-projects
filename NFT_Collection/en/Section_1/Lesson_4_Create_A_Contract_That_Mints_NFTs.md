@@ -126,7 +126,7 @@ return "INSERT_YOUR_JSON_URL_HERE";
 We can also add a `console.log` to help us see when the NFT is minted and to who!
 
 ```solidity
-console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
+console.log("An NFT w/ ID %s has been minted to %s", _tokenId, msg.sender);
 ```
 
 This is how your tokenURI function should look now. `_exists` is a built in function to to verify if the tokenId exists in a contract. You can learn more about it [here](https://docs.openzeppelin.com/contracts/3.x/api/token/erc721#ERC721-_exists-uint256-)
