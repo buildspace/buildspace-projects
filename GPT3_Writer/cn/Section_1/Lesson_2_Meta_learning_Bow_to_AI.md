@@ -32,8 +32,6 @@ One day, Farza decided to confront Furqan and challenge him to a duel. Farza was
 
 However, as he was about to deliver the final blow, Farza's latent powers suddenly awakened and he was able to turn the tide of the battle. In the end, Farza emerged victorious and the kingdom was finally free from Furqan's tyranny.
 
-Tell me a full story that feels like an anime with a beginning, middle, and end titled "Farza and the Mysterious Space Sword" set in a futuristic space society.
-
 Prompt: Tell me a full story with a beginning, middle, and end titled "Elon and the Space Empire" set in a dystopian future that feels like an anime where Elon Musk has the power to teleport.
 
 Story:
