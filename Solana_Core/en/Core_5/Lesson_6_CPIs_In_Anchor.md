@@ -2,7 +2,7 @@ Now we can level up by adding CPIs to the mix.
 
 Recall that CPIs are made using `invoke` and `invoke_signed`. 
 
-Anchor also provide a format to make CPIs. Using this format requires access to a CPI module for the program you are invoking. Common programs have a crate you can use, ex `anchor_spl` for the token program. Otherwise, you would have to use the source code of the program you are invoking or a published IDL to generate the CPI module.
+Anchor also provides a format to make CPIs. Using this format requires access to a CPI module for the program you are invoking. Common programs have a crate you can use, ex `anchor_spl` for the token program. Otherwise, you would have to use the source code of the program you are invoking or a published IDL to generate the CPI module.
 
 You can still use `invoke` and `invoke_signed` directly within an instruction if a CPI module is not available. Just as anchor instructions require a `Context` type, Anchor CPIs use a `CpiContext`.
 
@@ -40,9 +40,9 @@ where
 
 ```rs
 pub fn new(
-			program: AccountInfo<'info>, 
-			accounts: T
-		) -> Self {
+	program: AccountInfo<'info>, 
+	accounts: T
+    ) -> Self {
         Self {
             accounts,
             program,
@@ -69,7 +69,7 @@ pub fn new_with_signer(
     }
 ```
 
-The `anchor_spl` crate includes a `token` module to simply the process of making CPIs to the token program.
+The `anchor_spl` crate includes a `token` module to simplify the process of making CPIs to the token program.
 
 `Structs` are the list of accounts each respective token program instruction requires. `Functions` are the CPI to each respective instruction.
 
@@ -166,15 +166,15 @@ AnchorErrors can be divided into
 - location in the code where the anchor was thrown
 - the account that violated a constraint
 
-Ultimately, all programs return the same Error: The `[ProgramError](https://docs.rs/solana-program/latest/solana_program/program_error/enum.ProgramError.html)`.
+Ultimately, all programs return the same Error: [ProgramError](https://docs.rs/solana-program/latest/solana_program/program_error/enum.ProgramError.html).
 
 Anchor has many different internal error codes. These are not meant to be used by users, but it's useful to study the reference to learn about the mappings between codes and their causes.
 
 Custom Error code numbers start at the custom error offset. 
 
-You can add errors that are unique to your program by using the error_code attribute. Simply add it to an enum with a name of your choice. You can then use the variants of the enum as errors in your program. 
+You can add errors that are unique to your program by using the `error_code` attribute. Simply add it to an enum with a name of your choice. You can then use the variants of the enum as errors in your program. 
 
-Additionally, you can add a message attributed to the individual variants. Clients will then display this error message if the error occurs.To actually throw an error use the err! or the error! macro. These add file and line information to the error that is then logged by anchor.
+Additionally, you can add a message attributed to the individual variants with `msg`. Clients will then display this error message if the error occurs. To actually throw an error use the `err!` or the `error!` macro. These add file and line information to the error that is then logged by anchor.
 
 ```rs
 #[program]
