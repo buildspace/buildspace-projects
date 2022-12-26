@@ -53,7 +53,7 @@ By default init sets the owner of the created account to the currently executi
 - When allocating `space` for an account initialized and owned by the executing Anchor program, remember that the first 8 bytes are reserved for a unique account discriminator that Anchor calculates and uses to identify the program account types.
 
 #### 🧮 Realloc
-More often than creating new accounts, you'll be updating existing ones. Anchor has the awesome `realloc` constraint that provides a simply way to reallocate space for existing accounts.
+More often than creating new accounts, you'll be updating existing ones. Anchor has the awesome `realloc` constraint that provides a simple way to reallocate space for existing accounts.
 
 ![](https://hackmd.io/_uploads/B1twP6jBs.png)
 
@@ -64,7 +64,7 @@ The `realloc` constraint must be used in combination with:
 - `system_program` - the `realloc` constraint requires `system_program` to exist in the account validation struct
 
 For example, reallocate space for an account that stores a `data` field of type `String`.
-- When using `String` types, an addition 4 bytes of space is used to store the length of the `String` in addition to the space allocated for the `String` itself.
+- When using `String` types, an additional 4 bytes of space is used to store the length of the `String` in addition to the space allocated for the `String` itself.
 - If the change in account data length is additive, lamports will be transferred from the `realloc::payer` into the program account in order to maintain rent exemption.
 - If the change is subtractive, lamports will be transferred from the program account back into the `realloc::payer`.
 - The `realloc::zero` constraint is required in order to determine whether the new memory should be zero initialized after reallocation.
