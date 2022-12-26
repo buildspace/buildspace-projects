@@ -219,6 +219,9 @@ pub enum MyError {
 #### `init_if_needed` constraint
 Initialize an account if it does not exist. If it does exist, still check against any additional constraints.
 
+If you're using your own editor, you have to add `features = ["init-if-needed"]` in `anchor-lang` of `Cargo.toml`.  
+e.g. `anchor-lang = {version = "0.26.0", features = ["init-if-needed"]}`.
+
 For example, an associated token account:
 ```rs
 #[program]
