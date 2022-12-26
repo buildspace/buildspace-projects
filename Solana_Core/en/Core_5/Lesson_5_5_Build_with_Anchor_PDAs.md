@@ -187,7 +187,7 @@ pub struct UpdateMovieReview<'info> {
 
 We're using the `seeds` and `bump` constraints to validate that `movie_review` account. Since the space taken up will likely change, we're using the `realloc` constraint to have Anchor handle the reallocation of space and rent for the account based on the length of the updated description.
 
-The `realloc::payer` constraint specifies that any additional lamports required or refunded will come from or be send to the initializer account.
+The `realloc::payer` constraint specifies that any additional lamports required or refunded will come from or be sent to the initializer account.
 
 The `realloc::zero` constraint is set to `true` because the `movie_review` account may be updated multiple times either shrinking or expanding the space allocated to the account.
 
@@ -241,9 +241,9 @@ We're all done! Test it out, it'll behave the same as the old native movie revie
 #### 🚢 Ship challenge
 Now it’s your turn to build something independently. Because we're starting with very simple programs, yours will look almost identical to what we just created. It's useful to try and get to the point where you can write it from scratch without referencing prior code, so try not to copy and paste here.
 
-1. Write a new program that initializes a `counter` account and set the `count` field using the an instruction data argument passed into the instruction
+1. Write a new program that initializes a `counter` account and set the `count` field using the instruction data argument passed into the instruction
 2. Implement `initialize`, `increment` and `decrement` instructions
-3. Following what we did in the demo, write testes for each instruction
+3. Following what we did in the demo, write tests for each instruction
 4. Use `anchor deploy` to deploy your program. If you’re up for it, write a script like we’ve done previously to send transactions to your newly deployed program, then use Solana Explorer to look at the program logs.
 
 As always, get creative with these challenges and take them beyond the basic instructions if you want - and have fun!
