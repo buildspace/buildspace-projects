@@ -14,7 +14,7 @@ Here's what the NFT data for a single NFT would look like printed onto the conso
 
 ![](https://hackmd.io/_uploads/Sk4GVk3Xo.png)
 
-Btw there's a also bunch of other ways you can fetch NFTs:
+Btw there's also a bunch of other ways you can fetch NFTs:
 
 ![](https://hackmd.io/_uploads/HkdnmJnms.png)
 
