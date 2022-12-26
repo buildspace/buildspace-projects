@@ -9,7 +9,7 @@ This program will allow users to:
 - Close an existing Movie Review account
 
 #### Setup
-Head over to [https://beta.solpg.io/](https://beta.solpg.io/), create a SolPG wallet if you don't have one, and replace default code in `[lib.rs](http://lib.rs)` with:
+Head over to [https://beta.solpg.io/](https://beta.solpg.io/), create a SolPG wallet if you don't have one, and replace default code in `lib.rs` with:
 
 ```rs
 use anchor_lang::prelude::*;
