@@ -13,7 +13,7 @@ npm install @metaplex-foundation/js fs
 
 Add two images to the `src` folder. We'll use one as the initial image and the second as the updated image.
 
-Here are the imports we'll need, nothing new here:
+Here are the imports we'll need in `src/index.ts`, nothing new here:
 ```ts
 import { Connection, clusterApiUrl, PublicKey } from "@solana/web3.js"
 import {
