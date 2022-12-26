@@ -139,7 +139,9 @@ There's a lot happening here that we don't need to worry about. Rename `.env.exa
 REACT_APP_CANDY_MACHINE_ID=GNfbQEfMA1u1irEFnThTcrzDyefJsoa7sndACShaS5vC
 ```
 
-This is all you need to do! Now if you run `npm start` you'll see a shiny UI on `localhost:3000` that you can use to mint your NFTs. 
+This is all you need to do! Now if you run `npm start` you'll see a shiny UI on `localhost:3000` that you can use to mint your NFTs.
+
+For Mac users: Run `export NODE_OPTIONS=--openssl-legacy-provider` in your terminal if you encounter [`error:0308010C:digital envelope routines::unsupported`](https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported)
 
 Once you've minted, check out the NFT in your wallet in the collectibles section.
 
