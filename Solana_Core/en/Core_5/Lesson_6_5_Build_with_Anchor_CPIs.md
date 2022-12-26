@@ -62,7 +62,8 @@ pub fn create_reward_mint(
 
 This is long but dead simple! We're making a CPI to `create_metadata_account_v2` instruction on Token Metadata program.
 
-Next, we see the `CreateTokenReward` context type.
+Next, we see the `CreateTokenReward` context type.  
+The detail about `/// CHECK:` is here: [Safety checks](https://book.anchor-lang.com/anchor_in_depth/the_accounts_struct.html#safety-checks).
 ```rs
 #[derive(Accounts)]
 pub struct CreateTokenReward<'info> {
@@ -324,6 +325,10 @@ pub struct AddComment<'info> {
 
 ####  Build, Deploy, Test
 Solution: [https://beta.solpg.io/6319c7bf77ea7f12846aee87](https://beta.solpg.io/6319c7bf77ea7f12846aee87)
+
+If you're using your own editor, you have to add `features = ["no-entrypoint"]` in `mpl-token-metadata` of `Cargo.toml`.  
+e.g. `mpl-token-metadata = {version = "1.4.3", features = ["no-entrypoint"]}`.  
+Otherwise, this error occurs: `the #[global_allocator] in this crate conflicts with global allocator in: mpl_token_metadata`.
 
 - build and deploy
 - test using SolPG
