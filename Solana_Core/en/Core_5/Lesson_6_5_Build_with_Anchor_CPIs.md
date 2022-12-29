@@ -69,7 +69,7 @@ The detail about `/// CHECK:` is here: [Safety checks](https://book.anchor-lang.
 pub struct CreateTokenReward<'info> {
     #[account(
         init,
-        seeds = ["mint".as_bytes().as_ref()],
+        seeds = ["mint".as_bytes()],
         bump,
         payer = user,
         mint::decimals = 6,
@@ -186,7 +186,7 @@ pub struct AddMovieReview<'info> {
     )]
     pub movie_comment_counter: Account<'info, MovieCommentCounter>,
     #[account(mut,
-        seeds = ["mint".as_bytes().as_ref()],
+        seeds = ["mint".as_bytes()],
         bump
     )]
     pub reward_mint: Account<'info, Mint>,
@@ -303,7 +303,7 @@ pub struct AddComment<'info> {
     )]
     pub movie_comment_counter: Account<'info, MovieCommentCounter>,
     #[account(mut,
-        seeds = ["mint".as_bytes().as_ref()],
+        seeds = ["mint".as_bytes()],
         bump
     )]
     pub reward_mint: Account<'info, Mint>,
