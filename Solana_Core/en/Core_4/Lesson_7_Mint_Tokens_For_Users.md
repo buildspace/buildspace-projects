@@ -137,7 +137,7 @@ pub fn initialize_token_mint(program_id: &Pubkey, accounts: &[AccountInfo]) -> P
     let initializer = next_account_info(account_info_iter)?;
     // Token mint PDA - derived on the client
     let token_mint = next_account_info(account_info_iter)?;
-    // Token mint authorirty (this should be you)
+    // Token mint authorirty
     let mint_auth = next_account_info(account_info_iter)?;
     // System program to create a new account
     let system_program = next_account_info(account_info_iter)?;
@@ -234,7 +234,7 @@ At a high level, here's what's happening here:
 2. Derive token mint PDA
 3. Validate all of the important accounts passed in: 
    1. Token mint account
-   2. Mint authority account (this should be you)
+   2. Mint authority account
    3. System program
    4. Token program
    5. Sysvar rent - the rent calculation account
