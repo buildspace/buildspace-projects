@@ -24,7 +24,9 @@ If you have any issues throughout here, just drop a message on Discord in  `#se
 
 First you'll need to get Node/NPM. If you don't have it head over [here](https://hardhat.org/tutorial/setting-up-the-environment.html). 
 
-We recommend running Hardhat using the current LTS Node.js version or you may run into some issues! You can find the current releases [here](https://nodejs.org/en/about/releases/). **Make sure your version of NodeJs is correct or you'll run into issues!** We recommend version 16 right now.
+We recommend running Hardhat using the current LTS Node.js version or you may run into some issues! You can find the current releases [here](https://nodejs.org/en/about/releases/). **Make sure your version of NodeJs is correct or you'll run into issues!** We recommend version 16.15.1 right now. You can install it [here](https://nodejs.org/en/download/releases/).
+
+<img src="https://i.imgur.com/UFr0oJn.png" />
 
 Next, let's head to the terminal (Git Bash will not work). Go ahead and cd to the directory you want to work in. Once you're there run these commands:
 
