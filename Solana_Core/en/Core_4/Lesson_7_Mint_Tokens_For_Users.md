@@ -137,7 +137,7 @@ pub fn initialize_token_mint(program_id: &Pubkey, accounts: &[AccountInfo]) -> P
     let initializer = next_account_info(account_info_iter)?;
     // Token mint PDA - derived on the client
     let token_mint = next_account_info(account_info_iter)?;
-    // Token mint authorirty
+    // Token mint authority
     let mint_auth = next_account_info(account_info_iter)?;
     // System program to create a new account
     let system_program = next_account_info(account_info_iter)?;
