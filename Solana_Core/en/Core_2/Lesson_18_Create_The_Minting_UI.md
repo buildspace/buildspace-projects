@@ -85,7 +85,7 @@ interface NewMintProps {
 }
 
 const Home: NextPage<NewMintProps> = ({ mint }) => {
-    const [metadata, setMetadat] = useState<any>()
+    const [metadata, setMetadata] = useState<any>()
     const { connection } = useConnection()
     const walletAdapter = useWallet()
     const metaplex = useMemo(() => {
