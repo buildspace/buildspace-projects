@@ -260,7 +260,7 @@ const generateAction = async (req, res) => {
 export default generateAction;
 ```
 
-The most important line here is `const secondPrompt`. This is where “build” my second prompt based on the output of `basePromptOutput`. I also use `${req.body.userInput}` here as well to give my model even more context. At the end, I change final JSON result to `{ output: secondPromptOutput }` so my user see’s the output of the second prompt on our UI.
+The most important line here is `const secondPrompt`. This is where I “build” my second prompt based on the output of `basePromptOutput`. I also use `${req.body.userInput}` here as well to give my model even more context. At the end, I change final JSON result to `{ output: secondPromptOutput }` so my user see’s the output of the second prompt on our UI.
 
 No UI changes required here btw! All we’re doing is changing the backend.
 
