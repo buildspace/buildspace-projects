@@ -169,7 +169,10 @@ Here are the 4 additions:
     METADATA_PROGRAM_ID,
 ```
 
-```import { PROGRAM_ID as METADATA_PROGRAM_ID } from "@metaplex-foundation/mpl-token-metadata"```
+```
+  import { TOKEN_PROGRAM_ID } from "@solana/spl-token"
+  import { PROGRAM_ID as METADATA_PROGRAM_ID } from "@metaplex-foundation/mpl-token-metadata"
+```
 
 Time to test it our progress, make sure you're inside the `ts` director and do an `npm run start`.
 
