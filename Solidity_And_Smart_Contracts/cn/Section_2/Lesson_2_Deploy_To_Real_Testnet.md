@@ -136,8 +136,8 @@ module.exports = {
 在项目的根目录下创建一个`.env`的文件，并在里面填上你的私钥，他看起来是这样的（不要复制注释中的内容）：
 
 ```javascript
-STAGING_QUICKNODE_KEY=REPLACE_WITH_ACTUAL_QUICKNODE_URL     // Goerli Quicknode
-PROD_QUICKNODE_KEY=BLAHBLAH                                 // Mainnet Quicknode
+STAGING_QUICKNODE_KEY=REPLACE_WITH_ACTUAL_QUICKNODE_URL
+PROD_QUICKNODE_KEY=BLAHBLAH                                 
 PRIVATE_KEY=BLAHBLAH
 ```
 
