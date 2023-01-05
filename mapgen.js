@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Set the project folder name here
-const folderName = 'GPT3_Writer';
+const folderName = 'AI_Avatar_Generator';
 
 const dirName = path.join(folderName, "/en/");
 const outputFile = path.join(folderName, "/map.json");
