@@ -70,7 +70,7 @@ The process of navigating through this space and finding points that are related
 
 [Source](https://www.youtube.com/watch?v=SVcsDDABEkM)
 
-There you have it! You now know the ground wokr for Stable Diffusion. Check [this](https://jalammar.github.io/illustrated-stable-diffusion/) out for a detailed explanation of the various parts if you’re curious and want to dig deeper.
+There you have it! You now know the ground work for Stable Diffusion. Check [this](https://jalammar.github.io/illustrated-stable-diffusion/) out for a detailed explanation of the various parts if you’re curious and want to dig deeper.
 
 You might feel like there’s not much point in understanding how any of this works, but now that you do, you’ll be able to build things that others can’t even think of. As I was writing this, OpenAI launched its [new and improved embedding model](https://openai.com/blog/new-and-improved-embedding-model/), which is 99.8% cheaper. 
 
