@@ -37,7 +37,7 @@ Through this build, I’ll give you certain moments where you can share what you
 
 There is zero harm in **building in public —** believe it or not, almost all the people I’ve met have helped me continue building great things because I tweeted randomly about what I was building lol.
 
-### ****What happens at the end?****
+### **What happens at the end?**
 
 At the end of every build at buildspace, you get the ability to claim a unique NFT. We’ve also got a pack of some **REALLY** cool perks to keep your AI journey going!
 
@@ -48,7 +48,6 @@ This NFT gives you access to a few secret powers:
 3. **You’ll get accepted instantly to [Nights & Weekends](https://buildspace.so/nights-and-weekends)** if you have the NFT. N&W is kinda like an accelerator we run -- build out any idea you want over 6-weeks, come out to San Francisco for 3-days to build IRL, and present your work at demo day in front of thousands. N&W alumni have gone on to raise millions of dollars.
 
 ### Please do this or Raza will be sad.
-
 In `#sd-general` — tell the world why you’re curious about doing this stuff. It’d be cool to understand why you’re curious about this stuff, what you’re trying to build, what inspired you to get into this, etc.
 
 Also, this is a cool way to make some friends — the magical thing about buildspace is that over **140,000 people are in the Discord** and you never know who may see your message, resonate with what you say, and reach out to you!

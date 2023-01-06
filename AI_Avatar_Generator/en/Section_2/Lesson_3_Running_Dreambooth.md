@@ -1,8 +1,8 @@
-****************************************Before you get started, make sure your Google Drive account has at least 5 GB of free space.**************************************** We’ll be saving the fine-tuned model to Gdrive, and it takes up about 2-3 gigs.
+**Before you get started, make sure your Google Drive account has at least 5 GB of free space.** We’ll be saving the fine-tuned model to Gdrive, and it takes up about 2-3 gigs.
 
 We’re going to be using an extra special version of Stable Diffusion which is optimised for memory. The best part? The entire training/tuning workflow will happen in Google Colab without writing a single line of code!
 
-Be warned though - even though Colab is free, the resources aren’t permanently available. Make sure you have at least ******************60 minutes****************** free to go through this section, cause if you leave it running you might run out of free hours.
+Be warned though - even though Colab is free, the resources aren’t permanently available. Make sure you have at least **60 minutes** free to go through this section, cause if you leave it running you might run out of free hours.
 
 If you ***do*** need to leave at any time before training finishes, you’ll have to disconnect your runtime using the dropdown menu next to the RAM/Disk bars on the top right. This will reset your environment so when you come back next time you’ll have to start from the top (step 1 in the notebook).
 
@@ -18,13 +18,13 @@ We’re ready to rumble!
 
 The notebook has a few extra bits that you can ignore on the first run. 
 
-**********************Remember -********************** You’ll only need to run each block one time.  
+**Remember -** You’ll only need to run each block one time.  
 
 The first block will connect our notebook to a virtual machine and show us what we’re connected to. This block also starts a timer — you only get a limited number of GPU hours for free.
 
 ![](https://hackmd.io/_uploads/SyBBupV5j.png)
 
-************************************Set up environment************************************
+**Set up environment**
 
 The first thing we’re gonna do is sort out the requirements. Every time we open up a new Colab notebook, we’re connecting to a brand-new virtual machine. You’ll need to install requirements every time your machine disconnects - the state is cleared.
 
@@ -44,7 +44,7 @@ Chuck that bad boy into the token field and run when the requirements block is a
 
 ![](https://hackmd.io/_uploads/SyG_dpV9o.png)
 
-**************************************************************Hold up - wtf is HuggingFace?**************************************************************
+**Hold up - wtf is HuggingFace?**
 
 In order for us to go from text → image on our app, we’re going to need to run Stable Diffusion! For now, we’ll be able to do this in Colab, but Colab doesn’t have API endpoints it can expose. This means we need to be able to host and run SD somewhere - remember that it’s insanely GPU intensive, meaning it will only allow like 1% of the world to use our app lol.  
 
@@ -60,7 +60,7 @@ Next, we need a fancy lib called xformers. These are an additional dependency th
 
 The version will need to be kept updated, it’s 0.0.15 at the time of writing - if this breaks, head over to `#section-2` help and tag the mods.
 
-******************************************Configure your model******************************************
+**Configure your model**
 
 Let’s take a lil breather here! You just did a lot of awesome stuff in Colab:
 
@@ -80,15 +80,15 @@ runwayml/stable-diffusion-v1-5
 
 The way you choose a model is by putting in the path of the URL on HuggingFace. So `https://huggingface.co/runwayml/stable-diffusion-v1-5` becomes `runwayml/stable-diffusion-v1-5`.
 
-************************MAKE SURE `save_to_gdrive` IS CHECKED!** That way if the notebook crashes for whatever reason, you won’t have to retrain your entire model again :)
+**MAKE SURE `save_to_gdrive` IS CHECKED!** That way if the notebook crashes for whatever reason, you won’t have to retrain your entire model again :)
 
-**Please note** — even though you ****can**** use other fine-tuned models, our notebook only supports Stable Diffusion v1.5 and v2.1. If you somehow got your hands on the MidJourney model, it won’t work here.
+**Please note** — even though you **can** use other fine-tuned models, our notebook only supports Stable Diffusion v1.5 and v2.1. If you somehow got your hands on the MidJourney model, it won’t work here.
 
-****************Configure training resources****************
+**Configure training resources**
 
 The beauty of this model is that it’s incredibly optimised and can be configured to run with comparatively fewer resources. Luckily we won’t need to mess around with this - Google Colab will push it out.
 
-Head over to step 5.5 so we can tell Stable Diffusion *****what***** we’re training it on.
+Head over to step 5.5 so we can tell Stable Diffusion ***what*** we’re training it on.
 
 **Instance prompt**: this describes exactly what your images are of. In our case it's whatever we decided as the name ("abraza" for me) and "man/woman/person". This is the **label** for the images we uploaded.
 
@@ -96,13 +96,13 @@ Head over to step 5.5 so we can tell Stable Diffusion *****what***** we’re tra
 
 ![](https://hackmd.io/_uploads/SJWi_TE9i.png)
 
-**Step 6 -** **************************Upload images**************************
+**Step 6 -** **Upload images**
 
 This one’s pretty straightforward! Run the block, a “Choose Files” button will pop up. Click choose files and upload the images we prepped earlier. 
 
 ![](https://hackmd.io/_uploads/r17adp4qi.png)
 
-****************************************************Step 7 - Configure training options****************************************************
+**Step 7 - Configure training options**
 
 Wait, wait, wait. We are already getting ready to train this thing on our face? This feels like a magic trick has been exposed to you right? I hope you are seeing how doing this, while takes a solid amount of time, is actually so straight forward with the current tech out there! Let’s freaking run this thing 🤘
 
@@ -131,7 +131,7 @@ Step 8 converts the weights to a CKPT format - this is necessary if we want to u
 
 Step 9 prepares the converted model so it’s ready for inference. Again - you don’t need to know how this works, this bit is here in case you want to change the `model_path`. 
 
-******************************Generate images******************************
+**Generate images**
 
 We’re here - the promised land. Use your magic prompt powers and the unique subject identifier to make some magic happen.
 
@@ -143,7 +143,7 @@ Here’s me as a Peaky Blinders character, a mafia boss, and if I were in Blink1
 
 ![https://hackmd.io/_uploads/HygXHa49i.png](https://hackmd.io/_uploads/HygXHa49i.png)
 
-I got all of these on the ******first****** try! ****************UNREAL.**************** 
+I got all of these on the **first** try! **UNREAL.** 
 
 Here’s the prompts I used:
 
@@ -190,6 +190,6 @@ Just like that, you have an image generated, just like in Colab! Head over to yo
 
 **Wow — you just created a custom model, hosted your model somewhere, AND now have an endpoint you can call in your web app 👀**
 
-********************************************************************Please do this or Raza will be sad********************************************************************
+**Please do this or Raza will be sad**
 
 The coolest part about MidJourney is the Discord server. You can see what everyone else is doing and it really inspires you. I want you to share your best prompts in `#prompts`. Tell us what works and what doesn’t! This new tech is a mystery, we can figure it out amongst ourselves :)

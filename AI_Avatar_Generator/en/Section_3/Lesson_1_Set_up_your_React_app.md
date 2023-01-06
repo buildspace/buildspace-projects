@@ -7,7 +7,6 @@ We’re going to take this even further by creating a web app that uses this mod
 The beauty of this is you don’t have to use a human face (ya alien faces count too lol). But in all seriousness, you can train a model of a tree, a bridge, or even your guitar. It’s freaking insane to see what you can work with here tbh.
 
 ### Get the starter code
-
 Let’s go ahead and start by forking the starter repo. We are going to fork it so we can use a tool called [railway](https://railway.app/) to easily deploy our app generator to the world! [Click here to fork the repo](https://github.com/buildspace/ai-avatar-starter/fork). 
 
 Go ahead and clone your brand new fork, open the folder in your favorite text editor (I’m using VSCode) and run the command `npm i` . Then you’ll be ready to start the project by running `npm run dev`

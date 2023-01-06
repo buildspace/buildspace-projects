@@ -163,7 +163,6 @@ const bufferToBase64 = (buffer) => {
 It’s a super simple function that takes in a `buffer` and adds some image decorators to it so our UI will know it’s an image!
 
 Now take that function and inside of our `generateAction` and add this function in the `ok` response:
-
 ```jsx
 const generateAction = async (req, res) => {
   console.log('Received request');

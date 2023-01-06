@@ -77,7 +77,7 @@ Overall, large language models have both advantages and disadvantages. While the
 
 
 
-所以，在这种情况下，我的 `basePrompt` **** 是：
+所以，在这种情况下，我的 `basePrompt` ** 是：
 
 ```
 Write me a blog post in the style of Paul Graham with the title below. Please make sure the blog post goes in-depth on the topic and shows that the writer did their research.
@@ -152,7 +152,7 @@ My name is Abraham Lincoln and my opinion on ${req.body.userInput} is that
 
 
 
-*************注意：这是我在基本提示中间插入用户输入的提示示例。***************
+***注意：这是我在基本提示中间插入用户输入的提示示例。***
 
 在上面的这种情况下，我们希望林肯在 `that` 之后开始说话，这样我们就不需要在这里换行了。
 
@@ -180,7 +180,7 @@ My name is Abraham Lincoln and my opinion on ${req.body.userInput} is that
 
 **如果你的结果是 meh 并且你正在进行零次学习，请尝试使用单次学习提示，看看会发生什么。**
 
-我向您展示的可使结果质量提高 10 倍的主要技巧是 ******提示链接******。
+我向您展示的可使结果质量提高 10 倍的主要技巧是 **提示链接**。
 
 你的提示我没法直接帮你，因为每个人的提示都不一样。 但是，我将向您展示我如何使用提示链接将我的结果提高 10 倍。 而且，您也可以将我的学习应用到您的构建中！
 
@@ -219,13 +219,13 @@ Blog Post:
 
 我的第二个提示建立在我的第一个提示的基础上，这也是您需要做的，但要针对您自己的用例。 这很棘手，但是，你明白了。
 
-************所以，我的新提示最终为我产生了一些非常好的结果，比我以前的提示好 10 倍************。 我只是在两个 Playgrounds 上玩弄它。 为您的用例尝试提示链接！ 看看会发生什么。
+**所以，我的新提示最终为我产生了一些非常好的结果，比我以前的提示好 10 倍**。 我只是在两个 Playgrounds 上玩弄它。 为您的用例尝试提示链接！ 看看会发生什么。
 
 ### 在您的 API 中添加提示链接。
 
 现在让我们在 `api/generate.js` 中设置它！
 
-你的会看起来 ********非常******** 不同，因为你会有不同的提示！ ************ 但是，我将再一次向您展示我是如何进行操作的，以便您可以对自己的策略使用相同的策略。
+你的会看起来 **非常** 不同，因为你会有不同的提示！ ** 但是，我将再一次向您展示我是如何进行操作的，以便您可以对自己的策略使用相同的策略。
 
 我们需要将两个 API 请求链接起来。 就像您使用两个 Playgrounds 并复制粘贴结果一样，我们只需要做同样的事情，但都是编程式的。 下面是我们要做的：
 

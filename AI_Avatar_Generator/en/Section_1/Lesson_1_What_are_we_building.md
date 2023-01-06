@@ -1,4 +1,4 @@
-### Putting ____ in your favorite movie scenes
+### Putting _______ in your favorite movie scenes
 
 Imagine this: You invite your friends over for movie night. The latest blockbuster hit is out, so you get everything ready: pizza, popcorn, H20. You pull up the TV/projector. The first thing on screen? **YOU**! Before the movie even plays, all your friends are treated to an incredible piece of art depicting *you* as the protagonist. Everyone's gonna remember this one. 
 

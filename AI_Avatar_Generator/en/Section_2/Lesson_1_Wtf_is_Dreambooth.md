@@ -2,7 +2,7 @@ You’re now well-versed with what Stable Diffusion is and how it works. Except 
 
 In comes [Dreambooth](https://dreambooth.github.io/) - a machine learning technique that lets you generate photorealistic images of specific subjects in a variety of different contexts. 
 
-Stable Diffusion knows everything about the general world - what clouds look like, how bald Dwayne “The Rock” Johnson is, and what rainbows are made of. Using Dreambooth, you can teach it what ********you******** look like too!
+Stable Diffusion knows everything about the general world - what clouds look like, how bald Dwayne “The Rock” Johnson is, and what rainbows are made of. Using Dreambooth, you can teach it what **you** look like too!
 
 ### How do Dreambooth + SD work together?
 

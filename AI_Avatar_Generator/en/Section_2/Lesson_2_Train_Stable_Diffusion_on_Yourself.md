@@ -9,9 +9,9 @@ Here’s a few rules for your pics:
 1. **Pictures should contain only you** - no friends, dogs, samosas, aunties
 2. **Clear backgrounds -** If you can’t get white backgrounds, use [https://remove.bg/](https://remove.bg/) to remove them entirely
 3. **Picture quality** - Pictures should be well lit
-4. **Picture size** - At least 720p at the minimum. You ************can************ use laptop webcams but you need to be in a well-lit place lol
+4. **Picture size** - At least 720p at the minimum. You **can** use laptop webcams but you need to be in a well-lit place lol
 
-You gotta be careful here - more images do ********not******** mean better results! For my first set I used 19 pics and it came out pretty meh. The big mistake I made was using a blue background in ************every************ picture. I taught SD that I always have a blue background, so it generated results with blue backgrounds!
+You gotta be careful here - more images do **not** mean better results! For my first set I used 19 pics and it came out pretty meh. The big mistake I made was using a blue background in **every** picture. I taught SD that I always have a blue background, so it generated results with blue backgrounds!
 
 ![](https://hackmd.io/_uploads/H1hAD6Ncj.png)
 
@@ -43,7 +43,7 @@ Checkout this quick TL;DR on Jupyter notebooks on Google Colab:
 
 [https://www.loom.com/share/8fca2d8ef42642d4b5e76ed5279c67d3](https://www.loom.com/share/8fca2d8ef42642d4b5e76ed5279c67d3)
 
-We ****can**** use Jupyter notebooks in VS Code, but we’ll be using Google Colab cause we get free compute! Who can say no to a free Tesla T4 GPU?  
+We **can** use Jupyter notebooks in VS Code, but we’ll be using Google Colab cause we get free compute! Who can say no to a free Tesla T4 GPU?  
 
 Colab notebooks can be shared like files, so I’ll just give you a link that you can copy over to your Google Drive. 
 

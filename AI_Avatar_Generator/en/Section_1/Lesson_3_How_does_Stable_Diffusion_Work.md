@@ -1,6 +1,6 @@
 Let's take a step back and talk about how all this works. Yah Stable Diffusion is a deep learning, text-to-image model, but what does that mean??? Understanding it will make you a lot better at using it.
 
-**********Note -********** *I’m going to be simplifying a lot of this stuff and sticking to the important bits. This tech is once in a decade type stuff that you’ll need an actual PhD to understand, so I’ll skip the math lol.*
+**Note -** *I’m going to be simplifying a lot of this stuff and sticking to the important bits. This tech is once in a decade type stuff that you’ll need an actual PhD to understand, so I’ll skip the math lol.*
 
 ### The basics behind Stable Diffusion
 
@@ -54,7 +54,7 @@ Think of a bunch of round objects that you’ve seen. How do you know a football
 
 You’ve probably never thought about this, but in your head, you’ve got at least three “axes” - one for shape, one for color, another for size maybe. Footballs are in one spot on this graph, bowling balls are on another.
 
-Stable Diffusion does something similar, except it has a ********lot******** more dimensions and variables. Here our big brain gets left behind - it can’t visualize more than 3 dimensions, but our models have more than 500 dimensions and an insane number of variables. This is called **************************latent space.**************************
+Stable Diffusion does something similar, except it has a **lot** more dimensions and variables. Here our big brain gets left behind - it can’t visualize more than 3 dimensions, but our models have more than 500 dimensions and an insane number of variables. This is called **latent space.**
 
 ![](https://hackmd.io/_uploads/SkK9v6Nco.png)
 
@@ -74,6 +74,6 @@ And now you know how Stable Diffusion works! Check [this](https://jalammar.githu
 
 You might feel like there’s not much point in understanding how any of this works, but now that you do, you’ll be able to build things that others can’t even think of. As I was writing this, OpenAI launched its [new and improved embedding model](https://openai.com/blog/new-and-improved-embedding-model/), which is 99.8% cheaper. 
 
-The model for GPT-3 isn’t open-source, so we can’t use it to make custom applications, but we ****can**** use the embeddings API to match sets of text directly. This can be used for all sorts of awesome apps, like recommendation systems and natural language search! 
+The model for GPT-3 isn’t open-source, so we can’t use it to make custom applications, but we **can** use the embeddings API to match sets of text directly. This can be used for all sorts of awesome apps, like recommendation systems and natural language search! 
 
 The stuff you’ve just learned is going to compound and take you places you can’t think of :)

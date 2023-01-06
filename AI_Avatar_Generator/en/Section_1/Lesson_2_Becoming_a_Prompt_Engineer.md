@@ -18,7 +18,7 @@ There are a couple of places you can generate images, we are going to start with
 
 You’ll start with 100 credits, which will be enough for 100-200 images based on your settings. Make sure you open up the settings and crank up the steps - the higher the # of steps, the greater the accuracy of the image. I went with 75 steps. You’ll also want to change the model to Stable Diffusion 2.1 (or whatever the latest one is). I also turned it down to two images per prompt cuz I don’t wanna blow through the credits lol. 
 
-What I want you to do here is ******************************find your style******************************. Play around with all the modifiers I’m gonna share. We’ll build up layer by layer, so you’ll have lots of chances to mix things up. 
+What I want you to do here is **find your style**. Play around with all the modifiers I’m gonna share. We’ll build up layer by layer, so you’ll have lots of chances to mix things up. 
 
 I’m going to base my site on creating AI Avatars around the LOTR world. This is your time to pick a theme and go all in on it. Your app by the end will be 10x better if you have a direction to follow.
 
@@ -38,7 +38,7 @@ We are going to generate epic art as we go through each pillar of what makes art
 
 **Leonardo. Raphael. Michelangelo. Donatello.** 
 
-Almost all of the world’s most renown artists have distinct art styles. The internet is full of their work and all sorts of derivatives - inspirations, tributes, imitations. This makes using artist names in prompts *********************************incredibly********************************* powerful.   
+Almost all of the world’s most renown artists have distinct art styles. The internet is full of their work and all sorts of derivatives - inspirations, tributes, imitations. This makes using artist names in prompts **incredibly** powerful.   
 
 Artist names are going to have the **most** impact on the style of your image. It's going to be the base your image is built on and will be responsible for a good chunk of the vibe. 
 
@@ -50,7 +50,7 @@ If, like me, the only artists you know are the ones named after the Teenage Muta
 - Paul Cezanne
 - Jan van Eyck
 
-This specific modifier is a really tricky one - all text-to-image models are trained on art taken from the internet, without explicit permission from their creators. There’s a lot of ongoing discussions about ******who****** owns the images generated using these models and a lot of artists are angry because they don’t consent to their art being used for training. 
+This specific modifier is a really tricky one - all text-to-image models are trained on art taken from the internet, without explicit permission from their creators. There’s a lot of ongoing discussions about **who** owns the images generated using these models and a lot of artists are angry because they don’t consent to their art being used for training. 
 
 The names on this list weren’t chosen by accident - 4 of them are historically famous portrait artists (who are dead), the fifth is okay with their name being used for AI art.
 
@@ -58,7 +58,7 @@ All this is to say - **respect artists’ decisions and don’t use specific art
 
 You could go on sites like [ArtStation](https://www.artstation.com/) and [DeviantArt](https://www.deviantart.com/) to find more artists you like, or maybe take a shower and go to your local art museum, I promise it’ll be worth it and you’ll learn a lot more about art.
 
-**********************************Time to generate!**********************************
+**Time to generate**
 
 I live in Auckland, New Zealand - just an hour away from the Shire, so I’m gonna use SD to imagine Gandalf if he was made by Disney. Here’s my first prompt!
 
@@ -111,7 +111,7 @@ Not much has changed. I’ve added in “3D render” and left the rest as it is
 
 **Insane —** how frickin cool is this??
 
-******************Aesthetic******************
+**Aesthetic**
 
 You’ve got your medium and your artist. Next we’ve got the vibes — is this a lofi kinda mood or are we going cyberpunk?
 
@@ -140,20 +140,20 @@ A Pixar style 3D artwork of Gandalf from Lord of the Rings, smiling with his mou
 
 This is starting to legit look like a Pixar version of LOTR lol.
 
-**********************Descriptor**********************
+**Descriptor**
 
 The last ingredient I want to cover is the most vague one - it’s not one specific area, it’s general descriptors.
 
-- ************Time -************ 1970s, stone age, apocalypse, ancient, great depression, world war II, victorian
-- ********************Seasons -******************** Winter, summer, spring, autumn
-- ************************Holidays -************************ Eid, Christmas, Diwali, Easter, Halloween, Hanukkah
-- ********************Details -******************** Detailed, hyper-realistic, high definition, trending on ArtStation (yes, really)
+- **Time** 1970s, stone age, apocalypse, ancient, great depression, world war II, victorian
+- **Seasons** Winter, summer, spring, autumn
+- **Holidays** Eid, Christmas, Diwali, Easter, Halloween, Hanukkah
+- **Details** Detailed, hyper-realistic, high definition, trending on ArtStation (yes, really)
 
 Take a stab at this and add a couple of these descriptors to your prompt! When you get an image you like, make sure to drop it in `#prompts` in our Discord to show others what you came up with!
 
-There’s **************************so much more************************** you can do with prompts. You could spend weeks learning all about how humans describe things. I’ll leave you to it with this one bit you need to remember:
+There’s **so much more** you can do with prompts. You could spend weeks learning all about how humans describe things. I’ll leave you to it with this one bit you need to remember:
 
-********************************************AI models are trained on almost all of human media on the internet********************************************. 
+**AI models are trained on almost all of human media on the internet** 
 
 That means anything you can find on the internet this model probably knows about. Stills from famous movies. Fan art of characters. Breakdowns of iconic scenes from specific directors. Shots of varying camera angles, different films, resolutions, lighting, lenses, photo genres. The AI has seen all (except the NSFW stuff, they removed it :P).
 
@@ -163,13 +163,13 @@ Here’s a few handy links with various examples of what words can do:
 
 [**Medium**](https://docs.google.com/document/d/1_yQfkfrS-6PuTyYEVxs-GMSjF6dRpapIAsGANmxeYSg/edit)
 
-**[Color](https://docs.google.com/document/d/1XVfmu8313A4P6HudVDJVO5fqDxtiKoGzFjhSdgH7EYc/edit)**
+**[Color]**(https://docs.google.com/document/d/1XVfmu8313A4P6HudVDJVO5fqDxtiKoGzFjhSdgH7EYc/edit)
 
 [**Camera**](https://docs.google.com/document/d/1kh853h409DeRTg-bVo_MSYXrWjMDRMX9kLq9XVFngus/edit)
 
 **[Lighting](https://docs.google.com/document/d/1qcpgNsA-M998zy0ngVvNcMs2AYHpMuAjAefM6p63Tp8/edit)**
 
-**********[Film](https://docs.google.com/document/d/1vM9izOU4bQIcrKxAZiw85Q826zb6kBsjUQKdawm3lyk/view)********** 
+**Film](https://docs.google.com/document/d/1vM9izOU4bQIcrKxAZiw85Q826zb6kBsjUQKdawm3lyk/view)** 
 
 Take a step back and look at your beautiful (and not so beautiful) creations. You are well on your way to generating the next wave of amazing art for the world — now let’s 10x that.
 
@@ -193,7 +193,7 @@ For the other models out there, they each have their different weights. If you d
 
 ### Negative prompts
 
-We’ve talked a bunch about how to tell Stable Diffusion if you want something in your images, but what if you *******don’t******* want something? Let me show you :). 
+We’ve talked a bunch about how to tell Stable Diffusion if you want something in your images, but what if you ***don’t*** want something? Let me show you :). 
 
 You might have noticed I’ve been telling Stable Diffusion I want Gandalf to smile with his mouth closed for a bunch of prompts. This is cause it usually messed up his teeth. I can do the same thing by giving it a negative weight like this: `smiling:-1`
 

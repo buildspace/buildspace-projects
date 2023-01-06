@@ -26,6 +26,6 @@ Now that you've shipped this project, you'll get a super powerful NFT that gives
 
 1. [stability.ai](https://stability.ai/): this NFT will get you $25 in credits to use on stability.ai! All you need to do is send an email to buildspace@stability.ai and include your wallet address + OpenSea link and they will do the rest.
 2. [banana](https://www.banana.dev/): this NFT will get you 10 hours of GPU time (freaking insane).
-3. [brev](https://brev.dev/): this NFT will give you 10 hours of GPU time (also freaking insane). 
+3. [brev](https://brev.dev/): this NFT will give you 10 hours of GPU time (also freaking insane).
 
 Keep an eye out on your email for instructions on how to claim :)

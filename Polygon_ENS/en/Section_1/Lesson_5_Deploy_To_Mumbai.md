@@ -166,7 +166,7 @@ If it worked — **AWEEEEESOME YOU JUST DEPLOYED A CONTRACT YESSSS.**
 
 Now thats not all.. Not only did you just deploy your contract, but you ALSO minted your first domain as an NFT 🎉. Whats even better is we can see it RIGHT NOW on OpenSea’s Testnet!
 
-Head to [testnets.opensea.io](https://testnets.opensea.io/). Search for your contract address which is the address we deployed to that you can find in your terminal, ****Don't click enter****, click the collection itself when it comes up in the search.
+Head to [testnets.opensea.io](https://testnets.opensea.io/). Search for your contract address which is the address we deployed to that you can find in your terminal, **Don't click enter**, click the collection itself when it comes up in the search.
 
 ![https://i.imgur.com/UvRYjhX.png](https://i.imgur.com/UvRYjhX.png)
 

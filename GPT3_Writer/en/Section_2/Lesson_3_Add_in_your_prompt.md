@@ -67,7 +67,7 @@ However, large language models also have several disadvantages. First, they requ
 Overall, large language models have both advantages and disadvantages. While they can be very powerful, they also come with some risks. When deciding whether or not to use a large language model, it is important to weigh the pros and cons carefully.
 ```
 
-So, in this case my `basePrompt` ****was:
+So, in this case my `basePrompt` **was:
 
 ```
 Write me a blog post in the style of Paul Graham with the title below. Please make sure the blog post goes in-depth on the topic and shows that the writer did their research.
@@ -130,7 +130,7 @@ For example, if you have this prompt:
 My name is Abraham Lincoln and my opinion on ${req.body.userInput} is that
 ```
 
-*************Note: this is an example of a prompt where I inject user input in the middle of the base prompt.*************
+***Note: this is an example of a prompt where I inject user input in the middle of the base prompt.***
 
 In this case above, we want Lincoln to start talking after `that` so we wouldn’t need a new line here.
 
@@ -156,7 +156,7 @@ Now you just need to spend some time improving your prompt. I showed you a ton o
 
 **If your results are meh and you’re doing zero-shot learning, try out a prompt with single-shot learning and see what happens.**
 
-The main trick I showed you that can 10X the quality of your results is ******prompt chaining******.
+The main trick I showed you that can 10X the quality of your results is **prompt chaining**.
 
 I can’t help you directly with your prompt, because everyone’s prompt is so different. But, I’ll show you how I used prompt chaining to 10X my results. And, you can apply my learnings to your build as well!
 
@@ -193,13 +193,13 @@ Blog Post:
 
 My second prompt builds on my first prompt, and this is what you need to do as well but for your own use-case.  It’s tricky, but, you got this.
 
-************So, my new prompts ended up generating some insanely good results for me that were 10X better than my previous prompt************. I just messed around with it in two Playgrounds. Try out prompt chaining on your end for your use case! See what happens.
+**So, my new prompts ended up generating some insanely good results for me that were 10X better than my previous prompt**. I just messed around with it in two Playgrounds. Try out prompt chaining on your end for your use case! See what happens.
 
 ### Add prompt chaining in your API.
 
 Now let’s set it up in `api/generate.js`!
 
-Yours will look ********very******** different because you’ll have different prompts! ************But, once again, I’m going to show you how I did mine so you can use the same strategy for yours.
+Yours will look **very** different because you’ll have different prompts! **But, once again, I’m going to show you how I did mine so you can use the same strategy for yours.
 
 We need to chain two API requests. Just like you’re using two Playgrounds and copy pasting results, we just need to do the same thing but all programatically. Here’s what we’re going to do:
 

@@ -41,7 +41,7 @@ All you’d have to do is `[concat](https://developer.mozilla.org/en-US/docs/Web
 
 These two bits are really important! Most devs don’t really think about how simple tweaks like these impact the user experience. By being explicit about what the user needs to describe, everyone from your grandma to your dog will be able to generate good stuff.
 
-************************************************************************Designing simple products takes more work than messy, complicated products.************************************************************************
+**Designing simple products takes more work than messy, complicated products.**
 
 My design has lots of room for improvement. Should the artist field be a dropdown instead? Wtf is a descriptor? What do vibes even look like? 
 
@@ -49,7 +49,7 @@ I’ll leave it up to you to take it further, maybe store generated images and t
 
 ### How do I let other people generate avatars of their own?
 
-The big money maker. Getting people to generate their own images. There’s no way around training models - you’ll need to use Dreambooth to created a customised model **for each person**. This **********will********** cost money. The way the big players like Lensa and AvatarAI do it is renting bare metal GPUs via cloud providers like AWS or GCP.
+The big money maker. Getting people to generate their own images. There’s no way around training models - you’ll need to use Dreambooth to created a customised model **for each person**. This **will** cost money. The way the big players like Lensa and AvatarAI do it is renting bare metal GPUs via cloud providers like AWS or GCP.
 
 Their entire operation is a programmatic way of the manual parts you did in this build.
 

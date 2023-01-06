@@ -10,7 +10,7 @@
 
 通常，设置服务器是一件非常痛苦的事情。
 
-但是，我们现在实际上正在使用一种叫做 NextJS 的东西——它是 React 的一个框架。 它使 ************** 真正*************** 易于设置 *后端* *无服务器* *功能*。 这些是按需在云端运行的功能，因此，我们不需要维护自己的服务器。 问题解决了。
+但是，我们现在实际上正在使用一种叫做 NextJS 的东西——它是 React 的一个框架。 它使 ** 真正*** 易于设置 *后端* *无服务器* *功能*。 这些是按需在云端运行的功能，因此，我们不需要维护自己的服务器。 问题解决了。
 
 真的很简单，让我们开始吧！
 
@@ -51,7 +51,7 @@ OPENAI_API_KEY=INSERT_YOUR_API_KEY_HERE
 
 
 
-[此处](https://beta.openai.com/account/api-keys) 生成您的 API 密钥并将其粘贴进去。您 *************** 不*** *********** 需要格式化 `.env` 文件，只需按原样粘贴，不带引号或空格，如上所示！
+[此处](https://beta.openai.com/account/api-keys) 生成您的 API 密钥并将其粘贴进去。您 *** 不*** *** 需要格式化 `.env` 文件，只需按原样粘贴，不带引号或空格，如上所示！
 
 这是我这边的样子：
 
@@ -59,7 +59,7 @@ OPENAI_API_KEY=INSERT_YOUR_API_KEY_HERE
 
 
 
-**********************************注意：您可能需要重新启动终端并再次执行“yarn dev”。 有时，如果不重启，我们的前端将无法获取 `.env` 文件。*
+**注意：您可能需要重新启动终端并再次执行“yarn dev”。 有时，如果不重启，我们的前端将无法获取 `.env` 文件。*
 
 太棒了，现在让我们完成 `generate.js` 来实际调用 OpenAI API。 在 `const openai` 行下添加以下代码：
 ```jsx
@@ -86,7 +86,7 @@ export default generateAction;
 
 砰的一声，我们完成了。 我们创建了一个无服务器的后端函数，可以安全地调用 OpenAI。 让我们把这个分解一下：
 
-首先，我们使用 `createCompletion` 端点，您可以在[此处](https://beta.openai.com/docs/api-reference/completions/create) 查看它。 它有 ***** 很多***** 参数。 我们需要给它的4个最重要的参数是：
+首先，我们使用 `createCompletion` 端点，您可以在[此处](https://beta.openai.com/docs/api-reference/completions/create) 查看它。 它有 *** 很多*** 参数。 我们需要给它的4个最重要的参数是：
 
 - `model`——我们要使用的模型类型。 截至目前，“text-davinci-003”是最先进的模型。 您可以[在此处](https://beta.openai.com/docs/models/gpt-3) 探索其他模型。
 - `prompt` — 这是我们传递的提示符，就像我们在 Playground 中所做的那样。 在这种情况下，我们传递给它现在是一个空字符串的`basePromptPrefix`（我们稍后会用到它）和`req.body.userInput`，它将是用户在前端的`textarea`中输入的输入 我们发送给这个 API 函数。
@@ -136,7 +136,7 @@ const callGenerateEndpoint = async () => {
 
 - 我调用  `setIsGenerating(true)` 将加载状态设置为`true`。 在函数的底部，我执行了`setIsGenerating(false)`，因为那时我们已经完成了 API 的使用，可以将加载状态设置为`false`。
 - 我对我们的 API 做了一个简单的 `fetch` — 注意我使用的路径：`/api/generate`。 NextJS 会根据我们的目录结构自动为我们创建这条路由：`api/generate.js`。 非常酷！
-- 从那里，我通过执行 `await response.json()` 将响应转换为 JSON，然后提取 `output`。 *********************************************注意：我正在使用 [object destructing ](https://www.javascripttutorial.net/es6/javascript-object-destructuring/) 在这里。*
+- 从那里，我通过执行 `await response.json()` 将响应转换为 JSON，然后提取 `output`。 ***注意：我正在使用 [object destructing ](https://www.javascripttutorial.net/es6/javascript-object-destructuring/) 在这里。*
 - 最后，我使用 `setApiOutput` 将 `apiOutput` 实际设置为 GPT-3 输出的实际文本。
 
 要全面测试，请通过执行以下操作将 `callGenerateEndpoint` 添加到“生成”按钮的 `onClick` 事件中：
@@ -157,7 +157,7 @@ const callGenerateEndpoint = async () => {
 
 
 
-*************注意：OpenAI 的 API 有时可能会很慢。***************
+***注意：OpenAI 的 API 有时可能会很慢。***
 
 ### 将 GPT-3 的输出添加到我们的 UI。
 

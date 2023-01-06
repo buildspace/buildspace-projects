@@ -183,7 +183,7 @@ First off — the url. This url is the path that points to your model in hugging
 
 The next thing you’ll notice is there is a `headers` object in our request. In order for Hugging Face to allow us to use their Inference API, we need to have an API key associated with our account. This key will tell Hugging Face we are authorized to access this Inference API — **so make sure to keep it secret.**
 
-Head over to the [tokens](https://huggingface.co/settings/tokens) page and get a write token - you ****can**** use the same one you generated for your Colab, it’ll work fine.
+Head over to the [tokens](https://huggingface.co/settings/tokens) page and get a write token - you **can** use the same one you generated for your Colab, it’ll work fine.
 
 In our `generateAction` function you’ll see some weird syntax that looks like this `processs.env.HF_AUTH_KEY`. This is a special way for Next.js to read secret keys like this without exposing it to the user! Imagine if everyone could see your password every time you logged into a website? This helps stop that!
 
