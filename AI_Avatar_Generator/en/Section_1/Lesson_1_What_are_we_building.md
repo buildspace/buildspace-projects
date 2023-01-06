@@ -13,7 +13,7 @@ Ever wondered what you'd look like as Patrick Bateman in the 2000 cult classic A
 **Here’s the plan**: 
 
 1. We’ll start by learning all about prompts and how this tech works by making a bunch of really cool avatars
-2. Next we learn about Dreambooth - a special technique that let’s you **fine-tune** Stable Diffusion on a specific subject (you!) by **teaching** it what you look like
+2. Next we'll dive into this thing called Dreambooth - a special technique that let’s you **fine-tune** Stable Diffusion on a specific subject (you!) by **teaching** it what you look like
 3. We’ll then build an app that uses that model so your friends can use to put you anywhere!
 
 ### What are we building?

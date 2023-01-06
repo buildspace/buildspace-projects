@@ -1,6 +1,6 @@
 
 ### Getting tasty photos of yourself
-**It is time.** 
+**The time has come -- time to start training.** 
 
 The first thing you’ll need to do is gather training data. Since we’re making AI avatars of ourselves, we’ll have to get a bunch of pictures. For your first run, I recommend going with 5-10 images. These can’t just be your average selfies though, we have to be very careful with what we teach the AI.
 
@@ -9,7 +9,7 @@ Here’s a few rules for your pics:
 1. **Pictures should contain only you** - no friends, dogs, samosas, aunties
 2. **Clear backgrounds -** If you can’t get white backgrounds, use [https://remove.bg/](https://remove.bg/) to remove them entirely
 3. **Picture quality** - Pictures should be well lit
-4. **Picture size** - At least 720p at the minimum. You **can** use laptop webcams but you need to be in a well-lit place lol
+4. **Picture size** - At least 720p at the minimum. You **can** use laptop webcams but you need to be in a well-lit place (super important!)
 
 You gotta be careful here - more images do **not** mean better results! For my first set I used 19 pics and it came out pretty meh. The big mistake I made was using a blue background in **every** picture. I taught SD that I always have a blue background, so it generated results with blue backgrounds!
 
@@ -21,7 +21,7 @@ Let’s take some pics!! Grab your phone, webcam, DSLR — whatever you got and 
 
 Once you’ve got all your pics and are happy with the backgrounds, we can prep them for processing. The main thing we need to do here is to resize them to 512x512 because that’s the size of all the images we’ll be generating. Head over to [Birme](https://www.birme.net/?target_width=512&target_height=512) and resize all your pics to 512x512. 
 
-The last thing you need to do is rename all your pics with a unique label. SD has millions of data points for what a “man”, “woman” or “handsome AI developer” looks like. It probably also has lots of results for your first name. So what we need to do here is give you, the subject, a distinct name that we can use in prompts.
+The last thing you need to do is rename all your pics with a unique label. SD has millions of data points for what a “man”, “woman” or “handsome AI developer” looks like. It probably has lots of results for your first name as well. So we need to give you, the subject, a distinct name that we can use in prompts.
 
 I’m mashing my first and last names to get “abraza”. So in a prompt I’d go “Oil paint portrait of **abraza** as a professional wrestler by Vincent Van Gogh”.
 

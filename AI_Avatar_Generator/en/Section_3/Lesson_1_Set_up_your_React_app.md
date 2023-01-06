@@ -19,14 +19,14 @@ Very nice! We will be working with `next.js` to build our UI + single API for th
 
 **NOW** — go ahead and head back to your code editor and let’s get some basic things in here. 
 
-First, change your one-liner! Head to the `index.js` file and update your title and description with the type of generator you’re making. We are going to be building an epic guitar generator, so I’ll change mine to — “Silly picture generator” + change the description to “generate amazing portraits of my guitar by using ‘ajd guitar’”! 
+First, change your one-liner! Head to the `index.js` file and update your title and description with the type of generator you’re making. We are going to be building a silly picture generator, so I’ll change mine to — “Silly picture generator” + change the description to "Turn me into anyone you want! Make sure you refer to me as "abraza" in the prompt".
 
 ```jsx
 const Home = () => {
   return (
     <div className="root">
       <Head>
-				{/* Add one-liner here */}
+        {/* Add one-liner here */}
         <title>Silly picture generator | buildspace</title>
       </Head>
       <div className="container">
@@ -38,8 +38,7 @@ const Home = () => {
           <div className="header-subtitle">
             {/* Add description here */}
             <h2>
-              Turn me into anyone you want! Make sure you refer to me as
-							"abraza" in the prompt
+              Turn me into anyone you want! Make sure you refer to me as "abraza" in the prompt
             </h2>
           </div>
         </div>
@@ -77,8 +76,7 @@ We are going to start by adding a prompt container right under the div holding o
       </div>
       <div className="header-subtitle">
         <h2>
-          Turn me into anyone you want! Make sure you refer to me as
-					"abraza" in the prompt
+          Turn me into anyone you want! Make sure you refer to me as "abraza" in the prompt
         </h2>
       </div>
       {/* Add prompt container here */}
@@ -116,12 +114,12 @@ import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
 
 const Home = () => {
-	// Create state property
+  // Create state property
   const [input, setInput] = useState('');
-	
-	return (
-		// rest of code
-	)
+  
+  return (
+    // rest of code
+  )
 }
 
 export default Home;
@@ -131,7 +129,7 @@ Now that we have a way to hold what someone is writing in our input box, we need
 
 ```jsx
 <div className="prompt-container">
-	{/* Add value property */}
+  {/* Add value property */}
   <input className="prompt-box" value={input} />
 </div>
 ```
@@ -143,15 +141,16 @@ Start by creating a new function right under where you declared your `input` cal
 ```jsx
 const Home = () => {
   const [input, setInput] = useState('');
-	// Add this function
+  // Add this function
   const onChange = (event) => {
     setInput(event.target.value);
   };
-
-	return (
-		// rest of code	
-	)
+  
+  return (
+    // rest of code	
+  )
 }
+
 export default Home;
 ```
 
@@ -161,7 +160,7 @@ Now, we just need to tell our input UI to call this function every time you type
 
 ```jsx
 <div className="prompt-container">
-	{/* Add onChange property */}
+  {/* Add onChange property */}
   <input className="prompt-box" value={input} onChange={onChange} />
 </div>
 ```
@@ -202,12 +201,12 @@ const Home = () => {
   };
   // Add generateAction
   const generateAction = async () => {
-		console.log('Generating...');	
-	}
-
+    console.log('Generating...');	
+  }
+  
   return (
-		// rest of code
-	}
+    // rest of code
+  )
 }
 
 export default Home;

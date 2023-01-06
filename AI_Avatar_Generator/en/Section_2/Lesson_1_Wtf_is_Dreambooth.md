@@ -1,6 +1,6 @@
-You’re now well-versed with what Stable Diffusion is and how it works. Except it has one big problem - you can’t teach it new things. There’s no way I can give it 10 pictures of my dog and make it generate images of my dog on the bed so I can gaslight him into thinking he broke the rules.
+You’re now well-versed with what Stable Diffusion is and how it works. Except it has one big problem - **you can’t teach it new things**. There’s no way I can give it 10 pictures of my dog and make it generate images of my dog on the bed so I can gaslight him into thinking he broke the rules.
 
-In comes [Dreambooth](https://dreambooth.github.io/) - a machine learning technique that lets you generate photorealistic images of specific subjects in a variety of different contexts. 
+This is where [Dreambooth](https://dreambooth.github.io/) comes in. It's a machine learning technique that lets you generate photorealistic images of specific subjects in a variety of different contexts. 
 
 Stable Diffusion knows everything about the general world - what clouds look like, how bald Dwayne “The Rock” Johnson is, and what rainbows are made of. Using Dreambooth, you can teach it what **you** look like too!
 

@@ -6,7 +6,7 @@ A prompt is like a magic spell - it’s a sentence or set of phrases that descri
 
 ![](https://hackmd.io/_uploads/S1e-I649j.png)
 
-Ready to speak the language of the AI? We're going to be writing lots of prompts and we'll get into the advanced stuff quite quickly, so I suggest checking out this awesome [Prompt Engineering 101](https://buildspace.so/notes/prompt-engineering-101-sd) note from our resident prompt mastermind Jeffrey to get caught up. Check him out on [Twitter](https://twitter.com/ser_ando), he posts some crazy good shit there.
+We're going to be writing lots of prompts and we'll get into the advanced stuff quite quickly, so I suggest checking out this awesome [Prompt Engineering 101](https://buildspace.so/notes/prompt-engineering-101-sd) note from our resident prompt mastermind Jeffrey to get caught up. Check him out on [Twitter](https://twitter.com/ser_ando), he posts some crazy good shit there.
 
 Just a heads up here: creating prompts is a skill. You won’t become a prompt god within 30 minutes. Most of your prompts will suck, but that’s okay. 
 
@@ -20,7 +20,7 @@ You’ll start with 100 credits, which will be enough for 100-200 images based o
 
 What I want you to do here is **find your style**. Play around with all the modifiers I’m gonna share. We’ll build up layer by layer, so you’ll have lots of chances to mix things up. 
 
-I’m going to base my site on creating AI Avatars around the LOTR world. This is your time to pick a theme and go all in on it. Your app by the end will be 10x better if you have a direction to follow.
+I’m going to base my site on creating AI Avatars around the LOTR world. This is your time to pick a theme and go all in on it. Your app will end up 10x better if you have a direction to follow.
 
 Alright, alright enough explaining — let’s do this.
 
@@ -162,19 +162,19 @@ Here’s a few handy links with various examples of what words can do:
 
 [**Medium**](https://docs.google.com/document/d/1_yQfkfrS-6PuTyYEVxs-GMSjF6dRpapIAsGANmxeYSg/edit)
 
-**[Color]**(https://docs.google.com/document/d/1XVfmu8313A4P6HudVDJVO5fqDxtiKoGzFjhSdgH7EYc/edit)
+[**Color**](https://docs.google.com/document/d/1XVfmu8313A4P6HudVDJVO5fqDxtiKoGzFjhSdgH7EYc/edit)
 
 [**Camera**](https://docs.google.com/document/d/1kh853h409DeRTg-bVo_MSYXrWjMDRMX9kLq9XVFngus/edit)
 
-**[Lighting](https://docs.google.com/document/d/1qcpgNsA-M998zy0ngVvNcMs2AYHpMuAjAefM6p63Tp8/edit)**
+[**Lighting**](https://docs.google.com/document/d/1qcpgNsA-M998zy0ngVvNcMs2AYHpMuAjAefM6p63Tp8/edit)
 
-**Film](https://docs.google.com/document/d/1vM9izOU4bQIcrKxAZiw85Q826zb6kBsjUQKdawm3lyk/view)** 
+[**Film**](https://docs.google.com/document/d/1vM9izOU4bQIcrKxAZiw85Q826zb6kBsjUQKdawm3lyk/view)
 
 Take a step back and look at your beautiful (and not so beautiful) creations. You are well on your way to generating the next wave of amazing art for the world — now let’s 10x that.
 
 ### Advanced configuration flags
 
-Well, well, well — fancy seeing you here in the advanced section 😏. Hopefully you found some magic generating images with DreamStudio. Let’s see how we can make this even better by making it easier for SD to understand :).
+Well, well, well — fancy seeing you here in the advanced section 😏. Hopefully you found some magic generating images with DreamStudio. Let’s see how we can make this even better by making it easier for SD to understand.
 
 Most models out there have ways to configure settings *inside* your prompt. What you can do and how you do it depends on the model. For instance, DreamStudio let’s you combine multiple prompts with the pipe `|` character:
 
@@ -182,7 +182,7 @@ Most models out there have ways to configure settings *inside* your prompt. What
 Portrait illustration of Gandalf from Lord of the Rings : 2.0 | The Shire in the background: 0.4 | Renaissance oil painting
 ```
 
-The numbers after the prompt indicate the weight, which can go up +/-10.0. Click the question mark on the top left of the prompt input box for more detail :)
+The numbers after the prompt indicate the weight, which can go up +/-10.0. Click the question mark on the top left of the prompt input box for more detail
 
 ![](https://hackmd.io/_uploads/r1jo86Vcj.png)
 

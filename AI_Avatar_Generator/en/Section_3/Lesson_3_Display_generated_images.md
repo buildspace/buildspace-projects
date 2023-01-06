@@ -14,8 +14,7 @@ Let’s start with adding some UI elements in our render function like this:
       </div>
       <div className="header-subtitle">
         <h2>
-          Turn me into anyone you want! Make sure you refer to me as
-					"abraza" in the prompt
+          Turn me into anyone you want! Make sure you refer to me as "abraza" in the prompt
         </h2>
       </div>
       <div className="prompt-container">
@@ -187,7 +186,7 @@ const generateAction = async (req, res) => {
     const buffer = await response.buffer();
     // Convert to base64
     const base64 = bufferToBase64(buffer);
-		// Make sure to change to base64
+    // Make sure to change to base64
     res.status(200).json({ image: base64 });
   } else if (response.status === 503) {
     const json = await response.json();

@@ -32,12 +32,12 @@ const generateAction = async () => {
     },
     body: JSON.stringify({ input }),
   });
-
-	const data = await response.json();
+  
+  const data = await response.json();
 
   // If model still loading, drop that retry time
   if (response.status === 503) {
-		console.log('Model is loading still :(.')
+    console.log('Model is loading still :(.')
     return;
   }
 
@@ -62,10 +62,10 @@ Alright, first things first, lets create a new state property called `img`:
 ```jsx
 const Home = () => {
   const [input, setInput] = useState('');
-	// Create new state property
+  // Create new state property
   const [img, setImg] = useState(''); 
-
-	// rest of code
+  
+  // rest of code
 }
 
 export default Home;
@@ -84,11 +84,11 @@ const generateAction = async () => {
     },
     body: JSON.stringify({ input }),
   });
-
-	const data = await response.json();
+  
+  const data = await response.json();
 
   if (response.status === 503) {
-		console.log('Model still loading...');
+    console.log('Model still loading...');
     return;
   }
 
@@ -120,7 +120,7 @@ Okay epic — let’s write some code. First thing is first, let’s write a fun
 
 ```jsx
 const generateAction = async (req, res) => {
-	console.log('Received request')
+  console.log('Received request')
 }
 
 export default generateAction;
@@ -143,7 +143,7 @@ Inside the `generateAction` we are going to start by grabbing the input from our
 ```jsx
 const generateAction = async (req, res) => {
   console.log('Received request');
-	// Go input from the body of the request
+  // Go input from the body of the request
   const input = JSON.parse(req.body).input;
 };
 ```
@@ -179,7 +179,7 @@ This should look pretty similar to what we saw on the frontend, except with some
 
 First off — the url. This url is the path that points to your model in hugging face. This is mine, but to find yours all you need is this: 
 
-[`https://api-inference.huggingface.co/models/](https://api-inference.huggingface.co/models/buildspace/ai-avatar-generator%60){USERNAME}/{MODEL_NAME}`
+`https://api-inference.huggingface.co/models/{USERNAME}/{MODEL_NAME}`
 
 The next thing you’ll notice is there is a `headers` object in our request. In order for Hugging Face to allow us to use their Inference API, we need to have an API key associated with our account. This key will tell Hugging Face we are authorized to access this Inference API — **so make sure to keep it secret.**
 
@@ -227,7 +227,7 @@ const generateAction = async (req, res) => {
 
   // Check for different statuses to send proper payload
   if (response.ok) {
-		const buffer = await response.buffer();
+    const buffer = await response.buffer();
     res.status(200).json({ image: buffer });
   } else if (response.status === 503) {
     const json = await response.json();
@@ -275,7 +275,7 @@ const Home = () => {
   const [retry, setRetry] = useState(0);
   // Number of retries left
   const [retryCount, setRetryCount] = useState(maxRetries);
-	// rest of code
+  // rest of code
 }
 
 export default Home;
@@ -319,7 +319,7 @@ const generateAction = async () => {
     const data = await response.json();
 
     if (response.status === 503) {
-			// Set the estimated_time property in state
+      // Set the estimated_time property in state
       setRetry(data.estimated_time);
       return;
     }
@@ -367,19 +367,17 @@ const Home = () => {
   const onChange = (event) => {
     setInput(event.target.value);
   };
-
-	const generateAction = async () => {...}
-	
-	// Add useEffect here
-	useEffect(() => {
+  
+  const generateAction = async () => {...}
+  
+  // Add useEffect here
+  useEffect(() => {
     const runRetry = async () => {
       if (retryCount === 0) {
-        console.log(
-          `Model still loading after ${maxRetries} retries. Try request again in 5 minutes.`
-        );
+        console.log(`Model still loading after ${maxRetries} retries. Try request again in 5 minutes.`);
         setRetryCount(maxRetries);
         return;
-      }
+        }
 
       console.log(`Trying again in ${retry} seconds.`);
 
@@ -395,9 +393,9 @@ const Home = () => {
     runRetry();
   }, [retry]);
 	
-	return (
-		// rest of code
-	);
+  return (
+    // rest of code
+    );
 };
 ```
 
@@ -568,3 +566,8 @@ Now that we have a loading indicator set, let’s give this another spin — typ
 ![https://hackmd.io/_uploads/rJ27cpE9i.png](https://hackmd.io/_uploads/rJ27cpE9i.png)
 
 Yooo loading indicator working just as expected! Freaking insane.
+
+**WOW**. I know this was pretty long, but give yourself some kudos. You got threw one of the most difficult parts of this program
+
+### Please do this or Raza will be sad.
+This is a pretty dope moment. Head over to the `#progress` channel in discord and drop a screenshot of your web app that you have running! If you see someone elses, leave them some feedback as well :).

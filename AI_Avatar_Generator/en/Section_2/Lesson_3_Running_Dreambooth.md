@@ -80,7 +80,7 @@ runwayml/stable-diffusion-v1-5
 
 The way you choose a model is by putting in the path of the URL on HuggingFace. So `https://huggingface.co/runwayml/stable-diffusion-v1-5` becomes `runwayml/stable-diffusion-v1-5`.
 
-**MAKE SURE `save_to_gdrive` IS CHECKED!** That way if the notebook crashes for whatever reason, you won’t have to retrain your entire model again :)
+Super important -- **make sure `save_to_gdrive` is checked!** That way if the notebook crashes for whatever reason, you won’t have to retrain your entire model again 🥲.
 
 **Please note** — even though you **can** use other fine-tuned models, our notebook only supports Stable Diffusion v1.5 and v2.1. If you somehow got your hands on the MidJourney model, it won’t work here.
 
@@ -110,7 +110,7 @@ Okay, this next section may seem intimidating, but you don't have to touch most 
 
 Again, I've left these in here if you really know what you're doing and want to customise your model, for your first time all you need to do is:
 
-1. Change `max_train_steps`. You wanna keep this number lower than 2000 - the higher it goes, the longer training takes and the more "familiar" SD becomes with you. Keep this number small to avoid overfitting. The general rule of thumb here is 100 steps for each picture, plus 100 if you’re under 10 pics. So for 6 pictures, just set it to 700! If you think the results don’t look like you enough, just come back here and turn this number up lol
+1. **Change `max_train_steps`**. You wanna keep this number lower than 2000 - the higher it goes, the longer training takes and the more "familiar" SD becomes with you. Keep this number small to avoid overfitting. The general rule of thumb here is 100 steps for each picture, plus 100 if you’re under 10 pics. So for 6 pictures, just set it to 700! If you think the results don’t look like you enough, just come back here and turn this number up lol
 2. **Update `save_sample_prompt` to a prompt with your subject.** Right after training, this block will generate 4 images of you with this prompt. I recommend spazzing it up a bit more than just "Photo of xyz person", those come out quite boring. Put those prompting skills to use!
 
 ![](https://hackmd.io/_uploads/BJflFa4qs.png)

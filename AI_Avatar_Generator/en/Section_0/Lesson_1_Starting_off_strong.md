@@ -4,14 +4,14 @@ You don’t need to know *that* much to build this thing. I’ll give you the th
 **But, you should at least know how to code in one language and how to use the command line. If you know JS and React that helps a lot as well.**
 
 - If you don’t know how to code in any language at all, my recommendation is you go [here](https://scrimba.com/learn/learnjavascript) first. **Our specialty at buildspace isn’t teaching people to code from scratch**, there are much better platforms for that.
-- If you know how to code a *little* but aren’t that confident, see how far you get in this build! If you have issues or see obvious gaps in your knowledge, don’t worry. Just Google it, or go back to the basics here. We’ve also got a massive Discord community of builders that will be with you every step of the way!
-- If you know how to code in any language, but have never used React -- you’ll be just fine. If you end up really struggling w/ React, you can learn it [here](https://scrimba.com/learn/learnreact).
+- If you know how to code a *little* but aren’t that confident, see how far you get in this build! If you have issues or see obvious gaps in your knowledge, don’t worry. We’ve have a massive Discord community of builders that will be with you every step of the way!
+- If you know how to code in any language, but have never used React -- you’ll be just fine. If you end up really struggling with React, you can learn it [here](https://scrimba.com/learn/learnreact).
 - If you’re a pro I better see you at the end with a really fucking cool product. Inspire the rest of us!
 
 ### **All our content is fully open-source.**
 All of the content you see here is 100% open-source.
 
-We’ve had over 1000 PRs merged into our repo.
+We’ve had over a 1000 PRs merged into our repo.
 
 If you see an issue in the content or want to make an addition, just make a PR and once it’s accepted it’ll be instantly updated here for everyone.
 
@@ -39,7 +39,7 @@ There is zero harm in **building in public —** believe it or not, almost all t
 
 ### **What happens at the end?**
 
-At the end of every build at buildspace, you get the ability to claim a unique NFT. We’ve also got a pack of some **REALLY** cool perks to keep your AI journey going!
+At the end of every build at buildspace, you get the ability to claim a unique NFT. Use this NFT to unlock **REALLY** cool perks around epic AI/ML platforms to make your final ship that much better.
 
 This NFT gives you access to a few secret powers:
 

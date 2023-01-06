@@ -12,7 +12,7 @@ const response = await fetch('/api/generate', {
   headers: {
     'Content-Type': 'image/jpeg',
   },
-	body: JSON.stringify({ input: finalInput }),
+  body: JSON.stringify({ input: finalInput }),
 });
 ```
 
@@ -37,7 +37,7 @@ Here’s a messy mock-up of what this might look like:
 
 ![https://hackmd.io/_uploads/BJ_I96Vqo.png](https://hackmd.io/_uploads/BJ_I96Vqo.png)
 
-All you’d have to do is `[concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat)` the fields together for the final prompt. Ezpz. 
+All you’d have to do is [`concat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat) the fields together for the final prompt. Ezpz. 
 
 These two bits are really important! Most devs don’t really think about how simple tweaks like these impact the user experience. By being explicit about what the user needs to describe, everyone from your grandma to your dog will be able to generate good stuff.
 
@@ -63,11 +63,7 @@ If I had to guess, their flow is probably something like:
 
 All of this is simple-ish to do programmatically. The trick here is getting GPUs for as cheap as possible. Idk if you can get GPUs as cheap as Lensa ($3.49 for 100 avatars lol), but the opportunity here is in steps #2 and #3 I think. 
 
-There are awesome platforms out there that help you build these flows for a cheaper price such as, [banana.dev](https://banana.dev). We were able to get some credits from them to give you!
-
-Complete this project, claim your NFT, and get instructions on how you can get access to 10 free hours of GPU time!
-
-Maybe thats all you need to get your business going 🤘.
+There are awesome platforms out there that help you build these flows for a cheaper price such as, [banana.dev](https://banana.dev). Make sure to claim your NFT at the end to get some insane credits from them. Maybe thats all you need to get your business going 🤘.
 
 ## Deploy with Railway
 **GTFOL: Let’s go to prod.**
@@ -78,6 +74,6 @@ We don’t want to just stay on localhost, after all. That’d be boring! The wh
 
 Deploying a NextJS app has gotten **SUPER** easy - this should just take a few minutes — and then you’ll have a link to your creation you can share with the world.
 
-Check out this vid to find out what you’ll need to do here :)
+Check out this vid to find out what you’ll need to do here
 
 [https://vimeo.com/786521187](https://vimeo.com/786521187)

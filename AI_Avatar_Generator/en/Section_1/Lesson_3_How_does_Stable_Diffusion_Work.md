@@ -10,7 +10,7 @@ You see, in order to generate images from text, we need to first “train” a m
 
 **We basically give a computer a few billion images and tell it what each of those images contains, effectively “teaching” it what things are.** 
 
-Ya know how those captchas ask you to select the boxes with the sidewalks or traffic lights? You’re actually training the AI there lol
+Ya know how those captchas ask you to select the boxes with the sidewalks or traffic lights? You’re actually training the AI there lol.
 
 Once we teach the model how to link words in a text description to the corresponding images, it can use deep learning to figure out the relationships between the two on its own. The way “deep learning” works is it creates neural networks with layers of interconnected “neurons”, which process and analyse large amounts of data to solve problems like matching text to images.
 
@@ -50,7 +50,7 @@ This is where CLIP comes in - its job is taking these two embeddings and finding
 
 Think of a bunch of round objects that you’ve seen. How do you know a football is different from a bowling ball if you’re just looking at it? The way it looks, duh! 
 
-![football-prank.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8925f21d-4198-4268-aba3-73713f529018/football-prank.gif)
+![football-prank.gif](https://hackmd.io/_uploads/HybC9mB5o.gif)
 
 You’ve probably never thought about this, but in your head, you’ve got at least three “axes” - one for shape, one for color, another for size maybe. Footballs are in one spot on this graph, bowling balls are on another.
 
@@ -70,7 +70,7 @@ The process of navigating through this space and finding points that are related
 
 [Source](https://www.youtube.com/watch?v=SVcsDDABEkM)
 
-And now you know how Stable Diffusion works! Check [this](https://jalammar.github.io/illustrated-stable-diffusion/) out for a detailed explanation of the various parts if you’re curious and want to dig deeper. 
+There you have it! You now know the ground wokr for Stable Diffusion. Check [this](https://jalammar.github.io/illustrated-stable-diffusion/) out for a detailed explanation of the various parts if you’re curious and want to dig deeper.
 
 You might feel like there’s not much point in understanding how any of this works, but now that you do, you’ll be able to build things that others can’t even think of. As I was writing this, OpenAI launched its [new and improved embedding model](https://openai.com/blog/new-and-improved-embedding-model/), which is 99.8% cheaper. 
 
