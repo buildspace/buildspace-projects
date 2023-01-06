@@ -70,8 +70,7 @@ Pretty simple! You’ll learn that you don’t **need** a lot of detail in your 
 
 Here’s the best one I got back:
 
-![](https://hackmd.io/_uploads/Sy4VI649o.png)
-
+![](https://hackmd.io/_uploads/S1h7GWH9j.png)
 Not bad. The hair is a bit wonky and he’s missing teeth, but this is just our first prompt :P
 
 Let’s try changing up the medium!
