@@ -76,4 +76,4 @@ Deploying a NextJS app has gotten **SUPER** easy - this should just take a few m
 
 Check out this vid to find out what you’ll need to do here
 
-[https://vimeo.com/786521187](https://vimeo.com/786521187)
+[https://vimeo.com/786802338](https://vimeo.com/786802338)
