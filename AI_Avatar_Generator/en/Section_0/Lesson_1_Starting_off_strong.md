@@ -29,7 +29,7 @@ That’s why we have a mod team whose main goal it is to help you get through an
 
 Whenever you run into something you can hit the mods up directly in the Discord by doing `@mods` to ping them. You can also run `/question` which will alert the mods with your question.
 
-**Please keep all discussions around this build in the help sections of the `BUILD AN AI WRITER` section on the Discord. If you start asking questions in random channels in the Discord your question will most likely not get answered lol.**
+**Please keep all discussions around this build in the help sections of the `BUILD AI AVATARS` section on the Discord. If you start asking questions in random channels in the Discord your question will most likely not get answered lol.**
 
 If you don’t have access to these channels, relink your Discord [here](https://buildspace.so/p/build-ai-avatars).
 
