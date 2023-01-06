@@ -19,7 +19,7 @@ Very nice! We will be working with `next.js` to build our UI + single API for th
 
 **NOW** — go ahead and head back to your code editor and let’s get some basic things in here. 
 
-First, change your one-liner! Head to the `index.js` file and update your title and description with the type of generator you’re making. We are going to be building a silly picture generator, so I’ll change mine to — “Silly picture generator” + change the description to "Turn me into anyone you want! Make sure you refer to me as "abraza" in the prompt".
+First, change your one-liner! Head to the `index.js` file in `pages folder` and update your title and description with the type of generator you’re making. We are going to be building a silly picture generator, so I’ll change mine to — “Silly picture generator” + change the description to "Turn me into anyone you want! Make sure you refer to me as "abraza" in the prompt".
 
 ```jsx
 const Home = () => {

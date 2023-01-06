@@ -64,13 +64,13 @@ This right here is why our prompts are so powerful - **they're working in dimens
 
 We need hundreds of mathematical coordinates to navigate to a point using text. This is why our results get better when we add more modifiers.
 
-The process of navigating through this space and finding points that are related to a given input is called diffusion. Once it’s found the point closest to the text prompt, it works some more AI magic to generate the output image. 
+The process of navigating through this space and finding points that are related to a given input is called diffusion. Once it found the point closest to the text prompt, it works some more AI magic to generate the output image. 
 
 ![](https://hackmd.io/_uploads/HJEowaE5j.png)
 
 [Source](https://www.youtube.com/watch?v=SVcsDDABEkM)
 
-There you have it! You now know the ground wokr for Stable Diffusion. Check [this](https://jalammar.github.io/illustrated-stable-diffusion/) out for a detailed explanation of the various parts if you’re curious and want to dig deeper.
+There you have it! You now know the ground work for Stable Diffusion. Check [this](https://jalammar.github.io/illustrated-stable-diffusion/) out for a detailed explanation of the various parts if you’re curious and want to dig deeper.
 
 You might feel like there’s not much point in understanding how any of this works, but now that you do, you’ll be able to build things that others can’t even think of. As I was writing this, OpenAI launched its [new and improved embedding model](https://openai.com/blog/new-and-improved-embedding-model/), which is 99.8% cheaper. 
 
