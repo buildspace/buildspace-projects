@@ -40,7 +40,7 @@ Let me show you something wild. Open a new tab with an empty Playground. So, you
 In Playground #2, go ahead and write this prompt:
 
 ```
-Take the essay below and turn it into a tweet thread.
+Take the essay below and turn it into a tweet thread; number the tweets and show breaks in between.
 ```
 
 Now, underneath there — copy paste the output from Playground #1. So for me it looks like this:
