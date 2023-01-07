@@ -78,13 +78,13 @@ What's awesome here is this is a **super-secure way to get the user's public add
 **You can't call a contract anonymously**, you need to have your wallet credentials connected. This is almost like "signing in" and being authenticated :).
 
 ```solidity
-_tokenIds.increment();
+function tokenURI(uint256 _tokenId) public view override returns (string memory);
 ```
 
 We then do, override the `tokenURI()` function in ERC721.sol which will set the NFTs unique identifier along with the data associated w/ that unique identifier. It's literally us setting the actual data that makes the NFT valuable. In this case, we're setting it as "blah" which....isn't that valuable ;). It's also not following the standard of `ERC721`. We'll cover `tokenURI` more in a bit.
 
 ```solidity
-function tokenURI(uint256 _tokenId) public view override returns (string memory);
+_tokenIds.increment();
 ```
 
 After the NFT is minted, we increment `tokenIds` using `_tokenIds.increment()` (which is a function OpenZeppelin gives us). This makes sure that next time an NFT is minted, it'll have a different `tokenIds` identifier. No one can have a `tokenIds` that's already been minted too.
