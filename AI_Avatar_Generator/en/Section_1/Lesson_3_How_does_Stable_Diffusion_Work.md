@@ -52,7 +52,7 @@ Think of a bunch of round objects that you’ve seen. How do you know a football
 
 ![football-prank.gif](https://hackmd.io/_uploads/HybC9mB5o.gif)
 
-You’ve probably never thought about this, but in your head, you’ve got at least three “axes” - one for shape, one for color, another for size maybe. Footballs are in one spot on this graph, bowling balls are on another.
+You’ve probably never thought about this, but in your head, you’ve got at least three “axis” - one for shape, one for color, another for size maybe. Footballs are in one spot on this graph, bowling balls are on another.
 
 Stable Diffusion does something similar, except it has a **lot** more dimensions and variables. Here our big brain gets left behind - it can’t visualize more than 3 dimensions, but our models have more than 500 dimensions and an insane number of variables. This is called **latent space.**
 
