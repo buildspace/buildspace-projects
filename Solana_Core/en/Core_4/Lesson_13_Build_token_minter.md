@@ -17,7 +17,7 @@ const string = fs.readFileSync(
 export const PROGRAM_ID = Keypair.fromSecretKey(secretKey).publicKey
 ```
 
-ok, Ready! Let's get going, first change into the *TS* directory, and run *npm run start* -- hopefully you've already done *cargo build bpf* and *solana deploy*, and your clusters are set to be the same, if yes to all that, it should get up and running. You should see that stakes, redeems, and unstakes printing to the console. Patience young padawan, this will take a minute or two.
+ok, Ready! Let's get going, first change into the *TS* directory, and run *npm run start* -- hopefully you've already done *cargo build bpf* and *solana program deploy*, and your clusters are set to be the same, if yes to all that, it should get up and running. You should see that stakes, redeems, and unstakes printing to the console. Patience young padawan, this will take a minute or two.
 
 Assuming no errors 🎉, let's hop into the processor file: (/<project-name>/src/processor.rs).
 
