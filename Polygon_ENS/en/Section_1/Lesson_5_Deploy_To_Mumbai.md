@@ -115,7 +115,7 @@ BUT - before we can get our fancy contract on the testnet, we will need to make 
 We need to start with our `hardhat.config.js` file. You can find this in the root directory of your smart contract project. Here we are going to add what network we are using and some super secret keys:
 
 ```jsx
-require("@nomiclabs/hardhat-waffle");
+require("@nomicfoundation/hardhat-toolbox");
 
 module.exports = {
   solidity: "0.8.10",
