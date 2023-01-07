@@ -114,7 +114,7 @@ The beauty of Next.js is that you can easily spin up serverless functions within
 
 Go ahead and start by creating a new folder in the `pages` directory called `api` . Within this directory you are going to create a new file called `generate.js`. 
 
-The amazing think about Next.js is how it uses folder structures to define your API path. For example, we just create a folder called `api` and in that folder a file called `generate` . If you go back to your `index.js` file you’ll notice that the API endpoint we are calling is `api/generate`. It literally just uses the folder structure!
+The amazing thing about Next.js is how it uses folder structures to define your API path. For example, we just create a folder called `api` and in that folder a file called `generate` . If you go back to your `index.js` file you’ll notice that the API endpoint we are calling is `api/generate`. It literally just uses the folder structure!
 
 Okay epic — let’s write some code. First thing is first, let’s write a function that will be run when we hit this endpoint:
 
