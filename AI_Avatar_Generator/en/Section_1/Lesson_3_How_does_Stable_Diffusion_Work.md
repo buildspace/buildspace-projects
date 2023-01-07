@@ -64,7 +64,7 @@ This right here is why our prompts are so powerful - **they're working in dimens
 
 We need hundreds of mathematical coordinates to navigate to a point using text. This is why our results get better when we add more modifiers.
 
-The process of navigating through this space and finding points that are related to a given input is called diffusion. Once it’s found the point closest to the text prompt, it works some more AI magic to generate the output image. 
+The process of navigating through this space and finding points that are related to a given input is called diffusion. Once it found the point closest to the text prompt, it works some more AI magic to generate the output image. 
 
 ![](https://hackmd.io/_uploads/HJEowaE5j.png)
 

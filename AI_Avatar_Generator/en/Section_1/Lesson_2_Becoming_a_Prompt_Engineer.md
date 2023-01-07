@@ -154,7 +154,7 @@ There’s **so much more** you can do with prompts. You could spend weeks learni
 
 **AI models are trained on almost all of human media on the internet** 
 
-That means anything you can find on the internet this model probably knows about. Stills from famous movies. Fan art of characters. Breakdowns of iconic scenes from specific directors. Shots of varying camera angles, different films, resolutions, lighting, lenses, photo genres. The AI has seen all (except the NSFW stuff, they removed it :P).
+That means anything you can find on the internet this model probably knows about it too. Stills from famous movies. Fan art of characters. Breakdowns of iconic scenes from specific directors. Shots of varying camera angles, different films, resolutions, lighting, lenses, photo genres. The AI has seen all (except the NSFW stuff, they removed it :P).
 
 I’ve found the internet is bigger than my immediate imagination, so if you can imagine it, it’s likely that the AI knows about it, you just need to find the right words. 
 
