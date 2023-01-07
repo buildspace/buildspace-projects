@@ -2470,6 +2470,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "haytchde",
+      "name": "Harrison Dempsey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3625698?v=4",
+      "profile": "http://linkedin.com/in/harrisondempsey/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
