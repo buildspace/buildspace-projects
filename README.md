@@ -443,6 +443,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://about.me/neddinn"><img src="https://avatars.githubusercontent.com/u/544570?v=4?s=100" width="100px;" alt="Stephen"/><br /><sub><b>Stephen</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=neddinn" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/pablinche"><img src="https://avatars.githubusercontent.com/u/6430577?v=4?s=100" width="100px;" alt="pablinche"/><br /><sub><b>pablinche</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=pablinche" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="https://www.linkedin.com/in/affirmedvisionary/"><img src="https://avatars.githubusercontent.com/u/68870508?v=4?s=100" width="100px;" alt="Charlene Grant"/><br /><sub><b>Charlene Grant</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=AffirmedVisionary" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
