@@ -24,7 +24,7 @@ Head back to your `contextMenuServiceWorker.js`  file and add a new function cal
 
 ```javascript
 const sendMessage = (content) => {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  chrome.tabs.query({ url: "https://www.calmlywriter.com/online/" }, (tabs) => {
     const activeTab = tabs[0].id;
 
     chrome.tabs.sendMessage(
