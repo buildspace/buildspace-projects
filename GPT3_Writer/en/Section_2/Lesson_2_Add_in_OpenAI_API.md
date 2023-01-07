@@ -10,7 +10,7 @@ So, what we need to do is set up a backend to call OpenAI securely. Then, our fr
 
 Usually, setting up a server is a massive pain.
 
-But, we’re actually using something called NextJS right now — which is a framework for React. It makes it **************really************** easy to set up *backend* *serverless* *functions*. These are functions that just run in the cloud on-demand, so, we don’t need to maintain our own server. Problem solved.
+But, we’re actually using something called NextJS right now — which is a framework for React. It makes it **really** easy to set up *backend* *serverless* *functions*. These are functions that just run in the cloud on-demand, so, we don’t need to maintain our own server. Problem solved.
 
 It’s really easy, let's set it up!
 
@@ -47,13 +47,13 @@ So, go ahead and create a file named `.env` in the root of your project. Inside 
 OPENAI_API_KEY=INSERT_YOUR_API_KEY_HERE
 ```
 
-Generate your API key [here](https://beta.openai.com/account/api-keys) and paste it in. You **************don’t************** need to format the `.env` file, just paste it in as is without quotes or spaces as shown above!
+Generate your API key [here](https://beta.openai.com/account/api-keys) and paste it in. You **don’t** need to format the `.env` file, just paste it in as is without quotes or spaces as shown above!
 
 Here’s how it looks on my end:
 
 ![Untitled](https://i.imgur.com/A0BsiHa.png)
 
-*******************************Note: you may want to restart your terminal and do `yarn dev` again. Sometimes, our frontend won’t pick up the `.env` file without a restart.*
+***Note: you may want to restart your terminal and do `yarn dev` again. Sometimes, our frontend won’t pick up the `.env` file without a restart.*
 
 Cool, now let’s finish up `generate.js` to actually call the OpenAI API. Add the following code under the `const openai` line:
 
@@ -80,7 +80,7 @@ export default generateAction;
 
 And bam, we’re done. We’ve created a serverless, backend function that securely calls OpenAI. Let’s break this down a little:
 
-First, we’re using the `createCompletion` endpoint which you can check out [here](https://beta.openai.com/docs/api-reference/completions/create). It has *****a lot***** of options. The 4 most important things we need to give it is:
+First, we’re using the `createCompletion` endpoint which you can check out [here](https://beta.openai.com/docs/api-reference/completions/create). It has ***a lot*** of options. The 4 most important things we need to give it is:
 
 - `model` — Which is the model type we want to use. As of today, `text-davinci-003` is the most advanced model. You can explore other models [here](https://beta.openai.com/docs/models/gpt-3).
 - `prompt` — This is the prompt we’re passing, just like we’d do in Playground. In this case, we pass it `basePromptPrefix` which is an empty string right now (we’ll use it later) and `req.body.userInput` which will be the input that the user enters in the `textarea` on the frontend that we send to this API function.
@@ -128,7 +128,7 @@ Next, we hop into the `callGenerateEndpoint`. The summary:
 
 - I call `setIsGenerating(true)` to set the loading state to `true`. At the bottom of the function, I do `setIsGenerating(false)` because that’s when we’re all done with the API and can set the loading state to `false`.
 - I do a simple `fetch` to our API — notice the route I use: `/api/generate`. NextJS automatically creates this route for us based on the structure of our directory: `api/generate.js`. Pretty cool!
-- From there, I convert the response to JSON by doing `await response.json()` and then pull out `output`. *****************************************Note: I’m using [object destructuring](https://www.javascripttutorial.net/es6/javascript-object-destructuring/) here.*
+- From there, I convert the response to JSON by doing `await response.json()` and then pull out `output`. ***Note: I’m using [object destructuring](https://www.javascripttutorial.net/es6/javascript-object-destructuring/) here.*
 - Finally, I use `setApiOutput` to actually set `apiOutput` with the actual text that GPT-3 output.
 
 To test it all out, add `callGenerateEndpoint` to your “Generate” button’s `onClick` event by doing:
@@ -145,7 +145,7 @@ Now, go ahead and type something inside your `textarea` to test things out, hit 
 
 ![Untitled](https://i.imgur.com/QFkmaEs.png)
 
-*************Note: OpenAI’s API may be slow sometimes.*************
+***Note: OpenAI’s API may be slow sometimes.***
 
 ### Add GPT-3’s output to our UI.
 

@@ -196,7 +196,7 @@ Go ahead and update your app in the extension page then go to calmly or whicheve
 
 Wait a second, how do you know if anything happened? If you open up the browser console in developer settings, you’ll see… absolutely nothing!
 
-This is because service workers have *********their own********* *consoles*. Head back to your extensions menu and click the service worker link. This will open up a new DevTools window - here you can see all the log statements coming from the service worker 🙂.
+This is because service workers have ***their own*** *consoles*. Head back to your extensions menu and click the service worker link. This will open up a new DevTools window - here you can see all the log statements coming from the service worker 🙂.
 
 ![Untitled](https://i.imgur.com/2RHaPDt.png)
 
