@@ -13,7 +13,7 @@ solana-sdk = "~1.10.29"
 
 #### Initialize testing framework
 
-- Add to bottome of `processor.rs`
+- Add to bottom of `processor.rs`
 
 ```rust
 // Inside processor.rs
