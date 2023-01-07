@@ -174,7 +174,9 @@ Here are the 4 additions:
   import { PROGRAM_ID as METADATA_PROGRAM_ID } from "@metaplex-foundation/mpl-token-metadata"
 ```
 
-Time to test it our progress, make sure you're inside the `ts` director and do an `npm run start`.
+Time to test it our progress: 
+1) Rebuild your program with `cargo build-bpf`, then update it with `solana program deploy {path}`
+2) Make sure you're inside the `ts` director and do an `npm run start`.
 
 Assuming no errors, let's pop back into the `processor.rs` file and add similar data to our `process_redeem` function.
 
