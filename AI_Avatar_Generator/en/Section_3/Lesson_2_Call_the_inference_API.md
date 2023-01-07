@@ -146,6 +146,8 @@ const generateAction = async (req, res) => {
   // Go input from the body of the request
   const input = JSON.parse(req.body).input;
 };
+
+export default generateAction;
 ```
 
 At this point we will have the input that is sent over from the UI and can use it to call our Inference API in Hugging Face. For that we are going to write another fetch request. 
@@ -173,6 +175,8 @@ const generateAction = async (req, res) => {
     }
   );
 };
+
+export default generateAction;
 ```
 
 This should look pretty similar to what we saw on the frontend, except with some additions! 
@@ -237,6 +241,8 @@ const generateAction = async (req, res) => {
     res.status(response.status).json({ error: response.statusText });
   }
 };
+
+export default generateAction;
 ```
 
 This should be pretty self explanatory — we are checking for three different statuses: `ok`, `503`, and any other error! Let’s break these down a bit more:
