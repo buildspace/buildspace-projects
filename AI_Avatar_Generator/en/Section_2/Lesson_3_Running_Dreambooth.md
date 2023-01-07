@@ -186,7 +186,7 @@ Once you press compute, you’ll notice that you’ll get a “Model is loading�
 
 Sometimes this process can take up to **5 minutes.** So don’t be alarmed if you are waiting multiple minutes. 
 
-Just like that, you have an image generated, just like in Colab! Head over to your [usage link by clicking here](https://api-inference.huggingface.co/dashboard/usage). This think is actually pretty cool. Hugging Face gives you 30K free characters (essentially credits to run these queries). Thats **PLENTY** to get you started :).
+Just like that, you have an image generated, just like in Colab! Head over to your [usage link by clicking here](https://api-inference.huggingface.co/dashboard/usage). This thing is actually pretty cool. Hugging Face gives you 30K free characters (essentially credits to run these queries). Thats **PLENTY** to get you started :).
 
 **Wow — you just created a custom model, hosted your model somewhere, AND now have an endpoint you can call in your web app 👀**
 
