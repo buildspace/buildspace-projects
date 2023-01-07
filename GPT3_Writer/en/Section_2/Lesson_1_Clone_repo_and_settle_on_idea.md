@@ -103,6 +103,9 @@ const Home = () => {
     </div>
   );
 };
+
+export default Home;
+
 ```
 
 *Note: whenever I change code I’ll add a little comment above the part I changed/added to keep it easy for you. Ex. above I added the `{/* Add this code here*/}` comment above the div I added for the `textarea`.*
