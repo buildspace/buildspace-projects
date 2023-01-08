@@ -231,7 +231,7 @@ const generateAction = async (req, res) => {
 
   // Check for different statuses to send proper payload
   if (response.ok) {
-    const buffer = await response.buffer();
+    const buffer = await response.arrayBuffer();
     res.status(200).json({ image: buffer });
   } else if (response.status === 503) {
     const json = await response.json();
@@ -247,7 +247,7 @@ export default generateAction;
 
 This should be pretty self explanatory — we are checking for three different statuses: `ok`, `503`, and any other error! Let’s break these down a bit more:
 
-`ok` - Remember this is essentially any successful status code like a `200`. This means the call was a success and it should return back the image. Now the interesting part here is taking our response and converting it into a `buffer` . In order for us to set our image in our UI we will need to convert it into a form that our UI will be able to read. Let’s start with a buffer and see what happens :). 
+`ok` - Remember this is essentially any successful status code like a `200`. This means the call was a success and it should return back the image. Now the interesting part here is taking our response and converting it into an `arrayBuffer` . In order for us to set our image in our UI we will need to convert it into a form that our UI will be able to read. Let’s start with a an ArrayBuffer and see what happens :). 
 
 `503` - We will receive this when our model is still loading. This response will include two properties — `error` and `estimated_time` . `error` will just be a message stating what is happening and `estimated_time` is how much longer it may take to load the model. We will be using the `estimated_time` to setup a retry method soon so keep that in mind!
 
@@ -259,7 +259,7 @@ Write some prompt, press generate and let’s see what happens:
 
 ![https://hackmd.io/_uploads/SyARF64qo.png](https://hackmd.io/_uploads/SyARF64qo.png)
 
-Holy shit just like that and I received a response! You can see here that I responded with my buffer no problem! 
+Holy shit just like that and I received a response! You can see here that I responded with my ArrayBuffer no problem! 
 
 Now, let’s change the prompt a tad — woh we received a 503 😅. Looks like our model is still loading here:
 
