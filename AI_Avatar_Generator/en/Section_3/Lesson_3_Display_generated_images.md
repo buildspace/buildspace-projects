@@ -162,7 +162,7 @@ const bufferToBase64 = (buffer) => {
 };
 ```
 
-It’s a super simple function that takes in a `buffer` and adds some image decorators to it so our UI will know it’s an image!
+It’s a super simple function that takes in a `arrayBuffer` and adds some image decorators to it so our UI will know it’s an image!
 
 Now take that function and inside of our `generateAction` and add this function in the `ok` response:
 ```jsx
@@ -186,7 +186,7 @@ const generateAction = async (req, res) => {
   );
 
   if (response.ok) {
-    const buffer = await response.buffer();
+    const buffer = await response.arrayBuffer();
     // Convert to base64
     const base64 = bufferToBase64(buffer);
     // Make sure to change to base64
