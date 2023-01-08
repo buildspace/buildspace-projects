@@ -148,13 +148,16 @@ LFG. We are ready to display some images, pretty freaking hype ngl. Let’s go a
 
 Wait… wtf? This image is broken AF lol. 
 
-There is actually 1 more thing we need to do in order to get this to work properly. If you remember from our API , we were returning a `buffer` to our frontend. Well, in order to display an image we need to convert that `buffer` into a `base64` string. This is the only way that our frontend will understand what as an image!
+There is actually 1 more thing we need to do in order to get this to work properly. If you remember from our API , we were returning an `ArrayBuffer` to our frontend. Well, in order to display an image we need to convert that `ArrayBuffer` into a `base64` string. This is the only way that our frontend will understand what as an image!
 
 For this, let’s had back to `generate.js` and we are going to create a new function called `bufferToBase64` :
 
 ```jsx
 const bufferToBase64 = (buffer) => {
-  const base64 = buffer.toString('base64');
+  let arr = new Uint8Array(buffer);
+  const base64 = btoa(
+    arr.reduce((data, byte) => data + String.fromCharCode(byte), '')
+  )
   return `data:image/png;base64,${base64}`;
 };
 ```
