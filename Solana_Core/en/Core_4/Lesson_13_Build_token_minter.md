@@ -4,7 +4,7 @@ Alright, wow wow wow, we've come a long, let's get back to the NFT Staking Progr
 
 You'll notice a couple of different things here. There's now a 'TS' folder which has everything we previously had in our client project, in the Solana Playground.
 
-Change (/<project-name>/src/ts/src/utils/constants.ts) to `/<project-name>/src/ts/src/utils/constants.ts`
+One important modification is that in `/<project-name>/src/ts/src/utils/constants.ts`, the `PROGRAM_ID` is being read from projects keypair.
 
 ```ts
 const string = fs.readFileSync(
