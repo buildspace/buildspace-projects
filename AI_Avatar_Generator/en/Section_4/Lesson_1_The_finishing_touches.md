@@ -15,6 +15,10 @@ const response = await fetch('/api/generate', {
   body: JSON.stringify({ input: finalInput }),
 });
 ```
+Make sure to change `input` to `finalInput` in api/generate.js file as well!
+```jsx
+const input = JSON.parse(req.body).finalInput; //body has finalInput as a parameter now
+```
 
 `replace` takes in a regular expression, that’s what the `/raza/gi` fanciness is. You can use something like [AutoRegex](https://www.autoregex.xyz/) which is a GPT powered regex translator if you have various spellings or nicknames! Most of the time, `replace("name", "unique_ting")` will work just fine.
 
