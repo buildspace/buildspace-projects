@@ -2488,6 +2488,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ElliotPadfield",
+      "name": "Elliot Padfield",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25266190?v=4",
+      "profile": "http://elliotpadfield.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
