@@ -63,7 +63,7 @@
 我住在新西兰的奥克兰——离夏尔只有一个小时的路程，所以我要用 SD 来想象甘道夫如果他是迪斯尼制作。 这是我的第一个提示！
 
 ```json
-皮克斯风格的指环王甘道夫头像，在夏尔面前微笑
+A profile picture of Gandalf from Lord of the Rings in the style of Pixar, smiling, in front of The Shire
 ```
 
 很简单！ 您会了解到您不需要**在提示中**很多细节，您只需要具体说明您想要什么。 这是一个重要的区别。 我将设置中的步骤提高到 150 - 这使结果更好，但会花费更多的 GPU 时间。
@@ -101,7 +101,7 @@
 我想我想看看甘道夫的 3D 渲染图会是什么样子。 这是我更新的提示：
 
 ```
-指环王中甘道夫的皮克斯风格 3D 渲染图，他闭着嘴微笑，在夏尔前面，后面是绿色的山丘
+A Pixar style 3D render of Gandalf from Lord of the Rings, smiling with his mouth closed, in front of The Shire, green hills in the back
 ```
 
 没有太大变化。 我添加了“3D 渲染”，其余部分保持原样。
@@ -132,7 +132,7 @@
 我想要一些幻想色彩的东西，所以我选择了这个：
 
 ```
-《指环王》中甘道夫的皮克斯风格 3D 艺术作品，他闭着嘴微笑，在夏尔前面，后面是绿色的山丘，梦幻般的鲜艳色彩
+A Pixar style 3D artwork of Gandalf from Lord of the Rings, smiling with his mouth closed, in front of The Shire, green hills in the back, fantasy vivid colors
 ```
 
 ![](https://hackmd.io/_uploads/SJEqI6V5o.png)
@@ -179,7 +179,7 @@
 大多数型号都可以在您的提示*内部*配置设置。 您可以做什么以及如何做取决于模型。 例如，DreamStudio 让您将多个提示与竖线“|”字符结合起来：
 
 ```
-《指环王》中甘道夫的肖像插图：2.0 | 背景中的夏尔：0.4 | 文艺复兴时期的油画
+Portrait illustration of Gandalf from Lord of the Rings : 2.0 | The Shire in the background: 0.4 | Renaissance oil painting
 ```
 
 提示后的数字表示权重，可以增加 +/-10.0。 点击提示输入框左上角的问号查看更多详情
@@ -197,7 +197,7 @@
 你可能已经注意到我一直在告诉 Stable Diffusion 我希望 Gandalf 闭着嘴微笑以获得一堆提示。 这是因为它通常弄乱了他的牙齿。 我可以通过给它一个负权重来做同样的事情：`smiling:-1`
 
 ```
-文艺复兴时期的指环王甘道夫肖像，采用雅典学派风格，色彩鲜艳，细节丰富：2.0 | 背景中的夏尔：0.8 | 详细的巴洛克绘画，米开朗基罗·博纳罗蒂，拉斐尔：1.0 | 微笑：-1 | 重复：-1
+Renaissance portrait of Gandalf from Lord of the Rings in the style of The School of Athens, vibrant colours, highly detailed : 2.0 | The Shire in the background : 0.8 | Detailed baroque painting, Michelangelo Buonarroti, Raphael : 1.0 | Smiling: -1 | Duplication: -1
 ```
 
 这是我得到的：
