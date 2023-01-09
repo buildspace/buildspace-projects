@@ -16,11 +16,11 @@ We’ll do this by building a Chrome browser extension that will let us inject G
 
 ### Why build an extension?
 
-Browser extensions are seriously overlooked. They’re basically an easy way to modify parts of the internet and can make **************insane************** products. Just recently, PayPal bought Honey, a browser extension that adds coupons to online checkouts for $4 billion 🤯. 
+Browser extensions are seriously overlooked. They’re basically an easy way to modify parts of the internet and can make **insane** products. Just recently, PayPal bought Honey, a browser extension that adds coupons to online checkouts for $4 billion 🤯. 
 
 By combining the versatility of browser extensions with the massive brain that GPT-3 has, you can use anything on the internet to generate stuff. Imagine an extension like [Blackmagic](https://blackmagic.so/) that generates responses to tweets lol.
 
-One important bit of context here is that you need to focus your extension on ******one****** area or website. Think of Grammarly - it works on `textarea` components. Password managers only work with `password` inputs. I’ll show you the cheat codes on one website and leave it up to you to take it and build whatever crazy ideas you have :).
+One important bit of context here is that you need to focus your extension on **one** area or website. Think of Grammarly - it works on `textarea` components. Password managers only work with `password` inputs. I’ll show you the cheat codes on one website and leave it up to you to take it and build whatever crazy ideas you have :).
 
 ### How an extension works
 
@@ -55,7 +55,7 @@ There’s nothing in here except some assets and a `manifest.json` file. The `ma
 
 The goal of this extension is for you to build on your current idea. For example, if you’re creating a blog post generator and you use Substack all the time, you can build this extension to work with Substack and insert your GPT-3 generated text **DIRECTLY** into Substack’s text editor. It’s pretty powerful and you’re about to unlock this new power.
 
-I’m going to continue building on my magic blog post generator and inject it into a site called [Calmly](https://www.calmlywriter.com/online/). It’s a text editor I use all the time. Again - **************you can pivot here.************** If you have a kick-ass idea for what GPT-3 can do on a specific website/app, go for it.
+I’m going to continue building on my magic blog post generator and inject it into a site called [Calmly](https://www.calmlywriter.com/online/). It’s a text editor I use all the time. Again - **you can pivot here.** If you have a kick-ass idea for what GPT-3 can do on a specific website/app, go for it.
 
 But — the strategy I’m going to show you here to inject into Calmly can be used on any website on the web — Reddit, Notion, Twitter, whatever.
 

@@ -115,7 +115,7 @@ BUT - before we can get our fancy contract on the testnet, we will need to make 
 We need to start with our `hardhat.config.js` file. You can find this in the root directory of your smart contract project. Here we are going to add what network we are using and some super secret keys:
 
 ```jsx
-require("@nomiclabs/hardhat-waffle");
+require("@nomicfoundation/hardhat-toolbox");
 
 module.exports = {
   solidity: "0.8.10",
@@ -166,7 +166,7 @@ If it worked — **AWEEEEESOME YOU JUST DEPLOYED A CONTRACT YESSSS.**
 
 Now thats not all.. Not only did you just deploy your contract, but you ALSO minted your first domain as an NFT 🎉. Whats even better is we can see it RIGHT NOW on OpenSea’s Testnet!
 
-Head to [testnets.opensea.io](https://testnets.opensea.io/). Search for your contract address which is the address we deployed to that you can find in your terminal, ****Don't click enter****, click the collection itself when it comes up in the search.
+Head to [testnets.opensea.io](https://testnets.opensea.io/). Search for your contract address which is the address we deployed to that you can find in your terminal, **Don't click enter**, click the collection itself when it comes up in the search.
 
 ![https://i.imgur.com/UvRYjhX.png](https://i.imgur.com/UvRYjhX.png)
 

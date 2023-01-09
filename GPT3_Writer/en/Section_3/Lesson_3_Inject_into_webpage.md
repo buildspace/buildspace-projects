@@ -324,7 +324,7 @@ First thing’s first, lets go through our content string and put each line in a
 
 Again, if we hit a `\n` (which also is `''` ) we are going to put a `br` element inside the `p` tag!
 
-Finally, we take that beautifully constructed `p` tag and append it to the `droid` `div` element that we found earlier. I guess those *****were***** the droids we were looking for.
+Finally, we take that beautifully constructed `p` tag and append it to the `droid` `div` element that we found earlier. I guess those ***were*** the droids we were looking for.
 
 ### Optional - adding host permission**
 If you are facing an issue where your targeted text area is not being populated by the response of OpenAI, it is because you don't have [host permission](https://developer.chrome.com/docs/extensions/mv3/declare_permissions/) to modify the data. To grant permission, simply add `"host_permissions": ["https://*/*"],` into `manifest.json`:

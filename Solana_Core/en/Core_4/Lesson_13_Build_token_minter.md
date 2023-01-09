@@ -4,7 +4,7 @@ Alright, wow wow wow, we've come a long, let's get back to the NFT Staking Progr
 
 You'll notice a couple of different things here. There's now a 'TS' folder which has everything we previously had in our client project, in the Solana Playground.
 
-One import modification is that in (/<project-name>/src/ts/src/utils/constants.ts), the `PROGRAM_ID` is being read from projects keypair.
+One important modification is that in `/<project-name>/src/ts/src/utils/constants.ts`, the `PROGRAM_ID` is being read from projects keypair.
 
 ```ts
 const string = fs.readFileSync(
@@ -17,7 +17,7 @@ const string = fs.readFileSync(
 export const PROGRAM_ID = Keypair.fromSecretKey(secretKey).publicKey
 ```
 
-ok, Ready! Let's get going, first change into the *TS* directory, and run *npm run start* -- hopefully you've already done *cargo build bpf* and *solana deploy*, and your clusters are set to be the same, if yes to all that, it should get up and running. You should see that stakes, redeems, and unstakes printing to the console. Patience young padawan, this will take a minute or two.
+ok, Ready! Let's get going, first change into the *TS* directory, and run *npm run start* -- hopefully you've already done *cargo build bpf* and *solana program deploy*, and your clusters are set to be the same, if yes to all that, it should get up and running. You should see that stakes, redeems, and unstakes printing to the console. Patience young padawan, this will take a minute or two.
 
 Assuming no errors 🎉, let's hop into the processor file: (/<project-name>/src/processor.rs).
 
@@ -169,9 +169,14 @@ Here are the 4 additions:
     METADATA_PROGRAM_ID,
 ```
 
-```import { PROGRAM_ID as METADATA_PROGRAM_ID } from "@metaplex-foundation/mpl-token-metadata"```
+```
+  import { TOKEN_PROGRAM_ID } from "@solana/spl-token"
+  import { PROGRAM_ID as METADATA_PROGRAM_ID } from "@metaplex-foundation/mpl-token-metadata"
+```
 
-Time to test it our progress, make sure you're inside the `ts` director and do an `npm run start`.
+Time to test it our progress: 
+1) Rebuild your program with `cargo build-bpf`, then update it with `solana program deploy {path}`
+2) Make sure you're inside the `ts` director and do an `npm run start`.
 
 Assuming no errors, let's pop back into the `processor.rs` file and add similar data to our `process_redeem` function.
 

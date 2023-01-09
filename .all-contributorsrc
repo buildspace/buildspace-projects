@@ -2452,6 +2452,51 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "pablinche",
+      "name": "pablinche",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6430577?v=4",
+      "profile": "https://github.com/pablinche",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "AffirmedVisionary",
+      "name": "Charlene Grant",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68870508?v=4",
+      "profile": "https://www.linkedin.com/in/affirmedvisionary/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "haytchde",
+      "name": "Harrison Dempsey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3625698?v=4",
+      "profile": "http://linkedin.com/in/harrisondempsey/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "BowTiedHeron",
+      "name": "BowTiedHeron",
+      "avatar_url": "https://avatars.githubusercontent.com/u/93859808?v=4",
+      "profile": "https://github.com/BowTiedHeron",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ElliotPadfield",
+      "name": "Elliot Padfield",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25266190?v=4",
+      "profile": "http://elliotpadfield.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

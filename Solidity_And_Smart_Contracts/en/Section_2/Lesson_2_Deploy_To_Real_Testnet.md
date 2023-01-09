@@ -132,8 +132,8 @@ module.exports = {
 In the root project folder, create a `.env` file and add your secrets. It should look like this:
 
 ```javascript
-STAGING_QUICKNODE_KEY=REPLACE_WITH_ACTUAL_QUICKNODE_URL     // Goerli Quicknode
-PROD_QUICKNODE_KEY=BLAHBLAH                                 // Mainnet Quicknode
+STAGING_QUICKNODE_KEY=REPLACE_WITH_ACTUAL_QUICKNODE_URL     
+PROD_QUICKNODE_KEY=BLAHBLAH                                
 PRIVATE_KEY=BLAHBLAH
 ```
 Finally, add `.env` to your `.gitignore` file so Git ignores it and your secrets don't leave your machine! If you're confused by any of this, just watch a YouTube video on it, it's easy stuff!
