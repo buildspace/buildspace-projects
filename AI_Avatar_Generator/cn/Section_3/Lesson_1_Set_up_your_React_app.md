@@ -15,7 +15,7 @@
 
 ![https://hackmd.io/_uploads/H17PFTEqj.png](https://hackmd.io/_uploads/H17PFTEqj.png)
 
-非常好！ 我们将使用 `next.js` 来为此构建我们的 UI + 单一 API :)。 如果您以前从未使用过 Next，请不要害怕。 我将带您穿越这个框架的神奇之地。
+非常好！ 我们将使用 `next.js` 来为此构建我们的 UI + 单一 API :)。 如果您以前从未使用过 Next，请不要害怕。 我将带您探索这个框架的神奇之处。
 
 **现在** — 继续并返回您的代码编辑器，让我们在这里获得一些基本的东西。
 
