@@ -26,7 +26,7 @@ import sdk from "./1-initialize-sdk.js";
     console.log("✅ Successfully revoked our superpowers from the ERC-20 contract");
 
   } catch (error) {
-    console.error("Failed to revoke ourselves from the DAO trasury", error);
+    console.error("Failed to revoke ourselves from the DAO treasury", error);
   }
 })();
 ```
