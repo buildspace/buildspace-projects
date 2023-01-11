@@ -6,7 +6,7 @@
 
 ![](https://hackmd.io/_uploads/S1e-I649j.png)
 
-我们将编写大量提示，我们将很快进入高级内容，所以我建议查看这个很棒的 [Prompt Engineering 101](https://buildspace.so/notes/prompt-engineering-101 -sd) 来自我们的常驻提示策划者 Jeffrey 的说明，让我们赶上来。 在 [Twitter](https://twitter.com/ser_ando) 上查看他，他在那里发布了一些疯狂的好东西。
+我们将编写大量提示，我们将很快进入高级内容，所以我建议查看这个很棒的 [Prompt Engineering 101](https://buildspace.so/notes/prompt-engineering-101-sd) 来自我们的常驻提示策划者 Jeffrey 的说明，让我们赶上来。 在 [Twitter](https://twitter.com/ser_ando) 上查看他，他在那里发布了一些疯狂的好东西。
 
 请注意：创建提示是一项技能。 你不会在 30 分钟内成为一个快速的上帝。 你的大部分提示都会很糟糕，但这没关系。
 
