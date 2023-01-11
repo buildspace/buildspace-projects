@@ -221,7 +221,7 @@ All pretty straightforward and things will make more sense as we start using the
 
 Then, we reuse our programID to tell the Solana Runtime which program we are trying to talk to, finally we make sure we connect to devnet by doing `clusterApiUrl('devnet')`.
 
-This `preflightCommitment: "processed"` thing is interesting. You can read on it a little [here](https://solana-labs.github.io/solana-web3.js/modules.html#Commitment). Basically, we can actually choose *when* to receive a confirmation for when our transaction has succeeded. Because the blockchain is fully decentralized, we can choose how long we want to wait for a transaction. Do we want to wait for just one node to acknowledge our transaction? Do we want to wait for the whole Solana chain to acknowledge our transaction?
+This `preflightCommitment: "processed"` thing is interesting. You can read on it a little [here](https://solana-labs.github.io/solana-web3.js/types/Commitment.html). Basically, we can actually choose *when* to receive a confirmation for when our transaction has succeeded. Because the blockchain is fully decentralized, we can choose how long we want to wait for a transaction. Do we want to wait for just one node to acknowledge our transaction? Do we want to wait for the whole Solana chain to acknowledge our transaction?
 
 In this case, we simply wait for our transaction to be confirmed by the *node we're connected to*. This is generally okay — but if you wanna be super super sure you may use something like `"finalized"` instead. For now, let's roll with `"processed"`.
 
