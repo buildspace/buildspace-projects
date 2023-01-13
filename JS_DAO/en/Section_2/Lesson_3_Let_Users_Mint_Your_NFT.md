@@ -33,7 +33,7 @@ From there, below our `console.log("👋 Address:", address);` we're going to ad
 
 We first initialize our `editionDrop` contract.
 
-From there, we use `useNFTBalance` to check how many NFTs the connected walled holds. This will actually query our deployed smart contract for the data. Why do we do `"0"`? Well, basically because if you remember `"0"` is the `tokenId` of our membership NFT. So, here we're asking our contract, "Hey, does this user own a token with id `"0"`?".
+From there, we use `useNFTBalance` to check how many NFTs the connected wallet holds. This will actually query our deployed smart contract for the data. Why do we do `"0"`? Well, basically because if you remember `"0"` is the `tokenId` of our membership NFT. So, here we're asking our contract, "Hey, does this user own a token with id `"0"`?".
 
 Now we know when a user doesn't have an NFT! Let's create a button to let the user mint one.
 
