@@ -93,7 +93,7 @@ export default App;
 
 That's a lot of imports. Don't worry, all you need to know is what each of them are for, no need to understand how they work in depth. Here's a quick summary for each bit.
 
-We start with React. `useMemo()` is a hook that loads stuff only if one of the dependencies changes. In our case, if the **network** the user is connected to doesn't change, the value of `clusterApiUrl` won't change either.
+We start with React. `useMemo()` is a hook that loads stuff only if one of the dependencies changes. In our case, the value of `clusterApiUrl` will only change if the network that the user is connected to, changes.
 
 The first Solana import we have is `wallet-adapter-network` from `@solana/wallet-adapter-base`. This is just an enumerable object for the available networks.
 
