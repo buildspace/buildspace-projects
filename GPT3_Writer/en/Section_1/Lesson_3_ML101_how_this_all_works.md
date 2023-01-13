@@ -21,7 +21,7 @@ So in the case above, the “input” is the sentence we’re providing and the 
 
 You may be wondering how we can multiply a sentence with a bunch of numbers. Essentially, each sentence is broken down into “**tokens**” and is converted into a set of numbers.
 
-GPT-3 has a dictionary created that maps pieces of words to numbers. For example, the word “gang” maybe be represented there as a `4332` token.
+GPT-3 has a dictionary created that maps pieces of words to numbers. For example, the word “gang” maybe be represented as a `4332` token.
 
 And by doing this, everything is just a number to GPT-3.
 
