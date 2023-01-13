@@ -19,7 +19,7 @@ output = input * parameter
 
 So in the case above, the “input” is the sentence we’re providing and the “parameter” is a unique number. **We gather up all the outputs from the 175 billion unique parameters, combine them, and get our final output: words that complete the sentence.**
 
-You may be wondering how we can multiply a sentence with a bunch of numbers. Essentially, each sentence is broken down into “**tokens**”, in other words each sentence is converted into a set of numbers.
+You may be wondering how we can multiply a sentence with a bunch of numbers. Essentially, each sentence is broken down into “**tokens**” and is converted into a set of numbers.
 
 GPT-3 has a dictionary created that maps pieces of words to numbers. For example, the word “gang” maybe be represented there as a `4332` token.
 
