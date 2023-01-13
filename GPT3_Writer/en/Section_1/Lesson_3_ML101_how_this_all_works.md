@@ -1,7 +1,7 @@
 
 You may be wondering how this thing works — and honestly, understanding how it works will make you even better at using it.
 
-*Note: if you already know how GPT-3 works (deep learning) feel free to skip this.*
+*Note: if you already know how GPT-3 (deep learning) works, feel free to skip this.*
 
 ### The basics behind GPT-3
 
