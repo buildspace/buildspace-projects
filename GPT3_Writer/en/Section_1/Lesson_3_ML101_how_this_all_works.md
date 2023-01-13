@@ -59,7 +59,7 @@ Now, if GPT-3 outputs “India” at the end of this sentence, what happens? Wel
 
 What we do here is we calculate the difference between “India” and “Konoha” — remember, GPT-3 deals in numbers. So we may say, “Hey, you gave us 4333 but we needed 32213”. We calculate the difference as an “error”.
 
-*Please note: I am simplifying this, the math that’s happening behind the scenes to calculate error is much more involved. But, you just want to understand it conceptually!*
+*Please note: I am simplifying this, the math that’s happening behind the scenes to calculate error is much more involved. But, we just want you to understand it conceptually!*
 
 This error, is then used to update each parameter in the model — we tell GPT-3 that it was off from the right answer by x amount and to adjust all its parameters slightly so it’ll be more likely to output the right answer next time.
 
