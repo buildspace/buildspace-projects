@@ -41,7 +41,7 @@ How the hell does GPT-3 know how to complete sentences?
 
 **Well, because the parameters were “trained” on a dataset that included a shit ton of text from the entire internet** — Wikipedia, news articles, blogs, github repos, twitter, forums, all of that stuff. GPT-3 is trained on nearly 500 billion tokens from the internet. All those YouTube comments, all those movie reviews, all those product landing pages, GPT-3 has seen all of it.
 
-So, what it means that the parameters are “trained” on this data?
+So, what does it mean when we say that the parameters are “trained” on this data?
 
 Here’s a sentence I pulled from the Wikipedia page for Naruto:
 
