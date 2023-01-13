@@ -11,7 +11,7 @@ Let’s go ahead and start by forking the starter repo. We are going to fork it 
 
 Go ahead and clone your brand new fork, open the folder in your favorite text editor (I’m using VSCode) and run the command `npm i` . Then you’ll be ready to start the project by running `npm run dev`
 
-If everything worked, you should be able to navigate to `[localhost:3000](http://localhost:3000)` in your favorite web browser and see:
+If everything worked, you should be able to navigate to [localhost:3000](http://localhost:3000) in your favorite web browser and see:
 
 ![https://hackmd.io/_uploads/H17PFTEqj.png](https://hackmd.io/_uploads/H17PFTEqj.png)
 
