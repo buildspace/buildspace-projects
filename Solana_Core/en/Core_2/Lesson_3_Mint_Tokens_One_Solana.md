@@ -133,7 +133,7 @@ async function main() {
 }
 ```
 
-Run `npm run start` - you should see three explorer links logged in the terminal. **Save the token mint account address.** You'll need it later. Open up the last link and scroll down to the token balances section:
+Run `npm run start` - you should see three explorer links logged in the terminal. (**Note**: Make sure you have `@solana/spl-token@0.2.0` or it will show error. To install type `npm uninstall @solana/spl-token` and `npm install @solana/spl-token@0.2.0` into the terminal **Save the token mint account address.** You'll need it later. Open up the last link and scroll down to the token balances section:
 
 ![](https://hackmd.io/_uploads/BJBT5nXms.png)
 
