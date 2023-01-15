@@ -28,7 +28,7 @@ In `api/generate.js` inside `generateAction`, add the header `x-use-cache` in th
 
 ```jsx
 const response = await fetch(
-    `https://api-inference.huggingface.co/models/harryb0905/sd-1-5-gorblemcworble`,
+    `https://api-inference.huggingface.co/models/buildspace/ai-avatar-generator`,
     {
         headers: {
             Authorization: `Bearer ${process.env.HF_AUTH_KEY}`,
