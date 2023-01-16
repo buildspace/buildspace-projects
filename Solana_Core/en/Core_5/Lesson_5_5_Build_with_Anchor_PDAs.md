@@ -236,16 +236,4 @@ We're using the `close` constraint to specify we are closing the `movie_revie
 
 The `has_one` constraint is used to restrict closing the account - the `reviewer` account must match the `reviewer` on the Movie Review account.
 
-We're all done! Test it out, it'll behave the same as the old native movie review program. You can compare with the solution code [here](https://beta.solpg.io/631b39c677ea7f12846aee8c) if something goes wrong :)
-
-#### 🚢 Ship challenge
-Now it’s your turn to build something independently. Because we're starting with very simple programs, yours will look almost identical to what we just created. It's useful to try and get to the point where you can write it from scratch without referencing prior code, so try not to copy and paste here.
-
-1. Write a new program that initializes a `counter` account and set the `count` field using the instruction data argument passed into the instruction
-2. Implement `initialize`, `increment` and `decrement` instructions
-3. Following what we did in the demo, write tests for each instruction
-4. Use `anchor deploy` to deploy your program. If you’re up for it, write a script like we’ve done previously to send transactions to your newly deployed program, then use Solana Explorer to look at the program logs.
-
-As always, get creative with these challenges and take them beyond the basic instructions if you want - and have fun!
-
-Try to do this independently if you can! But if you get stuck, feel free to reference the `solution-decrement` branch of [this repository](https://github.com/Unboxed-Software/anchor-counter-program/tree/solution-decrement).
+We're all done! Test it out, it'll behave the same as the old native movie review program. You can compare with the solution code [here](https://beta.solpg.io/63184c17bb7e0b5f4ca6dfa5) if something goes wrong :)
