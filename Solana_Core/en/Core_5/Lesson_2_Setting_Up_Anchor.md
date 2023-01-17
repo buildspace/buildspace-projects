@@ -41,7 +41,7 @@ The build/deploy setup is the same as native programs, you just gotta use differ
 anchor build
 ```
 
-This will take a few seconds and build the program in the workspace targeting Solana's BPF runtime and emits "IDLs" in the **`target/idl`** directory. You should also a similar output as when running `cargo build-bpf`, with a deploy command in the terminal.
+This will take a few seconds and build the program in the workspace targeting Solana's BPF runtime and emits "IDLs" in the **`target/idl`** directory. You should also a similar output as when running `cargo-build-sbf`, with a deploy command in the terminal.
 
 Btw here's what you need to know about the target folder -
 - `target/deploy`: generated keypair used to deploy program
@@ -50,7 +50,7 @@ Btw here's what you need to know about the target folder -
 
 Wtf is an IDL? An [Interface Description Language](https://en.wikipedia.org/wiki/Interface_description_language) file is a JSON file that describes the interface of a program - it tells you what functions are available and what arguments they take. Think of it like an API documentation for your program.
 
-We use the program IDL to figure out how to talk to it using clients (what functions are available, what args do they take, etc) and the Typescript IDL for the types. These are important because to make your program open-source, you need to publish a verified build and the IDL to the [Anchor Programs Registry](https://www.apr.dev/).
+We use the program IDL to figure out how to talk to it using clients (what functions are available, what args do they take, etc) and the Typescript IDL for the types. These are important because to make your program open-source, you need to publish a verified build and the IDL to the [Anchor Programs Registry](https://soldev.app/registry).
 
 Now we wanna deploy. But we can't just yet! We need to do two more things - get the program address and set the network.
 
