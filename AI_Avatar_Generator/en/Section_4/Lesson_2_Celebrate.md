@@ -24,7 +24,7 @@ Lastly, be sure to introduce yourself in #intros -- the alumni group is huge and
 ### The AI builder buff pack >:D
 Now that you've shipped this project, you'll get a super powerful NFT that gives you access to some pretty cool perks.
 
-1. [stability.ai](https://stability.ai/): this NFT will get you $25 in credits to use on stability.ai! 
+1. [stability.ai](https://stability.ai/): this NFT will get you $5 in credits to use on stability.ai! 
 2. [banana](https://www.banana.dev/): this NFT will get you 10 hours of GPU time (freaking insane).
 3. [brev](https://brev.dev/): this NFT will give you 10 hours of GPU time (also freaking insane).
 

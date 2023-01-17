@@ -25,7 +25,7 @@
 ### AI 建造者增益包 >:D
 现在你已经发布了这个项目，你将获得一个超级强大的 NFT，让你获得一些非常酷的特权。
 
-1. [stability.ai](https://stability.ai/)：这个 NFT 会让你获得 25 美元的积分，可以在 stability.ai 上使用！
+1. [stability.ai](https://stability.ai/)：这个 NFT 会让你获得 5 美元的积分，可以在 stability.ai 上使用！
 2. [banana](https://www.banana.dev/)：此 NFT 将为您提供 10 小时的 GPU 时间（疯狂）。
 3. [brev](https://brev.dev/)：这个 NFT 会给你 10 小时的 GPU 时间（也太疯狂了）。
 
