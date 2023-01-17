@@ -16,7 +16,7 @@ You don’t need to know *that* much to build this thing. Most of it, I’ll sho
 **But, you should at least know how to code in one language and how to use the command line. If you know JS and React that helps a lot as well.**
 
 - If you don’t know how to code in any language at all, my recommendation is you go [here](https://scrimba.com/learn/learnjavascript) first. **Our specialty at buildspace isn’t teaching people to code from scratch**, there are much better platforms for that.
-- If you know how to code a *little* but aren’t that confident, see how far you get in this build! If you have issues or see obvious gaps in your knowledge, don’t worry. Just Google it, or go back to the basics here.
+- If you know how to code a *little* but aren’t that confident, see how far you get in this build! If you have issues or see obvious gaps in your knowledge, don’t worry. Just Google it, or go back to the basics [here](https://scrimba.com/learn/learnjavascript).
 - If you know how to code in any language, but have never used React -- you’ll be fine just power through. If you end up really struggling w/ React, you can learn it [here](https://scrimba.com/learn/learnreact).
 - If you’re a pro I better see you at the end with a really fucking cool product. Inspire the rest of us!
 
