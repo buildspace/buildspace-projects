@@ -2524,6 +2524,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "harrybaines",
+      "name": "Harry Baines",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11751531?v=4",
+      "profile": "https://www.harrybaines.net",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
