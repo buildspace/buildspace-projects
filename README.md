@@ -452,6 +452,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/lasto"><img src="https://avatars.githubusercontent.com/u/10183269?v=4?s=100" width="100px;" alt="Stanislav Ladyzhenskiy"/><br /><sub><b>Stanislav Ladyzhenskiy</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=LStan" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/iluu"><img src="https://avatars.githubusercontent.com/u/666061?v=4?s=100" width="100px;" alt="Karolina Kafel"/><br /><sub><b>Karolina Kafel</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=iluu" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.harrybaines.net"><img src="https://avatars.githubusercontent.com/u/11751531?v=4?s=100" width="100px;" alt="Harry Baines"/><br /><sub><b>Harry Baines</b></sub></a><br /><a href="https://github.com/buildspace/buildspace-projects/commits?author=harrybaines" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
