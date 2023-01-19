@@ -20,6 +20,33 @@ const response = await fetch('/api/generate', {
 
 You can read up more about replace [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace), it’s pretty simple, and regular expressions [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) (they’re not simple at all 💀)
 
+### Generate variations of avatars with your prompt
+
+You may have noticed when you send your prompt in the POST request, you will get exactly the same image every time you POST that prompt. This is fine, however if you want to get different variations from your prompt, you can add a new header `x-use-cache`: `false` to the headers of your POST request.
+
+In `api/generate.js` inside `generateAction`, add the header `x-use-cache` in the `fetch` call and set it to `false`:
+
+```jsx
+const response = await fetch(
+    `https://api-inference.huggingface.co/models/buildspace/ai-avatar-generator`,
+    {
+        headers: {
+            Authorization: `Bearer ${process.env.HF_AUTH_KEY}`,
+            'Content-Type': 'application/json',
+            'x-use-cache': 'false'
+        },
+        method: 'POST',
+        body: JSON.stringify({
+            inputs: input,
+        }),
+    }
+);
+```
+
+This will prevent using the previous image you generated, and allows us to fetch a new image from the Hugging Face API endpoint rather than fetching the image you generated previously from the cache.
+
+Now generate an avatar with a prompt in the UI and generate another with the same prompt and see the variations!
+
 ### Give your users some fancy prompts
 
 Shall we bestow some of your magic onto your users? They’ll get much better results if you give them some prompts they can modify. They probably don’t know who all these fancy artists are, so let’s build some buttons that fill these prompts in!
