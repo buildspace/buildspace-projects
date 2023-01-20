@@ -90,7 +90,7 @@ Let’s put those prompt skills to the test and build a startup with GPT-3 — f
 I’m going to ask for good ideas around GPT-3 and reading because I feel like GPT-3 is super cool, and reading is something everyone wants to do! I also told it specifically to generate ideas for things a kid could use. I did this because I used to run a company called [ZipSchool](https://mobile.twitter.com/FarzaTV/status/1488965852519022592) which made science content for kids.
 
 ```
-Give me some cool startup ideas around ML and reading for kids:
+Give me some cool startup ideas around GPT-3 and reading for kids:
 ```
 
 Be sure to ask it to generate ideas around stuff you’re interested in!
