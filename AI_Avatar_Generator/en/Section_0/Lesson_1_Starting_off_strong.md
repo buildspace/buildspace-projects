@@ -33,6 +33,16 @@ Whenever you run into something you can hit the mods up directly in the Discord 
 
 If you don’t have access to these channels, relink your Discord [here](https://buildspace.so/p/build-ai-avatars).
 
+### 💎 Earning an NFT
+
+When you reach the end of this project, you'll be able to mint an NFT.
+
+Here's what it looks like:
+
+[NFT Preview](https://thirdweb.com/polygon/0x5c4E5ae2ADEAD056fD39badCe6A5A0e4ceBec3Ee/nfts)
+
+**Note: Please reach out to Alec(alec#8853), CodePerfect(CodePerfect#6638) or Raza(TooManyBugs#3359) if you encounter any issues with claiming your NFTs**
+
 ### **Build in public.**
 
 Through this build, I’ll give you certain moments where you can share what you’re building + give you pre-built messages to inspire you to tell the world about what you're building.

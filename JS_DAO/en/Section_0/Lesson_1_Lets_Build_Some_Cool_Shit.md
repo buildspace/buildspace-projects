@@ -19,17 +19,13 @@ Check out a quick video I made covering the project here:
 
 ### 💎 Earning an NFT
 
-When you reach the end of this project, you'll be able to earn an NFT.
-
-**You'll only be eligible for the NFT if you finish it within 60 days of signing up.** So make sure you schedule time to finish, you got this!
-
-**Once you finish the project, you'll get the NFT airdropped within 7 days**
+When you reach the end of this project, you'll be able to mint an NFT.
 
 Here's what it looks like:
 
-[Loom](https://www.loom.com/share/b315bcdd07cf4e78b9b29806ef931ad2)
+[NFT Preview](https://thirdweb.com/polygon/0x5c4E5ae2ADEAD056fD39badCe6A5A0e4ceBec3Ee/nfts)
 
-**Note: It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
+**Note: Please reach out to Alec(alec#8853), CodePerfect(CodePerfect#6638) or Raza(TooManyBugs#3359) if you encounter any issues with claiming your NFTs**
 
 ### 🤚 How to get help
 
@@ -43,7 +39,7 @@ This project is broken up into 4 sections. You can see what section you're on by
 
 ### 🤘 See an issue? Want to improve something? Fix it yourself ;)
 
-**[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec` in the Discord :).
+**[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec`, `@CodePerfect` or `@Raza` in the Discord :).
 
 At the very least, drop a ⭐ on the repo if you're feeling fancy!
 
