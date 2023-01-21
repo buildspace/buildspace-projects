@@ -185,7 +185,7 @@ You can start with where you left of in the last challenge or you can grab the c
 
 **Hints:**
 Create the account buffer layout in `StudentIntro.ts`. The account data contains:
-1. `initialized` as an unsigned, 8-bit integer representing whether or not the account has been initialized
+1. `initialized` as a boolean representing whether or not the account has been initialized
 2. `name` as a string representing the student's name
 3. `message` as a string representing the message the student shared about their Solana journey
 
