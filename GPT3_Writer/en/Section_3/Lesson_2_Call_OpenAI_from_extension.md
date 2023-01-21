@@ -239,6 +239,8 @@ const generateCompletionAction = async (info) => {
 
     // Call your second prompt
     const secondPromptCompletion = await generate(secondPrompt);
+    
+    console.log(secondPromptCompletion.text)  
   } catch (error) {
     console.log(error);
   }
