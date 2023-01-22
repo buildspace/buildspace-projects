@@ -46,13 +46,14 @@ const createTransaction = async (req, res) => {
 
     const buyerUsdcAddress = await getAssociatedTokenAddress(usdcAddress, buyerPublicKey);
     const shopUsdcAddress = await getAssociatedTokenAddress(usdcAddress, sellerPublicKey);
-    const { blockhash } = await connection.getLatestBlockhash("finalized");
+    const { blockhash, lastValidBlockHeight } = await connection.getLatestBlockhash("finalized");
     
     // This is new, we're getting the mint address of the token we want to transfer
     const usdcMint = await getMint(connection, usdcAddress);
     
     const tx = new Transaction({
-      recentBlockhash: blockhash,
+      blockhash,
+      lastValidBlockHeight,
       feePayer: buyerPublicKey,
     });
     
@@ -92,9 +93,9 @@ const createTransaction = async (req, res) => {
   }
 };
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method === "POST") {
-    createTransaction(req, res);
+    await createTransaction(req, res);
   } else {
     res.status(405).end();
   }

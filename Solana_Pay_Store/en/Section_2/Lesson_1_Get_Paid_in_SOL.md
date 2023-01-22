@@ -64,12 +64,13 @@ const createTransaction = async (req, res) => {
     const connection = new Connection(endpoint);
 
     // A blockhash is sort of like an ID for a block. It lets you identify each block.
-    const { blockhash } = await connection.getLatestBlockhash("finalized");
+    const { blockhash, lastValidBlockHeight } = await connection.getLatestBlockhash("finalized");
     
     // The first two things we need - a recent block ID 
     // and the public key of the fee payer 
     const tx = new Transaction({
-      recentBlockhash: blockhash,
+      blockhash,
+      lastValidBlockHeight,
       feePayer: buyerPublicKey,
     });
 

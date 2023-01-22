@@ -12,7 +12,7 @@ First, you'll need to upload your files to a service that specializes in "[pinni
 Go ahead and copy the files "CID". This is the files content address on IPFS! What's cool now is we can create this link to access the file:
 
 ```javascript
-https://cloudflare-ipfs.com/ipfs/INSERT_YOUR_CID_HERE
+https://gateway.pinata.cloud/ipfs/INSERT_YOUR_CID_HERE
 ```
 
 If you are using **Brave Browser** (which has IPFS built in) you can just type this paste into the URL:
@@ -40,7 +40,6 @@ import React  from 'react';
 import useIPFS from '../hooks/useIPFS';
 
 const IPFSDownload = ({ hash, filename }) => {
-
   const file = useIPFS(hash, filename);
 
   return (
@@ -139,7 +138,7 @@ export default function handler(req, res) {
 }
 ```
 
-You'll note we're not taking the hashes! This is because we don't want to give viewers the hashes before they've paid for the items as they can just download them lol
+You'll notice that we're not taking the hashes! This is because we don't want to give viewers the hashes before they've paid for the items as they can just download them lol
 
 Now to use this endpoint and the Product component, we just need to update our `index.js`:
 ```jsx

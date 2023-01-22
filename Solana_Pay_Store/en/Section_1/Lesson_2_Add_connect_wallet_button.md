@@ -89,18 +89,18 @@ import React from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import dynamic from "next/dynamic";
 
+// Dynamic import `WalletMultiButton` to prevent hydration error
+const WalletMultiButtonDynamic = dynamic(
+  async () =>
+    (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+  { ssr: false }
+);
+
 // Constants
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
-const App = () => {
-// Dynamic import `WalletMultiButton` to prevent hydration error
-const WalletMultiButtonDynamic = dynamic(
-    async () =>
-      (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
-    { ssr: false }
-  );
-  
+const App = () => {  
   // This will fetch the users' public key (wallet address) from any wallet we support
   const { publicKey } = useWallet();
 
