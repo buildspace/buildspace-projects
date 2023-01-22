@@ -4,7 +4,7 @@
 
 So, why don't we fetch the wallet information from the wallet adapter library we installed? **Then** we could also use that as the flag to determine if we should show or hide our button.
 
-First you will need to import `useWallet` into your component like so:
+First, head over to `index.js`. You will need to import `useWallet` into your component like so:
 
 ```jsx
 import { useWallet } from "@solana/wallet-adapter-react";
@@ -14,8 +14,13 @@ Very nice. So now that we are ready to fetch the wallet information, let's updat
 
 ```jsx
 import React from "react";
+import dynamic from "next/dynamic";
 import { useWallet } from "@solana/wallet-adapter-react";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+
+const WalletMultiButtonDynamic = dynamic(
+  async () => (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+  { ssr: false }
+);
 
 // Constants
 const TWITTER_HANDLE = "_buildspace";
@@ -29,7 +34,7 @@ const Home = () => {
             <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
 
             <div className="button-container">
-                <WalletMultiButton className="cta-button connect-wallet-button" />
+                <WalletMultiButtonDynamic className="cta-button connect-wallet-button" />
             </div>
         </div>
     );

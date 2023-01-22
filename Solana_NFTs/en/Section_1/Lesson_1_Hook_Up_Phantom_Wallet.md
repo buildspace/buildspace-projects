@@ -38,7 +38,13 @@ If you have the Phantom Wallet extension installed, it will automatically inject
 
 ```jsx
 import React from "react";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+import dynamic from "next/dynamic";
+
+// This is to disable SSR when using WalletMultiButton
+const WalletMultiButtonDynamic = dynamic(
+  async () => (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+  { ssr: false }
+);
 
 // Constants
 const TWITTER_HANDLE = "_buildspace";
@@ -51,7 +57,7 @@ const Home = () => {
             <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
 
             <div className="button-container">
-                <WalletMultiButton className="cta-button connect-wallet-button" />
+                <WalletMultiButtonDynamic className="cta-button connect-wallet-button" />
             </div>
         </div>
     );
