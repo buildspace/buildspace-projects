@@ -86,7 +86,6 @@ I copied all of this from the Next.js template, so don't feel bad about copy/pas
 Phew, that was a bunch of setup! Now you get to see how easy it makes interacting with wallets. All we have to do is set up some React hooks. Here's my `index.js`:
 ```jsx
 import React from 'react';
-import { PublicKey } from '@solana/web3.js';
 import { useWallet } from '@solana/wallet-adapter-react';
 import dynamic from "next/dynamic";
 
