@@ -212,7 +212,7 @@ chrome.runtime.onMessage.addListener(
 
 It’s awesome how chrome makes it so easy to hook into these events and add our own custom logic. We are going to use this `insert` function to actually find the proper HTML we need to inject our output into and then return a response.
 
-Before we go super deep into the `insert` function, I’m going to layout the flow we should follow with comments inside the function and then fill it in one by one (this is actually called psuedo code):
+Before we go super deep into the `insert` function, I’m going to layout the flow we should follow with comments inside the function and then fill it in one by one (this is actually called pseudo code):
 
 ```javascript
 const insert = (content) => {
