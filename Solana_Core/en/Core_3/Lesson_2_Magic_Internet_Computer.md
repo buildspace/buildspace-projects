@@ -10,7 +10,7 @@ Think back to a time when your computer didn't have internet access. If you're a
 
 That's exactly what not being connected to Solana is going to feel like. Blockchain networks are the next evolution of the internet - it's why this whole thing is being called "Web 3.0". Being able to securely and permissionlessly run repeatable code on opens a whole new world of possibilities. 
 
-**It doesn't feel as magical a ”statically typed” languageyet because the magic is still being built by people like you.** The collection of programs grows daily as developers and creators dream up and deploy new programs.
+**It doesn't feel as magical a ”statically typed” language yet because the magic is still being built by people like you.** The collection of programs grows daily as developers and creators dream up and deploy new programs.
 
 #### 🤔 Wtf is Rust  
 Solana programs are written in Rust - a low level programming language like C that is FASTTTTTTT. Before we get to the traditional "Hello World" program, I wanna talk a bit about *why* Rust is considered so difficult.
