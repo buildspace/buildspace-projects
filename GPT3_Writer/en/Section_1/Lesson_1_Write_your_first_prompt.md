@@ -7,9 +7,9 @@ First thing you’ll need to do is make an account on OpenAI [here](https://beta
 
 Once you make an account, head to the [Playground](https://beta.openai.com/playground). This is where we’ll be spending a bit of time before we even start writing any code.
 
-Don’t worry to much about those settings on the right yet, we’ll get to them. Just make sure your model is `text-davinci-003` and make sure the “Temperature” is set to `0.7`. **And, also make sure `Maximum length` is set to `650`.**
+Don’t worry too much about those settings on the right yet, we’ll get to them. Just make sure your model is `text-davinci-003` and make sure the “Temperature” is set to `0.7`. **And, also make sure `Maximum length` is set to `650`.**
 
-*Note: if you had an account in the past, you’ll need to make a new w/ a different email because the credits expire after 3-months.*
+*Note: if you had an account in the past, you’ll need to make a new w/ a different email and phone number because the credits expire after 3-months.*
 
 ### Prompt mentality.
 
@@ -181,7 +181,7 @@ Few recommendations:
 
 ### Temperature
 
-There are a bunch of crazy options on the right. These are “hyperparameters”. The main one is “Temperature.
+There are a bunch of crazy options on the right. These are “hyperparameters”. The main one is “Temperature”.
 
 Temperature is basically how risky you want the model to be. A higher temperature means the model will be a bit more unhinged and make more mistakes. A lower temperature means the model will take less risks and just give the more standard “right answer”.
 
