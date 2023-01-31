@@ -40,47 +40,41 @@ const instructions = [
     fromPubkey: walletAddress.publicKey,
     newAccountPubkey: mint.publicKey,
     space: MintLayout.span,
-    lamports:
-      await candyMachine.program.provider.connection.getMinimumBalanceForRentExemption(
-        MintLayout.span,
-      ),
+    lamports: await candyMachine.program.provider.connection.getMinimumBalanceForRentExemption(MintLayout.span),
     programId: TOKEN_PROGRAM_ID,
   }),
-  Token.createInitMintInstruction(
-    TOKEN_PROGRAM_ID,
+  createInitializeMintInstruction(
     mint.publicKey,
     0,
     walletAddress.publicKey,
     walletAddress.publicKey,
+    TOKEN_PROGRAM_ID
   ),
   createAssociatedTokenAccountInstruction(
+    walletAddress.publicKey,
     userTokenAccountAddress,
     walletAddress.publicKey,
-    walletAddress.publicKey,
     mint.publicKey,
+    TOKEN_PROGRAM_ID
   ),
-  Token.createMintToInstruction(
-    TOKEN_PROGRAM_ID,
-    mint.publicKey,
-    userTokenAccountAddress,
-    walletAddress.publicKey,
-    [],
-    1,
-  ),
+  createMintToInstruction(mint.publicKey, userTokenAccountAddress, walletAddress.publicKey, 1),
 ];
 ```
 
 In Solana, a transaction is a bundle of instructions. So, here we bundle a few instructions which are basically functions that live on our candy machine. Metaplex gave us these functions. We just hit them.
 
 ```jsx
-    if (candyMachine.state.gatekeeper) {
-    }
-    
-    if (candyMachine.state.whitelistMintSettings) {
-    }
-  
-    if (candyMachine.state.tokenMint) {
-    }
+if (candyMachine.state.gatekeeper) {
+  // Rest of the code
+}
+
+if (candyMachine.state.whitelistMintSettings) {
+  // Rest of the code
+}
+
+if (candyMachine.state.tokenMint) {
+  // Rest of the code
+}
 ```
 Here, we're checking if the Candy machine is using a captcha to prevent bots (`gatekeeper`), if there is a whitelist setup, or if the mint is token gated. Each of these has a different set of checks which the users' account needs to pass. Once passed, additional instructions are pushed into the transaction.
 
@@ -143,17 +137,17 @@ In your `CandyMachine` component, have your "Mint" button call the `mintToken` f
 
 ```jsx
 return (
-    // Only show this if candyMachine and candyMachine.state is available
-    candyMachine && candyMachine.state && (
-      <div className="machine-container">
-        <p>{`Drop Date: ${candyMachine.state.goLiveDateTimeString}`}</p>
-        <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
-        <button className="cta-button mint-button" onClick={mintToken}>
-            Mint NFT
-        </button>
-      </div>
-    )
-  );
+  // Only show this if candyMachine and candyMachine.state is available
+  candyMachine && candyMachine.state && (
+    <div className="machine-container">
+      <p>{`Drop Date: ${candyMachine.state.goLiveDateTimeString}`}</p>
+      <p>{`Items Minted: ${candyMachine.state.itemsRedeemed} / ${candyMachine.state.itemsAvailable}`}</p>
+      <button className="cta-button mint-button" onClick={mintToken}>
+          Mint NFT
+      </button>
+    </div>
+  )
+);
 ```
 
 Before clicking "Mint NFT", you need to make sure you have some Devnet SOL on your Phantom Wallet. This is pretty easy.
