@@ -32,7 +32,7 @@ You'll also need to bring over all the files and code we were using previously. 
 
 Once you're done, you can check that everything is in place by building the program:
 ```
-cargo build-sbf
+cargo build-bpf
 ```
 
 This will take a few minutes the first time you run it. If all goes well you should see a green "Finished" message.
