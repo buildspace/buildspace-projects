@@ -266,6 +266,8 @@ No UI changes required here btw! All we’re doing is changing the backend.
 
 So…how’s your product feeling now? Mines is absolutely insane now lol. It’s creating some A+ tier blog posts for me about everything from anime to nuclear fission to relationship advice. Beautiful.
 
+*Thinking about posting your code for the world to see? [Vercel](https://vercel.com/) and [Railway](https://railway.app/) are great options, but like many companies, they have a limit (~10 sec) to how long they'll wait for a response from OpenAI. If you run into issues, you might have to tweak your `max_tokens` amount or use a different model (e.g. text-curie-001).*
+
 ### Please do this or Farza will be sad.
 
 You’ve gotten so far. I’m proud af of you. **Give yourself a pat on the back, you’re doing some insane stuff!!** Go ahead and take a screenshot of your web app with one of your favorite prompts + outputs and post it in #progress. I want to see all the crazy shit y’all are generating lol.
