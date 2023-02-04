@@ -373,7 +373,7 @@ uint randNonce = 0; // this is used to help ensure that the algorithm has differ
 
 function randomInt(uint _modulus) internal returns(uint) {
    randNonce++;                                                     // increase nonce
-   return uint(keccak256(abi.encodePacked(now,                      // an alias for 'block.timestamp'
+   return uint(keccak256(abi.encodePacked(block.timestamp,         //  now timestamp
                                           msg.sender,               // your address
                                           randNonce))) % _modulus;  // modulo using the _modulus argument
  }
