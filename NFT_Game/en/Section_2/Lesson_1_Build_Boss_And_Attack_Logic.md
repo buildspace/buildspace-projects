@@ -392,7 +392,7 @@ console.log("%s swings at %s...", player.name, bigBoss.name);
             bigBoss.hp = 0;
             console.log("The boss is dead!");
         } else {
-            if (randMod(10) > 5) {                                 // by passing 10 as the mod, we elect to only grab the last digit (0-9) of the hash!
+            if (randomInt(10) > 5) {                                 // by passing 10 as the mod, we elect to only grab the last digit (0-9) of the hash!
                 bigBoss.hp = bigBoss.hp - player.attackDamage;
                 console.log("%s attacked boss. New boss hp: %s", player.name, bigBoss.hp);
             } else {
