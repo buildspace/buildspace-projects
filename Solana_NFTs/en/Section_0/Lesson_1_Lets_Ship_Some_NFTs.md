@@ -26,7 +26,7 @@ When you reach the end of this project, you'll be able to mint an NFT.
 
 Here's what it looks like:
 
-[NFT Preview](https://thirdweb.com/solana/7NvumDTDxoEM55f2y3QjHQTwnVS9f2M62ZcL2Hb4GU4d)
+<img src="https://gateway.ipfscdn.io/ipfs/Qmb4dT5RtqenmoRPEymRG9P57awMZa4Cvqt3keyyZg5gQx/intro%20to%20solana.png" />
 
 **Note: Please reach out to Alec(alec#8853), CodePerfect(CodePerfect#6638) or Raza(TooManyBugs#3359) if you encounter any issues with claiming your NFTs**
 

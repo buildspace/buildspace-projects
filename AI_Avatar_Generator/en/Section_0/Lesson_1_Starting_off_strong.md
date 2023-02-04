@@ -39,7 +39,7 @@ When you reach the end of this project, you'll be able to mint an NFT.
 
 Here's what it looks like:
 
-[NFT Preview](https://thirdweb.com/polygon/0x5c4E5ae2ADEAD056fD39badCe6A5A0e4ceBec3Ee/nfts)
+<img src="https://gateway.ipfscdn.io/ipfs/Qmbin1wzGT1ubAmLZ6FWeXkE12fQJcS9zB1pG77T8Hs1RG/8.png" />
 
 **Note: Please reach out to Alec(alec#8853), CodePerfect(CodePerfect#6638) or Raza(TooManyBugs#3359) if you encounter any issues with claiming your NFTs**
 
