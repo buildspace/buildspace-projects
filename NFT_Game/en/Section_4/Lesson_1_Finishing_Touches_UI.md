@@ -168,7 +168,7 @@ const [mintingCharacter, setMintingCharacter] = useState(false);
 Then let's go ahead and head over to the `mintCharacterNFTAction` , since this is the function that is doing the minting for us. Just like before, we could tweak this to include our new state updates:
 
 ```javascript
-const mintCharacterNFTAction = (characterId) => async () => {
+const mintCharacterNFTAction = async (characterId) => {
   try {
     if (gameContract) {
       /*
