@@ -125,7 +125,7 @@ I'm talking about learning how to fish instead of just taking this fish.
 
 Your first resource should **always** be the docs. But the docs won't exist when the code is just being written. So you do just that - look at the code as it's being written. If you were to poke around in the Metaplex repo, you'd see these:
 
-- [Function definition docs for createMetadatAccountV2 instruction](https://metaplex-foundation.github.io/metaplex-program-library/docs/token-metadata/index.html#createCreateMetadataAccountV2Instruction)
+- [Function definition docs for createMetadataAccountV2 instruction](https://metaplex-foundation.github.io/metaplex-program-library/docs/token-metadata/index.html#createCreateMetadataAccountV2Instruction)
 - [Actual function definition for the createCreateMetadataAccountV2Instruction instruction](https://github.com/metaplex-foundation/metaplex-program-library/blob/caeab0f7/token-metadata/js/src/generated/instructions/CreateMetadataAccountV2.ts#L73)
 - [The test for createMetadataAccountV2 instruction](https://github.com/metaplex-foundation/js/blob/c171e1e31d9fe12852afb39e449123339848180e/packages/js/test/plugins/nftModule/createNft.test.ts#L465)
 
