@@ -4,7 +4,7 @@ Continuemos y vamos a cerrar la terminal con la que corrimos la red local de cad
 Ya no lo vamos a necesitar, era para mostrarles como implementar localmente.
 Ahora lo vamos a hacer de verdad, vamos a desplegar a la cadena de bloques.
 
-Por favor ahora necesito que crees una cuenta de QuickNode [aquí](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
+Por favor ahora necesito que crees una cuenta de QuickNode [aquí](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 Una disculpa por pedirles que creen tantas cuentas, pero, este ecosistema es complejo y queremos que tomes ventaja de las increíbles herramientas que existen, 
 QuickNode nos ayuda a implementar en la cadena de bloques real de Ethereum de forma sencilla.
@@ -31,7 +31,7 @@ transacción es minada se transmite a la cadena de bloques como una transacción
 Esto es complicado, y no te preocupes si no lo entiendes por completo. Mientras más código escribas y sigas construyendo esta aplicación, naturalmente te irá 
 haciendo mayor sentido.
 
-Crea una cuenta de QuickNode [aquí](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
+Crea una cuenta de QuickNode [aquí](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 Por favor revisa el siguiente video para que veas como obtener tu “API KEY” para la red de pruebas.
 [Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
@@ -70,11 +70,6 @@ Para el grifo “oficial” de Rinkeby si la página dice que tiene 0 pares no v
 | Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
 | Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
 
-## 🙃 ¿Estás teniendo problemas para obtener el ETH de prueba?
-
-Si las soluciones propuestas arriba no funcionan, usa el comando `/faucet` en el canal #faucet-request y nuestro bot les enviará un poco. 
-Si quieres obtener más mándanos tu dirección pública y el meme más chistoso que tengas y probablemente yo mismo o alguien más te enviaremos 
-un poco de ETH de pruebas lo antes posible. Mienstras mejor sea tu meme más rápido obtendrás el ETH. LOL.
 
 ## 📈 Implementando en la red de Pruebas Rinkeby.
 
@@ -184,10 +179,6 @@ Es algo importante que ya hayas llegado hasta acá. Creaste e implementaste algo
 Ahora tu ese “alguien” que en realidad está “haciendo “eso de lo que todo mundo está “hablando”.
 
 Hemos visto que los mejores constructores se están acostumbrando a "construir en público". ¡Esto significa compartir los aprendizajes sobre el logro que acabas de alcanzar!
-
-Por favor coloca esta actualización rápida en buildspace ahora mismo presionando (Post update) "Publicar actualización" en la esquina superior derecha de esta página. 
-
-[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
 
 Cada vez estás más cerca de dominar las artes del web3.
 

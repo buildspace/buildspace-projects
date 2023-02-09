@@ -61,7 +61,7 @@ We’re using `deployer.deployVote` to actually set up the contract. This will
 
 Notice how we give it `voting_token_address`. This is our contract that knows which governance token to accept. We don’t want people randomly trying to use $DOGE to vote lol.
 
-We have `voting_delay_in_blocks`, which can be useful if you want to give people some time to go over the proposal before they’re allowed to vote on it. Similarly, we have `voting_period_in_blocks` which just specifies how long someone has to vote once a proposal goes lives, we do this in blocks, which depending on the blockchain you're on, might take longer, for Ethereum/Rinkeby, there's one block every 13 seconds or so, so on average, there's 6570 blocks in a day.
+We have `voting_delay_in_blocks`, which can be useful if you want to give people some time to go over the proposal before they’re allowed to vote on it. Similarly, we have `voting_period_in_blocks` which just specifies how long someone has to vote once a proposal goes lives, we do this in blocks, which depending on the blockchain you're on, might take longer, for Ethereum/Goerli, there's one block every 13 seconds or so, so on average, there's 6570 blocks in a day.
 
 `voting_quorum_fraction` is really interesting. Let’s say a member creates a proposal and the other **199** DAO members are on vacation at Disney World and aren’t online. Well, in this case, if that one DAO member creates the proposal and votes “YES” on their own proposal — that means 100% of the votes said “YES” (since there was only one vote) and the proposal **would pass once** `voting_period_in_blocks` is up! To avoid this, we use a quorum which says “In order for a proposal to pass, a minimum x % of token must be used in the vote”.
 
@@ -79,7 +79,7 @@ buildspace-dao-starter % node scripts/8-deploy-vote.js
 
 This is pretty cool. Basically, we created and deployed a new smart contract that will let us actually vote on proposals on-chain. This is a standard [governance](https://docs.openzeppelin.com/contracts/4.x/api/governance) contract. You can see the exact contract you deployed [here](https://github.com/thirdweb-dev/contracts/blob/main/contracts/vote/VoteERC20.sol).
 
-If you head to `https://rinkeby.etherscan.io/` you’ll see it there!
+If you head to `https://goerli.etherscan.io/` you’ll see it there!
 
 So, now we have three contracts: our NFT contract, our token contract, and our voting contract! Be sure to save your voting contract address, we’ll be using it again in just a moment.
 
@@ -104,14 +104,12 @@ Head to `9-setup-vote.js` and add the following:
 ```jsx
 import sdk from "./1-initialize-sdk.js";
 
-// This is our governance contract.
-const vote = sdk.getVote("INSERT_VOTE_ADDRESS");
-
-// This is our ERC-20 contract.
-const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
-
 (async () => {
   try {
+    // This is our governance contract.
+    const vote = await sdk.getContract("INSERT_VOTE_ADDRESS", "vote");
+    // This is our ERC-20 contract.
+    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
     // Give our treasury the power to mint additional token if needed.
     await token.roles.grant("minter", vote.getAddress());
 
@@ -127,6 +125,10 @@ const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
   }
 
   try {
+    // This is our governance contract.
+    const vote = await sdk.getContract("INSERT_VOTE_ADDRESS", "vote");
+    // This is our ERC-20 contract.
+    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
     // Grab our wallet's token balance, remember -- we hold basically the entire supply right now!
     const ownedTokenBalance = await token.balanceOf(
       process.env.WALLET_ADDRESS
@@ -164,7 +166,7 @@ buildspace-dao-starter % node scripts/9-setup-vote.js
 
 ```
 
-Okay, ready to see something epic? Head to your voting contract on `https://rinkeby.etherscan.io/`. Click the dropdown next to the word “Token”. Here, you’ll see my contract has “844,527 $HOKAGE” on it.
+Okay, ready to see something epic? Head to your voting contract on `https://goerli.etherscan.io/`. Click the dropdown next to the word “Token”. Here, you’ll see my contract has “844,527 $HOKAGE” on it.
 
 This kinda blew my mind when I first saw it. *We literally have our own treasury.*
 

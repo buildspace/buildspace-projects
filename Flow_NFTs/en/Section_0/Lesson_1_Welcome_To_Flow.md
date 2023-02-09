@@ -11,14 +11,16 @@ Few action items for you before moving on:
 3. Be sure to attend the live kick-off. If you miss it, no worries. It's not required to attend! The recording will be posted in Discord under #info-board.
 
 ### 🛠 The project
+
 So what will we be building here :)? Here's a little video:
 
 [Loom](https://www.loom.com/share/1daad5e20b244531bd0da630e657aedc)
 
 ### 💎 Earning an NFT
-When you reach the end of this project, you'll earn an NFT. 
 
-You'll only be eligible for the NFT if you finish it within 60 days of signing up! So make sure you schedule time to finish, you got this!
+When you reach the end of this project, you'll be able to earn an NFT.
+
+**You'll only be eligible for the NFT if you finish it within 60 days of signing up.** So make sure you schedule time to finish, you got this!
 
 **Once you finish the project, you'll get the NFT airdropped within 7 days**
 
@@ -28,28 +30,20 @@ Here's what it looks like:
 
 You'll also get an exclusive FLOAT that you can show off!
 
+**Note: It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
+
 ### 🤚 How to get help
+
 When you have a question, hit up the proper channel for the project.
 
 This project is broken up into 4 sections. You can see what section you're on by checking out the progress bar at the very top of the page in your buildspace dashboard. So, for example, if you're stuck on some part of Section 3, you'd hit up #section-3-help in the Discord. If you're part of multiple projects, be sure to ask your questions in the right project category!
 
 ### 🤘 See an issue? Want to improve something? Fix it yourself ;)
+
 [All this content is completely open-source.](https://github.com/buildspace/buildspace-projects) If you see an issue, typo, etc — you can fix it yourself easily and make a PR! At the very least, drop a ⭐ on the repo if you're feeling fancy! Let's get you some open-source rep!!!
 
-### 👀 Curious about working in web3?
-People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.
-
-There is so much work to do and most of the work doesn't even have to do with smart contracts lol. Being an engineer in web3 just means you take your web2 skills and apply them to web3.
-
-Web3 also desperately needs designers, product managers, marketers, and more.
-
-We're partnered with a bunch of awesome web3 companies that want to hire people from the buildspace network.
-
-We got companies like OpenSea, Edge and Node, and Chainlink as partners. Even if you're just curious, click "Work" in the header and check out the opportunities!!
-
-Worst case scenario, you get to talk to some really cool people in web3.
-
 ### 🚨 Progress Report
+
 Hey! Go ahead and say gm in #gm-only on Discord. This is very important. Extremely important. If you don't do this then all of humanity will collectively jump and disrupt the Earth's orbit causing it to collide with Venus.
 
 BTW -- if you want to make a tweet telling the world that you're building an app with Flow today and tag @_buildspace, go for it!

@@ -8,28 +8,30 @@ Head over to `src/index.js` in your React App and add the following code:
 
 ```jsx
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-// Import thirdweb provider and Rinkeby ChainId
-import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
+// Import thirdweb provider and Goerli ChainId
+import { ThirdwebProvider } from '@thirdweb-dev/react';
+import { ChainId } from '@thirdweb-dev/sdk';
 
 // This is the chainId your dApp will work on.
-const activeChainId = ChainId.Rinkeby;
+const activeChainId = ChainId.Goerli;
 
 // Wrap your app with the thirdweb provider
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
     <ThirdwebProvider desiredChainId={activeChainId}>
       <App />
     </ThirdwebProvider>
   </React.StrictMode>,
-  document.getElementById('root'),
 );
 ```
 
-Pretty simple. We're importing thirdweb and then specifying the `chainId` of the chain we're working on, which is Rinkeby!.
+Pretty simple. We're importing thirdweb and then specifying the `chainId` of the chain we're working on, which is Goerli!.
 
 Then we're wrapping everything with `<ThirdwebProvider>`, this provider holds the user's authenticated wallet data (if they've connected to our website before) and passes it over to `App`.
 
@@ -42,12 +44,11 @@ If you head over to your web app, you'll see a blank purple page. Let's add some
 Head over to `App.jsx`. Add the following code.
 
 ```jsx
-import { useAddress, useMetamask } from '@thirdweb-dev/react';
+import { useAddress, ConnectWallet } from '@thirdweb-dev/react';
 
 const App = () => {
   // Use the hooks thirdweb give us.
   const address = useAddress();
-  const connectWithMetamask = useMetamask();
   console.log("👋 Address:", address);
 
   // This is the case where the user hasn't connected their wallet
@@ -56,9 +57,9 @@ const App = () => {
     return (
       <div className="landing">
         <h1>Welcome to NarutoDAO</h1>
-        <button onClick={connectWithMetamask} className="btn-hero">
-          Connect your wallet
-        </button>
+        <div className="btn-hero">
+          <ConnectWallet />
+        </div>
       </div>
     );
   }

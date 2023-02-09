@@ -19,7 +19,7 @@ import "hardhat/console.sol";
 
 contract WavePortal {
     constructor() {
-        console.log("Yo yo, I am a contract and I am smart");
+        console.log("Hey hey soy un contrato y soy inteligente");
     }
 }
 ```
@@ -48,7 +48,7 @@ Hardhat empieza a hacer su magia y esto nos permite hacer algunos console logs e
 ```solidity
 contract WavePortal {
     constructor() {
-        console.log("Yo yo, I am a contract and I am smart");
+        console.log("Hey hey soy un contrato y soy inteligente");
     }
 }
 ```

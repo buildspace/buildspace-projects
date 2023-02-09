@@ -2,11 +2,11 @@
 
 Awesome. We made it. We've deployed our website. We've deployed our contract. We've connected our wallet. **Now we need to actually call our contract from our web app** using the credentials we have access to now from Metamask!
 
-So, remember, our contract has the function `makeAnEpicNFT` which will actually mint the NFT. We'll need to now call this function from our web app. Go ahead and add the following function under the `connectWallet` function.
+So, remember, our contract has the function `makeAnEpicNFT` which will actually mint the NFT. We'll need to now call this function from our web app. Go ahead and add the following function below the `connectWallet` function.
 
 ```javascript
 const askContractToMintNft = async () => {
-  const CONTRACT_ADDRESS = "INSERT_YOUR_DEPLOYED_RINKEBY_CONTRACT_ADDRESS";
+  const CONTRACT_ADDRESS = "INSERT_YOUR_DEPLOYED_GOERLI_CONTRACT_ADDRESS";
 
   try {
     const { ethereum } = window;
@@ -22,7 +22,7 @@ const askContractToMintNft = async () => {
       console.log("Mining...please wait.")
       await nftTxn.wait();
       
-      console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+      console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 
     } else {
       console.log("Ethereum object doesn't exist!");
@@ -61,7 +61,7 @@ let nftTxn = await connectedContract.makeAnEpicNFT();
 console.log("Mining...please wait.")
 await nftTxn.wait();
 
-console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
+console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
 ```
 
 The rest of the code should already make sense. It looks sorta like the code we deployed with :)! We call our contract using `makeAnEpicNFT`, wait for it to be mined, and then link the Etherscan URL!

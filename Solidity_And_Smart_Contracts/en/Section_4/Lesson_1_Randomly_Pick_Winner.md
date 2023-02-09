@@ -65,7 +65,7 @@ contract WavePortal {
         /*
          * Give a 50% chance that the user wins the prize.
          */
-        if (seed < 50) {
+        if (seed <= 50) {
             console.log("%s won!", msg.sender);
 
             /*
@@ -99,11 +99,11 @@ These #s are *pretty* random. But, technically, both `block.difficulty` and `blo
 
 To make this harder, I create a variable `seed` that will essentially change every time a user sends a new wave. So, I combine all three of these variables to generate a new random seed. Then I just do `% 100` which will make sure the number is brought down to a range between 0 - 99.
 
-That's it! Then I just write a simple if statement to see if the seed is less than or equal to 50, if it is -- then the waver wins the prize! So, that means the waver has a 50% chance to win since we wrote `seed < 50`. You can change this to whatever you want :). I just made it 50% because it's easier to test that way!!
+That's it! Then I just write a simple if statement to see if the seed is less than or equal to 50, if it is -- then the waver wins the prize! So, that means the waver has a 50% chance to win since we wrote `seed <= 50`. You can change this to whatever you want :). I just made it 50% because it's easier to test that way!!
 
-It's important to see here that an attack could technically game your system here if they really wanted to. It'd just be really hard. There are other ways to generate random numbers on the blockchain but Solidity doesn't natively give us anything reliable because it can't! All the #s our contract can access are public and *never* truly random.
+It's important to see here that an attacker could technically game your system here if they really wanted to. It'd just be really hard. There are other ways to generate random numbers on the blockchain but Solidity doesn't natively give us anything reliable because it can't! All the #s our contract can access are public and *never* truly random.
 
-Really, this is one of the strengths of the blockchain. But, can be a bit annoying for some application like ours here!
+Really, this is one of the strengths of the blockchain. But, can be a bit annoying for some applications like ours here!
 
 In any case, no one's going to be attacking our tiny app but I want you to know all this when you're building a dApp that has millions of users!
 
@@ -180,7 +180,7 @@ I use a special data structure called a [map](https://medium.com/upstate-interac
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 

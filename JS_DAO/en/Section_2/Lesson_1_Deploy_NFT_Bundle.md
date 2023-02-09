@@ -18,7 +18,7 @@ Important! **thirdweb doesn't have a database, all your data is stored on-chain.
 
 ### 📝 Create a place to run thirdweb scripts
 
-Now we need to actually write some scripts that let us create/deploy our contract to Rinkeby using thirdweb. The first thing we're going to do is create a `.env` file that looks like this in the root of our project.
+Now we need to actually write some scripts that let us create/deploy our contract to Goerli using thirdweb. The first thing we're going to do is create a `.env` file that looks like this in the root of our project.
 
 ```plaintext
 PRIVATE_KEY=YOUR_PRIVATE_KEY_HERE
@@ -40,7 +40,7 @@ The last thing you need in your `.env` file is `QUICKNODE_API_URL`.
 
 QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners on the testnet as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
-So, make an account with QuickNode [here](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
+So, make an account with QuickNode [here](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 Check out the video below to see how to get your API key for a **testnet**! Don't mess up and create a mainnet key, **we want a testnet key.** 
 
@@ -54,7 +54,6 @@ Head over to `scripts/1-initialize-sdk.js`.
 
 ```jsx
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import ethers from "ethers";
 
 // Importing and configuring our .env file that we use to securely store our environment variables
 import dotenv from "dotenv";
@@ -73,31 +72,13 @@ if (!process.env.WALLET_ADDRESS || process.env.WALLET_ADDRESS === "") {
   console.log("🛑 Wallet Address not found.");
 }
 
-// RPC URL, we'll use our QuickNode API URL from our .env file.
-const provider = new ethers.providers.JsonRpcProvider(process.env.QUICKNODE_API_URL);
-// Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
-const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
-const sdk = new ThirdwebSDK(wallet);
+const sdk = ThirdwebSDK.fromPrivateKey(
+  // Your wallet private key. ALWAYS KEEP THIS PRIVATE, DO NOT SHARE IT WITH ANYONE, add it to your .env file and do not commit that file to github!
+  process.env.PRIVATE_KEY,
+  // RPC URL, we'll use our QuickNode API URL from our .env file.
+  process.env.QUICKNODE_API_URL
+);
 
-(async () => {
-  try {
-    const address = await sdk.getSigner().getAddress();
-    console.log("SDK initialized by address:", address)
-  } catch (err) {
-    console.error("Failed to get apps from the sdk", err);
-    process.exit(1);
-  }
-})();
-
-// We are exporting the initialized thirdweb SDK so that we can use it in our other scripts
-export default sdk;
-```
-
-It looks like a lot, but, all we're doing is initializing thirdweb and then adding an `export default sdk` since we'll be reusing the initialized sdk in other scripts. It's almost like initializing a connection to a database from a server. We give it stuff like our private key and our provider (which is QuickNode).
-
-We're also running this:
-
-```jsx
 (async () => {
   try {
     const address = await sdk.getSigner().getAddress();
@@ -107,6 +88,9 @@ We're also running this:
     process.exit(1);
   }
 })();
+
+// We are exporting the initialized thirdweb SDK so that we can use it in our other scripts
+export default sdk;
 ```
 
 To make sure that we sdk initialized correctly!
@@ -146,7 +130,7 @@ Epic. If you see it print out your wallet address then that means everything is 
 
 ### 🧨 Create an ERC-1155 collection
 
-What we're going to do now is create + deploy an ERC-1155 contract to Rinkeby. This is basically the base module we'll need to create our NFTs. **We're not creating our NFT here, yet. We're just setting up metadata around the collection itself.** This is stuff like the name of the collection (ex. CryptoPunks) and an image associated with the collection that shows up on OpenSea as the header.
+What we're going to do now is create + deploy an ERC-1155 contract to Goerli. This is basically the base module we'll need to create our NFTs. **We're not creating our NFT here, yet. We're just setting up metadata around the collection itself.** This is stuff like the name of the collection (ex. CryptoPunks) and an image associated with the collection that shows up on OpenSea as the header.
 
 *Note: You may know ERC-721 where every NFT is unique, even if they have the same image, name, and properties. With an ERC-1155, multiple people can be the holder of the same NFT. In this case, our "membership NFT" is the same for everyone, so instead of making a new NFT every time we can simply assign the same NFT to all our members. This is also more gas efficient! This is a pretty common approach for cases where the NFT is the same for all holders.*
 
@@ -174,7 +158,7 @@ import { readFileSync } from "fs";
 
     // this initialization returns the address of our contract
     // we use this to initialize the contract on the thirdweb sdk
-    const editionDrop = sdk.getEditionDrop(editionDropAddress);
+    const editionDrop = await sdk.getContract(editionDropAddress, "edition-drop");
 
     // with this, we can get the metadata of our contract
     const metadata = await editionDrop.metadata.get();
@@ -213,7 +197,7 @@ buildspace-dao-starter % node scripts/2-deploy-drop.js
 
 Okay, what just happened is pretty freaking epic. Two things happened:
 
-**One, we just deployed an [ERC-1155](https://docs.openzeppelin.com/contracts/3.x/erc1155) contract to Rinkeby.** That's right! If you head over to `https://rinkeby.etherscan.io/` and paste in the address of the `editionDrop` contract, you'll see you just deployed a smart contract! The coolest part is you **own** this contract and it's deployed from **your** wallet. The “From” address will be **your** public address. 
+**One, we just deployed an [ERC-1155](https://docs.openzeppelin.com/contracts/3.x/erc1155) contract to Goerli.** That's right! If you head over to `https://goerli.etherscan.io/` and paste in the address of the `editionDrop` contract, you'll see you just deployed a smart contract! The coolest part is you **own** this contract and it's deployed from **your** wallet. The “From” address will be **your** public address. 
 
 *Note: Keep the address of your `editionDrop` around, we'll need it later!*, if you ever lose it, you can always retrieve from the [thirdweb dashboard](https://thirdweb.com/dashboard?utm_source=buildspace)
 
@@ -227,7 +211,7 @@ You can even hit IPFS directly using the `ipfs://` URI (note — wont work on Ch
 
 *Note: IPFS is basically a decentralized storage system, read more on it [here](https://docs.ipfs.io/concepts/what-is-ipfs/)!* 
 
-If you've developed a custom smart contract in Solidity before, this is kinda mind-blowing. We already have a contract deployed to Rinkeby + data hosted on IPFS. Wild. Next, we need to actually create our NFTs!
+If you've developed a custom smart contract in Solidity before, this is kinda mind-blowing. We already have a contract deployed to Goerli + data hosted on IPFS. Wild. Next, we need to actually create our NFTs!
 
 ### 🚨 Progress Report
 

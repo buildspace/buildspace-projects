@@ -26,7 +26,7 @@ Next, let's head to our terminal (Git Bash will not work). Go ahead and `cd` t
 mkdir cool-domains
 cd cool-domains
 npm init -y
-npm install --save-dev hardhat@2.9.9
+npm install --save-dev hardhat@latest
 ```
 
 You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Running `npx audit fix` can break things, so it’s better to just skip it. Google around a bit about these vulnerabilities if you want to know more!
@@ -41,14 +41,14 @@ Run:
 npx hardhat
 ```
 
-Choose the option to “Create a basic sample project”. Say yes to everything.
+Choose the option to “Create a JavaScript project”. Say yes to everything.
 
-The sample project will ask you to install `hardhat-waffle` and `hardhat-ethers`. These are other goodies we'll use later :).
+The sample project will ask you to install `@nomicfoundation/hardhat-toolbox`. These are other goodies we'll use later :).
 
 Go ahead and install these other dependencies just in case it didn't do it automatically.
 
 ```bash
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+npm install --save-dev @nomicfoundation/hardhat-chai-matchers chai @nomiclabs/hardhat-ethers ethers
 ```
 
 You'll also want to install something called **OpenZeppelin** which is another library that's used a lot to develop secure smart contracts. We'll learn more about it later. For now, just install it :).
@@ -56,12 +56,6 @@ You'll also want to install something called **OpenZeppelin** which is another l
 ```bash
 npm install @openzeppelin/contracts
 ```
-
-Finally, run `npx hardhat accounts` and this should print out a bunch of strings that look like this:
-
-`0xa0Ee7A142d267C1f36714E4a8F75612F20a79720`
-
-These are Ethereum addresses that Hardhat generates for us to simulate real users on the blockchain. This is going to help us a ton later in the project when we want to simulate users minting domains!
 
 ### 🌟 Run it
 
@@ -79,17 +73,17 @@ npx hardhat test
 
 You should see something like this:
 
-![https://i.imgur.com/rjPvls0.png](https://i.imgur.com/rjPvls0.png)
+![https://i.imgur.com/0pmWiND.png](https://i.imgur.com/0pmWiND.png)
 
 Let’s do a little clean-up.
 
 Go ahead and open the code for the project now in your favorite code editor. I like VSCode best! We want to delete all the lame starter code generated for us. We don't need any of that. We're pros!
 
-Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `sample-script.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. Don't delete the actual folders!
+Go ahead and delete the file `Lock.js` under `test`.  Also, delete `deploy.js` under `scripts`. Then, delete `Lock.sol` under `contracts`. Don't delete the actual folders!
 
 ### 🚨 Before you click "Next Lesson"
 
-*Note: if you don't do this, Raza will be very sad :(.*
+*Note: if you don't do this, Raza will be very sad :(*
 
 Head to #progress and post a screenshot of **your** terminal showing the output of the test! You just ran a smart contract, that's a big deal!! Show it off :).
 

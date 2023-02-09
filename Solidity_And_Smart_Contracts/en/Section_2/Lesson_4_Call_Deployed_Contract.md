@@ -13,7 +13,7 @@ So, our smart contract has this function that retrieves the total number of wave
 
 Lets call this function from our website :).
 
-Go ahead and write this function right under our `connectWallet()` function.
+Go ahead and write this function right below our `connectWallet()` function.
 
 ```javascript
 const wave = async () => {
@@ -71,12 +71,12 @@ But, what's an ABI? Much earlier I mentioned how when you compile a contract, it
 
 ## 🏠 Setting Your Contract Address
 
-Remember when you deployed your contract to the Rinkeby Testnet (epic btw)? The output from that deployment included your smart contract address which should look something like this:
+Remember when you deployed your contract to the Goerli Testnet (epic btw)? The output from that deployment included your smart contract address which should look something like this:
 
 ```
 Deploying contracts with the account: 0xF79A3bb8d5b93686c4068E2A97eAeC5fE4843E7D
 Account balance: 3198297774605223721
-WavePortal address: 0xd5f08a0ae197482FA808cE84E00E97d940dBD26E
+WavePortal address: 0x957fe7381be45A31967F1EcfAc6Ff001D8AF8D6c
 ```
 
 You need to get access to this in your React app. It's as easy as creating a new property in your `App.js` file called `contractAddress` and setting its value to the `WavePortal address` thats printed out in your console:
@@ -91,7 +91,7 @@ const App = () => {
   /**
    * Create a variable here that holds the contract address after you deploy!
    */
-  const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  const contractAddress = "0x957fe7381be45A31967F1EcfAc6Ff001D8AF8D6c";
 ```
 
 ## 🛠 Getting ABI File Content
@@ -127,7 +127,7 @@ import abi from "./utils/WavePortal.json";
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
 
-  const contractAddress = "0xd5f08a0ae197482FA808cE84E00E97d940dBD26E";
+  const contractAddress = "0x957fe7381be45A31967F1EcfAc6Ff001D8AF8D6c";
   /**
    * Create a variable here that references the abi content!
    */
@@ -203,7 +203,7 @@ const wave = async () => {
 
 Pretty simple, right :)?
 
-What's awesome here is while the transaction is being mined you can actually print out the transaction hash, copy/paste it to [Etherscan](https://rinkeby.etherscan.io/), and see it being processed in real-time :).
+What's awesome here is while the transaction is being mined you can actually print out the transaction hash, copy/paste it to [Etherscan](https://goerli.etherscan.io/), and see it being processed in real-time :).
 
 When we run this, you'll see that total wave count is increased by 1. You'll also see that Metamask pops us and asks us to pay "gas" which we pay for using our fake $. There is a great article on it [here](https://ethereum.org/en/developers/docs/gas/). Try and figure out what gas is :).
 
@@ -211,7 +211,7 @@ When we run this, you'll see that total wave count is increased by 1. You'll als
 
 **NICEEEEEEE :).**
 
-Really good stuff. We now have an actual client that can read and write data to the blockchain. From here, you can do whatever you want. You have the basics down. You can build a decentralized version of Twitter. You can build a way for people to post their favorite memes and allow people to "tip" the people who post the best memes with ETH. You can build a decentralized voting system that a country can use to vote in a politician where everything is open and clear.
+Really good stuff. We now have an actual client that can read and write data to the blockchain. From here, you can do whatever you want. You have the basics down. You can build a decentralized version of Twitter. You can build a way for people to post their favorite memes and allow people to "tip" the people who post the best memes with ETH. You can build a decentralized voting system that a country can use to vote in an election where everything is open and clear.
 
 The possibilities are truly endless.
 

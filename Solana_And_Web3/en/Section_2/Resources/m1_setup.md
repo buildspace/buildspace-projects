@@ -166,17 +166,17 @@ The last thing to test is we want to make sure we can get a local Solana node ru
 
 First, shoutout to **@dimfled#9450**, and send some love his way! He has 'seen things' building with Solana recently and gave us this step to get things working on M1s!
 
-We are going to run our Solana validator manually. Will explain why we need this shortly:
+Let's now run our Solana validator
 
 ```bash
-solana-test-validator --no-bpf-jit
+solana-test-validator
 ```
 
 This may take a bit to get started but once it's going you should see something like this:
 
 ![Untitled](https://i.imgur.com/FUjRage.jpg)
 
-Boom!! You're now running a local validator. Pretty cool :).
+Boom!! You're now running a local validator. Pretty cool :). Now, go ahead and CONTROL + C to stop the validator. We're never going to actually use solana-test-validator manually ourselves again. The workflow we're going to follow will actually automatically run the validator in the background for us. I just wanted to show you it working so you can start getting an idea of how stuff is working magically as we move forward ;).
 
 ### ☕️ Install Node, NPM, and Mocha, Yarn
 
@@ -257,41 +257,39 @@ cd myepicproject
 
 `anchor init` will create a bunch of files/folders for us. It's sort of like `create-react-app` in a way. Go ahead and open up your project directory in VSCode and take a look around!
 
-Before we dive in, remember when we set our local validator as `solana-test-validator --no-bpf-jit`? Well, we did that because things right now are still really new with M1 Mac's and Anchor.
-Anchor actually runs it's own validator, and on the M1 it will fail to do that and throw an error like - `FetchError: request to http://localhost:8899/ failed` when you go to run `anchor test`.
-
-The solution right now is to have Anchor run with Solana's validator instead. Pretty dope!
-
-Okay, back to it! Let's open up a new terminal window and run:
-
-```bash
-solana-test-validator --no-bpf-jit
-```
-
 ### 🔑 Create a local keypair
 
 In order for us to talk to our Solana programs we need to generate a keypair. Really all you need to know about this is it allows us to digitally sign for transactions in Solana! Still curious? [Take a look at this page](https://solana-labs.github.io/solana-web3.js/classes/Keypair.html) for more information!
 
 ```bash
-solana-keygen new -o target/deploy/myepicproject-keypair.json
+solana-keygen new
 ```
 
 (Don't worry about creating a passphrase for now, just press "Enter" when asked!)
 
-You will see this keypair in a generated `JSON` file located at `target/deploy/myepicproject-keypair.json`.
+What this will do is create a local Solana keypair — which is sorta like our local wallet we'll use to talk to our programs via the command line. If you run `solana config get` you'll see something called `Keypair Path`. That's where the wallet has been created, feel free to check it out :).
 
-Then run this command:
-
-```bash
-solana address -k target/deploy/myepicproject-keypair.json
-```
-
-This will return the keypair in the terminal. We are going to copy that address and open up our project in our code editor and go to `Anchor.toml` in the root of our project and paste this on line two replacing the address that is already there. Go to the `lib.rs` file located in the project's `programs` directory and paste that address on line three replacing the address that is already there.
-Now, we will go back over to our terminal where we got set up in our project folder and run:
+If you run:
 
 ```bash
-anchor test --skip-local-validator
+solana address
 ```
+
+You'll see the public address of your local wallet we just created!
+
+### 🥳 Let's run our program
+
+When we did anchor init it created a basic Solana program for us. What we want to do now is:
+1. Compile our program.
+2. Spin up solana-test-validator and deploy the program to our local Solana network w/ our wallet. This is kinda like deploying our local server w/ new code.
+3. Actually call functions on our deployed program. This is kinda like hitting a specific route on our server to test that it's working.
+
+Anchor is awesome. It lets us do this all in one step by running:
+
+```bash
+anchor test
+```
+*Note*: Be sure you **don't** have solana-test-validator running anywhere else it'll conflict w/ Anchor.
 
 This may take a while the first time you run it! As long as you get the green words the bottom that say "1 passing" you're good to go!! Keep us posted in the Discord if you run into issues here.
 
@@ -308,7 +306,7 @@ If you get this error, this most likely means you forgot to add your Program Id 
 This means that you don't have enough SOL. Airdrop some SOL to your locahost:
 
 ```bash
-solana airdrop 2 --url localhost
+solana airdrop 2
 ```
 
 Run the above commands multiple times so that you get enough SOLs.

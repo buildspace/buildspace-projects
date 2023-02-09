@@ -5,16 +5,16 @@ Now that we got all our scripts good to go and the basics down, we're going to m
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.1;
+pragma solidity ^0.8.17;
 
 // We first import some OpenZeppelin Contracts.
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 import "hardhat/console.sol";
 
 // We inherit the contract we imported. This means we'll have access
 // to the inherited contract's methods.
-contract MyEpicNFT is ERC721URIStorage {
+contract MyEpicNFT is ERC721 {
   // Magic given to us by OpenZeppelin to help us keep track of tokenIds.
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
@@ -31,17 +31,23 @@ contract MyEpicNFT is ERC721URIStorage {
 
      // Actually mint the NFT to the sender using msg.sender.
     _safeMint(msg.sender, newItemId);
-
-    // Set the NFTs data.
-    _setTokenURI(newItemId, "blah");
+    
+    // Return the NFT's metadata
+    tokenURI(newItemId);
 
     // Increment the counter for when the next NFT is minted.
     _tokenIds.increment();
   }
+
+  // Set the NFT's metadata
+  function tokenURI(uint256 _tokenId) public view override returns (string memory) {
+    require(_exists(_tokenId));
+    return "blah";
+  }
 }
 ```
 
-A lot of stuff going on here. First you'll see I "inherit" an OpenZeppelin contract using `is ERC721URIStorage` when I declare the contract. You can read more about inheritance [here](https://solidity-by-example.org/inheritance/), but basically, it means we can call other contracts from ours. It's almost like importing functions for us to use!
+A lot of stuff going on here. First you'll see I "inherit" an OpenZeppelin contract using `is ERC721` when I declare the contract. You can read more about inheritance [here](https://solidity-by-example.org/inheritance/), but basically, it means we can call other contracts from ours. It's almost like importing functions for us to use!
 
 The NFT standard is known as `ERC721` which you can read a bit about [here](https://eips.ethereum.org/EIPS/eip-721). OpenZeppelin essentially implements the NFT standard for us and then lets us write our own logic on top of it to customize it. That means we don't need to write boiler plate code.
 
@@ -65,17 +71,17 @@ Same thing here, we're using `_tokenIds` to keep track of the NFTs unique identi
 _safeMint(msg.sender, newItemId);
 ```
 
-When we do `_safeMint(msg.sender, newItemId)` it's pretty much saying: "mint the NFT with id `newItemId` to the user with address `msg.sender`". Here, `msg.sender` is a variable [Solidity itself provides](https://docs.soliditylang.org/en/develop/units-and-global-variables.html#block-and-transaction-properties) that easily gives us access to the **public address** of the person calling the contract. 
+When we do `_safeMint(msg.sender, newItemId)` it's pretty much saying: "mint the NFT with id `newItemId` to the user with address `msg.sender`". Here, `msg.sender` is a variable [Solidity itself provides](https://docs.soliditylang.org/en/develop/units-and-global-variables.html#block-and-transaction-properties) that easily gives us access to the **public address** of the person calling the contract.
 
 What's awesome here is this is a **super-secure way to get the user's public address**. Keeping public address itself a secret isn't an issue, that's already public!! Everyone sees it. But, by using `msg.sender` you can't "fake" someone else's public address unless you had their wallet credentials and called the contract on their behalf!
 
 **You can't call a contract anonymously**, you need to have your wallet credentials connected. This is almost like "signing in" and being authenticated :).
 
 ```solidity
-_setTokenURI(newItemId, "blah");
+function tokenURI(uint256 _tokenId) public view override returns (string memory);
 ```
 
-We then do, `_setTokenURI(newItemId, "blah")` which will set the NFTs unique identifier along with the data associated w/ that unique identifier. It's literally us setting the actual data that makes the NFT valuable. In this case, we're setting it as "blah" which....isn't that valuable ;). It's also not following the standard of `ERC721`. We'll cover `tokenURI` more in a bit.
+We then do, override the `tokenURI()` function in ERC721.sol which will set the NFTs unique identifier along with the data associated w/ that unique identifier. It's literally us setting the actual data that makes the NFT valuable. In this case, we're setting it as "blah" which....isn't that valuable ;). It's also not following the standard of `ERC721`. We'll cover `tokenURI` more in a bit.
 
 ```solidity
 _tokenIds.increment();
@@ -97,7 +103,7 @@ The `tokenURI` is where the actual NFT data lives. And it usually **links** to a
 
 You can customize this, but, almost every NFT has a name, description, and a link to something like a video, image, etc. It can even have custom attributes on it! Be careful with the structure of your metadata, if your structure does not match the [OpenSea Requirements](https://docs.opensea.io/docs/metadata-standards) your NFT will appear broken on the website.
 
-This is all part of the `ERC721` standards and it allows people to build websites on top of NFT data. For example, [OpenSea](https://opensea.io/assets) is a marketplace for NFTs. And, every NFT on OpenSea follows the `ERC721` metadata standard which makes it easy for people to buy/sell NFTs. Imagine if everyone followed their own NFT standards and structured their metadata however they wanted, it'd be chaos!
+This is all part of the `ERC721` standards and it allows people to build websites on top of NFT data. For example, [OpenSea](https://testnets.opensea.io/) is a platform to view NFTs. And, every NFT on OpenSea follows the `ERC721` metadata standard which makes it easy for people to view their NFTs. Imagine if everyone followed their own NFT standards and structured their metadata however they wanted, it'd be chaos!
 
 We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [this](https://jsonkeeper.com/) website. This website is just an easy place for people to host JSON data and we'll be using it to keep our NFT data for now. Once you click "Save" you'll get a link to the JSON file. (For example, mine is [`https://jsonkeeper.com/b/RUUS`](https://jsonkeeper.com/b/RUUS)). Be sure to test your link out and be sure it all looks good!
 
@@ -105,22 +111,32 @@ We can copy the `Spongebob Cowboy Pants` JSON metadata above and paste it into [
 
 If you decide to use your own image, make sure the URL goes directly to the actual image, not the website that hosts the image! Direct Imgur links look like this - `https://i.imgur.com/123123.png` NOT `https://imgur.com/gallery/123123`. The easiest way to tell is to check if the URL ends in an image extension like `.png` or `.jpg`. You can right click the imgur image and "copy image address". This will give you the correct URL.
 
-Now, let's head to our smart contract and change one line. Instead of:
+Now, lets head to our smart contract and change one line in `tokenURI()`. Instead of:
 
 ```solidity
-_setTokenURI(newItemId, "blah")
+return "blah";
 ```
 
 We're going to actually set the URI as the link to our JSON file.
 
 ```solidity
-_setTokenURI(newItemId, "INSERT_YOUR_JSON_URL_HERE");
+return "INSERT_YOUR_JSON_URL_HERE";
 ```
 
-Under that line, we can also add a `console.log` to help us see when the NFT is minted and to who!
+We can also add a `console.log` to help us see when the NFT is minted and to who!
 
 ```solidity
-console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
+console.log("An NFT w/ ID %s has been minted to %s", _tokenId, msg.sender);
+```
+
+This is how your tokenURI function should look now. `_exists` is a built in function to to verify if the tokenId exists in a contract. You can learn more about it [here](https://docs.openzeppelin.com/contracts/3.x/api/token/erc721#ERC721-_exists-uint256-)
+
+```solidity
+function tokenURI(uint256 _tokenId) public view override returns (string memory) {
+  require(_exists(_tokenId));
+  console.log("An NFT w/ ID %s has been minted to %s", _tokenId, msg.sender);
+  return "INSERT_YOUR_JSON_URL_HERE";
+}
 ```
 
 ## 🎉 Mint an NFT locally
@@ -175,11 +191,11 @@ So, right now every time someone mints an NFT with this function, it's always th
 
 Now, let's move to the next step — deploying to a testnet :).
 
-## 🎉 Deploy to Rinkeby and see on OpenSea
+## 🎉 Deploy to Goerli and see on OpenSea
 
-When we use `run.js`, it's just us working locally.
+Since OpenSea doesn't support Goerli, we have to look for an alternative. You can check out [OpenSea](https://testnets.opensea.io/) to view your NFT when you deploy to Goerli. When we use `run.js`, it's just us working locally.
 
-The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to **view our NFT online** and we are a step closer to getting this to **real users.** 
+The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to to **view our NFT online** and we are a step closer to getting this to **real users.**
 
 You are a badass look at you! 
 
@@ -193,13 +209,13 @@ Remember, the blockchain has no owner. It's just a bunch of computers around the
 
 When we deploy our contract, we need to tell **all those** miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
 
-This is where [QuickNode](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de) comes in.
+This is where [QuickNode](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace) comes in.
 
 QuickNode essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible. Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
 
 This is complicated. And, don't worry if you don't fully understand it. As you write more code and actually build this app, it'll naturally make more sense. 
 
-So, make an account with QuickNode [here](https://www.quicknode.com?tap_a=67226-09396e&tap_s=3047999-9900de).
+So, make an account with QuickNode [here](https://www.quicknode.com/?utm_source=buildspace&utm_campaign=generic&utm_content=sign-up&utm_medium=buildspace).
 
 And then check out my video below to learn how to get your API key for a testnet:
 [Loom](https://www.loom.com/share/c079028c612340e8b7439d0d2103a313)
@@ -222,25 +238,21 @@ This is awesome because we can test our application in a real-world scenario whe
 
 ## 🤑 Getting some fake $
 
-There are a few testnets out there and the one we'll be using is called "Rinkeby" which is run by the Ethereum foundation.
+There are a few testnets out there and the one we'll be using is called "Goerli" which is run by the Ethereum foundation.
 
-In order to deploy to Rinkeby, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
+In order to deploy to Goerli, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Rinkeby through a faucet. You just gotta find one that works lol.
+In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Goerli through a faucet. You just gotta find one that works lol.
 
-For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official rinkeby faucet, if it lists 0 peers, it is not worth the time to make a tweet/public Facebook post.
+For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official Goerli faucet, if you log into your Alchemy account, you should be able to get 2x the amount.
 
 You have a few faucets to choose from:
 
 | Name             | Link                                  | Amount          | Time         |
 | ---------------- | ------------------------------------- | --------------- | ------------ |
 | MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
-| Official Rinkeby | https://faucet.rinkeby.io/            | 3 / 7.5 / 18.75 | 8h / 1d / 3d |
-| Chainlink        | https://faucets.chain.link/rinkeby    | 0.1             | None         |
-
-## 🙃 Having trouble getting Testnet ETH?
-
-If the above doesn't work, use the `/faucet` command in the #faucet-request channel and our bot will send you some! If you want some more, send your public wallet address and drop a funny gif. Either me, or someone from the project will send you some fake ETH as soon as they can. The funnier the gif, the faster you will get sent fake ETH LOL.
+| Official Goerli  | https://goerlifaucet.com/             | 0.20            | 24 Hours
+| Chainlink        | https://faucets.chain.link/goerli     | 0.1             | None         |
 
 ## 🚀 Setup a deploy.js file
 
@@ -278,25 +290,25 @@ const runMain = async () => {
 runMain();
 ```
 
-## 📈 Deploy to Rinkeby testnet
+## 📈 Deploy to Goerli testnet
 
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
 
 ```javascript
-require('@nomiclabs/hardhat-waffle');
-require("dotenv").config({ path: ".env" });
+require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config();
 
 module.exports = {
-  solidity: '0.8.1',
+  solidity: '0.8.17',
   networks: {
-    rinkeby: {
+    goerli: {
       url: process.env.QUICKNODE_API_KEY_URL,
-      accounts: [process.env.RINKEBY_PRIVATE_KEY],
+      accounts: [process.env.GOERLI_PRIVATE_KEY],
     },
   },
 };
 ```
-Here we are basically configuring our `hardhat.config.js` to use our env variables securely which are the **process.env.QUICKNODE_API_KEY_URL** & our **process.env.RINKEBY_PRIVATE_KEY**. You'll now need to open your terminal and type in
+Here we are basically configuring our `hardhat.config.js` to use our env variables securely which are the **process.env.QUICKNODE_API_KEY_URL** & our **process.env.GOERLI_PRIVATE_KEY**. You'll now need to open your terminal and type in
 ```
 npm install dotenv
 ```
@@ -309,7 +321,7 @@ You can grab your API URL from the QuickNode dashboard and paste that in. Then, 
 Open the **.env** file and paste the two we've grabbed as shown below.
 ```
 QUICKNODE_API_KEY_URL=<YOUR API URL>
-RINKEBY_PRIVATE_KEY=<YOUR PRIVATE KEY>
+GOERLI_PRIVATE_KEY=<YOUR PRIVATE KEY>
 ```
 Don't forget to remove those `<` `>` after adding your API URL and your PRIVATE KEY! 🔑
 
@@ -336,16 +348,16 @@ Once you've got your config setup we're set to deploy with the deploy script we 
 Run this command from the root directory of `epic-nfts`.
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 It takes like 20-40 seconds to deploy usually. We're not only deploying! We're also minting NFTs in `deploy.js` so that'll take some time as well. We actually need to wait for the transaction to be mined + picked up by miners. Pretty epic :). That one command does all that!
 
 When I run this here's the output (yours will ofc look different):
 
-![carbon (7).png](https://i.imgur.com/nLSX6PM.png)
+![carbon (7).png](https://i.imgur.com/TwpQOTM.png)
 
-We can make sure it all worked properly using [Rinkeby Etherscan](https://rinkeby.etherscan.io/) where you can paste the contract address and see what's up with it!
+We can make sure it all worked properly using [Goerli Etherscan](https://goerli.etherscan.io/) where you can paste the contract address and see what's up with it!
 
 Get used to using Etherscan because it's like the easiest way to track deployments and if something goes wrong. If it's not showing up on Etherscan, then that means it's either still processing or something went wrong!
 
@@ -355,7 +367,12 @@ If it worked — AWEEEEESOME YOU JUST DEPLOYED A CONTRACT YESSSS.
 
 Believe it or not. The NFTs you just minted will be on OpenSea's TestNet site.
 
-Head to [testnets.opensea.io](https://testnets.opensea.io/). Search for your contract address which is the address we deployed to that you can find in your terminal, **Don't click enter**, click the collection itself when it comes up in the search.
+1. Head to `https://testnets.opensea.io/`.
+2. Create this url: `https://testnets.opensea.io/assets/goerli/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE/TOKEN_ID`
+
+For example, here's my link: https://testnets.opensea.io/assets/goerli/0x78d1e929cfc5256643b3cc67c50e2d7ec3580842/0 for the Spongebob NFT!! My `tokenId` is `0` because it was the first mint from that contract.
+
+**Basically, if you don't see your NFT on OpenSea within a few minutes, refreshing the page and wait for another 15 mins** 
 
 ![Untitled](https://i.imgur.com/ePDlYX1.png)
 
@@ -367,21 +384,6 @@ HOOOOLY SHIT LET'S GO. IM HYPE **FOR** YOU.
 
 Pretty epic, we've created our own NFT contract *and* minted two NFTs. Epic. WHILE THIS IS EPIC, it is *kinda lame —* right? It's just the same Spongebob picture every time! How can we add some randomness to this and generate stuff on the fly? That's what we'll be getting into next :).
 
-## 🙀 Help my NFTs aren't showing on OpenSea!
- **If your NFTs aren't showing up on OpenSea** — wait a few minutes, sometimes OpenSea can take like 5-minutes. Here's my advice, if it's been 5 minutes and your metadata still looks like this:
-
-![Untitled](https://i.imgur.com/dVACrDl.png)
-
-**Then use Rarible instead of OpenSea.** Rarible is another NFT marketplace like OpenSea. Here's how to set it up:
-
-1. Head to `rinkeby.rarible.com`.
-2. Create this url: `https://rinkeby.rarible.com/token/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE.`
-
-For example, here's my link: https://rinkeby.rarible.com/token/0xb6be7bd567e737c878be478ae1ab33fcf6f716e0:0 for the Spongebob NFT!! My `tokenId` is `0` because it was the first mint from that contract.
-
-**Basically, if you don't see your NFT on OpenSea within a few minutes, try Rarible and Rarible URLs for the rest of the project.** 
-
-
 ## 💻 The code
 
 [Here](https://gist.github.com/farzaa/483c04bd5929b92d6c4a194bd3c515a5) is a link to what our code looks like up to this point.
@@ -391,10 +393,6 @@ For example, here's my link: https://rinkeby.rarible.com/token/0xb6be7bd567e737c
 WOOOOOOO. GIVE YOURSELF A PAT ON THE BACK. YOU DEPLOYED A SMART CONTRACT THAT MINTS NFTS. WOW.
 
 Quick note here: We've seen that the best builders have made it a habit to **"build in public"**. All this means is sharing a few learnings about the milestone they've just hit!
-
-Drop a quick update on buildspace right now by pressing "Post update" in the top right corner 🤘
-[Loom](https://www.loom.com/share/19f0af7b490144948d1b31ec96318c0b)
-
 
 You should totally **tweet** out that you just wrote and deployed your smart contract that can mint NFTs and tag @_buildspace. If you want, include a screenshot of the OpenSea/Rarible page that shows that your NFT :)!
 

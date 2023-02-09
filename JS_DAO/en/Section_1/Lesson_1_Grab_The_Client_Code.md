@@ -8,7 +8,7 @@ We'll be using this thing called [Replit](https://replit.com/~)! It is a browse
 
 Make an account on Replit before moving on.
 
-I've already created a basic react project that you can **fork** on Replit. **Just go [here](https://replit.com/@NachoIacovino/buildspace-dao-starter-v2), and near the right you'll see the "Fork" button.** Be sure you're logged in, then click this.
+I've already created a basic react project that you can **fork** on Replit. **Just go [here](https://replit.com/@thirdweb/buildspace-dao-starter-v3), and near the right you'll see the "Fork" button.** Be sure you're logged in, then click this.
 
 You'll magically clone my repo and full IDE in your browser to work with the code. Once it stops loading and shows you some code. Click "run" at the top and you're good to go.
 
@@ -61,28 +61,36 @@ So, in order for our website to talk to the blockchain, we need to somehow conne
 
 So, go ahead and set it all up! Their setup flow is pretty self-explanatory.
 
-Once you set up your wallet, be sure to switch the network to "**Rinkeby**" which is the test network we'll be working with.
+Once you set up your wallet, be sure to switch the network to "**Goerli**" which is the test network we'll be working with.
 
-![Untitled](https://i.imgur.com/Kx3AZDp.png)
+![Untitled](https://i.imgur.com/bw6YUMV.png)
 
-### 💸 Make sure you have testnet funds
+## 🤑 Getting some fake $
 
-We're **not** going to be deploying to the "Ethereum mainnet". Why? Because it costs real $ and it's not worth messing up. We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake $ so we can test stuff out as much as we want. But, it's important to know that testnets are run by actual miners and mimic real-world scenarios.
+There are a few testnets out there and the one we'll be using is called "Goerli" which is run by the Ethereum foundation.
 
-We'll be using "Rinkeby" which is run by the Ethereum Foundation. To get some fake ETH, head to the buildspace Discord, and go to the `#faucet-request` under the "Resources" section. In this channel run:
+In order to deploy to Goerli, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-```plaintext
-/faucet INSERT_YOUR_PUBLIC_ADDRESS_HERE
-```
+In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Goerli through a faucet. You just gotta find one that works lol.
+
+For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official Goerli faucet, if you log into your Alchemy account, you should be able to get 2x the amount.
+
+You have a few faucets to choose from:
+
+| Name             | Link                                  | Amount          | Time         |
+| ---------------- | ------------------------------------- | --------------- | ------------ |
+| MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
+| Official Goerli  | https://goerlifaucet.com/             | 0.25            | 24 Hours     |
+| Chainlink        | https://faucets.chain.link/goerli     | 0.1             | None         |
 
 You can find your public address [here](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-).
 
 Once your transaction is mined, you'll have some fake ETH in your wallet.
 
-![Untitled](https://i.imgur.com/9kZbhTN.png)
+![Untitled](https://i.imgur.com/7yyYaDx.png)
 
 ### 🚨 Progress Report
 
 *Please do this else Farza will be sad :(*
 
-In `#progress` upload a screenshot of your Metamask showing your total balance on Rinkeby like I have above.
+In `#progress` upload a screenshot of your Metamask showing your total balance on Goerli like I have above.

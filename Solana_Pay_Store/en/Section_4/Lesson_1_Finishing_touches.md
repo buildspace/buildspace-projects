@@ -37,28 +37,6 @@ Super exciting that you made it to the end. Pretty big deal!! Solana is super ea
 
 Thank you for contributing to the future of web3 by learning this stuff. The fact that you know how this works and how to code it up is a superpower. Use your power wisely ;).
 
-### 🥞 Careers in Web3
-Tons of people have also gotten full-time jobs at top web3 companies via buildspace. I'm constantly seeing people nail their interviews after they do a few buildspace projects.
-
-![Nick being a boss at his job application](https://i.imgur.com/CNzLdQc.png)
-
-**People seem to think web3 just needs people who can code smart contracts or write code that interfaces w/ the blockchain. Not true.**
-
-There is so much work to do and most of the work doesn't even have to do w/ smart contracts lol. **Being an engineer in web3 just means you take your web2 skills and apply them to web3.**
-
-I want to quickly go over wtf it means to "work in web3" as an engineer. Do you need to be a pro at Solana? Do you need to know how every little thing about the blockchain works?
-
-For example, let's say you're a great frontend engineer. If you finished this project, you have almost everything you need to be a great frontend engineer at a web3 company. For example, the company may say "Hey — pls go and build our connect to wallet feature" — and you'd already have a solid idea on how to do that :).
-
-I just wanna inspire you to work in web3 lol. This shit is awesome. And it'd be cool if you gave it a shot ;).
-
-Be sure you click "Work" on the top and fill out your profile if you haven't done so already!!! We're partnered w/ some of the best web3 companies in the world (ex. Uniswap, OpenSea, Chainlink, Edge and Node, and more) and they want to hire devs from the buildspace network :). You've already picked up a skill that is actually extremely valuable and companies are paying top dollar for awesome web3 engineers.
-
-### 🤟 Your NFT!
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ alec#8853.
-
-Be sure to click the button at the bottom of this page and submit your final link. Otherwise, our system won't mark you as "complete".
-
 ### 🌈 Before you head out
 Go to #showcase in Discord and drop us a link to your final product that we can mess around with :).
 

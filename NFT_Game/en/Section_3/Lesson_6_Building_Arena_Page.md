@@ -87,7 +87,7 @@ const renderContent = () => {
 	* If there is a connected wallet and characterNFT, it's time to battle!
 	*/
   } else if (currentAccount && characterNFT) {
-    return <Arena characterNFT={characterNFT} />;
+    return <Arena characterNFT={characterNFT} currentAccount={currentAccount} />;
   }
 }; 
 ```
@@ -353,7 +353,7 @@ We are going to dynamically add this class name to our `div` which in turn will 
 /*
 * We are going to need to update our character NFT so pass setCharacterNFT here.
 */
-const Arena = ({ characterNFT, setCharacterNFT }) => {
+const Arena = ({ characterNFT, setCharacterNFT, currentAccount }) => {
 	
     ...
 
@@ -414,7 +414,7 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
 }
 ```
 
-Also, don't forget to head back to `App.js` and add pass the `setCharacterNFT` property to your Arena component:
+Also, don't forget to head back to `App.js` and pass the `setCharacterNFT` property to your Arena component:
 
 ```javascript
   <Arena characterNFT={characterNFT} setCharacterNFT={setCharacterNFT} />

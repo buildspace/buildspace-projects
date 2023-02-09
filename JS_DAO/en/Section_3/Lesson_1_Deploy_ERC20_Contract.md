@@ -37,11 +37,11 @@ import sdk from "./1-initialize-sdk.js";
       primary_sale_recipient: AddressZero,
     });
     console.log(
-      "✅ Successfully deployed token module, address:",
+      "✅ Successfully deployed token contract, address:",
       tokenAddress,
     );
   } catch (error) {
-    console.error("failed to deploy token module", error);
+    console.error("failed to deploy token contract", error);
   }
 })();
 ```
@@ -60,13 +60,13 @@ buildspace-dao-starter % node scripts/5-deploy-token.js
 ✅ Successfully deployed token contract, address: 0xF93B8AE0a84325D1d7Aa09593DCA3Ad5Fe868eA7
 ```
 
-Boom! It deployed a fresh token contract. If you head to [`https://rinkeby.etherscan.io/`](https://rinkeby.etherscan.io/) and search the token module’s address, you’ll see the contract you just deployed. Again, you’ll see it deployed from **your wallet** so **you own it**.
+Boom! It deployed a fresh token contract. If you head to [`https://goerli.etherscan.io/`](https://goerli.etherscan.io/) and search the token module’s address, you’ll see the contract you just deployed. Again, you’ll see it deployed from **your wallet** so **you own it**.
 
 ![Untitled](https://i.imgur.com/4tHQ20A.png)
 
 You can even add your token to Metamask as a custom token.
 
-Just click “Import Token”:
+Just click “Import tokens”:
 
 ![Untitled](https://i.imgur.com/Bf56dyv.png)
 
@@ -89,15 +89,14 @@ Head to `6-print-money.js` and add:
 ```jsx
 import sdk from "./1-initialize-sdk.js";
 
-// This is the address of our ERC-20 contract printed out in the step before.
-const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
-
 (async () => {
   try {
+    // This is the address of our ERC-20 contract printed out in the step before.
+    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
     // What's the max supply you want to set? 1,000,000 is a nice number!
     const amount = 1_000_000;
     // Interact with your deployed ERC-20 contract and mint the tokens!
-    await token.mintToSelf(amount);
+    await token.mint(amount);
     const totalSupply = await token.totalSupply();
 
     // Print out how many of our token's are out there now!
@@ -143,16 +142,14 @@ Open up `7-airdrop-token.js` and add the following code:
 ```jsx
 import sdk from "./1-initialize-sdk.js";
 
-// This is the address to our ERC-1155 membership NFT contract.
-const editionDrop = sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
-
-// This is the address to our ERC-20 token contract.
-const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
-
 (async () => {
   try {
-    // Grab all the addresses of people who own our membership NFT, 
-    // which has a tokenId of 0.
+    // This is the address to our ERC-1155 membership NFT contract.
+    const editionDrop = await sdk.getContract("INSERT_EDITION_DROP_ADDRESS", "edition-drop");
+    // This is the address to our ERC-20 token contract.
+    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
+    // Grab all the addresses of people who own our membership NFT, which has 
+    // a tokenId of 0.
     const walletAddresses = await editionDrop.history.getAllClaimerAddresses(0);
 
     if (walletAddresses.length === 0) {

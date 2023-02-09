@@ -43,7 +43,7 @@ contract Domains {
       return 1 * 10**17;
     }
   }
-
+  // Added "payable" modifier to register function
   function register(string calldata name) public payable{
     require(domains[name] == address(0));
     
@@ -102,7 +102,7 @@ As for the rest, we added three things:
 
 - `import { StringUtils }` - we are importing a helper file. I’ll go over this shortly.
 - A public string called `tld` - this will record what your epic domain ends with (ex. `.ninja`).
-- `string memory _tld` in the constructor - the constructor is run only once! This is how we’re setting the public `tld` variable.
+- `string memory _tld` in the constructor - the constructor runs only once! This is how we’re setting the public `tld` variable.
 
 For the new import - get [this file](https://gist.github.com/AlmostEfficient/669ac250214f30347097a1aeedcdfa12) and put it in a new folder called “libraries” in the contracts folder. Strings in Solidity are weird so we need a custom function to check their length. This function converts them to bytes first, making it much more gas efficient! Yay for savings!
 
@@ -201,7 +201,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 
 import {StringUtils} from "./libraries/StringUtils.sol";
 // We import another help function
-import {Base64} from "./libraries/Base64.sol";
+import "@openzeppelin/contracts/utils/Base64.sol";
 
 import "hardhat/console.sol";
 
@@ -282,7 +282,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
 // We import more another help function
-import {Base64} from "./libraries/Base64.sol";
+import "@openzeppelin/contracts/utils/Base64.sol";
 
 contract Domains is ERC721URIStorage {
 ```
@@ -293,7 +293,7 @@ So what do we get from this?
 
 We are able to mint NFTs using the standard known as `ERC721` which you can read more about [here](https://eips.ethereum.org/EIPS/eip-721). OpenZeppelin essentially implements the NFT standard for us and then lets us write our own logic on top of it to customize it. That means we don't need to write boilerplate code. It would be crazy to write a HTTP server from scratch without using a library, right? Similarly — it'd be crazy to just write an NFT contract from complete scratch! 
 
-As for `Base64` - it has some helper functions created by someone else to help us convert the SVG used for our NFT image and the JSON for its metadata to `Base64` in Solidity. Create a file named `Base64.sol` in the libraries folder `libraries` and copy-paste the code from [here](https://gist.github.com/farzaa/f13f5d9bda13af68cc96b54851345832) into there.
+As for `Base64` - it has some helper functions created by someone else to help us convert the SVG used for our NFT image and the JSON for its metadata to `Base64` in Solidity.
 
 ```solidity
 using Counters for Counters.Counter;
@@ -469,4 +469,4 @@ AND YOU’RE CAPTURING PAYMENTS ON POLYGON.
 
 **This is tough stuff. Way to go!**
 
-Post a screenshot of your awesome custom NFT-domain in #progress and maybe even tweet it out to show people what you’re up to — be sure to tag `@_buildspace` ;). 
+Post a screenshot of your awesome custom NFT-domain in #progress and maybe even tweet it out to show people what you’re up to — be sure to tag `@_buildspace` ;) 

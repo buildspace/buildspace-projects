@@ -4,22 +4,11 @@ One thing that’d be awesome is after the NFT is minted we actually give a link
 
 The link for an NFT on OpenSea looks like this:
 
-`https://testnets.opensea.io/assets/0x88a3a1dd73f982e32764eadbf182c3126e69a5cb/9`
+`https://testnets.opensea.io/assets/goerli/0x78d1e929cfc5256643b3cc67c50e2d7ec3580842/0`
 
 Basically, these are the variables.
 
-`https://testnets.opensea.io/assets/INSERT_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`
-
-
-**Note: if you're using Rarible b/c OpenSea is being slow to show your NFT's metadata -- check out the link setup below, it's very similar! I actually like using Rarible instead of OpenSea, it's usually way faster to show the metadata. Which is nice b/c your users can instantly see their NFT!**
-
-The link for an NFT on Rarible looks like this:
-
-`https://rinkeby.rarible.com/token/0xb6be7bd567e737c878be478ae1ab33fcf6f716e0:0`
-
-Basically, these are the variables.
-
-`https://rinkeby.rarible.com/token/INSERT_CONTRACT_ADDRESS_HERE:INSERT_TOKEN_ID_HERE`
+`https://testnets.opensea.io/assets/goerli/INSERT_CONTRACT_ADDRESS_HERE/INSERT_TOKEN_ID_HERE`
 
 So, our web app has the contract address, but not the token id! So, we’ll need to change up our contract to retrieve that. Let’s do it.
 
@@ -39,7 +28,7 @@ Thats why I use events here. I’m able to `emit` an event on the contract and t
 
 Again, it’s sorta like a web hook. Except this is going to be the easiest webhook ever to setup lol.
 
-Be sure to read more on events [here](https://docs.soliditylang.org/en/v0.8.14/contracts.html#events).
+Be sure to read more on events [here](https://docs.soliditylang.org/en/v0.8.17/contracts.html#events).
 
 As always when we change our contract.
 
@@ -54,7 +43,7 @@ Now on our frontend we add this magical line (I’ll show you where to put it in
 ```javascript
 connectedContract.on("NewEpicNFTMinted", (from, tokenId) => {
 	console.log(from, tokenId.toNumber())
-	alert(`Hey there! We've minted your NFT. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: <https://testnets.opensea.io/assets/${CONTRACT_ADDRESS}/${tokenId.toNumber()}>`)
+	alert(`Hey there! We've minted your NFT. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: <https://testnets.opensea.io/assets/goerli/${CONTRACT_ADDRESS}/${tokenId.toNumber()}>`)
 });
 
 ```
@@ -76,7 +65,7 @@ Hint, you'll need something in solidity called `require`. And, you'll like also 
 
 ## ❌ Alert user when they’re on the wrong network
 
-Your website is **only** going to work on Rinkeby (since that's where your contract lives).
+Your website is **only** going to work on Goerli (since that's where your contract lives).
 
 We're going to add a nice message telling users about this! 
 
@@ -88,10 +77,10 @@ We have already addressed requests to the blockchain. We used `ethereum.request`
 let chainId = await ethereum.request({ method: 'eth_chainId' });
 console.log("Connected to chain " + chainId);
 
-// String, hex code of the chainId of the Rinkebey test network
-const rinkebyChainId = "0x4"; 
-if (chainId !== rinkebyChainId) {
-	alert("You are not connected to the Rinkeby Test Network!");
+// String, hex code of the chainId of the Goerli test network
+const goerliChainId = "0x5"; 
+if (chainId !== goerliChainId) {
+	alert("You are not connected to the Goerli Test Network!");
 }
 ```
 There, now the user will know if they are on the wrong network! 
@@ -114,7 +103,7 @@ Perhaps the most important part!
 
 Usually, when people want to see an NFT collection, they look at it on OpenSea!! It's a super-easy way for people to get a feel for your collection. So if you link your friend your site, they'll know it's legit!!
 
-Add a little button that says "🌊 View Collection on OpenSea" and then when your users clicks it, it links to your collection! Remember, your collections link changes every time you change the contract. So be sure to link your latest and final collection. For example, [this](https://testnets.opensea.io/collection/squarenft-vu901lkj40) is my collection.
+Add a little button that says "🌊 View Collection on OpenSea" and then when your users clicks it, it links to your collection! Remember, your collections link changes every time you change the contract. So be sure to link your latest and final collection. For example, [this](https://testnets.opensea.io/collection/squarenft-ak8283fv8m) is my collection.
 
 Note: This link you'll need to hardcode. I left a variable at the top for you to fill in. It can't be dynamically generated unless you use the OpenSea API (which is overkill for now lol).
 

@@ -4,7 +4,9 @@
 
 Let's do a little clean-up.
 
-We want to delete all the lame starter code generated for us. We're going to write this stuff ourselves! Go ahead and delete the file `sample-test.js` under `test`.  Also, delete `sample-script.js` under `scripts`. Then, delete `Greeter.sol` under `contracts`. **Don't delete the actual folders!**
+Go ahead and open the code for the project now in your favorite code editor. I like VSCode best! We want to delete all the lame starter code generated for us. We don't need any of that. We're pros ;)!
+
+Go ahead and delete the file `Lock.js` under `test`.  Also, delete `deploy.js` under `scripts`. Then, delete `Lock.sol` under `contracts`. **Don't delete the actual folders!**
 
 Now, open the project up in VSCode and let's get to writing our NFT contract. If you've never written a smart contract don't worry. **Just follow along. Google stuff you don't understand. Ask questions in Discord.**
 
@@ -17,7 +19,7 @@ I always like starting with a really basic contract, just to get things going.
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.1;
+pragma solidity ^0.8.17;
 
 import "hardhat/console.sol";
 
@@ -39,10 +41,10 @@ Let's go line-by-line here.
 Just a fancy comment.  It's called an "SPDX license identifier", You can read more about that [here](https://spdx.org/licenses/).
 
 ```solidity
-pragma solidity ^0.8.1;
+pragma solidity ^0.8.17;
 ```
 
-This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use a Solidity compiler with its version 0.8.1 or higher, but not higher than 0.9.0. Note, be sure your compiler is set accordingly (eg. 0.8.1) in `hardhat.config.js`.
+This is the version of the Solidity compiler we want our contract to use. It basically says "when running this, I only want to use a Solidity compiler with its version 0.8.17 or higher, but not higher than 0.9.0". Note, be sure your compiler is set accordingly (eg. 0.8.17) in `hardhat.config.js`.
 
 ```solidity
 import "hardhat/console.sol";
@@ -134,7 +136,7 @@ But, there are millions of contracts on the actual blockchain. So, this address 
 
 ## 💨 Run it
 
-Before you run this, be sure to change `solidity: "0.8.4",` to `solidity: "0.8.1",` in your `hardhat.config.js`.
+Before you run this, be sure to change `solidity: "0.8.4",` to `solidity: "0.8.17",` in your `hardhat.config.js`.
 
 Let's run it! Open up your terminal and run:
 

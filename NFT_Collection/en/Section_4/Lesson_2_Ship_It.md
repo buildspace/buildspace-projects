@@ -15,7 +15,7 @@ require('dotenv').config();
 module.exports = {
   solidity: '0.8.1',
   networks: {
-    rinkeby: {
+    goerli: {
       url: process.env.STAGING_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
     },
@@ -89,7 +89,7 @@ I'll leave it to you to explore!! ;)
 
 ## 📝 Verify contract on Etherscan
 
-Do you know that you are able to show your smart contract source code to the world? Doing so will enable your logic to be really transparent. True to the spirit of a public blockchain. Everyone who wishes to interact with your smart contract on the blockchain is able to peer into the contract logic first! For that, Etherscan has the **Verify Contract** function. [Here](https://rinkeby.etherscan.io/address/0x902ebbecafc54f7a8013a9d7954e7355309b50e6#code) is an example of how a verified contract will look like. Feel free to examine the smart contract yourself.
+Do you know that you are able to show your smart contract source code to the world? Doing so will enable your logic to be really transparent. True to the spirit of a public blockchain. Everyone who wishes to interact with your smart contract on the blockchain is able to peer into the contract logic first! For that, Etherscan has the **Verify Contract** function. [Here](https://goerli.etherscan.io/address/0x902ebbecafc54f7a8013a9d7954e7355309b50e6#code) is an example of how a verified contract will look like. Feel free to examine the smart contract yourself.
 
 If you select the **Contract** tab in Etherscan, you will notice a long list of text characters that starts from `0x608060405234801...` Hmm.. what could that be 🤔 ?
 
@@ -119,7 +119,7 @@ require("@nomiclabs/hardhat-etherscan");
 ...
 
 module.exports = {
-  solidity: "0.8.1",
+  solidity: "0.8.17",
 
   // Rest of the config
   ...,
@@ -145,14 +145,14 @@ Sweet you got your API key. Time to head back to your `hardhat.config.js` file a
 We are down to our last step I promise. All that remains now is to run the command
 
 ```
-npx hardhat verify YOUR_CONTRACT_ADDRESS --network rinkeby 
+npx hardhat verify YOUR_CONTRACT_ADDRESS --network goerli 
 ```
 
 If everything runs smoothly, you should see some outputs in the terminal. Mine looks like this:
 
 ![image](https://user-images.githubusercontent.com/60590919/139611432-16d8c3fc-04b1-44c8-b58a-27f49e94d492.png)
 
-Head back to the contract page in Rinkeby Etherscan by following the link returned in the terminal and you will notice that Etherscan has magically (with your help) turned the bytecodes into a much readable Solidity code.
+Head back to the contract page in Goerli Etherscan by following the link returned in the terminal and you will notice that Etherscan has magically (with your help) turned the bytecodes into a much readable Solidity code.
 
 ![image](https://user-images.githubusercontent.com/60590919/139611635-3d1d7aae-8bb8-47f5-9396-6a4544badebf.png)
 
@@ -177,11 +177,7 @@ What you learned in this project is just the beginning! There is so much more yo
 
 - **Sell your NFTs** - Right now your users only have to pay gas fees to mint your awesome nfts and you're not getting any of that money! There are several ways to alter your smart contract that make the user pay you to mint your transactions, such as adding ```payable``` to your contract and using ```require``` to set a minimum amount. Since you're dealing with real money here it's best to do your research carefully and ask the experts that your code is safe. OpenZeppelin has a forum where you can ask questions like this one [here!](https://forum.openzeppelin.com/t/implementation-of-sellable-nft/5517/) 
 - **Add Royalties** - You can also add royalties to your smart contract that would give you a percentage of every future sale of your NFT! Read more about it here: [EIP-2981: NFT Royalty Standard](https://eips.ethereum.org/EIPS/eip-2981)
-- **Test your contracts locally** - If you want to test your contracts more extensively without deploying to a test net like Rinkeby, Hardhat of course will let you do that! Best way to achieve that is to open up a separate terminal window, navigate to your project directory, then run ```npx hardhat node``` and keep that window open! Just like in the beginning of the project you'll see a bunch of accounts with lots of ether. In your other terminal window you can run your test scripts and watch it affect your node window!
-
-## 🤟 Your NFT!
-
-We'll airdrop you your NFT within an hour and will email you once it's in your wallet. It's running on a cron job! If you don't get the email within 24-hours pls pls pls drop us a message in #feedback and tag @ **alec#8853**.
+- **Test your contracts locally** - If you want to test your contracts more extensively without deploying to a test net like Goerli, Hardhat of course will let you do that! Best way to achieve that is to open up a separate terminal window, navigate to your project directory, then run ```npx hardhat node``` and keep that window open! Just like in the beginning of the project you'll see a bunch of accounts with lots of ether. In your other terminal window you can run your test scripts and watch it affect your node window!
 
 
 ## 🌈 Before you head out

@@ -291,7 +291,7 @@ const App = () => {
 export default App;
 ```
 
-Make sure you remember to update the `Connect Wallet` button to actually call the `connectWallet`  function we just wrote. 
+Make sure you remember to update the `Connect Wallet` button to actually call the `connectWallet`  function we just wrote.
 
 To recap what we’ve done with our app so far: 
 

@@ -8,10 +8,9 @@ Head over to `scripts/3-config-nft.js` and add in:
 import sdk from "./1-initialize-sdk.js";
 import { readFileSync } from "fs";
 
-const editionDrop = sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
-
 (async () => {
   try {
+    const editionDrop = await sdk.getContract("INSERT_EDITION_DROP_ADDRESS", "edition-drop");
     await editionDrop.createBatch([
       {
         name: "Leaf Village Headband",
@@ -73,28 +72,27 @@ Head over to `scripts/4-set-claim-condition.js` and add:
 import sdk from "./1-initialize-sdk.js";
 import { MaxUint256 } from "@ethersproject/constants";
 
-const editionDrop = sdk.getEditionDrop("INSERT_EDITION_DROP_ADDRESS");
-
 (async () => {
   try {
+    const editionDrop = await sdk.getContract("INSERT_EDITION_DROP_ADDRESS", "edition-drop");
     // We define our claim conditions, this is an array of objects because
     // we can have multiple phases starting at different times if we want to
     const claimConditions = [{
       // When people are gonna be able to start claiming the NFTs (now)
       startTime: new Date(),
       // The maximum number of NFTs that can be claimed.
-      maxQuantity: 50_000,
+      maxClaimable: 50_000,
       // The price of our NFT (free)
       price: 0,
       // The amount of NFTs people can claim in one transaction.
-      quantityLimitPerTransaction: 1,
-      // We set the wait between transactions to MaxUint256, which means
+      maxClaimablePerWallet: 1,
+      // We set the wait between transactions to unlimited, which means
       // people are only allowed to claim once.
       waitInSeconds: MaxUint256,
     }]
 
     await editionDrop.claimConditions.set("0", claimConditions);
-    console.log("✅ Successfully set claim condition!");
+    console.log("✅ Sucessfully set claim condition!");
   } catch (error) {
     console.error("Failed to set claim condition", error);
   }
@@ -105,7 +103,7 @@ Same thing here as before, be sure to replace `INSERT_EDITION_DROP_ADDRESS` with
 
 `startTime` is the time when users are allowed to start minting NFTs and in this case we just set that date/time to the current time meaning minting can start immediately.
 
-`maxQuantity` is the max # of membership NFTs that can be minted. `quantityLimitPerTransaction` specifies how many tokens someone can claim in a single transaction, we set this to one because we only want users minting one NFT at a time! In some cases, you may want to mint multiple NFTs to your user at once (ex. when they open a loot box of multiple NFTs) but in this case we just wanna do one. `price` sets the price of our NFT, in our case, 0 for free. `waitInSeconds` is the amount of time between transactions, because we only want people claiming once, we set it to the maximum number that the blockchain allows.
+`maxClaimable` is the max # of membership NFTs that can be minted. `maxClaimablePerWallet` specifies how many tokens someone can claim in a single transaction, we set this to one because we only want users minting one NFT at a time! In some cases, you may want to mint multiple NFTs to your user at once (ex. when they open a loot box of multiple NFTs) but in this case we just wanna do one. `price` sets the price of our NFT, in our case, 0 for free. `waitInSeconds` is the amount of time between transactions, because we only want people claiming once, we set it to the maximum number that the blockchain allows.
 
 Finally, we do `editionDrop.claimConditions.set("0", claimConditions)` and this will actually **interact with our deployed contract on-chain** and adjust the conditions, pretty cool! Why do we pass in a `0`? Well, basically our membership NFT has a `tokenId` of `0` since it's the first token in our ERC-1155 contract. Remember — w/ ERC-1155 we can have multiple people mint the same NFT. In this case, everyone mints an NFT w/ id `0`. But, we could have a different NFT as well w/ id `1` perhaps and maybe we give the NFT to members of our DAO that are outstanding! It's all up to us.
 
@@ -116,7 +114,7 @@ After running `node scripts/4-set-claim-condition.js` here's what I get:
 ✅ Successfully set claim condition!
 ```
 
-Boom! We've successfully interacted w/ our deployed smart contract and have given our NFT certain rules it must follow, hell yea! If you copy-paste your bundle drop address printed out there and search it on `https://rinkeby.etherscan.io/`, you'll see proof right there that we interacted w/ the contract!
+Boom! We've successfully interacted w/ our deployed smart contract and have given our NFT certain rules it must follow, hell yea! If you copy-paste your bundle drop address printed out there and search it on `https://goerli.etherscan.io/`, you'll see proof right there that we interacted w/ the contract!
 
 ![Untitled](https://i.imgur.com/6sRMQpA.png)
 

@@ -72,7 +72,7 @@ The `WalletModalProvider` is exactly that lol - it's a fancy React component tha
 
 `WalletProvider` gives us a standard interface for connecting to all sorts of wallets, so we don't have to bother reading docs for each wallet hehe.
 
-Next you'll see a bunch of wallet adapters from `wallet-adapter-wallets`. We'll use the imports from this to create a list of wallets we'll feed the `WalletProvider`. There's a bunch of other wallet adapters available, even some made for other blockchains! Check them out [here](https://github.com/solana-labs/wallet-adapter/#wallets). I just went with the ones that were in the starter by default.
+Next you'll see a bunch of wallet adapters from `wallet-adapter-wallets`. We'll use the imports from this to create a list of wallets we'll feed the `WalletProvider`. There's a bunch of other wallet adapters available, even some made for other blockchains! Check them out [here](https://github.com/solana-labs/wallet-adapter/blob/master/PACKAGES.md#wallets). I just went with the ones that were in the starter by default.
 
 Finally, we have `clusterApiURL`, which is just a function that generates an RPC endpoint for us based on the network we give it.
 
@@ -88,13 +88,20 @@ Phew, that was a bunch of setup! Now you get to see how easy it makes interactin
 import React from 'react';
 import { PublicKey } from '@solana/web3.js';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import dynamic from "next/dynamic";
 
 // Constants
 const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
+// Dynamic import `WalletMultiButton` to prevent hydration error
+const WalletMultiButtonDynamic = dynamic(
+    async () =>
+      (await import("@solana/wallet-adapter-react-ui")).WalletMultiButton,
+    { ssr: false }
+  );
+  
   // This will fetch the users' public key (wallet address) from any wallet we support
   const { publicKey } = useWallet();
 
@@ -103,7 +110,7 @@ const App = () => {
       <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
 
       <div className="button-container">
-        <WalletMultiButton className="cta-button connect-wallet-button" />
+        <WalletMultiButtonDynamic className="cta-button connect-wallet-button" />
       </div>    
     </div>
   );

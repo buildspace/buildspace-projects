@@ -354,3 +354,71 @@ So, you can see the first attack went through properly, `Boss attacked player. N
 But, the 2nd time we attack we error out with: `Error: character must have HP to attack boss`. Which is correct!! This is pretty much like throwing an error on your API when something goes wrong.
 
 NICEEEEE — our `attackBoss` function is basically done. We'll add some more magic to it later but for now we're good to go. We officially have our game logic **on-chain** :).
+
+### Bonus round (for the over-achievers)!
+
+If you want to add some more spice to your attack logic, how about we add some chance into the mix? That is to say, what if your attack might miss-- or your boss? In the following section, we will look at a code snippet that can be used to generate pseudo-random numbers on chain! 
+
+Word of warning, using pseudo-random numbers should be done only in low-stakes situations! These functions are subject to 'gaming' in a number of ways, and if you ever need to get random numbers in a contract you plan to deploy to mainnet, you should use [Chainlink VRF](https://docs.chain.link/docs/vrf/v2/introduction/) or something like it. Since we aren't deploying to mainnet, we will get away with the easy route for now!
+
+Introducing: [keccak256](https://keccak.team/keccak_specs_summary.html), a really powerful hashing algorithm, but knowing anything past that is pretty in the weeds- feel free to read up on it after the lesson.
+
+Alright, enough talking, let's see some code.
+
+```solidity
+contract MyEpicGame {
+...
+uint randNonce = 0; // this is used to help ensure that the algorithm has different inputs every time
+...
+
+function randomInt(uint _modulus) internal returns(uint) {
+   randNonce++;                                                     // increase nonce
+   return uint(keccak256(abi.encodePacked(block.timestamp,         //  now timestamp
+                                          msg.sender,               // your address
+                                          randNonce))) % _modulus;  // modulo using the _modulus argument
+ }
+}
+```
+
+There are a few things to dissect here. Starting from the top, we had to instantiate a new state variable called `randNonce`, you can call it anything you want though ;). We'll use it later as input to our hashing function. Following that, we have a function declaration, and you may notice a new item in it: `internal`-- this just means it can only be called from within the contract itself. 
+
+Finaly the elephant in the room: `uint(keccak256(abi.encodePacked(now, msg.sender, randNonce))) % _modulus;` don't stress if this looks intimidating. All we're doing is sending a stream of data into the keccak256 function, which returns a hash to us (think of something that looks like your wallet public address), *and then we're ignoring everything in that hash except for the last digit*. That's it! Insert these snippets into the contract, and we are almost ready! 
+
+With the function written and ready for use, we just need to go and insert it into the existing attack functions. Here's how you could do it in one method (you'll have to do it yourself on the other attack function, but I have faith in your abilities!):
+
+```solidity
+console.log("%s swings at %s...", player.name, bigBoss.name);        
+        if (bigBoss.hp < player.attackDamage) {
+            bigBoss.hp = 0;
+            console.log("The boss is dead!");
+        } else {
+            if (randomInt(10) > 5) {                                 // by passing 10 as the mod, we elect to only grab the last digit (0-9) of the hash!
+                bigBoss.hp = bigBoss.hp - player.attackDamage;
+                console.log("%s attacked boss. New boss hp: %s", player.name, bigBoss.hp);
+            } else {
+                console.log("%s missed!\n", player.name);
+            }
+        }
+```
+
+If implemented correctly, the output might look something like this when we run `npx hardhat run scripts/run.js`:
+
+```plaintext
+Aang swings at Elon...
+Aang missed!
+
+Elon swings at Aang...
+Elon attacked Aang. New player hp: 50
+
+...
+
+Aang swings at Elon...
+Aang missed!
+
+Elon swings at Aang...
+Elon attacked Aang. New player hp: 0
+```
+
+Bad luck for Aang, but good luck for you-- because you've just conquered pseudo-random number generation in Solidity!
+
+I emplore you to play around with this. What if you wanted to make the chance something other than 50-50? You might add a 'luck' or 'defense' stat to your character and boss structs, so that these values can be added to the ABI and made dynamic with the rest of your character's traits! It would take a bit of refactoring, but your code would be much more robust (and interesting) for it!

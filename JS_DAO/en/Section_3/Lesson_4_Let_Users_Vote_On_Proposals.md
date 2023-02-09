@@ -6,14 +6,12 @@ Cool. Everything is set up, now, we just need to create our first proposal! Head
 import sdk from "./1-initialize-sdk.js";
 import { ethers } from "ethers";
 
-// This is our governance contract.
-const vote = sdk.getVote("INSERT_VOTE_ADDRESS");
-
-// This is our ERC-20 contract.
-const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
-
 (async () => {
   try {
+    // This is our governance contract.
+    const vote = await sdk.getContract("INSERT_VOTE_ADDRESS", "vote");
+    // This is our ERC-20 contract.
+    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
     // Create proposal to mint 420,000 new token to the treasury.
     const amount = 420_000;
     const description = "Should the DAO mint an additional " + amount + " tokens into the treasury?";
@@ -47,6 +45,10 @@ const token = sdk.getToken("INSERT_TOKEN_ADDRESS");
   }
 
   try {
+    // This is our governance contract.
+    const vote = await sdk.getContract("INSERT_VOTE_ADDRESS", "vote");
+    // This is our ERC-20 contract.
+    const token = await sdk.getContract("INSERT_TOKEN_ADDRESS", "token");
     // Create proposal to transfer ourselves 6,900 tokens for being awesome.
     const amount = 6_900;
     const description = "Should the DAO transfer " + amount + " tokens from the treasury to " +
@@ -107,16 +109,12 @@ voting contract (on the relevant network) for it to work before deploying the pr
 
 ### ✍️ Let users vote on proposals from the dashboard
 
-Finally, let’s bring it all home. Right now, our proposals live on our smart contract. But, we want our users to easily be able to see them and vote! Let’s do that. Head to `App.jsx`. Add the `useVote` hook to our imports:
-
-```jsx
-import { useAddress, useMetamask, useEditionDrop, useToken, useVote } from '@thirdweb-dev/react';
-```
+Finally, let’s bring it all home. Right now, our proposals live on our smart contract. But, we want our users to easily be able to see them and vote! Let’s do that. Head to `App.jsx`. 
 
 Go ahead and add this under `token`.
 
 ```jsx
-  const vote = useVote("INSERT_VOTE_ADDRESS");
+const { contract: vote } = useContract("INSERT_VOTE_ADDRESS", "vote");
 ```
 
 Our web app needs access to our `vote` so users can interact with that contract.
@@ -208,7 +206,7 @@ Add the zero address import after your exising imports:
 import { AddressZero } from "@ethersproject/constants";
 ```
 
-Go ahead and replace the contents of `if (hasClaimedNFT) { }` with the code [here](https://github.com/buildspace/buildspace-dao-final/blob/main/src/App.jsx#L205).
+Go ahead and replace the contents of `if (hasClaimedNFT) { }` with the code [here](https://github.com/buildspace/buildspace-dao-final/blob/main/src/App.jsx#L184).
 
 When you check out your web app, you’ll see something like:
 
