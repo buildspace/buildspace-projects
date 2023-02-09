@@ -47,8 +47,8 @@ And from there, we’re ready to go. `cd` into the project, install `next`, `rea
 # cd into the repo
 cd gpt3-writer-starter
 
-# install next if you don't have it
-yarn add next react react-dom
+# install packages
+yarn install
 
 # run it
 yarn dev
