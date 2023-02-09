@@ -44,6 +44,16 @@ Whenever you run into something you can hit the mods up directly in the Discord 
 
 If you don’t have access to these channels, relink your Discord [here](https://buildspace.so/p/build-ai-writing-assistant-gpt3).
 
+### 💎 Earning an NFT
+
+When you reach the end of this project, you'll be able to mint an NFT.
+
+Here's what it looks like:
+
+<img src="https://gateway.ipfscdn.io/ipfs/Qmc1s7wW8XoUirP4o8vw1H7FZw4BGMVEraiNC5ecdMkftF/4.png" />
+
+**Note: Please reach out to Alec(alec#8853), CodePerfect(CodePerfect#6638) or Raza(TooManyBugs#3359) if you encounter any issues with claiming your NFTs**
+
 ### Build in public.
 
 Through this build, I’ll give you certain moments where you can tweet about what you’re building + give you pre-built tweets to inspire you to tell the world about what you're building.

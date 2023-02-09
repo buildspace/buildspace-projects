@@ -22,17 +22,13 @@ So what will we be building here :)? Here's a little video:
 
 ### 💎 Earning an NFT
 
-When you reach the end of this project, you'll be able to earn an NFT.
-
-**You'll only be eligible for the NFT if you finish it within 60 days of signing up.** So make sure you schedule time to finish, you got this!
-
-**Once you finish the project, you'll get the NFT airdropped within 7 days**
+When you reach the end of this project, you'll be able to mint an NFT.
 
 Here's what it looks like:
 
-[Loom](https://www.loom.com/share/a538ff4207a544779807a1358606b441)
+<img src="https://gateway.ipfscdn.io/ipfs/Qmb4dT5RtqenmoRPEymRG9P57awMZa4Cvqt3keyyZg5gQx/intro%20to%20solana.png" />
 
-**Note: It can take up to 7 days for your NFT to arrive (you'll get an email also!). If it's been more than 7 days please reach out to either Raza (TooManyBugs#3359) or Alec (alec#8853) on Discord!**
+**Note: Please reach out to Alec(alec#8853), CodePerfect(CodePerfect#6638) or Raza(TooManyBugs#3359) if you encounter any issues with claiming your NFTs**
 
 ### 🤚 How to get help
 
@@ -42,7 +38,7 @@ This project is broken up into 4 sections. You can see what section you're on by
 
 ### 🤘 See an issue? Want to improve something? Fix it yourself ;)
 
-**[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec` in the Discord :).
+**[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec`, `@CodePerfect` or `@Raza` in the Discord :).
 
 At the very least, drop a ⭐ on the repo if you're feeling fancy!
 
