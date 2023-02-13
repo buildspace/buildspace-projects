@@ -197,7 +197,7 @@ buildspace-dao-starter % node scripts/2-deploy-drop.js
 
 Okay, what just happened is pretty freaking epic. Two things happened:
 
-**One, we just deployed an [ERC-1155](https://docs.openzeppelin.com/contracts/3.x/erc1155) contract to Goerli.** That's right! If you head over to `https://goerli.etherscan.io/` and paste in the address of the `editionDrop` contract, you'll see you just deployed a smart contract! The coolest part is you **own** this contract and it's deployed from **your** wallet. The “From” address will be **your** public address. 
+**One, we just deployed an [ERC-1155](https://docs.openzeppelin.com/contracts/3.x/erc1155) contract to Goerli.** That's right! If you head over to `https://mumbai.polygonscan.com/` and paste in the address of the `editionDrop` contract, you'll see you just deployed a smart contract! The coolest part is you **own** this contract and it's deployed from **your** wallet. The “From” address will be **your** public address. 
 
 *Note: Keep the address of your `editionDrop` around, we'll need it later!*, if you ever lose it, you can always retrieve from the [thirdweb dashboard](https://thirdweb.com/dashboard?utm_source=buildspace)
 
