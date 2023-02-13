@@ -182,6 +182,8 @@ const getKey = () => {
       if (result['openai-key']) {
         const decodedKey = atob(result['openai-key']);
         resolve(decodedKey);
+	} else {
+          reject('Key not found');
       }
     });
   });
@@ -225,6 +227,8 @@ const generateCompletionAction = async (info) => {
     const baseCompletion = await generate(
       `${basePromptPrefix}${selectionText}`
     );
+    console.log(baseCompletion.text)	
+
 
     // Add your second prompt here
     const secondPrompt = `
@@ -239,6 +243,7 @@ const generateCompletionAction = async (info) => {
 
     // Call your second prompt
     const secondPromptCompletion = await generate(secondPrompt);
+     console.log(secondPromptCompletion);
   } catch (error) {
     console.log(error);
   }
