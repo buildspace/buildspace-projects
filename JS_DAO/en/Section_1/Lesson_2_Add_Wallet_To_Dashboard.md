@@ -45,11 +45,14 @@ Head over to `App.jsx`. Add the following code.
 
 ```jsx
 import { useAddress, ConnectWallet } from '@thirdweb-dev/react';
+import { useEffect } from "react";
 
 const App = () => {
   // Use the hooks thirdweb give us.
   const address = useAddress();
   console.log("👋 Address:", address);
+  
+  useEffect(() => {}, [address]);
 
   // This is the case where the user hasn't connected their wallet
   // to your web app. Let them call connectWallet.
