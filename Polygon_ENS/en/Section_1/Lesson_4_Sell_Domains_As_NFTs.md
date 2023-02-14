@@ -244,15 +244,14 @@ contract Domains is ERC721URIStorage {
 
     // Create the JSON metadata of our NFT. We do this by combining strings and encoding as base64
     string memory json = Base64.encode(
-      abi.encodePacked(
-        '{"name": "',
-        _name,
-        '", "description": "A domain on the Ninja name service", "image": "data:image/svg+xml;base64,',
-        Base64.encode(bytes(finalSvg)),
-        '","length":"',
-        strLen,
-        '"}'
-      )
+        abi.encodePacked(
+            '{'
+            	'"name": "', _name,'", '
+                '"description": "A domain on the Funk name service", '
+                '"image": "data:image/svg+xml;base64,', Base64.encode(bytes(finalSvg)), '", '
+                '"length": "', strLen, '"'
+            '}'
+        )
     );
 
     string memory finalTokenUri = string( abi.encodePacked("data:application/json;base64,", json));
