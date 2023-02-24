@@ -84,6 +84,7 @@ Let's start with structs for our new accounts. We'll need to define the data we'
 use borsh::{BorshSerialize, BorshDeserialize};
 use solana_program::{
     // We're bringing in Pubkey
+    pubkey::Pubkey,
     program_pack::{IsInitialized, Sealed},
 };
 
