@@ -86,7 +86,9 @@ So, **we need to change this program id** in `declare_id!` to the one output by 
 
 Now, go to `Anchor.toml` and under `[programs.devnet]` you'll see something like `myepicproject = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"`. Go ahead and change this id to the same id output when you run `solana address -k target/deploy/myepicproject-keypair.json`.
 
-Great, so you changed your program id in two spots!
+Also, update the id in `myepicproject.json` located in the folder `target/idl`. It will be located at the last part  of the  code.
+
+Great, so you changed your program id in three spots!
 
 Finally, once you do all this we need to run the build command again:
 
