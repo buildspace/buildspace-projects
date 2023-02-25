@@ -115,7 +115,14 @@ Again, I've left these in here if you really know what you're doing and want to 
 
 ![](https://hackmd.io/_uploads/BJflFa4qs.png)
 
-While the training is happening, take a moment to get up and stretch! Your back will thank you and you’ll be able to stare at screens for a much longer period of your life. 
+If you encounter a GPU memory allocation error such as *torch.cuda.OutOfMemoryError: CUDA out of memory.* Then try running the following command at the start of the cell.
+
+```
+!pip install --upgrade diffusers==0.10.0
+```
+
+
+While the training is happening, take a moment to get up and stretch! Your back will thank you and you’ll be able to stare at screens for a much longer period of your life.
 
 ![https://hackmd.io/_uploads/rJ2Zt6Nqs.png](https://hackmd.io/_uploads/rJ2Zt6Nqs.png)
 
