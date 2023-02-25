@@ -7,7 +7,7 @@ Inside these folders, go to the `home` folder and then `username` folder. This i
 
 *If you don't see any files/folders in the explorer, make sure you are have an Ubuntu terminal window open.*
 
-💡if you cannot find the `home` folder or `myepicproject`, another way is to type this command in the wsl termianal
+💡if you cannot find the `home` folder or `myepicproject`, another way is to type this command in the wsl terminal
 
 `wslpath -w [myepicproject_path_in_wsl]`
 
