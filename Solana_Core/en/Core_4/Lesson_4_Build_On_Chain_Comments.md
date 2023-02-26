@@ -560,7 +560,7 @@ Now it’s your turn to build something independently by building on top of the 
 
 Using what you've learned in this lesson, try applying what you've learned to the Student Intro Program. Your additions should make it possible for other users to reply to an intro.
 
-To test it, you’ll either need to take the `solution-paging-account-data` branch of this frontend and add a component for displaying and submitting comments, or you can write a script that sends transactions to the program.
+To test it, you’ll either need to take the `solution-paging-account-data` branch of [this](https://github.com/buildspace/solana-student-intros-frontend) frontend and add a component for displaying and submitting comments, or you can write a script that sends transactions to the program.
 
 **Starter code:**
 Feel free to use the `starter` branch of [this](https://github.com/buildspace/solana-student-intro-program) repository if you don’t have your previous code saved.
