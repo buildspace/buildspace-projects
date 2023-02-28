@@ -315,13 +315,13 @@ To get around this, you can either refactor your code to make it more memory eff
 
 All programs have access to a 32KB runtime heap that can help you free up some memory on the stack. 
 
-To do so, you'll have to make use of the [Box](https://doc.rust-lang.org/std/boxed/struct.Box.html) struct. 
+To do so, you'll have to make use of the [`Box`](https://doc.rust-lang.org/std/boxed/struct.Box.html) struct. 
 
 A box is a smart pointer to a heap allocated value of type `T`. 
 
 Boxed values can be dereferenced using the `*` operator.
 
-In this example, the value returned from the Pubkey::create_program_address, which is just a public key, will be stored on the heap and the authority_pubkey variable will hold a pointer to the location on the heap where the public key is stored. 
+In this example, the value returned from the `Pubkey::create_program_address`, which is just a public key, will be stored on the heap and the `authority_pubkey` variable will hold a pointer to the location on the heap where the public key is stored. 
 
 ```rs
 let authority_pubkey = Box::new(Pubkey::create_program_address(authority_signer_seeds, program_id)?);
