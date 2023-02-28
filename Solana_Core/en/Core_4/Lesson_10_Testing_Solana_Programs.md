@@ -35,11 +35,11 @@ mod tests {
 ```
 
 #### ❓ How to build unit tests
-Use the `[solana_sdk](https://docs.rs/solana-sdk/latest/solana_sdk/)` crate to build unit tests for Solana programs. 
+Use the [`solana_sdk`](https://docs.rs/solana-sdk/latest/solana_sdk/) crate to build unit tests for Solana programs. 
 
 This crate is essentially the Rust equivalent of the `@solana/web3.js` Typescript package.
 
-`[solana_program_test](https://docs.rs/solana-program-test/latest/solana_program_test/#)`  is also used for testing Solana programs and contains a BanksClient-based testing framework.
+[`solana_program_test`](https://docs.rs/solana-program-test/latest/solana_program_test/#)  is also used for testing Solana programs and contains a BanksClient-based testing framework.
 
 In the code snippet, we created a public key to use as our `program_id` and then initialized a `ProgramTest`. 
 
