@@ -113,6 +113,8 @@ This may take a bit to get started but once it's going you should see something 
 
 Boom!! You're now running a local validator. Pretty cool :).
 
+If you get an error starting solana-test-validator on a fresh WSL instance, check the validator.log. With Ubuntu 22.04 bzip2 was not installed, causing the command to fail, and this could be resolved by running 'sudo apt-get install bzip2'.
+
 If you are running an Intel Mac and see the error below you will need to install the `OpenSSL` library. The easiest way to do this would be through brew like so:  `brew install openssl@1.1`
 
 ```bash
