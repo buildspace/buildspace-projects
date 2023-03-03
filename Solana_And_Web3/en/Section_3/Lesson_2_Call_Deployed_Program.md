@@ -108,6 +108,9 @@ import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
 import { Program, AnchorProvider, web3 } from '@project-serum/anchor';
 ```
 
+*Note (for local Windows users):*
+*1. If you get an error 'Module parse failed: Unexpected token' then see the instructions here: https://stackoverflow.com/questions/63423384/you-may-need-an-additional-loader-to-handle-the-result-of-these-loaders - changing the browserslist in package.json and clearing the cache worked for me.
+
 *Note (only for Replit users):*  
 *1. If you get an error `global is not defined`, change the vite.config.js into:*
 ```javascript
