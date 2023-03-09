@@ -108,6 +108,9 @@ const switchNetwork = async () => {
       await window.ethereum.request({
         method: 'wallet_switchEthereumChain',
         params: [{ chainId: '0x13881' }], // Check networks.js for hexadecimal network ids
+        
+        const chainId = await ethereum.request({ method: 'eth_chainId' });
+        setNetwork(networks[chainId]);  // Updating the state of network to the changed network id
       });
     } catch (error) {
       // This error code means that the chain we want has not been added to MetaMask
