@@ -52,6 +52,24 @@ Now you can withdraw the funds in the contract! Financial independence here we c
 
 ### 🏦 Test it out
 
+
+Beware , change your ```hardhat.config.js``` before testing it out in local environment as you had updated it with your precious PRIVATE KEYYY..
+```jsx
+require("@nomicfoundation/hardhat-toolbox");
+
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+  solidity: "0.8.10",
+  
+    localhost: {
+      url: "http://127.0.0.1:8545"
+    },
+    hardhat: {
+      // See its defaults
+    }
+};
+```
+
 Let’s try to rob our own contract 😈. I’ll be the getaway driver, you set up the `run.js` script:
 
 ```jsx
