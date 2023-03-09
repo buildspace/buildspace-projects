@@ -19,7 +19,7 @@ code .
 ```
 
 #### ⚙ Set up the client script
-The beauty of `create-solana-client` is that we can get started writing client code right away! Jump into `index.ts` and import our dependencies and add this `initializeKeypair` function:
+The beauty of `create-solana-client` is that we can get started writing client code right away! Jump into `index.ts` and import our dependencies:
 ```ts
 // We're adding these
 import * as Web3 from '@solana/web3.js';
