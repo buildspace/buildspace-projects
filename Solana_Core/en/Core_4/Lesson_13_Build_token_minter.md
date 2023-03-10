@@ -1,6 +1,7 @@
 
 #### Minting, Staking and more...
-Alright, wow wow wow, we've come a long, let's get back to the NFT Staking Program. Today, we're gonna add all the token program interaction that's required to mint reward tokens to stakers, and to actually perform the staking operations. Unlike before, we're moving off of the Solana Playground, so we'll be doing all of this locally. Feel free to start with this code: [starter repo: solutions-sans-tokens branch](https://github.com/Unboxed-Software/solana-nft-staking-program/tree/solution-sans-tokens).
+Alright, wow wow wow, we've come a long, let's get back to the NFT Staking Program. Today, we're gonna add all the token program interaction that's required to mint reward tokens to stake
+, and to actually perform the staking operations. Unlike before, we're moving off of the Solana Playground, so we'll be doing all of this locally. Feel free to start with this code: [starter repo: solutions-sans-tokens branch](https://github.com/Unboxed-Software/solana-nft-staking-program/tree/solution-sans-tokens).
 
 You'll notice a couple of different things here. There's now a 'TS' folder which has everything we previously had in our client project, in the Solana Playground.
 
@@ -129,7 +130,7 @@ There are a total of 5 new accounts you need to, again, make sure they are in or
 
 ```
 ...
-{
+      {
         pubkey: nftMint,
         isWritable: false,
         isSigner: false,
@@ -140,7 +141,7 @@ There are a total of 5 new accounts you need to, again, make sure they are in or
         isSigner: false,
       },
 ...
-{
+      {
         pubkey: delegateAuthority,
         isWritable: true,
         isSigner: false,
@@ -158,7 +159,7 @@ There are a total of 5 new accounts you need to, again, make sure they are in or
 ```
 
 #### Testing our staking functionality
-Next, hop on over to the index file (/<project-name>/ts/src/index.rs), to add the same matching accounts where the `stakeInstruction` is created, in the `testStaking` function.
+Next, hop on over to the index file (/<project-name>/ts/src/index.ts), to add the same matching accounts where the `stakeInstruction` is created, in the `testStaking` function.
 
 Here are the 4 additions:
 
@@ -247,7 +248,7 @@ const [mintAuth] = PublicKey.findProgramAddressSync(
 Next hop into the `return new TransactionInstruction` to add the associated accounts, and whether they are writable and/or signable. Here are the 4 we need to add -- and remember, the order matters.
 
 ```tsx
-{
+  {
     pubkey: mint,
     isWritable: true,
     isSigner: false,
@@ -403,7 +404,7 @@ const [mintAuth] = PublicKey.findProgramAddressSync(
 Finally, we add them all to the instruction. This is a lot of accounts, so we've just posted it all here, instead of just the ones we're adding. Save your eyes a bit of back and forth between functions and files. 
 
 ```
- {
+  {
     pubkey: nftHolder,
     isWritable: false,
     isSigner: true,
