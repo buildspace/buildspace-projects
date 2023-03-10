@@ -129,7 +129,7 @@ There are a total of 5 new accounts you need to, again, make sure they are in or
 
 ```
 ...
-{
+      {
         pubkey: nftMint,
         isWritable: false,
         isSigner: false,
@@ -140,7 +140,7 @@ There are a total of 5 new accounts you need to, again, make sure they are in or
         isSigner: false,
       },
 ...
-{
+      {
         pubkey: delegateAuthority,
         isWritable: true,
         isSigner: false,
@@ -158,7 +158,7 @@ There are a total of 5 new accounts you need to, again, make sure they are in or
 ```
 
 #### Testing our staking functionality
-Next, hop on over to the index file (/<project-name>/ts/src/index.rs), to add the same matching accounts where the `stakeInstruction` is created, in the `testStaking` function.
+Next, hop on over to the index file (/<project-name>/ts/src/index.ts), to add the same matching accounts where the `stakeInstruction` is created, in the `testStaking` function.
 
 Here are the 4 additions:
 
