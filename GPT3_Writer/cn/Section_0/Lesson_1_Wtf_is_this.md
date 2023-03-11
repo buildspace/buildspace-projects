@@ -40,7 +40,7 @@
 
 这就是为什么我们有一个主持人团队，其主要目标是帮助您解决任何问题，以便您可以实际发布这个东西。
 
-每当你遇到什么东西时，你都可以通过 `@mods` 来直接在 Discord 中点击 mods 来 ping 它们。你也可以运行 `/question` 来提醒mod你的问题。
+每当你遇到什么东西时，你都可以通过 `@alec` 来直接在 Discord 中点击来 ping 它们。你也可以运行 `/question` 来提醒mod你的问题。
 
 
 **请确保所有围绕建造的讨论在 Discord 上“BUILD AN AI WRITER”相对应的部分（section）。如果你在 Discord 的随机频道中提问，你会惹恼我们的，哈哈。**
