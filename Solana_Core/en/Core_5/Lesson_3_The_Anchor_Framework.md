@@ -105,7 +105,7 @@ This saves us a lot of boilerplate - we don't have to specify addresses and chec
 #### 🔎 `Account` type in Anchor
 You probably remember the `AccountInfo` type from last week when we wrote a native program. We used this type every time we needed to deal with accounts - processing instructions, creating transactions, making CPIs. This type represented all the various accounts we could have - a PDA, a user account and even a system program. Thinking back, it's a bit weird that we used the same type to represent such varied arguments.
 
-Anchor wraps the native type to give us a list new types that have differet types of validation built in - we'll never need to check if we own an account inside our instruction because we can declare it a certain type and that will do the validation for us!
+Anchor wraps the native type to give us a list new types that have different types of validation built in - we'll never need to check if we own an account inside our instruction because we can declare it a certain type and that will do the validation for us!
 
 Let's take a look at the common types, starting with `Account`:
 
@@ -161,7 +161,7 @@ Finally, for the user account, there's a 'mut' attribute, it designates the acco
 Stay with me just a bit longer, we're at the final strech!
 
 ![](https://hackmd.io/_uploads/S1Mcf6oBj.png)
-The #[account] attribute is used to represent the data structure of a Solana account and implements the following traits:
+The `#[account]` attribute is used to represent the data structure of a Solana account and implements the following traits:
 - `AccountSerialize`
 - `AccountDeserialize`
 - `AnchorSerialize`
