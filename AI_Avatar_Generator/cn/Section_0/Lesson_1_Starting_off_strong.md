@@ -21,14 +21,6 @@
 
 **请在[此处](https://github.com/buildspace/buildspace-projects) 查看仓库**——如果您感觉不错，请给它一个星！ 这样对我们会很有帮助。
 
-### 如何获得帮助
-
-在构建过程中，您可能会遇到一些障碍。
-
-这就是为什么我们有一个 mod 团队，其主要目标是帮助您解决任何问题，以便您可以实际发布这个东西。
-
-每当您遇到某些问题时，您都可以通过执行 `@mods` 来 ping 它们来直接在 Discord 中点击 mod。 你也可以运行 `/question` 来提醒 mods 你的问题。
-
 **请在 Discord 的“BUILD AI AVATARS”部分的帮助部分保留有关此版本的所有讨论。 如果你开始在 Discord 的随机频道中提问，你的问题很可能得不到回答，哈哈。**
 
 如果您无权访问这些频道，请在 [此处](https://buildspace.so/p/build-ai-avatars) 重新链接您的 Discord。

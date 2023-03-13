@@ -58,7 +58,7 @@ But for now, lets head back to Colab.
 
 Next, we need a fancy lib called xformers. These are an additional dependency that will seriously speed up how fast Stable Diffusion runs. You don’t need to know how this works, just that you should definitely use it whenever possible since it will 2x performance.
 
-The version will need to be kept updated, it’s 0.0.15 at the time of writing - if this breaks, head over to `#section-2` help and tag the mods.
+The version will need to be kept updated, it’s 0.0.15 at the time of writing - if this breaks, head over to `#section-2` help and tag the `@alec`.
 
 **Configure your model**
 

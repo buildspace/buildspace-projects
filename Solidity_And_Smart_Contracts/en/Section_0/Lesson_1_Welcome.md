@@ -61,7 +61,7 @@ This project is broken up into 4 sections. You can see what section you're on by
 
 ## 🤘 See an issue? Want to improve something? Fix it yourself ;)
 
-**[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec`, `@CodePerfect` or `@Raza` in the Discord :).
+**[All this content is completely open-source](https://github.com/buildspace/buildspace-projects)**. If you see an issue, typo, etc — you can fix it yourself easily and make a PR! If you need help doing this, DM `@alec` in the Discord :).
 
 Let's get you some open-source rep!!!
 
