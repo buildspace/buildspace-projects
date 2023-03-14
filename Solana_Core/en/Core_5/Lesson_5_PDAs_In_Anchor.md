@@ -28,12 +28,13 @@ The `seeds` used derive the PDA include:
 
 ![](https://hackmd.io/_uploads/SJ2EwToHi.png)
 
-- When using the `#[instruction(...)]` attribute, the instruction data must be in the order that was passed into the instruction.
+- When using the `#[instruction(...)]` attribute, the instruction data must be in the 
+that was passed into the instruction.
 - You can omit all arguments after the last one you need.
 
-![](https://hackmd.io/_uploads/HJeHDasrs.png)
-
 An error would result if the inputs were listed in a different order:
+
+![](https://hackmd.io/_uploads/HJeHDasrs.png)
 
 ![](https://hackmd.io/_uploads/rJDBPpoBs.png)
 
