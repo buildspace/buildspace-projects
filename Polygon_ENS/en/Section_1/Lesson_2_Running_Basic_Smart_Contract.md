@@ -4,7 +4,7 @@
 
 Awesome, we made it. We are ready to start writing smart contracts. We're just going to hop right into our project. Open the project folder in your favorite text editor, I like VSCode. If you've never written a smart contract don't worry. **Just follow along. Google stuff you don't understand. Ask questions in Discord.**
 
-Create a file named `Domains.sol` under the `contracts` directory. File structure is super important when using Hardhat, so, be careful here!
+Create a file named `Domains.sol` under the `contracts` directory. The File structure is super important when using Hardhat, so, be careful here!
 
 Note: I recommend downloading the [Solidity extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) for VSCode which gives nice syntax highlighting.
 
@@ -44,7 +44,7 @@ This is the version of the Solidity compiler we want our contract to use. It bas
 import "hardhat/console.sol";
 ```
 
-Some magic given to us by Hardhat to do some console logs in our contract. It's actually challenging to debug smart contracts but this is one of the goodies Hardhat gives us to make life easier.
+Some magic was given to us by Hardhat to do some console logs in our contract. It's actually challenging to debug smart contracts but this is one of the goodies Hardhat gives us to make life easier.
 
 ```solidity
 contract Domains{
@@ -110,7 +110,7 @@ const domainContract = await domainContractFactory.deploy();
 
 This is pretty fancy :).
 
-What's happening here is Hardhat will create a local Ethereum network for us, **but just for this contract**. Then after the script completes, it will destroy that local network. So, every time you run the contract it will be a fresh blockchain. Whats the point? It's kinda like refreshing your local server every time so you always start from a clean slate which makes it easy to debug errors.
+What's happening here is Hardhat will create a local Ethereum network for us, **but just for this contract**. Then after the script completes, it will destroy that local network. So, every time you run the contract it will be a fresh blockchain. What's the point? It's kinda like refreshing your local server every time so you always start from a clean slate which makes it easy to debug errors.
 
 ```jsx
 await domainContract.deployed();
@@ -124,7 +124,7 @@ Our `constructor` runs when we actually are fully deployed!
 console.log("Contract deployed to:", domainContract.address);
 ```
 
-Finally, once it's deployed `domainContract.address` will basically give us the address of the deployed contract. This address is how we can actually find our contract on the blockchain. Right now on our local blockchain it's just us. So, this isn't that cool.
+Finally, once it's deployed `domainContract.address` will basically give us the address of the deployed contract. This address is how we can actually find our contract on the blockchain. Right now on our local blockchain, it's just us. So, this isn't that cool.
 
 But, there are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will come in handy when we deploy to the actual blockchain in a few lessons.
 
@@ -142,7 +142,7 @@ You should see your `console.log` run from within the contract and then you sh
 
 ### 🎩 Hardhat & HRE
 
-In these code blocks you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of sorcery is this?
+In these code blocks, you will constantly notice that we use `hre.ethers`, but `hre` is never imported anywhere? What type of sorcery is this?
 
 Directly from the Hardhat docs themselves, you will notice this:
 
