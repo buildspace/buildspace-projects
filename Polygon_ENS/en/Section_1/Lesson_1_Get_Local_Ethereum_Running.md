@@ -29,7 +29,7 @@ npm init -y
 npm install --save-dev hardhat@latest
 ```
 
-You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Running `npx audit fix` can break things, so it’s better to just skip it. Google around a bit about these vulnerabilities if you want to know more!
+You may see a message about vulnerabilities after you run the last command and install Hardhat. Every time you install something from NPM, there is a security check done to see if any of the packages in the library you're installing has any reported vulnerabilities. This is more of a warning to you so you are aware! Running `npx audit fix` can break things, so it’s better to just skip it. Google around a bit about these vulnerabilities if you want to know more!
 
 ### 🪄 Sample project
 
@@ -77,7 +77,7 @@ You should see something like this:
 
 Let’s do a little clean-up.
 
-Go ahead and open the code for the project now in your favorite code editor. I like VSCode best! We want to delete all the lame starter code generated for us. We don't need any of that. We're pros!
+Go ahead and open the code for the project now in your favorite code editor. I like VSCode best! We want to delete all the lame starter codes generated for us. We don't need any of that. We're pros!
 
 Go ahead and delete the file `Lock.js` under `test`.  Also, delete `deploy.js` under `scripts`. Then, delete `Lock.sol` under `contracts`. Don't delete the actual folders!
 
