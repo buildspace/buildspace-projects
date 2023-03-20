@@ -117,7 +117,7 @@ const domainOwner = await domainContract.getAddress("doom");
 console.log("Owner of domain:", domainOwner);
 ```
 
-Just like before, lets manually call our new functions!
+Just like before, let's manually call our new functions!
 
 First I call the function to register the name “doom”. Then I call the `getAddress` function to return the owner of that domain. It’s wild how simple this was right?
 
@@ -135,7 +135,7 @@ Here's my output:
 
 ### 🎯 Storing records
 
-Very nice! So, we now have a way to register domains on our smart contract! We now need a way to have that domain point to some data for us! At the end of the day, thats what a domain does right? Its a thing that points to something else, for example reddit.com points to Reddit’s servers.
+Very nice! So, we now have a way to register domains on our smart contract! We now need a way to have that domain point to some data for us! At the end of the day, thats what a domain does right? It's a thing that points to something else, for example, reddit.com points to Reddit’s servers.
 
 **Think about this as your domain’s DNS settings. You know how you can go to Namecheap or Cloudflare and customize the DNS records associated w/ that domain? Same thing here. We’re building our DNS record system.**
 
@@ -204,7 +204,7 @@ This one’s pretty easy - check that the transaction sender is the address that
 
 Alright - it’s time to test this thing out! It would be pretty boring if we could only send and register a domain!! We want everyone to use our domains :).
 
-Check this out - I added a few lines at the bottom of the function. I'm not going to explain it much (but please ask questions in #general-chill-chat). Basically this is how we can simulate other people hitting our functions :).
+Check this out - I added a few lines at the bottom of the function. I'm not going to explain it much (but please ask questions in #general-chill-chat). Basically, this is how we can simulate other people hitting our functions :).
 
 ```jsx
 const main = async () => {
@@ -254,7 +254,7 @@ await txn.wait();
 
 *Note: if you don't do this, Raza will be very sad :(*
 
-Customize your code a little!! Feel free to play around with the contract and `run.js` file and register multiple domains and set all sorts of records. Maybe you want people to map their domain to their email address — so `raza.mycustomdomain` would map to my email. Or maybe you want people to be able to add the IP address of their personal website as a record. You could even have the domain map to an SVG of the persons favorite meme lol. 
+Customize your code a little!! Feel free to play around with the contract and `run.js` file and register multiple domains and set all sorts of records. Maybe you want people to map their domain to their email address — so `raza.mycustomdomain` would map to my email. Or maybe you want people to be able to add the IP address of their personal website as a record. You could even have the domain map to an SVG of the person's favorite meme lol. 
 
 Whatever you want! The supported data types are the limit! 
 
