@@ -68,7 +68,7 @@ The `AnchorProvider` constructor takes three parameters:
 - `wallet` - the `Wallet` object
 - `opts` - optional parameter that specifies the confirmation options, using a default setting if one is not provided
 
-```rs
+```ts
 /**
  * The network and wallet context used to send transactions paid for and signed
  * by the provider.
