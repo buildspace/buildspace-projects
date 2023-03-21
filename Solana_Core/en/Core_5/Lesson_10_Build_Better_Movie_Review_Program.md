@@ -86,7 +86,7 @@ export { WorkspaceProvider, useWorkspace }
 - Wrapped the app in `WorkspaceProvider`
 - Now we can use the `useWorkspace` hook in different components to access the `program` object
 
-```rust
+```tsx
 import "../styles/globals.css"
 import type { AppProps } from "next/app"
 import { ChakraProvider } from "@chakra-ui/react"
