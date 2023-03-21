@@ -1,85 +1,24 @@
-<h1 align="center">🦄 buildspace Projects</h1>
-
-
-<h3 align="center">
-  <strong>Let's build the future of the internet.</strong>
-</h3>
-
-<p align="center">
-    <a href=".github/CONTRIBUTING.md#-how-to-contribute">
-        <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
-    </a>
-</p>
+<h1 align="center">buildspace projects</h1>
 
 ---
-## 👋 Hey! Want to jump from web2 to web3?
-[Join our Discord](https://discord.gg/buildspace). We've built the world's largest community of web3 devs.
 
-Here's what you'll get:
+[buildspace](https://buildspace.so) was built on these projects. it's been awesome to see so many people excited to check out something we created. we are starting to move away from these projects and beginning something much bigger which you can checkout [here](https://buildspace.so). with that said --
+## we are currently not supporting or adding any new projects here.
+we know a lot of you are still going through these projects and want to go through more. keep reading for more info:<br><br>
 
-✅ a group of internet friends to build with.
+**can I still go through projects?**<br>
+yup. just head to https://buildspace.so/builds or https://github.com/buildspace/buildspace-projects and you can access them like you normally would
 
-✅ the ability to earn NFTs as you build stuff.
+**are there going to be any new projects added?**<br>
+nope. there are no plans for adding new projects to buildspace
 
-✅ access to web3 experts who can answer any question you have.
+**will you all still be accepting PRs?**<br>
+while we want to keep track of all the PRs that come through, it's really hard for us to keep up right now. if you have a PR that is game changing email us at `support@buildspace.so` and let us know!
 
+**how can I keep up to date with buildspace?**<br>
+head to https://buildspace.so and apply :)
 
-## 📚 Projects
-
-At [buildspace](https://buildspace.so) we are committed to creating high-quality projects that are both educational and enjoyable. We believe that by providing engaging and well-written content, we can help others learn about the exciting world of the decentralized web. However, we understand that even the most carefully-crafted projects can have mistakes or areas for improvement. That's why we've made all of our lessons open source, so that members of the community can help us identify and fix any issues, and also contribute their own ideas and enhancements.
-
-By working together and collaborating on our projects, we can help ensure that they are as informative and effective as possible. And by sharing our knowledge and expertise, we can help others to learn about the decentralized web and join us in building a more decentralized and open future. Whether you're a seasoned developer or just starting out, we welcome your contributions and feedback. Together, let's conquer the decentralized web and build a better future 🤘.
-
-## 🛠 Contributing
-
-Any and all contributions are welcome! GitHub makes it _insanely_ easy to make contributions directly within their web app! [Follow this short guide](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files#editing-files-in-another-users-repository) on how to edit one of our Markdown lessons right here within GitHub!
-
-Rather watch a video? [Check out this two minute video](https://www.loom.com/share/ea84ce8634824f9e9377e2bc4b06f031), by Alec from buildspace, for submitting a contribution to a lesson!
-
-### Structure
-You will notice in each project folder there is an `en` and `es` folder. We are in the process of translating our projects to Spanish!
-
-If you are contributing to the English version, make sure your changes are done in the `en/` folder. If you are contributing to the Spanish version, make sure to make your changes in the `es/` folder!
-
-Each project aligns with the content on your buildspace dashboard. Find the file you want to change and open up a Pull Request for it! Someone from the buildspace team will take a look at it ASAP!
-
-
-### Translations
-We want to give a ***huge*** shoutout to [@czarfreak](https://twitter.com/czarfreak) for helping push forward our first fully translated project -- **Build a Web3 app with Solidity**.
-
-We want to bring buildspace projects to everyone around the world but **we need your help.**  We are looking for people to help translate our projects in every language possible!
-
-**If you are interested in becoming part of the buildspace translator crew send a DM to `alec#8853` on Discord to get access!**
-
-Before doing any translation work, **please make sure someone hasn't already done it!** We have a number of projects that are being actively translated and are not visible on the app. Please check [here](https://github.com/buildspace/buildspace-projects/pulls?q=is%3Aopen+is%3Apr+label%3Atranslation) to make sure you don't duplicate work :)
-
-## 🤔 Why take this project on buildspace?
-You have access to all of the content right here in GitHub!
-
-   ### Hack With Others And The buildspace Team
-   You and thousands of other devs are in this together. When you sign up for a project, you are placed in a group of devs who are there to help you succeed! Check out our [Discord](https://discord.gg/vPmqZqgpsS) to see what all the hype is about!
-
-   ### Co-Working Sessions
-   Get access to multiple sessions of collaborative coding! Here you will be able to ask questions directly to the instructor and others in your cohort! All while hacking along to epic Lo-Fi Tunes.
-
-   ### Complete A Project. Get an NFT
-   That's right. Be one of the first 100 people to complete your [buildspace](https://buildspace.so) project and claim your very own, custom NFT 🤘.
-
-## ❗️FAQ
-
-### Can't Contribute? No Worries!
-Feel free to submit an [issue here](https://github.com/zipeducation/buildspace-projects/issues/new/choose) to help us keep track of things that need to be fixed.
-
-### How do I make my first contribution?
-This is awesome! Your first Open Source contribution is always a great one. If you're not entirely sure on how to "Fork" a repo or make a "PR" take a look at these awesome resources from GitHub:
-
-[Fork a repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)<br>
-[Create a pull request](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
-
-As always make sure to reach out to us on [Discord](https://discord.gg/CFuBU7RJ42) if you have any questions or concerns!
-
-### Have More Questions?
-We use Discord for tons of our communication! [Click here](https://discord.gg/CFuBU7RJ42) to join our server and reach out to the buildspace team members if you have any questions or concerns.
+thank you **all** for making this place amazing. shout out to all the contributors listed below, we couldn't have gotten this for without you!
 
 ---
 
