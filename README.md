@@ -2,7 +2,7 @@
 
 [buildspace](https://buildspace.so) was built on these projects. it's been awesome to see so many people excited to check out something we created. we are starting to move away from these projects and beginning something much bigger which you can checkout [here](https://buildspace.so). with that said --
 ### we are currently not supporting or adding any new projects here.
-we know a lot of you are still going through these projects and want to go through more. keep reading for more info:<br><br>
+we know a lot of you are still going through these projects and want to go through more. keep reading for more info:
 
 **can I still go through projects?**<br>
 yup. just head to https://buildspace.so/builds or https://github.com/buildspace/buildspace-projects and you can access them like you normally would
