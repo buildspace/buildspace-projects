@@ -1,9 +1,7 @@
 <h1 align="center">buildspace projects</h1>
 
----
-
 [buildspace](https://buildspace.so) was built on these projects. it's been awesome to see so many people excited to check out something we created. we are starting to move away from these projects and beginning something much bigger which you can checkout [here](https://buildspace.so). with that said --
-## we are currently not supporting or adding any new projects here.
+### we are currently not supporting or adding any new projects here.
 we know a lot of you are still going through these projects and want to go through more. keep reading for more info:<br><br>
 
 **can I still go through projects?**<br>
@@ -19,8 +17,6 @@ while we want to keep track of all the PRs that come through, it's really hard f
 head to https://buildspace.so and apply :)
 
 thank you **all** for making this place amazing. shout out to all the contributors listed below, we couldn't have gotten this for without you!
-
----
 
 ## Contributors ✨
 
