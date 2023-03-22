@@ -238,7 +238,7 @@ before(async () => {
   })
 ```
 
-Hop into the default test, change it so it says `it("Stakes", `. At first, we're just making sure the function gets called. We don't have our adtual stake function built out yet, so there's no logic being tested here.
+Hop into the default test, change it so it says `it("Stakes", `. At first, we're just making sure the function gets called. We don't have our actual stake function built out yet, so there's no logic being tested here.
 
 ``` typescript
 it("Stakes", async () => {
