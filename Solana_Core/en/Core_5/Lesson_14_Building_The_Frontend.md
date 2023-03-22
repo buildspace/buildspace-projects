@@ -64,7 +64,7 @@ export { WorkspaceProvider, useWorkspace }
 
 Also copy over the mock wallet file from movie review, or create a new component called `MockWallet.ts`, and paste in this code.
 
-``` typscript
+``` typescript
 import { Keypair } from "@solana/web3.js"
 
 const MockWallet = {
