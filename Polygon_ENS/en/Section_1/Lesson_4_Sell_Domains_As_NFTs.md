@@ -162,7 +162,7 @@ Go ahead and run your script! Once you do that you should see something a little
 
 ![https://i.imgur.com/nLCRCKl.png](https://i.imgur.com/nLCRCKl.png)
 
-**LETS GO**. With just this simple contract code, we were essentially able to get the main actions of our ENS ready to go !! Take a moment to appreciate the hype here - it’s incredible 🥲.
+**LET'S GO**. With just this simple contract code, we were essentially able to get the main actions of our ENS ready to go !! Take a moment to appreciate the hype here - it’s incredible 🥲.
 
 It doesn’t stop here though - we are about to make this domain 10x cooler with some NFTs 👀.
 
@@ -303,7 +303,7 @@ Next, at the top of your contract, you’ll see `counters`. Wtf? Why do we need 
 
 We're going to be using `_tokenIds` to keep track of the NFTs unique identifier. It's a number that's automatically initialized to 0 when we declare `private _tokenIds`. 
 
-So, when we first call `register` , `newRecordId` is 0. When we run it again, `newRecordId`will be 1, and so on! Remember, `_tokenIds` is a **state variable** which means if we change it, the value is stored on the contract directly.
+So, when we first call `register`, `newRecordId` is 0. When we run it again, `newRecordId`will be 1, and so on! Remember, `_tokenIds` is a **state variable** which means if we change it, the value is stored on the contract directly.
 
 ```solidity
 constructor(string memory _tld) payable ERC721("Ninja Name Service", "NNS") {
