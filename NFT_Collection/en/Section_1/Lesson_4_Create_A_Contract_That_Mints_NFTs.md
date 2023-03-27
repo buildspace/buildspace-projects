@@ -191,9 +191,9 @@ So, right now every time someone mints an NFT with this function, it's always th
 
 Now, let's move to the next step — deploying to a testnet :).
 
-## 🎉 Deploy to Goerli and see on OpenSea
+## 🎉 Deploy to Sepolia and see on OpenSea
 
-Since OpenSea doesn't support Goerli, we have to look for an alternative. You can check out [OpenSea](https://testnets.opensea.io/) to view your NFT when you deploy to Goerli. When we use `run.js`, it's just us working locally.
+Since OpenSea doesn't support Sepolia, we have to look for an alternative. You can check out [OpenSea](https://testnets.opensea.io/) to view your NFT when you deploy to Sepolia. When we use `run.js`, it's just us working locally.
 
 The next step is a testnet which you can think of as like a "staging" environment. When we deploy to a testnet we'll actually be able to to **view our NFT online** and we are a step closer to getting this to **real users.**
 
@@ -238,21 +238,21 @@ This is awesome because we can test our application in a real-world scenario whe
 
 ## 🤑 Getting some fake $
 
-There are a few testnets out there and the one we'll be using is called "Goerli" which is run by the Ethereum foundation.
+There are a few testnets out there and the one we'll be using is called "Sepolia" which is run by the Ethereum foundation.
 
-In order to deploy to Goerli, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
+In order to deploy to Sepolia, we need fake ETH. Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copies how mainnet works, only difference is no real money is involved.
 
-In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Goerli through a faucet. You just gotta find one that works lol.
+In order to get fake ETH, we have to ask the network for some. **This fake ETH will only work on this specific testnet.** You can grab some fake Ethereum for Sepolia through a faucet. You just gotta find one that works lol.
 
-For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official Goerli faucet, if you log into your Alchemy account, you should be able to get 2x the amount.
+For MyCrypto, you'll need to connect your wallet, make an account, and then click that same link again to request funds. For the official Sepolia faucet, if you log into your Alchemy account, you should be able to get 2x the amount.
 
 You have a few faucets to choose from:
 
 | Name             | Link                                  | Amount          | Time         |
 | ---------------- | ------------------------------------- | --------------- | ------------ |
 | MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
-| Official Goerli  | https://goerlifaucet.com/             | 0.20            | 24 Hours
-| Chainlink        | https://faucets.chain.link/goerli     | 0.1             | None         |
+| Official Sepolia  | [https://goerlifaucet.com/](https://sepoliafaucet.com/)             | 0.5            | 24 Hours
+| Chainlink        | https://faucets.chain.link/sepolia     | 0.1             | None         |
 
 ## 🚀 Setup a deploy.js file
 
@@ -290,7 +290,7 @@ const runMain = async () => {
 runMain();
 ```
 
-## 📈 Deploy to Goerli testnet
+## 📈 Deploy to Sepolia testnet
 
 We'll need to change our `hardhat.config.js` file. You can find this in the root directory of your smart contract project.
 
@@ -303,7 +303,7 @@ module.exports = {
   networks: {
     goerli: {
       url: process.env.QUICKNODE_API_KEY_URL,
-      accounts: [process.env.GOERLI_PRIVATE_KEY],
+      accounts: [process.env.Sepolia_PRIVATE_KEY],
     },
   },
 };
@@ -357,7 +357,7 @@ When I run this here's the output (yours will ofc look different):
 
 ![carbon (7).png](https://i.imgur.com/TwpQOTM.png)
 
-We can make sure it all worked properly using [Goerli Etherscan](https://goerli.etherscan.io/) where you can paste the contract address and see what's up with it!
+We can make sure it all worked properly using [Sepolia Etherscan](https://sepolia.etherscan.io/) where you can paste the contract address and see what's up with it!
 
 Get used to using Etherscan because it's like the easiest way to track deployments and if something goes wrong. If it's not showing up on Etherscan, then that means it's either still processing or something went wrong!
 
@@ -370,7 +370,7 @@ Believe it or not. The NFTs you just minted will be on OpenSea's TestNet site.
 1. Head to `https://testnets.opensea.io/`.
 2. Create this url: `https://testnets.opensea.io/assets/goerli/INSERT_DEPLOY_CONTRACT_ADDRESS_HERE/TOKEN_ID`
 
-For example, here's my link: https://testnets.opensea.io/assets/goerli/0x78d1e929cfc5256643b3cc67c50e2d7ec3580842/0 for the Spongebob NFT!! My `tokenId` is `0` because it was the first mint from that contract.
+For example, here's my link: https://testnets.opensea.io/assets/sepolia/0x78d1e929cfc5256643b3cc67c50e2d7ec3580842/0 for the Spongebob NFT!! My `tokenId` is `0` because it was the first mint from that contract.
 
 **Basically, if you don't see your NFT on OpenSea within a few minutes, refreshing the page and wait for another 15 mins** 
 
