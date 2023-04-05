@@ -34,7 +34,7 @@ Lamports are the smallest unit of Solana. If you're familiar with Ethereum ecosy
 
 Each account has a public key - it acts like an address for the account. Ya know how your wallet has an address that you use for receiving those spicy NFTs? Same thing! Solana addresses are just base58 encoded strings.
 
-`executable` is a boolean field that tells us if the account contains executable data. Data is what's stored in the account, and rent we'll cover later! 
+`executable` is a boolean field that tells us if the account contains executable data. Data is what's stored in the account, and rest we'll cover later! 
 
 Let's stick with the simple stuff for now :)
 
