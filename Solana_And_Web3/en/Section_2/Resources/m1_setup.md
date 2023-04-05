@@ -296,6 +296,13 @@ This may take a while the first time you run it! As long as you get the green wo
 ![Untitled](https://i.imgur.com/V35KchA.png)
 
 <details>
+<summary>Having problems with <code>package `anchor-lang v0.27.0` cannot be built because it requires rustc 1.60 or newer, while the currently active rustc version is 1.59.0-dev</code>?</summary>
+If you get this error, you just need to update your Solana version. Run the command ```bash
+  solana-install init 1.15``` and then you can retry running ```bash
+  anchor test```
+</details>
+
+<details>
 <summary>Having problems with <code>Error: failed to send transaction: Transaction simulation failed: Attempt to load a program that does not exist</code>?</summary>
 If you get this error, this most likely means you forgot to add your Program Id in both your <code>.toml</code> file and <code>.rs</code> file! Go ahead and grab your ID again and verify it's updated in the appropriate spots :).
 </details>
