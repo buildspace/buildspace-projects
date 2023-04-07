@@ -80,7 +80,7 @@ You have a few faucets to choose from:
 | Name             | Link                                  | Amount          | Time         |
 | ---------------- | ------------------------------------- | --------------- | ------------ |
 | MyCrypto         | https://app.mycrypto.com/faucet       | 0.01            | None         |
-| Official Goerli  | https://goerlifaucet.com/             | 0.25            | 24 Hours     |
+| Official Goerli  | https://goerlifaucet.com/             | 0.2            | 24 Hours     |
 | Chainlink        | https://faucets.chain.link/goerli     | 0.1             | None         |
 
 You can find your public address [here](https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-).

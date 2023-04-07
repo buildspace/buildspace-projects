@@ -35,7 +35,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 ```
-*Note: If you are facing any issues with openai module, try running `npm install openai` in your terminal
+*Note: If you are facing any issues with openai module, try running `yarn add openai` in your terminal
 
 This is pretty straightforward, we’re using the OpenAI JS library to setup the API easily. But you’ll see here we need a `process.env.OPENAI_API_KEY`. This will come from our `.env` file which is a file that holds any secret information that you don’t want to push to GitHub by accident.
 

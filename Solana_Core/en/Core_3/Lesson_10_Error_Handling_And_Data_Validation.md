@@ -107,7 +107,7 @@ Rust integers have fixed sizes, meaning they can only support a specific range o
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Nuclear_Gandhi.png/1280px-Nuclear_Gandhi.png)
 
-If you've ever heard of [Nuclear Ghandi](https://en.wikipedia.org/wiki/Nuclear_Gandhi) from the video game Civilization - this is what causes it. He's supposed to be a really chill and peaceful leader with a really low aggression stat. But the devs didn't validate that the stat wouldn't overflow, so it went from 0 to 255 and he became a nuclear warlord with max aggression instead. Oops.
+If you've ever heard of [Nuclear Gandhi](https://en.wikipedia.org/wiki/Nuclear_Gandhi) from the video game Civilization - this is what causes it. He's supposed to be a really chill and peaceful leader with a really low aggression stat. But the devs didn't validate that the stat wouldn't overflow, so it went from 0 to 255 and he became a nuclear warlord with max aggression instead. Oops.
 
 To avoid integer overflow and underflow, either:
 1. Have logic in place that ensures overflow or underflow *cannot* happen or

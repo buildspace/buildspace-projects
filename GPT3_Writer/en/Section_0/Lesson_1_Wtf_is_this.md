@@ -38,7 +38,7 @@ You’ll probably run into some roadblocks while building.
 
 That’s why we have a moderator team whose main goal it is to help you get through any issues so you can actually ship this thing.
 
-Whenever you run into something you can hit the mods up directly in the Discord by doing `@mods` to ping them. You can also run `/question` which will alert the mods with your question.
+Whenever you run into something you can hit the Alec up directly in the Discord by doing `@alec` to ping them. You can also run `/question` which will alert him with your question.
 
 **Please keep all discussions around this build in the help sections of the `BUILD AN AI WRITER` section on the Discord. If you start asking questions in random channels in the Discord you’ll piss us off lol.**
 
