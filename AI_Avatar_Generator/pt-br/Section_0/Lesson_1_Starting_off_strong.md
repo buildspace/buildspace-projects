@@ -49,7 +49,7 @@ Veja como ele é:
 
 Ao longo desta construção, lhe darei alguns momentos em que você poderá compartilhar sobre o que está construindo e também lhe darei mensagens pré-construídas para inspirá-lo a contar ao mundo sobre o que está construindo.
 
-**Não há mal algum em construir em público** - acredite ou não, quase todas as pessoas que conheci me ajudaram a continuar construindo grandes coisas que conheci porque tweetei aleatoriamente sobre o que estava construindo rsrs.
+**Não há mal algum em construir em público** - acredite ou não, quase todas as pessoas que conheci me ajudaram a continuar construindo grandes coisas porque tweetei aleatoriamente sobre o que estava construindo rsrs.
 
 ### O que acontece no final?
 
