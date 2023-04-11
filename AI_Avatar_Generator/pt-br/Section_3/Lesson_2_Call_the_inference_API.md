@@ -115,7 +115,7 @@ Vá em frente e comece criando uma nova pasta no diretório `pages` chamada `api
 
 O incrível do `Next.js` é como ele usa a estrutura de pastas para definir seu caminho de API. Por exemplo, acabamos de criar uma pasta chamada `api` e dentro dessa pasta um arquivo chamado `generate`. Se você voltar ao seu arquivo `index.js`, notará que o ponto de extremidade da API que estamos chamando é `api/generate`. Ele literalmente usa a estrutura de pasta!
 
-Certo, bem incrível! Vamos escrever um pouco código. A primeira coisa a fazer é escrever uma função que será executada quando atingirmos esse ponto de extremidade:
+Certo, bem incrível! Vamos escrever um pouco de código. A primeira coisa a fazer é escrever uma função que será executada quando atingirmos esse ponto de extremidade:
 
 ```jsx
 const generateAction = async (req, res) => {
@@ -137,7 +137,7 @@ Você pode notar que ela fica presa em “pendente”, mas não se preocupe, vam
 
 Agora que sabemos que estamos recebendo solicitações de nosso frontend, vamos realmente fazer as coisas que precisamos fazer rsrs.
 
-Dentro da função `generateAction`, vamos começar pegando a entrada de nossa solicitação. Lembre-se de que estamos enviando o texto de entrada quando enviamos a solicitação? Podemos pegá-lo assim:
+Dentro da função `generateAction`, vamos começar pegando a entrada de nossa solicitação. Lembra que estamos enviando o texto de entrada quando enviamos a solicitação? Podemos pegá-lo assim:
 
 ```jsx
 const generateAction = async (req, res) => {
@@ -188,7 +188,7 @@ A próxima coisa que você notará é que há um objeto `headers` em nossa solic
 
 Acesse a página de [tokens](https://huggingface.co/settings/tokens) e obtenha um token de gravação - você pode usar o mesmo que gerou para o Colab. Ele funcionará bem.
 
-Na nossa função `generateAction`, você verá uma sintaxe estranha que se parece com `process.env.HF_AUTH_KEY`. Esta é uma maneira especial para o Next.js ler chaves secretas como esta sem expô-la ao usuário! Imagine se todo mundo pudesse ver sua senha toda vez que você fizesse login em um site? Isso ajuda a evitar essa situação!
+Na nossa função `generateAction`, você verá uma sintaxe estranha que se parece com `process.env.HF_AUTH_KEY`. Esta é uma maneira especial para o `Next.js` ler chaves secretas como esta sem expô-la ao usuário! Imagine se todo mundo pudesse ver sua senha toda vez que você fizesse login em um site? Isso ajuda a evitar essa situação!
 
 Para começar, dê uma olhada no arquivo `.example.env`. Isso foi criado para mostrar como precisamos configurar corretamente nossa chave da API. Crie um novo arquivo chamado `.env` na raiz do seu projeto e use a mesma configuração assim:
 
@@ -342,7 +342,7 @@ No início do arquivo `index.js`, você perceberá que verificamos se `retry` é
 
 Em seguida, você perceberá que definimos `retry` com o valor de `estimated_time`. Agora sabemos quanto tempo devemos esperar antes de fazer essa solicitação novamente!
 
-Legal! Agora o problema é: onde realmente chamamos essa propriedade `retry`? Tudo o que fizemos foi lidar com isso se houver uma nova tentativa.
+Legal! Agora o problema é: onde realmente chamamos essa propriedade `retry`? Tudo o que fizemos foi lidar com isso em uma nova tentativa.
 
 Para isso, vamos usar o `useEffect` do React. O que queremos que aconteça é o acionamento de uma nova tentativa quando a propriedade `retry` mudar. `useEffect` é perfeito para isso porque ele executará algum código sempre que uma determinada propriedade mudar (assim como `retry`).
 
