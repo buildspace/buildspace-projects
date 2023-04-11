@@ -61,7 +61,7 @@ Este NFT oferece acesso a alguns poderes secretos:
 2. **Muita magia acontece ao construir na vida real**. É por isso que estamos criando hubs da vida real (presenciais) em todo o mundo, para que nossos principais ex-alunos possam visitar/construir sempre que quiserem. Quanto mais NFTs você tiver, mais chances terá de obter acesso. **Nosso primeiro hub presencial irá abrir em São Francisco, na Califórnia, em 1º de março de 2023**.
 3. **Você será aceito instantaneamente no Nights & Weekends [noites e finais de semana](https://buildspace.so/nights-and-weekends)** se tiver o NFT. O N&W é como um acelerador que administramos - crie qualquer ideia que desejar em 6 semanas, venha para São Francisco por 3 dias para construir na vida real e apresente seu trabalho no dia da demonstração para milhares de pessoas. Os ex-alunos do N&W arrecadaram milhões de dólares.
 
-### Por favor, faça isso, senão o Raza ficará triste.
+### Por favor, faça isso, senão o Raza ficará triste
 
 Em `#sd-general`, diga ao mundo por que você está curioso sobre como fazer essas coisas. Seria legal entender por que você está curioso, o que está tentando construir, o que o inspirou a se envolver com isso, etc.
 
