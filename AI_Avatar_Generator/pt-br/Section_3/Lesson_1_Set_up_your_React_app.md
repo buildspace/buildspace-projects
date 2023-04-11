@@ -20,7 +20,7 @@ Muito bem! Vamos trabalhar com o `Next.js` para construir nossa IU + uma única 
 
 **AGORA** - volte para o seu editor de código e vamos inserir algumas coisas básicas nele.
 
-Primeiro, altere os títulos do seu código! Vá para o arquivo `index.js` na pasta `pages` e atualize o título e a descrição com o tipo de gerador que você está criando. Vamos construir um gerador de imagens engraçadas, então vou mudar o meu para - "Gerador de imagens engraçadas" + mude a descrição para "Transforme-me em quem você quiser! Certifique-se de me referir como "abraza" no prompt".
+Primeiro, altere os títulos do seu código! Vá para o arquivo `index.js` na pasta `pages` e atualize o título e a descrição com o tipo de gerador que você está criando. Vamos construir um gerador de imagens engraçadas, então vou mudar o meu para - "Gerador de imagens engraçadas" + mude a descrição para "Transforme-me em quem você quiser! Certifique-se de se referir a mim como "abraza" no prompt".
 
 ```jsx
 const Home = () => {
@@ -135,7 +135,7 @@ Agora que temos uma maneira de armazenar o que alguém está escrevendo em nossa
 </div>
 ```
 
-Legal - quase lá! Se você começar a digitar em sua caixa de entrada, você começará a perceber que nada está sendo mostrado. Bem, é porque à medida que digitamos, precisamos salvar as alterações em nosso estado da entrada, ou seja, no estado do `input`. Para fazer isso, precisamos usar a propriedade `onChange` de nossa entrada e dar a ela uma função que pegue o texto e o salve em nosso estado.
+Legal - quase lá! Se você começar a digitar em sua caixa de entrada, você irá perceber que nada está sendo mostrado. Bem, é porque à medida que digitamos, precisamos salvar as alterações em nosso estado da entrada, ou seja, no estado do `input`. Para fazer isso, precisamos usar a propriedade `onChange` de nossa entrada e dar a ela uma função que pegue o texto e o salve em nosso estado.
 Comece criando uma nova função chamada `onChange`, logo abaixo de onde você declarou o `input`:
 
 ```jsx
