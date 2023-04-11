@@ -148,7 +148,7 @@ Vamos lá! Estamos prontos para exibir algumas imagens, e isso é realmente emoc
 
 Espera aí... O que aconteceu? A exibição da imagem está quebrada demais rsrs.
 
-Na verdade, há mais uma coisa que precisamos fazer para que isso funcione corretamente. Se você se lembra de nossa API, estávamos retornando um `ArrayBuffer` para nosso frontend. Bem, para exibir uma imagem, precisamos converter esse `ArrayBuffer` em uma string `base64`. Essa é a única maneira de nosso frontend entender que isso é uma imagem!
+Na verdade, há mais uma coisa que precisamos fazer para que isso funcione corretamente. Se você se lembra de nossa API, onde estávamos retornando um `ArrayBuffer` para nosso frontend. Bem, para exibir uma imagem, precisamos converter esse `ArrayBuffer` em uma string `base64`. Essa é a única maneira de nosso frontend entender que isso é uma imagem!
 
 Para isso, vamos voltar para o `generate.js` e criar uma nova função chamada `bufferToBase64`:
 
@@ -206,7 +206,7 @@ const generateAction = async (req, res) => {
 
 ![https://hackmd.io/_uploads/ByhHqTVci.png](https://hackmd.io/_uploads/ByhHqTVci.png)
 
-Tire um momento para olhar para as últimas coisas que você fez. Talvez você não soubesse nada sobre como treinar modelos e agora treinou seu próprio modelo (muito impressionante, para ser sincero).
+Tire um momento para olhar para as últimas coisas que você fez. Talvez você não soubesse nada sobre como treinar modelos e agora treinou o seu próprio (muito impressionante, para ser sincero)!
 
 Agora você pode pegar este site e melhorá-lo. Você até pode começar a ganhar dinheiro com ele!
 
