@@ -99,7 +99,7 @@ Existem plataformas incríveis por aí que ajudam você a criar esses fluxos por
 
 É hora de sair do Localhost - [GTFOL](https://www.urbandictionary.com/define.php?term=GTFOL&utm_source=buildspace.so&utm_medium=buildspace_project).
 
-Não queremos apenas ficar no localhost, afinal. Isso seria entediante! O objetivo deste aplicativo é permitir que seus amigos e familiares criem realidades alternativas com você.
+Não queremos apenas ficar no localhost. Afinal, isso seria entediante! O objetivo deste aplicativo é permitir que seus amigos e familiares criem realidades alternativas com você.
 
 Implantar um aplicativo do NextJS ficou **SUPER** fácil - isso deve levar apenas alguns minutos - e então você terá um link para sua criação que pode compartilhar com o mundo.
 
