@@ -15,7 +15,7 @@ Você já se perguntou como seria se parecer com Patrick Bateman em American Psy
 
 1. Começaremos aprendendo tudo sobre prompts e como essa tecnologia funciona, criando um monte de avatares bem legais; 
 2. Em seguida, vamos mergulhar em algo chamado Dreambooth - uma técnica especial que permite **ajustar finamente** o Stable Diffusion para um assunto específico (você!), **ensinando** a ele como você se parece. 
-3. Em seguida, criaremos um aplicativo que usa esse modelo para que seus amigos possam colocá-lo em qualquer lugar!
+3. Em seguida, criaremos um aplicativo que usa esse modelo para que seus amigos possam colocar você em qualquer lugar!
 
 ### O que estamos construindo?
 
