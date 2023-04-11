@@ -576,4 +576,4 @@ Aeee! O indicador de carregamento está funcionando como esperado! Incrível.
 
 ### Por favor, faça isso, senão o Raza ficará triste
 
-Este é um momento bem legal. Vá para o canal `#progress` no Discord e compartilhe uma captura de tela da sua aplicação web que você está executando! Se você vir a de outra pessoa, deixe um feedback para ela também. :)
+Este é um momento bem legal. Vá para o canal `#progress` no Discord e compartilhe uma captura de tela de seu aplicativo web que você está executando! Se você vir a de outra pessoa, deixe um feedback para ela também. :)
