@@ -7,7 +7,7 @@ A primeira coisa que você precisará fazer é coletar dados de treinamento. Com
 Aqui estão algumas regras para suas fotos:
 
 1. **As fotos devem conter apenas você** - Sem amigos, cachorros, empadinhas, tias;
-2. **Fundos claros** - Se você não puder obter fundos brancos, use o [https://remove.bg/](https://remove.bg/) to remove them entirely;
+2. **Fundos claros** - Se você não consegue ter fundos brancos em suas fotos, use o [https://remove.bg/](https://remove.bg/) para removê-los;
 3. **Qualidade da imagem** - As fotos devem estar bem iluminadas;
 4. **Tamanho da imagem** - Pelo menos 720p no mínimo. Você pode usar webcams de laptop, mas precisa estar em um lugar bem iluminado (super importante!).
 
