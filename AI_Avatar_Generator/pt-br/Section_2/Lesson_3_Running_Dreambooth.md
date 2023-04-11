@@ -69,7 +69,7 @@ Vamos dar uma pequena pausa aqui! Você acabou de fazer muitas coisas incríveis
 2. Configurou sua conta do Hugging Face + criou um token de acesso
 3. Instalou a biblioteca xformers
 
-**A internet é louca, cara**
+**A internet é louca, cara!**
 
 Agora precisamos dizer ao notebook qual modelo queremos usar. Como estamos nos conectando ao Hugging Face, podemos ler qualquer modelo público de lá.
 
@@ -87,7 +87,7 @@ Muito importante -- **certifique-se de que a opção** `save_to_gdrive` esteja m
 
 ### Configure os recursos de treinamento
 
-A beleza desse modelo é que ele é incrivelmente otimizado e pode ser configurado para ser executado com recursos comparativamente menores. Felizmente, não precisaremos mexer com isso - o Google Colab cuidará disso.
+A beleza desse modelo é que ele é incrivelmente otimizado e pode ser configurado para ser executado com recursos comparativamente menores. Felizmente, não precisaremos mexer com isso - o Google Colab cuidará de tudo.
 
 Vá para a etapa 5.5 para que possamos dizer ao Stable Diffusion em que estamos treinando.
 
@@ -112,7 +112,7 @@ Esse próximo passo pode parecer intimidante, mas você não precisa mexer na ma
 Novamente, deixei essas opções aqui caso você realmente saiba o que está fazendo e queira personalizar o modelo, mas para a sua primeira vez tudo o que você precisa fazer é:
 
 1. **Mude o `max_train_steps`**. Você deve manter esse número menor que 2000 - quanto mais alto for, mais tempo o treinamento levará e mais "familiar" o SD (Stable Diffusion) se tornará com você. Mantenha esse número baixo para evitar sobreajuste. A regra geral aqui é 100 passos para cada imagem, mais 100 se você tiver menos de 10 imagens. Então, para 6 imagens, basta definir para 700! Se achar que os resultados não se parecem o suficiente com você, basta voltar aqui e aumentar esse número rsrs.
-2. **Atualize o `save_sample_prompt` para um prompt com o seu sujeito.** Logo após o treinamento, este bloco irá gerar 4 imagens suas com esse prompt. Eu recomendo ser um pouco mais criativo do que apenas "Foto da pessoa xyz", pois essas ficam bem entediantes. Use suas habilidades de prompt aqui!
+2. **Atualize o `save_sample_prompt` para um prompt com o seu sujeito.** Logo após o treinamento, este bloco irá gerar 4 imagens suas com esse prompt. Eu recomendo ser um pouco mais criativo do que apenas "Foto da pessoa xyz", pois assim elas irão ficar bem entediantes. Use suas habilidades de prompt aqui!
 
 ![](https://hackmd.io/_uploads/BJflFa4qs.png)
 
@@ -181,7 +181,7 @@ Clique no link e você verá isso no lado direito:
 
 ![https://hackmd.io/_uploads/BJMIKpNqi.png](https://hackmd.io/_uploads/BJMIKpNqi.png)
 
-Esta é a IU (interface do usuário) para a sua API de inferência! Coloque um prompt ali e veja a mágica acontecer :D
+Esta é a IU (interface do usuário) para a sua API de inferência! Coloque um prompt ali e veja a mágica acontecer! :D
 
 Assim que você clicar em "compute", você vai notar que receberá a mensagem "Model is loading" (modelo está carregando). Isso é uma das limitações de usar o Hugging Face como um serviço gratuito. Como custa muito dinheiro para manter este modelo na memória, o Hugging Face vai automaticamente limpar o seu modelo da memória se ele não estiver sendo utilizado. Isso economiza recursos e dinheiro para eles em um modelo que não está recebendo muito tráfego.
 
@@ -189,7 +189,7 @@ Assim que você clicar em "compute", você vai notar que receberá a mensagem "M
 
 Assim como no Colab, você acabou de gerar uma imagem! Acesse o seu [link de uso clicando aqui](https://api-inference.huggingface.co/dashboard/usage). Isso é realmente legal. O Hugging Face te dá 30.000 caracteres gratuitos (basicamente, créditos para executar essas consultas). Isso é mais do que suficiente para começar. :)
 
-**Uau - você acabou de criar um modelo personalizado, hospedá-lo em algum lugar e agora tem um ponto de extremidade que pode chamar em seu aplicativo web 👀**
+**Uau - você acabou de criar um modelo personalizado, hospedá-lo em algum lugar e agora tem um ponto de extremidade que pode chamar em seu aplicativo web! 👀**
 
 ### Por favor, faça isso, senão o Raza ficará triste
 
