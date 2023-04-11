@@ -150,13 +150,13 @@ O último ingrediente que quero cobrir é o mais vago - não é uma área espec�
 - **Feriados**: Eid al-Fitr, Natal, Diwali, Páscoa, Halloween, Hanukkah
 - **Detalhes**: detalhado, hiper-realista, alta definição, em tendência no site ArtStation (sim, realmente)
 
-Dê uma chance a isso e adicione alguns desses descritores à sua solicitação! Quando você conseguir uma imagem de que goste, certifique-se de compartilhá-la em `#prompts` em nosso Discord para mostrar aos outros o que você criou!
+Dê uma chance a isso e adicione alguns desses descritores ao seu prompt! Quando você conseguir uma imagem de que goste, certifique-se de compartilhá-la no canal `#prompts` em nosso Discord para mostrar aos outros o que você criou!
 
-Há **muito mais** que você pode fazer com os prompts. Você pode passar semanas aprendendo tudo sobre como os humanos descrevem as coisas. Eu vou deixar você com isso, mas lembre-se:
+Há **muito mais** que você pode fazer com os prompts. Você pode passar semanas aprendendo tudo sobre como os humanos descrevem as coisas. Eu vou deixar você fazer isso sozinho, mas lembre-se:
 
 **Os modelos de IA são treinados em quase toda a mídia humana na internet**. 
 
-Isso significa que tudo o que você pode encontrar na internet, este modelo provavelmente também sabe. Imagens de filmes famosos. Fan art de personagens. Descrições de cenas icônicas de diretores específicos. Fotos de diferentes ângulos de câmera, filmes diferentes, resoluções, iluminação, lentes, gêneros de foto. A IA viu tudo (exceto as coisas NSFW, ou seja, impróprias), elas foram removidas :P).
+Isso significa que tudo o que você pode encontrar na internet, este modelo provavelmente também sabe. Imagens de filmes famosos. Fan art de personagens. Descrições de cenas icônicas de diretores específicos. Fotos de diferentes ângulos de câmera, filmes diferentes, resoluções, iluminação, lentes, gêneros de foto. A IA viu tudo (exceto as coisas NSFW, ou seja, impróprias, pois elas foram removidas :P).
 
 Eu descobri que a internet é maior do que minha imaginação imediata, então se você pode imaginar, é provável que a IA saiba sobre isso. Você só precisa encontrar as palavras certas.
 
