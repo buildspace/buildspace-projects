@@ -211,11 +211,14 @@ const App = () => {
    * This runs our function when the page loads.
    * More technically, when the App component "mounts".
    */
-  useEffect(async () => {
-    const account = await findMetaMaskAccount();
-    if (account !== null) {
-      setCurrentAccount(account);
+  useEffect(() => {
+    const getAccount = async () => {
+      const account = await findMetaMaskAccount();
+      if (account !== null) {
+        setCurrentAccount(account);
+      }
     }
+    getAccount()
   }, []);
 
   return (
