@@ -200,7 +200,7 @@ All we need to do is display it! Here’s the code:
 <div className="prompt-buttons">
   <a
     className={isGenerating ? 'generate-button loading' : 'generate-button'}
-    onClick={callGenerateEndpoint}
+    onClick={isGenerating ? null : callGenerateEndpoint}
   >
     <div className="generate">
     {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
