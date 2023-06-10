@@ -95,7 +95,7 @@ That's a lot of imports. Don't worry, all you need to know is what each of them 
 
 We start with React. `useMemo()` is a hook that loads stuff only if one of the dependencies changes. In our case, the value of `clusterApiUrl` will only change if the network that the user is connected to, changes.
 
-The first Solana import we have is `wallet-adapter-network` from `@solana/wallet-adapter-base`. This is just an enumerable object for the available networks.
+The first Solana import we have is `WalletAdapterNetwork` from `@solana/wallet-adapter-base`. This is just an enumerable object for the available networks.
 
 The `WalletModalProvider` is exactly that lol - it's a fancy React component that will prompt the user to select their wallet. Ezpz.
 
