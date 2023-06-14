@@ -64,7 +64,8 @@ async function createTokenAccount(
         connection,
         payer,
         mint,
-        owner
+        owner,
+	true
     )
     
     console.log(
