@@ -260,7 +260,7 @@ That's it. You're done now. Let's start running our code.
 #### 🚀 Running our code
 Open up your terminal in VS Code. You'll first need to install a module named `ts-node`. This is essential as we'll be running some typescript commands. Type `npm install --save-dev ts-node` into the terminal. Now, headover to your `package.json` and add this line to your `scripts` section.
 
-`"create-bld-token": "ts-node ./src/tokens/bld/index.ts"`.
+`"create-bld-token": "ts-node ./tokens/bld/index.ts"`.
 
 This is how it should look now.
 
