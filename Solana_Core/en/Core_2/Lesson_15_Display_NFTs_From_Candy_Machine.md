@@ -101,7 +101,7 @@ export const FetchCandyMachine: FC = () => {
 }
 ```
 
-What we're doing here is slicing the `items` array into chunks of 10. Then we're fetching the metadata for each NFT in the page and storing it in `nftData`. Finally, we're setting the `pageItems` state variable to the `nftData` we just fetched.
+What we're doing here is slicing the `items` array into chunks of `perPage` size. Then we're fetching the metadata for each NFT in the page and storing it in `nftData`. Finally, we're setting the `pageItems` state variable to the `nftData` we just fetched.
 
 This means at any time our app will only render the NFTs for the current page. Nice!
 
