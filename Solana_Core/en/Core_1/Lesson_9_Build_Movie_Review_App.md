@@ -146,7 +146,7 @@ Here's what the first half will look like:
         const buffer = movie.serialize()
         const transaction = new web3.Transaction()
     
-        const [pda] = await web3.PublicKey.findProgramAddress(
+        const [pda] = web3.PublicKey.findProgramAddressSync(
             [publicKey.toBuffer(), new TextEncoder().encode(movie.title)],
             new web3.PublicKey(MOVIE_REVIEW_PROGRAM_ID)
         )
@@ -160,7 +160,7 @@ Patrick was referencing PDAs (Program Derived Address)! This is an account for s
 
 We need to know the account address to make a valid transaction, and we need the transaction to be processed to create the account. The solution? A theoretical egg. If both the transaction creators, and the program, use the same process to choose the address, we can **derive** the address before the transaction is processed.
 
-That's what the `web3.PublicKey.findProgramAddress` method is doing. It takes in two variables: the seeds, and the program that generated it (the movie review program). In our case, the seeds are the senders' address and the title of the movie. With this app, I'm telling you the seed requirements, usually you'd either read the docs, look at the program code, or maybe reverse engineer it.
+That's what the `web3.PublicKey.findProgramAddressSync` method is doing. It takes in two variables: the seeds, and the program that generated it (the movie review program). In our case, the seeds are the senders' address and the title of the movie. With this app, I'm telling you the seed requirements, usually you'd either read the docs, look at the program code, or maybe reverse engineer it.
 
 To complete the `handleTransactionSubmit` function all you need to do is create an instruction and send it, here's the full code: 
 ```ts
@@ -173,7 +173,7 @@ To complete the `handleTransactionSubmit` function all you need to do is create 
         const buffer = movie.serialize()
         const transaction = new web3.Transaction()
     
-        const [pda] = await web3.PublicKey.findProgramAddress(
+        const [pda] = web3.PublicKey.findProgramAddressSync(
             [publicKey.toBuffer(), new TextEncoder().encode(movie.title)],
             new web3.PublicKey(MOVIE_REVIEW_PROGRAM_ID)
         )
