@@ -62,13 +62,14 @@ impl MovieInstruction {
         
 				let payload = MovieReviewPayload::try_from_slice(rest).unwrap();
         
-        Ok(match variant {
-            0 => Self::AddMovieReview {
-                title: payload.title,
-                rating: payload.rating,
-                description: payload.description },
-            _ => return Err(ProgramError::InvalidInstructionData)
-        })
+        match variant {
+            0 => Ok(Self::AddMovieReview{
+		title: payload.title,
+		rating: payload.rating,
+		description: payload.description
+            }),
+            _ => Err(ProgramError::InvalidInstructionData)
+        }
     }
 }
 ```
