@@ -74,10 +74,10 @@ await waveContract.waitForDeployment();
 We'll wait until our contract is officially deployed to our local blockchain! Our `constructor` runs when we actually deploy.
 
 ```javascript
-console.log("Contract deployed to:", await waveContract.address);
+console.log("Contract deployed to:", await waveContract.getAddress());
 ```
 
-Finally, once it's deployed `await waveContract.address`  will basically give us the address of the deployed contract. This address is how we can actually find our contract on the blockchain. There are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will be more important a bit later once we deploy to a real Ethereum network.
+Finally, once it's deployed `await waveContract.getAddress`  will basically give us the address of the deployed contract. This address is how we can actually find our contract on the blockchain. There are millions of contracts on the actual blockchain. So, this address gives us easy access to the contract we're interested in working with! This will be more important a bit later once we deploy to a real Ethereum network.
 
 Let's run it!
 
